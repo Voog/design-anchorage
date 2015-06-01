@@ -1,0 +1,17 @@
+.site-footer {
+  font-size: 14px;
+
+  .wrap {
+    text-align: center;
+  }
+
+  .voog-reference {
+    color: rgba($black, 1);
+    opacity: .55;
+    text-align: center;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+}

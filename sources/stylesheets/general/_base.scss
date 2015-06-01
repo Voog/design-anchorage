@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;;
+  font-size: $base-font-size;
+  font-weight: 400;
+  line-height: $base-line-height;
+  color: rgba($black, .55);
+}
+
+a {
+  text-decoration: none;
+  color: rgba($link-color, 1);
+
+  img {
+    border-style: none;
+  }
+}
+
+.site-container {
+  /*max-width: 960px;*/
+  margin: 0 auto;
+  /*padding: 40px 20px;*/
+  /*background-color: rgba($white, 1);*/
+}
+
+.page-content {
+  /*margin-bottom: 50px;*/
+}
+
+
+
+// Independent elements that can be located everywhere in the DOM and always have the same styling rules.
+.loader {
+  @extend %stretch;
+  position: fixed;
+  z-index: 10;
+
+  &:not(.hidden) {
+    .loader-cube {
+      @include transition(opacity 0.5s ease-in 1.5s);
+    }
+  }
+
+  &.hidden {
+    top: auto;
+  }
+}
+
+.loader-cube {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  margin-top: -52px;
+  margin-left: -26px;
+  @include bg($primary-color, 0.5);
+  @include animation(cubemove 1.8s infinite ease-in-out);
+
+  .hidden & {
+    opacity: 0;
+  }
+}
+
+.loader-cube-2 {
+  @include animation-delay(-0.9s);
+}
+
+@include keyframes(cubemove) {
+  25% {
+    @include transform(
+      translateX(42px) rotate(-90deg) scale(0.5)
+      );
+  }
+
+  50% {
+    @include transform(
+      translateX(42px) translateY(42px) rotate(-180deg)
+      );
+  }
+
+  75% {
+    @include transform(
+      translateX(0px) translateY(42px) rotate(-270deg) scale(0.5)
+      );
+  }
+
+  100% {
+    @include transform(
+      rotate(-360deg)
+      );
+  }
+}
+
+.vg-bg-picker-btn {
+  @extend %button;
+  position: absolute;
+}
+
+.background-image,
+.background-color {
+  position: absolute;
+  @extend %stretch;
+}
+
+.background-image {
+  z-index: -2;
+  background-position: center;
+  background-size: cover;
+}
+.background-color {
+  z-index: -1;
+}
+
+// Pseudo classes for commonly used styling rules for different elements.
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+%hyphenate {
+  // Non standard for webkit
+  word-break: break-word;
+
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+%stretch {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+%button {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: none;
+  }
+}
+
+%inline-block {
+  display: inline-block;
+}
+
+%header-footer-left {
+  position: relative;
+  float: left;
+}
+
+%header-footer-right {
+  float: right;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 40px;
+  line-height: 1.3em;
+  font-style: normal;
+  font-size: 24px;
+  @include bg($secondary-color);
+
+  &:before {
+    content: '\A';
+  }
+
+  &:hover {
+    @include bg($secondary-color, 0.8);
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+// Main container that affects the entire site's other elements.
+.container {
+  @extend %clearfix;
+  min-height: 100%;
+
+  .editmode & {
+    @include calc(min-height, '100% - 40px');
+  }
+
+  .search-open & {
+    position: static;
+  }
+
+  a {
+    text-decoration: none;
+
+    img {
+      border: none;
+    }
+  }
+}
+
+.wrap {
+  @extend %clearfix;
+  margin: 0 auto;
+  overflow: hidden;
+
+  .front-page & {
+    @extend %wide-wrap;
+  }
+}
+
+%wide-wrap {
+  max-width: 1000px;
+}

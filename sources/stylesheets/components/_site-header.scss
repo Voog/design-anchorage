@@ -1,0 +1,151 @@
+.site-header {
+  padding-bottom: 70px;
+  position: relative;
+
+  .front-page & {
+    min-height: 623px;
+
+    @include query($mobile-1 - 58) {
+      min-height: 423px;
+    }
+  }
+
+  .search-open & {
+    position: static;
+  }
+
+  .header-top {
+    @include display(flex);
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+    @include align-items(baseline);
+
+    .site-options {
+      margin-bottom: 20px;
+    }
+  }
+
+  .header-title {
+    @extend %hyphenate;
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 140px;
+    min-height: 40px;
+    line-height: 1.3em;
+    font-weight: 700;
+    font-size: 30px;
+
+    a {
+      @include color($primary-color, 0.73);
+
+      &:hover {
+        @include color($primary-color, 0.5);
+      }
+    }
+  }
+
+  .header-left {
+    float: left;
+  }
+  .header-right {
+    float: right;
+    text-align: right;
+
+    .menu-main {
+      display: inline-block;
+    }
+    .site-options {
+      display: inline-block;
+    }
+  }
+
+  .header-top {
+    /*@include bg($white);*/
+
+    .front-page & {
+      position: relative;
+      z-index: 9;
+    }
+
+    .wrap {
+      @extend %clearfix;
+      @extend %wide-wrap;
+      padding: 20px;
+      width: 100%;
+
+      @include query($tablet-2) {
+        .flexbox & {
+          @include display(flex);
+        }
+
+        .no-flexbox & {
+          display: table;
+          width: 100%;
+          @include box-sizing(border-box);
+        }
+      }
+    }
+  }
+
+  .header-bottom {
+    margin-top: 50px;
+
+    .front-page & {
+      position: relative;
+      z-index: 9;
+    }
+
+    .header-bottom-inner {
+      display: table;
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+
+      a {
+        @include color($white);
+
+        .light-background & {
+          color: rgba($primary-color,0.73);
+        }
+      }
+
+      .wrap {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 60px 20px;
+        height: 422px;
+      }
+
+      @include query($mobile-1 - 58) {
+        .wrap {
+          height: 222px;
+        }
+      }
+    }
+  }
+
+  @include query($tablet-2) {
+    .header-left,
+    .header-right {
+      float: none;
+
+      .no-flexbox & {
+        display: table-cell;
+        vertical-align: top;
+      }
+    }
+
+    .header-left {
+      @include flex(1);
+      margin-right: 20px;
+    }
+
+    .header-right {
+      display: inline-block;
+    }
+  }
+}

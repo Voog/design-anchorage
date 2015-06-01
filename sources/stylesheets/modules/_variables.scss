@@ -1,0 +1,91 @@
+// VARIABLES
+// Global variables to use in every .scss files.
+// Comment out the "_variables.scss" partial in the "main.scss" file if not used.
+
+// Basic colors.
+$black: #000000;
+$white: #ffffff;
+
+// Specific colors.
+$highlight-color: #1b2124;
+$link-color: #0066bb;
+$error-color: #cc0000;
+$success-color: #60a740;
+
+// Font sizes.
+$base-font-size: 18px;
+$article-title-size: 50px;
+
+// Line heights.
+$base-line-height: 1.5em;
+$secondary-line-height: 1.3em;
+
+// Media query breakpoints.
+$tablet-1: 1024px;
+$tablet-2: 768px;
+$tablet-3: 640px;
+$mobile-1: 480px;
+$mobile-2: 320px;
+
+
+// General colors
+$primary-color: #000000;
+$secondary-color: #E4AC00;
+$third-color: #1B2124;
+
+// Specific colors
+$white: #FFFFFF;
+
+$red: #CC0000;
+$green: #60A740;
+$blue-1: #0066BB;
+$blue-2: #C7E5FF;
+$yellow: #F9EC5A;
+
+$grey: #E5E5E5;
+
+// Reusable values
+// Define the reusable variables here.
+// For example the width of several different elements, that allways have to be with the same height:
+// $box-width: 400px;
+$search-height-1: 30px;
+$search-height-2: 40px;
+
+
+$main-color: #222222;
+$secondary-color: #000000;
+
+$link-color: #0066bb;
+$third-color: #a3a3a3;
+$bg-color: #f6f6f6;
+$error-color: #c70909;
+$success-color: #409e13;
+$black: #000000;
+$white: #ffffff;
+$blue: #0066BB;
+
+$font-size-xs: 10px;
+$font-size: 18px;
+$font-size-big: 20px;
+$font-size-xl: 24px;
+$font-size-small: 14px;
+$font-size-medium: 16px;
+
+$line-height-tiny: 18px;
+$line-height-xs: 24px;
+$line-height-small: 30px;
+$line-height: 32px;
+
+$font-main: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-secondary: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$site-width: 1024px;
+$side-width: 200px;
+$side-width-small: 200px;
+$content-width: $site-width - $side-width;
+
+$search-width: 300px;
+
+$break-small: 600px;
+$break-middle: 1024px;
+$break-large: 1500px;

@@ -1,0 +1,5 @@
+.blog-article-page {
+  .article-title {
+    @extend %article-title;
+  }
+}

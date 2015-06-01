@@ -1,0 +1,239 @@
+{
+  "description": "Modern layout",
+  "name": "Anchorage",
+  "preview_medium": "",
+  "preview_small": "",
+  "author": "Tõnu Runnel",
+  "layouts": [
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/front_page.tpl",
+      "layout_name": "page_front",
+      "title": "Front page"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/common_page.tpl",
+      "layout_name": "page_default",
+      "title": "Common page"
+    },
+    {
+      "content_type": "blog",
+      "component": false,
+      "file": "layouts/blog___news.tpl",
+      "layout_name": "blog",
+      "title": "Blog & News"
+    },
+    {
+      "content_type": "blog_article",
+      "component": false,
+      "file": "layouts/blog_article.tpl",
+      "layout_name": "blog_article",
+      "title": "Blog article"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-sub.tpl",
+      "layout_name": "menu-sub",
+      "title": "menu-sub"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/blog-article-tags.tpl",
+      "layout_name": "blog-article-tags",
+      "title": "blog-article-tags"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/blog-article-template.tpl",
+      "layout_name": "blog-article-template",
+      "title": "blog-article-template"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/blog-news-tags.tpl",
+      "layout_name": "blog-news-tags",
+      "title": "blog-news-tags"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/html-head.tpl",
+      "layout_name": "html-head",
+      "title": "html-head"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-language.tpl",
+      "layout_name": "menu-language",
+      "title": "menu-language"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-main.tpl",
+      "layout_name": "menu-main",
+      "title": "menu-main"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-mobile.tpl",
+      "layout_name": "menu-mobile",
+      "title": "menu-mobile"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/blog-article-comments.tpl",
+      "layout_name": "blog-article-comments",
+      "title": "blog-article-comments"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/open-graph.tpl",
+      "layout_name": "open-graph",
+      "title": "open-graph"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-footer.tpl",
+      "layout_name": "site-footer",
+      "title": "site-footer"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-header.tpl",
+      "layout_name": "site-header",
+      "title": "site-header"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-javascripts.tpl",
+      "layout_name": "site-javascripts",
+      "title": "site-javascripts"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-search.tpl",
+      "layout_name": "site-search",
+      "title": "site-search"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-sidebar.tpl",
+      "layout_name": "site-sidebar",
+      "title": "site-sidebar"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-topbar.tpl",
+      "layout_name": "site-topbar",
+      "title": "site-topbar"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-translations.tpl",
+      "layout_name": "site-translations",
+      "title": "site-translations"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/voog-tools-styles.tpl",
+      "layout_name": "voog-tools-styles",
+      "title": "voog-tools-styles"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/voog-tools-variables.tpl",
+      "layout_name": "voog-tools-variables",
+      "title": "voog-tools-variables"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/voog-tools.tpl",
+      "layout_name": "voog-tools",
+      "title": "voog-tools"
+    }
+  ],
+  "assets": [
+    {
+      "content_type": "application/javascript",
+      "file": "javascripts/main.js",
+      "kind": "javascripts",
+      "filename": "main.js"
+    },
+    {
+      "content_type": "application/javascript",
+      "file": "javascripts/main.min.js",
+      "kind": "javascripts",
+      "filename": "main.min.js"
+    },
+    {
+      "content_type": "application/javascript",
+      "file": "javascripts/modernizr.js",
+      "kind": "javascripts",
+      "filename": "modernizr.js"
+    },
+    {
+      "content_type": "application/javascript",
+      "file": "javascripts/modernizr.min.js",
+      "kind": "javascripts",
+      "filename": "modernizr.min.js"
+    },
+    {
+      "content_type": "text/css",
+      "file": "stylesheets/main.css",
+      "kind": "stylesheets",
+      "filename": "main.css"
+    },
+    {
+      "content_type": "text/css",
+      "file": "stylesheets/main.min.css",
+      "kind": "stylesheets",
+      "filename": "main.min.css"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/ico-flags.svg",
+      "kind": "assets",
+      "filename": "ico-flags.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/loader.svg",
+      "kind": "assets",
+      "filename": "loader.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/search.svg",
+      "kind": "assets",
+      "filename": "search.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/search_close.svg",
+      "kind": "assets",
+      "filename": "search_close.svg"
+    }
+  ]
+}

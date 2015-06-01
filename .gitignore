@@ -1,0 +1,10 @@
+# Hidden files
+.DS_Store
+.sass-cache
+.voog
+
+#Visible files
+
+# Folders
+bower_components/
+node_modules/
