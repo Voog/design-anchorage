@@ -115,3 +115,9 @@
      -moz-transform: rotate($value);
           transform: rotate($value);
 }
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+  -webkit-box-shadow: $top $left $blur $color #{$inset};
+     -moz-box-shadow: $top $left $blur $color #{$inset};
+          box-shadow: $top $left $blur $color #{$inset};
+}

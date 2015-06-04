@@ -378,3 +378,380 @@
   left: 0;
 }
 }
+
+/* flags */
+.lang-flag {
+  &:before,
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 21px;
+    height: 15px;
+    content: '';
+
+    .flags-disabled & {
+      display: none;
+    }
+  }
+
+  &:after {
+    background-position: -189px -60px;
+  }
+}
+
+.lang-flag:before {
+  @include bg($black);
+}
+
+.lang-flag:after {
+  opacity: .95;
+  background-repeat: no-repeat;
+
+  .no-boxshadow & {
+    border: 1px solid #eeeeee;
+  }
+
+  .backgroundsize.svg & {
+    background-image: url('../assets/ico-flags.svg');
+  }
+
+  .no-svg {
+    background-image: url('../images/ico-flags.png');
+  }
+}
+
+// Language flag icons positioning in the spritemap.
+$flags:
+// Albanian (Albania)
+(sq, 0 0),
+// Armenian (Armenia)
+(hy, -21px 0),
+// Bengali (Bangladesh)
+(bn, -42px 0),
+// Brazilian Portuguese (Brazil)
+// (xx, -63px 0),
+// Bulgarian (Bulgaria)
+(bg, -84px 0),
+// Chinese (China)
+(zh, -105px 0),
+// Croatian (Croatia)
+(hr, -126px 0),
+// Danish (Denmark)
+(da, -147px 0),
+// Czech (Czech Republic)
+(cs, -168px 0),
+// Estonian (Estonia)
+(et, -189px 0),
+
+// Finnish (Finland)
+(fi, 0 -15px),
+// French (France)
+(fr, -21px -15px),
+// Georgian (Georgia)
+(ka, -42px -15px),
+// German (Germany)
+(de, -63px -15px),
+// Greek (Greece)
+(el, -84px -15px),
+// Hungarian (Hungary)
+(hu, -105px -15px),
+// Icelandic (Iceland)
+(is, -126px -15px),
+// Hindi (India)
+(hi, -147px -15px),
+// Indonesian (Indonesia)
+(id, -168px -15px),
+// Iranian (Iran)
+(fa, -189px -15px),
+
+// Hebrew (Israel)
+(he, 0 -30px),
+// Italian (Italy)
+(it, -21px -30px),
+// Japanese (Japan)
+(ja, -42px -30px),
+// Korean (Korea, South)
+(ko, -63px -30px),
+// Latvian (Latvia)
+(lv, -84px -30px),
+// Lithuanian (Lithuania)
+(lt, -105px -30px),
+// Malaysian (Malaysia)
+(ms, -126px -30px),
+// Dutch (Netherlands)
+(nl, -147px -30px),
+// Norwegian (Norway)
+(no, -168px -30px),
+// Urdu (Pakistan)
+(ur, -189px -30px),
+
+// Filipino (Philippines)
+(fil, 0 -45px),
+// Polish (Poland)
+(pl, -21px -45px),
+// Romanian (Romania)
+(ro, -42px -45px),
+// Russian (Russia)
+(ru, -63px -45px),
+// Arabic (Saudi Arabia)
+(ar, -84px -45px),
+// Slovakian (Slovakia)
+(sk, -105px -45px),
+// Slovenian (Slovenia)
+(sl, -126px -45px),
+// Spanish (Spain)
+(es, -147px -45px),
+// Swedish (Sweden)
+(sv, -168px -45px),
+// Turkish (Turkey)
+(tr, -189px -45px),
+
+// Ukrainian (Ukraine)
+(uk, 0 -60px),
+// American English (United States of America)
+(en, -21px -60px),
+// French (Ivory Coast)
+// (xx, -42px -60px),
+// British English (Great Britian)
+(en-gb, -63px -60px),
+// Portuguese (Portuguese Republic)
+(pt, -84px -60px),
+// Canadian English (Canada)
+// (xx, -105px, -60px),
+// Serbian (Republic of Serbia)
+(sr, -126px, -60px),
+// Dutch, French, German (Kingdom of Belgium)
+// (xx, -147px, -60px),
+// Australian English (Commonwealth of Australia)
+// (xx, -168px, -60px),
+;
+
+@each $flag, $pos in $flags {
+  .lang-flag-#{$flag}:after {
+    background-position: $pos;
+  }
+}
+
+.lang-options {
+  @include bg($black, 0.09);
+
+  .menu {
+    .menu-item {
+      padding: 7px 12px;
+      font-size: 13px;
+
+      @media screen and (max-width: $break-middle) {
+        text-align: right;
+      }
+    }
+  }
+
+  @media screen and (max-width: $break-small) {
+    background-color: transparent;
+
+    .menu {
+      #mobile-menu & {
+        display: block;
+        padding: 0;
+      }
+
+      .menu-item {
+        @include color($white, .5);
+      }
+    }
+  }
+}
+
+.option-btn {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  @include color($blue);
+
+  &:hover {
+    @include color($blue, .8);
+  }
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  .flags-disabled & {
+    .disable-text {
+      display: none;
+    }
+  }
+
+  .flags-enabled & {
+    .enable-text {
+      display: none;
+    }
+  }
+
+  .disable-text,
+  .enable-text {
+    &:first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  @media screen and (max-width: $break-small) {
+    @include color($white);
+
+    &:hover {
+      @include color($white, .8);
+    }
+  }
+}
+
+/* langmenu */
+.lang-menu {
+  position: absolute;
+  z-index: 200;
+  top: 30px;
+  left: 30px;
+  height: 13px;
+
+  li {
+    display: block;
+    font-size: 12px;
+    text-align: left;
+
+    &.add-lang-btn {
+      padding: 5px 0 4px 10px;
+
+      @media screen and (max-width: $break-middle) {
+        padding: 5px 10px 4px 0;
+        text-align: right;
+      }
+    }
+  }
+
+  a {
+    &.lang-flag {
+      position: relative;
+      display: block;
+      padding: 6px 13px 5px 40px;
+      @include color(#1b2124, .7);
+
+      &:before,
+      &:after {
+        top: 4px;
+        left: 12px;
+      }
+
+      &.active,
+      &:hover {
+        background-color: #cccccc;
+      }
+
+      &:hover {
+        @include bg(#cccccc, .5);
+      }
+
+      @media screen and (max-width: $break-middle) {
+        padding: 6px 40px 5px 13px;
+        text-align: right;
+
+        &:before,
+        &:after {
+          left: auto;
+          right: 12px;
+        }
+      }
+    }
+
+    &.edy-menu-langadd {
+      display: inline-block;
+      padding: 5px;
+    }
+  }
+
+  &.flags-disabled {
+    a.lang-flag {
+      padding: 6px 13px 5px;
+    }
+  }
+}
+
+.lang-menu-btn {
+  margin: 0;
+  padding: 0;  @extend %button;
+  position: relative;
+  display: block;
+  height: 15px;
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  vertical-align: middle;
+  border: none;
+  background: none;
+
+  .flags-enabled & {
+    width: 21px;
+
+    .lang-title {
+      display: none;
+    }
+  }
+
+  .lang-flag {
+    &:before,
+    &:after {
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .ico-popover-toggle {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    font-size: 7.2px;
+
+    .flags-enabled & {
+      display: none;
+    }
+  }
+
+  // TODO: Remove if decided to not use or add back if it is going to be used anyway.
+  // &.open {
+  //   .ico-popover-toggle {
+  //     top: -2px;
+  //     @include transform(rotate(180deg));
+  //   }
+  // }
+}
+
+.lang-menu-popover {
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  left: -12px;
+  display: none;
+  min-width: 122px;
+  padding: 5px 0;
+  line-height: 1;
+  text-align: left;
+  background: #ffffff;
+  @include box-shadow(0,0,5px,rgba(0,0,0,.3));
+
+  .no-boxshadow & {
+    border: 1px solid #eeeeee;
+  }
+
+  .editmode & {
+    padding-bottom: 0;
+  }
+}

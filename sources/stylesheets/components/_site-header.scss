@@ -1,5 +1,5 @@
 .site-header {
-  padding-bottom: 70px;
+  padding-bottom: $general-padding;
   position: relative;
 
   .front-page & {
@@ -35,7 +35,6 @@
     min-height: 40px;
     line-height: 1.3em;
     font-weight: 700;
-    font-size: 30px;
 
     a {
       @include color($primary-color, 0.73);

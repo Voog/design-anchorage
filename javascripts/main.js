@@ -9230,6 +9230,50 @@ return jQuery;
   };
 
 
+  $('.mobile-menu-toggler').click(function(event) {
+      event.preventDefault();
+      $('body').toggleClass('mobilemenu-open');
+      $('body').removeClass('mobilesearch-open');
+  });
+
+  $('.mobile-menu-close').on('click', function(event) {
+      event.preventDefault();
+
+      if ($('body').hasClass('language-menu-open')) {
+          $('body').removeClass('language-menu-open');
+      }
+      else {
+          $('body').removeClass('mobilemenu-open');
+      }
+  });
+
+  $('.language-menu-btn').on('click', function(event) {
+      $('body').addClass('language-menu-open');
+      console.log("clicky");
+  });
+
+  $('.lang-menu').on('click', function() {
+      console.log("clicky");
+  });
+
+  var toggleFlags = function() {
+    $('.js-option-toggle-flags').on('click', function(event) {
+      event.stopPropagation();
+
+      if ($(this).hasClass('js-flag-disable-btn')) {
+        var flagsState = false;
+      } else {
+        var flagsState = true;
+      }
+
+      $(this).toggleClass('js-flag-disable-btn');
+      $('.js-menu-lang-wrap').toggleClass('flags-enabled flags-disabled');
+
+      siteData.set("flags_state", flagsState);
+    });
+  };
+
+
   // contentHalf background image and color preview logic function.
   var contentHalfBgPreview = function(data, contentHalf, contentHalfObj) {
 
@@ -9384,22 +9428,6 @@ return jQuery;
   var init = function() {
     // Add site wide functions here.
 
-    $('.mobile-menu-toggler').click(function(event) {
-        event.preventDefault();
-        $('body').toggleClass('mobilemenu-open');
-        $('body').removeClass('mobilesearch-open');
-    });
-
-    $('.mobile-menu-close').on('click', function(event) {
-        event.preventDefault();
-
-        if ($('body').hasClass('language-menu-open')) {
-            $('body').removeClass('language-menu-open');
-        }
-        else {
-            $('body').removeClass('mobilemenu-open');
-        }
-    });
 
   };
 
@@ -9414,6 +9442,38 @@ return jQuery;
   });
 
   init();
+})(jQuery);
+
+(function($) {
+    $.fn.extend({
+        jsPopupMenu: function(options) {
+            this.each(function() {
+                var $menu = $(this),
+                    $btn = $menu.find('.js-popup-menu-btn'),
+                    $pop = $menu.find('.js-popup-menu-popover');
+
+                $pop.hide();
+                $btn.on('click', function(event) {
+                    event.preventDefault();
+                    if ($pop.is(':hidden')) {
+                        $pop.show();
+                        $btn.addClass('open');
+
+                        setTimeout(function() {
+                            $(document).on('click.js-popup-menu-click', function() {
+                                $pop.hide();
+                                $btn.removeClass('open');
+                                $(this).off('.js-popup-menu-click');
+                            });
+                        },0);
+
+                    }
+                });
+            });
+            return this;
+        }
+    });
+
 })(jQuery);
 
 // quantize.js, Copyright 2012 Shao-Chung Chen.

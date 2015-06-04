@@ -8,17 +8,20 @@ $white: #ffffff;
 
 // Specific colors.
 $highlight-color: #1b2124;
-$link-color: #0066bb;
+$link-color: #ffffff;
+$link-color-dark: #000;
 $error-color: #cc0000;
 $success-color: #60a740;
 
 // Font sizes.
-$base-font-size: 18px;
+$base-font-size: 19px;
+$medium-font-size: 32px;
 $article-title-size: 50px;
 
 // Line heights.
 $base-line-height: 1.5em;
 $secondary-line-height: 1.3em;
+$third-line-height: 48px;
 
 // Media query breakpoints.
 $tablet-1: 1024px;
@@ -50,12 +53,12 @@ $grey: #E5E5E5;
 // $box-width: 400px;
 $search-height-1: 30px;
 $search-height-2: 40px;
+$general-padding: 70px;
 
 
 $main-color: #222222;
 $secondary-color: #000000;
 
-$link-color: #0066bb;
 $third-color: #a3a3a3;
 $bg-color: #f6f6f6;
 $error-color: #c70909;

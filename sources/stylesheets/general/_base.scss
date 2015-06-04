@@ -9,7 +9,14 @@ body {
 
 a {
   text-decoration: none;
-  color: rgba($link-color, 1);
+
+  .dark-background & {
+    color: rgba($link-color, 1);
+  }
+
+  .light-background & {
+    color: rgba($link-color-dark, .5);
+  }
 
   img {
     border-style: none;
@@ -223,4 +230,84 @@ a {
 
 %wide-wrap {
   max-width: 1000px;
+}
+
+.site-footer .dark-background b, .site-footer .dark-background a {
+  color: $white;
+}
+
+.dark-background {
+  color: $white;
+  & h1, h2, h3, h4, p, pre {
+    color: $white;
+  }
+
+  .site-footer & {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.light-background {
+  color: rgba(0, 0, 0, 0.5);
+  & h1, h2, h3, h4, p {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .site-footer & {
+      a {
+      color: $black;
+    }
+  }
+
+  .site-footer & {
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.dark-background .voog-reference svg path {
+    fill: $white;
+}
+
+
+.custom-btn {
+  display: inline-block;
+  background: rgba(0,0,0,0);
+  box-sizing: border-box;
+  width: 180px;
+  padding: 11px 10px;
+  text-transform: uppercase;
+  font-size: $font-size;
+  line-height: $line-height-xs;
+  text-align: center;
+  margin: 5px 10px;
+  cursor: pointer;
+  @include hyphenate(true);
+}
+
+.custom-btn:hover {
+  background: #2b2b2b;
+}
+
+.dark-background .custom-btn {
+  border: 2px solid $white;
+  color: $white;
+
+  a {
+    color: $white;
+  }
+}
+.light-background .custom-btn {
+  border: 2px solid $black;
+  color: $black;
+
+  a {
+    color: $black;
+  }
+}
+.light-background .custom-btn:hover {
+  border: 2px solid $white;
+  color: $white;
+
+  a {
+    color: $white;
+  }
 }

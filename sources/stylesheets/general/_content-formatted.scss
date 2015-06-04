@@ -4,9 +4,19 @@
 .content-formatted {
   @extend %clearfix;
   @include hyphenate(true);
+  font-size: $medium-font-size;
 
   .dark-background & {
     @include color($white);
+  }
+
+  .main-content & {
+    line-height: $third-line-height;
+    font-weight: 100;
+  }
+
+  .main-feature & {
+    font-size: $base-font-size;
   }
 
   .main-feature &,
@@ -36,8 +46,6 @@
 
   &.header-body {
     line-height: 1.5em;
-    font-style: italic;
-    font-size: 30px;
 
     @include query($mobile-1 - 58) {
       font-size: 24px;
