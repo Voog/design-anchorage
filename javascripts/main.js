@@ -9239,21 +9239,21 @@ return jQuery;
   $('.mobile-menu-close').on('click', function(event) {
       event.preventDefault();
 
-      if ($('body').hasClass('language-menu-open')) {
-          $('body').removeClass('language-menu-open');
+      if ($('body').hasClass('lang-menu-open')) {
+          $('body').removeClass('lang-menu-open');
       }
       else {
           $('body').removeClass('mobilemenu-open');
       }
   });
 
-  $('.language-menu-btn').on('click', function(event) {
-      $('body').addClass('language-menu-open');
+  $('.lang-menu-btn').on('click', function(event) {
+      $('body').addClass('lang-menu-open');
       console.log("clicky");
   });
 
   $('.lang-menu').on('click', function() {
-      console.log("clicky");
+      console.log("clicky2");
   });
 
   var toggleFlags = function() {

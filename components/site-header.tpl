@@ -29,7 +29,19 @@
     {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-image="{{ content_top_bg_image }}" data-bg-image-sizes="{{ content_top_bg_image_sizes_str | escape }}" data-bg-color="{{ content_top_bg_color }}" data-bg-color-data="{{ content_top_bg_color_data_str | escape }}"></button>{% endif %}
     <div class="header-bottom-inner">
       <div class="wrap">
-        <div class="header-body content-formatted">{% content name="header" %}</div>
+        <div class="header-body content-formatted">
+
+          {% if front_page %}
+            {% content name="header" %}
+          {% elsif post_page %}
+            <h1 class="article-title">{% if editmode %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
+            <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: 'long' }}, </time>
+            <div class="article-author">{{ article.author.name }}</div>
+
+          {% else %}
+            <h1>{{ page.title }}</h1>
+          {% endif %}
+        </div>
       </div>
     </div>
   </div>

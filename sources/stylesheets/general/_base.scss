@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;;
+  font-family: $font-main;
   font-size: $base-font-size;
   font-weight: 400;
   line-height: $base-line-height;
@@ -245,21 +245,33 @@ a {
   .site-footer & {
     color: rgba(255, 255, 255, 0.6);
   }
+  .header-title a {
+    color: $white!important;
+  }
+  .menu li.is-active a {
+    color: rgba($white, .7);
+  }
 }
 
 .light-background {
-  color: rgba(0, 0, 0, 0.5);
+  color: $black;
   & h1, h2, h3, h4, p {
-    color: rgba(0, 0, 0, 0.5);
+    color: $black;
   }
   .site-footer & {
-      a {
+    a {
       color: $black;
+    }
+    .header-title a {
+      color: $black!important;
+    }
+    .menu li.is-active a {
+      color: rgba($black, .7);
     }
   }
 
   .site-footer & {
-    color: rgba(0, 0, 0, 0.6);
+    color: $grey;
   }
 }
 
@@ -309,5 +321,12 @@ a {
 
   a {
     color: $white;
+  }
+}
+.main-content {
+  padding: $general-padding 0;
+  .inner {
+    width: 75%;
+    margin: 0 auto;
   }
 }

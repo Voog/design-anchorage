@@ -50,14 +50,7 @@
       @extend %normal-text;
     }
   }
-  .main-content {
-    padding: $general-padding 0;
-    .inner {
-      text-align: center;
-      width: 75%;
-      margin: 0 auto;
-    }
-  }
+
   .main-feature {
     padding-bottom: $general-padding;
 
@@ -82,6 +75,16 @@
   .blog-feed {
     padding: $general-padding 0;
 
+    .wrap {
+      height: 500px;
+      display: table;
+
+      .inner {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+
     h1 {
       font-size: $base-font-size;
       line-height: $third-line-height;
@@ -95,10 +98,6 @@
     .inner {
       text-align: center;
     }
-  }
-
-  .site-footer {
-    padding: $general-padding / 2 0;
   }
 
   .content-full {

@@ -3,7 +3,7 @@
 // Comment out the "_variables.scss" partial in the "main.scss" file if not used.
 
 // Basic colors.
-$black: #000000;
+$black: #3e3e3e;
 $white: #ffffff;
 
 // Specific colors.
@@ -12,6 +12,7 @@ $link-color: #ffffff;
 $link-color-dark: #000;
 $error-color: #cc0000;
 $success-color: #60a740;
+
 
 // Font sizes.
 $base-font-size: 19px;
@@ -45,7 +46,7 @@ $blue-1: #0066BB;
 $blue-2: #C7E5FF;
 $yellow: #F9EC5A;
 
-$grey: #E5E5E5;
+$grey: #a6a6a6;
 
 // Reusable values
 // Define the reusable variables here.
@@ -79,8 +80,8 @@ $line-height-xs: 24px;
 $line-height-small: 30px;
 $line-height: 32px;
 
-$font-main: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-secondary: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-main: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-secondary: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 $site-width: 1024px;
 $side-width: 200px;

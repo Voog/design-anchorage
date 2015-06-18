@@ -70,9 +70,9 @@
 
     .wrap {
       @extend %clearfix;
-      @extend %wide-wrap;
-      padding: 20px;
+      padding: 40px;
       width: 100%;
+      max-width: 2000px;
 
       @include query($tablet-2) {
         .flexbox & {
@@ -116,7 +116,9 @@
         display: table-cell;
         vertical-align: middle;
         padding: 60px 20px;
-        height: 422px;
+        .front-page & {
+          height: 422px;
+        }
       }
 
       @include query($mobile-1 - 58) {
@@ -145,6 +147,14 @@
 
     .header-right {
       display: inline-block;
+    }
+  }
+  .article-author {
+    display: inline-block;
+  }
+  .article-title {
+    a {
+      text-decoration: none;
     }
   }
 }

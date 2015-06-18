@@ -27,3 +27,5 @@
 {% comment %}MISC{% endcomment %}
 {% include 'open-graph' %}
 {% if blog %}{{ blog.rss_link }}{% endif %}
+
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>

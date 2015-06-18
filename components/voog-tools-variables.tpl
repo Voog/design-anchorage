@@ -36,19 +36,32 @@
       {% endif %}
     {% endif %}
   {% else %}
-    {% assign content_top_bg_type = 'light-background' %}
+    {% assign content_top_bg_type = 'dark-background' %}
   {% endif %}
 
-  {% if content_top_bg_image_sizes != nil %}
+  {% if content_top_bg_image == nil %}
+    {% assign content_top_bg_image_original = images_path | append: '/front-page-top-bg.jpg' %}
+    {% assign content_top_bg_image = images_path | append: '/front-page-top-bg_block.jpg' %}
+  {% endif %}
+
+  {% if content_top_bg_image_sizes == nil %}
+    {% assign content_top_bg_image_sizes_str = '[{"url":"' | append: images_path | append: '/front-page-top-bg.jpg", "width":1055, "height":1006}, {"url":"' | append: images_path | append: '/front-page-top-bg_block.jpg", "width":600, "height":572}]' %}
+  {% else %}
     {% assign content_top_bg_image_sizes_str = content_top_bg_image_sizes | json %}
   {% endif %}
 
   {% if content_top_bg_color == nil %}
-    {% assign content_top_bg_color = 'rgba(168, 244, 255, 1)' %}
+    {% if front_page %}
+      {% assign content_top_bg_color = 'rgba(0, 0, 0, 0.1)' %}
+    {% elsif blog_page or post_page %}
+      {% assign content_top_bg_color = 'rgba(0, 0, 0, 0.4)' %}
+    {% else %}
+      {% assign content_top_bg_color = 'rgba(0, 0, 0, 0.1)' %}
+    {% endif %}
   {% endif %}
 
   {% if content_top_bg_color_data == nil %}
-    {% assign content_top_bg_color_data_str = '{"r": 168, "g": 244, "b": 255, "a": 1, "lightness": 0.78}' %}
+    {% assign content_top_bg_color_data_str = '{"r": 148, "g": 139, "b": 144, "a": 0.05, "lightness": 0.78}' %}
   {% else %}
     {% assign content_top_bg_color_data_str = content_top_bg_color_data | json %}
   {% endif %}
@@ -82,7 +95,7 @@
       {% endif %}
     {% endif %}
   {% else %}
-    {% assign content_left_bg_type = 'dark-background' %}
+    {% assign content_left_bg_type = 'light-background' %}
   {% endif %}
 
   {% if content_left_bg_image == nil %}
@@ -150,7 +163,13 @@
   {% endif %}
 
   {% if content_right_bg_color == nil %}
-    {% assign content_right_bg_color = 'rgba(255, 255, 255, 0)' %}
+    {% if front_page %}
+      {% assign content_right_bg_color = 'rgba(0, 0, 0, 0.2)' %}
+    {% elsif blog_page or post_page %}
+      {% assign content_right_bg_color = 'rgba(0, 0, 0, 0.2)' %}
+    {% else %}
+      {% assign content_right_bg_color = 'rgba(0, 0, 0, 0.2)' %}
+    {% endif %}
   {% endif %}
 
   {% if content_right_bg_color_data == nil %}
@@ -188,7 +207,7 @@
       {% endif %}
     {% endif %}
   {% else %}
-    {% assign content_bottom_bg_type = 'dark-background' %}
+    {% assign content_bottom_bg_type = 'light-background' %}
   {% endif %}
 
   {% if content_bottom_bg_image_sizes != nil %}
@@ -196,7 +215,7 @@
   {% endif %}
 
   {% if content_bottom_bg_color == nil %}
-    {% assign content_bottom_bg_color = 'rgba(43, 43, 43, 1)' %}
+    {% assign content_bottom_bg_color = 'rgba(255,255,255,1)' %}
   {% endif %}
 
   {% if content_bottom_bg_color_data == nil %}
