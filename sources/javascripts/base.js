@@ -137,7 +137,7 @@
 
     // Updates the contentHalf background image and background color.
     if (newContentHalfBgImage != oldContentHalfBgImage) {
-      $(contentHalf).css({'background-image' : contentHalfBgImage});
+      $(contentHalf).find('.background-image').css({'background-image' : contentHalfBgImage});
     };
     $(contentHalf).find('.background-color').css({'background-color' : contentHalfBgColor});
   };
@@ -150,11 +150,9 @@
         commitData.color = data.color || 'rgba(255,255,255,0)';
         commitData.combinedLightness = contentHalfBgCombinedLightness;
         if (articlePage) {
-          Edicy.articles.currentArticle.setData('contentHalfTopBg', commitData);
-          console.log("comm");
+          Edicy.articles.currentArticle.setData(dataName, commitData);
         } else {
           pageData.set(dataName, commitData);
-          console.log("comm_comm");
         };
   };
 

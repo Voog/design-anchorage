@@ -20,7 +20,7 @@
       });
     {% endif %}
 
-    {% if post_page %}
+
       var contentHalfTopBg = new Edicy.BgPicker($('.content-top .js-background-settings'), {
           picture: true,
           target_width: 600,
@@ -35,36 +35,8 @@
           site.contentHalfBgCommit(data, 'content_top_bg');
         }
       });
-    {% else %}
-      var contentHalfTopBg = new Edicy.BgPicker($('.content-top .js-background-settings'), {
-          picture: true,
-          target_width: 600,
-          color: true,
-          showAlpha: true,
-
-        preview: function(data) {
-          site.contentHalfBgPreview(data, '.js-content-top', contentHalfTopBg);
-        },
-
-        commit: function(data) {
-          site.contentHalfBgCommit(data, 'content_top_bg');
-        }
-      });
-    {% endif %}
 
 
-
-    {% if edicy-tools == "post_page" %}
-  var pictureDropArea = new Edicy.ImgDropArea($('.js-post-cover-inner'), {
-    positionable: true,
-    target_width: 600,
-    change: function(data) {
-      Edicy.articles.currentArticle.setData({
-        'post_image': data
-      });
-    }
-  });
-    {% endif %}
 
     {% comment %}/*Front page left content area background picker.*/{% endcomment %}
     var contentHalfLeftBg = new Edicy.BgPicker($('.content-left .js-background-settings'), {

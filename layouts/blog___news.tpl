@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
-
+    {% assign blog_page = true %}
     {% include 'voog-tools-variables' %}
     {% include 'html-head' %}
     {% include 'voog-tools-styles' %}

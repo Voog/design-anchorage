@@ -100,19 +100,38 @@
         background-image: none;
       }
     {% else %}
-      {% for imageSize in page.data.content_top_bg.imageSizes %}
-        {% if forloop.first %}
+
+
+    {% if post_page %}
+      {% for imageSize in article.data.content_top_bg.imageSizes %}
+      {% if forloop.first %}
+        .content-top .background-image {
+          background-image: url("{{ imageSize.url }}");
+        }
+      {% else %}
+        @media screen and (max-width: {{ imageSize.width }}px) and (max-height: {{ imageSize.height }}px) {
           .content-top .background-image {
             background-image: url("{{ imageSize.url }}");
           }
-        {% else %}
-          @media screen and (max-width: {{ imageSize.width }}px) and (max-height: {{ imageSize.height }}px) {
-            .content-top .background-image {
-              background-image: url("{{ imageSize.url }}");
-            }
+        }
+      {% endif %}
+    {% endfor %}
+    {% else %}
+      {% for imageSize in page.data.content_top_bg.imageSizes %}
+      {% if forloop.first %}
+        .content-top .background-image {
+          background-image: url("{{ imageSize.url }}");
+        }
+      {% else %}
+        @media screen and (max-width: {{ imageSize.width }}px) and (max-height: {{ imageSize.height }}px) {
+          .content-top .background-image {
+            background-image: url("{{ imageSize.url }}");
           }
-        {% endif %}
-      {% endfor %}
+        }
+      {% endif %}
+    {% endfor %}
+    {% endif %}
+
     {% endif %}
 
   {% else %}
@@ -138,9 +157,15 @@
 
   {% comment %}/* Body Background color */{% endcomment %}
   {% if content_top_bg.color %}
-    .content-top .background-color {
-      background-color: {{ page.data.content_top_bg.color }};
-    }
+    {% if post_page %}
+      .content-top .background-color {
+        background-color: {{ article.data.content_top_bg.color }};
+      }
+    {% else %}
+      .content-top .background-color {
+        background-color: {{ page.data.content_top_bg.color }};
+      }
+    {% endif %}
   {% else %}
     .content-top .background-color {
       background-color: {{ content_top_bg_color }};

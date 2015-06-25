@@ -920,6 +920,7 @@ a img {
 }
 
 .blog-news-page .blog-article {
+  position: relative;
   padding: 40px 0;
 }
 

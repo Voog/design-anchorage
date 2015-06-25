@@ -5,7 +5,17 @@
     <div class="article-author">{{ article.author.name }}</div>
     <h1 class="article-title">{% if blog-article-template == "article_page" %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
   </header>
-  <div class="background-image" style="background-image: url('{{ article.data.post_image.url }}');"></div>
+
+  {% for imageSize in article.data.content_top_bg.imageSizes %}
+  {% if forloop.first %}
+
+    <div class="background-image" style="background-image: url( {{ imageSize.url }} );"></div>
+  {% else %}
+
+    <div class="background-image" style="background-image: url( {{ imageSize.url }} );"></div>
+  {% endif %}
+  {% endfor %}
+
   {% endunless %}
 
   <div class="article-content">
