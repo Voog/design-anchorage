@@ -332,6 +332,10 @@ a img {
   margin: 0 auto;
 }
 
+.article-author {
+  display: inline-block;
+}
+
 .container:after, .wrap:after, .content-formatted:after, .contacts .content-formatted table tr:after, .footer .content-formatted table tr:after, .site-header .header-top .wrap:after, .content-area:after {
   display: table;
   clear: both;
@@ -913,6 +917,10 @@ a img {
 }
 .common-page main {
   margin-left: 200px;
+}
+
+.blog-news-page .blog-article {
+  padding: 40px 0;
 }
 
 .site-header {

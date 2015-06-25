@@ -2,7 +2,7 @@
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% assign post_page = true %}
-    {% include 'voog-tools-variables' %}
+    {% include 'voog-tools-variables' with 'article' %}
     {% include 'html-head' %}
     {% include 'voog-tools-styles' %}
     {% if editmode %}
@@ -38,7 +38,7 @@
       {% include 'site-footer' %}
       {% include 'menu-mobile' %}
       {% include 'site-javascripts' %}
-      {% include 'voog-tools' %}
+      {% include 'voog-tools' whith 'post_page' %}
       <script>site.initArticlePage();</script>
     </div>
   </body>

@@ -6,27 +6,65 @@
       type: 'site'
     });
 
-    var pageData = new Edicy.CustomData({
-      type: 'page',
-      id: '{{ page.id }}'
-    });
+    {% if edicy-tools == "article" %}
+      // Article pages custom data variable.
+      var articleData = new Edicy.CustomData({
+        type: 'article',
+        id: '{{ article.id }}'
+      });
+    {% else %}
+      // Article pages custom data variable.
+      var pageData = new Edicy.CustomData({
+        type: 'page',
+        id: '{{ page.id }}'
+      });
+    {% endif %}
+
+    {% if post_page %}
+      var contentHalfTopBg = new Edicy.BgPicker($('.content-top .js-background-settings'), {
+          picture: true,
+          target_width: 600,
+          color: true,
+          showAlpha: true,
+
+        preview: function(data) {
+          site.contentHalfBgPreview(data, '.js-content-top', contentHalfTopBg);
+        },
+
+        commit: function(data) {
+          site.contentHalfBgCommit(data, 'content_top_bg');
+        }
+      });
+    {% else %}
+      var contentHalfTopBg = new Edicy.BgPicker($('.content-top .js-background-settings'), {
+          picture: true,
+          target_width: 600,
+          color: true,
+          showAlpha: true,
+
+        preview: function(data) {
+          site.contentHalfBgPreview(data, '.js-content-top', contentHalfTopBg);
+        },
+
+        commit: function(data) {
+          site.contentHalfBgCommit(data, 'content_top_bg');
+        }
+      });
+    {% endif %}
 
 
-    {% comment %}/*Front page top content area background picker.*/{% endcomment %}
-    var contentHalfTopBg = new Edicy.BgPicker($('.content-top .js-background-settings'), {
-        picture: true,
-        target_width: 600,
-        color: true,
-        showAlpha: true,
 
-      preview: function(data) {
-        site.contentHalfBgPreview(data, '.js-content-top', contentHalfTopBg);
-      },
-
-      commit: function(data) {
-        site.contentHalfBgCommit(data, 'content_top_bg');
-      }
-    });
+    {% if edicy-tools == "post_page" %}
+  var pictureDropArea = new Edicy.ImgDropArea($('.js-post-cover-inner'), {
+    positionable: true,
+    target_width: 600,
+    change: function(data) {
+      Edicy.articles.currentArticle.setData({
+        'post_image': data
+      });
+    }
+  });
+    {% endif %}
 
     {% comment %}/*Front page left content area background picker.*/{% endcomment %}
     var contentHalfLeftBg = new Edicy.BgPicker($('.content-left .js-background-settings'), {

@@ -1,10 +1,11 @@
 <article class="blog-article">
   {% unless post_page %}
   <header class="article-header">
-    <h1 class="article-title">{% if blog-article-template == "article_page" %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
-    <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: 'long' }}</time>
+    <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: 'long' }}, </time>
     <div class="article-author">{{ article.author.name }}</div>
+    <h1 class="article-title">{% if blog-article-template == "article_page" %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
   </header>
+  <div class="background-image" style="background-image: url('{{ article.data.post_image.url }}');"></div>
   {% endunless %}
 
   <div class="article-content">

@@ -9211,7 +9211,8 @@ return jQuery;
 
 ;(function($) {
   // Global variable to detect if page is in editmode.
-  var editmode = $('html').hasClass('editmode');
+  var editmode = $('html').hasClass('editmode'),
+      articlePage = $('body').hasClass('blog-article-page');
 
   // Function to limit the rate at which a function can fire.
   var debounce = function(func, wait, immediate) {
@@ -9359,7 +9360,13 @@ return jQuery;
         commitData.imageSizes = data.imageSizes || '';
         commitData.color = data.color || 'rgba(255,255,255,0)';
         commitData.combinedLightness = contentHalfBgCombinedLightness;
-        pageData.set(dataName, commitData);
+        if (articlePage) {
+          Edicy.articles.currentArticle.setData('contentHalfTopBg', commitData);
+          console.log("comm");
+        } else {
+          pageData.set(dataName, commitData);
+          console.log("comm_comm");
+        };
   };
 
   var colorSum = function(bgColor, fgColor) {
