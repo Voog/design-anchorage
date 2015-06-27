@@ -6,16 +6,6 @@
     <h1 class="article-title">{% if blog-article-template == "article_page" %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
   </header>
 
-  {% for imageSize in article.data.content_top_bg.imageSizes %}
-  {% if forloop.first %}
-
-    <div class="background-image" style="background-image: url( {{ imageSize.url }} );"></div>
-  {% else %}
-
-    <div class="background-image" style="background-image: url( {{ imageSize.url }} );"></div>
-  {% endif %}
-  {% endfor %}
-
   {% endunless %}
 
   <div class="article-content">
@@ -23,9 +13,17 @@
     {% if blog-article-template == 'article_page' %}<div class="article-body content-area">{% editable article.body %}</div>{% endif %}
   </div>
 
-  {% unless blog-article-template == 'article_page' %}
+  {% unless post_page %}
     <footer class="article-footer">
-      <a href="{{ article.url }}#article-comments">{{ 'post_has_replies' | lcc: article.comments_count }}</a>
+      {% for imageSize in article.data.content_top_bg.imageSizes %}
+      {% if forloop.first %}
+        <div class="article-image">
+          <div class="background-image" style="background-image: url( {{ imageSize.url }} );"></div>
+        </div>
+      {% else %}
+
+      {% endif %}
+      {% endfor %}
     </footer>
   {% endunless %}
 </article>

@@ -724,14 +724,6 @@ $flags:
       display: none;
     }
   }
-
-  // TODO: Remove if decided to not use or add back if it is going to be used anyway.
-  // &.open {
-  //   .ico-popover-toggle {
-  //     top: -2px;
-  //     @include transform(rotate(180deg));
-  //   }
-  // }
 }
 
 .lang-menu-popover {
@@ -753,5 +745,8 @@ $flags:
 
   .editmode & {
     padding-bottom: 0;
+  }
+  .lang-menu-open & {
+    display: block;
   }
 }

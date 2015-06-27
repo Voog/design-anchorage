@@ -9249,13 +9249,15 @@ return jQuery;
   });
 
   $('.lang-menu-btn').on('click', function(event) {
-      $('body').addClass('lang-menu-open');
-      console.log("clicky");
+
+      if ($('body').hasClass('lang-menu-open')) {
+          $('body').removeClass('lang-menu-open');
+      }
+      else {
+          $('body').addClass('lang-menu-open');
+      }
   });
 
-  $('.lang-menu').on('click', function() {
-      console.log("clicky2");
-  });
 
   var toggleFlags = function() {
     $('.js-option-toggle-flags').on('click', function(event) {

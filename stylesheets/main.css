@@ -923,6 +923,10 @@ a img {
   position: relative;
   padding: 40px 0;
 }
+.blog-news-page .blog-article .article-image {
+  position: relative;
+  height: 500px;
+}
 
 .site-header {
   padding-bottom: 70px;
@@ -1814,6 +1818,9 @@ a img {
 }
 .editmode .lang-menu-popover {
   padding-bottom: 0;
+}
+.lang-menu-open .lang-menu-popover {
+  display: block;
 }
 
 .site-search {
