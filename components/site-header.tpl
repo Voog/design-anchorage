@@ -47,7 +47,7 @@
 
           {% if front_page %}
             {% content name="header" %}
-          {% elsif post_page %}
+          {% elsif blog_article_page %}
             <h1 class="article-title">{% if editmode %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
             <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: 'long' }}, </time>
             <div class="article-author">{{ article.author.name }}</div>

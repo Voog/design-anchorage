@@ -2,10 +2,11 @@
   position: relative;
   font-size: 14px;
   color: $grey;
-  padding: $general-padding / 2 0 0;
+  min-height: 100px;
+
 
   .footer-body {
-    padding: 0 0 $general-padding / 2;
+    padding: $general-padding / 2 5px;
   }
 
   .wrap {

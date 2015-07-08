@@ -9,13 +9,11 @@
       <link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.css">
       <style id="preview-style"></style>
     {% endif %}
-
   </head>
 
   <body class="blog-news-page">
     <div class="site-container">
       {% include 'site-header' %}
-      {% comment %}{% include 'site-sidebar' %}{% endcomment %}
 
       <main class="page-content" role="main">
         <div class="main-inner-row content-full">
@@ -37,9 +35,9 @@
       </main>
 
       {% include 'site-footer' %}
-      {% include "menu-mobile" %}
+      {% include 'menu-mobile' %}
       {% include 'site-javascripts' %}
-      {% include 'voog-tools' %}
+      {% include 'voog-tools' with 'blog_page' %}
       <script>site.initBlogPage();</script>
     </div>
   </body>

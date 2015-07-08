@@ -53,7 +53,7 @@
   {% if content_top_bg_color == nil %}
     {% if front_page %}
       {% assign content_top_bg_color = 'rgba(0, 0, 0, 0.1)' %}
-    {% elsif blog_page or post_page %}
+    {% elsif blog_page or blog_article_page %}
       {% assign content_top_bg_color = 'rgba(0, 0, 0, 0.4)' %}
     {% else %}
       {% assign content_top_bg_color = 'rgba(0, 0, 0, 0.1)' %}
@@ -165,7 +165,7 @@
   {% if content_right_bg_color == nil %}
     {% if front_page %}
       {% assign content_right_bg_color = 'rgba(0, 0, 0, 0.2)' %}
-    {% elsif blog_page or post_page %}
+    {% elsif blog_page or blog_article_page %}
       {% assign content_right_bg_color = 'rgba(0, 0, 0, 0.2)' %}
     {% else %}
       {% assign content_right_bg_color = 'rgba(0, 0, 0, 0.2)' %}

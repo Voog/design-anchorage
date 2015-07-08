@@ -30,6 +30,7 @@ a img {
 
 .page-content {
   /*margin-bottom: 50px;*/
+  position: relative;
 }
 
 .loader {
@@ -330,6 +331,10 @@ a img {
 .main-content .inner {
   width: 75%;
   margin: 0 auto;
+}
+
+.inner {
+  padding: 5px;
 }
 
 .article-author {
@@ -1866,10 +1871,10 @@ a img {
   position: relative;
   font-size: 14px;
   color: #a6a6a6;
-  padding: 35px 0 0;
+  min-height: 100px;
 }
 .site-footer .footer-body {
-  padding: 0 0 35px;
+  padding: 35px 5px;
 }
 .site-footer .wrap {
   text-align: center;

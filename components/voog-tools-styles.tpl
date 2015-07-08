@@ -96,41 +96,42 @@
   {% comment %}/* Body background image */{% endcomment %}
   {% if content_top_bg.imageSizes != nil %}
     {% if content_top_bg.imageSizes == "" %}
+
       .content-top .background-image {
         background-image: none;
       }
+
     {% else %}
 
-
-    {% if post_page %}
-      {% for imageSize in article.data.content_top_bg.imageSizes %}
-      {% if forloop.first %}
-        .content-top .background-image {
-          background-image: url("{{ imageSize.url }}");
-        }
+      {% if post_page %}
+        {% for imageSize in article.data.content_top_bg.imageSizes %}
+          {% if forloop.first %}
+            .content-top .background-image {
+              background-image: url("{{ imageSize.url }}");
+            }
+          {% else %}
+            @media screen and (max-width: {{ imageSize.width }}px) and (max-height: {{ imageSize.height }}px) {
+              .content-top .background-image {
+                background-image: url("{{ imageSize.url }}");
+              }
+            }
+          {% endif %}
+        {% endfor %}
       {% else %}
-        @media screen and (max-width: {{ imageSize.width }}px) and (max-height: {{ imageSize.height }}px) {
-          .content-top .background-image {
-            background-image: url("{{ imageSize.url }}");
-          }
-        }
+        {% for imageSize in page.data.content_top_bg.imageSizes %}
+          {% if forloop.first %}
+            .content-top .background-image {
+              background-image: url("{{ imageSize.url }}");
+            }
+          {% else %}
+            @media screen and (max-width: {{ imageSize.width }}px) and (max-height: {{ imageSize.height }}px) {
+              .content-top .background-image {
+                background-image: url("{{ imageSize.url }}");
+              }
+            }
+          {% endif %}
+        {% endfor %}
       {% endif %}
-    {% endfor %}
-    {% else %}
-      {% for imageSize in page.data.content_top_bg.imageSizes %}
-      {% if forloop.first %}
-        .content-top .background-image {
-          background-image: url("{{ imageSize.url }}");
-        }
-      {% else %}
-        @media screen and (max-width: {{ imageSize.width }}px) and (max-height: {{ imageSize.height }}px) {
-          .content-top .background-image {
-            background-image: url("{{ imageSize.url }}");
-          }
-        }
-      {% endif %}
-    {% endfor %}
-    {% endif %}
 
     {% endif %}
 

@@ -6,7 +6,7 @@
       type: 'site'
     });
 
-    {% if edicy-tools == "article" %}
+    {% if edicy-tools == "blog_article_page" %}
       // Article pages custom data variable.
       var articleData = new Edicy.CustomData({
         type: 'article',
@@ -21,22 +21,21 @@
     {% endif %}
 
 
-      var contentHalfTopBg = new Edicy.BgPicker($('.content-top .js-background-settings'), {
-          picture: true,
-          target_width: 600,
-          color: true,
-          showAlpha: true,
+    {% comment %}/*Front page top content area background picker.*/{% endcomment %}
+    var contentHalfTopBg = new Edicy.BgPicker($('.content-top .js-background-settings'), {
+        picture: true,
+        target_width: 600,
+        color: true,
+        showAlpha: true,
 
-        preview: function(data) {
-          site.contentHalfBgPreview(data, '.js-content-top', contentHalfTopBg);
-        },
+      preview: function(data) {
+        site.contentHalfBgPreview(data, '.js-content-top', contentHalfTopBg);
+      },
 
-        commit: function(data) {
-          site.contentHalfBgCommit(data, 'content_top_bg');
-        }
-      });
-
-
+      commit: function(data) {
+        site.contentHalfBgCommit(data, 'content_top_bg');
+      }
+    });
 
     {% comment %}/*Front page left content area background picker.*/{% endcomment %}
     var contentHalfLeftBg = new Edicy.BgPicker($('.content-left .js-background-settings'), {

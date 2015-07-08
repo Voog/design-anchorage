@@ -24,14 +24,14 @@ a {
 }
 
 .site-container {
-  /*max-width: 960px;*/
   margin: 0 auto;
-  /*padding: 40px 20px;*/
-  /*background-color: rgba($white, 1);*/
+
 }
 
 .page-content {
-  /*margin-bottom: 50px;*/
+  position: relative;
+
+
 }
 
 
@@ -329,6 +329,10 @@ a {
     width: 75%;
     margin: 0 auto;
   }
+}
+
+.inner {
+  padding: 5px;
 }
 
 .article-author {
