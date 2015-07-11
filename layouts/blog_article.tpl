@@ -16,6 +16,7 @@
       {% include 'site-header' %}
 
       <main class="page-content" role="main">
+
         <div class="main-inner-row content-full">
 
           <div class="main-content">
@@ -26,11 +27,13 @@
                 </section>
 
                 {% include 'blog-article-comments' %}
+
               </div>
             </div>
           </div>
 
         </div>
+
       </main>
 
       {% include 'site-footer' %}

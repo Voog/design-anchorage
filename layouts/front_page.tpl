@@ -13,11 +13,10 @@
 
   <body class="front-page">
     <div class="site-container">
-
       {% include 'site-header' %}
 
       <main class="page-content" role="main">
-
+        
         <div class="main-inner-row content-full content-left js-content-left">
           <div class="background-image stretch"></div>
           <div class="background-color stretch"></div>

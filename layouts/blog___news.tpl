@@ -16,6 +16,7 @@
       {% include 'site-header' %}
 
       <main class="page-content" role="main">
+
         <div class="main-inner-row content-full">
 
           <div class="main-content">
@@ -32,6 +33,7 @@
           </div>
 
         </div>
+        
       </main>
 
       {% include 'site-footer' %}

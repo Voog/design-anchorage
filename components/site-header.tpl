@@ -16,23 +16,26 @@
         {% include 'menu-main' %}
 
         {% if site.search.enabled %}
-
-        <div class="search-holder">
-          <a href="#" class="search-toggler js-search-toggler">
-            <svg version="1.1" baseProfile="full" height="28px" width="28px" viewbox="0 0 56 56">
-              <path fill="rgb( 0, 0, 0 )"
-               d="M35.069,30.578 C35.069,30.578 27.3,22.809 27.3,22.809 C28.778,20.502 29.6469999999999,17.767 29.6469999999999,14.823 C29.6469999999999,6.637 23.011,0 14.8230000000001,0 C6.63699999999994,0 0,6.637 0,14.823 C0,23.011 6.63699999999994,29.647 14.8230000000001,29.647 C17.7670000000001,29.647 20.502,28.779 22.808,27.3 C22.808,27.3 30.578,35.069 30.578,35.069 C31.1980000000001,35.69 32.011,36 32.8230000000001,36 C33.6369999999999,36 34.4490000000001,35.69 35.069,35.069 C36.3099999999999,33.83 36.3099999999999,31.817 35.069,30.578 ZM4.2349999999999,14.823 C4.2349999999999,8.986 8.9849999999999,4.235 14.8230000000001,4.235 C20.6610000000001,4.235 25.412,8.986 25.412,14.823 C25.412,20.661 20.6610000000001,25.412 14.8230000000001,25.412 C8.9849999999999,25.412 4.2349999999999,20.661 4.2349999999999,14.823 Z "/>
+          <button class="search-btn search-open-btn js-search-open-btn">
+            <svg width="16px" height="16px" viewBox="0 0 16 16"  xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.323,13.712 C15.323,14.194 15.135,14.647 14.794,14.988 C14.453,15.328 14,15.516 13.519,15.516 C13.037,15.516 12.584,15.328 12.243,14.988 C12.243,14.988 9.136,11.881 9.136,11.881 C8.279,12.318 7.323,12.588 6.294,12.588 C2.818,12.588 0,9.77 0,6.294 C0,2.818 2.818,0 6.294,0 C9.77,0 12.588,2.818 12.588,6.294 C12.588,7.424 12.266,8.47 11.745,9.387 C11.745,9.387 14.794,12.437 14.794,12.437 C15.135,12.777 15.323,13.23 15.323,13.712 ZM6.295,1.516 C3.655,1.516 1.514,3.656 1.514,6.297 C1.514,8.937 3.655,11.078 6.295,11.078 C8.936,11.078 11.076,8.937 11.076,6.297 C11.076,3.656 8.936,1.516 6.295,1.516 Z "></path>
             </svg>
-          </a>
-          {% include "site-search" %}
-        </div>
+          </button>
+
+          <button class="search-btn search-close-btn js-search-close-btn">
+            <svg width="16px" height="16px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.205,2.743 C15.205,2.743 10.03,7.918 10.03,7.918 C10.03,7.918 15.109,12.997 15.109,12.997 C15.695,13.583 15.694,14.533 15.109,15.118 C14.523,15.704 13.574,15.704 12.988,15.118 C12.988,15.118 7.909,10.039 7.909,10.039 C7.909,10.039 2.743,15.205 2.743,15.205 C2.149,15.799 1.187,15.799 0.594,15.205 C0,14.612 0,13.65 0.594,13.056 C0.594,13.056 5.759,7.89 5.759,7.89 C5.759,7.89 0.674,2.805 0.674,2.805 C0.088,2.218 0.088,1.269 0.674,0.683 C1.259,0.098 2.209,0.097 2.795,0.683 C2.795,0.683 7.881,5.769 7.881,5.769 C7.881,5.769 13.055,0.594 13.055,0.594 C13.649,0 14.611,0.001 15.205,0.594 C15.798,1.188 15.799,2.149 15.205,2.743 Z "></path>
+            </svg>
+          </button>
         {% endif %}
+
+        {% include "site-search" %}
 
         <div class="site-options">
           {% include 'menu-language' %}
-          <a href="#" class="mobile-menu-toggler"><span></span></a>
+            <a href="#" class="mobile-menu-toggler"><span></span></a>
           {% if site.search.enabled %}
-          <a href="#" class="mobile-search-toggler"></a>
+            <a href="#" class="mobile-search-toggler"></a>
           {% endif %}
         </div>
       </div>
@@ -44,16 +47,14 @@
     <div class="header-bottom-inner">
       <div class="wrap">
         <div class="header-body content-formatted">
-
           {% if front_page %}
             {% content name="header" %}
           {% elsif blog_article_page %}
             <h1 class="article-title">{% if editmode %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
             <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: 'long' }}, </time>
             <div class="article-author">{{ article.author.name }}</div>
-
           {% else %}
-            <h1>{{ page.title }}</h1>
+            {% contentblock name="content_header" %}<h1>{{ page.title }}</h1>{% endcontentblock %}
           {% endif %}
         </div>
       </div>

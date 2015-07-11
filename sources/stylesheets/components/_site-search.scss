@@ -20,3 +20,373 @@
     top: -1px;
   }
 }
+/* SEARCH */
+// Styling rules for the site's search box. These rules affect the entire site.
+.search,
+.search-form {
+  @extend %clearfix;
+}
+
+.search {
+  display: none;
+  vertical-align: middle;
+  margin-top: -4px;
+  margin-left: 15px;
+  height: $search-height;
+  line-height: 1;
+  @include bg($white);
+
+  @include query($large-1, 'min-width') {
+    margin-top: #{round(-4 * $wide-view-multiplier)}px;
+    margin-left: #{round(15 * $wide-view-multiplier)}px;
+  }
+
+  &.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    display: table;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+.search-middle {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  @include query($large-1, 'min-width') {
+    padding: 0 #{round(20 * $wide-view-multiplier)}px;
+  }
+
+  @include query($mobile-2) {
+    padding: 0;
+  }
+}
+
+.search-inner {
+  position: relative;
+  max-width: 400px;
+  margin: 60px auto;
+  @include box-shadow(0, 0, 100px, 0, rgba($black, 0.75));
+
+  @include query($large-1, 'min-width') {
+    max-width: #{round(400 * $wide-view-multiplier)}px;
+  }
+
+  .search-close-btn {
+    position: absolute;
+    top: 14px;
+    right: 7px;
+    z-index: 20;
+
+    @include query($large-1, 'min-width') {
+      top: #{round(14 * $wide-view-multiplier)}px;
+      right: #{round(7 * $wide-view-multiplier)}px
+    }
+  }
+}
+
+.search-form {
+  position: relative;
+  z-index: 20;
+  @include bg($white, 0.95);
+  @include border(all, 1px, solid, $black, 0.1);
+
+  @include query($large-1, 'min-width') {
+    border-width: #{round(1 * $wide-view-multiplier)}px;
+  }
+
+  &.active {
+    @include border(all, 1px, solid, $black, 0.3);
+
+    border-color: $black;
+  }
+
+  &,
+  &.active {
+    max-width: 400px;
+    margin: 0 auto;
+    border: none;
+
+    @include query($large-1, 'min-width') {
+      max-width: #{round(400 * $wide-view-multiplier)}px;
+    }
+  }
+}
+
+.search-input {
+  vertical-align: middle;
+  width: 100%;
+  height: $search-height;
+  margin: 0;
+  padding: 0 65px 0 10px;
+  font-family: inherit;
+  font-size: 24px;
+  line-height: 1;
+  @include color($secondary-color);
+  background: none;
+  box-sizing: border-box;
+  border: none;
+
+  @include query($large-1, 'min-width') {
+    height: #{$search-height * $wide-view-multiplier};
+    padding: 0 #{round(65 * $wide-view-multiplier)}px 0 #{round(10 * $wide-view-multiplier)}px;
+    font-size: #{round(24 * $wide-view-multiplier)}px;
+  }
+
+  // Removes the clear input button in IE11
+  &::-ms-clear {
+    display: none;
+  }
+
+  &::-webkit-input-placeholder {
+    padding: 2px 0 4px 0;
+    line-height: 1;
+    @include color($secondary-color, 0.5);
+
+    @include query($large-1, 'min-width') {
+      padding: #{round(2 * $wide-view-multiplier)}px 0 #{round(4 * $wide-view-multiplier)}px 0;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.search-btn,
+.search-submit {
+  @extend %button;
+  vertical-align: top;
+  width: 30px;
+  height: $search-height;
+  background-color: transparent;
+
+  @include query($large-1, 'min-width') {
+    width: #{round(30 * $wide-view-multiplier)}px;
+    height: 70px;
+  }
+
+  .no-svg & {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../images/ico-search-white.png');
+  }
+
+  .light-background & {
+    .no-svg & {
+      background-image: url('../images/ico-search-black.png');
+    }
+  }
+}
+
+.search-submit {
+  @include opacity(0.5);
+  position: absolute;
+  top: 0;
+  right: 25px;
+  padding-top: 2px;
+  width: 41px;
+  background-size: 32px;
+  background-color: transparent;
+
+  @include query($large-1, 'min-width') {
+    right: #{round(25 * $wide-view-multiplier)}px;
+    padding-top: #{round(2 * $wide-view-multiplier)}px;
+    width: #{round(41 * $wide-view-multiplier)}px;
+    background-size: #{round(32 * $wide-view-multiplier)}px;
+
+    svg {
+      width: #{round(20 * $wide-view-multiplier)}px;
+      height: #{round(21 * $wide-view-multiplier)}px;
+    }
+  }
+
+  &:hover {
+    @include opacity(1);
+  }
+}
+
+.search-btn {
+  position: relative;
+  z-index: 19;
+  vertical-align: middle;
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+
+  .header-options & {
+    .front-page & {
+      top: 1px;
+    }
+
+    .content-page & {
+      top: 4px;
+    }
+  }
+
+  svg {
+    .header-options & {
+      fill: rgba($secondary-color, 0.67);
+
+      .front-page & {
+        fill: $white;
+      }
+    }
+
+    .light-background & {
+      .front-page & {
+        fill: $black;
+      }
+    }
+  }
+
+  &:hover {
+    svg {
+      fill: rgba($secondary-color, 0.47);
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  @include query($mobile-1) {
+    .content-page .header-options & {
+      margin-right: 35px;
+    }
+  }
+}
+
+.search-open-btn {
+  &.open {
+    display: none;
+  }
+}
+
+.search-close-btn {
+  display: none;
+
+  &.open {
+    display: inline-block;
+
+    .search-inner & {
+      display: block;
+
+      svg {
+        @include opacity(0.5);
+
+        &:hover {
+          @include opacity(1);
+        }
+
+        @include query($large-1, 'min-width') {
+          width: #{round(16 * $wide-view-multiplier)}px;
+          height: #{round(16 * $wide-view-multiplier)}px;
+        }
+      }
+
+      @include query($large-1, 'min-width') {
+        width: #{round(22 * $wide-view-multiplier)}px;
+        height: #{round(22 * $wide-view-multiplier)}px;
+      }
+    }
+  }
+}
+
+.voog-search-modal {
+  display: none;
+  box-sizing: border-box;
+  z-index: 999;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px 27px;
+  @include bg($grey-4, 0.95);
+  @include no-box-shadow;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  @include query($large-1, 'min-width') {
+    max-width: #{round(400 * $wide-view-multiplier)}px;
+    padding: #{round(20 * $wide-view-multiplier)}px #{round(27 * $wide-view-multiplier)}px;
+  }
+
+  &.search-results-active {
+    display: block;
+  }
+}
+
+.voog-search-modal-results {
+  &.no-content {
+    text-align: center;
+  }
+
+  h3 {
+    @extend %bebas-neue-latin;
+    margin: 0;
+    font-size: 24px;
+
+    html[lang=ru] & {
+      @extend %bebas-neue-cyrillic;
+    }
+
+    @include query($large-1, 'min-width') {
+      font-size: #{round(24 * $wide-view-multiplier)}px;
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: 400;
+      @include color($secondary-color);
+
+      &:hover {
+        @include color($secondary-color, 0.8);
+      }
+    }
+  }
+
+  p {
+    margin: 5px 0 0;
+    font-size: 14px;
+
+    @include query($large-1, 'min-width') {
+      margin-top: #{round(5 * $wide-view-multiplier)}px;
+      font-size: #{round(14 * $wide-view-multiplier)}px;
+    }
+  }
+
+  em {
+    font-style: normal;
+    @include bg($yellow, 0.5);
+    border-radius: 2px;
+    padding: 0 2px;
+
+    @include query($large-1, 'min-width') {
+      border-radius: 4px;
+      padding: 0 #{round(2 * $wide-view-multiplier)}px;
+    }
+  }
+}
+
+.voog-search-modal-result {
+  margin-top: 18px;
+
+  @include query($large-1, 'min-width') {
+    margin-top: #{round(18 * $wide-view-multiplier)}px;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}

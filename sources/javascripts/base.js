@@ -271,3 +271,100 @@
     });
 
 })(jQuery);
+
+
+(function($) {
+// Shows/hides the popover main menu (visible on smalles screens).
+var handleElementsClick = function() {
+  $('html').click(function() {
+    if ($('.js-btn').hasClass('open')) {
+      $('.js-btn').removeClass('open');
+    }
+
+    if ($('.js-popover').hasClass('expanded')) {
+      $('.js-popover').removeClass('expanded');
+    }
+
+    if ($('.js-search-inner').hasClass('active')) {
+      $('.js-search-inner').removeClass('active');
+    }
+  });
+
+  // Toggles the popover main menu (visible on smalles screens).
+  $('.js-menu-btn').click(function(event) {
+    event.stopPropagation();
+    $(this).toggleClass('open');
+    $('.js-menu-main').toggleClass('expanded');
+
+    if ($('.js-search-close-btn').hasClass('open')) {
+      $('.js-search-close-btn').trigger('click');
+    }
+  });
+
+  // Toggles the popover language menu.
+  $('.js-menu-lang-btn').click(function(event) {
+    event.stopPropagation();
+    $('.js-menu-lang-btn').toggleClass('open');
+    $('.js-menu-lang').toggleClass('expanded');
+  });
+
+  $('.js-tags-btn').click(function(event) {
+    event.stopPropagation();
+    $(this).toggleClass('open');
+    $('.js-menu-tags').toggleClass('expanded');
+  });
+
+  // Hides search modal on side click
+  $('.js-search').click(function() {
+    $('.js-search-close-btn').trigger('click');
+  });
+
+  // Opens the search modal.
+  $('.js-search-open-btn').click(function(event) {
+    event.stopPropagation();
+    if ($('.js-menu-btn').hasClass('open')) {
+      $('.js-menu-btn').trigger('click');
+    }
+
+    $(this).addClass('open');
+    $('.js-search-close-btn').addClass('open');
+    $('.js-search').addClass('active');
+    $('.js-search-input').val('').focus();
+  });
+
+  // Closes the search modal.
+  $('.js-search-close-btn').click(function(event) {
+    event.stopPropagation();
+    $('.js-search-open-btn, .js-search-close-btn').removeClass('open');
+    $('.js-search').removeClass('active');
+    $('.js-voog-search-modal').removeClass('search-results-active');
+  });
+
+  $('.js-search-form, .js-voog-search-modal').click(function(event) {
+    event.stopPropagation();
+  });
+};
+
+// Sets the search modal height.
+var handleSearchModalHeight = function() {
+  var windowWidth = $(window).width();
+      windowHeight = $(window).height(),
+      searchModal = $('.js-voog-search-modal');
+
+      if (windowWidth >= 1400 ) {
+        searchModalHeight = windowHeight - 190;
+      } else {
+        searchModalHeight = windowHeight - 171;
+      }
+
+  searchModal.css({'max-height': searchModalHeight});
+};
+
+// Sets search modal height on search submit.
+var handleSearchSubmit = function() {
+  $('.js-search-form').on('submit', function() {
+    handleSearchModalHeight();
+  });
+};
+
+})(jQuery);

@@ -17,13 +17,13 @@
       {% include 'site-sidebar' %}
 
       <main class="page-content" role="main">
+
         <div class="main-inner-row content-full">
 
           <div class="main-content">
             <div class="wrap content-formatted">
               <div class="inner">
                 <section class="content-area">
-                  <header class="content-header">{% contentblock name="content_header" %}<h1>{{ page.title }}</h1>{% endcontentblock %}</header>
                   <div class="content-body">{% content %}</div>
                 </section>
               </div>
@@ -31,6 +31,7 @@
           </div>
 
         </div>
+        
       </main>
 
       {% include 'site-footer' %}
