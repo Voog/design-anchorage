@@ -104,6 +104,13 @@
   }
 }
 
+// MEDIA QUERY
+@mixin querysearch($value: $tablet-1, $screen: 'max-width') {
+  @media screen and ($screen: $value) {
+    @content;
+  }
+}
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -120,4 +127,16 @@
   -webkit-box-shadow: $top $left $blur $color #{$inset};
      -moz-box-shadow: $top $left $blur $color #{$inset};
           box-shadow: $top $left $blur $color #{$inset};
+}
+
+// BOXES
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+  -webkit-box-shadow: $top $left $blur $color #{$inset};
+     -moz-box-shadow: $top $left $blur $color #{$inset};
+          box-shadow: $top $left $blur $color #{$inset};
+}
+@mixin no-box-shadow($value: none) {
+  -webkit-box-shadow: $value;
+     -moz-box-shadow: $value;
+          box-shadow: $value;
 }

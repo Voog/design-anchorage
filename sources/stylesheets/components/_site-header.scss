@@ -21,6 +21,7 @@
     @include align-items(baseline);
 
     .site-options {
+      position: relative;
       margin-bottom: 20px;
     }
   }
@@ -148,7 +149,11 @@
     .header-right {
       display: inline-block;
     }
+    .visibility-lrg {
+      display: none;
+    }
   }
+  
   .article-author {
     display: inline-block;
   }
@@ -157,4 +162,5 @@
       text-decoration: none;
     }
   }
+
 }

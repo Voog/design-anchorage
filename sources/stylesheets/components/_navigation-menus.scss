@@ -617,10 +617,8 @@ $flags:
 
 /* langmenu */
 .lang-menu {
-  position: absolute;
-  z-index: 200;
-  top: 30px;
-  left: 30px;
+  display: inline-block;
+  vertical-align: middle;
   height: 13px;
 
   li {
