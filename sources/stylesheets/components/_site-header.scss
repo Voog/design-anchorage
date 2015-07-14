@@ -27,6 +27,7 @@
   }
 
   .header-title {
+    font-size: 22px;
     @extend %hyphenate;
     position: relative;
     top: 1px;
@@ -35,7 +36,7 @@
     min-width: 140px;
     min-height: 40px;
     line-height: 1.3em;
-    font-weight: 700;
+    font-weight: 200;
 
     a {
       @include color($primary-color, 0.73);
@@ -44,6 +45,12 @@
         @include color($primary-color, 0.5);
       }
     }
+  }
+
+  .header-body {
+    font-size: 70px;
+    text-transform: uppercase;
+    font-weight: 800;
   }
 
   .header-left {
@@ -153,12 +160,22 @@
       display: none;
     }
   }
-  
-  .article-author {
+
+  .article-author,
+  .article-date{
+    font-size: 14px;
+    line-height: 27px;
     display: inline-block;
+    font-weight: 300;
   }
   .article-title {
+    font-size: 80px;
+    line-height: 90px;
+    font-weight: 300;
+    margin: 0;
+    text-transform: none;
     a {
+
       text-decoration: none;
     }
   }

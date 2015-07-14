@@ -9407,7 +9407,7 @@ return jQuery;
   };
 
 
-  (function($) {
+
   // Shows/hides the popover main menu (visible on smalles screens).
   var handleElementsClick = function() {
     $('html').click(function() {
@@ -9575,10 +9575,6 @@ return jQuery;
             return this;
         }
     });
-
-})(jQuery);
-
-
 
 })(jQuery);
 

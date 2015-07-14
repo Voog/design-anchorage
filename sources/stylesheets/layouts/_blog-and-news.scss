@@ -1,7 +1,12 @@
 .blog-news-page {
   .article-title {
+    margin: 0;
+    margin-bottom: 30px!important;
     a {
       @extend %article-title;
+      font-size: 36px;
+      line-height: 46px;
+      font-weight: 400;
     }
   }
   .blog-article {
@@ -12,5 +17,26 @@
       position: relative;
       height: 500px;
     }
+  }
+  .article-author {
+    color: #a4a4a4;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+  .article-date {
+    color: #a4a4a4;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .article-excerpt {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+  .article-header, .article-content {
+    margin: 0 70px;
   }
 }
