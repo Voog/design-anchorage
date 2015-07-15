@@ -5,7 +5,13 @@
     margin-top: $content-header-margin;
     margin-bottom: $content-header-margin;
   }
-  main {
+  /*main {
     margin-left: 200px;
+  }*/
+  .content-body {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 45px 0;
   }
 }

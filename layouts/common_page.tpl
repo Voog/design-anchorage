@@ -14,25 +14,34 @@
   <body class="common-page">
     <div class="site-container">
       {% include 'site-header' %}
-      {% include 'site-sidebar' %}
 
-      <main class="page-content" role="main">
+      <div class="page-body">
+        {% for item in site.menuitems_with_hidden %}
+          {% if item.selected? %}
+            {% if editmode or item.children? %}
+              {% include 'site-sidebar' %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
 
-        <div class="main-inner-row content-full">
+        <main class="page-content" role="main">
 
-          <div class="main-content">
-            <div class="wrap content-formatted">
-              <div class="inner">
-                <section class="content-area">
-                  <div class="content-body">{% content %}</div>
-                </section>
+          <div class="main-inner-row content-full">
+
+            <div class="main-content">
+              <div class="wrap content-formatted">
+                <div class="inner">
+                  <section class="content-area">
+                    <div class="content-body">{% content %}</div>
+                  </section>
+                </div>
               </div>
             </div>
+
           </div>
 
-        </div>
-        
-      </main>
+        </main>
+      </div>
 
       {% include 'site-footer' %}
       {% include "menu-mobile" %}

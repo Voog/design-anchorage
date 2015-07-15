@@ -56,7 +56,13 @@
             <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: 'long' }}, </time>
             <div class="article-author">{{ article.author.name }}</div>
           {% else %}
-            {% contentblock name="content_header" %}<h1>{{ page.title }}</h1>{% endcontentblock %}
+            {% for item in site.menuitems_with_hidden %}
+              {% if item.selected? %}
+                <li{% unless item.translated? %} class="untranslated"{% endunless %}>
+                  <h1><a href="{{ item.url }}">{{ item.title }}</a></h1>
+                </li>
+              {% endif %}
+            {% endfor %}
           {% endif %}
         </div>
       </div>

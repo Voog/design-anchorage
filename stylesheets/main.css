@@ -325,20 +325,23 @@ a img {
   color: #ffffff;
 }
 
-.main-content {
-  padding: 70px 0;
-}
-.main-content .inner {
-  width: 75%;
-  margin: 0 auto;
+.article-author {
+  display: inline-block;
 }
 
 .inner {
-  padding: 5px;
+  width: 90%;
+  margin: 40px auto;
 }
 
-.article-author {
+.page-body {
   display: inline-block;
+  width: 90%;
+  margin: 0 5%;
+}
+.page-body .inner {
+  width: auto;
+  margin: 0;
 }
 
 .container:after, .wrap:after, .content-formatted:after, .contacts .content-formatted table tr:after, .footer .content-formatted table tr:after, .site-header .header-top .wrap:after, .search:after,
@@ -920,12 +923,20 @@ a img {
   position: relative;
 }
 
+.common-page {
+  /*main {
+    margin-left: 200px;
+  }*/
+}
 .common-page .content-header {
   margin-top: 25px;
   margin-bottom: 25px;
 }
-.common-page main {
-  margin-left: 200px;
+.common-page .content-body {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  margin: 45px 0;
 }
 
 .blog-news-page .article-title {
@@ -970,7 +981,7 @@ a img {
 .blog-article .article-excerpt {
   font-size: 28px;
   line-height: 40px;
-  font-weight: 400;
+  font-weight: 300;
   margin: 30px 0;
 }
 .blog-article .article-body {
@@ -980,13 +991,12 @@ a img {
   margin: 30px 0;
 }
 
-.blog-article-page .inner {
-  width: 60%;
-}
-
 .site-header {
   padding-bottom: 70px;
   position: relative;
+}
+.site-header ul, .site-header li {
+  list-style: none;
 }
 .front-page .site-header {
   min-height: 623px;
@@ -2220,23 +2230,62 @@ a img {
 .site-sidebar {
   float: left;
   width: 200px;
+  padding: 45px 30px 0;
+  box-sizing: content-box;
   min-height: 100%;
   position: relative;
   z-index: 5;
-  -webkit-box-shadow: 5px -50px 50px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 5px -50px 50px rgba(0, 0, 0, 0.05);
-  box-shadow: 5px -50px 50px rgba(0, 0, 0, 0.05);
+}
+.site-sidebar h1 {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 30px;
+  color: #222222;
+  font-weight: 400;
+}
+.site-sidebar a {
+  color: #222222;
+}
+.site-sidebar .submenu {
+  padding: 0;
+}
+.site-sidebar .submenu li {
+  font-size: 18px;
+  line-height: 25px;
+  margin: 15px 0;
+}
+.site-sidebar .submenu li a {
+  color: #a4a3a3;
+  font-weight: 300;
+}
+.site-sidebar .submenu li .active {
+  color: #222222;
+  font-weight: 400;
+}
+.site-sidebar .submenu ul {
+  padding-left: 20px;
+}
+.site-sidebar .submenu ul li {
+  font-size: 16px;
+  line-height: 19px;
+}
+.site-sidebar .submenu ul a {
+  color: #222222;
+}
+.site-sidebar ul, .site-sidebar li {
+  list-style: none;
 }
 
+@media screen and (max-width: 768px) {
+  .site-sidebar {
+    float: none;
+  }
+}
 @media screen and (min-width: 1500px) {
   .site-sidebar {
     width: 20%;
   }
 }
-.site-sidebar .sidebar-inner {
-  padding: 45px 30px 100px;
-}
-
 .site-footer {
   position: relative;
   font-size: 14px;

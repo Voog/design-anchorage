@@ -323,18 +323,23 @@ a {
     color: $white;
   }
 }
-.main-content {
-  padding: $general-padding 0;
-  .inner {
-    width: 75%;
-    margin: 0 auto;
-  }
-}
-
-.inner {
-  padding: 5px;
-}
 
 .article-author {
   display: inline-block;
+}
+
+.inner {
+  width: 90%;
+  margin: 40px auto;
+}
+
+.page-body {
+  display: inline-block;
+  width: 90%;
+  margin: 0 5%;
+
+  .inner {
+    width: auto;
+    margin: 0;
+  }
 }

@@ -2,6 +2,10 @@
   padding-bottom: $general-padding;
   position: relative;
 
+  ul, li {
+    list-style: none;
+  }
+
   .front-page & {
     min-height: 623px;
 
