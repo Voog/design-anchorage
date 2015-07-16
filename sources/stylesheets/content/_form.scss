@@ -39,10 +39,14 @@
     @extend %input-ios-reset;
     @extend %inherit-base-font;
     padding: 7px;
+    font-size: 16px;
+    line-height: 26px;
     border-width: 1px;
     border-style: solid;
-    border-color: rgba($black, .53);
-    border-radius: 3px;
+    border-color: #dedede;
+    font-weight: 100;
+    color: #a4a3a3;
+    vertical-align: bottom;
 
     &.form_field_size_small {
       width: 280px;

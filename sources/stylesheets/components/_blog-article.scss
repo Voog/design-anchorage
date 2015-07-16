@@ -1,16 +1,28 @@
 .blog-article-page {
 
   .article-excerpt {
-    font-size: 28px;
+    font-size: 26px;
     line-height: 40px;
     font-weight: 300;
     margin: 30px 0;
+    color: #222222;
   }
   .article-body {
     font-weight: 300;
     font-size: 18px;
     line-height: 30px;
     margin: 30px 0;
+  }
+  .comments-title {
+    font-size: 14px;
+    line-height: 27px;
+    color: #a4a3a3;
+    text-transform: uppercase;
+    font-weight: 300;
+
+    span {
+      color: #424242;
+    }
   }
 
   .blog-article-nav {

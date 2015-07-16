@@ -290,6 +290,15 @@
     });
   };
 
+  var commentsHeight = function() {
+    var documentHeight = $(document).height(),
+        siteHeight = $('.site-container').height(),
+        comHeight = $('.article-comments').height(),
+        mainHeight = $('.page-content').height();
+
+
+  }
+
 
   // Initiations
   var initWindowResize = function() {
