@@ -1,4 +1,4 @@
-<section id="article-comments" class="article-comments content-area">
+<section id="article-comments" class="article-comments content-area js-comments js-voog-comments-modal">
   <h2 class="comments-title">{{ 'post_has_replies' | lcc: article.comments_count }}</h2>
 
   <div class="comment-form{% unless comment.valid? %} form_with_errors{% endunless %}">
@@ -51,7 +51,7 @@
   {% endif %}
 
   <div class="comments-close">
-    <div class="btn-close"><div class="xcross xcross-l"><div class="xcross xcross-r"></div></div></div>
+    <div class="btn-close comments-btn comments-close-btn js-comments-close-btn"><div class="xcross xcross-l"><div class="xcross xcross-r"></div></div></div>
   </div>
 
 </section>

@@ -24,7 +24,7 @@
               <div class="inner">
 
                 {% if article.comments_count > 0 %}
-                  <div class="comments-title">{{ "comments_for_count" | lc }} <span class="voog-site-blog-comments-count">({{ article.comments_count }})</span></div>
+                  <div class="comments-title comments-btn comments-open-btn js-comments-open-btn">{{ "comments_for_count" | lc }} <span class="voog-site-blog-comments-count">({{ article.comments_count }})</span></div>
                 {% endif %}
 
                 <section class="blog-article content-area">

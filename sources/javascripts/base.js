@@ -266,6 +266,31 @@
     $('.js-search-form, .js-voog-search-modal').click(function(event) {
       event.stopPropagation();
     });
+
+    // Opens the comments modal.
+    $('.js-comments-open-btn').click(function(event) {
+      event.stopPropagation();
+      if ($('.js-menu-btn').hasClass('open')) {
+        $('.js-menu-btn').trigger('click');
+      }
+
+      $(this).addClass('open');
+      $('.js-comments-close-btn').addClass('open');
+      $('.js-comments').addClass('active');
+      $('.js-comments-input').val('').focus();
+    });
+
+    // Closes the comments modal.
+    $('.js-comments-close-btn').click(function(event) {
+      event.stopPropagation();
+      $('.js-comments-open-btn, .js-comments-close-btn').removeClass('open');
+      $('.js-comments').removeClass('active');
+      $('.js-voog-comments-modal').removeClass('comments-results-active');
+    });
+
+    $('.js-comments-form, .js-voog-comments-modal').click(function(event) {
+      event.stopPropagation();
+    });
   };
 
   // Sets the search modal height.

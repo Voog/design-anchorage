@@ -24,6 +24,7 @@ a img {
 
 .site-container {
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .page-content {
@@ -998,6 +999,8 @@ a img {
   color: #a4a3a3;
   text-transform: uppercase;
   font-weight: 300;
+  display: inline-block;
+  cursor: pointer;
 }
 .blog-article-page .comments-title span {
   color: #424242;
@@ -1034,11 +1037,12 @@ a img {
 .article-comments {
   position: absolute;
   background-color: white;
-  right: 0;
+  right: -420px;
   top: 0;
   width: 300px;
   padding: 45px 30px;
   box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
+  transition: 250ms;
 }
 .article-comments .comments-title {
   font-size: 24px;
@@ -1106,6 +1110,11 @@ a img {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+
+.article-comments.active {
+  right: 0;
+  transition: 250ms;
 }
 
 .site-header {
