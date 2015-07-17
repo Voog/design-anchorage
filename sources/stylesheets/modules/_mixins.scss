@@ -93,7 +93,7 @@
 }
 
 // MEDIA QUERY
-@mixin query($value: $tablet-2) {
+@mixin query($value) {
   @media screen and (max-width: $value) {
     @content;
   }

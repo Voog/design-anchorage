@@ -39,4 +39,53 @@
   .article-header, .article-content {
     margin: 0 70px;
   }
+  @include query($mobile-1) {
+    .article-header, .article-content {
+      margin: 0;
+    }
+  }
+
+  .blog-articles-listing {
+    margin: 0 70px;
+
+    .articles-listing-title {
+      text-transform: uppercase;
+    }
+
+    .blog-article {
+      padding: 0 5px;
+
+      .article-date {
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 300;
+        color: #a4a3a3;
+        position: absolute;
+        top: 5px;
+      }
+      .article-title {
+        margin-left: 130px;
+        line-height: normal;
+        a {
+          font-size: 18px;
+          line-height: 26px;
+          color: #222222;
+          vertical-align: top;
+        }
+      }
+    }
+
+      @include query($mobile-1) {
+        margin: 0;
+        .blog-article {
+
+          .article-date {
+            position: static;
+          }
+          .article-title {
+            margin: 0;
+          }
+        }
+      }
+  }
 }

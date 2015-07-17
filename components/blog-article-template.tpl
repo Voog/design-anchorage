@@ -8,8 +8,16 @@
   {% endunless %}
 
   <div class="article-content">
-    <div class="article-excerpt content-area">{% if blog-article-template == 'blog_article_page' %}{% editable article.excerpt %}{% else %}{{ article.excerpt }}{% endif %}</div>
-    {% if blog-article-template == 'blog_article_page' %}<div class="article-body content-area">{% editable article.body %}</div>{% endif %}
+
+    {% if blog-article-template == 'blog_article_page' %}
+      <div class="article-excerpt content-area">{% if blog-article-template == 'blog_article_page' %}{% editable article.excerpt %}{% else %}{{ article.excerpt }}{% endif %}</div>
+      <div class="article-body content-area">{% editable article.body %}</div>
+    {% else %}
+      {% if article.data.content_top_bg.imageSizes == nil or article.data.content_top_bg.imageSizes == "" %}
+        <div class="article-excerpt content-area">{% if blog-article-template == 'blog_article_page' %}{% editable article.excerpt %}{% else %}{{ article.excerpt }}{% endif %}</div>
+      {% endif %}
+    {% endif %}
+
   </div>
 
   {% unless blog_article_page %}
