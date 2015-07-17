@@ -458,6 +458,8 @@ a img {
   -ms-hyphens: auto;
   hyphens: auto;
   font-size: 32px;
+  line-height: 48px;
+  font-weight: 100;
 }
 .dark-background .content-formatted {
   color: white;
@@ -909,6 +911,7 @@ a img {
 .front-page .blog-feed .wrap .inner {
   display: table-cell;
   vertical-align: middle;
+  width: 100%;
 }
 .front-page .blog-feed h1 {
   font-size: 19px;
@@ -1160,6 +1163,16 @@ a img {
   transition: 250ms;
 }
 
+.blog-article-page .comments-open-btn.open {
+  display: none;
+}
+.blog-article-page .comments-close-btn {
+  display: none;
+}
+.blog-article-page .comments-close-btn.open {
+  display: inline-block;
+}
+
 .site-header {
   padding-bottom: 70px;
   position: relative;
@@ -1391,6 +1404,7 @@ a img {
 .menu-main {
   margin-right: 20px;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 .menu-main li {
   margin-right: 20px;
@@ -2151,8 +2165,7 @@ a img {
 .search-form {
   position: relative;
   z-index: 20;
-  background-color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: white;
   border: 1px solid #000000;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -2246,9 +2259,10 @@ a img {
   position: relative;
   z-index: 19;
   vertical-align: middle;
-  width: 22px;
-  height: 22px;
+  width: 26px;
+  height: 26px;
   font-size: 0;
+  margin: 0 20px;
 }
 .front-page .header-options .search-btn {
   top: 1px;

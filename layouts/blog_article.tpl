@@ -24,7 +24,23 @@
               <div class="inner">
 
                 {% if article.comments_count > 0 %}
-                  <div class="comments-title comments-btn comments-open-btn js-comments-open-btn">{{ "comments_for_count" | lc }} <span class="voog-site-blog-comments-count">({{ article.comments_count }})</span></div>
+                  <div class="comments-title comments-btn comments-open-btn js-comments-open-btn">
+                    {{ "comments_for_count" | lc }}
+                    <span class="voog-site-blog-comments-count"> ({{ article.comments_count }})</span>
+                  </div>
+
+                  <div class="comments-title comments-btn comments-close-btn js-comments-close-btn">
+                    {{ "comments_for_count" | lc }}
+                    <span class="voog-site-blog-comments-count"> ({{ article.comments_count }})</span>
+                  </div>
+                {% else %}
+                  <div class="comments-title comments-btn comments-open-btn js-comments-open-btn">
+                    {{ "comment" | lc }}
+                  </div>
+
+                  <div class="comments-title comments-btn comments-close-btn js-comments-close-btn">
+                    {{ "comment" | lc }}
+                  </div>
                 {% endif %}
 
                 <section class="blog-article content-area">

@@ -103,7 +103,7 @@
 
     {% else %}
 
-      {% if post_page %}
+      {% if blog_article_page %}
         {% for imageSize in article.data.content_top_bg.imageSizes %}
           {% if forloop.first %}
             .content-top .background-image {
@@ -139,7 +139,7 @@
 
     {% if front_page %}
       {% assign bg_image_prefix = images_path | append: "/snow" %}
-    {% elsif blog_page or post_page %}
+    {% elsif blog_page or blog_article_page %}
       {% assign bg_image_prefix = images_path | append: "/mountains" %}
     {% else %}
       {% assign bg_image_prefix = images_path | append: "/aurora" %}
@@ -158,7 +158,7 @@
 
   {% comment %}/* Body Background color */{% endcomment %}
   {% if content_top_bg.color %}
-    {% if post_page %}
+    {% if blog_article_page %}
       .content-top .background-color {
         background-color: {{ article.data.content_top_bg.color }};
       }

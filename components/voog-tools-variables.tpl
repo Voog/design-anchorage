@@ -9,12 +9,25 @@
 
 
   {% comment %}Content top. Assign variables based on page type.{% endcomment %}
-  {% assign content_top_bg = page.data.content_top_bg %}
-  {% assign content_top_bg_image = page.data.content_top_bg.image %}
-  {% assign content_top_bg_image_sizes = page.data.content_top_bg.imageSizes %}
-  {% assign content_top_bg_color = page.data.content_top_bg.color %}
-  {% assign content_top_bg_color_data = page.data.content_top_bg.colorData %}
-  {% assign content_top_bg_combined_lightness = content_top_bg.combinedLightness %}
+  {% if blog_article_page %}
+
+    {% assign content_top_bg = article.data.content_top_bg %}
+    {% assign content_top_bg_image = article.data.content_top_bg.image %}
+    {% assign content_top_bg_image_sizes = article.data.content_top_bg.imageSizes %}
+    {% assign content_top_bg_color = article.data.content_top_bg.color %}
+    {% assign content_top_bg_color_data = article.data.content_top_bg.colorData %}
+    {% assign content_top_bg_combined_lightness = content_top_bg.combinedLightness %}
+
+  {% else %}
+
+    {% assign content_top_bg = page.data.content_top_bg %}
+    {% assign content_top_bg_image = page.data.content_top_bg.image %}
+    {% assign content_top_bg_image_sizes = page.data.content_top_bg.imageSizes %}
+    {% assign content_top_bg_color = page.data.content_top_bg.color %}
+    {% assign content_top_bg_color_data = page.data.content_top_bg.colorData %}
+    {% assign content_top_bg_combined_lightness = content_top_bg.combinedLightness %}
+
+  {% endif %}
 
   {% comment %}Content top. Sets the background type.{% endcomment %}
   {% if content_top_bg %}

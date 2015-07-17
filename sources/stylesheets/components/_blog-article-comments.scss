@@ -86,3 +86,15 @@
     right: 0;
     transition: 250ms;
   }
+
+.blog-article-page {
+  .comments-open-btn.open {
+    display: none
+  }
+  .comments-close-btn {
+    display: none;
+  }
+  .comments-close-btn.open {
+    display: inline-block;
+  }
+}

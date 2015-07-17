@@ -5,6 +5,8 @@
   @extend %clearfix;
   @include hyphenate(true);
   font-size: $medium-font-size;
+  line-height: 48px;
+  font-weight: 100;
 
   .dark-background & {
     @include color($white);
