@@ -10,23 +10,19 @@
 
   {% comment %}Content top. Assign variables based on page type.{% endcomment %}
   {% if blog_article_page %}
-
     {% assign content_top_bg = article.data.content_top_bg %}
     {% assign content_top_bg_image = article.data.content_top_bg.image %}
     {% assign content_top_bg_image_sizes = article.data.content_top_bg.imageSizes %}
     {% assign content_top_bg_color = article.data.content_top_bg.color %}
     {% assign content_top_bg_color_data = article.data.content_top_bg.colorData %}
     {% assign content_top_bg_combined_lightness = content_top_bg.combinedLightness %}
-
   {% else %}
-
     {% assign content_top_bg = page.data.content_top_bg %}
     {% assign content_top_bg_image = page.data.content_top_bg.image %}
     {% assign content_top_bg_image_sizes = page.data.content_top_bg.imageSizes %}
     {% assign content_top_bg_color = page.data.content_top_bg.color %}
     {% assign content_top_bg_color_data = page.data.content_top_bg.colorData %}
     {% assign content_top_bg_combined_lightness = content_top_bg.combinedLightness %}
-
   {% endif %}
 
   {% comment %}Content top. Sets the background type.{% endcomment %}
@@ -193,12 +189,21 @@
 
 
   {% comment %}Content bottom. Assign variables based on page type.{% endcomment %}
-  {% assign content_bottom_bg = page.data.content_bottom_bg %}
-  {% assign content_bottom_bg_image = page.data.content_bottom_bg.image %}
-  {% assign content_bottom_bg_image_sizes = page.data.content_bottom_bg.imageSizes %}
-  {% assign content_bottom_bg_color = page.data.content_bottom_bg.color %}
-  {% assign content_bottom_bg_color_data = page.data.content_bottom_bg.colorData %}
-  {% assign content_bottom_bg_combined_lightness = content_bottom_bg.combinedLightness %}
+  {% if blog_article_page %}
+    {% assign content_bottom_bg = article.data.content_bottom_bg %}
+    {% assign content_bottom_bg_image = article.data.content_bottom_bg.image %}
+    {% assign content_bottom_bg_image_sizes = article.data.content_bottom_bg.imageSizes %}
+    {% assign content_bottom_bg_color = article.data.content_bottom_bg.color %}
+    {% assign content_bottomp_bg_color_data = article.data.content_bottom_bg.colorData %}
+    {% assign content_bottom_bg_combined_lightness = content_bottom_bg.combinedLightness %}
+  {% else %}
+    {% assign content_bottom_bg = page.data.content_bottom_bg %}
+    {% assign content_bottom_bg_image = page.data.content_bottom_bg.image %}
+    {% assign content_bottom_bg_image_sizes = page.data.content_bottom_bg.imageSizes %}
+    {% assign content_bottom_bg_color = page.data.content_bottom_bg.color %}
+    {% assign content_bottom_bg_color_data = page.data.content_bottom_bg.colorData %}
+    {% assign content_bottom_bg_combined_lightness = content_bottom_bg.combinedLightness %}
+  {% endif %}
 
   {% comment %}Content bottom. Sets the background type.{% endcomment %}
   {% if content_bottom_bg %}
@@ -228,7 +233,13 @@
   {% endif %}
 
   {% if content_bottom_bg_color == nil %}
-    {% assign content_bottom_bg_color = 'rgba(255,255,255,1)' %}
+    {% if front_page %}
+      {% assign content_bottom_bg_color = 'rgba(255,255,255,1)' %}
+    {% elsif blog_page or blog_article_page %}
+      {% assign content_bottom_bg_color = 'rgba(233,233,233,1)' %}
+    {% else %}
+      {% assign content_bottom_bg_color = 'rgba(255,255,255,1)' %}
+    {% endif %}
   {% endif %}
 
   {% if content_bottom_bg_color_data == nil %}

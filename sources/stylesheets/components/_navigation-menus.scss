@@ -622,20 +622,19 @@ $flags:
 .lang-menu {
   display: inline-block;
   vertical-align: middle;
-  height: 13px;
 
   li {
     display: block;
     font-size: 12px;
     text-align: left;
+    line-height: normal;
+
+    a {
+      @include color(#1b2124, .7);
+    }
 
     &.add-lang-btn {
       padding: 5px 0 4px 10px;
-
-      @media screen and (max-width: $break-middle) {
-        padding: 5px 10px 4px 0;
-        text-align: right;
-      }
     }
   }
 
@@ -644,8 +643,11 @@ $flags:
       position: relative;
       display: block;
       padding: 6px 13px 5px 40px;
-      @include color(#1b2124, .7);
 
+      .dark-background &,
+      .light-background & {
+        @include color(#1b2124, .7);
+      }
       &:before,
       &:after {
         top: 4px;
@@ -661,16 +663,16 @@ $flags:
         @include bg(#cccccc, .5);
       }
 
-      @media screen and (max-width: $break-middle) {
-        padding: 6px 40px 5px 13px;
-        text-align: right;
 
-        &:before,
-        &:after {
-          left: auto;
-          right: 12px;
-        }
+      padding: 6px 40px 5px 13px;
+      text-align: right;
+
+      &:before,
+      &:after {
+        left: auto;
+        right: 12px;
       }
+
     }
 
     &.edy-menu-langadd {
@@ -730,8 +732,8 @@ $flags:
 .lang-menu-popover {
   position: absolute;
   z-index: 1;
-  top: 20px;
-  left: -12px;
+  top: 35px;
+  right: 60px;
   display: none;
   min-width: 122px;
   padding: 5px 0;
