@@ -1,17 +1,10 @@
 .site-header {
-  padding-bottom: $general-padding;
+  @extend %clearfix;
+  padding-bottom: $general-padding - 40px;
   position: relative;
 
   ul, li {
     list-style: none;
-  }
-
-  .front-page & {
-    min-height: 623px;
-
-    @include query($mobile-1 - 58) {
-      min-height: 423px;
-    }
   }
 
   .search-open & {
@@ -73,16 +66,17 @@
   }
 
   .header-top {
-    /*@include bg($white);*/
 
+    /*
     .front-page & {
       position: relative;
       z-index: 9;
-    }
+    }*/
 
     .wrap {
       @extend %clearfix;
       padding: 40px;
+      padding-bottom: 0;
       width: 100%;
       max-width: 2000px;
 
@@ -101,12 +95,11 @@
   }
 
   .header-bottom {
-    margin-top: 50px;
 
-    .front-page & {
+    /*.front-page & {
       position: relative;
       z-index: 9;
-    }
+    }*/
 
     .header-bottom-inner {
       display: table;
@@ -128,7 +121,8 @@
         display: table-cell;
         vertical-align: middle;
         padding: 60px 20px;
-        .front-page & {
+        .front-page &,
+        .blog-article-page & {
           height: 422px;
         }
       }

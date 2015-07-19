@@ -83,6 +83,7 @@
   }
 }
 .article-comments.active {
+    top: 0;
     right: 0;
     transition: 250ms;
   }

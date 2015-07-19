@@ -15,14 +15,17 @@
     <div class="site-container">
       {% include 'site-header' %}
 
+
+{% for item in site.menuitems_with_hidden %}
+  {% if item.selected? %}
+    {% if editmode or item.children? %}
+      <div class="page-body sidebar-active">
+        {% include 'site-sidebar' %}
+    {% else %}
       <div class="page-body">
-        {% for item in site.menuitems_with_hidden %}
-          {% if item.selected? %}
-            {% if editmode or item.children? %}
-              {% include 'site-sidebar' %}
-            {% endif %}
-          {% endif %}
-        {% endfor %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
 
         <main class="page-content" role="main">
 

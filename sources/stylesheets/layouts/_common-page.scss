@@ -5,13 +5,31 @@
     margin-top: $content-header-margin;
     margin-bottom: $content-header-margin;
   }
-  /*main {
-    margin-left: 200px;
-  }*/
   .content-body {
     font-weight: 300;
     font-size: 18px;
     line-height: 30px;
     margin: 45px 0;
   }
+
+  .sidebar-active {
+    display: inline-block;
+    width: 90%;
+    margin: 0 5%;
+
+    .inner {
+      width: auto;
+      margin: 0;
+    }
+    .page-content {
+      margin-left: 200px;
+    }
+
+    @include query($tablet-2) {
+      .page-content {
+        margin-left: 0;
+      }
+    }
+  }
+
 }

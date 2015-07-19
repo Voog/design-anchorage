@@ -147,7 +147,7 @@ a img {
   z-index: -1;
 }
 
-.container:after, .wrap:after, .content-formatted:after, .contacts .content-formatted table tr:after, .footer .content-formatted table tr:after, .blog-article-page .blog-article-nav:after, .site-header .header-top .wrap:after, .search:after,
+.container:after, .wrap:after, .content-formatted:after, .contacts .content-formatted table tr:after, .footer .content-formatted table tr:after, .blog-article-page .blog-article-nav:after, .site-header:after, .site-header .header-top .wrap:after, .search:after,
 .search-form:after, .content-area:after {
   content: "";
   display: table;
@@ -230,11 +230,54 @@ a img {
 
 .wrap {
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .front-page .wrap {
   max-width: 1000px;
+}
+
+.dark-background {
+  color: #ffffff;
+}
+.dark-background h1, .dark-background h2, .dark-background h3, .dark-background h4, .dark-background p, .dark-background pre {
+  color: #ffffff;
+}
+.footer-row .dark-background {
+  color: white;
+}
+.footer-row .dark-background a, .footer-row .dark-background b {
+  color: #ffffff;
+}
+.dark-background .menu li a {
+  color: white;
+}
+
+.light-background {
+  color: black;
+}
+.light-background h1, .light-background h2, .light-background h3, .light-background h4, .light-background p {
+  color: black;
+}
+.footer-row .light-background a {
+  color: #000000;
+}
+.footer-row .light-background b {
+  color: black;
+}
+.footer-row .light-background {
+  color: black;
+}
+.light-background .menu li a {
+  color: black;
+}
+
+.menu li:hover a {
+  color: black;
+}
+
+.menu li.is-active a {
+  font-weight: 300;
+  color: black;
 }
 
 .site-footer .dark-background b, .site-footer .dark-background a {
@@ -253,8 +296,14 @@ a img {
 .dark-background .header-title a {
   color: #ffffff !important;
 }
-.dark-background .menu li.is-active a {
+.dark-background .menu li a {
   color: rgba(255, 255, 255, 0.7);
+}
+.dark-background .menu li a:hover {
+  color: #ffffff;
+}
+.dark-background .menu li.is-active a {
+  color: white;
 }
 
 .light-background {
@@ -269,14 +318,24 @@ a img {
 .site-footer .light-background .header-title a {
   color: #000000 !important;
 }
-.site-footer .light-background .menu li.is-active a {
+.site-footer .light-background .menu li a {
   color: rgba(0, 0, 0, 0.7);
+}
+.site-footer .light-background .menu li a:hover {
+  color: #000000;
+}
+.site-footer .light-background .menu li.is-active a {
+  color: black;
 }
 .site-footer .light-background {
   color: #a6a6a6;
 }
 
 .dark-background .voog-reference svg path {
+  fill: #ffffff;
+}
+
+.dark-background .search-btn svg path {
   fill: #ffffff;
 }
 
@@ -335,18 +394,16 @@ a img {
   width: 80%;
   margin: 40px auto;
 }
+.blog-article-page .inner {
+  margin: 20px auto;
+}
 
-.page-body {
+.main-inner-row {
   display: inline-block;
-  width: 90%;
-  margin: 0 5%;
-}
-.page-body .inner {
-  width: auto;
-  margin: 0;
+  width: 100%;
 }
 
-.container:after, .wrap:after, .content-formatted:after, .contacts .content-formatted table tr:after, .footer .content-formatted table tr:after, .blog-article-page .blog-article-nav:after, .site-header .header-top .wrap:after, .search:after,
+.container:after, .wrap:after, .content-formatted:after, .contacts .content-formatted table tr:after, .footer .content-formatted table tr:after, .blog-article-page .blog-article-nav:after, .site-header:after, .site-header .header-top .wrap:after, .search:after,
 .search-form:after, .content-area:after {
   display: table;
   clear: both;
@@ -928,11 +985,6 @@ a img {
   position: relative;
 }
 
-.common-page {
-  /*main {
-    margin-left: 200px;
-  }*/
-}
 .common-page .content-header {
   margin-top: 25px;
   margin-bottom: 25px;
@@ -942,6 +994,23 @@ a img {
   font-size: 18px;
   line-height: 30px;
   margin: 45px 0;
+}
+.common-page .sidebar-active {
+  display: inline-block;
+  width: 90%;
+  margin: 0 5%;
+}
+.common-page .sidebar-active .inner {
+  width: auto;
+  margin: 0;
+}
+.common-page .sidebar-active .page-content {
+  margin-left: 200px;
+}
+@media screen and (max-width: 768px) {
+  .common-page .sidebar-active .page-content {
+    margin-left: 0;
+  }
 }
 
 .blog-news-page .article-title {
@@ -1160,6 +1229,7 @@ a img {
 }
 
 .article-comments.active {
+  top: 0;
   right: 0;
   transition: 250ms;
 }
@@ -1175,19 +1245,11 @@ a img {
 }
 
 .site-header {
-  padding-bottom: 70px;
+  padding-bottom: 30px;
   position: relative;
 }
 .site-header ul, .site-header li {
   list-style: none;
-}
-.front-page .site-header {
-  min-height: 623px;
-}
-@media screen and (max-width: 422px) {
-  .front-page .site-header {
-    min-height: 423px;
-  }
 }
 .search-open .site-header {
   position: static;
@@ -1268,14 +1330,15 @@ a img {
   display: inline-block;
 }
 .site-header .header-top {
-  /*@include bg($white);*/
-}
-.front-page .site-header .header-top {
-  position: relative;
-  z-index: 9;
+  /*
+  .front-page & {
+    position: relative;
+    z-index: 9;
+  }*/
 }
 .site-header .header-top .wrap {
   padding: 40px;
+  padding-bottom: 0;
   width: 100%;
   max-width: 2000px;
 }
@@ -1298,11 +1361,10 @@ a img {
   }
 }
 .site-header .header-bottom {
-  margin-top: 50px;
-}
-.front-page .site-header .header-bottom {
-  position: relative;
-  z-index: 9;
+  /*.front-page & {
+    position: relative;
+    z-index: 9;
+  }*/
 }
 .site-header .header-bottom .header-bottom-inner {
   display: table;
@@ -1323,7 +1385,7 @@ a img {
   vertical-align: middle;
   padding: 60px 20px;
 }
-.front-page .site-header .header-bottom .header-bottom-inner .wrap {
+.front-page .site-header .header-bottom .header-bottom-inner .wrap, .blog-article-page .site-header .header-bottom .header-bottom-inner .wrap {
   height: 422px;
 }
 @media screen and (max-width: 422px) {
@@ -1386,6 +1448,7 @@ a img {
 .menu li {
   font-size: 16px;
   line-height: 30px;
+  font-weight: 300;
 }
 .menu li:last-child {
   margin-right: 0;
@@ -1394,7 +1457,6 @@ a img {
   color: rgba(0, 0, 0, 0.8);
 }
 .menu li.is-active a {
-  font-weight: 700;
   color: rgba(0, 0, 0, 0.55);
 }
 .menu li a {
@@ -1442,8 +1504,8 @@ a img {
     overflow: hidden;
     width: 100%;
   }
-  .mobilemenu-open .wrap,
-  .mobilesearch-open .wrap {
+  .mobilemenu-open #mobile-menu .wrap,
+  .mobilesearch-open #mobile-menu .wrap {
     position: fixed;
     top: 0;
     left: 0;
@@ -1452,7 +1514,6 @@ a img {
 
   .mobile-menu-toggler {
     position: absolute;
-    /*top: calc(50% - 22px);*/
     top: 0;
     right: 0;
     display: block;
@@ -1468,10 +1529,13 @@ a img {
     width: 20px;
     height: 3px;
     content: '';
-    background: #000000;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    background: #000000;
+  }
+  .dark-background .mobile-menu-toggler span, .dark-background .mobile-menu-toggler span:before, .dark-background .mobile-menu-toggler span:after {
+    background: #ffffff;
   }
   .mobile-menu-toggler span.flags-disabled .lang-menu-btn, .mobile-menu-toggler span:before.flags-disabled .lang-menu-btn, .mobile-menu-toggler span:after.flags-disabled .lang-menu-btn {
     position: static;
@@ -2409,8 +2473,8 @@ a img {
 .site-sidebar {
   float: left;
   width: 200px;
-  padding: 45px 30px 0;
-  box-sizing: content-box;
+  padding: 45px 30px 0 0;
+  box-sizing: border-box;
   min-height: 100%;
   position: relative;
   z-index: 5;
@@ -2591,52 +2655,8 @@ a img {
   content: attr(data-title);
 }
 
-.dark-background {
-  color: #ffffff;
-}
-.dark-background h1, .dark-background h2, .dark-background h3, .dark-background h4, .dark-background p, .dark-background pre {
-  color: #ffffff;
-}
-.footer-row .dark-background {
-  color: white;
-}
-.footer-row .dark-background a, .footer-row .dark-background b {
-  color: #ffffff;
-}
-.dark-background .menu li a {
-  color: white;
-}
-
-.light-background {
-  color: black;
-}
-.light-background h1, .light-background h2, .light-background h3, .light-background h4, .light-background p {
-  color: black;
-}
-.footer-row .light-background a {
-  color: #000000;
-}
-.footer-row .light-background b {
-  color: black;
-}
-.footer-row .light-background {
-  color: black;
-}
-.light-background .menu li a {
-  color: black;
-}
-
 .site-header h1 {
   font-size: 70px;
-}
-
-.menu li:hover a {
-  color: black;
-}
-
-.menu li.is-active a {
-  font-weight: 300;
-  color: black;
 }
 
 .content-area .form_fields {
