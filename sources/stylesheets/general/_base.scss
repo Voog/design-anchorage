@@ -26,6 +26,8 @@ a {
 .site-container {
   margin: 0 auto;
   overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
 }
 
 .page-content {
@@ -328,7 +330,7 @@ a {
   }
 
   .site-footer & {
-    color: $grey;
+    color: #4a4a4a;
   }
 }
 

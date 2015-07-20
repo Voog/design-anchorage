@@ -1,15 +1,15 @@
 .site-footer {
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   font-size: 14px;
   color: $grey;
   min-height: 100px;
 
 
   .footer-body {
-    padding: $general-padding / 2 5px;
-  }
-
-  .wrap {
+    padding: $general-padding / 2 10%;
     text-align: center;
   }
 
@@ -21,6 +21,54 @@
 
     &:hover {
       opacity: .8;
+    }
+  }
+
+
+  .blog-article-nav {
+    @extend %clearfix;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    display: table;
+    width: 100%;
+
+    .article-nav-half {
+      width: 50%;
+      display: table-cell;
+      box-sizing: border-box;
+      position: relative;
+
+      a {
+        padding: 40px;
+        display: block;
+      }
+    }
+    .article-nav-prev {
+      text-align: right;
+    }
+    .article-nav-next {
+      border-left: 1px solid transparent;
+      margin-left: -1px;
+    }
+    .article-nav-direction {
+      font-size: 12px;
+      line-height: 30px;
+      color: #a4a4a4;
+      text-transform: uppercase;
+    }
+    .article-nav-title {
+      font-size: 20px;
+      line-height: 30px;
+      color:#4a4a4a;
+    }
+    .article-nav-bg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $white;
+      z-index: -1;
     }
   }
 }

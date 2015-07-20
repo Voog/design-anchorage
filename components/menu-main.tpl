@@ -1,4 +1,4 @@
-<nav class="menu-main">
+<nav class="menu-main visibility-lrg">
   <ul class="menu">
     {% unless site.root_item.hidden? %}
       <li {% if site.root_item.selected? %} class="is-active"{% endif %}>

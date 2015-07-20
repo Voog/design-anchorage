@@ -198,9 +198,15 @@
 
   {% comment %}/* Body Background color */{% endcomment %}
   {% if content_bottom_bg.color %}
-    .content-bottom .background-color {
-      background-color: {{ page.data.content_bottom_bg.color }};
-    }
+    {% if blog_article_page %}
+      .content-bottom .background-color {
+        background-color: {{ article.data.content_bottom_bg.color }};
+      }
+    {% else %}
+      .content-bottom .background-color {
+        background-color: {{ page.data.content_bottom_bg.color }};
+      }
+    {% endif %}
   {% else %}
     .content-bottom .background-color {
       background-color: {{ content_bottom_bg_color }};

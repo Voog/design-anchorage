@@ -194,7 +194,7 @@
     {% assign content_bottom_bg_image = article.data.content_bottom_bg.image %}
     {% assign content_bottom_bg_image_sizes = article.data.content_bottom_bg.imageSizes %}
     {% assign content_bottom_bg_color = article.data.content_bottom_bg.color %}
-    {% assign content_bottomp_bg_color_data = article.data.content_bottom_bg.colorData %}
+    {% assign content_bottom_bg_color_data = article.data.content_bottom_bg.colorData %}
     {% assign content_bottom_bg_combined_lightness = content_bottom_bg.combinedLightness %}
   {% else %}
     {% assign content_bottom_bg = page.data.content_bottom_bg %}

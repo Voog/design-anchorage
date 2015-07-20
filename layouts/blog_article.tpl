@@ -57,60 +57,7 @@
 
       </main>
 
-      <div class="blog-article-nav">
-        {% assign article_current = article.title %}
-
-        {% for blog in site.blogs %}
-          {% for article in blog.articles %}
-
-            {% if article_current == article.title %}
-
-              {% assign article_next = forloop.index0 | plus: 1 %}
-              {% assign article_prev = forloop.index0 | minus: 1 %}
-
-            {% endif %}
-
-          {% endfor %}
-        {% endfor %}
-
-        <div class="article-nav-half article-nav-prev">
-          {% for blog in site.blogs %}
-            {% for article in blog.articles %}
-
-              {% if article_prev == forloop.index0 %}
-
-                <div class="article-nav-direction">Previous story</div>
-
-                <div class="article-nav-title">
-                  <a href="{{ article.url }}">{{ article.title }}</a>
-                </div>
-
-              {% endif %}
-
-            {% endfor %}
-          {% endfor %}
-        </div>
-
-        <div class="article-nav-half article-nav-next">
-          {% for blog in site.blogs %}
-            {% for article in blog.articles %}
-
-              {% if article_next == forloop.index0 %}
-
-                <div class="article-nav-direction">Next story</div>
-
-                <div class="article-nav-title">
-                  <a href="{{ article.url }}">{{ article.title }}</a>
-                </div>
-
-              {% endif %}
-
-            {% endfor %}
-          {% endfor %}
-        </div>
-      </div>
-
-      {% include 'site-footer' %}
+      {% include 'site-footer' with 'blog_article_page' %}
       {% include 'menu-mobile' %}
       {% include 'site-javascripts' %}
       {% include 'voog-tools' with 'blog_article_page' %}

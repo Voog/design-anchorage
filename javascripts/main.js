@@ -9533,13 +9533,19 @@ return jQuery;
         mainHeight = $('.page-content').height();
 
 
-  }
+  };
 
+  var stickyFooterVarHeight = function() {
+    $('.page-content').css('margin-bottom', $('.site-footer').outerHeight());
+  };
 
   // Initiations
   var initWindowResize = function() {
     $(window).resize(function() {
       // Add window resizing functions here.
+
+      stickyFooterVarHeight();
+
     });
   };
 
@@ -9564,6 +9570,7 @@ return jQuery;
   var init = function() {
     // Add site wide functions here.
     handleElementsClick();
+    stickyFooterVarHeight();
 
   };
 

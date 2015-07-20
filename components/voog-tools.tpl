@@ -74,7 +74,7 @@
         picture: false,
         target_width: 600,
         color: true,
-        showAlpha: false,
+        showAlpha: true,
 
       preview: function(data) {
         site.contentHalfBgPreview(data, '.js-content-bottom', contentHalfBottomBg);
