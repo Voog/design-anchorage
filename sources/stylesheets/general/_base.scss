@@ -303,6 +303,18 @@ a {
   .menu li.is-active a {
     color: rgba($white, 1);
   }
+
+  .lang-menu {
+    &.lang-menu-bilingual {
+      .lang-title a {
+        color:  rgba($white, 0.7);
+      }
+      .lang-title a.is-active {
+        color: rgba($white, 1);
+      }
+    }
+  }
+
 }
 
 .light-background {
@@ -331,6 +343,12 @@ a {
 
   .site-footer & {
     color: #4a4a4a;
+  }
+
+  .lang-menu-bilingual {
+    .lang-title a.is-active {
+      color: rgba($black, 1);
+    }
   }
 }
 

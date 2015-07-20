@@ -306,6 +306,12 @@ a img {
 .dark-background .menu li.is-active a {
   color: white;
 }
+.dark-background .lang-menu.lang-menu-bilingual .lang-title a {
+  color: rgba(255, 255, 255, 0.7);
+}
+.dark-background .lang-menu.lang-menu-bilingual .lang-title a.is-active {
+  color: white;
+}
 
 .light-background {
   color: #000000;
@@ -330,6 +336,9 @@ a img {
 }
 .site-footer .light-background {
   color: #4a4a4a;
+}
+.light-background .lang-menu-bilingual .lang-title a.is-active {
+  color: black;
 }
 
 .dark-background .voog-reference svg path {
@@ -2070,6 +2079,14 @@ a img {
 .lang-menu.flags-disabled a.lang-flag {
   padding: 6px 13px 5px;
 }
+.lang-menu.lang-menu-bilingual .lang-title {
+  display: inline-block;
+}
+.lang-menu.lang-menu-bilingual .lang-title a {
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 14px;
+}
 
 .lang-menu-btn {
   margin: 0;
@@ -2540,6 +2557,12 @@ a img {
   padding: 40px;
   display: block;
 }
+@media screen and (max-width: 480px) {
+  .site-footer .blog-article-nav .article-nav-half a {
+    padding: 20px;
+    text-align: center;
+  }
+}
 .site-footer .blog-article-nav .article-nav-prev {
   text-align: right;
 }
@@ -2557,6 +2580,11 @@ a img {
   font-size: 20px;
   line-height: 30px;
   color: #4a4a4a;
+}
+@media screen and (max-width: 480px) {
+  .site-footer .blog-article-nav .article-nav-title {
+    display: none;
+  }
 }
 .site-footer .blog-article-nav .article-nav-bg {
   position: absolute;

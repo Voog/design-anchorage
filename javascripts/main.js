@@ -9543,7 +9543,6 @@ return jQuery;
   var initWindowResize = function() {
     $(window).resize(function() {
       // Add window resizing functions here.
-
       stickyFooterVarHeight();
 
     });
@@ -9571,6 +9570,7 @@ return jQuery;
     // Add site wide functions here.
     handleElementsClick();
     stickyFooterVarHeight();
+    toggleFlags();
 
   };
 
@@ -9581,7 +9581,8 @@ return jQuery;
     initBlogPage: initBlogPage,
     initArticlePage: initArticlePage,
     initCommonPage: initCommonPage,
-    initFrontPage: initFrontPage
+    initFrontPage: initFrontPage,
+    toggleFlags: toggleFlags
   });
 
   init();

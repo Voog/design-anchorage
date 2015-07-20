@@ -359,6 +359,7 @@
     // Add site wide functions here.
     handleElementsClick();
     stickyFooterVarHeight();
+    toggleFlags();
 
   };
 
@@ -369,7 +370,8 @@
     initBlogPage: initBlogPage,
     initArticlePage: initArticlePage,
     initCommonPage: initCommonPage,
-    initFrontPage: initFrontPage
+    initFrontPage: initFrontPage,
+    toggleFlags: toggleFlags
   });
 
   init();

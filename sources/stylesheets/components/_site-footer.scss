@@ -41,6 +41,11 @@
       a {
         padding: 40px;
         display: block;
+
+        @include query($mobile-1) {
+          padding: 20px;
+          text-align: center;
+        }
       }
     }
     .article-nav-prev {
@@ -60,6 +65,10 @@
       font-size: 20px;
       line-height: 30px;
       color:#4a4a4a;
+
+      @include query($mobile-1) {
+        display: none;
+      }
     }
     .article-nav-bg {
       position: absolute;

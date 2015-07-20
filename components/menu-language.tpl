@@ -1,13 +1,34 @@
+{% for language in site.languages %}
+  {% assign numb_of_lang = forloop.length %}
+{% endfor %}
+
 {% if editmode or site.has_many_languages? %}
-  <nav class="lang-menu js-popup-menu js-menu-lang-wrap {% if flags_state %}flags-enabled{% else %}flags-disabled{% endif %}">
-    <button role="button" class="lang-menu-btn js-popup-menu-btn lang-flag {% for language in site.languages %}{% if language.selected? %}lang-flag-{{ language.code }}{% endif %}{% endfor %}">
-      {% if editmode or flags_state == false %}
+
+  {% if editmode %}
+    <nav class="lang-menu js-popup-menu js-menu-lang-wrap {% if flags_state %}flags-enabled{% else %}flags-disabled{% endif %}">
+      <button role="button" class="lang-menu-btn js-popup-menu-btn lang-flag {% for language in site.languages %}{% if language.selected? %}lang-flag-{{ language.code }}{% endif %}{% endfor %}">
         <span class="lang-title">
           {% for language in site.languages %}{% if language.selected? %}{{ language.title }}{% endif %}{% endfor %}
           <span class="ico-popover-toggle">▼</span>
         </span>
-      {% endif %}
-    </button>
+      </button>
+  {% elsif flags_state == false and numb_of_lang <= 2 %}
+    <nav class="lang-menu lang-menu-bilingual flags-disabled">
+      {% for language in site.languages %}
+        <div class="lang-title">
+          <a class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} is-active{% endif %}" href="{{ language.url }}">{{ language.title }}</a>
+        </div>
+      {% endfor %}
+  {% else %}
+    <nav class="lang-menu js-popup-menu js-menu-lang-wrap {% if flags_state %}flags-enabled{% else %}flags-disabled{% endif %}">
+      <button role="button" class="lang-menu-btn js-popup-menu-btn lang-flag {% for language in site.languages %}{% if language.selected? %}lang-flag-{{ language.code }}{% endif %}{% endfor %}">
+        <span class="lang-title">
+          {% for language in site.languages %}{% if language.selected? %}{{ language.title }}{% endif %}{% endfor %}
+          <span class="ico-popover-toggle">▼</span>
+        </span>
+      </button>
+  {% endif %}
+
 
     <div class="lang-menu-popover js-popup-menu-popover">
       {% if editmode or site.has_many_languages? %}
