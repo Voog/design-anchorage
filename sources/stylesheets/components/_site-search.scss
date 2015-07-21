@@ -35,6 +35,24 @@
   height: $search-height;
   line-height: 1;
 
+  #mobile-search & {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    right: 0;
+    top: 0;
+    padding-top: 20px;
+
+
+    .search-form {
+      max-width: 100%;
+    }
+    .search-inner {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+
   &.active {
     position: absolute;
     top: 20px;

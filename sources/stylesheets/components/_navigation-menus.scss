@@ -67,8 +67,6 @@
   }
 }
 
-
-
 @media screen and (max-width: $tablet-2) {
 /* mobile-menu */
 .site-header {
@@ -101,6 +99,10 @@
   width: 43px;
   height: 43px;
   outline: 0;
+
+  .mobilemenu-open & {
+    visibility: hidden;
+  }
 
   span {
     &,
@@ -162,9 +164,31 @@
   bottom: 0;
   left: 0;
   display: none;
-  overflow: auto;@include bg(#2b2b2b, .9);
+  overflow: auto;
+  @include bg(#000, .9);
   -webkit-overflow-scrolling: touch;
 
+  .mobile-site-options {
+    margin: 40px 40px 0;
+    max-width: 2000px;
+    position: relative;
+
+    .search-btn {
+      position: absolute;
+      right: 50px;
+      width: 42px;
+      height: 42px;
+
+      svg path {
+        fill: $white;
+      }
+    }
+    .lang-title {
+      font-size: 20px;
+      text-transform: uppercase;
+      line-height: 42px;
+    }
+  }
   .mobilemenu-open & {
     display: block;
   }
@@ -209,6 +233,10 @@
     height: 42px;
     outline: 0;
 
+    .mobile-search-open & {
+      display: none;
+    }
+
     .lang-menu-btn {
       position: absolute;
       top: 14px;
@@ -235,8 +263,6 @@
       width: auto;
       height: auto;
       display: inline-block;
-      vertical-align: top;
-      padding: 11px 9px 17px;
       @include color($white);
 
       &:before,
@@ -268,6 +294,12 @@
     width: 100%;
     height: 100%;
     word-break: break-all;
+    margin: 0;
+
+    .option-btn {
+      color: $white;
+      padding: 15px 0;
+    }
 
     ul {
       display: table-cell;
@@ -286,6 +318,7 @@
 
       a {
         font-size: 24px;
+        text-transform: uppercase;
         line-height: $line-height; @include color(white, .5);
 
         &.active {
