@@ -30,10 +30,13 @@
       event.preventDefault();
 
       if ($('body').hasClass('lang-menu-open')) {
-          $('body').removeClass('lang-menu-open');
+        $('body').removeClass('lang-menu-open');
+      }
+      else if ($('body').hasClass('mobile-search-open')) {
+        $('body').removeClass('mobile-search-open');
       }
       else {
-          $('body').removeClass('mobilemenu-open');
+        $('body').removeClass('mobilemenu-open');
       }
   });
 
@@ -266,6 +269,44 @@
     $('.js-search-form, .js-voog-search-modal').click(function(event) {
       event.stopPropagation();
     });
+
+
+
+
+    // Hides mobile search modal on side click
+    $('#mobile-menu .js-search').click(function() {
+      $('#mobile-menu .js-mobile-search-close-btn').trigger('click');
+    });
+
+    // Opens the mobile search modal.
+    $('#mobile-menu .js-mobile-search-open-btn').click(function(event) {
+      event.stopPropagation();
+      if ($('#mobile-menu .js-menu-btn').hasClass('open')) {
+        $('#mobile-menu .js-menu-btn').trigger('click');
+      }
+
+      $(this).addClass('open');
+      $('#mobile-menu .js-mobile-search-close-btn').addClass('open');
+      $('body').addClass('mobile-search-open');
+      $('#mobile-menu .js-search').addClass('active');
+      $('#mobile-menu .js-search-input').val('').focus();
+    });
+
+    // Closes the mobile search modal.
+    $('#mobile-menu .js-mobile-search-close-btn').click(function(event) {
+      event.stopPropagation();
+      $('#mobile-menu .js-mobile-search-open-btn, #mobile-menu .js-mobile-search-close-btn').removeClass('open');
+      $('#mobile-menu .js-search').removeClass('active');
+      $('body').removeClass('mobile-search-open');
+      $('#mobile-menu .js-voog-search-modal').removeClass('search-results-active');
+    });
+
+    $('#mobile-menu .js-search-form, #mobile-menu .js-voog-search-modal').click(function(event) {
+      event.stopPropagation();
+    });
+
+
+
 
     // Opens the comments modal.
     $('.js-comments-open-btn').click(function(event) {

@@ -355,7 +355,7 @@ a img {
   fill: #ffffff;
 }
 
-.dark-background .search-btn svg path {
+.dark-background .site-options .search-btn svg path {
   fill: #ffffff;
 }
 
@@ -1175,6 +1175,7 @@ a img {
   line-height: 27px;
   font-weight: 300;
   font-family: Roboto;
+  cursor: pointer;
 }
 .article-comments .comment {
   margin: 20px 0 0;
@@ -1481,6 +1482,12 @@ a img {
 #mobile-search {
   display: none;
 }
+.mobile-search-open .mobile-menu-toggler, .mobile-search-open
+#mobile-menu, .mobile-search-open
+.mobile-menu-toggler, .mobile-search-open
+#mobile-search {
+  display: block;
+}
 
 @media screen and (max-width: 768px) {
   /* mobile-menu */
@@ -1569,6 +1576,7 @@ a img {
   }
   #mobile-menu .mobile-menu-close {
     position: absolute;
+    z-index: 9999;
     top: 0;
     right: 0;
     display: block;
@@ -1668,7 +1676,7 @@ a img {
     display: block;
     margin: 0;
     padding: 15px 0;
-    text-align: right;
+    text-align: center;
   }
   #mobile-menu .navigation-menu ul a,
   #mobile-menu .lang-menu ul a {
@@ -1681,7 +1689,7 @@ a img {
   #mobile-menu .lang-menu ul a.active {
     color: white;
   }
-  .lang-menu-open #mobile-menu .navigation-menu {
+  .lang-menu-open #mobile-menu .navigation-menu, .mobile-search-open #mobile-menu .navigation-menu {
     display: none;
   }
   #mobile-menu .lang-menu {
@@ -1731,30 +1739,6 @@ a img {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     transform: rotate(-45deg);
-  }
-
-  #mobile-search {
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    overflow: auto;
-    background: #f6f6f6;
-    -webkit-overflow-scrolling: touch;
-  }
-  .mobilesearch-open #mobile-search {
-    display: block;
-  }
-
-  #mobile-search-results {
-    position: absolute;
-    top: 40px;
-    right: 0;
-    bottom: 0;
-    left: 0;
   }
 }
 /* flags */
@@ -2178,7 +2162,6 @@ a img {
   margin-left: 15px;
   height: 50px;
   line-height: 1;
-  background-color: white;
 }
 .search.active {
   position: absolute;
@@ -2193,7 +2176,6 @@ a img {
 }
 
 .search-middle {
-  display: table-cell;
   vertical-align: middle;
   width: 100%;
   padding: 0 20px;
@@ -2463,6 +2445,21 @@ a img {
 }
 .voog-search-modal-result:first-child {
   margin-top: 0;
+}
+
+#mobile-search {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.mobilesearch-open #mobile-search {
+  display: block;
 }
 
 .site-sidebar {
