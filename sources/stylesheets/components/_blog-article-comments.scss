@@ -9,6 +9,11 @@
   box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
   transition: 250ms;
 
+  .comments-body {
+    max-height: 100%;
+    overflow-y: scroll;
+  }
+
   .comments-title {
     font-size: 24px;
     line-height: 40px;

@@ -30,6 +30,10 @@ a img {
 
 .page-content {
   position: relative;
+  margin-bottom: 100px;
+}
+.blog-article-page .page-content {
+  margin-bottom: 240px;
 }
 
 .loader {
@@ -306,6 +310,9 @@ a img {
 .dark-background .menu li.is-active a {
   color: white;
 }
+.dark-background .lang-title {
+  color: white;
+}
 .dark-background .lang-menu.lang-menu-bilingual .lang-title a {
   color: rgba(255, 255, 255, 0.7);
 }
@@ -319,23 +326,26 @@ a img {
 .light-background h1, .light-background h2, .light-background h3, .light-background h4, .light-background p {
   color: #000000;
 }
-.site-footer .light-background a {
+.site-header .light-background a {
   color: #000000;
 }
-.site-footer .light-background .header-title a {
+.site-header .light-background .header-title a {
   color: #000000 !important;
 }
-.site-footer .light-background .menu li a {
+.site-header .light-background .menu li a {
   color: rgba(0, 0, 0, 0.7);
 }
-.site-footer .light-background .menu li a:hover {
+.site-header .light-background .menu li a:hover {
   color: #000000;
 }
-.site-footer .light-background .menu li.is-active a {
+.site-header .light-background .menu li.is-active a {
   color: black;
 }
 .site-footer .light-background {
   color: #4a4a4a;
+}
+.light-background .lang-title {
+  color: black;
 }
 .light-background .lang-menu-bilingual .lang-title a.is-active {
   color: black;
@@ -1142,6 +1152,10 @@ a img {
   box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
   transition: 250ms;
 }
+.article-comments .comments-body {
+  max-height: 100%;
+  overflow-y: scroll;
+}
 .article-comments .comments-title {
   font-size: 24px;
   line-height: 40px;
@@ -1435,12 +1449,6 @@ a img {
 .menu li:last-child {
   margin-right: 0;
 }
-.menu li:hover a {
-  color: rgba(0, 0, 0, 0.8);
-}
-.menu li.is-active a {
-  color: rgba(0, 0, 0, 0.55);
-}
 .menu li a {
   display: block;
   border-style: none;
@@ -1660,7 +1668,7 @@ a img {
     display: block;
     margin: 0;
     padding: 15px 0;
-    text-align: center;
+    text-align: right;
   }
   #mobile-menu .navigation-menu ul a,
   #mobile-menu .lang-menu ul a {
@@ -2032,11 +2040,12 @@ a img {
 .lang-menu {
   display: inline-block;
   vertical-align: middle;
+  margin-left: 20px;
 }
 .lang-menu li {
   display: block;
   font-size: 12px;
-  text-align: left;
+  text-align: right;
   line-height: normal;
 }
 .lang-menu li a {
@@ -2044,12 +2053,12 @@ a img {
   color: rgba(27, 33, 36, 0.7);
 }
 .lang-menu li.add-lang-btn {
-  padding: 5px 0 4px 10px;
+  padding: 10px;
 }
 .lang-menu a.lang-flag {
   position: relative;
   display: block;
-  padding: 6px 13px 5px 40px;
+  padding: 6px 10px 5px 40px;
   padding: 6px 40px 5px 13px;
   text-align: right;
 }
@@ -2060,13 +2069,6 @@ a img {
 .lang-menu a.lang-flag:before, .lang-menu a.lang-flag:after {
   top: 4px;
   left: 12px;
-}
-.lang-menu a.lang-flag.active, .lang-menu a.lang-flag:hover {
-  background-color: #cccccc;
-}
-.lang-menu a.lang-flag:hover {
-  background-color: #cccccc;
-  background-color: rgba(204, 204, 204, 0.5);
 }
 .lang-menu a.lang-flag:before, .lang-menu a.lang-flag:after {
   left: auto;
@@ -2079,10 +2081,13 @@ a img {
 .lang-menu.flags-disabled a.lang-flag {
   padding: 6px 13px 5px;
 }
-.lang-menu.lang-menu-bilingual .lang-title {
+.lang-menu .lang-title {
   display: inline-block;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 14px;
 }
-.lang-menu.lang-menu-bilingual .lang-title a {
+.lang-menu .lang-title a {
   background-color: transparent;
   text-transform: uppercase;
   font-size: 14px;
@@ -2520,7 +2525,7 @@ a img {
   }
 }
 .site-footer {
-  position: absolute;
+  position: absolute !important;
   left: 0;
   right: 0;
   bottom: 0;

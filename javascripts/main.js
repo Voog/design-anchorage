@@ -9526,25 +9526,48 @@ return jQuery;
     });
   };
 
-  var commentsHeight = function() {
-    var documentHeight = $(document).height(),
-        siteHeight = $('.site-container').height(),
-        comHeight = $('.article-comments').height(),
-        mainHeight = $('.page-content').height();
-
-
-  };
-
   var stickyFooterVarHeight = function() {
     $('.page-content').css('margin-bottom', $('.site-footer').outerHeight());
   };
+
+  // Set article comments section the height of the document minus the header section
+  var commentsHeight = function() {
+    var documentHeight = $(document).height(),
+        siteHeight = $('.site-container').height(),
+        commentsHeight = $('.article-comments').height(),
+        commentsPadTop = parseInt($('.article-comments').css('padding-top')),
+        commentsPadBottom = parseInt($('.article-comments').css('padding-bottom')),
+        mainHeight = $('.page-content').height(),
+        headerHeight = $('.site-header').height(),
+        footerHeight = $('.site-footer').height(),
+        commentsTarget = (mainHeight + headerHeight + footerHeight) - headerHeight - commentsPadTop - commentsPadBottom;
+
+    $('.article-comments').css('height', commentsTarget);
+  };
+
+  // Prevent page scroll while focused on a specific section
+  $.fn.isolatedScroll = function() {
+    this.bind('mousewheel DOMMouseScroll', function (e) {
+        var delta = e.wheelDelta || (e.originalEvent && e.originalEvent.wheelDelta) || -e.detail,
+            bottomOverflow = this.scrollTop + $(this).outerHeight() - this.scrollHeight >= 0,
+            topOverflow = this.scrollTop <= 0;
+
+        if ((delta < 0 && bottomOverflow) || (delta > 0 && topOverflow)) {
+            e.preventDefault();
+        }
+    });
+    return this;
+  };
+
+  // Prevent page scroll while scrolling comments
+  $('.comments-body').isolatedScroll();
 
   // Initiations
   var initWindowResize = function() {
     $(window).resize(function() {
       // Add window resizing functions here.
       stickyFooterVarHeight();
-
+      commentsHeight();
     });
   };
 
@@ -9554,6 +9577,7 @@ return jQuery;
 
   var initArticlePage = function() {
     // Add single post layout specific functions here.
+    commentsHeight();
   };
 
   var initCommonPage = function() {
@@ -9578,6 +9602,7 @@ return jQuery;
   window.site = $.extend(window.site || {}, {
     contentHalfBgPreview: contentHalfBgPreview,
     contentHalfBgCommit: contentHalfBgCommit,
+    initWindowResize: initWindowResize,
     initBlogPage: initBlogPage,
     initArticlePage: initArticlePage,
     initCommonPage: initCommonPage,

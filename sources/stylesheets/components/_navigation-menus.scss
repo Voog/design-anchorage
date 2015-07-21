@@ -17,18 +17,6 @@
       margin-right: 0;
     }
 
-    &:hover {
-      a {
-        color: rgba($black, .8);
-      }
-    }
-
-    &.is-active {
-      a {
-        color: rgba($black, .55);
-      }
-    }
-
     a {
       display: block;
       border-style: none;
@@ -289,7 +277,7 @@
         display: block;
         margin: 0;
         padding: 15px 0;
-        text-align: center;
+        text-align: right;
       }
 
       a {
@@ -625,11 +613,12 @@ $flags:
 .lang-menu {
   display: inline-block;
   vertical-align: middle;
+  margin-left: 20px;
 
   li {
     display: block;
     font-size: 12px;
-    text-align: left;
+    text-align: right;
     line-height: normal;
 
     a {
@@ -637,7 +626,7 @@ $flags:
     }
 
     &.add-lang-btn {
-      padding: 5px 0 4px 10px;
+      padding: 10px;
     }
   }
 
@@ -645,7 +634,7 @@ $flags:
     &.lang-flag {
       position: relative;
       display: block;
-      padding: 6px 13px 5px 40px;
+      padding: 6px 10px 5px 40px;
 
       .dark-background &,
       .light-background & {
@@ -656,16 +645,6 @@ $flags:
         top: 4px;
         left: 12px;
       }
-
-      &.active,
-      &:hover {
-        background-color: #cccccc;
-      }
-
-      &:hover {
-        @include bg(#cccccc, .5);
-      }
-
 
       padding: 6px 40px 5px 13px;
       text-align: right;
@@ -689,16 +668,19 @@ $flags:
       padding: 6px 13px 5px;
     }
   }
-  &.lang-menu-bilingual {
+
     .lang-title {
       display: inline-block;
+      background-color: transparent;
+      text-transform: uppercase;
+      font-size: 14px;
       a {
         background-color: transparent;
         text-transform: uppercase;
         font-size: 14px;
       }
     }
-  }
+
 }
 
 .lang-menu-btn {

@@ -32,6 +32,12 @@ a {
 
 .page-content {
   position: relative;
+  margin-bottom: 100px;
+
+  .blog-article-page & {
+    margin-bottom: 240px;
+  }
+
 }
 
 // Independent elements that can be located everywhere in the DOM and always have the same styling rules.
@@ -303,7 +309,9 @@ a {
   .menu li.is-active a {
     color: rgba($white, 1);
   }
-
+  .lang-title {
+    color:  rgba($white, 1);
+  }
   .lang-menu {
     &.lang-menu-bilingual {
       .lang-title a {
@@ -322,7 +330,7 @@ a {
   & h1, h2, h3, h4, p {
     color: $black;
   }
-  .site-footer & {
+  .site-header & {
     a {
       color: $black;
     }
@@ -343,6 +351,9 @@ a {
 
   .site-footer & {
     color: #4a4a4a;
+  }
+  .lang-title {
+    color: rgba($black, 1);
   }
 
   .lang-menu-bilingual {
