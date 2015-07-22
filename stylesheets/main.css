@@ -1619,6 +1619,9 @@ a img {
     -moz-border-radius: 3px;
     border-radius: 3px;
   }
+  .mobile-search-open #mobile-menu .mobile-menu-close:before, .mobile-search-open #mobile-menu .mobile-menu-close:after {
+    background: #000000;
+  }
   #mobile-menu .mobile-menu-close:before {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -1682,7 +1685,7 @@ a img {
   #mobile-menu .lang-menu {
     display: table;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 80px);
     word-break: break-all;
     margin: 0;
   }
@@ -2195,7 +2198,6 @@ a img {
 }
 #mobile-search .search {
   width: 100%;
-  height: 100%;
   max-width: 100%;
   right: 0;
   top: 0;
@@ -2415,14 +2417,20 @@ a img {
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-  padding: 20px 27px;
-  background-color: #EDECEC;
-  background-color: rgba(237, 236, 236, 0.95);
+  background-color: #edecec;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
   overflow-x: hidden;
   overflow-y: auto;
+  text-align: left;
+}
+#mobile-search .voog-search-modal {
+  max-width: 100%;
+}
+.voog-search-modal.no-content {
+  padding: 20px;
+  color: #aaaaaa;
 }
 @media screen and (min-width: 1400px) {
   .voog-search-modal {
@@ -2434,13 +2442,16 @@ a img {
   display: block;
 }
 
-.voog-search-modal-results.no-content {
-  text-align: left;
-  color: #222222;
+.voog-search-modal-results {
+  font-weight: 300;
+}
+.mobile-search-open .voog-search-modal-results {
+  max-height: calc(100vh - 120px);
 }
 .voog-search-modal-results h3 {
   margin: 0;
   font-size: 24px;
+  color: #222222;
 }
 @media screen and (min-width: 1400px) {
   .voog-search-modal-results h3 {
@@ -2449,7 +2460,7 @@ a img {
 }
 .voog-search-modal-results h3 a {
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 300;
   color: black;
 }
 .voog-search-modal-results h3 a:hover {
@@ -2459,6 +2470,8 @@ a img {
 .voog-search-modal-results p {
   margin: 5px 0 0;
   font-size: 14px;
+  line-height: 24px;
+  color: #aaaaaa;
 }
 @media screen and (min-width: 1400px) {
   .voog-search-modal-results p {
@@ -2481,15 +2494,13 @@ a img {
 }
 
 .voog-search-modal-result {
-  margin-top: 18px;
+  padding: 20px;
+  border-top: #e6e6e6 solid 2px;
 }
 @media screen and (min-width: 1400px) {
   .voog-search-modal-result {
     margin-top: 25px;
   }
-}
-.voog-search-modal-result:first-child {
-  margin-top: 0;
 }
 
 #mobile-search {
@@ -2505,6 +2516,10 @@ a img {
 }
 .mobilesearch-open #mobile-search {
   display: block;
+}
+#mobile-search .search {
+  padding: 0;
+  top: 35px;
 }
 
 .site-sidebar {

@@ -37,7 +37,6 @@
 
   #mobile-search & {
     width: 100%;
-    height: 100%;
     max-width: 100%;
     right: 0;
     top: 0;
@@ -290,11 +289,20 @@
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-  padding: 20px 27px;
-  @include bg($grey-4, 0.95);
+  @include bg($grey-4, 1);
   @include no-box-shadow;
   overflow-x: hidden;
   overflow-y: auto;
+  text-align: left;
+
+  #mobile-search & {
+    max-width: 100%;
+  }
+
+  &.no-content {
+    padding: 20px;
+    @include color(#aaa, 1);
+  }
 
   @include querysearch($large-1, 'min-width') {
     max-width: #{round(400 * $wide-view-multiplier)}px;
@@ -307,14 +315,16 @@
 }
 
 .voog-search-modal-results {
-  &.no-content {
-    text-align: left;
-    color: #222222;
+  font-weight: 300;
+
+  .mobile-search-open & {
+    max-height: calc(100vh - 120px);
   }
 
   h3 {
     margin: 0;
     font-size: 24px;
+    @include color(#222);
 
     @include querysearch($large-1, 'min-width') {
       font-size: #{round(24 * $wide-view-multiplier)}px;
@@ -322,7 +332,7 @@
 
     a {
       text-decoration: none;
-      font-weight: 400;
+      font-weight: 300;
       @include color($secondary-color);
 
       &:hover {
@@ -334,6 +344,8 @@
   p {
     margin: 5px 0 0;
     font-size: 14px;
+    line-height: 24px;
+    @include color(#aaa, 1);
 
     @include querysearch($large-1, 'min-width') {
       margin-top: #{round(5 * $wide-view-multiplier)}px;
@@ -355,14 +367,11 @@
 }
 
 .voog-search-modal-result {
-  margin-top: 18px;
+  padding: 20px;
+  border-top: #e6e6e6 solid 2px;
 
   @include querysearch($large-1, 'min-width') {
     margin-top: #{round(18 * $wide-view-multiplier)}px;
-  }
-
-  &:first-child {
-    margin-top: 0;
   }
 }
 
@@ -380,5 +389,9 @@
 
   .mobilesearch-open & {
     display: block;
+  }
+  .search {
+    padding: 0;
+    top: 35px;
   }
 }
