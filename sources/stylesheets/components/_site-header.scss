@@ -32,20 +32,16 @@
     vertical-align: middle;
     min-width: 140px;
     min-height: 40px;
-    line-height: 1.3em;
+    line-height: 33px;
     font-weight: 200;
 
     a {
-      @include color($primary-color, 0.73);
-
-      &:hover {
-        @include color($primary-color, 0.5);
-      }
+      line-height: 33px;
     }
   }
 
   .header-body {
-    font-size: 70px;
+    font-size: $header-font-size;
     text-transform: uppercase;
     font-weight: 800;
   }
@@ -57,20 +53,12 @@
     float: right;
     text-align: right;
   }
-  .menu-main {
-    display: inline-block;
-  }
+  .menu-main,
   .site-options {
     display: inline-block;
   }
 
   .header-top {
-
-    /*
-    .front-page & {
-      position: relative;
-      z-index: 9;
-    }*/
 
     .wrap {
       @extend %clearfix;
@@ -95,11 +83,6 @@
 
   .header-bottom {
 
-    /*.front-page & {
-      position: relative;
-      z-index: 9;
-    }*/
-
     .header-bottom-inner {
       display: table;
       border-collapse: collapse;
@@ -112,7 +95,7 @@
         @include color($white);
 
         .light-background & {
-          color: rgba($primary-color,0.73);
+          color: rgba($black,0.73);
         }
       }
 
@@ -172,7 +155,6 @@
     margin: 0;
     text-transform: none;
     a {
-
       text-decoration: none;
     }
   }

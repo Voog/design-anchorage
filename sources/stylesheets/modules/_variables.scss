@@ -3,21 +3,28 @@
 // Comment out the "_variables.scss" partial in the "main.scss" file if not used.
 
 // Basic colors.
-$black: #3e3e3e;
+$black: #222222;
+$black-light: #4a4a4a;
+$grey: #aaaaaa;
 $white: #ffffff;
+$blue: #0066BB;
+$yellow: #F9EC5A;
 
 // Specific colors.
 $highlight-color: #1b2124;
 $link-color: #ffffff;
 $link-color-dark: #000;
-$error-color: #cc0000;
-$success-color: #60a740;
+$error-color: #c70909;
+$success-color: #409e13;
 
+// Font family.
+$font-main: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 // Font sizes.
 $base-font-size: 19px;
 $medium-font-size: 32px;
 $article-title-size: 50px;
+$header-font-size: 70px;
 
 // Line heights.
 $base-line-height: 1.5em;
@@ -25,87 +32,17 @@ $secondary-line-height: 1.3em;
 $third-line-height: 48px;
 
 // Media query breakpoints.
+$wide-1: 1500px;
 $tablet-1: 1024px;
 $tablet-2: 768px;
 $tablet-3: 640px;
 $mobile-1: 480px;
 $mobile-2: 320px;
 
-
-// General colors
-$primary-color: #000000;
-$secondary-color: #E4AC00;
-$third-color: #1B2124;
-
-// Specific colors
-$white: #FFFFFF;
-
-$red: #CC0000;
-$green: #60A740;
-$blue-1: #0066BB;
-$blue-2: #C7E5FF;
-$yellow: #F9EC5A;
-
-$grey: #a6a6a6;
-
 // Reusable values
 // Define the reusable variables here.
 // For example the width of several different elements, that allways have to be with the same height:
-// $box-width: 400px;
-$search-height-1: 30px;
-$search-height-2: 40px;
 $general-padding: 70px;
 
-
-$main-color: #222222;
-$secondary-color: #000000;
-
-$third-color: #a3a3a3;
-$bg-color: #f6f6f6;
-$error-color: #c70909;
-$success-color: #409e13;
-$black: #000000;
-$white: #ffffff;
-$blue: #0066BB;
-
-$font-size-xs: 10px;
-$font-size: 18px;
-$font-size-big: 20px;
-$font-size-xl: 24px;
-$font-size-small: 14px;
-$font-size-medium: 16px;
-
-$line-height-tiny: 18px;
 $line-height-xs: 24px;
-$line-height-small: 30px;
 $line-height: 32px;
-
-$font-main: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-secondary: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
-$site-width: 1024px;
-$side-width: 200px;
-$side-width-small: 200px;
-$content-width: $site-width - $side-width;
-
-$search-width: 300px;
-
-$break-small: 600px;
-$break-middle: 1024px;
-$break-large: 1500px;
-
-$search-height: 50px;
-
-$large-1: 1400px;
-$wide-view-multiplier: 1.4;
-
-$red: #CC0000;
-$green: #60A740;
-$blue-1: #0066BB;
-$blue-2: #C7E5FF;
-
-$grey-1: #838586;
-$grey-2: #FAFAFA;
-$grey-3: #E2E2E2;
-$grey-4: #EDECEC;
-$yellow: #F9EC5A;

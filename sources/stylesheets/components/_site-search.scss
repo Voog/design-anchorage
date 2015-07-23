@@ -32,7 +32,7 @@
   vertical-align: middle;
   margin-top: -4px;
   margin-left: 15px;
-  height: $search-height;
+  height: 50px;
   line-height: 1;
 
   #mobile-search & {
@@ -41,7 +41,6 @@
     right: 0;
     top: 0;
     padding-top: 20px;
-
 
     .search-form {
       max-width: 100%;
@@ -113,13 +112,13 @@
 .search-input {
   vertical-align: middle;
   width: 100%;
-  height: $search-height;
+  height: 50px;
   margin: 0;
   padding: 0 65px 0 20px;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
-  @include color($secondary-color);
+  @include color($black);
   background: none;
   box-sizing: border-box;
   border: none;
@@ -134,7 +133,7 @@
   &::-webkit-input-placeholder {
     padding: 2px 0 4px 0;
     line-height: 1;
-    @include color($secondary-color, 0.5);
+    @include color($black, 0.5);
 
 
   }
@@ -149,7 +148,7 @@
   @extend %button;
   vertical-align: top;
   width: 30px;
-  height: $search-height;
+  height: 50px;
   background-color: transparent;
 
 
@@ -177,18 +176,6 @@
   background-size: 32px;
   background-color: transparent;
 
-  @include querysearch($large-1, 'min-width') {
-    right: #{round(25 * $wide-view-multiplier)}px;
-    padding-top: #{round(2 * $wide-view-multiplier)}px;
-    width: #{round(41 * $wide-view-multiplier)}px;
-    background-size: #{round(32 * $wide-view-multiplier)}px;
-
-    svg {
-      width: #{round(20 * $wide-view-multiplier)}px;
-      height: #{round(21 * $wide-view-multiplier)}px;
-    }
-  }
-
   &:hover {
     @include opacity(1);
   }
@@ -215,7 +202,7 @@
 
   svg {
     .header-options & {
-      fill: rgba($secondary-color, 0.67);
+      fill: rgba($black, 0.67);
 
       .front-page & {
         fill: $white;
@@ -231,7 +218,7 @@
 
   &:hover {
     svg {
-      fill: rgba($secondary-color, 0.47);
+      fill: rgba($black, 0.47);
     }
   }
 
@@ -267,16 +254,6 @@
         &:hover {
           @include opacity(1);
         }
-
-        @include querysearch($large-1, 'min-width') {
-          width: #{round(16 * $wide-view-multiplier)}px;
-          height: #{round(16 * $wide-view-multiplier)}px;
-        }
-      }
-
-      @include querysearch($large-1, 'min-width') {
-        width: #{round(22 * $wide-view-multiplier)}px;
-        height: #{round(22 * $wide-view-multiplier)}px;
       }
     }
   }
@@ -289,7 +266,7 @@
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-  @include bg($grey-4, 1);
+  @include bg($white, 1);
   @include no-box-shadow;
   overflow-x: hidden;
   overflow-y: auto;
@@ -301,12 +278,7 @@
 
   &.no-content {
     padding: 20px;
-    @include color(#aaa, 1);
-  }
-
-  @include querysearch($large-1, 'min-width') {
-    max-width: #{round(400 * $wide-view-multiplier)}px;
-    padding: #{round(20 * $wide-view-multiplier)}px #{round(27 * $wide-view-multiplier)}px;
+    @include color($grey, 1);
   }
 
   &.search-results-active {
@@ -326,17 +298,13 @@
     font-size: 24px;
     @include color(#222);
 
-    @include querysearch($large-1, 'min-width') {
-      font-size: #{round(24 * $wide-view-multiplier)}px;
-    }
-
     a {
       text-decoration: none;
       font-weight: 300;
-      @include color($secondary-color);
+      @include color($black);
 
       &:hover {
-        @include color($secondary-color, 0.8);
+        @include color($black, 0.8);
       }
     }
   }
@@ -345,12 +313,7 @@
     margin: 5px 0 0;
     font-size: 14px;
     line-height: 24px;
-    @include color(#aaa, 1);
-
-    @include querysearch($large-1, 'min-width') {
-      margin-top: #{round(5 * $wide-view-multiplier)}px;
-      font-size: #{round(14 * $wide-view-multiplier)}px;
-    }
+    @include color($grey, 1);
   }
 
   em {
@@ -358,23 +321,13 @@
     @include bg($yellow, 0.5);
     border-radius: 2px;
     padding: 0 2px;
-
-    @include querysearch($large-1, 'min-width') {
-      border-radius: 4px;
-      padding: 0 #{round(2 * $wide-view-multiplier)}px;
-    }
   }
 }
 
 .voog-search-modal-result {
   padding: 20px;
   border-top: #e6e6e6 solid 2px;
-
-  @include querysearch($large-1, 'min-width') {
-    margin-top: #{round(18 * $wide-view-multiplier)}px;
-  }
 }
-
 
 #mobile-search {
   position: fixed;

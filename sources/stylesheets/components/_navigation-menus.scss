@@ -116,7 +116,7 @@
       height: 3px;
       content: '';
       @include border-radius(5px);
-      background: $primary-color;
+      background: $black;
 
       .dark-background & {
         background: $white;
@@ -137,7 +137,7 @@
           .lang-title {
             display: inline-block;
             position: static;
-            color: $white;
+            @include color($white, 1)
           }
         }
       }
@@ -156,7 +156,7 @@
 }
 
 #mobile-menu {
-  font-family: $font-secondary;
+  font-family: $font-main;
   position: fixed;
   z-index: 1000;
   top: 0;
@@ -247,7 +247,7 @@
       top: 14px;
       left: 11px;
 
-      @media screen and (max-width: $break-small) {
+      @include query($tablet-3) {
         position: static;
       }
     }
@@ -377,7 +377,7 @@
       width: 20px;
       height: 3px;
       content: '';
-      background: $main-color; @include border-radius(3px);
+      background: $black; @include border-radius(3px);
     }
 
     &:before {
@@ -555,13 +555,13 @@ $flags:
       padding: 7px 12px;
       font-size: 13px;
 
-      @media screen and (max-width: $break-middle) {
+      @include query($tablet-1) {
         text-align: right;
       }
     }
   }
 
-  @media screen and (max-width: $break-small) {
+  @include query($tablet-3) {
     background-color: transparent;
 
     .menu {
@@ -619,7 +619,7 @@ $flags:
     }
   }
 
-  @media screen and (max-width: $break-small) {
+  @include query($tablet-3) {
     @include color($white);
 
     &:hover {

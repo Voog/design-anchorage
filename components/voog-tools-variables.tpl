@@ -107,16 +107,9 @@
     {% assign content_left_bg_type = 'light-background' %}
   {% endif %}
 
-  {% if content_left_bg_image == nil %}
-    {% assign content_left_bg_image_original = images_path | append: '/front-page-left-bg.jpg' %}
-    {% assign content_left_bg_image = images_path | append: '/front-page-left-bg_block.jpg' %}
-  {% endif %}
-
-  {% if content_left_bg_image_sizes == nil %}
-    {% assign content_left_bg_image_sizes_str = '[{"url":"' | append: images_path | append: '/front-page-left-bg.jpg", "width":1055, "height":1006}, {"url":"' | append: images_path | append: '/front-page-left-bg_block.jpg", "width":600, "height":572}]' %}
-  {% else %}
+  {% unless content_left_bg_image_sizes == nil %}
     {% assign content_left_bg_image_sizes_str = content_left_bg_image_sizes | json %}
-  {% endif %}
+  {% endunless %}
 
   {% if content_left_bg_color == nil %}
     {% assign content_left_bg_color = 'rgba(148, 139, 144, 0.05)' %}

@@ -26,16 +26,6 @@
     line-height: 1.4em;
   }
 
-  // .summary & {
-  //   .light-background & {
-  //     @include color($primary-color, 0.73);
-  //   }
-
-  //   .dark-background & {
-  //     @include color($primary-color, 0.73);
-  //   }
-  // }
-
   .quotation & {
     width: 100%;
     @include align-self(center);
@@ -202,7 +192,7 @@
   }
 
   a {
-    @include color($secondary-color);
+    @include color($black);
 
     &:hover {
       text-decoration: none;
@@ -243,7 +233,7 @@
   pre,
   code {
     font-size: 14px;
-    @include bg($primary-color, 0.1);
+    @include bg($black, 0.1);
   }
 
   pre {
@@ -286,10 +276,10 @@
     text-decoration: none;
     font-style: normal;
     font-size: 24px;
-    @include bg($secondary-color);
+    @include bg($black);
 
     &:hover {
-      @include bg($secondary-color, 0.8);
+      @include bg($black, 0.8);
     }
 
     a {
@@ -325,8 +315,8 @@
 
   // Container around editable content-area table.
   .table-container {
-    @include border(left, 1px, solid, $primary-color, 0.1);
-    @include border(right, 1px, solid, $primary-color, 0.1);
+    @include border(left, 1px, solid, $black, 0.1);
+    @include border(right, 1px, solid, $black, 0.1);
 
     .content & {
       margin-bottom: 35px;
@@ -371,8 +361,8 @@
         text-align: left;
         font-weight: 400;
         @include color($white);
-        @include bg($secondary-color);
-        @include border(all, 1px,solid,$secondary-color);
+        @include bg($black);
+        @include border(all, 1px,solid,$black);
 
         .footer & {
           @include color($white, 0.5);
@@ -380,8 +370,8 @@
       }
 
       td {
-        @include border(top, 1px, solid, $primary-color, 0.1);
-        @include border(bottom, 1px, solid, $primary-color, 0.1);
+        @include border(top, 1px, solid, $black, 0.1);
+        @include border(bottom, 1px, solid, $black, 0.1);
       }
     }
 
@@ -415,9 +405,9 @@
       tr {
         td {
           padding: 0 25px;
-          @include color($primary-color, 0.73);
+          @include color($black, 0.73);
           border-top: none;
-          @include border(left, 2px, solid, $primary-color, 0.2);
+          @include border(left, 2px, solid, $black, 0.2);
           border-right: none;
           border-bottom: none;
         }
@@ -468,7 +458,7 @@
         tr {
           td {
             border-left: none;
-            @include border(bottom, 2px, solid, $primary-color, 0.2);
+            @include border(bottom, 2px, solid, $black, 0.2);
           }
         }
       }
