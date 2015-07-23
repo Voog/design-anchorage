@@ -5,6 +5,7 @@
 // Basic colors.
 $black: #222222;
 $black-light: #4a4a4a;
+$black-lighter: #a4a3a3;
 $grey: #aaaaaa;
 $white: #ffffff;
 $white-cloudy: #dedede;
@@ -12,8 +13,6 @@ $blue: #0066BB;
 $yellow: #F9EC5A;
 
 // Specific colors.
-$link-color: #ffffff;
-$link-color-dark: #000;
 $error-color: #c70909;
 $success-color: #409e13;
 
@@ -24,7 +23,16 @@ $font-main: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $base-font-size: 19px;
 $medium-font-size: 32px;
 $article-title-size: 50px;
-$header-font-size: 70px;
+
+$font-size-small: 14px;
+$font-size-normal: 18px;
+$font-size-title: 22px;
+$font-size-large: 26px;
+$font-size-header: 70px;
+
+$line-height-normal: 1;
+$line-height-medium: 1.7;
+$line-height-double: 2;
 
 // Font weights.
 $font-weight-thin: 100;

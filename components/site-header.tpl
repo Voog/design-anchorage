@@ -3,14 +3,12 @@
   <div class="background-image stretch"></div>
   <div class="background-color stretch"></div>
 
-
   <div class="header-top js-background-type {{ content_top_bg_type }}">
     <div class="wrap">
 
       <div class="header-left">
         <div class="header-title">{% unless editmode %}<a href="{{ site.root_item.url }}">{% endunless %}{% editable site.header %}{% unless editmode %}</a>{% endunless %}</div>
       </div>
-
 
       <div class="header-right">
         {% include 'menu-main' %}

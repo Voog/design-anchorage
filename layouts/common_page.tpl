@@ -15,27 +15,28 @@
     <div class="site-container">
       {% include 'site-header' %}
 
-
-{% for item in site.menuitems_with_hidden %}
-  {% if item.selected? %}
-    {% if editmode or item.children? %}
-      <div class="page-body sidebar-active">
-        {% include 'site-sidebar' %}
-    {% else %}
-      <div class="page-body">
-    {% endif %}
-  {% endif %}
-{% endfor %}
+      {% for item in site.menuitems_with_hidden %}
+        {% if item.selected? %}
+          {% if editmode or item.children? %}
+            <div class="page-body sidebar-active">
+              {% include 'site-sidebar' %}
+          {% else %}
+            <div class="page-body">
+          {% endif %}
+        {% endif %}
+      {% endfor %}
 
         <main class="page-content" role="main">
 
           <div class="main-inner-row content-full">
 
             <div class="main-content">
-              <div class="wrap content-formatted">
+              <div class="wrap">
                 <div class="inner">
                   <section class="content-area">
-                    <div class="content-body">{% content %}</div>
+                    <div class="content-body content-formatted">
+                      {% content %}
+                    </div>
                   </section>
                 </div>
               </div>

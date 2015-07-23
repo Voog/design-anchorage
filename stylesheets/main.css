@@ -314,7 +314,7 @@ a img {
   min-height: 100px;
 }
 .blog-article-page .inner {
-  margin: 20px auto;
+  margin: 30px auto;
 }
 
 .main-inner-row {
@@ -392,12 +392,6 @@ a img {
   line-height: inherit;
 }
 
-.blog-news-page .article-title a, .blog-article-page .article-title {
-  font-size: 50px;
-  line-height: 1.2em;
-  color: #222222;
-}
-
 .front-page .wrap {
   max-width: 1000px;
 }
@@ -436,16 +430,12 @@ a img {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-  font-size: 32px;
-  line-height: 48px;
-  font-weight: 100;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.7;
 }
 .dark-background .content-formatted {
   color: white;
-}
-.main-content .content-formatted {
-  line-height: 48px;
-  font-weight: 100;
 }
 .main-feature .content-formatted {
   font-size: 19px;
@@ -910,9 +900,6 @@ a img {
   margin-bottom: 25px;
 }
 .common-page .content-body {
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 30px;
   margin: 45px 0;
 }
 .common-page .sidebar-active {
@@ -952,7 +939,7 @@ a img {
 }
 .blog-news-page .article-author,
 .blog-news-page .article-date {
-  color: #4a4a4a;
+  color: #a4a3a3;
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
@@ -962,8 +949,9 @@ a img {
 }
 .blog-news-page .article-excerpt {
   font-size: 18px;
-  line-height: 30px;
-  font-weight: 400;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #4a4a4a;
 }
 .blog-news-page .article-header, .blog-news-page .article-content {
   margin: 0 70px;
@@ -1014,23 +1002,24 @@ a img {
 
 .blog-article-page .article-excerpt {
   font-size: 26px;
-  line-height: 40px;
   font-weight: 300;
-  margin: 30px 0;
+  line-height: 1.7;
   color: #222222;
+  margin: 30px 0;
 }
 .blog-article-page .article-body {
-  font-weight: 300;
   font-size: 18px;
-  line-height: 30px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #4a4a4a;
   margin: 30px 0;
 }
 .blog-article-page .comments-title {
   font-size: 14px;
-  line-height: 27px;
-  color: #4a4a4a;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #a4a3a3;
   text-transform: uppercase;
-  font-weight: 300;
   display: inline-block;
   cursor: pointer;
 }
@@ -1048,7 +1037,7 @@ a img {
 .article-comments {
   position: absolute;
   z-index: 1;
-  background-color: #ffffff;
+  background-color: white;
   right: -420px;
   top: 0;
   width: 300px;
@@ -1077,15 +1066,15 @@ a img {
   -webkit-border-radius: 0;
   border-radius: 0;
   background-color: #222222;
-  color: #ffffff;
+  color: white;
   border: none;
   padding: 10px;
   width: 100%;
   text-transform: uppercase;
-  font-size: 14px;
-  line-height: 27px;
-  font-weight: 300;
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2;
   cursor: pointer;
 }
 .article-comments .comment {
@@ -1102,7 +1091,8 @@ a img {
 .article-comments .comment .comment-date {
   color: #aaaaaa;
   font-size: 14px;
-  line-height: 26px;
+  font-weight: 400;
+  line-height: 2;
 }
 .article-comments .comments-close .btn-close {
   position: absolute;
@@ -1120,13 +1110,13 @@ a img {
   background-color: white;
   margin-top: 15px;
 }
-.article-comments .comments-close .btn-close .xcross .xcross-l {
+.article-comments .comments-close .btn-close .xcross-l {
   margin-left: 29px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.article-comments .comments-close .btn-close .xcross .xcross-r {
+.article-comments .comments-close .btn-close .xcross-r {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   transform: rotate(90deg);
@@ -1182,22 +1172,17 @@ a img {
 }
 .site-header .header-title {
   font-size: 22px;
+  font-weight: 300;
+  line-height: 1;
   position: relative;
-  top: 1px;
   display: inline-block;
   vertical-align: middle;
-  min-width: 140px;
-  min-height: 40px;
-  line-height: 33px;
-  font-weight: 200;
-}
-.site-header .header-title a {
-  line-height: 33px;
 }
 .site-header .header-body {
   font-size: 70px;
+  font-weight: 700;
+  line-height: 1;
   text-transform: uppercase;
-  font-weight: 800;
 }
 .site-header .header-left {
   float: left;

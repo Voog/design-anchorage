@@ -4,9 +4,7 @@
 
     {% for item in site.menuitems_with_hidden %}
       {% if item.selected? %}
-        <li{% unless item.translated? %} class="untranslated"{% endunless %}>
           <h1><a href="{{ item.url }}">{{ item.title }}</a></h1>
-        </li>
       {% endif %}
     {% endfor %}
 

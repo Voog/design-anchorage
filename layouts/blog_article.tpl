@@ -20,8 +20,8 @@
         <div class="main-inner-row content-full">
 
           <div class="main-content">
-            <div class="wrap content-formatted">
-              <div class="inner">
+            <div class="wrap">
+              <div class="inner content-formatted">
 
                 {% if article.comments_count > 0 %}
                   <div class="comments-title comments-btn comments-open-btn js-comments-open-btn">

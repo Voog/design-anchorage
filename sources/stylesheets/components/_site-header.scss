@@ -24,25 +24,19 @@
   }
 
   .header-title {
-    font-size: 22px;
+    font-size: $font-size-title;
+    font-weight: $font-weight-light;
+    line-height: $line-height-normal;
     position: relative;
-    top: 1px;
     display: inline-block;
     vertical-align: middle;
-    min-width: 140px;
-    min-height: 40px;
-    line-height: 33px;
-    font-weight: 200;
-
-    a {
-      line-height: 33px;
-    }
   }
 
   .header-body {
-    font-size: $header-font-size;
+    font-size: $font-size-header;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-normal;
     text-transform: uppercase;
-    font-weight: 800;
   }
 
   .header-left {

@@ -141,12 +141,6 @@
   line-height: inherit;
 }
 
-%article-title {
-  font-size: $article-title-size;
-  line-height: 1.2em;
-  @include color($black, 1);
-}
-
 %wide-wrap {
   max-width: 1000px;
 }

@@ -1,7 +1,7 @@
 .article-comments {
   position: absolute;
   z-index: 1;
-  background-color: $white;
+  @include bg($white, 1);
   right: -420px;
   top: 0;
   width: 300px;
@@ -31,15 +31,15 @@
   input[type="submit"] {
     @include inputiosreset;
     @include bg($black, 1);
-    color: $white;
+    @include color($white, 1);
     border: none;
     padding: 10px;
     width: 100%;
     text-transform: uppercase;
-    font-size: 14px;
-    line-height: 27px;
-    font-weight: 300;
     font-family: $font-main;
+    font-size: $font-size-small;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-double;
     cursor: pointer;
   }
 
@@ -57,8 +57,9 @@
     .comment-author,
     .comment-date {
       @include color($grey, 1);
-      font-size: 14px;
-      line-height: 26px;
+      font-size: $font-size-small;
+      font-weight: $font-weight-normal;
+      line-height: $line-height-double;
     }
   }
   .comments-close {
@@ -78,14 +79,13 @@
         height: 25px;
         @include bg($white, 1);
         margin-top: 15px;
-
-        .xcross-l {
-          margin-left: 29px;
-          @include rotate(45deg);
-        }
-        .xcross-r {
-          @include rotate(90deg);
-        }
+      }
+      .xcross-l {
+        margin-left: 29px;
+        @include rotate(45deg);
+      }
+      .xcross-r {
+        @include rotate(90deg);
       }
     }
 
