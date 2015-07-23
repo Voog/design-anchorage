@@ -5,7 +5,7 @@
     line-height: 40px;
     font-weight: 300;
     margin: 30px 0;
-    color: #222222;
+    @include color($black, 1);
   }
   .article-body {
     font-weight: 300;
@@ -16,15 +16,23 @@
   .comments-title {
     font-size: 14px;
     line-height: 27px;
-    color: #a4a3a3;
+    @include color($black-light, 1);
     text-transform: uppercase;
     font-weight: 300;
     display: inline-block;
     cursor: pointer;
 
     span {
-      color: #424242;
+      @include color($black-light, 1);
     }
+  }
+
+  .comments-open-btn.open,
+  .comments-close-btn {
+    display: none
+  }
+  .comments-close-btn.open {
+    display: inline-block;
   }
 
 }

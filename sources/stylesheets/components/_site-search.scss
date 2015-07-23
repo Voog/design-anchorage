@@ -123,8 +123,6 @@
   box-sizing: border-box;
   border: none;
 
-
-
   // Removes the clear input button in IE11
   &::-ms-clear {
     display: none;
@@ -134,8 +132,6 @@
     padding: 2px 0 4px 0;
     line-height: 1;
     @include color($black, 0.5);
-
-
   }
 
   &:focus {
@@ -150,8 +146,6 @@
   width: 30px;
   height: 50px;
   background-color: transparent;
-
-
 
   .no-svg & {
     background-position: center;
@@ -202,23 +196,23 @@
 
   svg {
     .header-options & {
-      fill: rgba($black, 0.67);
+      @include fill($black, .67);
 
       .front-page & {
-        fill: $white;
+        @include fill($white, 1);
       }
     }
 
     .light-background & {
       .front-page & {
-        fill: $black;
+        @include fill($black, 1);
       }
     }
   }
 
   &:hover {
     svg {
-      fill: rgba($black, 0.47);
+      @include fill($black, .47);
     }
   }
 
@@ -296,15 +290,15 @@
   h3 {
     margin: 0;
     font-size: 24px;
-    @include color(#222);
+    @include color($black, 1);
 
     a {
       text-decoration: none;
       font-weight: 300;
-      @include color($black);
+      @include color($black, 1);
 
       &:hover {
-        @include color($black, 0.8);
+        @include color($black, .8);
       }
     }
   }
@@ -326,7 +320,7 @@
 
 .voog-search-modal-result {
   padding: 20px;
-  border-top: #e6e6e6 solid 2px;
+  border-top: $white-cloudy solid 2px;
 }
 
 #mobile-search {

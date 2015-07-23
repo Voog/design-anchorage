@@ -4,9 +4,8 @@
   right: 0;
   bottom: 0;
   font-size: 14px;
-  color: $grey;
-  min-height: 100px;
-
+  @include color($grey, 1);
+  min-height: $base-min-height;
 
   .footer-body {
     padding: $general-padding / 2 10%;
@@ -14,7 +13,7 @@
   }
 
   .voog-reference {
-    color: rgba($black, 1);
+    @include color($black, 1);
     opacity: .55;
     text-align: center;
     padding: 0 0 15px;
@@ -23,7 +22,6 @@
       opacity: .8;
     }
   }
-
 
   .blog-article-nav {
     @extend %clearfix;
@@ -53,18 +51,18 @@
     }
     .article-nav-next {
       border-left: 1px solid transparent;
-      margin-left: -1px;
+      margin-left: -1px;/* Hide border from one side */
     }
     .article-nav-direction {
       font-size: 12px;
       line-height: 30px;
-      color: #a4a4a4;
+      @include color($black-light, 1);
       text-transform: uppercase;
     }
     .article-nav-title {
       font-size: 20px;
       line-height: 30px;
-      color:#4a4a4a;
+      @include color($black-light, 1);
 
       @include query($mobile-1) {
         display: none;
@@ -76,7 +74,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background-color: $white;
+      @include bg($white, 1);
       z-index: -1;
     }
   }

@@ -25,7 +25,6 @@
 
   .header-title {
     font-size: 22px;
-    @extend %hyphenate;
     position: relative;
     top: 1px;
     display: inline-block;
@@ -95,7 +94,7 @@
         @include color($white);
 
         .light-background & {
-          color: rgba($black,0.73);
+          @include color($black, .73);
         }
       }
 

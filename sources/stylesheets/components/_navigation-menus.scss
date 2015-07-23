@@ -67,7 +67,7 @@
   }
 }
 
-@media screen and (max-width: $tablet-2) {
+@include query($tablet-2) {
 /* mobile-menu */
 .site-header {
   .header-right {
@@ -116,10 +116,10 @@
       height: 3px;
       content: '';
       @include border-radius(5px);
-      background: $black;
+      @include bg($black, 1);
 
       .dark-background & {
-        background: $white;
+        @include bg($white, 1);
       }
 
       &.flags-disabled {
@@ -165,7 +165,7 @@
   left: 0;
   display: none;
   overflow: auto;
-  @include bg(#000, .9);
+  @include bg($black, .9);
   -webkit-overflow-scrolling: touch;
 
   .mobile-site-options {
@@ -180,7 +180,7 @@
       height: 42px;
 
       svg path {
-        fill: $white;
+        @include fill($white, 1);
       }
     }
     .lang-title {
@@ -216,7 +216,7 @@
       @include border-radius(3px);
 
       .mobile-search-open & {
-        background: $black;
+        @include bg($black, 1);
       }
     }
 
@@ -282,7 +282,7 @@
       .lang-title {
         display: inline-block;
         position: static;
-        color: $white;
+        @include color($white, 1);
       }
     }
   }
@@ -302,7 +302,7 @@
     margin: 0;
 
     .option-btn {
-      color: $white;
+      @include color($white, 1);
       padding: 15px 0;
     }
 
@@ -324,10 +324,11 @@
       a {
         font-size: 24px;
         text-transform: uppercase;
-        line-height: $line-height; @include color(white, .5);
+        line-height: $line-height;
+        @include color($white, .5);
 
         &.active {
-          color: white;
+          @include color($white, 1);
         }
       }
     }
@@ -351,7 +352,6 @@
 
 .mobile-search-toggler {
   position: absolute;
-  /*top: calc(50% - 22px);*/
   top: 0;
   right: 43px;
   display: block;
@@ -423,7 +423,7 @@
   background-repeat: no-repeat;
 
   .no-boxshadow & {
-    border: 1px solid #eeeeee;
+    border: 1px solid $white;
   }
 
   .svg & {
@@ -641,7 +641,7 @@ $flags:
     line-height: normal;
 
     a {
-      @include color(#1b2124, .7);
+      @include color($black, .7);
     }
 
     &.add-lang-btn {
@@ -657,7 +657,7 @@ $flags:
 
       .dark-background &,
       .light-background & {
-        @include color(#1b2124, .7);
+        @include color($black, .7);
       }
       &:before,
       &:after {
@@ -688,18 +688,17 @@ $flags:
     }
   }
 
-    .lang-title {
-      display: inline-block;
+  .lang-title {
+    display: inline-block;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 14px;
+    a {
       background-color: transparent;
       text-transform: uppercase;
       font-size: 14px;
-      a {
-        background-color: transparent;
-        text-transform: uppercase;
-        font-size: 14px;
-      }
     }
-
+  }
 }
 
 .lang-menu-btn {
@@ -753,11 +752,11 @@ $flags:
   padding: 5px 0;
   line-height: 1;
   text-align: left;
-  background: #ffffff;
+  @include bg($white);
   @include box-shadow(0,0,5px,rgba(0,0,0,.3));
 
   .no-boxshadow & {
-    border: 1px solid #eeeeee;
+    border: 1px solid $white;
   }
 
   .editmode & {

@@ -37,13 +37,11 @@
     .content-header {
       @extend %large-text;
       margin-bottom: 10px;
-      color: rgba($highlight-color, 1);
     }
 
     .content-slogan {
       @extend %medium-text;
       margin-bottom: 80px;
-      color: rgba($highlight-color, 1);
     }
 
     .content-area {

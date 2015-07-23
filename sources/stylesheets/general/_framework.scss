@@ -144,5 +144,9 @@
 %article-title {
   font-size: $article-title-size;
   line-height: 1.2em;
-  color: $highlight-color;
+  @include color($black, 1);
+}
+
+%wide-wrap {
+  max-width: 1000px;
 }

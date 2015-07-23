@@ -33,7 +33,7 @@
   h6,
   b,
   strong {
-    color: rgba($highlight-color, 1);
+    @include color($black, 1);
   }
 
   h1,

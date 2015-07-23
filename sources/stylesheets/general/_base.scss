@@ -1,26 +1,13 @@
-%wide-wrap {
-  max-width: 1000px;
-}
-
 body {
   margin: 0;
   font-family: $font-main;
   font-size: $base-font-size;
   font-weight: 400;
   line-height: $base-line-height;
-  color: rgba($black, .55);
 }
 
 a {
   text-decoration: none;
-
-  .dark-background & {
-    color: rgba($link-color, 1);
-  }
-
-  .light-background & {
-    color: rgba($link-color-dark, .5);
-  }
 
   img {
     border-style: none;
@@ -129,74 +116,20 @@ a {
   z-index: -1;
 }
 
-// Pseudo classes for commonly used styling rules for different elements.
-%clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-%hyphenate {
-  // Non standard for webkit
-  word-break: break-word;
-
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-}
-
-%stretch {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-%button {
-  margin: 0;
-  padding: 0;
-  background: none;
-  border: none;
-  cursor: pointer;
-
-  &:focus {
-    outline: none;
-  }
-
-  &::-moz-focus-inner {
-    padding: 0;
-    border: none;
-  }
-}
-
-%inline-block {
-  display: inline-block;
-}
-
-%header-footer-left {
-  position: relative;
-  float: left;
-}
-
-%header-footer-right {
-  float: right;
-}
-
 .btn {
   display: inline-block;
   padding: 10px 40px;
   line-height: 1.3em;
   font-style: normal;
   font-size: 24px;
-  @include bg($black);
+  @include bg($black, 1);
 
   &:before {
     content: '\A';
   }
 
   &:hover {
-    @include bg($black, 0.8);
+    @include bg($black, .8);
   }
 
   a {
@@ -232,18 +165,6 @@ a {
 
   .front-page & {
     @extend %wide-wrap;
-  }
-}
-
-
-
-.menu li {
-  &.is-active a {
-    font-weight: 300;
-    @include color($black, 1);
-  }
-  &:hover a {
-    @include color($white, 1);
   }
 }
 
@@ -338,7 +259,7 @@ a {
 
 .custom-btn {
   display: inline-block;
-  background: rgba(0,0,0,0);
+  @include bg($black, .0);
   box-sizing: border-box;
   width: 180px;
   padding: 11px 10px;
@@ -349,34 +270,35 @@ a {
   margin: 5px 10px;
   cursor: pointer;
   @include hyphenate(true);
-}
 
-.custom-btn:hover {
-  background: $black-light;
-}
+  &:hover {
+    @include bg($black-light, 1);
 
-.dark-background .custom-btn {
-  border: 2px solid $white;
-  @include color($white, 1);
+    .light-background & {
+      border: 2px solid $white;
+      @include color($white, 1);
 
-  a {
-    @include color($white, 1);
+      a {
+        @include color($white, 1);
+      }
+    }
   }
-}
-.light-background .custom-btn {
-  border: 2px solid $black;
-  @include color($black, 1);
 
-  a {
+  .dark-background & {
+    border: 2px solid $white;
+    @include color($white, 1);
+
+    a {
+      @include color($white, 1);
+    }
+  }
+  .light-background & {
+    border: 2px solid $black;
     @include color($black, 1);
-  }
-}
-.light-background .custom-btn:hover {
-  border: 2px solid $white;
-  @include color($white, 1);
 
-  a {
-    @include color($white, 1);
+    a {
+      @include color($black, 1);
+    }
   }
 }
 

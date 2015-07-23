@@ -7,11 +7,11 @@ $black: #222222;
 $black-light: #4a4a4a;
 $grey: #aaaaaa;
 $white: #ffffff;
+$white-cloudy: #dedede;
 $blue: #0066BB;
 $yellow: #F9EC5A;
 
 // Specific colors.
-$highlight-color: #1b2124;
 $link-color: #ffffff;
 $link-color-dark: #000;
 $error-color: #c70909;
@@ -26,10 +26,19 @@ $medium-font-size: 32px;
 $article-title-size: 50px;
 $header-font-size: 70px;
 
+// Font weights.
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
 // Line heights.
 $base-line-height: 1.5em;
 $secondary-line-height: 1.3em;
 $third-line-height: 48px;
+$line-height-xs: 24px;
+$line-height: 32px;
 
 // Media query breakpoints.
 $wide-1: 1500px;
@@ -43,6 +52,4 @@ $mobile-2: 320px;
 // Define the reusable variables here.
 // For example the width of several different elements, that allways have to be with the same height:
 $general-padding: 70px;
-
-$line-height-xs: 24px;
-$line-height: 32px;
+$base-min-height: 100px;
