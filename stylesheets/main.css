@@ -2018,31 +2018,26 @@ a img {
 }
 #mobile-search .search .search-inner {
   max-width: 100%;
-  margin: 0 auto;
+  margin: 0 30px;
 }
 .search.active {
   position: absolute;
-  top: 20px;
-  right: 30px;
-  bottom: 0;
+  top: 90px;
+  right: 50px;
   z-index: 20;
   display: block;
   margin: 0;
-  padding: 0;
-  background-color: transparent;
 }
 
 .search-middle {
   vertical-align: middle;
   width: 100%;
-  padding: 0 20px;
   box-sizing: border-box;
 }
 
 .search-inner {
   position: relative;
   max-width: 400px;
-  margin: 60px auto;
   -webkit-box-shadow: 0 0 100px 0 rgba(34, 34, 34, 0.75);
   -moz-box-shadow: 0 0 100px 0 rgba(34, 34, 34, 0.75);
   box-shadow: 0 0 100px 0 rgba(34, 34, 34, 0.75);

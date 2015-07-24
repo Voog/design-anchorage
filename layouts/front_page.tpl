@@ -63,7 +63,10 @@
       {% include 'menu-mobile' %}
       {% include 'site-javascripts' %}
       {% include 'voog-tools' with 'front_page' %}
-      <script>site.initFrontPage();</script>
+      <script>
+        site.initFrontPage();
+        site.initWindowResize();
+      </script>
     </div>
   </body>
 </html>

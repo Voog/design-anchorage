@@ -211,9 +211,11 @@
         $('.js-popover').removeClass('expanded');
       }
 
-      if ($('.js-search-inner').hasClass('active')) {
-        $('.js-search-inner').removeClass('active');
+      if ($('.js-search').hasClass('active')) {
+        $('.js-search').removeClass('active');
+        $('body').removeClass('mobile-search-open');
       }
+
     });
 
     // Toggles the popover main menu (visible on smalles screens).
@@ -380,6 +382,18 @@
     $('.article-comments').css('height', commentsTarget);
   };
 
+  // Close elements not intended for the specific viewport when resizing
+  var mobileResize = function() {
+    if ($(window).width() >= 768) {
+      $('body').removeClass('mobile-search-open');
+      $('body').removeClass('mobilemenu-open');
+    }
+
+    if ($(window).width() < 768) {
+      $('.site-header .js-search').removeClass('active');
+    }
+  };
+
   // Prevent page scroll while focused on a specific section
   $.fn.isolatedScroll = function() {
     this.bind('mousewheel DOMMouseScroll', function (e) {
@@ -403,6 +417,7 @@
       // Add window resizing functions here.
       stickyFooterVarHeight();
       commentsHeight();
+      mobileResize();
     });
   };
 

@@ -54,7 +54,10 @@
       {% include 'menu-mobile' %}
       {% include 'site-javascripts' %}
       {% include 'voog-tools' with 'blog_page' %}
-      <script>site.initBlogPage();</script>
+      <script>
+        site.initBlogPage();
+        site.initWindowResize();
+      </script>
     </div>
   </body>
 </html>

@@ -47,34 +47,29 @@
     }
     .search-inner {
       max-width: 100%;
-      margin: 0 auto;
+      margin: 0 $margin-medium;
     }
   }
 
   &.active {
     position: absolute;
-    top: 20px;
-    right: 30px;
-    bottom: 0;
+    top: 90px;
+    right: 50px;
     z-index: 20;
     display: block;
     margin: 0;
-    padding: 0;
-    background-color: transparent;
   }
 }
 
 .search-middle {
   vertical-align: middle;
   width: 100%;
-  padding: 0 20px;
   box-sizing: border-box;
 }
 
 .search-inner {
   position: relative;
   max-width: 400px;
-  margin: 60px auto;
   @include box-shadow(0, 0, 100px, 0, rgba($black, 0.75));
 
   .search-close-btn {
@@ -118,7 +113,7 @@
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
-  @include color($black);
+  @include color($black, 1);
   background: none;
   box-sizing: border-box;
   border: none;
@@ -131,7 +126,7 @@
   &::-webkit-input-placeholder {
     padding: 2px 0 4px 0;
     line-height: 1;
-    @include color($black, 0.5);
+    @include color($black, .5);
   }
 
   &:focus {
@@ -312,7 +307,7 @@
 
   em {
     font-style: normal;
-    @include bg($yellow, 0.5);
+    @include bg($yellow, .5);
     border-radius: 2px;
     padding: 0 2px;
   }
