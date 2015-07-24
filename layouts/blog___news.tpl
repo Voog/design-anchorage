@@ -29,15 +29,17 @@
                   {% endfor %}
                 </section>
 
-                <section class="blog-articles-listing content-area">
-                  <h2 class="articles-listing-title">Archive</h2>
+                <section class="articles-listing content-area">
+                  <header class="articles-listing-header">
+                    <h2 class="articles-listing-title">Archive</h2>
+                  </header>
                   {% for article in site.latest_articles offset: 5 %}
-
                     <article class="blog-article">
-                      <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: 'long' }}</time>
-                      <h1 class="article-title"><a href="{{ article.url }}">{{ article.title }}</a></h1>
+                      <header class="article-header">
+                        <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | date: "%d. %B %Y" }}</time>
+                        <h1 class="article-title"><a href="{{ article.url }}">{{ article.title }}</a></h1>
+                      </header>
                     </article>
-
                   {% endfor %}
                 </section>
               </div>

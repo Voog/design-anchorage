@@ -1,13 +1,17 @@
 .blog-news-page {
+
   .article-title {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-light;
+    line-height: $line-height-medium;
     margin: 0;
-    margin-bottom: 30px!important;
+
     a {
-      font-size: 36px;
-      line-height: 46px;
-      font-weight: 400;
+      @include color($black, 1);
     }
+
   }
+
   .blog-article {
     position: relative;
     padding: 40px 0;
@@ -17,72 +21,84 @@
       height: 500px;
     }
   }
+
   .article-author,
   .article-date {
+    font-size: $font-size-small;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-normal;
     @include color($black-lighter, 1);
-    font-size: 14px;
-    font-weight: 400;
     text-transform: uppercase;
+    letter-spacing: 1px;
   }
+
   .article-author {
     display: inline-block;
   }
+
   .article-excerpt {
     font-size: $font-size-normal;
     font-weight: $font-weight-light;
     line-height: $line-height-medium;
     @include color($black-light, 1);
   }
+
   .article-header, .article-content {
-    margin: 0 70px;
+    margin: 0 $margin-general $margin-medium;
   }
+
   @include query($mobile-1) {
     .article-header, .article-content {
       margin: 0;
     }
   }
 
-  .blog-articles-listing {
-    margin: 0 70px;
+  .articles-listing {
+    margin: 0 $margin-general;
 
+    .articles-listing-header {
+      margin: 0 0 $margin-medium;
+    }
     .articles-listing-title {
       text-transform: uppercase;
     }
 
     .blog-article {
-      padding: 0 5px;
+      padding: 0;
+
+      .article-header {
+        margin: 0 0 $margin-medium;
+      }
 
       .article-date {
-        font-size: 12px;
-        line-height: 16px;
-        font-weight: 300;
-        @include color($black-light, 1);
+        font-size: $font-size-small - 2px;
+        font-weight: $font-weight-normal;
+        line-height: $line-height-normal;
+        @include color($black-lighter, 1);
+        letter-spacing: 1px;
         position: absolute;
-        top: 5px;
+        top: 4px;
       }
       .article-title {
-        margin-left: 130px;
-        line-height: normal;
-        a {
-          font-size: 18px;
-          line-height: 26px;
-          @include color($black, 1);
-          vertical-align: top;
+        font-size: $font-size-normal;
+        font-weight: $font-weight-light;
+        line-height: $line-height-normal;
+        margin-left: 150px;
+      }
+    }
+
+    @include query($mobile-1) {
+      margin: 0;
+      .blog-article {
+
+        .article-date {
+          position: static;
+        }
+        .article-title {
+          margin: 0;
         }
       }
     }
 
-      @include query($mobile-1) {
-        margin: 0;
-        .blog-article {
-
-          .article-date {
-            position: static;
-          }
-          .article-title {
-            margin: 0;
-          }
-        }
-      }
   }
 }

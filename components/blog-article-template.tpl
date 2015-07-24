@@ -1,7 +1,7 @@
 <article class="blog-article">
   {% unless blog_article_page %}
   <header class="article-header">
-    <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: 'long' }}, </time>
+    <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | date: "%d. %B %Y" }}, </time>
     <div class="article-author">{{ article.author.name }}</div>
     <h1 class="article-title">{% if blog-article-template == "blog_article_page" %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
   </header>
@@ -23,13 +23,11 @@
   {% unless blog_article_page %}
     <footer class="article-footer">
       {% for imageSize in article.data.content_top_bg.imageSizes %}
-      {% if forloop.first %}
-        <div class="article-image">
-          <div class="background-image" style="background-image: url( {{ imageSize.url }} );"></div>
-        </div>
-      {% else %}
-
-      {% endif %}
+        {% if forloop.first %}
+          <div class="article-image">
+            <div class="background-image" style="background-image: url( {{ imageSize.url }} );"></div>
+          </div>
+        {% endif %}
       {% endfor %}
     </footer>
   {% endunless %}

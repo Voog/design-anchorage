@@ -29,7 +29,6 @@
       </button>
   {% endif %}
 
-
     <div class="lang-menu-popover js-popup-menu-popover">
       {% if editmode or site.has_many_languages? %}
         <ul class="menu">
