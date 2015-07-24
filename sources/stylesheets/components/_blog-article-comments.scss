@@ -21,26 +21,17 @@
   }
 
   .comments-title {
-    font-size: 24px;
-    line-height: 40px;
-    text-transform: none;
+    font-size: $font-size-large;
+    font-weight: $font-weight-light;
+    line-height: $line-height-medium;
     @include color($black, 1);
-    margin: 30px 0 0;
-  }
+    margin: $margin-medium 0 0;
+    text-transform: none;
+    cursor: text;
 
-  input[type="submit"] {
-    @include inputiosreset;
-    @include bg($black, 1);
-    @include color($white, 1);
-    border: none;
-    padding: 10px;
-    width: 100%;
-    text-transform: uppercase;
-    font-family: $font-main;
-    font-size: $font-size-small;
-    font-weight: $font-weight-normal;
-    line-height: $line-height-double;
-    cursor: pointer;
+    .voog-site-blog-comments-count {
+      @include color($black-lighter, 1);
+    }
   }
 
   .comment {

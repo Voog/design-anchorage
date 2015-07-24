@@ -1,6 +1,6 @@
 .site-header {
   @extend %clearfix;
-  padding-bottom: $general-padding - 40px;
+  padding-bottom: $padding-general - 40px;
   position: relative;
 
   ul, li {
@@ -136,10 +136,11 @@
 
   .article-author,
   .article-date{
-    font-size: 14px;
-    line-height: 27px;
+    font-size: $font-size-small;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-double;
+    letter-spacing: 1px;
     display: inline-block;
-    font-weight: 300;
   }
   .article-title {
     font-size: 80px;

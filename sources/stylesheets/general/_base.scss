@@ -1,13 +1,14 @@
 body {
   margin: 0;
   font-family: $font-main;
-  font-size: $base-font-size;
-  font-weight: 400;
-  line-height: $base-line-height;
+  font-size: $font-size-normal;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 
   img {
     border-style: none;
@@ -23,7 +24,7 @@ a {
 
 .page-content {
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: $margin-general;
 
   .blog-article-page & {
     margin-bottom: 240px;
@@ -96,11 +97,6 @@ a {
   }
 }
 
-.vg-bg-picker-btn {
-  @extend %button;
-  position: absolute;
-}
-
 .background-image,
 .background-color {
   position: absolute;
@@ -116,49 +112,6 @@ a {
   z-index: -1;
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 40px;
-  line-height: 1.3em;
-  font-style: normal;
-  font-size: 24px;
-  @include bg($black, 1);
-
-  &:before {
-    content: '\A';
-  }
-
-  &:hover {
-    @include bg($black, .8);
-  }
-
-  a {
-    text-decoration: none;
-  }
-}
-
-// Main container that affects the entire site's other elements.
-.container {
-  @extend %clearfix;
-  min-height: 100%;
-
-  .editmode & {
-    @include calc(min-height, '100% - 40px');
-  }
-
-  .search-open & {
-    position: static;
-  }
-
-  a {
-    text-decoration: none;
-
-    img {
-      border: none;
-    }
-  }
-}
-
 .wrap {
   @extend %clearfix;
   margin: 0 auto;
@@ -166,6 +119,20 @@ a {
   .front-page & {
     @extend %wide-wrap;
   }
+}
+
+.inner {
+  width: 80%;
+  margin: $margin-half auto;
+  min-height: $height-base;
+
+  .blog-article-page & {
+    margin: $margin-medium auto;
+  }
+}
+
+.main-inner-row {
+  overflow: hidden;
 }
 
 .dark-background {
@@ -264,8 +231,8 @@ a {
   width: 180px;
   padding: 11px 10px;
   text-transform: uppercase;
-  font-size: $base-font-size;
-  line-height: $line-height-xs;
+  font-size: $font-size-normal;
+  line-height: $line-height-normal;
   text-align: center;
   margin: 5px 10px;
   cursor: pointer;
@@ -300,22 +267,4 @@ a {
       @include color($black, 1);
     }
   }
-}
-
-.article-author {
-  display: inline-block;
-}
-
-.inner {
-  width: 80%;
-  margin: 40px auto;
-  min-height: 100px;
-
-  .blog-article-page & {
-    margin: 30px auto;
-  }
-}
-
-.main-inner-row {
-  overflow: hidden;
 }

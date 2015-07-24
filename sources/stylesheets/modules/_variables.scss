@@ -11,6 +11,7 @@ $white: #ffffff;
 $white-cloudy: #dedede;
 $blue: #0066BB;
 $yellow: #F9EC5A;
+$red: #c70909;
 
 // Specific colors.
 $error-color: #c70909;
@@ -20,10 +21,6 @@ $success-color: #409e13;
 $font-main: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 // Font sizes.
-$base-font-size: 19px;
-$medium-font-size: 32px;
-$article-title-size: 50px;
-
 $font-size-small: 14px;
 $font-size-normal: 18px;
 $font-size-title: 22px;
@@ -31,6 +28,7 @@ $font-size-large: 26px;
 $font-size-xl: 36px;
 $font-size-header: 70px;
 
+// Line heights.
 $line-height-normal: 1;
 $line-height-medium: 1.7;
 $line-height-double: 2;
@@ -43,8 +41,6 @@ $font-weight-medium: 500;
 $font-weight-bold: 700;
 
 // Line heights.
-$base-line-height: 1.5em;
-$secondary-line-height: 1.3em;
 $third-line-height: 48px;
 $line-height-xs: 24px;
 $line-height: 32px;
@@ -60,8 +56,10 @@ $mobile-2: 320px;
 // Reusable values
 // Define the reusable variables here.
 // For example the width of several different elements, that allways have to be with the same height:
-$general-padding: 70px;
-$base-min-height: 100px;
+$height-base: 100px;
+
+$padding-general: 70px;
 
 $margin-medium: 30px;
+$margin-half: 50px;
 $margin-general: 100px;

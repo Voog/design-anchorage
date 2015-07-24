@@ -51,7 +51,7 @@
             {% content name="header" %}
           {% elsif blog_article_page %}
             <h1 class="article-title">{% if editmode %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
-            <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: 'long' }}, </time>
+            <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | date: "%d. %B %Y" }}, </time>
             <div class="article-author">{{ article.author.name }}</div>
           {% else %}
             {% for item in site.menuitems_with_hidden %}

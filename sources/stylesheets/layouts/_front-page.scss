@@ -1,13 +1,13 @@
 %large-text {
   font-size: 50px;
   font-weight: 700;
-  line-height: $secondary-line-height;
+  line-height: $line-height-normal;
 }
 
 %medium-text {
   font-size: 25px;
   font-weight: 400;
-  line-height: $secondary-line-height;
+  line-height: $line-height-normal;
 }
 
 %normal-text {
@@ -27,7 +27,7 @@
     }
 
     h3 {
-      font-size: $medium-font-size;
+      font-size: $font-size-large;
     }
 
     p {
@@ -50,7 +50,7 @@
   }
 
   .main-feature {
-    padding-bottom: $general-padding;
+    padding-bottom: $padding-general;
 
     .narrow-feature {
       @include querymin($tablet-2) {
@@ -71,7 +71,7 @@
     }
   }
   .blog-feed {
-    padding: $general-padding 0;
+    padding: $padding-general 0;
 
     .wrap {
       height: 500px;
@@ -85,13 +85,13 @@
     }
 
     h1 {
-      font-size: $base-font-size;
-      line-height: $third-line-height;
+      font-size: $font-size-small;
+      line-height: $line-height-normal;
       text-transform: uppercase;
     }
 
     h2 {
-      line-height: $third-line-height;
+      line-height: $line-height-normal;
     }
 
     .inner {

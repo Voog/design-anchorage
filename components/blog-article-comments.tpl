@@ -1,6 +1,8 @@
 <section id="article-comments" class="article-comments content-area js-comments js-voog-comments-modal">
   <div class="comments-body">
-    <h2 class="comments-title">{{ 'post_has_replies' | lcc: article.comments_count }}</h2>
+    <header class="comments-header">
+      <h1 class="comments-title">{{ 'post_has_replies' | lcc: article.comments_count }}</h1>
+    </header>
 
     <div class="comment-form{% unless comment.valid? %} form_with_errors{% endunless %}">
       {% commentform %}
@@ -38,9 +40,7 @@
     </div>
 
     {% if article.comments_count > 0 %}
-
       <div class="comments-title">{{ "comments_for_count" | lc }} <span class="voog-site-blog-comments-count">({{ article.comments_count }})</span></div>
-
       {% for comment in article.comments %}
         <article class="comment edy-site-blog-comment">
           <span class="comment-body">{{ comment.body_html }}</span>

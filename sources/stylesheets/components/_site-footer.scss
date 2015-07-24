@@ -5,10 +5,10 @@
   bottom: 0;
   font-size: 14px;
   @include color($grey, 1);
-  min-height: $base-min-height;
+  min-height: $height-base;
 
   .footer-body {
-    padding: $general-padding / 2 10%;
+    padding: $padding-general / 2 10%;
     text-align: center;
   }
 

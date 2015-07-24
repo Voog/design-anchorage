@@ -1,7 +1,7 @@
 .site-sidebar {
   float: left;
-  width: 200px;
-  padding: 45px 30px 0 0;
+  width: 210px;
+  padding: $margin-half $margin-medium 0 0;
   box-sizing: border-box;
   position: relative;
   z-index: 5;
@@ -13,13 +13,19 @@
     width: 20%;
   }
 
-  .sidebar-title a {
+  .sidebar-title {
     font-size: $font-size-normal;
     font-weight: $font-weight-normal;
     line-height: $line-height-medium;
-    @include color($black, 1);
     text-transform: uppercase;
+    margin: 0;
+
+    a {
+      @include color($black, 1);
+    }
+
   }
+
   .submenu {
     padding: 0;
 
@@ -28,30 +34,43 @@
     }
 
     li {
-      font-size: 18px;
-      line-height: 25px;
+      font-size: $font-size-normal;
+      font-weight: $font-weight-light;
+      line-height: $line-height-medium;
       margin: 15px 0;
+    }
+    a {
+      @include color($black-lighter, 1);
+
+      &:hover {
+        @include color($black, 1);
+      }
+    }
+    .active {
+      font-weight: $font-weight-normal;
+      @include color($black, 1);
+    }
+
+    .submenu-lvl2 {
+      padding-left: 25px;
+
+      li {
+        font-size: $font-size-normal - 2px;
+        line-height: $line-height-medium;
+        font-weight: $font-weight-light;
+      }
       a {
-        @include color($black-light, 1);
-        font-weight: 300;
+        @include color($black, 1);
+
+        &:hover {
+          font-weight: $font-weight-normal;
+        }
       }
       .active {
-        @include color($black, 1);
-        font-weight: 400;
+        font-weight: $font-weight-normal;
       }
     }
 
-    ul {
-      padding-left: 20px;
-      li {
-        font-size: 16px;
-        line-height: 19px;
-      }
-
-      a {
-        @include color($black, 1);
-      }
-    }
   }
 
 }

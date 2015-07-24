@@ -1,4 +1,5 @@
-.content-area {
+.content-area,
+.content-formatted {
   .form_fields {
     margin-top: 20px;
   }
@@ -39,14 +40,15 @@
     @extend %input-ios-reset;
     @extend %inherit-base-font;
     padding: 7px;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: $font-size-small;
+    font-weight: $font-weight-light;
+    line-height: $font-size-large;
+    @include color($black-lighter, 1);
     border-width: 1px;
     border-style: solid;
     border-color: $white-cloudy;
-    font-weight: 100;
-    color: #a4a3a3;
     vertical-align: bottom;
+    outline: none;
 
     &.form_field_size_small {
       width: 280px;
@@ -79,9 +81,21 @@
     margin-top: 10px;
 
     input {
+      @include inputiosreset;
+      @include bg($black, 1);
+      @include color($white, 1);
+      border: none;
+      padding: 10px;
+      width: 100%;
+      text-transform: uppercase;
+      font-family: $font-main;
+      font-size: $font-size-small;
+      font-weight: $font-weight-normal;
+      line-height: $line-height-double;
+      cursor: pointer;
 
       &:hover {
-
+        @include bg($black-light, 1);
       }
     }
   }
@@ -98,4 +112,5 @@
   .form_notice {
     color: rgba($success-color, 1);
   }
+
 }

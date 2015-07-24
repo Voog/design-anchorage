@@ -1,18 +1,17 @@
 .common-page {
-  $content-header-margin: 25px;
 
-  .content-header {
-    margin-top: $content-header-margin;
-    margin-bottom: $content-header-margin;
-  }
   .content-body {
-    margin: 45px 0;
+    margin: $margin-half 0;
+  }
+
+  .inner {
+    max-width: 700px;
   }
 
   .sidebar-active {
-    display: inline-block;
-    width: 90%;
-    margin: 0 5%;
+    @extend %clearfix:after;
+    width: 80%;
+    margin: 0 auto;
 
     .inner {
       width: auto;

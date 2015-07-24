@@ -1,14 +1,12 @@
 <aside class="site-sidebar">
 
-  <div class="sidebar-inner">
-
+  <header class="sidebar-header">
     {% for item in site.menuitems_with_hidden %}
       {% if item.selected? %}
-        <div class="sidebar-title">
-          <h1><a href="{{ item.url }}">{{ item.title }}</a></h1>
-        </div>
+        <h1 class="sidebar-title"><a href="{{ item.url }}">{{ item.title }}</a></h1>
       {% endif %}
     {% endfor %}
+  </header>
 
     {% for item in site.menuitems_with_hidden %}
       {% if item.selected? %}
@@ -20,7 +18,7 @@
 
                 {% if level2.selected? %}
                   {% if editmode or level2.children? %}
-                    <ul>
+                    <ul class="submenu-lvl2">
                       {% for level3 in level2.visible_children %}
                         <li{% unless level3.translated? %} class="untranslated"{% endunless %}>
                           <a href="{{ level3.url }}"{% if level3.selected? %} class="active"{% endif%}>{{ level3.title }}</a>
@@ -52,7 +50,5 @@
         {% endif %}
       {% endif %}
     {% endfor %}
-
-  </div>
 
 </aside>

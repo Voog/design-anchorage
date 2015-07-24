@@ -9568,7 +9568,12 @@ return jQuery;
   };
 
   var stickyFooterVarHeight = function() {
-    $('.page-content').css('margin-bottom', $('.site-footer').outerHeight());
+    if ($('.site-container').find('.page-body').hasClass('sidebar-active')) {
+      $('.page-body').css('margin-bottom', $('.site-footer').outerHeight());
+    }
+    else {
+      $('.page-content').css('margin-bottom', $('.site-footer').outerHeight());
+    };
   };
 
   // Set article comments section the height of the document minus the header section

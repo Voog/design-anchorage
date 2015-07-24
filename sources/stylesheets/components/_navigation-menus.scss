@@ -127,7 +127,7 @@
           position: static;
           width: auto;
           height: auto;
-          background-color: red;
+          @include bg($red, 1);
 
           &:before,
           &:after {
@@ -268,7 +268,7 @@
       width: auto;
       height: auto;
       display: inline-block;
-      @include color($white);
+      @include color($white, 1);
 
       &:before,
       &:after {
