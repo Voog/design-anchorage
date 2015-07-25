@@ -47,7 +47,7 @@
     }
     .search-inner {
       max-width: 100%;
-      margin: 0 $margin-medium;
+      margin: 0 $margin-low - 10px;
     }
   }
 
@@ -276,10 +276,18 @@
 }
 
 .voog-search-modal-results {
-  font-weight: 300;
+  font-weight: $font-weight-light;
+
+  @include querymin($tablet-2) {
+    max-height: 70vh;
+  }
 
   .mobile-search-open & {
-    max-height: calc(100vh - 120px);
+
+    @include querymin($tablet-2) {
+      max-height: calc(100vh - 120px);
+    }
+
   }
 
   h3 {
@@ -334,6 +342,6 @@
   }
   .search {
     padding: 0;
-    top: 35px;
+    top: 60px;
   }
 }

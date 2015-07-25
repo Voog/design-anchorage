@@ -93,11 +93,11 @@
 
 .mobile-menu-toggler {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -13px;
+  right: -13px;
   display: block;
-  width: 43px;
-  height: 43px;
+  width: $button-square;
+  height: $button-square;
   outline: 0;
 
   .mobilemenu-open & {
@@ -165,22 +165,27 @@
   left: 0;
   display: none;
   overflow: auto;
-  @include bg($black, .9);
+  @include bg($black-base, .9);
   -webkit-overflow-scrolling: touch;
 
   .mobile-site-options {
-    margin: 40px 40px 0;
-    max-width: 2000px;
+    margin: $margin-low;
+    margin-bottom: 0;
     position: relative;
 
     .search-btn {
       position: absolute;
-      right: 50px;
-      width: 42px;
-      height: 42px;
+      top: -13px;
+      right: 35px;
+      width: $button-square;
+      height: $button-square;
 
       svg path {
         @include fill($white, 1);
+
+        .mobile-search-open & {
+          @include fill($grey, 1);
+        }
       }
     }
     .lang-title {
@@ -196,8 +201,8 @@
   .mobile-menu-close {
     position: absolute;
     z-index: 9999;
-    top: 0;
-    right: 0;
+    top: -13px;
+    right: -13px;
     display: block;
     width: 42px;
     height: 42px;
@@ -214,10 +219,6 @@
       content: '';
       background: white;
       @include border-radius(3px);
-
-      .mobile-search-open & {
-        @include bg($black, 1);
-      }
     }
 
     &:before {
@@ -239,7 +240,7 @@
     outline: 0;
 
     .mobile-search-open & {
-      display: none;
+      display: none!important;
     }
 
     .lang-menu-btn {
@@ -263,7 +264,7 @@
 
   &.flags-disabled {
     .lang-menu-btn {
-      top: 0;
+      top: -13px;
       left: 0;
       width: auto;
       height: auto;
@@ -283,6 +284,14 @@
         display: inline-block;
         position: static;
         @include color($white, 1);
+
+        &:after {
+          content: "▼";
+          font-size: 7px;
+          position: absolute;
+          right: -13px;
+          top: 2px;
+        }
       }
     }
   }

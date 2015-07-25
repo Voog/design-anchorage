@@ -115,19 +115,25 @@ a {
 .wrap {
   @extend %clearfix;
   margin: 0 auto;
+  @extend %wide-wrap;
 
-  .front-page & {
+  .front-page &,
+  .common-page & {
     @extend %wide-wrap;
   }
 }
 
 .inner {
-  width: 80%;
-  margin: $margin-half auto;
+  margin: 0 auto;
+  padding: $margin-half $margin-medium;
   min-height: $height-base;
 
+  @include query($tablet-2) {
+    padding: $margin-medium $margin-low;
+  }
+
   .blog-article-page & {
-    margin: $margin-medium auto;
+    padding: $margin-medium $margin-low;
   }
 }
 

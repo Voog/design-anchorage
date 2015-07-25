@@ -22,7 +22,6 @@
           {% if editmode or flags_state == false %}
             <span class="lang-title">
               {% for language in site.languages %}{% if language.selected? %}{{ language.title }}{% endif %}{% endfor %}
-              <span class="ico-popover-toggle">▼</span>
             </span>
           {% endif %}
         </span>

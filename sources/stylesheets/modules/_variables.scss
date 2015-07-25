@@ -3,6 +3,7 @@
 // Comment out the "_variables.scss" partial in the "main.scss" file if not used.
 
 // Basic colors.
+$black-base: #000;
 $black: #222222;
 $black-light: #4a4a4a;
 $black-lighter: #a4a3a3;
@@ -60,6 +61,12 @@ $height-base: 100px;
 
 $padding-general: 70px;
 
+$margin-low: 20px;
 $margin-medium: 30px;
 $margin-half: 50px;
 $margin-general: 100px;
+
+$button-square: 42px;
+
+$width-medium: 700px;
+$width-max: 1120px;

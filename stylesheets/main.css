@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* MAIN STYLESHEET */
 body {
   margin: 0;
@@ -147,12 +148,17 @@ a img {
 }
 
 .inner {
-  width: 80%;
-  margin: 50px auto;
+  margin: 0 auto;
+  padding: 50px 30px;
   min-height: 100px;
 }
+@media screen and (max-width: 768px) {
+  .inner {
+    padding: 30px 20px;
+  }
+}
 .blog-article-page .inner {
-  margin: 30px auto;
+  padding: 30px 20px;
 }
 
 .main-inner-row {
@@ -353,8 +359,8 @@ a img {
   line-height: inherit;
 }
 
-.front-page .wrap {
-  max-width: 1000px;
+.wrap, .front-page .wrap, .common-page .wrap {
+  max-width: 1120px;
 }
 
 .is-untranslated {
@@ -856,14 +862,11 @@ a img {
   position: relative;
 }
 
-.common-page .content-body {
-  margin: 50px 0;
-}
 .common-page .inner {
   max-width: 700px;
 }
 .common-page .sidebar-active {
-  width: 80%;
+  max-width: 1120px;
   margin: 0 auto;
 }
 .common-page .sidebar-active .inner {
@@ -1155,6 +1158,10 @@ a img {
   max-width: 2000px;
 }
 @media screen and (max-width: 768px) {
+  .site-header .header-top .wrap {
+    padding: 20px;
+    padding-bottom: 0;
+  }
   .flexbox .site-header .header-top .wrap {
     display: -webkit-box;
     display: -moz-box;
@@ -1322,11 +1329,11 @@ a img {
 
   .mobile-menu-toggler {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -13px;
+    right: -13px;
     display: block;
-    width: 43px;
-    height: 43px;
+    width: 42px;
+    height: 42px;
     outline: 0;
   }
   .mobilemenu-open .mobile-menu-toggler {
@@ -1381,23 +1388,27 @@ a img {
     left: 0;
     display: none;
     overflow: auto;
-    background-color: #222222;
-    background-color: rgba(34, 34, 34, 0.9);
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.9);
     -webkit-overflow-scrolling: touch;
   }
   #mobile-menu .mobile-site-options {
-    margin: 40px 40px 0;
-    max-width: 2000px;
+    margin: 20px;
+    margin-bottom: 0;
     position: relative;
   }
   #mobile-menu .mobile-site-options .search-btn {
     position: absolute;
-    right: 50px;
+    top: -13px;
+    right: 35px;
     width: 42px;
     height: 42px;
   }
   #mobile-menu .mobile-site-options .search-btn svg path {
     fill: white;
+  }
+  .mobile-search-open #mobile-menu .mobile-site-options .search-btn svg path {
+    fill: #aaaaaa;
   }
   #mobile-menu .mobile-site-options .lang-title {
     font-size: 20px;
@@ -1410,8 +1421,8 @@ a img {
   #mobile-menu .mobile-menu-close {
     position: absolute;
     z-index: 9999;
-    top: 0;
-    right: 0;
+    top: -13px;
+    right: -13px;
     display: block;
     width: 42px;
     height: 42px;
@@ -1429,9 +1440,6 @@ a img {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-  }
-  .mobile-search-open #mobile-menu .mobile-menu-close:before, .mobile-search-open #mobile-menu .mobile-menu-close:after {
-    background-color: #222222;
   }
   #mobile-menu .mobile-menu-close:before {
     -webkit-transform: rotate(45deg);
@@ -1453,7 +1461,7 @@ a img {
     outline: 0;
   }
   .mobile-search-open #mobile-menu .lang-menu-btn {
-    display: none;
+    display: none !important;
   }
   #mobile-menu .lang-menu-btn .lang-menu-btn {
     position: absolute;
@@ -1471,7 +1479,7 @@ a img {
     display: none;
   }
   #mobile-menu.flags-disabled .lang-menu-btn {
-    top: 0;
+    top: -13px;
     left: 0;
     width: auto;
     height: auto;
@@ -1488,6 +1496,13 @@ a img {
     display: inline-block;
     position: static;
     color: white;
+  }
+  #mobile-menu.flags-disabled .lang-menu-btn .lang-title:after {
+    content: "▼";
+    font-size: 7px;
+    position: absolute;
+    right: -13px;
+    top: 2px;
   }
   .lang-menu-open #mobile-menu .lang-menu-btn {
     display: none;
@@ -2018,7 +2033,7 @@ a img {
 }
 #mobile-search .search .search-inner {
   max-width: 100%;
-  margin: 0 30px;
+  margin: 0 10px;
 }
 .search.active {
   position: absolute;
@@ -2222,8 +2237,15 @@ a img {
 .voog-search-modal-results {
   font-weight: 300;
 }
-.mobile-search-open .voog-search-modal-results {
-  max-height: calc(100vh - 120px);
+@media screen and (min-width: 768px) {
+  .voog-search-modal-results {
+    max-height: 70vh;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile-search-open .voog-search-modal-results {
+    max-height: calc(100vh - 120px);
+  }
 }
 .voog-search-modal-results h3 {
   margin: 0;
@@ -2274,7 +2296,7 @@ a img {
 }
 #mobile-search .search {
   padding: 0;
-  top: 35px;
+  top: 60px;
 }
 
 .site-sidebar {

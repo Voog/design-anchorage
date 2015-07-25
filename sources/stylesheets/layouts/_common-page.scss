@@ -1,16 +1,12 @@
 .common-page {
 
-  .content-body {
-    margin: $margin-half 0;
-  }
-
   .inner {
-    max-width: 700px;
+    max-width: $width-medium;
   }
 
   .sidebar-active {
     @extend %clearfix:after;
-    width: 80%;
+    max-width: $width-max;
     margin: 0 auto;
 
     .inner {
