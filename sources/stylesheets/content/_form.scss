@@ -1,5 +1,6 @@
 .content-area,
 .content-formatted {
+
   .form_fields {
     margin-top: 20px;
   }
@@ -86,7 +87,7 @@
       @include color($white, 1);
       border: none;
       padding: 10px;
-      width: 100%;
+      min-width: 200px;
       text-transform: uppercase;
       font-family: $font-main;
       font-size: $font-size-small;
@@ -96,6 +97,16 @@
 
       &:hover {
         @include bg($black-light, 1);
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .article-comments {
+    .form_submit {
+      input {
+        width: 100%;
       }
     }
   }

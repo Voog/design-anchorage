@@ -30,12 +30,13 @@
 
 // Main menu
 .menu-main {
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin-right: $margin-low;
+  margin-bottom: $margin-low;
   text-transform: uppercase;
 
   li {
-    margin-right: 20px;
+    margin-left: $margin-low;
+    margin-bottom: $margin-low - 10px;
   }
 }
 
@@ -163,7 +164,7 @@
   display: block;
   font-family: $font-main;
   position: fixed;
-  z-index: 1000;
+  z-index: -1000;
   top: 0;
   right: 0;
   bottom: 0;
@@ -202,6 +203,7 @@
   }
   .mobilemenu-open & {
     visibility: visible;
+    z-index: 1000;
     opacity: 1;
     transition: $transition;
   }

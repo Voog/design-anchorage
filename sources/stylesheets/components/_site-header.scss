@@ -24,12 +24,14 @@
   }
 
   .header-title {
+    @include hyphenate(true);
     font-size: $font-size-title;
     font-weight: $font-weight-light;
     line-height: $line-height-normal;
     position: relative;
     display: inline-block;
     vertical-align: middle;
+    min-width: 140px;
   }
 
   .header-body {
@@ -37,14 +39,26 @@
     font-weight: $font-weight-bold;
     line-height: $line-height-normal;
     text-transform: uppercase;
+
+    @include query($tablet-2) {
+      font-size: $font-size-xl;
+    }
   }
 
   .header-left {
     float: left;
+
+    @include querymin($tablet-2) {
+      max-width: 20%;
+    }
   }
   .header-right {
     float: right;
     text-align: right;
+
+    @include querymin($tablet-2) {
+      max-width: 80%;
+    }
   }
   .menu-main,
   .site-options {
@@ -118,7 +132,7 @@
 
     .header-left {
       @include flex(1);
-      margin-right: 20px;
+      margin-right: $margin-general;
     }
 
     .header-right {

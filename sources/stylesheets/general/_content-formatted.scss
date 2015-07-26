@@ -171,7 +171,7 @@
     .quotation & {
       margin-top: 7px;
       font-size: 24px;
-      @include color($white);
+      @include color($white, 1);
 
       &:first-child {
         margin-top: 15px;
@@ -199,7 +199,7 @@
     }
 
     .footer & {
-      @include color($white, 0.5);
+      @include color($white, .5);
     }
   }
 
@@ -331,6 +331,10 @@
     .contacts & {
       -webkit-overflow-scrolling: none;
     }
+  }
+
+  form {
+    margin: $margin-low 0;
   }
 
   table {

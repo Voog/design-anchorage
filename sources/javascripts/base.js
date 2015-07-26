@@ -34,6 +34,7 @@
       }
       else if ($('body').hasClass('mobile-search-open')) {
         $('body').removeClass('mobile-search-open');
+        $('.search-btn').removeClass('open');
       }
       else {
         $('body').removeClass('mobilemenu-open');
@@ -41,6 +42,7 @@
   });
 
   $('.lang-menu-btn').on('click', function(event) {
+      event.preventDefault();
 
       if ($('body').hasClass('lang-menu-open')) {
           $('body').removeClass('lang-menu-open');
@@ -107,7 +109,7 @@
     var suitableImage = data.imageSizes ? getImageByWidth(data.imageSizes, $(window).width()) : 'none';
 
     // Defines the variables used in preview logic.
-    var contentHalfBgImagePrevious = $(contentHalf).css('background-image'),
+    var contentHalfBgImagePrevious = $(contentHalf).find('.background-image').css('background-image'),
         contentHalfBgImage = (data.image && data.image !== '') ? 'url(' + suitableImage.url + ')' : 'none',
         contentHalfBgImageSizes = (data.imageSizes && data.imageSizes !== '') ? data.imageSizes : null,
         contentHalfBgColor = (data.color && data.color !== '') ? data.color : 'rgba(0,0,0,0)',
@@ -213,6 +215,7 @@
 
       if ($('.js-search').hasClass('active')) {
         $('.js-search').removeClass('active');
+        $('.search-btn').removeClass('open');
         $('body').removeClass('mobile-search-open');
       }
 
@@ -278,11 +281,13 @@
     // Hides mobile search modal on side click
     $('#mobile-menu .js-search').click(function() {
       $('#mobile-menu .js-mobile-search-close-btn').trigger('click');
+      $('#mobile-menu .search-btn').removeClass('open');
     });
 
     // Opens the mobile search modal.
     $('#mobile-menu .js-mobile-search-open-btn').click(function(event) {
       event.stopPropagation();
+      $('body').removeClass('lang-menu-open');
       if ($('#mobile-menu .js-menu-btn').hasClass('open')) {
         $('#mobile-menu .js-menu-btn').trigger('click');
       }
