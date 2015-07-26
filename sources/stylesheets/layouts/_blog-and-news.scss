@@ -14,11 +14,15 @@
 
   .blog-article {
     position: relative;
-    padding: 40px 0;
+    padding: $margin-medium 0;
 
     .article-image {
       position: relative;
       height: 500px;
+
+      @include query($tablet-2) {
+        margin: 0  0 - $margin-low;
+      }
     }
   }
 
@@ -73,7 +77,7 @@
       .article-date {
         font-size: $font-size-small - 2px;
         font-weight: $font-weight-normal;
-        line-height: $line-height-normal;
+        line-height: $line-height-medium;
         @include color($black-lighter, 1);
         letter-spacing: 1px;
         position: absolute;
@@ -82,9 +86,10 @@
       .article-title {
         font-size: $font-size-normal;
         font-weight: $font-weight-light;
-        line-height: $line-height-normal;
+        line-height: $line-height-medium;
         margin-left: 150px;
       }
+      
     }
 
     @include query($mobile-1) {

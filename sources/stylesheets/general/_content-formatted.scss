@@ -188,7 +188,11 @@
   }
 
   a {
-    @include color($black);
+    @include color($black, 1);
+
+    .dark-background & {
+      @include color($white, 1);
+    }
 
     &:hover {
       text-decoration: none;

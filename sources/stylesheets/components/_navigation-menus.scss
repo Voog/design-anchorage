@@ -8,13 +8,17 @@
   list-style-type: none;
 
   li {
-    font-size: 16px;
-    line-height: 33px;
-    font-weight: 300;
+    font-size: $font-size-normal - 2px;
+    line-height: $line-height-medium;
+    font-weight: $font-weight-light;
     @extend %inline-block;
 
     &:last-child {
       margin-right: 0;
+    }
+
+    &.is-active {
+      font-weight: $font-weight-normal;
     }
 
     a {
@@ -156,6 +160,7 @@
 }
 
 #mobile-menu {
+  display: block;
   font-family: $font-main;
   position: fixed;
   z-index: 1000;
@@ -163,7 +168,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   overflow: auto;
   @include bg($black-base, .9);
   -webkit-overflow-scrolling: touch;
@@ -195,7 +201,9 @@
     }
   }
   .mobilemenu-open & {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: $transition;
   }
 
   .mobile-menu-close {

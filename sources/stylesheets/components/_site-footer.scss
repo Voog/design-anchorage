@@ -3,10 +3,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  font-size: 14px;
-  @include color($grey, 1);
+  font-size: $font-size-normal - 2px;
+  line-height: $line-height-medium;
+  @include color($black-light, 1);
   min-height: $height-base;
 
+  .wrap {
+    max-width: none;
+  }
   .footer-body {
     padding: $padding-general / 2 10%;
     text-align: center;

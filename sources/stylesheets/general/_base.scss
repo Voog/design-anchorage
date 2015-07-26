@@ -175,6 +175,10 @@ a {
     &.lang-menu-bilingual {
       .lang-title a {
         @include color($white, .7);
+
+        &:hover {
+          @include color($white, 1);
+        }
       }
       .lang-title a.is-active {
         @include color($white, 1);
@@ -224,6 +228,12 @@ a {
   }
 
   .lang-menu-bilingual {
+    .lang-title a {
+      &:hover {
+        @include color($black, 1);
+      }
+    }
+
     .lang-title a.is-active {
       @include color($black, 1);
     }

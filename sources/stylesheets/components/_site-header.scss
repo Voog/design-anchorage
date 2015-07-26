@@ -87,14 +87,6 @@
       margin: 0 auto;
       text-align: center;
 
-      a {
-        @include color($white);
-
-        .light-background & {
-          @include color($black, .73);
-        }
-      }
-
       .wrap {
         display: table-cell;
         vertical-align: middle;
@@ -143,7 +135,7 @@
     font-weight: $font-weight-normal;
     line-height: $line-height-double;
     letter-spacing: 1px;
-    display: inline-block;
+    display: inline;
   }
   .article-title {
     font-size: 80px;

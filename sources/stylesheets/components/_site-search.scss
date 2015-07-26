@@ -70,7 +70,7 @@
 .search-inner {
   position: relative;
   max-width: 400px;
-  @include box-shadow(0, 0, 100px, 0, rgba($black, 0.75));
+  @include box-shadow(4px, 4px, 2px, 0, rgba($black-base, .1));
 
   .search-close-btn {
     position: absolute;
@@ -85,15 +85,7 @@
   position: relative;
   z-index: 20;
   @include bg($white, 1);
-  @include border(all, 1px, solid, $black, 0.1);
-
-
-
-  &.active {
-    @include border(all, 1px, solid, $black, 0.3);
-
-    border-color: $black;
-  }
+  @include box-shadow(0, 4px, 2px, 0, rgba($black-base, .1));
 
   &,
   &.active {
@@ -323,7 +315,11 @@
 
 .voog-search-modal-result {
   padding: 20px;
-  border-top: $white-cloudy solid 2px;
+  border-top: $white-cloudy solid 1px;
+
+  &:first-of-type {
+    border-top: 1px solid transparent;
+  }
 }
 
 #mobile-search {
