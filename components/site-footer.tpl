@@ -28,7 +28,7 @@
 
             {% if article_prev == forloop.index0 %}
               <a href="{{ article.url }}">
-                <div class="article-nav-direction">Previous story</div>
+                <div class="article-nav-direction">{{ previous_story }}</div>
                 <div class="article-nav-title">
                   {{ article.title }}
                 </div>
@@ -46,7 +46,7 @@
 
             {% if article_next == forloop.index0 %}
               <a href="{{ article.url }}">
-                <div class="article-nav-direction">Next story</div>
+                <div class="article-nav-direction">{{ next_story }}</div>
                 <div class="article-nav-title">
                   {{ article.title }}
                 </div>

@@ -7,6 +7,9 @@
     @include color($black, 1);
     margin: 30px 0;
 
+    &:empty {
+      display: none;
+    }
   }
   .article-body {
     font-size: $font-size-normal;

@@ -3,9 +3,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  font-size: $font-size-normal - 2px;
-  line-height: $line-height-medium;
-  @include color($black-light, 1);
   min-height: $height-base;
 
   .inner {
@@ -13,6 +10,13 @@
     min-height: 25px;
     padding-top: $padding-medium;
     padding-bottom: $padding-medium;
+
+    &.content-formatted {
+      font-size: $font-size-normal - 2px;
+      line-height: $line-height-medium;
+      @include color($black-light, 1);
+    }
+
   }
 
   .voog-reference {
@@ -57,9 +61,11 @@
       margin-left: -1px;/* Hide border from one side */
     }
     .article-nav-direction {
-      font-size: 12px;
-      line-height: 30px;
-      @include color($black-light, 1);
+      font-size: $font-size-small - 2px;
+      font-weight: $font-weight-normal;
+      line-height: $line-height-double;
+      letter-spacing: 1px;
+      @include color($black-lighter, 1);
       text-transform: uppercase;
     }
     .article-nav-title {

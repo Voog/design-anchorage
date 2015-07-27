@@ -29,6 +29,10 @@
       {% assign hello_world = 'Привет, мир!' %}
     {% comment %}Every other language{% endcomment %}
     {% else %}
+      {% assign archive = 'Archive' %}
       {% assign hello_world = 'Hello world!' %}
+      {% assign leave_comment = 'Leave your comment' %}
+      {% assign next_story = 'Next story' %}
+      {% assign previous_story = 'Previous story' %}
   {% endcase %}
 {% endcapture %}

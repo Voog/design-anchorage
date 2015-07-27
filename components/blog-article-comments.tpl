@@ -1,7 +1,7 @@
 <section id="article-comments" class="article-comments content-area js-comments js-voog-comments-modal">
   <div class="comments-body">
     <header class="comments-header">
-      <h1 class="comments-title">{{ 'post_has_replies' | lcc: article.comments_count }}</h1>
+      <h1 class="comments-title">{{ leave_comment }}</h1>
     </header>
 
     <div class="comment-form{% unless comment.valid? %} form_with_errors{% endunless %}">

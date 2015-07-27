@@ -655,12 +655,14 @@ $flags:
 
   li {
     display: block;
-    font-size: 12px;
+    font-size: $font-size-small;
     text-align: right;
     line-height: normal;
+    text-transform: uppercase;
 
     a {
       @include color($black, .7);
+      font-weight: $font-weight-normal;
     }
 
     &.add-lang-btn {
@@ -677,6 +679,11 @@ $flags:
       .dark-background &,
       .light-background & {
         @include color($black, .7);
+
+        &:hover {
+          font-weight: $font-weight-medium;
+          @include color($black, 1);
+        }
       }
       &:before,
       &:after {

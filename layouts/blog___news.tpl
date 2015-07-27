@@ -31,7 +31,7 @@
 
                 <section class="articles-listing content-area">
                   <header class="articles-listing-header">
-                    <h2 class="articles-listing-title">Archive</h2>
+                    <h2 class="articles-listing-title">{{ archive }}</h2>
                   </header>
                   {% for article in site.latest_articles offset: 5 %}
                     <article class="blog-article">

@@ -4,7 +4,7 @@
     font-size: $font-size-xl;
     font-weight: $font-weight-light;
     line-height: $line-height-medium;
-    margin: 0;
+    margin: 10px 0 0;
 
     @include query($tablet-2) {
       font-size: $font-size-large;
@@ -18,7 +18,7 @@
 
   .blog-article {
     position: relative;
-    padding: $margin-medium 0;
+    padding: $padding-medium 0;
 
     .article-image {
       position: relative;
@@ -56,11 +56,15 @@
     @include color($black-light, 1);
   }
 
-  .article-header, .article-content {
-    margin: 0 $margin-general $margin-medium;
+  .article-header {
+    margin: 0 $margin-general $margin-low;
   }
 
-  @include query($mobile-1) {
+  .article-content {
+    margin: 0 $margin-general;
+  }
+
+  @include query($tablet-3) {
     .article-header, .article-content {
       margin: 0;
     }

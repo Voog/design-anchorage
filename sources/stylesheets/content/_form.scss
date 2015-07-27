@@ -91,8 +91,21 @@
       line-height: $line-height-double;
       cursor: pointer;
 
+      @include querymin($tablet-2) {
+        .content-half & {
+          width: 100%;
+        }
+      }
+
+      @include query($mobile-1) {
+        .content-half & {
+          width: 100%;
+        }
+      }
+
       &:hover {
         @include bg($black-light, 1);
+        transition: $transition;
       }
       &:focus {
         outline: none;

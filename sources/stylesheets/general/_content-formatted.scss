@@ -4,6 +4,7 @@
 .content-formatted {
   @extend %clearfix;
   @include hyphenate(true);
+  @include color($black-light);
   font-size: $font-size-normal;
   font-weight: $font-weight-light;
   line-height: $line-height-medium;
@@ -225,15 +226,15 @@
   .embed-container,
   .table-container,
   .editmode & table {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: $margin-medium;
+    margin-bottom: $margin-medium;
   }
 
   // Code blocks and preformatted content.
   pre,
   code {
-    font-size: 14px;
-    @include bg($black, 0.1);
+    font-size: $font-size-small;
+    @include bg($black, .1);
   }
 
   pre {
@@ -271,19 +272,40 @@
 
   .custom-btn {
     display: inline-block;
-    padding: 15px 40px;
-    line-height: 1.3em;
-    text-decoration: none;
-    font-style: normal;
-    font-size: 24px;
-    @include bg($black);
+    @include bg($black, .0);
+    box-sizing: border-box;
+    width: 250px;
+    padding: 15px 10px;
+    text-transform: uppercase;
+    font-size: $font-size-normal - 2px;
+    font-weight: $font-weight-normal;
+    line-height: $line-height-medium;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+    @include hyphenate(true);
+    border: 2px solid $black-light;
+    @include color($black-light, 1);
 
     &:hover {
-      @include bg($black, 0.8);
+      border: 2px solid $white;
+      @include bg($black, 1);
+      @include color($white, 1);
+      transition: $transition;
+
+      .light-background & {
+        border: 2px solid $white;
+        @include color($white, 1);
+      }
     }
 
-    a {
-      text-decoration: none;
+    .dark-background & {
+      border: 2px solid $white;
+      @include color($white, 1);
+    }
+    .light-background & {
+      border: 2px solid $black;
+      @include color($black, 1);
     }
   }
 
