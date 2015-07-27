@@ -70,7 +70,7 @@
 .search-inner {
   position: relative;
   max-width: 400px;
-  @include box-shadow(4px, 4px, 2px, 0, rgba($black-base, .1));
+  @include box-shadow(0, 2px, 4px, 0, rgba($black-base, .1));
 
   .search-close-btn {
     position: absolute;
@@ -85,7 +85,7 @@
   position: relative;
   z-index: 20;
   @include bg($white, 1);
-  @include box-shadow(0, 4px, 2px, 0, rgba($black-base, .1));
+  @include box-shadow(0, 2px, 4px, 0, rgba($black-base, .1));
 
   &,
   &.active {

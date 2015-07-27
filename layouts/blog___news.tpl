@@ -20,7 +20,7 @@
         <div class="main-inner-row content-full">
 
           <div class="main-content">
-            <div class="wrap content-formatted">
+            <div class="wrap">
               <div class="inner">
                 <section class="blog-articles content-area">
                   {% addbutton %}

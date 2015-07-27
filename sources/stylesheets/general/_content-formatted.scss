@@ -103,7 +103,7 @@
   h4,
   h5,
   h6 {
-    font-weight: 600;
+    font-weight: $font-weight-light;
   }
 
   h3,
@@ -115,10 +115,8 @@
   }
 
   h1 {
-    margin-top: 50px;
-    margin-bottom: 20px;
-    line-height: 1.3em;
-    font-size: 36px;
+    font-size: $font-size-xl;
+    line-height: $line-height-medium;
 
     .contacts & {
       font-size: 32px;
@@ -189,9 +187,11 @@
 
   a {
     @include color($black, 1);
+    border-bottom: 1px solid $black-light;
 
     .dark-background & {
       @include color($white, 1);
+      border-bottom: 1px solid $white-cloudy;
     }
 
     &:hover {
@@ -335,6 +335,11 @@
 
   form {
     margin: $margin-low 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
   }
 
   table {

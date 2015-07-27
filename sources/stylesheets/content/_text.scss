@@ -42,11 +42,11 @@
   h4,
   h5,
   h6 {
-    line-height: $line-height-normal;
+    line-height: $line-height-medium;
   }
 
   h1 {
-    font-size: 36px;
+    font-size: $font-size-large;
   }
 
   h2 {

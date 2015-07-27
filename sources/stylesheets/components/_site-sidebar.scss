@@ -1,8 +1,7 @@
 .site-sidebar {
   float: left;
   width: 210px;
-  padding: $margin-half $margin-medium;
-  box-sizing: border-box;
+  margin: $margin-half 0 $margin-half $margin-medium;
   position: relative;
   z-index: 5;
 
@@ -16,7 +15,7 @@
   .sidebar-title {
     font-size: $font-size-normal;
     font-weight: $font-weight-normal;
-    line-height: $line-height-medium;
+    line-height: $line-height-double;
     text-transform: uppercase;
     margin: 0;
 

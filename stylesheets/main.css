@@ -431,11 +431,11 @@ a img {
   text-align: center;
   font-size: 20px;
 }
-.content-formatted.header-body {
+.content-formatted.header-body, .site-header .header-body h1.content-formatted {
   line-height: 1.5em;
 }
 @media screen and (max-width: 422px) {
-  .content-formatted.header-body {
+  .content-formatted.header-body, .site-header .header-body h1.content-formatted {
     font-size: 24px;
   }
 }
@@ -512,7 +512,7 @@ a img {
 .content-formatted h4,
 .content-formatted h5,
 .content-formatted h6 {
-  font-weight: 600;
+  font-weight: 300;
 }
 .content-formatted h3,
 .content-formatted h4,
@@ -522,10 +522,8 @@ a img {
   margin-bottom: 20px;
 }
 .content-formatted h1 {
-  margin-top: 50px;
-  margin-bottom: 20px;
-  line-height: 1.3em;
   font-size: 36px;
+  line-height: 1.7;
 }
 .contacts .content-formatted h1 {
   font-size: 32px;
@@ -583,9 +581,11 @@ a img {
 }
 .content-formatted a {
   color: #222222;
+  border-bottom: 1px solid #4a4a4a;
 }
 .dark-background .content-formatted a {
   color: white;
+  border-bottom: 1px solid #dedede;
 }
 .content-formatted a:hover {
   text-decoration: none;
@@ -703,6 +703,9 @@ a img {
 }
 .content-formatted form {
   margin: 20px 0;
+}
+.content-formatted form:first-child {
+  margin-top: 0;
 }
 .content-formatted table {
   width: 100%;
@@ -832,6 +835,12 @@ a img {
 .front-page .page-content .content-slogan {
   margin-bottom: 80px;
 }
+.front-page .main-content .content-formatted {
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1.7;
+  text-align: center;
+}
 .front-page .main-feature {
   padding-bottom: 70px;
 }
@@ -841,18 +850,24 @@ a img {
     width: calc(100% / 3);
     min-width: 250px;
     box-sizing: border-box;
-    padding: 0 10px;
+    padding: 0 30px;
   }
   .front-page .main-feature .narrow-feature .image-container {
-    max-width: 110% !important;
-    min-width: 110% !important;
+    max-width: calc(100% + 60px) !important;
+    min-width: calc(100% + 60px) !important;
     max-height: 200px;
     min-height: 200px;
-    left: -5%;
+    left: -30px;
   }
 }
 .front-page .blog-feed {
   padding: 70px 0;
+}
+.front-page .blog-feed .content-formatted {
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1.7;
+  text-align: center;
 }
 .front-page .blog-feed .wrap {
   height: 500px;
@@ -878,24 +893,39 @@ a img {
   position: relative;
 }
 
-.common-page .inner {
-  max-width: 700px;
-}
 .common-page .sidebar-active {
   max-width: 1120px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 100px;
+}
+.common-page .sidebar-active .wrap {
+  margin: 0;
 }
 .common-page .sidebar-active .inner {
   width: auto;
   margin: 0;
 }
 .common-page .sidebar-active .page-content {
-  margin-left: 200px;
+  margin-left: 240px;
+  margin-bottom: 0;
 }
 @media screen and (max-width: 768px) {
   .common-page .sidebar-active .page-content {
     margin-left: 0;
+  }
+}
+.common-page .main-content .wrap {
+  max-width: 700px;
+}
+.common-page .main-content .content-half {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  .common-page .main-content .content-half {
+    float: none;
+    width: 100%;
   }
 }
 
@@ -1193,14 +1223,17 @@ a img {
   vertical-align: middle;
   min-width: 140px;
 }
-.site-header .header-body {
+.site-header .header-body, .site-header .header-body h1 {
   font-size: 70px;
   font-weight: 700;
   line-height: 1;
   text-transform: uppercase;
 }
+.site-header .header-body h1 {
+  margin: 0;
+}
 @media screen and (max-width: 768px) {
-  .site-header .header-body {
+  .site-header .header-body, .site-header .header-body h1 {
     font-size: 36px;
   }
 }
@@ -1229,7 +1262,7 @@ a img {
   padding: 40px;
   padding-bottom: 0;
   width: 100%;
-  max-width: 2000px;
+  max-width: 1340px;
 }
 @media screen and (max-width: 768px) {
   .site-header .header-top .wrap {
@@ -1257,7 +1290,7 @@ a img {
   display: table;
   border-collapse: collapse;
   width: 100%;
-  max-width: 900px;
+  max-width: 1120px;
   margin: 0 auto;
   text-align: center;
 }
@@ -2129,9 +2162,9 @@ a img {
 .search-inner {
   position: relative;
   max-width: 400px;
-  -webkit-box-shadow: 4px 4px 2px 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 4px 4px 2px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 4px 4px 2px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 .search-inner .search-close-btn {
   position: absolute;
@@ -2145,9 +2178,9 @@ a img {
   position: relative;
   z-index: 20;
   background-color: white;
-  -webkit-box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 .search-form, .search-form.active {
   max-width: 400px;
@@ -2377,8 +2410,7 @@ a img {
 .site-sidebar {
   float: left;
   width: 210px;
-  padding: 50px 30px;
-  box-sizing: border-box;
+  margin: 50px 0 50px 30px;
   position: relative;
   z-index: 5;
 }
@@ -2395,7 +2427,7 @@ a img {
 .site-sidebar .sidebar-title {
   font-size: 18px;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 2;
   text-transform: uppercase;
   margin: 0;
 }
@@ -2452,12 +2484,11 @@ a img {
   color: #4a4a4a;
   min-height: 100px;
 }
-.site-footer .wrap {
-  max-width: none;
-}
-.site-footer .footer-body {
-  padding: 35px 10%;
+.site-footer .inner {
   text-align: center;
+  min-height: 25px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .site-footer .voog-reference {
   color: #222222;
@@ -2572,10 +2603,10 @@ a img {
 .content-area h4,
 .content-area h5,
 .content-area h6 {
-  line-height: 1;
+  line-height: 1.7;
 }
 .content-area h1 {
-  font-size: 36px;
+  font-size: 26px;
 }
 .content-area h2 {
   font-size: 24px;
@@ -2628,10 +2659,6 @@ a img {
   content: attr(data-title);
 }
 
-.content-area .form_fields,
-.content-formatted .form_fields {
-  margin-top: 20px;
-}
 .content-area .form_field,
 .content-formatted .form_field {
   margin-top: 10px;

@@ -1,26 +1,44 @@
 .common-page {
 
-  .inner {
-    max-width: $width-medium;
-  }
-
   .sidebar-active {
     @extend %clearfix:after;
     max-width: $width-max;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 100px;
+
+    .wrap {
+      margin: 0;
+    }
 
     .inner {
       width: auto;
       margin: 0;
     }
     .page-content {
-      margin-left: 200px;
+      margin-left: 240px;
+      margin-bottom: 0;
     }
 
     @include query($tablet-2) {
       .page-content {
         margin-left: 0;
+      }
+    }
+  }
+  .main-content {
+
+    .wrap {
+      max-width: $width-medium;
+    }
+
+    .content-half {
+      float: left;
+      width: 50%;
+      box-sizing: border-box;
+
+      @include query($tablet-2) {
+        float: none;
+        width: 100%;
       }
     }
   }

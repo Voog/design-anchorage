@@ -46,7 +46,7 @@
     {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-image="{{ content_top_bg_image }}" data-bg-image-sizes="{{ content_top_bg_image_sizes_str | escape }}" data-bg-color="{{ content_top_bg_color }}" data-bg-color-data="{{ content_top_bg_color_data_str | escape }}"></button>{% endif %}
     <div class="header-bottom-inner">
       <div class="wrap">
-        <div class="header-body content-formatted">
+        <div class="header-body {% if front_page %}content-formatted{% endif %}">
           {% if front_page %}
             {% content name="header" %}
           {% elsif blog_article_page %}
@@ -56,9 +56,7 @@
           {% else %}
             {% for item in site.menuitems_with_hidden %}
               {% if item.selected? %}
-                <li{% unless item.translated? %} class="untranslated"{% endunless %}>
-                  <h1><a href="{{ item.url }}">{{ item.title }}</a></h1>
-                </li>
+                <h1><a href="{{ item.url }}">{{ item.title }}</a></h1>
               {% endif %}
             {% endfor %}
           {% endif %}

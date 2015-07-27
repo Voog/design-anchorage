@@ -8,12 +8,11 @@
   @include color($black-light, 1);
   min-height: $height-base;
 
-  .wrap {
-    max-width: none;
-  }
-  .footer-body {
-    padding: $padding-general / 2 10%;
+  .inner {
     text-align: center;
+    min-height: 25px;
+    padding-top: $padding-medium;
+    padding-bottom: $padding-medium;
   }
 
   .voog-reference {
