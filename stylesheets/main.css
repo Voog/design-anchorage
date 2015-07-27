@@ -825,7 +825,7 @@ a img {
 .front-page .main-feature {
   padding-bottom: 70px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .front-page .main-feature .narrow-feature {
     float: left;
     width: calc(100% / 3);
@@ -1247,7 +1247,7 @@ a img {
 .site-header .header-left {
   float: left;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .site-header .header-left {
     max-width: 20%;
   }
@@ -1256,7 +1256,7 @@ a img {
   float: right;
   text-align: right;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .site-header .header-right {
     max-width: 80%;
   }
@@ -1494,9 +1494,8 @@ a img {
 
   #mobile-menu {
     display: block;
+    position: absolute;
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    position: fixed;
-    z-index: -1000;
     top: 0;
     right: 0;
     bottom: 0;
@@ -1532,10 +1531,15 @@ a img {
     line-height: 42px;
   }
   .mobilemenu-open #mobile-menu {
+    position: fixed;
     visibility: visible;
     z-index: 1000;
     opacity: 1;
     transition: 250ms;
+    -webkit-transform: translateZ(1px);
+    -moz-transform: translateZ(1px);
+    -o-transform: translateZ(1px);
+    transform: translateZ(1px);
   }
   #mobile-menu .mobile-menu-close {
     position: absolute;
@@ -2358,12 +2362,12 @@ a img {
 .voog-search-modal-results {
   font-weight: 300;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .voog-search-modal-results {
     max-height: 70vh;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .mobile-search-open .voog-search-modal-results {
     max-height: calc(100vh - 120px);
   }
@@ -2435,7 +2439,7 @@ a img {
     float: none;
   }
 }
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1501px) {
   .site-sidebar {
     width: 20%;
   }
@@ -2679,6 +2683,12 @@ a img {
   content: attr(data-title);
 }
 
+.content-area form,
+.content-area .form,
+.content-formatted form,
+.content-formatted .form {
+  font-size: 14px;
+}
 .content-area .form_field,
 .content-formatted .form_field {
   margin-top: 10px;
@@ -2777,7 +2787,7 @@ a img {
   line-height: 2;
   cursor: pointer;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .content-half .content-area .form_submit input, .content-half
   .content-formatted .form_submit input {
     width: 100%;
@@ -2814,5 +2824,7 @@ a img {
 }
 .content-area .form_notice,
 .content-formatted .form_notice {
-  color: #409e13;
+  font-size: 26px;
+  font-weight: 700;
+  color: white;
 }

@@ -23,15 +23,15 @@
           {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-image="{{ content_left_bg_image }}" data-bg-image-sizes="{{ content_left_bg_image_sizes_str | escape }}" data-bg-color="{{ content_left_bg_color }}" data-bg-color-data="{{ content_left_bg_color_data_str | escape }}"></button>{% endif %}
 
           <div class="main-content">
-            <div class="wrap content-formatted js-background-type {{ content_left_bg_type }}">
-              <div class="inner">
+            <div class="wrap js-background-type {{ content_left_bg_type }}">
+              <div class="inner content-formatted">
                 {% content %}
               </div>
             </div>
           </div>
 
           <div class="main-feature">
-            <div class="wrap content-formatted js-background-type {{ content_left_bg_type }}">
+            <div class="wrap js-background-type {{ content_left_bg_type }}">
               <div class="feature-left inner inner-left content-formatted{% if editmode %} narrow-feature{% else %}{% unless feature_right_size contains '-' %} narrow-feature{% endunless %}{% endif %}">
                 {% content name="feature_left" %}
               </div>

@@ -162,9 +162,8 @@
 
 #mobile-menu {
   display: block;
+  position: absolute;
   font-family: $font-main;
-  position: fixed;
-  z-index: -1000;
   top: 0;
   right: 0;
   bottom: 0;
@@ -174,6 +173,7 @@
   overflow: auto;
   @include bg($black-base, .9);
   -webkit-overflow-scrolling: touch;
+
 
   .mobile-site-options {
     margin: $margin-low;
@@ -202,10 +202,15 @@
     }
   }
   .mobilemenu-open & {
+    position: fixed;
     visibility: visible;
     z-index: 1000;
     opacity: 1;
     transition: $transition;
+    -webkit-transform:translateZ(1px);
+      -moz-transform:translateZ(1px);
+      -o-transform:translateZ(1px);
+      transform:translateZ(1px);
   }
 
   .mobile-menu-close {
