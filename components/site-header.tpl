@@ -45,23 +45,49 @@
   <div class="header-bottom js-background-type {{ content_top_bg_type }}">
     {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-image="{{ content_top_bg_image }}" data-bg-image-sizes="{{ content_top_bg_image_sizes_str | escape }}" data-bg-color="{{ content_top_bg_color }}" data-bg-color-data="{{ content_top_bg_color_data_str | escape }}"></button>{% endif %}
     <div class="header-bottom-inner">
-      <div class="wrap">
-        <div class="header-body {% if front_page %}content-formatted{% endif %}">
-          {% if front_page %}
+
+      {% if front_page %}
+        <div class="wrap">
+          <div class="header-body content-formatted">
             {% content name="header" %}
-          {% elsif blog_article_page %}
-            <h1 class="article-title">{% if editmode %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
-            <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | date: "%d. %B %Y" }}, </time>
-            <div class="article-author">{{ article.author.name }}</div>
-          {% else %}
+          </div>
+        </div>
+      {% elsif blog_article_page %}
+        {% if editmode %}
+          <div class="wrap is-photoheader">
+            <div class="header-body">
+              <h1 class="article-title">{% if editmode %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
+              <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | date: "%d. %B %Y" }}, </time>
+              <div class="article-author">{{ article.author.name }}</div>
+            </div>
+          </div>
+        {% elsif article.data.content_top_bg.imageSizes == nil or article.data.content_top_bg.imageSizes == "" %}
+          <div class="wrap">
+            <div class="header-body">
+              <h1><a href="{{ article.url }}">{{ article.title }}</a></h1>
+            </div>
+          </div>
+        {% else %}
+          <div class="wrap is-photoheader">
+            <div class="header-body">
+              <h1 class="article-title">{% if editmode %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
+              <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | date: "%d. %B %Y" }}, </time>
+              <div class="article-author">{{ article.author.name }}</div>
+            </div>
+          </div>
+        {% endif %}
+      {% else %}
+        <div class="wrap">
+          <div class="header-body">
             {% for item in site.menuitems_with_hidden %}
               {% if item.selected? %}
                 <h1><a href="{{ item.url }}">{{ item.title }}</a></h1>
               {% endif %}
             {% endfor %}
-          {% endif %}
+          </div>
         </div>
-      </div>
+      {% endif %}
+
     </div>
   </div>
 

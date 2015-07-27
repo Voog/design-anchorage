@@ -110,8 +110,10 @@
         display: table-cell;
         vertical-align: middle;
         padding: 60px 20px;
-        .front-page &,
-        .blog-article-page & {
+        .front-page & {
+          height: 422px;
+        }
+        &.is-photoheader{
           height: 422px;
         }
       }
@@ -162,7 +164,9 @@
     font-weight: 300;
     margin: 0;
     text-transform: none;
+
     a {
+      @extend .article-title;
       text-decoration: none;
     }
   }

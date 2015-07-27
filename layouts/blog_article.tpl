@@ -23,6 +23,15 @@
             <div class="wrap">
               <div class="inner content-formatted">
 
+                {% if editmode %}
+                {% elsif article.data.content_top_bg.imageSizes == nil or article.data.content_top_bg.imageSizes == "" %}
+                  <div class="article-meta">
+                    <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | date: "%d. %B %Y" }}, </time>
+                    <div class="article-author">{{ article.author.name }}</div>
+                  </div>
+                {% else %}
+                {% endif %}
+
                 {% if article.comments_count > 0 %}
                   <div class="comments-title comments-btn comments-open-btn js-comments-open-btn">
                     {{ "comments_for_count" | lc }}

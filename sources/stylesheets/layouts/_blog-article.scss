@@ -41,4 +41,25 @@
     display: inline-block;
   }
 
+  .main-content {
+    .article-meta {
+      display: inline-block;
+      margin-right: $margin-medium;
+    }
+
+    .article-author,
+    .article-date {
+      font-size: $font-size-small;
+      font-weight: $font-weight-normal;
+      line-height: $line-height-normal;
+      @include color($black-lighter, 1);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline;
+
+      @include query($tablet-2) {
+        font-size: $font-size-small - 2px;
+      }
+    }
+  }
 }
