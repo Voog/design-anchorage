@@ -121,6 +121,10 @@
       @include query($mobile-1 - 58) {
         .wrap {
           height: 222px;
+
+          &.is-photoheader{
+            height: 222px;
+          }
         }
       }
     }
@@ -159,14 +163,15 @@
     display: inline;
   }
   .article-title {
-    font-size: 80px;
-    line-height: 90px;
-    font-weight: 300;
+    font-size: $font-size-header + 10px;
+    line-height: $line-height-small;
+    font-weight: $font-weight-thin;
     margin: 0;
     text-transform: none;
 
     a {
       @extend .article-title;
+      font-size: 1em;
       text-decoration: none;
     }
   }

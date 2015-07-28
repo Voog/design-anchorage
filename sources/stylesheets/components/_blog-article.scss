@@ -1,3 +1,9 @@
 .blog-article {
 
+  .comments-open & {
+    @include query($mobile-1) {
+      display: none;
+    }
+  }
+
 }

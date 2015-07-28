@@ -686,7 +686,6 @@ $flags:
         @include color($black, .7);
 
         &:hover {
-          font-weight: $font-weight-medium;
           @include color($black, 1);
         }
       }

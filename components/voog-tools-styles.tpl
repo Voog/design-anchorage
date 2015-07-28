@@ -62,9 +62,15 @@
       background-image: url("{{ bg_image_prefix }}.jpg");
     }
 
-    @media screen and (max-width: 600px) and (max-height: 572px) {
+    @media screen and (max-width: 1440px) {
       .content-right .background-image {
-        background-image: url("{{ bg_image_prefix }}_block.jpg");
+        background-image: url("{{ bg_image_prefix }}_huge.jpg");
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      .content-right .background-image {
+        background-image: url("{{ bg_image_prefix }}_large.jpg");
       }
     }
   {% endif %}
@@ -136,9 +142,15 @@
       background-image: url("{{ bg_image_prefix }}.jpg");
     }
 
-    @media screen and (max-width: 600px) and (max-height: 572px) {
+    @media screen and (max-width: 1440px) {
       .content-top .background-image {
-        background-image: url("{{ bg_image_prefix }}_block.jpg");
+        background-image: url("{{ bg_image_prefix }}_huge.jpg");
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      .content-top .background-image {
+        background-image: url("{{ bg_image_prefix }}_large.jpg");
       }
     }
   {% endif %}

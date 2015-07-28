@@ -28,6 +28,17 @@ a {
 
   .blog-article-page & {
     margin-bottom: 240px;
+
+    @include query($mobile-1) {
+      margin-bottom: 335px;
+    }
+    
+  }
+
+  .blog-article-page.comments-open & {
+    @include query($mobile-1) {
+      margin-bottom: 0!important;
+    }
   }
 
 }

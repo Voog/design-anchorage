@@ -9535,6 +9535,7 @@ return jQuery;
 
       $(this).addClass('open');
       $('.js-comments-close-btn').addClass('open');
+      $('body').addClass('comments-open');
       $('.js-comments').addClass('active');
       $('.js-comments-input').val('').focus();
     });
@@ -9543,6 +9544,7 @@ return jQuery;
     $('.js-comments-close-btn').click(function(event) {
       event.stopPropagation();
       $('.js-comments-open-btn, .js-comments-close-btn').removeClass('open');
+      $('body').removeClass('comments-open');
       $('.js-comments').removeClass('active');
       $('.js-voog-comments-modal').removeClass('comments-results-active');
     });
@@ -9560,7 +9562,8 @@ return jQuery;
 
         if (windowWidth >= 1400 ) {
           searchModalHeight = windowHeight - 190;
-        } else {
+        }
+        else {
           searchModalHeight = windowHeight - 171;
         }
 
@@ -9585,6 +9588,7 @@ return jQuery;
 
   // Set article comments section the height of the document minus the header section
   var commentsHeight = function() {
+    $('.article-comments').removeAttr('style');
     var documentHeight = $(document).height(),
         siteHeight = $('.site-container').height(),
         commentsHeight = $('.article-comments').height(),
@@ -9595,7 +9599,11 @@ return jQuery;
         footerHeight = $('.site-footer').height(),
         commentsTarget = (mainHeight + headerHeight + footerHeight) - headerHeight - commentsPadTop - commentsPadBottom;
 
-    $('.article-comments').css('height', commentsTarget);
+    if ($(window).width() > 480) {
+      $('.article-comments').css('height', commentsTarget);
+      console.log('22');
+    }
+
   };
 
   // Close elements not intended for the specific viewport when resizing

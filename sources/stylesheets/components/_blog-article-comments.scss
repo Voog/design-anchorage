@@ -13,12 +13,14 @@
     right: -100vw;
     width: 100vw;
     box-sizing: border-box;
+    box-shadow: none;
   }
 
   &.active {
     top: 0;
     right: 0;
     transition: 250ms;
+    box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
   }
 
   .comments-body {

@@ -43,13 +43,18 @@
       box-sizing: border-box;
       position: relative;
 
+      @include query($mobile-1) {
+        width: 100%;
+        display: block;
+      }
+
       a {
-        padding: 40px;
+        padding: $padding-medium;
         display: block;
 
         @include query($mobile-1) {
-          padding: 20px;
-          text-align: center;
+          padding: $margin-medium $margin-low;
+          text-align: left;
         }
       }
     }
@@ -59,6 +64,12 @@
     .article-nav-next {
       border-left: 1px solid transparent;
       margin-left: -1px;/* Hide border from one side */
+
+      @include query($mobile-1) {
+        border-top: 1px solid transparent;
+        border-left: 0;
+        margin-left: 0;
+      }
     }
     .article-nav-direction {
       font-size: $font-size-small - 2px;
@@ -72,10 +83,6 @@
       font-size: 20px;
       line-height: 30px;
       @include color($black-light, 1);
-
-      @include query($mobile-1) {
-        display: none;
-      }
     }
     .article-nav-bg {
       position: absolute;
@@ -87,4 +94,11 @@
       z-index: -1;
     }
   }
+
+  .comments-open & {
+    @include query($mobile-1) {
+      display: none;
+    }
+  }
+
 }
