@@ -1,3 +1,11 @@
+html {
+  font-size: $font-size-base;
+
+  @include query($tablet-2) {
+    font-size: $font-size-small;
+  }
+}
+
 body {
   margin: 0;
   font-family: $font-main;
@@ -32,7 +40,7 @@ a {
     @include query($mobile-1) {
       margin-bottom: 335px;
     }
-    
+
   }
 
   .blog-article-page.comments-open & {

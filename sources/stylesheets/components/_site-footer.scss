@@ -6,17 +6,16 @@
   min-height: $height-base;
 
   .inner {
-    text-align: center;
     min-height: 25px;
     padding-top: $padding-medium;
     padding-bottom: $padding-medium;
+  }
 
-    &.content-formatted {
-      font-size: $font-size-normal - 2px;
-      line-height: $line-height-medium;
-      @include color($black-light, 1);
-    }
-
+  .content-formatted {
+    font-size: $font-size-normal - 2px;
+    line-height: $line-height-medium;
+    text-align: center;
+    @include color($black-light, 1);
   }
 
   .voog-reference {

@@ -1,7 +1,7 @@
 .blog-article-page {
 
   .article-excerpt {
-    font-size: $font-size-large;
+    font-size: rem-calc($font-size-large);
     font-weight: $font-weight-light;
     line-height: $line-height-medium;
     @include color($black, 1);

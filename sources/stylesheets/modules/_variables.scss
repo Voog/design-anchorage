@@ -23,6 +23,7 @@ $font-main: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 // Font sizes.
 $font-size-small: 14px;
+$font-size-base: 16px;
 $font-size-normal: 18px;
 $font-size-title: 22px;
 $font-size-large: 26px;
@@ -73,3 +74,11 @@ $width-medium: 700px;
 $width-max: 1120px;
 
 $transition: 250ms;
+
+// The size of 1rem in pixels
+$baseSize: 16;
+
+// The size of a pixel in rems
+$px: 1 / $baseSize + 0rem;
+
+$rem-base: $font-size-base;

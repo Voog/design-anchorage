@@ -48,6 +48,15 @@
   font-weight: 700;
   src: url("../assets/roboto-bold-italic.eot?#iefix") format("embedded-opentype"), url("../assets/roboto-bold-italic.woff2") format("woff2"), url("../assets/roboto-bold-italic.woff") format("woff"), url("../assets/roboto-bold-italic.ttf") format("truetype"), url("../assets/roboto-bold-italic.svg#Roboto") format("svg");
 }
+html {
+  font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 body {
   margin: 0;
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1015,7 +1024,7 @@ a img {
   display: inline-block;
 }
 .blog-news-page .article-excerpt {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 300;
   line-height: 1.7;
   color: #4a4a4a;
@@ -1074,7 +1083,7 @@ a img {
 }
 
 .blog-article-page .article-excerpt {
-  font-size: 26px;
+  font-size: 1.625rem;
   font-weight: 300;
   line-height: 1.7;
   color: #222222;
@@ -2571,14 +2580,14 @@ a img {
   min-height: 100px;
 }
 .site-footer .inner {
-  text-align: center;
   min-height: 25px;
   padding-top: 40px;
   padding-bottom: 40px;
 }
-.site-footer .inner.content-formatted {
+.site-footer .content-formatted {
   font-size: 16px;
   line-height: 1.7;
+  text-align: center;
   color: #4a4a4a;
 }
 .site-footer .voog-reference {
