@@ -15,7 +15,6 @@
     @include rem-fallback(font-size, $font-size-base);
     line-height: $line-height-medium;
     text-align: center;
-    @include color($black-light, 1);
   }
 
   .voog-reference {

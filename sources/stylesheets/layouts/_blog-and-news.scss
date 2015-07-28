@@ -39,10 +39,7 @@
     @include color($black-lighter, 1);
     text-transform: uppercase;
     letter-spacing: 1px;
-  }
-
-  .article-author {
-    display: inline-block;
+    display: inline;
   }
 
   .article-excerpt {

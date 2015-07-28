@@ -111,19 +111,22 @@
         vertical-align: middle;
         padding: 60px 20px;
         .front-page & {
-          height: 422px;
+          @include rem-fallback(height, 422px);
         }
         &.is-photoheader{
-          height: 422px;
+          @include rem-fallback(height, 422px);
         }
       }
 
       @include query($mobile-1 - 58) {
         .wrap {
-          height: 222px;
+          @include rem-fallback(height, 222px);
 
+          .front-page & {
+            @include rem-fallback(height, 222px);
+          }
           &.is-photoheader{
-            height: 222px;
+            @include rem-fallback(height, 222px);
           }
         }
       }

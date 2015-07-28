@@ -21,6 +21,11 @@
     right: 0;
     transition: 250ms;
     box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
+
+    @include query($mobile-1) {
+      position: relative;
+
+    }
   }
 
   .comments-body {
