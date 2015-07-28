@@ -12,7 +12,7 @@
   }
 
   .content-formatted {
-    font-size: $font-size-normal - 2px;
+    @include rem-fallback(font-size, $font-size-base);
     line-height: $line-height-medium;
     text-align: center;
     @include color($black-light, 1);
@@ -71,7 +71,7 @@
       }
     }
     .article-nav-direction {
-      font-size: $font-size-small - 2px;
+      @include rem-fallback(font-size, $font-size-xs);
       font-weight: $font-weight-normal;
       line-height: $line-height-double;
       letter-spacing: 1px;
@@ -79,7 +79,7 @@
       text-transform: uppercase;
     }
     .article-nav-title {
-      font-size: 20px;
+      @include rem-fallback(font-size, $font-size-20);
       line-height: 30px;
       @include color($black-light, 1);
     }

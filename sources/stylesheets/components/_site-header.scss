@@ -25,7 +25,7 @@
 
   .header-title {
     @include hyphenate(true);
-    font-size: $font-size-title;
+    @include rem-fallback(font-size, $font-size-title);
     font-weight: $font-weight-light;
     line-height: $line-height-normal;
     position: relative;
@@ -35,7 +35,7 @@
   }
 
   .header-body {
-    font-size: $font-size-header;
+    @include rem-fallback(font-size, $font-size-header);
     font-weight: $font-weight-bold;
     line-height: $line-height-normal;
     text-transform: uppercase;
@@ -46,7 +46,7 @@
     }
 
     @include query($tablet-2) {
-      font-size: $font-size-xl;
+      @include rem-fallback(font-size, $font-size-xl);
     }
   }
 
@@ -156,7 +156,7 @@
 
   .article-author,
   .article-date{
-    font-size: $font-size-small;
+    @include rem-fallback(font-size, $font-size-small);
     font-weight: $font-weight-normal;
     line-height: $line-height-double;
     letter-spacing: 1px;

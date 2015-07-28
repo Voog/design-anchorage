@@ -1,13 +1,13 @@
 .blog-news-page {
 
   .article-title {
-    font-size: $font-size-xl;
+    @include rem-fallback(font-size, $font-size-xl);
     font-weight: $font-weight-light;
     line-height: $line-height-medium;
     margin: 10px 0 0;
 
     @include query($tablet-2) {
-      font-size: $font-size-large;
+      @include rem-fallback(font-size, $font-size-large);
     }
 
     a {
@@ -33,16 +33,12 @@
 
   .article-author,
   .article-date {
-    font-size: $font-size-small;
+    @include rem-fallback(font-size, $font-size-small);
     font-weight: $font-weight-normal;
     line-height: $line-height-normal;
     @include color($black-lighter, 1);
     text-transform: uppercase;
     letter-spacing: 1px;
-
-    @include query($tablet-2) {
-      font-size: $font-size-small - 2px;
-    }
   }
 
   .article-author {
@@ -89,7 +85,7 @@
       }
 
       .article-date {
-        font-size: $font-size-small - 2px;
+        @include rem-fallback(font-size, $font-size-xs);
         font-weight: $font-weight-normal;
         line-height: $line-height-medium;
         @include color($black-lighter, 1);
@@ -98,7 +94,7 @@
         top: 4px;
       }
       .article-title {
-        font-size: $font-size-normal;
+        @include rem-fallback(font-size, $font-size-normal);
         font-weight: $font-weight-light;
         line-height: $line-height-medium;
         margin-left: 150px;

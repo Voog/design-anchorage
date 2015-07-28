@@ -18,20 +18,9 @@
 
 .front-page {
   .page-content {
-    h1 {
-      @extend %large-text;
-    }
-
-    h2 {
-      @extend %medium-text;
-    }
 
     h3 {
-      font-size: $font-size-large;
-    }
-
-    p {
-      @extend %normal-text;
+      @include rem-fallback(font-size, $font-size-large);
     }
 
     .content-header {
@@ -51,7 +40,7 @@
 
   .main-content {
     .content-formatted {
-      font-size: $font-size-xl - 4px;
+      @include rem-fallback(font-size, $font-size-huge);
       font-weight: $font-weight-light;
       line-height: $line-height-medium;
       text-align: center;
@@ -79,11 +68,12 @@
       }
     }
   }
+
   .blog-feed {
     padding: $padding-general 0;
 
     .content-formatted {
-      font-size: $font-size-xl - 4px;
+      @include rem-fallback(font-size, $font-size-huge);
       font-weight: $font-weight-light;
       line-height: $line-height-medium;
       text-align: center;
@@ -101,7 +91,7 @@
     }
 
     h1 {
-      font-size: $font-size-small;
+      @include rem-fallback(font-size, $font-size-small);
       line-height: $line-height-normal;
       text-transform: uppercase;
     }

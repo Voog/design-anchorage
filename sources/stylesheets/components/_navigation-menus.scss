@@ -8,7 +8,7 @@
   list-style-type: none;
 
   li {
-    font-size: $font-size-normal - 2px;
+    @include rem-fallback(font-size, $font-size-base);
     line-height: $line-height-medium;
     font-weight: $font-weight-light;
     @extend %inline-block;
@@ -196,7 +196,7 @@
       }
     }
     .lang-title {
-      font-size: 20px;
+      font-size: $font-size-20;
       text-transform: uppercase;
       line-height: 42px;
     }
@@ -660,7 +660,7 @@ $flags:
 
   li {
     display: block;
-    font-size: $font-size-small;
+    @include rem-fallback(font-size, $font-size-small);
     text-align: right;
     line-height: normal;
     text-transform: uppercase;
@@ -722,11 +722,11 @@ $flags:
     display: inline-block;
     background-color: transparent;
     text-transform: uppercase;
-    font-size: 14px;
+    @include rem-fallback(font-size, $font-size-small);
     a {
       background-color: transparent;
       text-transform: uppercase;
-      font-size: 14px;
+      @include rem-fallback(font-size, $font-size-small);
     }
   }
 }
@@ -738,7 +738,7 @@ $flags:
   display: block;
   height: 15px;
   font-family: inherit;
-  font-size: 12px;
+  @include rem-fallback(font-size, $font-size-xs);
   cursor: pointer;
   vertical-align: middle;
   border: none;

@@ -28,7 +28,7 @@
     overflow-y: scroll;
 
     .comments-title {
-      font-size: $font-size-large;
+      @include rem-fallback(font-size, $font-size-large);
       font-weight: $font-weight-light;
       line-height: $line-height-medium;
       @include color($black, 1);
@@ -49,14 +49,14 @@
 
     .comment-body {
       display: block;
-      font-size: 16px;
+      @include rem-fallback(font-size, $font-size-base);
       line-height: 24px;
     }
 
     .comment-author,
     .comment-date {
       @include color($grey, 1);
-      font-size: $font-size-small;
+      @include rem-fallback(font-size, $font-size-small);
       font-weight: $font-weight-normal;
       line-height: $line-height-double;
     }

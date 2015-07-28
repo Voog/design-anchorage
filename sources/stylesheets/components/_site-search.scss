@@ -8,7 +8,7 @@
     @extend %inherit-base-font;
     width: 128px;
     padding: 4px 5px 3px;
-    font-size: 14px;
+    font-size: $font-size-small;
     border-width: 1px;
     border-style: solid;
     border-color: rgba($black, .53);
@@ -20,6 +20,7 @@
     top: -1px;
   }
 }
+
 /* SEARCH */
 // Styling rules for the site's search box. These rules affect the entire site.
 .search,
@@ -103,7 +104,7 @@
   margin: 0;
   padding: 0 65px 0 20px;
   font-family: inherit;
-  font-size: 16px;
+  font-size: $font-size-base;
   line-height: 20px;
   @include color($black, 1);
   background: none;
@@ -300,7 +301,7 @@
 
   p {
     margin: 5px 0 0;
-    font-size: 14px;
+    @include rem-fallback(font-size, $font-size-small);
     line-height: 24px;
     @include color($grey, 1);
   }

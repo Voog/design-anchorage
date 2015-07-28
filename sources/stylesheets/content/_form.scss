@@ -3,7 +3,7 @@
 
   form,
   .form {
-    font-size: $font-size-small;
+    @include rem-fallback(font-size, $font-size-small);
   }
 
   .form_field {
@@ -16,7 +16,7 @@
     label,
     .form_field_label {
       display: block;
-      font-size: $font-size-small;
+      @include rem-fallback(font-size, $font-size-small);
     }
 
     .form_field_label {
@@ -42,7 +42,7 @@
     @extend %input-ios-reset;
     @extend %inherit-base-font;
     padding: 7px;
-    font-size: $font-size-small;
+    @include rem-fallback(font-size, $font-size-small);
     font-weight: $font-weight-light;
     line-height: $font-size-large;
     @include color($black-lighter, 1);
@@ -91,7 +91,7 @@
       min-width: 200px;
       text-transform: uppercase;
       font-family: $font-main;
-      font-size: $font-size-small;
+      @include rem-fallback(font-size, $font-size-small);
       font-weight: $font-weight-normal;
       line-height: $line-height-double;
       cursor: pointer;
@@ -131,11 +131,11 @@
   }
 
   .form_field_error {
-    font-size: $font-size-small;
+    @include rem-fallback(font-size, $font-size-small);
   }
 
   .form_notice {
-    font-size: $font-size-large;
+    @include rem-fallback(font-size, $font-size-large);
     font-weight: $font-weight-bold;
     color: rgba($white, 1);
   }

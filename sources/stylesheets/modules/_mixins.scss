@@ -160,3 +160,11 @@
   }
   @return $remValues;
 }
+
+@mixin rem-fallback($property, $value) {
+  $pxValue: $value;
+  $remValue: rem-calc($value);
+
+  #{$property}: $pxValue;
+  #{$property}: $remValue;
+}
