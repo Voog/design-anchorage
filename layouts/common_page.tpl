@@ -30,7 +30,7 @@
 
           <div class="main-inner-row content-full">
 
-            <div class="main-content">
+            <div class="main-content top-row">
               <div class="wrap">
                 <div class="inner">
                   <section class="content-area">
@@ -43,7 +43,7 @@
               </div>
             </div>
 
-            <div class="main-content">
+            <div class="main-content bottom-row">
               <div class="wrap">
 
                 <div class="inner content-half content-left">

@@ -41,6 +41,17 @@
       box-sizing: border-box;
       position: relative;
 
+      &:hover {
+        transition: $transition;
+
+        .article-nav-title {
+          @include color($black, 1);
+        }
+        .article-nav-direction {
+          @include color($black-light, 1);
+        }
+      }
+
       @include query($mobile-1) {
         width: 100%;
         display: block;
@@ -49,6 +60,8 @@
       a {
         padding: $padding-medium;
         display: block;
+        height: 100%;
+        overflow: auto;
 
         @include query($mobile-1) {
           padding: $margin-medium $margin-low;

@@ -1,4 +1,3 @@
-.content-area,
 .content-formatted {
 
   form,
@@ -46,6 +45,7 @@
     font-weight: $font-weight-light;
     line-height: $font-size-large;
     @include color($black-lighter, 1);
+    background-color: transparent;
     border-width: 1px;
     border-style: solid;
     border-color: $white-cloudy;
@@ -96,6 +96,11 @@
       line-height: $line-height-double;
       cursor: pointer;
 
+      .dark-background & {
+        @include bg($white, 1);
+        @include color($black, 1);
+      }
+
       @include querymin($tablet-2) {
         .content-half & {
           width: 100%;
@@ -111,6 +116,10 @@
       &:hover {
         @include bg($black-light, 1);
         transition: $transition;
+
+        .dark-background & {
+          @include bg($white-cloudy, 1);
+        }
       }
       &:focus {
         outline: none;
@@ -130,14 +139,26 @@
     color: rgba($error-color, 1);
   }
 
+  .form_error {
+    @include rem-fallback(font-size, $font-size-normal);
+    font-weight: $font-weight-light;
+    @include color($error-color, 1);
+    margin-bottom: $margin-low;
+  }
+
   .form_field_error {
     @include rem-fallback(font-size, $font-size-small);
   }
 
   .form_notice {
     @include rem-fallback(font-size, $font-size-large);
-    font-weight: $font-weight-bold;
-    color: rgba($white, 1);
+    font-weight: $font-weight-light;
+    @include color($black-light, 1);
+    margin-bottom: $margin-low;
+
+    .dark-background & {
+      @include color($white, 1);
+    }
   }
 
 }

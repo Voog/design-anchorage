@@ -9,7 +9,6 @@
   font-weight: $font-weight-light;
   line-height: $line-height-medium;
 
-
   .dark-background & {
     @include color($white, 1);
   }
@@ -115,7 +114,7 @@
 
   h1 {
     @include rem-fallback(font-size, $font-size-xl);
-    line-height: $line-height-medium;
+    line-height: $line-height-middle;
 
     .contacts & {
       font-size: 32px;
@@ -217,7 +216,24 @@
     @include hyphenate(false);
   }
 
-    // Top and bottom margin for the elements that doesn't have the default margin.
+  // Prevent center align on specific elements
+  pre,
+  code,
+  iframe,
+  table,
+  form,
+  .form,
+  ul,
+  ol,
+  dl {
+    .header-bottom-inner &,
+    .main-content &,
+    .main-feature & {
+      text-align: left;
+    }
+  }
+
+  // Top and bottom margin for the elements that doesn't have the default margin.
   pre,
   .edy-positionable-container-left-block,
   .edy-positionable-container-right-block,
@@ -395,13 +411,22 @@
         @include border(all, 1px,solid,$black);
 
         .footer & {
-          @include color($white, 0.5);
+          @include color($white, .5);
         }
       }
 
       td {
-        @include border(top, 1px, solid, $black, 0.1);
-        @include border(bottom, 1px, solid, $black, 0.1);
+        @include border(top, 1px, solid, $black, .1);
+        @include border(right, 1px, solid, $black, .1);
+        @include border(bottom, 1px, solid, $black, .1);
+        @include border(left, 1px, solid, $black, .1);
+
+        .dark-background & {
+          @include border(top, 1px, solid, $white, .1);
+          @include border(right, 1px, solid, $white, .1);
+          @include border(bottom, 1px, solid, $white, .1);
+          @include border(left, 1px, solid, $white, .1);
+        }
       }
     }
 

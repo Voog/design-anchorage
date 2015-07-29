@@ -148,6 +148,13 @@ a {
   padding: $margin-half $margin-medium;
   min-height: $height-base;
 
+  .common-page .top-row & {
+    padding: $margin-half $margin-medium $margin-low;
+  }
+  .common-page .bottom-row & {
+    padding: 0 $margin-medium $margin-half;
+  }
+
   @include query($tablet-2) {
     padding: $margin-medium $margin-low;
   }

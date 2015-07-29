@@ -21,6 +21,10 @@
       outline-color: rgba($white, .63);
     }
   }
+  .edy-texteditor-active table td.wysiwyg-tmp-selected-cell,
+  .edy-texteditor-active table th.wysiwyg-tmp-selected-cell {
+    outline: 1px solid rgba(255, 255, 255, 0.6);
+  }
 }
 
 .edy-content-element > .form {
