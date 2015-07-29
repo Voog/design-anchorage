@@ -19,10 +19,6 @@
 .front-page {
   .page-content {
 
-    h3 {
-      @include rem-fallback(font-size, $font-size-large);
-    }
-
     .content-header {
       @extend %large-text;
       margin-bottom: 10px;

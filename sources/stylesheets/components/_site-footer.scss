@@ -35,11 +35,20 @@
     display: table;
     width: 100%;
 
+    @include query($mobile-1) {
+      display: block;
+    }
+
     .article-nav-half {
       width: 50%;
       display: table-cell;
       box-sizing: border-box;
       position: relative;
+
+      @include query($mobile-1) {
+        width: 100%;
+        display: block;
+      }
 
       &:hover {
         transition: $transition;
@@ -50,11 +59,6 @@
         .article-nav-direction {
           @include color($black-light, 1);
         }
-      }
-
-      @include query($mobile-1) {
-        width: 100%;
-        display: block;
       }
 
       a {

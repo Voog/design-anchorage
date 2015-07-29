@@ -27,6 +27,13 @@
       {% endfor %}
 
         <main class="page-content" role="main">
+          {% comment %}Set variables to detect if "content areas" have content{% endcomment %}
+          {% capture content_main_html %}{% unless editmode %}{% content %}{% endunless %}{% endcapture %}
+          {% capture content_main_size %}{{ content_main_html | size | minus : 1 }}{% endcapture %}
+          {% capture content_left_html %}{% unless editmode %}{% content name="left" %}{% endunless %}{% endcapture %}
+          {% capture content_left_size %}{{ content_left_html | size | minus : 1 }}{% endcapture %}
+          {% capture content_right_html %}{% unless editmode %}{% content name="right" %}{% endunless %}{% endcapture %}
+          {% capture content_right_size %}{{ content_right_html | size | minus : 1 }}{% endcapture %}
 
           <div class="main-inner-row content-full">
 

@@ -129,7 +129,9 @@
     .main-feature & {
       margin-bottom: 17px;
       text-align: left;
-      font-weight: $font-weight-normal;
+      @include rem-fallback(font-size, $font-size-title);
+      font-weight: $font-weight-light;
+      text-transform: uppercase;
 
       @include query($mobile-1 - 58) {
         &:first-child {

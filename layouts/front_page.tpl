@@ -16,6 +16,13 @@
       {% include 'site-header' %}
 
       <main class="page-content" role="main">
+        {% comment %}Set variables to detect if "feature content areas" have content{% endcomment %}
+        {% capture feature_left_html %}{% unless editmode %}{% content name="feature_left" %}{% endunless %}{% endcapture %}
+        {% capture feature_left_size %}{{ feature_left_html | size | minus : 1 }}{% endcapture %}
+        {% capture feature_center_html %}{% unless editmode %}{% content name="feature_center" %}{% endunless %}{% endcapture %}
+        {% capture feature_center_size %}{{ feature_center_html | size | minus : 1 }}{% endcapture %}
+        {% capture feature_right_html %}{% unless editmode %}{% content name="feature_right" %}{% endunless %}{% endcapture %}
+        {% capture feature_right_size %}{{ feature_right_html | size | minus : 1 }}{% endcapture %}
 
         <div class="main-inner-row content-full content-left js-content-left">
           <div class="background-image stretch"></div>
@@ -32,13 +39,13 @@
 
           <div class="main-feature">
             <div class="wrap js-background-type {{ content_left_bg_type }}">
-              <div class="feature-left inner inner-left content-formatted{% if editmode %} narrow-feature{% else %}{% unless feature_right_size contains '-' %} narrow-feature{% endunless %}{% endif %}">
+              <div class="feature-left inner inner-left content-formatted{% if editmode %} narrow-feature{% else %}{% unless feature_left_size contains '-' %} narrow-feature{% endunless %}{% endif %}">
                 {% content name="feature_left" %}
               </div>
-              <div class="feature-center inner inner-center content-formatted{% if editmode %} narrow-feature{% else %}{% unless feature_left_size contains '-' %} narrow-feature{% endunless %}{% endif %}">
+              <div class="feature-center inner inner-center content-formatted{% if editmode %} narrow-feature{% else %}{% unless feature_center_size contains '-' %} narrow-feature{% endunless %}{% endif %}">
                 {% content name="feature_center" %}
               </div>
-              <div class="feature-right inner inner-right content-formatted{% if editmode %} narrow-feature{% else %}{% unless feature_left_size contains '-' %} narrow-feature{% endunless %}{% endif %}">
+              <div class="feature-right inner inner-right content-formatted{% if editmode %} narrow-feature{% else %}{% unless feature_right_size contains '-' %} narrow-feature{% endunless %}{% endif %}">
                 {% content name="feature_right" %}
               </div>
             </div>

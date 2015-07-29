@@ -65,6 +65,7 @@
   }
 
   .articles-listing {
+    @extend %clearfix;
     margin: 0 $margin-general;
 
     .articles-listing-header {
