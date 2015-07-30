@@ -32,24 +32,30 @@
                 {% else %}
                 {% endif %}
 
-                {% if article.comments_count > 0 %}
-                  <div class="comments-title comments-btn comments-open-btn js-comments-open-btn">
+                <div class="comments-title comments-btn comments-open-btn js-comments-open-btn">
+                  {% if article.comments_count > 0 %}
                     {{ "comments_for_count" | lc }}
                     <span class="voog-site-blog-comments-count"> ({{ article.comments_count }})</span>
-                  </div>
+                  {% else %}
+                    {{ "comment" | lc }}
+                  {% endif %}
+                </div>
 
-                  <div class="comments-title comments-btn comments-close-btn js-comments-close-btn">
+                <div class="comments-title comments-btn comments-close-btn js-comments-close-btn">
+                  {% if article.comments_count > 0 %}
                     {{ "comments_for_count" | lc }}
                     <span class="voog-site-blog-comments-count"> ({{ article.comments_count }})</span>
-                  </div>
+                  {% else %}
+                    {{ "comment" | lc }}
+                  {% endif %}
+                </div>
+
+                {% if editmode %}
+                {% elsif article.data.content_top_bg.imageSizes == nil or article.data.content_top_bg.imageSizes == "" %}
+                  <header class="article-header">
+                    <h1 class="article-title">{% if editmode %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
+                  </header>
                 {% else %}
-                  <div class="comments-title comments-btn comments-open-btn js-comments-open-btn">
-                    {{ "comment" | lc }}
-                  </div>
-
-                  <div class="comments-title comments-btn comments-close-btn js-comments-close-btn">
-                    {{ "comment" | lc }}
-                  </div>
                 {% endif %}
 
                 <section class="blog-article content-area">

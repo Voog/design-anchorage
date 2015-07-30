@@ -390,7 +390,6 @@
 
     if ($(window).width() > 480) {
       $('.article-comments').css('height', commentsTarget);
-      console.log('22');
     }
 
   };

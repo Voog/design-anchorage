@@ -1,22 +1,20 @@
 .blog-article-page {
 
-  .article-excerpt {
-    @include rem-fallback(font-size, $font-size-large);
-    font-weight: $font-weight-light;
-    line-height: $line-height-medium;
-    @include color($black, 1);
-    margin: 30px 0;
-
-    &:empty {
-      display: none;
-    }
-  }
   .article-body {
     @include rem-fallback(font-size, $font-size-normal);
     font-weight: $font-weight-light;
     line-height: $line-height-medium;
     @include color($black-light, 1);
     margin: 30px 0;
+  }
+
+  .article-excerpt {
+    @extend .article-body;
+    font-weight: $font-weight-normal;
+
+    &:empty {
+      display: none;
+    }
   }
 
   .comments-title {
@@ -53,6 +51,14 @@
     .article-meta {
       display: inline-block;
       margin-right: $margin-medium;
+    }
+
+    .article-header {
+      margin: $margin-large 0 $margin-medium;
+
+      a {
+        border-bottom: none;
+      }
     }
 
     .article-author,

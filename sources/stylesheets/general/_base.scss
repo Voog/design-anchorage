@@ -119,6 +119,10 @@ a {
   }
 }
 
+.stretch {
+  @extend %stretch;
+}
+
 .background-image,
 .background-color {
   position: absolute;
@@ -142,6 +146,10 @@ a {
   .front-page &,
   .common-page & {
     @extend %wide-wrap;
+  }
+
+  .blog-article-page & {
+    @extend %medium-wrap;
   }
 }
 

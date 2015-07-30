@@ -64,7 +64,11 @@
         {% elsif article.data.content_top_bg.imageSizes == nil or article.data.content_top_bg.imageSizes == "" %}
           <div class="wrap">
             <div class="header-body">
-              <h1><a href="{{ article.url }}">{{ article.title }}</a></h1>
+              {% for item in site.menuitems_with_hidden %}
+                {% if item.selected? %}
+                  <h1><a href="{{ item.url }}">{{ item.title }}</a></h1>
+                {% endif %}
+              {% endfor %}
             </div>
           </div>
         {% else %}
