@@ -194,6 +194,10 @@
     margin-bottom: 0;
     position: relative;
 
+    @include querymin($tablet-3) {
+      margin-left: $margin-medium;
+    }
+
     .search-btn {
       position: absolute;
       top: -13px;
@@ -373,9 +377,53 @@
   }
 
   .navigation-menu {
+
+    @include querymin($tablet-3) {
+      ul {
+        li {
+          text-align: left;
+        }
+      }
+    }
+
     .lang-menu-open &,
     .mobile-search-open & {
       display: none;
+    }
+
+    .submenu {
+      display: block;
+      padding-bottom: 0;
+
+      li {
+        a {
+          @include rem-fallback(font-size, $font-size-normal);
+        }
+      }
+      .submenu-lvl2 {
+        display: block;
+        padding-bottom: 0;
+
+        li {
+          a {
+            @include rem-fallback(font-size, $font-size-base);
+          }
+        }
+      }
+    }
+
+    @include querymin($tablet-3) {
+      .submenu {
+        padding: $margin-low 0 0 $margin-base;
+
+        li {
+          padding: 0 $margin-base;
+        }
+
+        .submenu-lvl2 {
+          padding: $margin-low 0 0 $margin-base;
+        }
+      }
     }
   }
 

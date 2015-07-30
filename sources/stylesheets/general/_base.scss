@@ -174,12 +174,6 @@ a {
     padding: $margin-half $margin-medium $margin-low;
   }
 
-  .common-page .sidebar-active .top-row & {
-    @include query($tablet-2) {
-      padding: 0 $margin-medium $margin-low;
-    }
-  }
-
   .common-page .bottom-row & {
     padding: 0 $margin-medium $margin-half;
   }

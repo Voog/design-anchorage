@@ -103,6 +103,11 @@
     @content;
   }
 }
+@mixin queryminmax($minvalue, $maxvalue) {
+  @media screen and (min-width: $minvalue + 1px) and (max-width: $maxvalue) {
+    @content;
+  }
+}
 
 // MEDIA QUERY
 @mixin querysearch($value: $tablet-1, $screen: 'max-width') {

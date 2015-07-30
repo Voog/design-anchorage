@@ -5,9 +5,7 @@
   position: relative;
 
   @include query($tablet-2) {
-    float: none;
-    width: auto;
-    margin: $margin-medium $margin-medium 0;
+    display: none;
   }
   @include querymin($wide-1) {
     width: 20%;
