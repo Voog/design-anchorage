@@ -73,13 +73,15 @@
       </main>
 
       {% include 'site-footer' with 'blog_article_page' %}
-      {% include 'menu-mobile' %}
-      {% include 'site-javascripts' %}
-      {% include 'voog-tools' with 'blog_article_page' %}
-      <script>
-        site.initArticlePage();
-        site.initWindowResize();
-      </script>
     </div>
+
+
+    {% include 'menu-mobile' %}
+    {% include 'site-javascripts' %}
+    {% include 'voog-tools' with 'blog_article_page' %}
+    <script>
+      site.initArticlePage();
+      site.initWindowResize();
+    </script>
   </body>
 </html>

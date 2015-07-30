@@ -51,13 +51,15 @@
       </main>
 
       {% include 'site-footer' %}
-      {% include 'menu-mobile' %}
-      {% include 'site-javascripts' %}
-      {% include 'voog-tools' with 'blog_page' %}
-      <script>
-        site.initBlogPage();
-        site.initWindowResize();
-      </script>
     </div>
+
+
+    {% include 'menu-mobile' %}
+    {% include 'site-javascripts' %}
+    {% include 'voog-tools' with 'blog_page' %}
+    <script>
+      site.initBlogPage();
+      site.initWindowResize();
+    </script>
   </body>
 </html>

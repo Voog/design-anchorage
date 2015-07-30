@@ -12,6 +12,7 @@
   </head>
 
   <body class="front-page">
+
     <div class="site-container">
       {% include 'site-header' %}
 
@@ -67,13 +68,14 @@
       </main>
 
       {% include 'site-footer' %}
-      {% include 'menu-mobile' %}
-      {% include 'site-javascripts' %}
-      {% include 'voog-tools' with 'front_page' %}
-      <script>
-        site.initFrontPage();
-        site.initWindowResize();
-      </script>
     </div>
+
+    {% include 'menu-mobile' %}
+    {% include 'site-javascripts' %}
+    {% include 'voog-tools' with 'front_page' %}
+    <script>
+      site.initFrontPage();
+      site.initWindowResize();
+    </script>
   </body>
 </html>

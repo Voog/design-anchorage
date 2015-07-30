@@ -78,13 +78,14 @@
       </div>
 
       {% include 'site-footer' %}
-      {% include "menu-mobile" %}
-      {% include 'site-javascripts' %}
-      {% include 'voog-tools' with 'common_page' %}
-      <script>
-        site.initCommonPage();
-        site.initWindowResize();
-      </script>
     </div>
+
+    {% include "menu-mobile" %}
+    {% include 'site-javascripts' %}
+    {% include 'voog-tools' with 'common_page' %}
+    <script>
+      site.initCommonPage();
+      site.initWindowResize();
+    </script>
   </body>
 </html>

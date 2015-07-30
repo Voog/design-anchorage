@@ -98,7 +98,7 @@
     @content;
   }
 }
-@mixin querymin($value: $tablet-2) {
+@mixin querymin($value) {
   @media screen and (min-width: $value + 1px) {
     @content;
   }

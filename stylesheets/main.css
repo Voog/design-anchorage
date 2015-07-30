@@ -76,10 +76,23 @@ a img {
 }
 
 .site-container {
+  left: 0;
   margin: 0 auto;
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
+}
+@media screen and (min-width: 641px) {
+  .site-container {
+    -webkit-transition: left 0.3s;
+    -ms-transition: left 0.3s;
+    -moz-transition: left 0.3s;
+    -o-transition: left 0.3s;
+    transition: left 0.3s;
+  }
+  .mobilemenu-open .site-container {
+    left: -300px;
+  }
 }
 
 .page-content {
@@ -1684,16 +1697,35 @@ a img {
     position: absolute;
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     top: 0;
-    right: 0;
     bottom: 0;
-    left: 0;
     visibility: hidden;
     opacity: 0;
     overflow: auto;
     background-color: #000;
     background-color: rgba(0, 0, 0, 0.9);
+    transition: 500ms;
     -webkit-overflow-scrolling: touch;
   }
+}
+@media screen and (max-width: 768px) and (max-width: 640px) {
+  #mobile-menu {
+    left: 0;
+    right: 0;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 641px) {
+  #mobile-menu {
+    left: auto;
+    right: -300px;
+    width: 300px;
+    -webkit-transition: right 0.3s;
+    -ms-transition: right 0.3s;
+    -moz-transition: right 0.3s;
+    -o-transition: right 0.3s;
+    transition: right 0.3s;
+  }
+}
+@media screen and (max-width: 768px) {
   #mobile-menu .mobile-site-options {
     margin: 20px;
     margin-bottom: 0;
@@ -1718,11 +1750,11 @@ a img {
     line-height: 42px;
   }
   .mobilemenu-open #mobile-menu {
+    right: 0;
     position: fixed;
     visibility: visible;
     z-index: 1000;
     opacity: 1;
-    transition: 500ms;
     -webkit-transform: translateZ(1px);
     -moz-transform: translateZ(1px);
     -o-transform: translateZ(1px);
