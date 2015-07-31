@@ -341,6 +341,41 @@
     $('.js-comments-form, .js-voog-comments-modal').click(function(event) {
       event.stopPropagation();
     });
+
+
+    // Submenu lvl1 load more on mobile.
+    $('.submenu-load-more-lvl1').click(function(event) {
+      event.stopPropagation();
+
+      $(this).addClass('open');
+      $('.submenu').addClass('open');
+      $('.submenu-close-lvl1').addClass('open');
+    });
+
+    $('.submenu-close-lvl1').click(function(event) {
+      event.stopPropagation();
+      $('.submenu').removeClass('open');
+      $('.submenu-load-more-lvl1').removeClass('open');
+      $('.submenu-close-lvl1').removeClass('open');
+    });
+
+    // Submenu lvl2 load more on mobile.
+    $('.submenu-load-more-lvl2').click(function(event) {
+      event.stopPropagation();
+
+      $(this).addClass('open');
+      $('.submenu-lvl2').addClass('open');
+      $('.submenu-close-lvl2').addClass('open');
+    });
+
+    $('.submenu-close-lvl2').click(function(event) {
+      event.stopPropagation();
+      $('.submenu-lvl2').removeClass('open');
+      $('.submenu-load-more-lvl2').removeClass('open');
+      $('.submenu-close-lvl2').removeClass('open');
+    });
+
+
   };
 
   // Sets the search modal height.

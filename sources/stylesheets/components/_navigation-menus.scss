@@ -105,8 +105,10 @@
   height: $button-square;
   outline: 0;
 
-  .mobilemenu-open & {
-    visibility: hidden;
+  @include query($tablet-3) {
+    .mobilemenu-open & {
+      visibility: hidden;
+    }
   }
 
   span {
@@ -162,7 +164,6 @@
 
 #mobile-menu {
   display: block;
-  position: absolute;
   font-family: $font-main;
   top: 0;
   bottom: 0;
@@ -171,14 +172,19 @@
   overflow: auto;
   @include bg($black-base, .9);
   transition: $transition;
+  overflow: hidden;
   -webkit-overflow-scrolling: touch;
 
   @include query($tablet-3) {
+    position: absolute;
     left: 0;
     right: 0;
   }
 
   @include querymin($tablet-3) {
+    position: fixed;
+    visibility: visible;
+    opacity: 1;
     left: auto;
     right: -300px;
     width: 300px;
@@ -223,12 +229,10 @@
     right: 0;
     position: fixed;
     visibility: visible;
-    z-index: 1000;
     opacity: 1;
-    -webkit-transform:translateZ(1px);
-      -moz-transform:translateZ(1px);
-      -o-transform:translateZ(1px);
-      transform:translateZ(1px);
+    z-index: 1000;
+    overflow: auto;
+    box-shadow: -10px 19px 30px rgba(68,68,68,.31);
   }
 
   .mobile-menu-close {
@@ -364,8 +368,7 @@
       }
 
       a {
-        font-size: 24px;
-        text-transform: uppercase;
+        @include rem-fallback(font-size, 24px);
         line-height: $line-height;
         @include color($white, .5);
 
@@ -382,6 +385,7 @@
       ul {
         li {
           text-align: left;
+          padding: $margin-base 0;
         }
       }
     }
@@ -394,6 +398,7 @@
     .submenu {
       display: block;
       padding-bottom: 0;
+      padding-top: $margin-low / 2;
 
       li {
         a {
@@ -403,6 +408,7 @@
       .submenu-lvl2 {
         display: block;
         padding-bottom: 0;
+        padding-top: $margin-low / 2;
 
         li {
           a {
@@ -412,16 +418,37 @@
       }
     }
 
+    @include query($tablet-3) {
+      .submenu,
+      .submenu-lvl2 {
+        visibility: hidden;
+        height: 0;
+        opacity: 0;
+        transition: $transition;
+      }
+      .submenu.open,
+      .submenu-lvl2.open {
+        visibility: visible;
+        height: auto;
+        opacity: 1;
+        transition: $transition
+      }
+    }
+
     @include querymin($tablet-3) {
       .submenu {
         padding: $margin-low 0 0 $margin-base;
 
         li {
-          padding: 0 $margin-base;
+          padding: 5px $margin-base;
         }
 
         .submenu-lvl2 {
           padding: $margin-low 0 0 $margin-base;
+
+          li {
+            padding: 0 $margin-base;
+          }
         }
       }
     }
@@ -432,6 +459,52 @@
 
     .lang-menu-open & {
       display: table;
+    }
+  }
+
+  .submenu-load-more {
+    height: 20px;
+    width: 30px;
+    display: block;
+    color: white;
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    @include querymin($tablet-3) {
+      display: none!important;
+    }
+
+    &:after {
+      content: "▼";
+      font-size: 15px;
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0px;
+    }
+  }
+
+  .submenu-load-more-lvl1,
+  .submenu-load-more-lvl2 {
+
+    &.open {
+      display: none;
+    }
+
+  }
+
+  .submenu-close-lvl1,
+  .submenu-close-lvl2 {
+    display: none;
+
+    &:after {
+      transform: rotate(180deg);
+    }
+    &.open {
+      display: block;
     }
   }
 }

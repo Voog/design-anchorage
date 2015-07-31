@@ -63,6 +63,8 @@
           </a>
 
           {% if editmode or item.children? %}
+            <div class="submenu-load-more submenu-load-more-lvl1"></div>
+            <div class="submenu-load-more submenu-close-lvl1"></div>
             <ul class="submenu">
 
               {% for level2 in item.visible_children %}
@@ -71,6 +73,8 @@
 
                   {% if level2.selected? %}
                     {% if editmode or level2.children? %}
+                      <div class="submenu-load-more submenu-load-more-lvl2"></div>
+                      <div class="submenu-load-more submenu-close-lvl2"></div>
                       <ul class="submenu-lvl2">
 
                         {% for level3 in level2.visible_children %}

@@ -1693,9 +1693,13 @@ a img {
     height: 42px;
     outline: 0;
   }
+}
+@media screen and (max-width: 768px) and (max-width: 640px) {
   .mobilemenu-open .mobile-menu-toggler {
     visibility: hidden;
   }
+}
+@media screen and (max-width: 768px) {
   .mobile-menu-toggler span, .mobile-menu-toggler span:before, .mobile-menu-toggler span:after {
     position: absolute;
     top: 14px;
@@ -1737,7 +1741,6 @@ a img {
 
   #mobile-menu {
     display: block;
-    position: absolute;
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     top: 0;
     bottom: 0;
@@ -1747,17 +1750,22 @@ a img {
     background-color: #000;
     background-color: rgba(0, 0, 0, 0.9);
     transition: 500ms;
+    overflow: hidden;
     -webkit-overflow-scrolling: touch;
   }
 }
 @media screen and (max-width: 768px) and (max-width: 640px) {
   #mobile-menu {
+    position: absolute;
     left: 0;
     right: 0;
   }
 }
 @media screen and (max-width: 768px) and (min-width: 641px) {
   #mobile-menu {
+    position: fixed;
+    visibility: visible;
+    opacity: 1;
     left: auto;
     right: -300px;
     width: 300px;
@@ -1803,12 +1811,10 @@ a img {
     right: 0;
     position: fixed;
     visibility: visible;
-    z-index: 1000;
     opacity: 1;
-    -webkit-transform: translateZ(1px);
-    -moz-transform: translateZ(1px);
-    -o-transform: translateZ(1px);
-    transform: translateZ(1px);
+    z-index: 1000;
+    overflow: auto;
+    box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
   }
   #mobile-menu .mobile-menu-close {
     position: absolute;
@@ -1931,7 +1937,7 @@ a img {
   #mobile-menu .navigation-menu ul a,
   #mobile-menu .lang-menu ul a {
     font-size: 24px;
-    text-transform: uppercase;
+    font-size: 1.5rem;
     line-height: 32px;
     color: #ffffff;
     color: rgba(255, 255, 255, 0.5);
@@ -1944,6 +1950,7 @@ a img {
 @media screen and (max-width: 768px) and (min-width: 641px) {
   #mobile-menu .navigation-menu ul li {
     text-align: left;
+    padding: 10px 0;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1953,6 +1960,7 @@ a img {
   #mobile-menu .navigation-menu .submenu {
     display: block;
     padding-bottom: 0;
+    padding-top: 10px;
   }
   #mobile-menu .navigation-menu .submenu li a {
     font-size: 18px;
@@ -1961,10 +1969,27 @@ a img {
   #mobile-menu .navigation-menu .submenu .submenu-lvl2 {
     display: block;
     padding-bottom: 0;
+    padding-top: 10px;
   }
   #mobile-menu .navigation-menu .submenu .submenu-lvl2 li a {
     font-size: 16px;
     font-size: 1rem;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 640px) {
+  #mobile-menu .navigation-menu .submenu,
+  #mobile-menu .navigation-menu .submenu-lvl2 {
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    transition: 500ms;
+  }
+  #mobile-menu .navigation-menu .submenu.open,
+  #mobile-menu .navigation-menu .submenu-lvl2.open {
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+    transition: 500ms;
   }
 }
 @media screen and (max-width: 768px) and (min-width: 641px) {
@@ -1972,10 +1997,13 @@ a img {
     padding: 20px 0 0 10px;
   }
   #mobile-menu .navigation-menu .submenu li {
-    padding: 0 10px;
+    padding: 5px 10px;
   }
   #mobile-menu .navigation-menu .submenu .submenu-lvl2 {
     padding: 20px 0 0 10px;
+  }
+  #mobile-menu .navigation-menu .submenu .submenu-lvl2 li {
+    padding: 0 10px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1984,6 +2012,48 @@ a img {
   }
   .lang-menu-open #mobile-menu .lang-menu {
     display: table;
+  }
+  #mobile-menu .submenu-load-more {
+    height: 20px;
+    width: 30px;
+    display: block;
+    color: white;
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 641px) {
+  #mobile-menu .submenu-load-more {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  #mobile-menu .submenu-load-more:after {
+    content: "▼";
+    font-size: 15px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0px;
+  }
+  #mobile-menu .submenu-load-more-lvl1.open,
+  #mobile-menu .submenu-load-more-lvl2.open {
+    display: none;
+  }
+  #mobile-menu .submenu-close-lvl1,
+  #mobile-menu .submenu-close-lvl2 {
+    display: none;
+  }
+  #mobile-menu .submenu-close-lvl1:after,
+  #mobile-menu .submenu-close-lvl2:after {
+    transform: rotate(180deg);
+  }
+  #mobile-menu .submenu-close-lvl1.open,
+  #mobile-menu .submenu-close-lvl2.open {
+    display: block;
   }
 
   .mobile-search-toggler {
