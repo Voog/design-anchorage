@@ -429,18 +429,6 @@
 
   };
 
-  // Close elements not intended for the specific viewport when resizing
-  var mobileResize = function() {
-    if ($(window).width() >= 768) {
-      $('body').removeClass('mobile-search-open');
-      $('body').removeClass('mobilemenu-open');
-    }
-
-    if ($(window).width() < 768) {
-      $('.site-header .js-search').removeClass('active');
-    }
-  };
-
   // Prevent page scroll while focused on a specific section
   $.fn.isolatedScroll = function() {
     this.bind('mousewheel DOMMouseScroll', function (e) {
@@ -468,6 +456,24 @@
     });
   };
 
+  // Close elements not intended for the specific viewport when resizing
+  var mobileResize = function() {
+    if ($(window).width() >= 768) {
+      $('body').removeClass('mobile-search-open');
+      $('body').removeClass('mobilemenu-open');
+    }
+
+    if ($(window).width() < 768) {
+      $('.site-header .js-search').removeClass('active');
+    }
+  };
+
+  var tableWrapper = function() {
+    $('body:not(.editmode) table').each(function() {
+      $(this).wrap('<div class="table-holder" />');
+    });
+  };
+
   var initBlogPage = function() {
     // Add blog listing layout specific functions here.
   };
@@ -483,8 +489,6 @@
 
   var initFrontPage = function() {
     // Add front page layout specific functions here.
-
-
   };
 
   var init = function() {
@@ -492,6 +496,7 @@
     handleElementsClick();
     stickyFooterVarHeight();
     toggleFlags();
+    tableWrapper();
 
   };
 

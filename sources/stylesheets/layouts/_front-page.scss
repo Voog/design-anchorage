@@ -53,14 +53,6 @@
         min-width: 250px;
         box-sizing: border-box;
         padding: 0 30px;
-
-        .image-container {
-          max-width: calc(100% + 60px)!important;
-          min-width: calc(100% + 60px)!important;
-          max-height: 200px;
-          min-height: 200px;
-          left: -30px;
-        }
       }
     }
   }

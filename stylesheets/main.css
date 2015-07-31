@@ -340,14 +340,24 @@ a img {
   margin: 0 -30px 30px;
   overflow: hidden;
 }
+.editmode .feature-picture {
+  border: 1px dashed #ccc;
+}
+@media screen and (min-width: 641px) {
+  .editmode .feature-center .feature-picture {
+    border-left: 0;
+    border-right: 0;
+  }
+}
 @media screen and (max-width: 768px) {
   .feature-picture {
-    margin: 0;
+    margin: 0 0 20px;
   }
 }
 
 .cover-image {
   width: 375px;
+  min-width: 375px;
   height: 245px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -361,7 +371,7 @@ a img {
 
 .editable-cover-image {
   cursor: move;
-  border: 1px dashed #ccc;
+  border: 1px dashed transparent;
 }
 
 .edy-img-drop-area {
@@ -369,6 +379,7 @@ a img {
 }
 
 .edy-img-drop-area-placeholder {
+  text-align: left;
   padding: 113px 5px;
 }
 
@@ -378,6 +389,11 @@ a img {
 
 .edy-img-drop-area-remove-image {
   z-index: 1;
+}
+
+.table-holder {
+  overflow: auto;
+  max-width: 100%;
 }
 
 .wrap:after, .content-formatted:after, .contacts .content-formatted table tr:after, .footer .content-formatted table tr:after, .common-page .sidebar-active, .blog-news-page .articles-listing:after, .site-header:after, .site-header .header-top .wrap:after, .search:after,
@@ -1028,13 +1044,6 @@ a img {
     box-sizing: border-box;
     padding: 0 30px;
   }
-  .front-page .main-feature .narrow-feature .image-container {
-    max-width: calc(100% + 60px) !important;
-    min-width: calc(100% + 60px) !important;
-    max-height: 200px;
-    min-height: 200px;
-    left: -30px;
-  }
 }
 .front-page .blog-feed {
   padding: 70px 0;
@@ -1258,6 +1267,11 @@ a img {
 .blog-article-page .main-content .article-header {
   margin: 40px 0 30px;
 }
+@media screen and (max-width: 480px) {
+  .blog-article-page .main-content .article-header.comments-open .blog-article-page .main-content .article-header {
+    display: none;
+  }
+}
 .blog-article-page .main-content .article-header a {
   border-bottom: none;
 }
@@ -1276,6 +1290,10 @@ a img {
 @media screen and (max-width: 480px) {
   .comments-open .inner {
     padding: 0;
+  }
+  .comments-open .article-header,
+  .comments-open .article-meta {
+    display: none !important;
   }
   .comments-open #article-comments .comments-close-btn.open {
     display: inline-block;
@@ -2717,6 +2735,7 @@ a img {
   z-index: 999;
   width: 100%;
   max-width: 400px;
+  max-height: 100vw;
   margin: 0 auto;
   background-color: white;
   -webkit-box-shadow: none;
@@ -2788,12 +2807,6 @@ a img {
 }
 
 #mobile-search {
-  position: fixed;
-  z-index: 1000;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   display: none;
   overflow: auto;
   -webkit-overflow-scrolling: touch;

@@ -56,6 +56,12 @@
     .article-header {
       margin: $margin-large 0 $margin-medium;
 
+      &.comments-open & {
+        @include query($mobile-1) {
+          display: none;
+        }
+      }
+
       a {
         border-bottom: none;
       }
@@ -78,6 +84,10 @@
   @include query($mobile-1) {
     .inner {
       padding: 0;
+    }
+    .article-header,
+    .article-meta {
+      display: none!important;
     }
     #article-comments {
       .comments-close-btn.open {

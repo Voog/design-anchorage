@@ -17,13 +17,30 @@
       {% include 'site-header' %}
 
       <main class="page-content" role="main">
-        {% comment %}Set variables to detect if "feature content areas" have content{% endcomment %}
-        {% capture feature_left_html %}{% unless editmode %}{% content name="feature_left" %}{% endunless %}{% endcapture %}
-        {% capture feature_left_size %}{{ feature_left_html | size | minus : 1 }}{% endcapture %}
-        {% capture feature_center_html %}{% unless editmode %}{% content name="feature_center" %}{% endunless %}{% endcapture %}
-        {% capture feature_center_size %}{{ feature_center_html | size | minus : 1 }}{% endcapture %}
-        {% capture feature_right_html %}{% unless editmode %}{% content name="feature_right" %}{% endunless %}{% endcapture %}
-        {% capture feature_right_size %}{{ feature_right_html | size | minus : 1 }}{% endcapture %}
+        {% capture dont_render %}
+          {% comment %}Set variables to detect if "feature content areas" have content{% endcomment %}
+          {% capture feature_left_html %}{% unless editmode %}{% content name="feature_left" %}{% endunless %}{% endcapture %}
+          {% capture feature_left_size %}{{ feature_left_html | size | minus : 1 }}{% endcapture %}
+          {% capture feature_center_html %}{% unless editmode %}{% content name="feature_center" %}{% endunless %}{% endcapture %}
+          {% capture feature_center_size %}{{ feature_center_html | size | minus : 1 }}{% endcapture %}
+          {% capture feature_right_html %}{% unless editmode %}{% content name="feature_right" %}{% endunless %}{% endcapture %}
+          {% capture feature_right_size %}{{ feature_right_html | size | minus : 1 }}{% endcapture %}
+          {% capture features_total_size %}{{ feature_left_size }} + {{ feature_center_size }} + {{ feature_right_size }}{% endcapture %}
+
+          {% capture feature_picture_left %}{% unless editmode %}{{ page.data.feature_picture_left.url }}{% endunless %}{% endcapture %}
+          {% capture feature_picture_left_size %}{{ feature_picture_left | size | minus : 1 }}{% endcapture %}
+          {% capture feature_picture_center %}{% unless editmode %}{{ page.data.feature_picture_center.url }}{% endunless %}{% endcapture %}
+          {% capture feature_picture_center_size %}{{ feature_picture_center | size | minus : 1 }}{% endcapture %}
+          {% capture feature_picture_right %}{% unless editmode %}{{ page.data.feature_picture_right.url }}{% endunless %}{% endcapture %}
+          {% capture feature_picture_right_size %}{{ feature_picture_right | size | minus : 1 }}{% endcapture %}
+
+          {% assign feature_picture_left_size_num = feature_picture_left_size | plus: 0 %}
+          {% assign feature_picture_center_size_num = feature_picture_center_size | plus: 0 %}
+          {% assign feature_picture_right_size_num = feature_picture_right_size | plus: 0 %}
+
+          {% assign feature_picture_total_size_num = feature_picture_right_size_num | plus: feature_picture_right_size_num | plus: feature_picture_right_size_num %}
+        {% endcapture %}
+
 
         <div class="main-inner-row content-full content-left js-content-left">
           <div class="background-image stretch"></div>
@@ -46,7 +63,13 @@
                   {% if editmode %}
                     <div id="feature-picture-left" class="cover-image editable-cover-image" data-image="{{ page.data.feature_picture_left.url }}" data-dimensions="{{ page.data.feature_picture_left.width }},{{ page.data.feature_picture_left.height }}" data-position="{{ page.data.feature_picture_left.top }},{{ page.data.feature_picture_left.left }}"></div>
                   {% else %}
-                    {% if page.data.feature_picture_left.url %}<div class="cover-image" style="background-image: url('{{ page.data.feature_picture_left.url }}'); background-position: {{ page.data.feature_picture_left.left }}px {{ page.data.feature_picture_left.top }}px;"></div>{% endif %}
+                    {% unless feature_picture_total_size_num < 0 %}
+                      {% if page.data.feature_picture_left.url %}
+                        <div class="cover-image" style="background-image: url('{{ page.data.feature_picture_left.url }}'); background-position: {{ page.data.feature_picture_left.left }}px {{ page.data.feature_picture_left.top }}px;"></div>
+                      {% elsif feature_left_size contains '' %}
+                        <div class="cover-image"></div>
+                      {% endif %}
+                    {% endunless %}
                   {% endif %}
                 </div>
                 {% content name="feature_left" %}
@@ -56,7 +79,13 @@
                   {% if editmode %}
                     <div id="feature-picture-center" class="cover-image editable-cover-image" data-image="{{ page.data.feature_picture_center.url }}" data-dimensions="{{ page.data.feature_picture_center.width }},{{ page.data.feature_picture_center.height }}" data-position="{{ page.data.feature_picture_center.top }},{{ page.data.feature_picture_center.left }}"></div>
                   {% else %}
-                    {% if page.data.feature_picture_center.url %}<div class="cover-image" style="background-image: url('{{ page.data.feature_picture_center.url }}'); background-position: {{ page.data.feature_picture_center.left }}px {{ page.data.feature_picture_center.top }}px;"></div>{% endif %}
+                    {% unless feature_picture_total_size_num < 0 %}
+                      {% if page.data.feature_picture_center.url %}
+                        <div class="cover-image" style="background-image: url('{{ page.data.feature_picture_center.url }}'); background-position: {{ page.data.feature_picture_center.left }}px {{ page.data.feature_picture_center.top }}px;"></div>
+                      {% elsif feature_center_size contains '' %}
+                        <div class="cover-image"></div>
+                      {% endif %}
+                    {% endunless %}
                   {% endif %}
                 </div>
                 {% content name="feature_center" %}
@@ -66,7 +95,13 @@
                   {% if editmode %}
                     <div id="feature-picture-right" class="cover-image editable-cover-image" data-image="{{ page.data.feature_picture_right.url }}" data-dimensions="{{ page.data.feature_picture_right.width }},{{ page.data.feature_picture_right.height }}" data-position="{{ page.data.feature_picture_right.top }},{{ page.data.feature_picture_right.left }}"></div>
                   {% else %}
-                    {% if page.data.feature_picture_right.url %}<div class="cover-image" style="background-image: url('{{ page.data.feature_picture_right.url }}'); background-position: {{ page.data.feature_picture_right.left }}px {{ page.data.feature_picture_right.top }}px;"></div>{% endif %}
+                    {% unless feature_picture_total_size_num < 0 %}
+                      {% if page.data.feature_picture_right.url %}
+                        <div class="cover-image" style="background-image: url('{{ page.data.feature_picture_right.url }}'); background-position: {{ page.data.feature_picture_right.left }}px {{ page.data.feature_picture_right.top }}px;"></div>
+                      {% elsif feature_right_size contains '' %}
+                        <div class="cover-image"></div>
+                      {% endif %}
+                    {% endunless %}
                   {% endif %}
                 </div>
                 {% content name="feature_right" %}
