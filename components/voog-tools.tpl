@@ -85,5 +85,41 @@
       }
     });
 
+    var feature_picture_left = new Edicy.ImgDropArea($('#feature-picture-left'), {
+      positionable: true,
+      target_width: 375,
+
+      change: function(data) {
+        // Save page.data.image data value here
+        pageData.set({
+          'feature_picture_left': data
+        });
+      }
+    });
+
+    var feature_picture_center = new Edicy.ImgDropArea($('#feature-picture-center'), {
+      positionable: true,
+      target_width: 375,
+
+      change: function(data) {
+        // Save page.data.image data value here
+        pageData.set({
+          'feature_picture_center': data
+        });
+      }
+    });
+
+    var feature_picture_right = new Edicy.ImgDropArea($('#feature-picture-right'), {
+      positionable: true,
+      target_width: 375,
+
+      change: function(data) {
+        // Save page.data.image data value here
+        pageData.set({
+          'feature_picture_right': data
+        });
+      }
+    });
+
   </script>
 {% endeditorjsblock %}

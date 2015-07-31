@@ -39,17 +39,40 @@
           </div>
 
           <div class="main-feature">
+
             <div class="wrap js-background-type {{ content_left_bg_type }}">
               <div class="feature-left inner inner-left content-formatted{% if editmode %} narrow-feature{% else %}{% unless feature_left_size contains '-' %} narrow-feature{% endunless %}{% endif %}">
+                <div class="feature-picture">
+                  {% if editmode %}
+                    <div id="feature-picture-left" class="cover-image editable-cover-image" data-image="{{ page.data.feature_picture_left.url }}" data-dimensions="{{ page.data.feature_picture_left.width }},{{ page.data.feature_picture_left.height }}" data-position="{{ page.data.feature_picture_left.top }},{{ page.data.feature_picture_left.left }}"></div>
+                  {% else %}
+                    {% if page.data.feature_picture_left.url %}<div class="cover-image" style="background-image: url('{{ page.data.feature_picture_left.url }}'); background-position: {{ page.data.feature_picture_left.left }}px {{ page.data.feature_picture_left.top }}px;"></div>{% endif %}
+                  {% endif %}
+                </div>
                 {% content name="feature_left" %}
               </div>
               <div class="feature-center inner inner-center content-formatted{% if editmode %} narrow-feature{% else %}{% unless feature_center_size contains '-' %} narrow-feature{% endunless %}{% endif %}">
+                <div class="feature-picture">
+                  {% if editmode %}
+                    <div id="feature-picture-center" class="cover-image editable-cover-image" data-image="{{ page.data.feature_picture_center.url }}" data-dimensions="{{ page.data.feature_picture_center.width }},{{ page.data.feature_picture_center.height }}" data-position="{{ page.data.feature_picture_center.top }},{{ page.data.feature_picture_center.left }}"></div>
+                  {% else %}
+                    {% if page.data.feature_picture_center.url %}<div class="cover-image" style="background-image: url('{{ page.data.feature_picture_center.url }}'); background-position: {{ page.data.feature_picture_center.left }}px {{ page.data.feature_picture_center.top }}px;"></div>{% endif %}
+                  {% endif %}
+                </div>
                 {% content name="feature_center" %}
               </div>
               <div class="feature-right inner inner-right content-formatted{% if editmode %} narrow-feature{% else %}{% unless feature_right_size contains '-' %} narrow-feature{% endunless %}{% endif %}">
+                <div class="feature-picture">
+                  {% if editmode %}
+                    <div id="feature-picture-right" class="cover-image editable-cover-image" data-image="{{ page.data.feature_picture_right.url }}" data-dimensions="{{ page.data.feature_picture_right.width }},{{ page.data.feature_picture_right.height }}" data-position="{{ page.data.feature_picture_right.top }},{{ page.data.feature_picture_right.left }}"></div>
+                  {% else %}
+                    {% if page.data.feature_picture_right.url %}<div class="cover-image" style="background-image: url('{{ page.data.feature_picture_right.url }}'); background-position: {{ page.data.feature_picture_right.left }}px {{ page.data.feature_picture_right.top }}px;"></div>{% endif %}
+                  {% endif %}
+                </div>
                 {% content name="feature_right" %}
               </div>
             </div>
+
           </div>
 
         </div>

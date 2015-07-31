@@ -285,3 +285,51 @@ a {
     }
   }
 }
+
+.narrow-feature {
+  position: relative;
+}
+
+
+.feature-picture {
+  margin: 0 0-$margin-medium $margin-medium;
+  overflow: hidden;
+
+  @include query($tablet-2) {
+    margin: 0;
+  }
+
+}
+
+.cover-image {
+  width: 375px;
+  height: 245px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include query($tablet-2) {
+    width: 100%;
+    height: calc((100vw - 40px) / (375 / 245));
+  }
+
+}
+
+.editable-cover-image {
+  cursor: move;
+  border: 1px dashed #ccc;
+}
+
+.edy-img-drop-area {
+  position: static!important;
+}
+
+.edy-img-drop-area-placeholder {
+  padding: 113px 5px;
+}
+
+.edy-img-drop-area-positionable.over {
+  background-color: rgba(0,0,0,.2);
+}
+.edy-img-drop-area-remove-image {
+  z-index: 1;
+}
