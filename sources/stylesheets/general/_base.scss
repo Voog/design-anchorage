@@ -294,6 +294,8 @@ a {
 .feature-picture {
   margin: 0 0-$margin-medium $margin-medium;
   overflow: hidden;
+  position: relative;
+  height: 245px;
 
   .editmode & {
     border: 1px dashed #ccc;
@@ -308,6 +310,7 @@ a {
 
   @include query($tablet-2) {
     margin: 0 0 $margin-low;
+    height: calc((100vw - 40px) / (375 / 245));
   }
 
 }
@@ -318,10 +321,18 @@ a {
   height: 245px;
   background-repeat: no-repeat;
   background-size: cover;
+  position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
 
   @include query($tablet-2) {
     width: 100%;
-    height: calc((100vw - 40px) / (375 / 245));
+    height: 100%;
   }
 
 }
@@ -332,7 +343,7 @@ a {
 }
 
 .edy-img-drop-area {
-  position: static!important;
+  /*position: static!important;*/
 }
 
 .edy-img-drop-area-placeholder {
@@ -344,6 +355,8 @@ a {
   background-color: rgba(0,0,0,.2);
 }
 .edy-img-drop-area-remove-image {
+  top: 0!important;
+  left: 9px!important;
   z-index: 1;
 }
 

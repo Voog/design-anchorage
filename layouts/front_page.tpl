@@ -38,8 +38,73 @@
           {% assign feature_picture_center_size_num = feature_picture_center_size | plus: 0 %}
           {% assign feature_picture_right_size_num = feature_picture_right_size | plus: 0 %}
 
-          {% assign feature_picture_total_size_num = feature_picture_right_size_num | plus: feature_picture_right_size_num | plus: feature_picture_right_size_num %}
+          {% assign feature_picture_total_size_num = feature_picture_left_size_num | plus: feature_picture_center_size_num | plus: feature_picture_right_size_num %}
         {% endcapture %}
+
+        {% capture dont_render %}
+
+          {% comment %}Feature left picture bg position to percentage{% endcomment %}
+          {% if page.data.feature_picture_left.url %}
+            {% assign fp_left_width = 375 | plus: 0 %}
+            {% assign fp_left_org_width = page.data.feature_picture_left.width | plus: 0 %}
+            {% assign fp_left_ar = fp_left_width | times: 100 | divided_by: fp_left_org_width %}
+            {% assign fp_left_mod_height = page.data.feature_picture_left.height | times: fp_left_ar | divided_by: 100 %}
+            {% assign fp_left_height = 245 | plus: 0 %}
+            {% assign fp_left_mod_height_overflow = fp_left_mod_height | minus: fp_height %}
+            {% assign fp_left_height_pos = page.data.feature_picture_left.top | plus: 0 %}
+            {% assign fp_left_height_diff_per = fp_left_height_pos | times: 100 | divided_by: fp_left_mod_height_overflow %}
+
+            {% capture fp_left_height_diff_per_string %}{{ fp_left_height_diff_per }}{% endcapture %}
+            {% assign fp_left_height_diff_per_string = fp_left_height_diff_per_string | replace: '-', '' %}
+            {% assign fp_left_height_diff_per = fp_left_height_diff_per_string | plus: 0 %}
+
+            {% if fp_left_height_diff_per > 100 %}
+              {% assign fp_left_height_diff_per = 100 %}
+            {% endif %}
+          {% endif %}
+
+          {% comment %}Feature right picture bg position to percentage{% endcomment %}
+          {% if page.data.feature_picture_center.url %}
+            {% assign fp_center_width = 375 | plus: 0 %}
+            {% assign fp_center_org_width = page.data.feature_picture_center.width | plus: 0 %}
+            {% assign fp_center_ar = fp_center_width | times: 100 | divided_by: fp_center_org_width %}
+            {% assign fp_center_mod_height = page.data.feature_picture_center.height | times: fp_center_ar | divided_by: 100 %}
+            {% assign fp_center_height = 245 | plus: 0 %}
+            {% assign fp_center_mod_height_overflow = fp_center_mod_height | minus: fp_height %}
+            {% assign fp_center_height_pos = page.data.feature_picture_center.top | plus: 0 %}
+            {% assign fp_center_height_diff_per = fp_center_height_pos | times: 100 | divided_by: fp_center_mod_height_overflow %}
+
+            {% capture fp_center_height_diff_per_string %}{{ fp_center_height_diff_per }}{% endcapture %}
+            {% assign fp_center_height_diff_per_string = fp_center_height_diff_per_string | replace: '-', '' %}
+            {% assign fp_center_height_diff_per = fp_center_height_diff_per_string | plus: 0 %}
+
+            {% if fp_center_height_diff_per > 100 %}
+              {% assign fp_center_height_diff_per = 100 %}
+            {% endif %}
+          {% endif %}
+
+          {% comment %}Feature right picture bg position to percentage{% endcomment %}
+          {% if page.data.feature_picture_right.url %}
+            {% assign fp_right_width = 375 | plus: 0 %}
+            {% assign fp_right_org_width = page.data.feature_picture_right.width | plus: 0 %}
+            {% assign fp_right_ar = fp_right_width | times: 100 | divided_by: fp_right_org_width %}
+            {% assign fp_right_mod_height = page.data.feature_picture_right.height | times: fp_right_ar | divided_by: 100 %}
+            {% assign fp_right_height = 245 | plus: 0 %}
+            {% assign fp_right_mod_height_overflow = fp_right_mod_height | minus: fp_height %}
+            {% assign fp_right_height_pos = page.data.feature_picture_right.top | plus: 0 %}
+            {% assign fp_right_height_diff_per = fp_right_height_pos | times: 100 | divided_by: fp_right_mod_height_overflow %}
+
+            {% capture fp_right_height_diff_per_string %}{{ fp_right_height_diff_per }}{% endcapture %}
+            {% assign fp_right_height_diff_per_string = fp_right_height_diff_per_string | replace: '-', '' %}
+            {% assign fp_right_height_diff_per = fp_right_height_diff_per_string | plus: 0 %}
+
+            {% if fp_right_height_diff_per > 100 %}
+              {% assign fp_right_height_diff_per = 100 %}
+            {% endif %}
+          {% endif %}
+
+        {% endcapture %}
+
 
 
         <div class="main-inner-row content-full content-left js-content-left">
@@ -65,7 +130,7 @@
                   {% else %}
                     {% unless feature_picture_total_size_num < 0 %}
                       {% if page.data.feature_picture_left.url %}
-                        <div class="cover-image" style="background-image: url('{{ page.data.feature_picture_left.url }}'); background-position: {{ page.data.feature_picture_left.left }}px {{ page.data.feature_picture_left.top }}px;"></div>
+                        <div class="cover-image" style="background-image: url('{{ page.data.feature_picture_left.url }}'); background-position: {{ page.data.feature_picture_left.left }}px {{ fp_left_height_diff_per }}%;"></div>
                       {% elsif feature_left_size contains '' %}
                         <div class="cover-image"></div>
                       {% endif %}
@@ -81,7 +146,7 @@
                   {% else %}
                     {% unless feature_picture_total_size_num < 0 %}
                       {% if page.data.feature_picture_center.url %}
-                        <div class="cover-image" style="background-image: url('{{ page.data.feature_picture_center.url }}'); background-position: {{ page.data.feature_picture_center.left }}px {{ page.data.feature_picture_center.top }}px;"></div>
+                        <div class="cover-image" style="background-image: url('{{ page.data.feature_picture_center.url }}'); background-position: {{ page.data.feature_picture_center.left }}px {{ fp_center_height_diff_per }}%;"></div>
                       {% elsif feature_center_size contains '' %}
                         <div class="cover-image"></div>
                       {% endif %}
@@ -97,7 +162,7 @@
                   {% else %}
                     {% unless feature_picture_total_size_num < 0 %}
                       {% if page.data.feature_picture_right.url %}
-                        <div class="cover-image" style="background-image: url('{{ page.data.feature_picture_right.url }}'); background-position: {{ page.data.feature_picture_right.left }}px {{ page.data.feature_picture_right.top }}px;"></div>
+                        <div class="cover-image" style="background-image: url('{{ page.data.feature_picture_right.url }}'); background-position: {{ page.data.feature_picture_right.left }}px {{ fp_right_height_diff_per }}%;"></div>
                       {% elsif feature_right_size contains '' %}
                         <div class="cover-image"></div>
                       {% endif %}

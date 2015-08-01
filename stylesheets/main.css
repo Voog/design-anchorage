@@ -339,6 +339,8 @@ a img {
 .feature-picture {
   margin: 0 -30px 30px;
   overflow: hidden;
+  position: relative;
+  height: 245px;
 }
 .editmode .feature-picture {
   border: 1px dashed #ccc;
@@ -352,6 +354,7 @@ a img {
 @media screen and (max-width: 768px) {
   .feature-picture {
     margin: 0 0 20px;
+    height: calc((100vw - 40px) / (375 / 245));
   }
 }
 
@@ -361,11 +364,19 @@ a img {
   height: 245px;
   background-repeat: no-repeat;
   background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
 }
 @media screen and (max-width: 768px) {
   .cover-image {
     width: 100%;
-    height: calc((100vw - 40px) / (375 / 245));
+    height: 100%;
   }
 }
 
@@ -375,7 +386,7 @@ a img {
 }
 
 .edy-img-drop-area {
-  position: static !important;
+  /*position: static!important;*/
 }
 
 .edy-img-drop-area-placeholder {
@@ -388,6 +399,8 @@ a img {
 }
 
 .edy-img-drop-area-remove-image {
+  top: 0 !important;
+  left: 9px !important;
   z-index: 1;
 }
 
