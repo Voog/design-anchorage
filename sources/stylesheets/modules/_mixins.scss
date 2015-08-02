@@ -5,6 +5,7 @@
 @mixin hyphenate($boolean) {
   @if $boolean == true {
     word-break: break-word;
+    word-break: break-all;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     -ms-hyphens: auto;

@@ -356,6 +356,9 @@ a img {
     margin: 0 0 20px;
     height: calc((100vw - 40px) / (375 / 245));
   }
+  .public .feature-picture.empty {
+    display: none;
+  }
 }
 
 .cover-image {
@@ -526,6 +529,7 @@ a img {
 
 .content-formatted {
   word-break: break-word;
+  word-break: break-all;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -834,6 +838,7 @@ a img {
   margin: 10px;
   cursor: pointer;
   word-break: break-word;
+  word-break: break-all;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -1129,7 +1134,7 @@ a img {
   }
 }
 
-.blog-news-page .article-title, .blog-news-page .site-header .article-title a, .site-header .article-title .blog-news-page a {
+.blog-news-page .article-title, .blog-news-page .site-header .header-body .article-title a, .site-header .header-body .article-title .blog-news-page a {
   font-size: 36px;
   font-size: 2.25rem;
   font-weight: 300;
@@ -1137,17 +1142,23 @@ a img {
   margin: 10px 0 0;
 }
 @media screen and (max-width: 768px) {
-  .blog-news-page .article-title, .blog-news-page .site-header .article-title a, .site-header .article-title .blog-news-page a {
+  .blog-news-page .article-title, .blog-news-page .site-header .header-body .article-title a, .site-header .header-body .article-title .blog-news-page a {
     font-size: 26px;
     font-size: 1.625rem;
   }
 }
-.blog-news-page .article-title a, .site-header .article-title .blog-news-page a a {
+.blog-news-page .article-title a, .blog-news-page .site-header .header-body .article-title a a, .site-header .header-body .article-title .blog-news-page a a {
   color: #222222;
 }
 .blog-news-page .blog-article {
   position: relative;
   padding: 40px 0;
+  word-break: break-word;
+  word-break: break-all;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 .blog-news-page .blog-article .article-image {
   position: relative;
@@ -1212,7 +1223,7 @@ a img {
   position: absolute;
   top: 4px;
 }
-.blog-news-page .articles-listing .blog-article .article-title, .blog-news-page .articles-listing .blog-article .site-header .article-title a, .site-header .article-title .blog-news-page .articles-listing .blog-article a {
+.blog-news-page .articles-listing .blog-article .article-title, .blog-news-page .articles-listing .blog-article .site-header .header-body .article-title a, .site-header .header-body .article-title .blog-news-page .articles-listing .blog-article a {
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: 300;
@@ -1226,7 +1237,7 @@ a img {
   .blog-news-page .articles-listing .blog-article .article-date {
     position: static;
   }
-  .blog-news-page .articles-listing .blog-article .article-title, .blog-news-page .articles-listing .blog-article .site-header .article-title a, .site-header .article-title .blog-news-page .articles-listing .blog-article a {
+  .blog-news-page .articles-listing .blog-article .article-title, .blog-news-page .articles-listing .blog-article .site-header .header-body .article-title a, .site-header .header-body .article-title .blog-news-page .articles-listing .blog-article a {
     margin: 0;
   }
 }
@@ -1322,19 +1333,19 @@ a img {
 .article-comments {
   position: absolute;
   z-index: 1;
-  background-color: white;
-  right: -420px;
   top: 0;
+  right: -420px;
   width: 300px;
   padding: 45px 30px;
-  box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
   transition: 250ms;
+  box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
+  background-color: white;
 }
 @media screen and (max-width: 480px) {
   .article-comments {
     right: -100vw;
-    width: 100vw;
     box-sizing: border-box;
+    width: 100vw;
     box-shadow: none;
   }
 }
@@ -1350,40 +1361,40 @@ a img {
   }
 }
 .article-comments .comments-body {
-  max-height: 100%;
   overflow-y: scroll;
+  max-height: 100%;
 }
 .article-comments .comments-body .comments-title {
-  font-size: 26px;
-  font-size: 1.625rem;
+  margin: 0 0 20px 0;
+  cursor: text;
+  text-transform: none;
   font-weight: 300;
   line-height: 1.7;
+  font-size: 26px;
+  font-size: 1.625rem;
   color: #222222;
-  margin: 0 0 20px 0;
-  text-transform: none;
-  cursor: text;
 }
 .article-comments .comments-body .comments-title .voog-site-blog-comments-count {
   color: #a4a3a3;
 }
 .article-comments .comment {
-  color: #4a4a4a;
   margin: 20px 0 0;
   font-weight: 400;
+  color: #4a4a4a;
 }
 .article-comments .comment .comment-body {
   display: block;
+  line-height: 24px;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 24px;
 }
 .article-comments .comment .comment-author,
 .article-comments .comment .comment-date {
+  font-weight: 400;
+  line-height: 2;
   color: #aaaaaa;
   font-size: 14px;
   font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 2;
 }
 .article-comments .comments-close .btn-close {
   position: absolute;
@@ -1391,13 +1402,13 @@ a img {
   left: -55px;
   width: 55px;
   height: 55px;
-  background-color: #222222;
   cursor: pointer;
+  background-color: #222222;
 }
 @media screen and (max-width: 768px) {
   .article-comments .comments-close .btn-close {
-    left: auto;
     right: 0;
+    left: auto;
     background-color: white;
   }
 }
@@ -1475,6 +1486,7 @@ a img {
 }
 .site-header .header-title {
   word-break: break-word;
+  word-break: break-all;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -1615,8 +1627,8 @@ a img {
     display: none;
   }
 }
-.site-header .article-author,
-.site-header .article-date {
+.site-header .header-body .article-author,
+.site-header .header-body .article-date {
   font-size: 14px;
   font-size: 0.875rem;
   font-weight: 400;
@@ -1624,14 +1636,14 @@ a img {
   letter-spacing: 1px;
   display: inline;
 }
-.site-header .article-title, .site-header .article-title a {
+.site-header .header-body .article-title, .site-header .header-body .article-title a {
   font-size: 80px;
   line-height: 1.2;
   font-weight: 100;
   margin: 0;
   text-transform: none;
 }
-.site-header .article-title a {
+.site-header .header-body .article-title a {
   font-size: 1em;
   text-decoration: none;
 }
@@ -2945,6 +2957,12 @@ a img {
   opacity: .8;
 }
 .site-footer .blog-article-nav {
+  word-break: break-word;
+  word-break: break-all;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   display: table;

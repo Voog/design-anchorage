@@ -1,25 +1,32 @@
 .article-comments {
   position: absolute;
   z-index: 1;
-  @include bg($white, 1);
-  right: -420px;
   top: 0;
+  right: -420px;
+
   width: 300px;
   padding: 45px 30px;
-  box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
+
   transition: 250ms;
 
+  box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
+
+  @include bg($white, 1);
   @include query($mobile-1) {
     right: -100vw;
-    width: 100vw;
+
     box-sizing: border-box;
+    width: 100vw;
+
     box-shadow: none;
   }
 
   &.active {
     top: 0;
     right: 0;
+
     transition: 250ms;
+
     box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
 
     @include query($mobile-1) {
@@ -29,17 +36,21 @@
   }
 
   .comments-body {
-    max-height: 100%;
     overflow-y: scroll;
 
+    max-height: 100%;
+
     .comments-title {
-      @include rem-fallback(font-size, $font-size-large);
+      margin: 0 0 $margin-low 0;
+
+      cursor: text;
+      text-transform: none;
+
       font-weight: $font-weight-light;
       line-height: $line-height-medium;
+
+      @include rem-fallback(font-size, $font-size-large);
       @include color($black, 1);
-      margin: 0 0 $margin-low 0;
-      text-transform: none;
-      cursor: text;
 
       .voog-site-blog-comments-count {
         @include color($black-lighter, 1);
@@ -48,22 +59,27 @@
   }
 
   .comment {
-    @include color($black-light, 1);
     margin: 20px 0 0;
+
     font-weight: 400;
+
+    @include color($black-light, 1);
 
     .comment-body {
       display: block;
-      @include rem-fallback(font-size, $font-size-base);
+
       line-height: 24px;
+
+      @include rem-fallback(font-size, $font-size-base);
     }
 
     .comment-author,
     .comment-date {
-      @include color($grey, 1);
-      @include rem-fallback(font-size, $font-size-small);
       font-weight: $font-weight-normal;
       line-height: $line-height-double;
+
+      @include color($grey, 1);
+      @include rem-fallback(font-size, $font-size-small);
     }
   }
   .comments-close {
@@ -72,24 +88,28 @@
       position: absolute;
       top: 0px;
       left: -55px;
+
       width: 55px;
       height: 55px;
-      @include bg($black, 1);
+
       cursor: pointer;
 
+      @include bg($black, 1);
       @include query($tablet-2) {
-        left: auto;
         right: 0;
+        left: auto;
+
         @include bg($white, 1);
       }
 
       .xcross {
         z-index: 2000;
+
         width: 2px;
         height: 25px;
         margin-top: 15px;
-        @include bg($white, 1);
 
+        @include bg($white, 1);
         @include query($tablet-2) {
           @include bg($black, 1);
         }
@@ -97,6 +117,7 @@
       }
       .xcross-l {
         margin-left: 29px;
+
         @include rotate(45deg);
       }
       .xcross-r {

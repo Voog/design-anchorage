@@ -19,6 +19,7 @@
   .blog-article {
     position: relative;
     padding: $padding-medium 0;
+    @include hyphenate(true);
 
     .article-image {
       position: relative;

@@ -157,25 +157,27 @@
     }
   }
 
-  .article-author,
-  .article-date{
-    @include rem-fallback(font-size, $font-size-small);
-    font-weight: $font-weight-normal;
-    line-height: $line-height-double;
-    letter-spacing: 1px;
-    display: inline;
-  }
-  .article-title {
-    font-size: $font-size-header + 10px;
-    line-height: $line-height-small;
-    font-weight: $font-weight-thin;
-    margin: 0;
-    text-transform: none;
+  .header-body {
+    .article-author,
+    .article-date{
+      @include rem-fallback(font-size, $font-size-small);
+      font-weight: $font-weight-normal;
+      line-height: $line-height-double;
+      letter-spacing: 1px;
+      display: inline;
+    }
+    .article-title {
+      font-size: $font-size-header + 10px;
+      line-height: $line-height-small;
+      font-weight: $font-weight-thin;
+      margin: 0;
+      text-transform: none;
 
-    a {
-      @extend .article-title;
-      font-size: 1em;
-      text-decoration: none;
+      a {
+        @extend .article-title;
+        font-size: 1em;
+        text-decoration: none;
+      }
     }
   }
 
