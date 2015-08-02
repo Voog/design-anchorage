@@ -49,12 +49,26 @@
   {% endif %}
 
   {% if content_top_bg_image == nil %}
-    {% assign content_top_bg_image_original = images_path | append: '/front-page-top-bg.jpg' %}
-    {% assign content_top_bg_image = images_path | append: '/front-page-top-bg_block.jpg' %}
+    {% if front_page %}
+      {% assign content_top_bg_image_original = images_path | append: '/front-header-bg.jpg' %}
+      {% assign content_top_bg_image = images_path | append: '/front-header-bg_block.jpg' %}
+    {% elsif blog_article_page %}
+      {% assign content_top_bg_image_original = images_path | append: '/article-header-bg.jpg' %}
+      {% assign content_top_bg_image = images_path | append: '/article-header-bg_block.jpg' %}
+    {% else %}
+      {% assign content_top_bg_image_original = images_path | append: '/page-header-bg.jpg' %}
+      {% assign content_top_bg_image = images_path | append: '/page-header-bg_block.jpg' %}
+    {% endif %}
   {% endif %}
 
   {% if content_top_bg_image_sizes == nil %}
-    {% assign content_top_bg_image_sizes_str = '[{"url":"' | append: images_path | append: '/front-page-top-bg.jpg", "width":1055, "height":1006}, {"url":"' | append: images_path | append: '/front-page-top-bg_block.jpg", "width":600, "height":572}]' %}
+    {% if front_page %}
+      {% assign content_top_bg_image_sizes_str = '[{"url":"' | append: images_path | append: '/front-header-bg.jpg", "width":1055, "height":1006}, {"url":"' | append: images_path | append: '/front-header-bg_block.jpg", "width":600, "height":572}]' %}
+    {% elsif blog_article_page %}
+      {% assign content_top_bg_image_sizes_str = '[{"url":"' | append: images_path | append: '/article-header-bg.jpg", "width":1055, "height":1006}, {"url":"' | append: images_path | append: '/article-header-bg_block.jpg", "width":600, "height":572}]' %}
+    {% else %}
+      {% assign content_top_bg_image_sizes_str = '[{"url":"' | append: images_path | append: '/page-header-bg.jpg", "width":1055, "height":1006}, {"url":"' | append: images_path | append: '/page-header-bg_block.jpg", "width":600, "height":572}]' %}
+    {% endif %}
   {% else %}
     {% assign content_top_bg_image_sizes_str = content_top_bg_image_sizes | json %}
   {% endif %}

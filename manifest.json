@@ -237,147 +237,147 @@
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/aurora.jpg",
+      "file": "images/page-header-bg.jpg",
       "kind": "images",
-      "filename": "aurora.jpg"
+      "filename": "page-header-bg.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/aurora_huge.jpg",
+      "file": "images/page-header-bg_huge.jpg",
       "kind": "images",
-      "filename": "aurora_huge.jpg"
+      "filename": "page-header-bg_huge.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/aurora_large.jpg",
+      "file": "images/page-header-bg_large.jpg",
       "kind": "images",
-      "filename": "aurora_large.jpg"
+      "filename": "page-header-bg_large.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/aurora_block.jpg",
+      "file": "images/page-header-bg_block.jpg",
       "kind": "images",
-      "filename": "aurora_block.jpg"
+      "filename": "page-header-bg_block.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/fog.jpg",
+      "file": "images/feature-image-2.jpg",
       "kind": "images",
-      "filename": "fog.jpg"
+      "filename": "feature-image-2.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/fog_huge.jpg",
+      "file": "images/feature-image-2_huge.jpg",
       "kind": "images",
-      "filename": "fog_huge.jpg"
+      "filename": "feature-image-2_huge.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/fog_large.jpg",
+      "file": "images/feature-image-2_large.jpg",
       "kind": "images",
-      "filename": "fog_large.jpg"
+      "filename": "feature-image-2_large.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/fog_block.jpg",
+      "file": "images/feature-image-2_block.jpg",
       "kind": "images",
-      "filename": "fog_block.jpg"
+      "filename": "feature-image-2_block.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/jacket.jpg",
+      "file": "images/feature-image-3.jpg",
       "kind": "images",
-      "filename": "jacket.jpg"
+      "filename": "feature-image-3.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/jacket_huge.jpg",
+      "file": "images/feature-image-3_huge.jpg",
       "kind": "images",
-      "filename": "jacket_huge.jpg"
+      "filename": "feature-image-3_huge.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/jacket_large.jpg",
+      "file": "images/feature-image-3_large.jpg",
       "kind": "images",
-      "filename": "jacket_large.jpg"
+      "filename": "feature-image-3_large.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/jacket_block.jpg",
+      "file": "images/feature-image-3_block.jpg",
       "kind": "images",
-      "filename": "jacket_block.jpg"
+      "filename": "feature-image-3_block.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/mountains.jpg",
+      "file": "images/article-header-bg.jpg",
       "kind": "images",
-      "filename": "mountains.jpg"
+      "filename": "article-header-bg.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/mountains_huge.jpg",
+      "file": "images/article-header-bg_huge.jpg",
       "kind": "images",
-      "filename": "mountains_huge.jpg"
+      "filename": "article-header-bg_huge.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/mountains_large.jpg",
+      "file": "images/article-header-bg_large.jpg",
       "kind": "images",
-      "filename": "mountains_large.jpg"
+      "filename": "article-header-bg_large.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/mountains_block.jpg",
+      "file": "images/article-header-bg_block.jpg",
       "kind": "images",
-      "filename": "mountains_block.jpg"
+      "filename": "article-header-bg_block.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/snow.jpg",
+      "file": "images/front-header-bg.jpg",
       "kind": "images",
-      "filename": "snow.jpg"
+      "filename": "front-header-bg.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/snow_huge.jpg",
+      "file": "images/front-header-bg_huge.jpg",
       "kind": "images",
-      "filename": "snow_huge.jpg"
+      "filename": "front-header-bg_huge.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/snow_large.jpg",
+      "file": "images/front-header-bg_large.jpg",
       "kind": "images",
-      "filename": "snow_large.jpg"
+      "filename": "front-header-bg_large.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/snow_block.jpg",
+      "file": "images/front-header-bg_block.jpg",
       "kind": "images",
-      "filename": "snow_block.jpg"
+      "filename": "front-header-bg_block.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/woman.jpg",
+      "file": "images/feature-image-1.jpg",
       "kind": "images",
-      "filename": "woman.jpg"
+      "filename": "feature-image-1.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/woman_huge.jpg",
+      "file": "images/feature-image-1_huge.jpg",
       "kind": "images",
-      "filename": "woman_huge.jpg"
+      "filename": "feature-image-1_huge.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/woman_large.jpg",
+      "file": "images/feature-image-1_large.jpg",
       "kind": "images",
-      "filename": "woman_large.jpg"
+      "filename": "feature-image-1_large.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/woman_block.jpg",
+      "file": "images/feature-image-1_block.jpg",
       "kind": "images",
-      "filename": "woman_block.jpg"
+      "filename": "feature-image-1_block.jpg"
     },
     {
       "content_type": "application/vnd.ms-fontobject",

@@ -56,7 +56,7 @@
     {% endif %}
 
   {% else %}
-    {% assign bg_image_prefix = images_path | append: "/snow" %}
+    {% assign bg_image_prefix = images_path | append: "/front-header-bg" %}
 
     .content-right .background-image {
       background-image: url("{{ bg_image_prefix }}.jpg");
@@ -131,11 +131,11 @@
   {% else %}
 
     {% if front_page %}
-      {% assign bg_image_prefix = images_path | append: "/snow" %}
-    {% elsif blog_page or blog_article_page %}
-      {% assign bg_image_prefix = images_path | append: "/mountains" %}
+      {% assign bg_image_prefix = images_path | append: "/front-header-bg" %}
+    {% elsif blog_article_page %}
+      {% assign bg_image_prefix = images_path | append: "/article-header-bg" %}
     {% else %}
-      {% assign bg_image_prefix = images_path | append: "/aurora" %}
+      {% assign bg_image_prefix = images_path | append: "/page-header-bg" %}
     {% endif %}
 
     .content-top .background-image {
