@@ -39,6 +39,7 @@
       display: block;
     }
 
+    .article-nav-full,
     .article-nav-half {
       width: 50%;
       display: table-cell;
@@ -73,6 +74,16 @@
         }
       }
     }
+
+    .article-nav-full {
+      display: block;
+      width: 100%;
+
+      a {
+        text-align: center;
+      }
+    }
+
     .article-nav-prev {
       text-align: right;
     }

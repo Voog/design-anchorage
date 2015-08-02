@@ -6,56 +6,82 @@
 
   {% if site-footer == "blog_article_page" %}
     <div class="blog-article-nav">
-      {% assign article_current = article.title %}
 
-      {% for blog in site.blogs %}
-        {% for article in blog.articles %}
+      {% capture dont_render %}
 
-          {% if article_current == article.title %}
+        {% comment %}Assign next and previous blog post values{% endcomment %}
 
-            {% assign article_next = forloop.index0 | plus: 1 %}
-            {% assign article_prev = forloop.index0 | minus: 1 %}
+        {% assign article_current = article.title %}
+        {% assign article_prev_empty = true %}
+        {% assign article_next_empty = true %}
 
-          {% endif %}
+        {% for blog in site.blogs %}
+          {% for article in blog.articles %}
 
+            {% if article_current == article.title %}
+              {% assign article_next = forloop.index0 | plus: 1 %}
+              {% assign article_prev = forloop.index0 | minus: 1 %}
+            {% endif %}
+
+          {% endfor %}
         {% endfor %}
-      {% endfor %}
 
-      <div class="article-nav-half article-nav-prev">
-        <div class="article-nav-bg"></div>
         {% for blog in site.blogs %}
           {% for article in blog.articles %}
 
             {% if article_prev == forloop.index0 %}
-              <a href="{{ article.url }}">
-                <div class="article-nav-direction">{{ previous_story }}</div>
-                <div class="article-nav-title">
-                  {{ article.title }}
-                </div>
-              </a>
+              {% assign article_prev_empty = false %}
             {% endif %}
-
-          {% endfor %}
-        {% endfor %}
-      </div>
-
-      <div class="article-nav-half article-nav-next">
-        <div class="article-nav-bg"></div>
-        {% for blog in site.blogs %}
-          {% for article in blog.articles %}
 
             {% if article_next == forloop.index0 %}
-              <a href="{{ article.url }}">
-                <div class="article-nav-direction">{{ next_story }}</div>
-                <div class="article-nav-title">
-                  {{ article.title }}
-                </div>
-              </a>
+              {% assign article_next_empty = false %}
             {% endif %}
 
           {% endfor %}
         {% endfor %}
-      </div>
+
+      {% endcapture %}
+
+      {% if article_prev_empty == false %}
+        <div class="{% if article_next_empty == true %}article-nav-full{% else %}article-nav-half{% endif %} article-nav-prev">
+          <div class="article-nav-bg"></div>
+          {% for blog in site.blogs %}
+            {% for article in blog.articles %}
+
+              {% if article_prev == forloop.index0 %}
+                <a href="{{ article.url }}">
+                  <div class="article-nav-direction">{{ previous_story }}</div>
+                  <div class="article-nav-title">
+                    {{ article.title }}
+                  </div>
+                </a>
+              {% endif %}
+
+            {% endfor %}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if article_next_empty == false %}
+        <div class="{% if article_prev_empty == true %}article-nav-full{% else %}article-nav-half{% endif %} article-nav-next">
+          <div class="article-nav-bg"></div>
+          {% for blog in site.blogs %}
+            {% for article in blog.articles %}
+
+              {% if article_next == forloop.index0 %}
+                <a href="{{ article.url }}">
+                  <div class="article-nav-direction">{{ next_story }}</div>
+                  <div class="article-nav-title">
+                    {{ article.title }}
+                  </div>
+                </a>
+              {% endif %}
+
+            {% endfor %}
+          {% endfor %}
+        </div>
+      {% endif %}
+
     </div>
   {% endif %}
 
