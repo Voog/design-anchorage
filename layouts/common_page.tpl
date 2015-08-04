@@ -2,9 +2,9 @@
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% assign common_page = true %}
-    {% include 'voog-tools-variables' %}
+    {% include 'template-variables' %}
     {% include 'html-head' %}
-    {% include 'voog-tools-styles' %}
+    {% include 'template-styles' %}
     {% if editmode %}
       <link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.css">
       <style id="preview-style"></style>
@@ -82,7 +82,7 @@
 
     {% include "menu-mobile" %}
     {% include 'site-javascripts' %}
-    {% include 'voog-tools' with 'common_page' %}
+    {% include 'template-tools' with 'common_page' %}
     <script>
       site.initCommonPage();
       site.initWindowResize();

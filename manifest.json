@@ -155,26 +155,434 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/voog-tools-styles.tpl",
-      "layout_name": "voog-tools-styles",
-      "title": "voog-tools-styles"
+      "file": "components/template-styles.tpl",
+      "layout_name": "template-styles",
+      "title": "template-styles"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/voog-tools-variables.tpl",
-      "layout_name": "voog-tools-variables",
-      "title": "voog-tools-variables"
+      "file": "components/template-tools.tpl",
+      "layout_name": "template-tools",
+      "title": "template-tools"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/voog-tools.tpl",
-      "layout_name": "voog-tools",
-      "title": "voog-tools"
+      "file": "components/template-variables.tpl",
+      "layout_name": "template-variables",
+      "title": "template-variables"
     }
   ],
   "assets": [
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/ico-flags.svg",
+      "kind": "assets",
+      "filename": "ico-flags.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/loader.svg",
+      "kind": "assets",
+      "filename": "loader.svg"
+    },
+    {
+      "content_type": "application/vnd.ms-fontobject",
+      "file": "assets/Roboto-Bold.eot",
+      "kind": "assets",
+      "filename": "Roboto-Bold.eot"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/Roboto-Bold.svg",
+      "kind": "assets",
+      "filename": "Roboto-Bold.svg"
+    },
+    {
+      "content_type": "application/x-font-truetype",
+      "file": "assets/Roboto-Bold.ttf",
+      "kind": "assets",
+      "filename": "Roboto-Bold.ttf"
+    },
+    {
+      "content_type": "application/font-woff",
+      "file": "assets/Roboto-Bold.woff",
+      "kind": "assets",
+      "filename": "Roboto-Bold.woff"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "assets/Roboto-Bold.woff2",
+      "kind": "assets",
+      "filename": "Roboto-Bold.woff2"
+    },
+    {
+      "content_type": "application/vnd.ms-fontobject",
+      "file": "assets/Roboto-BoldItalic.eot",
+      "kind": "assets",
+      "filename": "Roboto-BoldItalic.eot"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/Roboto-BoldItalic.svg",
+      "kind": "assets",
+      "filename": "Roboto-BoldItalic.svg"
+    },
+    {
+      "content_type": "application/x-font-truetype",
+      "file": "assets/Roboto-BoldItalic.ttf",
+      "kind": "assets",
+      "filename": "Roboto-BoldItalic.ttf"
+    },
+    {
+      "content_type": "application/font-woff",
+      "file": "assets/Roboto-BoldItalic.woff",
+      "kind": "assets",
+      "filename": "Roboto-BoldItalic.woff"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "assets/Roboto-BoldItalic.woff2",
+      "kind": "assets",
+      "filename": "Roboto-BoldItalic.woff2"
+    },
+    {
+      "content_type": "application/vnd.ms-fontobject",
+      "file": "assets/Roboto-Italic.eot",
+      "kind": "assets",
+      "filename": "Roboto-Italic.eot"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/Roboto-Italic.svg",
+      "kind": "assets",
+      "filename": "Roboto-Italic.svg"
+    },
+    {
+      "content_type": "application/x-font-truetype",
+      "file": "assets/Roboto-Italic.ttf",
+      "kind": "assets",
+      "filename": "Roboto-Italic.ttf"
+    },
+    {
+      "content_type": "application/font-woff",
+      "file": "assets/Roboto-Italic.woff",
+      "kind": "assets",
+      "filename": "Roboto-Italic.woff"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "assets/Roboto-Italic.woff2",
+      "kind": "assets",
+      "filename": "Roboto-Italic.woff2"
+    },
+    {
+      "content_type": "application/vnd.ms-fontobject",
+      "file": "assets/Roboto-Light.eot",
+      "kind": "assets",
+      "filename": "Roboto-Light.eot"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/Roboto-Light.svg",
+      "kind": "assets",
+      "filename": "Roboto-Light.svg"
+    },
+    {
+      "content_type": "application/x-font-truetype",
+      "file": "assets/Roboto-Light.ttf",
+      "kind": "assets",
+      "filename": "Roboto-Light.ttf"
+    },
+    {
+      "content_type": "application/font-woff",
+      "file": "assets/Roboto-Light.woff",
+      "kind": "assets",
+      "filename": "Roboto-Light.woff"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "assets/Roboto-Light.woff2",
+      "kind": "assets",
+      "filename": "Roboto-Light.woff2"
+    },
+    {
+      "content_type": "application/vnd.ms-fontobject",
+      "file": "assets/Roboto-LightItalic.eot",
+      "kind": "assets",
+      "filename": "Roboto-LightItalic.eot"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/Roboto-LightItalic.svg",
+      "kind": "assets",
+      "filename": "Roboto-LightItalic.svg"
+    },
+    {
+      "content_type": "application/x-font-truetype",
+      "file": "assets/Roboto-LightItalic.ttf",
+      "kind": "assets",
+      "filename": "Roboto-LightItalic.ttf"
+    },
+    {
+      "content_type": "application/font-woff",
+      "file": "assets/Roboto-LightItalic.woff",
+      "kind": "assets",
+      "filename": "Roboto-LightItalic.woff"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "assets/Roboto-LightItalic.woff2",
+      "kind": "assets",
+      "filename": "Roboto-LightItalic.woff2"
+    },
+    {
+      "content_type": "application/vnd.ms-fontobject",
+      "file": "assets/Roboto-Regular.eot",
+      "kind": "assets",
+      "filename": "Roboto-Regular.eot"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/Roboto-Regular.svg",
+      "kind": "assets",
+      "filename": "Roboto-Regular.svg"
+    },
+    {
+      "content_type": "application/x-font-truetype",
+      "file": "assets/Roboto-Regular.ttf",
+      "kind": "assets",
+      "filename": "Roboto-Regular.ttf"
+    },
+    {
+      "content_type": "application/font-woff",
+      "file": "assets/Roboto-Regular.woff",
+      "kind": "assets",
+      "filename": "Roboto-Regular.woff"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "assets/Roboto-Regular.woff2",
+      "kind": "assets",
+      "filename": "Roboto-Regular.woff2"
+    },
+    {
+      "content_type": "application/vnd.ms-fontobject",
+      "file": "assets/Roboto-Thin.eot",
+      "kind": "assets",
+      "filename": "Roboto-Thin.eot"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/Roboto-Thin.svg",
+      "kind": "assets",
+      "filename": "Roboto-Thin.svg"
+    },
+    {
+      "content_type": "application/x-font-truetype",
+      "file": "assets/Roboto-Thin.ttf",
+      "kind": "assets",
+      "filename": "Roboto-Thin.ttf"
+    },
+    {
+      "content_type": "application/font-woff",
+      "file": "assets/Roboto-Thin.woff",
+      "kind": "assets",
+      "filename": "Roboto-Thin.woff"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "assets/Roboto-Thin.woff2",
+      "kind": "assets",
+      "filename": "Roboto-Thin.woff2"
+    },
+    {
+      "content_type": "application/vnd.ms-fontobject",
+      "file": "assets/Roboto-ThinItalic.eot",
+      "kind": "assets",
+      "filename": "Roboto-ThinItalic.eot"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/Roboto-ThinItalic.svg",
+      "kind": "assets",
+      "filename": "Roboto-ThinItalic.svg"
+    },
+    {
+      "content_type": "application/x-font-truetype",
+      "file": "assets/Roboto-ThinItalic.ttf",
+      "kind": "assets",
+      "filename": "Roboto-ThinItalic.ttf"
+    },
+    {
+      "content_type": "application/font-woff",
+      "file": "assets/Roboto-ThinItalic.woff",
+      "kind": "assets",
+      "filename": "Roboto-ThinItalic.woff"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "assets/Roboto-ThinItalic.woff2",
+      "kind": "assets",
+      "filename": "Roboto-ThinItalic.woff2"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/search.svg",
+      "kind": "assets",
+      "filename": "search.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/search_close.svg",
+      "kind": "assets",
+      "filename": "search_close.svg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/article-header-bg.jpg",
+      "kind": "images",
+      "filename": "article-header-bg.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/article-header-bg_block.jpg",
+      "kind": "images",
+      "filename": "article-header-bg_block.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/article-header-bg_huge.jpg",
+      "kind": "images",
+      "filename": "article-header-bg_huge.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/article-header-bg_large.jpg",
+      "kind": "images",
+      "filename": "article-header-bg_large.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/feature-image-1.jpg",
+      "kind": "images",
+      "filename": "feature-image-1.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/feature-image-1_block.jpg",
+      "kind": "images",
+      "filename": "feature-image-1_block.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/feature-image-1_huge.jpg",
+      "kind": "images",
+      "filename": "feature-image-1_huge.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/feature-image-1_large.jpg",
+      "kind": "images",
+      "filename": "feature-image-1_large.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/feature-image-2.jpg",
+      "kind": "images",
+      "filename": "feature-image-2.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/feature-image-2_block.jpg",
+      "kind": "images",
+      "filename": "feature-image-2_block.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/feature-image-2_huge.jpg",
+      "kind": "images",
+      "filename": "feature-image-2_huge.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/feature-image-2_large.jpg",
+      "kind": "images",
+      "filename": "feature-image-2_large.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/feature-image-3.jpg",
+      "kind": "images",
+      "filename": "feature-image-3.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/feature-image-3_block.jpg",
+      "kind": "images",
+      "filename": "feature-image-3_block.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/feature-image-3_huge.jpg",
+      "kind": "images",
+      "filename": "feature-image-3_huge.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/feature-image-3_large.jpg",
+      "kind": "images",
+      "filename": "feature-image-3_large.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/front-header-bg.jpg",
+      "kind": "images",
+      "filename": "front-header-bg.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/front-header-bg_block.jpg",
+      "kind": "images",
+      "filename": "front-header-bg_block.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/front-header-bg_huge.jpg",
+      "kind": "images",
+      "filename": "front-header-bg_huge.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/front-header-bg_large.jpg",
+      "kind": "images",
+      "filename": "front-header-bg_large.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/page-header-bg.jpg",
+      "kind": "images",
+      "filename": "page-header-bg.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/page-header-bg_block.jpg",
+      "kind": "images",
+      "filename": "page-header-bg_block.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/page-header-bg_huge.jpg",
+      "kind": "images",
+      "filename": "page-header-bg_huge.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/page-header-bg_large.jpg",
+      "kind": "images",
+      "filename": "page-header-bg_large.jpg"
+    },
     {
       "content_type": "application/javascript",
       "file": "javascripts/main.js",
@@ -210,414 +618,6 @@
       "file": "stylesheets/main.min.css",
       "kind": "stylesheets",
       "filename": "main.min.css"
-    },
-    {
-      "content_type": "image/svg+xml",
-      "file": "assets/ico-flags.svg",
-      "kind": "assets",
-      "filename": "ico-flags.svg"
-    },
-    {
-      "content_type": "image/svg+xml",
-      "file": "assets/loader.svg",
-      "kind": "assets",
-      "filename": "loader.svg"
-    },
-    {
-      "content_type": "image/svg+xml",
-      "file": "assets/search.svg",
-      "kind": "assets",
-      "filename": "search.svg"
-    },
-    {
-      "content_type": "image/svg+xml",
-      "file": "assets/search_close.svg",
-      "kind": "assets",
-      "filename": "search_close.svg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/page-header-bg.jpg",
-      "kind": "images",
-      "filename": "page-header-bg.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/page-header-bg_huge.jpg",
-      "kind": "images",
-      "filename": "page-header-bg_huge.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/page-header-bg_large.jpg",
-      "kind": "images",
-      "filename": "page-header-bg_large.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/page-header-bg_block.jpg",
-      "kind": "images",
-      "filename": "page-header-bg_block.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/feature-image-2.jpg",
-      "kind": "images",
-      "filename": "feature-image-2.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/feature-image-2_huge.jpg",
-      "kind": "images",
-      "filename": "feature-image-2_huge.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/feature-image-2_large.jpg",
-      "kind": "images",
-      "filename": "feature-image-2_large.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/feature-image-2_block.jpg",
-      "kind": "images",
-      "filename": "feature-image-2_block.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/feature-image-3.jpg",
-      "kind": "images",
-      "filename": "feature-image-3.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/feature-image-3_huge.jpg",
-      "kind": "images",
-      "filename": "feature-image-3_huge.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/feature-image-3_large.jpg",
-      "kind": "images",
-      "filename": "feature-image-3_large.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/feature-image-3_block.jpg",
-      "kind": "images",
-      "filename": "feature-image-3_block.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/article-header-bg.jpg",
-      "kind": "images",
-      "filename": "article-header-bg.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/article-header-bg_huge.jpg",
-      "kind": "images",
-      "filename": "article-header-bg_huge.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/article-header-bg_large.jpg",
-      "kind": "images",
-      "filename": "article-header-bg_large.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/article-header-bg_block.jpg",
-      "kind": "images",
-      "filename": "article-header-bg_block.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/front-header-bg.jpg",
-      "kind": "images",
-      "filename": "front-header-bg.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/front-header-bg_huge.jpg",
-      "kind": "images",
-      "filename": "front-header-bg_huge.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/front-header-bg_large.jpg",
-      "kind": "images",
-      "filename": "front-header-bg_large.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/front-header-bg_block.jpg",
-      "kind": "images",
-      "filename": "front-header-bg_block.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/feature-image-1.jpg",
-      "kind": "images",
-      "filename": "feature-image-1.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/feature-image-1_huge.jpg",
-      "kind": "images",
-      "filename": "feature-image-1_huge.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/feature-image-1_large.jpg",
-      "kind": "images",
-      "filename": "feature-image-1_large.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/feature-image-1_block.jpg",
-      "kind": "images",
-      "filename": "feature-image-1_block.jpg"
-    },
-    {
-      "content_type": "application/vnd.ms-fontobject",
-      "kind": "assets",
-      "file": "assets/Roboto-Bold.eot",
-      "filename": "Roboto-Bold.eot"
-    },
-    {
-      "content_type": "image/svg+xml",
-      "kind": "assets",
-      "file": "assets/Roboto-Bold.svg",
-      "filename": "Roboto-Bold.svg"
-    },
-    {
-      "content_type": "application/x-font-truetype",
-      "kind": "assets",
-      "file": "assets/Roboto-Bold.ttf",
-      "filename": "Roboto-Bold.ttf"
-    },
-    {
-      "content_type": "application/vnd.ms-fontobject",
-      "kind": "assets",
-      "file": "assets/Roboto-BoldItalic.eot",
-      "filename": "Roboto-BoldItalic.eot"
-    },
-    {
-      "content_type": "application/font-woff",
-      "kind": "assets",
-      "file": "assets/Roboto-Bold.woff",
-      "filename": "Roboto-Bold.woff"
-    },
-    {
-      "content_type": "image/svg+xml",
-      "kind": "assets",
-      "file": "assets/Roboto-BoldItalic.svg",
-      "filename": "Roboto-BoldItalic.svg"
-    },
-    {
-      "content_type": "application/x-font-truetype",
-      "kind": "assets",
-      "file": "assets/Roboto-BoldItalic.ttf",
-      "filename": "Roboto-BoldItalic.ttf"
-    },
-    {
-      "content_type": "application/font-woff",
-      "kind": "assets",
-      "file": "assets/Roboto-BoldItalic.woff",
-      "filename": "Roboto-BoldItalic.woff"
-    },
-    {
-      "content_type": "application/vnd.ms-fontobject",
-      "kind": "assets",
-      "file": "assets/Roboto-Italic.eot",
-      "filename": "Roboto-Italic.eot"
-    },
-    {
-      "content_type": "image/svg+xml",
-      "kind": "assets",
-      "file": "assets/Roboto-Italic.svg",
-      "filename": "Roboto-Italic.svg"
-    },
-    {
-      "content_type": "application/x-font-truetype",
-      "kind": "assets",
-      "file": "assets/Roboto-Italic.ttf",
-      "filename": "Roboto-Italic.ttf"
-    },
-    {
-      "content_type": "application/font-woff",
-      "kind": "assets",
-      "file": "assets/Roboto-Italic.woff",
-      "filename": "Roboto-Italic.woff"
-    },
-    {
-      "content_type": "application/vnd.ms-fontobject",
-      "kind": "assets",
-      "file": "assets/Roboto-Light.eot",
-      "filename": "Roboto-Light.eot"
-    },
-    {
-      "content_type": "image/svg+xml",
-      "kind": "assets",
-      "file": "assets/Roboto-Light.svg",
-      "filename": "Roboto-Light.svg"
-    },
-    {
-      "content_type": "application/x-font-truetype",
-      "kind": "assets",
-      "file": "assets/Roboto-Light.ttf",
-      "filename": "Roboto-Light.ttf"
-    },
-    {
-      "content_type": "application/font-woff",
-      "kind": "assets",
-      "file": "assets/Roboto-Light.woff",
-      "filename": "Roboto-Light.woff"
-    },
-    {
-      "content_type": "application/vnd.ms-fontobject",
-      "kind": "assets",
-      "file": "assets/Roboto-LightItalic.eot",
-      "filename": "Roboto-LightItalic.eot"
-    },
-    {
-      "content_type": "image/svg+xml",
-      "kind": "assets",
-      "file": "assets/Roboto-LightItalic.svg",
-      "filename": "Roboto-LightItalic.svg"
-    },
-    {
-      "content_type": "application/x-font-truetype",
-      "kind": "assets",
-      "file": "assets/Roboto-LightItalic.ttf",
-      "filename": "Roboto-LightItalic.ttf"
-    },
-    {
-      "content_type": "application/font-woff",
-      "kind": "assets",
-      "file": "assets/Roboto-LightItalic.woff",
-      "filename": "Roboto-LightItalic.woff"
-    },
-    {
-      "content_type": "application/vnd.ms-fontobject",
-      "kind": "assets",
-      "file": "assets/Roboto-Regular.eot",
-      "filename": "Roboto-Regular.eot"
-    },
-    {
-      "content_type": "image/svg+xml",
-      "kind": "assets",
-      "file": "assets/Roboto-Regular.svg",
-      "filename": "Roboto-Regular.svg"
-    },
-    {
-      "content_type": "application/x-font-truetype",
-      "kind": "assets",
-      "file": "assets/Roboto-Regular.ttf",
-      "filename": "Roboto-Regular.ttf"
-    },
-    {
-      "content_type": "application/font-woff",
-      "kind": "assets",
-      "file": "assets/Roboto-Regular.woff",
-      "filename": "Roboto-Regular.woff"
-    },
-    {
-      "content_type": "application/vnd.ms-fontobject",
-      "kind": "assets",
-      "file": "assets/Roboto-Thin.eot",
-      "filename": "Roboto-Thin.eot"
-    },
-    {
-      "content_type": "image/svg+xml",
-      "kind": "assets",
-      "file": "assets/Roboto-Thin.svg",
-      "filename": "Roboto-Thin.svg"
-    },
-    {
-      "content_type": "application/font-woff",
-      "kind": "assets",
-      "file": "assets/Roboto-Thin.woff",
-      "filename": "Roboto-Thin.woff"
-    },
-    {
-      "content_type": "application/vnd.ms-fontobject",
-      "kind": "assets",
-      "file": "assets/Roboto-ThinItalic.eot",
-      "filename": "Roboto-ThinItalic.eot"
-    },
-    {
-      "content_type": "image/svg+xml",
-      "kind": "assets",
-      "file": "assets/Roboto-ThinItalic.svg",
-      "filename": "Roboto-ThinItalic.svg"
-    },
-    {
-      "content_type": "application/x-font-truetype",
-      "kind": "assets",
-      "file": "assets/Roboto-ThinItalic.ttf",
-      "filename": "Roboto-ThinItalic.ttf"
-    },
-    {
-      "content_type": "application/font-woff",
-      "kind": "assets",
-      "file": "assets/Roboto-ThinItalic.woff",
-      "filename": "Roboto-ThinItalic.woff"
-    },
-    {
-      "content_type": "application/x-font-truetype",
-      "kind": "assets",
-      "file": "assets/Roboto-Thin.ttf",
-      "filename": "Roboto-Thin.ttf"
-    },
-    {
-      "content_type": "text/unknown",
-      "kind": "assets",
-      "file": "assets/Roboto-BoldItalic.woff2",
-      "filename": "Roboto-BoldItalic.woff2"
-    },
-    {
-      "content_type": "text/unknown",
-      "kind": "assets",
-      "file": "assets/Roboto-Italic.woff2",
-      "filename": "Roboto-Italic.woff2"
-    },
-    {
-      "content_type": "text/unknown",
-      "kind": "assets",
-      "file": "assets/Roboto-Light.woff2",
-      "filename": "Roboto-Light.woff2"
-    },
-    {
-      "content_type": "text/unknown",
-      "kind": "assets",
-      "file": "assets/Roboto-LightItalic.woff2",
-      "filename": "Roboto-LightItalic.woff2"
-    },
-    {
-      "content_type": "text/unknown",
-      "kind": "assets",
-      "file": "assets/Roboto-Regular.woff2",
-      "filename": "Roboto-Regular.woff2"
-    },
-    {
-      "content_type": "text/unknown",
-      "kind": "assets",
-      "file": "assets/Roboto-Thin.woff2",
-      "filename": "Roboto-Thin.woff2"
-    },
-    {
-      "content_type": "text/unknown",
-      "kind": "assets",
-      "file": "assets/Roboto-ThinItalic.woff2",
-      "filename": "Roboto-ThinItalic.woff2"
-    },
-    {
-      "content_type": "text/unknown",
-      "kind": "assets",
-      "file": "assets/Roboto-Bold.woff2",
-      "filename": "Roboto-Bold.woff2"
     }
   ]
 }

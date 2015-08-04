@@ -6,7 +6,7 @@
       type: 'site'
     });
 
-    {% if voog-tools == "blog_article_page" %}
+    {% if template-tools == "blog_article_page" %}
       // Article pages custom data variable.
       var articleData = new Edicy.CustomData({
         type: 'article',
