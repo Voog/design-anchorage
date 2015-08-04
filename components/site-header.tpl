@@ -4,13 +4,13 @@
   <div class="background-color stretch"></div>
 
   <div class="header-top js-background-type {{ content_top_bg_type }}">
-    <div class="wrap">
+    <div class="wrap js-header-top-wrap">
 
-      <div class="header-left">
-        <div class="header-title">{% unless editmode %}<a href="{{ site.root_item.url }}">{% endunless %}{% editable site.header %}{% unless editmode %}</a>{% endunless %}</div>
+      <div class="header-left js-header-left">
+        <div class="header-title content-area">{% unless editmode %}<a href="{{ site.root_item.url }}">{% endunless %}{% editable site.header %}{% unless editmode %}</a>{% endunless %}</div>
       </div>
 
-      <div class="header-right">
+      <div class="header-right js-header-right">
         {% include 'menu-main' %}
 
         <div class="site-options">

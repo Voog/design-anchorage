@@ -9281,6 +9281,14 @@ return jQuery;
     });
   };
 
+  var bindFallbackHeaderLeftWidthCalculation = function() {
+    var headerWidth = $('.js-header-top-wrap').width(),
+        headerRight = $('.js-header-right'),
+        headerRightWidth = headerRight.width(),
+        headerRightMargin = parseInt(headerRight.css('margin-left')) + 1;
+
+    $('.js-header-left').css('min-width', headerWidth - headerRightWidth - headerRightMargin);
+  };
 
   // contentHalf background image and color preview logic function.
   var contentHalfBgPreview = function(data, contentHalf, contentHalfObj) {
@@ -9709,6 +9717,9 @@ return jQuery;
     toggleFlags();
     tableWrapper();
 
+    if (!Modernizr.flexbox && editmode) {
+      bindFallbackHeaderLeftWidthCalculation();
+    };
   };
 
   // Enables the usage of the initiations outside this file.
