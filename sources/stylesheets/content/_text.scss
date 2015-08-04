@@ -1,0 +1,524 @@
+// Styling rules for the site's editable content areas.
+// NB! Each editable content-area - {% content %} - should be wrapped in the element that has the "content-area" class.
+// NB! Contact forms, image galleries and tables styling rules are located in the separate partials: "_forms.scss", "_gallery.scss" and "_tables.scss".
+.content-area {
+  @extend %clearfix;
+  @include hyphenate(true);
+  @include color($black-light);
+  @include rem-fallback(font-size, $font-size-normal);
+  font-weight: $font-weight-light;
+  line-height: $line-height-medium;
+
+  .dark-background & {
+    @include color($white, 1);
+  }
+
+  .main-feature & {
+    @include rem-fallback(font-size, $font-size-normal);
+  }
+
+  .main-feature &,
+  .quotation & {
+    line-height: 1.4em;
+  }
+
+  .quotation & {
+    width: 100%;
+    @include align-self(center);
+  }
+
+  .contacts & {
+    text-align: center;
+    @include rem-fallback(font-size, $font-size-20);
+  }
+
+  &.header-body {
+    line-height: 1.5em;
+
+    @include query($mobile-1 - 58) {
+      font-size: 24px;
+    }
+  }
+
+  &.footer-left {
+    @include rem-fallback(font-size, $font-size-20);
+  }
+
+  &.footer-right {
+    @include rem-fallback(font-size, $font-size-base);
+  }
+
+  // Resets the top margin for the first element and bottom margin for the last element in the content area (to prevent unwanted white-space at the beginning and the end of a content-area).
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  pre,
+  code,
+  .edy-positionable-container-left-block,
+  .edy-positionable-container-right-block,
+  .edy-positionable-container-center-block {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Styling rules for the editable content area headings and paragraphs.
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  pre,
+  code,
+  table {
+    .dark-background & {
+      @include color($white, 1);
+    }
+
+    .footer-inner.dark-background & {
+      @include color($white, .5);
+    }
+  }
+
+  // Styling rules for the editable content area headings.
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: $font-weight-light;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    @include rem-fallback(font-size, $font-size-xl);
+    line-height: $line-height-middle;
+
+    .contacts & {
+      font-size: 32px;
+    }
+  }
+
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    @include rem-fallback(font-size, $font-size-large);
+
+    .main-feature & {
+      margin-bottom: 17px;
+      text-align: left;
+      @include rem-fallback(font-size, $font-size-title);
+      font-weight: $font-weight-light;
+      text-transform: uppercase;
+
+      @include query($mobile-1 - 58) {
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .contacts & {
+      font-size: 28px;
+    }
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include rem-fallback(font-size, $font-size-normal);
+
+    .contacts & {
+      font-weight: 400;
+      font-size: 24px;
+    }
+  }
+
+  // Styling rules for the editable content area paragraphs, lists and links.
+  p {
+    @include rem-fallback(font-size, $font-size-normal);
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .main-feature & {
+      margin-bottom: 17px;
+    }
+
+    .quotation & {
+      margin-top: 7px;
+      font-size: 24px;
+      @include color($white, 1);
+
+      &:first-child {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  ul,
+  ol,
+  dl {
+    .header-bottom-inner & {
+      text-align: left;
+    }
+  }
+
+  a {
+    @include color($black, 1);
+    border-bottom: 1px solid $black-light;
+
+    .dark-background & {
+      @include color($white, 1);
+      border-bottom: 1px solid $white-cloudy;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    .footer & {
+      @include color($white, .5);
+    }
+  }
+
+  // Sets the dynamic line-height for the text.
+  span[style*="font-size"] {
+    line-height: 1.7em;
+  }
+
+  // Disables hyphenation for the elements that shouldn't hyphenate.
+  pre,
+  code,
+  iframe,
+  table,
+  form {
+    @include hyphenate(false);
+  }
+
+  // Prevent center align on specific elements
+  pre,
+  code,
+  iframe,
+  table,
+  form,
+  .form,
+  ul,
+  ol,
+  dl {
+    .header-bottom-inner &,
+    .main-content &,
+    .main-feature & {
+      text-align: left;
+    }
+  }
+
+  // Top and bottom margin for the elements that doesn't have the default margin.
+  pre,
+  .edy-positionable-container-left-block,
+  .edy-positionable-container-right-block,
+  .edy-positionable-container-center-block,
+  .embed-container,
+  .table-container,
+  .editmode & table {
+    margin-top: $margin-medium;
+    margin-bottom: $margin-medium;
+  }
+
+  // Code blocks and preformatted content.
+  pre,
+  code {
+    @include rem-fallback(font-size, $font-size-small);
+    @include bg($black, .1);
+  }
+
+  pre {
+    overflow: auto;
+    padding: 10px;
+
+    code {
+      display: inline;
+      padding: 0;
+      white-space: pre;
+      line-height: inherit;
+      background-color: transparent;
+      @include word-wrap(normal);
+    }
+  }
+
+  code {
+    display: inline-block;
+    padding: 5px;
+    @include word-wrap(break-word);
+  }
+
+  blockquote {
+    margin: 20px 40px;
+  }
+
+  // Styling rules for the editable content area images, embedded videos, preformatted texts, code examples etc.
+  iframe {
+    max-width: 100%;
+
+    .map & {
+      margin-top: 0;
+    }
+  }
+
+  .custom-btn {
+    display: inline-block;
+    @include bg($black, .0);
+    box-sizing: border-box;
+    width: 250px;
+    padding: 15px 10px;
+    text-transform: uppercase;
+    @include rem-fallback(font-size, $font-size-base);
+    font-weight: $font-weight-normal;
+    line-height: $line-height-medium;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+    @include hyphenate(true);
+    border: 2px solid $black-light;
+    @include color($black-light, 1);
+
+    &:hover {
+      border: 2px solid $white;
+      @include bg($black, 1);
+      @include color($white, 1);
+      transition: $transition;
+
+      .light-background & {
+        border: 2px solid $white;
+        @include color($white, 1);
+      }
+    }
+
+    .dark-background & {
+      border: 2px solid $white;
+      @include color($white, 1);
+    }
+    .light-background & {
+      border: 2px solid $black;
+      @include color($black, 1);
+    }
+  }
+
+  .contacts::first-line {
+    color: red !important;
+  }
+
+  .edy-positionable-container-left {
+    margin-right: 3%;
+  }
+
+  .edy-positionable-container-right {
+    margin-left: 3%;
+  }
+
+  // Content area image title
+  .edy-image-container-with-title {
+    &:after {
+      display: block;
+      padding: 4px;
+      font-size: 13px;
+      line-height: 1.4em;
+      content: attr(data-title);
+    }
+  }
+
+  // Styling rules for the site's editable content area tables.
+  // NB! Works only if editable content-area - {% content %} -  is wrapped into the element that has the "content-area" class.
+
+  // Container around editable content-area table.
+  .table-container {
+    @include border(left, 1px, solid, $black, 0.1);
+    @include border(right, 1px, solid, $black, 0.1);
+
+    .content & {
+      margin-bottom: 35px;
+    }
+  }
+
+  // Overthrow plugin to support horizontal scrolling on older devices that have touch-screens. For example Android 2.3 devices.
+  .overthrow {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    .contacts & {
+      -webkit-overflow-scrolling: none;
+    }
+  }
+
+  form {
+    margin: $margin-low 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+  }
+
+  table {
+    width: 100%;
+    margin: 0 auto;
+    @include rem-fallback(font-size, $font-size-base);
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    .content & {
+      .editmode & {
+        margin-bottom: 35px;
+      }
+    }
+
+    .contacts &,
+    .editmode .contacts & {
+      margin-bottom: 0;
+    }
+
+    tr {
+      th,
+      td {
+        padding: 9px 13px;
+      }
+
+      th {
+        text-align: left;
+        font-weight: 400;
+        @include color($white);
+        @include bg($black);
+        @include border(all, 1px,solid,$black);
+
+        .footer & {
+          @include color($white, .5);
+        }
+      }
+
+      td {
+        @include border(top, 1px, solid, $black, .1);
+        @include border(right, 1px, solid, $black, .1);
+        @include border(bottom, 1px, solid, $black, .1);
+        @include border(left, 1px, solid, $black, .1);
+
+        .dark-background & {
+          @include border(top, 1px, solid, $white, .1);
+          @include border(right, 1px, solid, $white, .1);
+          @include border(bottom, 1px, solid, $white, .1);
+          @include border(left, 1px, solid, $white, .1);
+        }
+      }
+    }
+
+    .contacts &,
+    .footer & {
+      width: auto;
+      border: none;
+
+      tr {
+        @extend %clearfix;
+
+        td {
+          background: none;
+
+          &:first-child {
+            padding-left: 0;
+            border-left: none;
+          }
+
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+
+    .contacts & {
+      font-size: 24px;
+      line-height: 1em;
+
+      tr {
+        td {
+          padding: 0 25px;
+          @include color($black, 0.73);
+          border-top: none;
+          @include border(left, 2px, solid, $black, 0.2);
+          border-right: none;
+          border-bottom: none;
+        }
+      }
+
+      @include query($tablet-1 - 40) {
+        @include rem-fallback(font-size, $font-size-20);
+      }
+
+      @include query($tablet-2) {
+        @include rem-fallback(font-size, $font-size-base);
+      }
+    }
+
+    .footer & {
+      tr {
+        td {
+          padding: 0 12px;
+          border: none;
+
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+
+    @include query($mobile-1 + 42) {
+      .contacts &,
+      .footer & {
+        &, tbody, tr {
+          display: block;
+        }
+
+        tr {
+          td {
+            width: 100%;
+            float: left;
+            padding: 0;
+            @include box-sizing(border-box);
+          }
+        }
+      }
+
+      .contacts & {
+        line-height: inherit;
+
+        tr {
+          td {
+            border-left: none;
+            @include border(bottom, 2px, solid, $black, 0.2);
+          }
+        }
+      }
+    }
+  }
+}

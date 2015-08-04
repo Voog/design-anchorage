@@ -35,7 +35,7 @@
   }
 
   .main-content {
-    .content-formatted {
+    .content-area {
       @include rem-fallback(font-size, $font-size-huge);
       font-weight: $font-weight-light;
       line-height: $line-height-medium;
@@ -60,7 +60,7 @@
   .blog-feed {
     padding: $padding-general 0;
 
-    .content-formatted {
+    .content-area {
       @include rem-fallback(font-size, $font-size-huge);
       font-weight: $font-weight-light;
       line-height: $line-height-medium;

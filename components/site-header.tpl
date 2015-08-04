@@ -48,7 +48,7 @@
 
       {% if front_page %}
         <div class="wrap">
-          <div class="header-body content-formatted">
+          <div class="header-body content-area">
             {% content name="header" %}
           </div>
         </div>

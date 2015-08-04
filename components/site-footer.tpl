@@ -87,7 +87,7 @@
 
   <div class="footer-body content-area js-background-type {{ content_bottom_bg_type }}">
     <div class="wrap">
-      <div class="inner content-formatted">
+      <div class="inner content-area">
         {% xcontent name='footer' %}
       </div>
     </div>

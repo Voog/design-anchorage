@@ -149,7 +149,7 @@
 
           <div class="main-content">
             <div class="wrap js-background-type {{ content_left_bg_type }}">
-              <div class="inner content-formatted">
+              <div class="inner content-area">
                 {% content %}
               </div>
             </div>
@@ -158,7 +158,7 @@
           <div class="main-feature">
 
             <div class="wrap js-background-type {{ content_left_bg_type }}">
-              <div class="feature-left inner inner-left content-formatted{% if editmode %} narrow-feature{% else %}{% unless feature_left_size contains '-' %} narrow-feature{% endunless %}{% endif %}">
+              <div class="feature-left inner inner-left content-area{% if editmode %} narrow-feature{% else %}{% unless feature_left_size contains '-' %} narrow-feature{% endunless %}{% endif %}">
                 {% if feature_picture_total_size_num > 0 or editmode %}
                   <div class="feature-picture {% if feature_picture_left_size_num < 0 %}empty{% endif %}">
                     {% if editmode %}
@@ -174,7 +174,7 @@
                 {% endif %}
                 {% content name="feature_left" %}
               </div>
-              <div class="feature-center inner inner-center content-formatted{% if editmode %} narrow-feature{% else %}{% unless feature_center_size contains '-' %} narrow-feature{% endunless %}{% endif %}">
+              <div class="feature-center inner inner-center content-area{% if editmode %} narrow-feature{% else %}{% unless feature_center_size contains '-' %} narrow-feature{% endunless %}{% endif %}">
                 {% if feature_picture_total_size_num > 0 or editmode %}
                   <div class="feature-picture {% if feature_picture_center_size_num < 0 %}empty{% endif %}">
                     {% if editmode %}
@@ -190,7 +190,7 @@
                 {% endif %}
                 {% content name="feature_center" %}
               </div>
-              <div class="feature-right inner inner-right content-formatted{% if editmode %} narrow-feature{% else %}{% unless feature_right_size contains '-' %} narrow-feature{% endunless %}{% endif %}">
+              <div class="feature-right inner inner-right content-area{% if editmode %} narrow-feature{% else %}{% unless feature_right_size contains '-' %} narrow-feature{% endunless %}{% endif %}">
                 {% if feature_picture_total_size_num > 0 or editmode %}
                   <div class="feature-picture {% if feature_picture_right_size_num < 0 %}empty{% endif %}">
                     {% if editmode %}
@@ -217,7 +217,7 @@
           <div class="background-color stretch"></div>
           {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-image="{{ content_right_bg_image }}" data-bg-image-sizes="{{ content_right_bg_image_sizes_str | escape }}" data-bg-color="{{ content_right_bg_color }}" data-bg-color-data="{{ content_right_bg_color_data_str | escape }}"></button>{% endif %}
           <div class="wrap js-background-type {{ content_right_bg_type }}">
-            <div class="inner content-formatted">
+            <div class="inner content-area">
               {% content name="bottom" %}
             </div>
           </div>

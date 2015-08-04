@@ -41,7 +41,7 @@
               <div class="wrap">
                 <div class="inner">
                   <section class="content-area">
-                    <div class="content-body content-formatted">
+                    <div class="content-body content-area">
                       {% contentblock name="content_header" publish_default_content="true" %}<h1>{{ page.title }}</h1>{% endcontentblock %}
                       {% content %}
                     </div>
@@ -55,7 +55,7 @@
 
                 <div class="inner content-half content-left">
                   <section class="content-area">
-                    <div class="content-body content-formatted">
+                    <div class="content-body content-area">
                       {% content name="left" %}
                     </div>
                   </section>
@@ -63,7 +63,7 @@
 
                 <div class="inner content-half content-right">
                   <section class="content-area">
-                    <div class="content-body content-formatted">
+                    <div class="content-body content-area">
                       {% content name="right" %}
                     </div>
                   </section>

@@ -21,7 +21,7 @@
 
           <div class="main-content">
             <div class="wrap">
-              <div class="inner content-formatted">
+              <div class="inner content-area">
 
                 {% if editmode %}
                 {% elsif article.data.content_top_bg.imageSizes == nil or article.data.content_top_bg.imageSizes == "" %}
