@@ -7,7 +7,6 @@
     {% include 'template-styles' %}
     {% if editmode %}
       <link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.css">
-      <style id="preview-style"></style>
     {% endif %}
   </head>
 

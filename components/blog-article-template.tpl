@@ -14,7 +14,7 @@
       <div class="article-body content-area">{% editable article.body %}</div>
     </div>
   {% else %}{% comment %}<!--Blog and news excerpt when no article photo-->{% endcomment %}
-    {% if article.data.content_top_bg.imageSizes == nil or article.data.content_top_bg.imageSizes == "" %}
+    {% if article.data.header_bg.imageSizes == nil or article.data.header_bg.imageSizes == "" %}
       <div class="article-content">
         <div class="article-excerpt content-area">{% if blog-article-template == 'blog_article_page' %}{% editable article.excerpt %}{% else %}{{ article.excerpt }}{% endif %}</div>
       </div>
@@ -22,7 +22,7 @@
   {% endif %}
 
   {% unless blog_article_page %}{% comment %}<!--Blog and news user custom photo-->{% endcomment %}
-    {% for imageSize in article.data.content_top_bg.imageSizes %}
+    {% for imageSize in article.data.header_bg.imageSizes %}
       {% if forloop.first %}
         <footer class="article-footer">
           <div class="article-image">

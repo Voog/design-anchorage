@@ -1,125 +1,56 @@
 {% editorjsblock %}
   <script src='{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.js'></script>
   <script>
-
     var siteData = new Edicy.CustomData({
       type: 'site'
     });
 
-    {% if template-tools == "blog_article_page" %}
-      // Article pages custom data variable.
-      var articleData = new Edicy.CustomData({
-        type: 'article',
-        id: '{{ article.id }}'
-      });
+    // Initiates language flag toggleing functionality.
+    site.toggleFlags();
+
+    {% if blog_article_page %}
+      var pageType = 'articlePage';
+
     {% else %}
-      // Article pages custom data variable.
-      var pageData = new Edicy.CustomData({
-        type: 'page',
-        id: '{{ page.id }}'
+      var pageType = 'contentPage',
+          pageData = new Edicy.CustomData({
+            type: 'page',
+            id: '{{ page.id }}'
+          });
+
+      $('.js-img-dropper-area').each(function(index, imgDropperArea) {
+        var dataImgKey = $(imgDropperArea).data('img-key');
+
+        var imgDropper = new Edicy.ImgDropArea($(imgDropperArea), {
+          positionable: true,
+          target_width: 1280,
+
+          change: function(data) {
+            pageData.set(dataImgKey, data);
+          }
+        });
       });
     {% endif %}
 
+    $('.js-bg-picker-area').each(function(index, bgPickerArea) {
+      var bgPickerButton = $(bgPickerArea).find('.js-background-settings'),
+          dataBgKey = $(bgPickerButton).data('bg-key'),
+          pictureBoolean = $(bgPickerButton).data('bg-picture-boolean');
 
-    {% comment %}/*Front page top content area background picker.*/{% endcomment %}
-    var contentHalfTopBg = new Edicy.BgPicker($('.content-top .js-background-settings'), {
-        picture: true,
-        target_width: 600,
-        color: true,
-        showAlpha: true,
+      var bgPicker = new Edicy.BgPicker(bgPickerButton, {
+            picture: pictureBoolean,
+            target_width: 600,
+            color: true,
+            showAlpha: true,
 
-      preview: function(data) {
-        site.contentHalfBgPreview(data, '.js-content-top', contentHalfTopBg);
-      },
+        preview: function(data) {
+          site.bgPickerPreview($(bgPickerArea), data, bgPicker);
+        },
 
-      commit: function(data) {
-        site.contentHalfBgCommit(data, 'content_top_bg');
-      }
+        commit: function(data) {
+          site.bgPickerCommit(dataBgKey, data, pageType);
+        }
+      });
     });
-
-    {% comment %}/*Front page left content area background picker.*/{% endcomment %}
-    var contentHalfLeftBg = new Edicy.BgPicker($('.content-left .js-background-settings'), {
-        picture: true,
-        target_width: 600,
-        color: true,
-        showAlpha: true,
-
-      preview: function(data) {
-        site.contentHalfBgPreview(data, '.js-content-left', contentHalfLeftBg);
-      },
-
-      commit: function(data) {
-        site.contentHalfBgCommit(data, 'content_left_bg');
-      }
-    });
-
-    {% comment %}/*Front page right content area background picker.*/{% endcomment %}
-    var contentHalfRightBg = new Edicy.BgPicker($('.content-right .js-background-settings'), {
-        picture: true,
-        target_width: 600,
-        color: true,
-        showAlpha: true,
-
-      preview: function(data) {
-        site.contentHalfBgPreview(data, '.js-content-right', contentHalfRightBg);
-      },
-
-      commit: function(data) {
-        site.contentHalfBgCommit(data, 'content_right_bg');
-      }
-    });
-
-    {% comment %}/*Front page bottom content area background picker.*/{% endcomment %}
-    var contentHalfBottomBg = new Edicy.BgPicker($('.content-bottom .js-background-settings'), {
-        picture: false,
-        target_width: 600,
-        color: true,
-        showAlpha: true,
-
-      preview: function(data) {
-        site.contentHalfBgPreview(data, '.js-content-bottom', contentHalfBottomBg);
-      },
-
-      commit: function(data) {
-        site.contentHalfBgCommit(data, 'content_bottom_bg');
-      }
-    });
-
-    var feature_picture_left = new Edicy.ImgDropArea($('#feature-picture-left'), {
-      positionable: true,
-      target_width: 375,
-
-      change: function(data) {
-        // Save page.data.image data value here
-        pageData.set({
-          'feature_picture_left': data
-        });
-      }
-    });
-
-    var feature_picture_center = new Edicy.ImgDropArea($('#feature-picture-center'), {
-      positionable: true,
-      target_width: 375,
-
-      change: function(data) {
-        // Save page.data.image data value here
-        pageData.set({
-          'feature_picture_center': data
-        });
-      }
-    });
-
-    var feature_picture_right = new Edicy.ImgDropArea($('#feature-picture-right'), {
-      positionable: true,
-      target_width: 375,
-
-      change: function(data) {
-        // Save page.data.image data value here
-        pageData.set({
-          'feature_picture_right': data
-        });
-      }
-    });
-
   </script>
 {% endeditorjsblock %}

@@ -7,7 +7,6 @@
     {% include 'template-styles' %}
     {% if editmode %}
       <link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.css">
-      <style id="preview-style"></style>
     {% endif %}
   </head>
 
@@ -24,7 +23,7 @@
               <div class="inner content-area">
 
                 {% if editmode %}
-                {% elsif article.data.content_top_bg.imageSizes == nil or article.data.content_top_bg.imageSizes == "" %}
+                {% elsif article.data.header_bg.imageSizes == nil or article.data.header_bg.imageSizes == "" %}
                   <div class="article-meta">
                     <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | date: "%d. %B %Y" }}, </time>
                     <div class="article-author">{{ article.author.name }}</div>
@@ -51,7 +50,7 @@
                 </div>
 
                 {% if editmode %}
-                {% elsif article.data.content_top_bg.imageSizes == nil or article.data.content_top_bg.imageSizes == "" %}
+                {% elsif article.data.header_bg.imageSizes == nil or article.data.header_bg.imageSizes == "" %}
                   <header class="article-header">
                     <h1 class="article-title">{% if editmode %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
                   </header>

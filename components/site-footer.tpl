@@ -1,8 +1,8 @@
-<footer class="site-footer content-full content-bottom js-content-bottom">
+<footer class="site-footer content-full content-bottom js-bg-picker-area">
 
-  <div class="background-image stretch"></div>
-  <div class="background-color stretch"></div>
-  {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-image="{{ content_bottom_bg_image }}" data-bg-image-sizes="{{ content_bottom_bg_image_sizes_str | escape }}" data-bg-color="{{ content_bottom_bg_color }}" data-bg-color-data="{{ content_bottom_bg_color_data_str | escape }}"></button>{% endif %}
+  <div class="background-image js-background-image"></div>
+  <div class="background-color js-background-color"></div>
+  {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-key="footer_bg" data-bg-picture-boolean="false" data-bg-image="{{ footer_bg_image }}" data-bg-image-sizes="{{ footer_bg_image_sizes_str | escape }}" data-bg-color="{{ footer_bg_color }}" data-bg-color-data="{{ footer_bg_color_data_str | escape }}"></button>{% endif %}
 
   {% if site-footer == "blog_article_page" %}
     <div class="blog-article-nav">
@@ -102,5 +102,4 @@
       {% endloginblock %}
     </div>
   {% endif %}
-
 </footer>

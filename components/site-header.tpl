@@ -1,9 +1,9 @@
-<header class="site-header content-full content-top  js-content-top">
+<header class="site-header content-full js-bg-picker-area">
 
-  <div class="background-image stretch"></div>
-  <div class="background-color stretch"></div>
+  <div class="background-image js-background-image"></div>
+  <div class="background-color js-background-color"></div>
 
-  <div class="header-top js-background-type {{ content_top_bg_type }}">
+  <div class="header-top js-background-type {{ header_bg_type }}">
     <div class="wrap js-header-top-wrap">
 
       <div class="header-left js-header-left">
@@ -42,8 +42,8 @@
 
     </div>
   </div>
-  <div class="header-bottom js-background-type {{ content_top_bg_type }}">
-    {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-image="{{ content_top_bg_image }}" data-bg-image-sizes="{{ content_top_bg_image_sizes_str | escape }}" data-bg-color="{{ content_top_bg_color }}" data-bg-color-data="{{ content_top_bg_color_data_str | escape }}"></button>{% endif %}
+  <div class="header-bottom js-background-type {{ header_bg_type }}">
+    {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-key="header_bg" data-bg-picture-boolean="true" data-bg-image="{{ header_bg_image }}" data-bg-image-sizes="{{ header_bg_image_sizes_str | escape }}" data-bg-color="{{ header_bg_color }}" data-bg-color-data="{{ header_bg_color_data_str | escape }}"></button>{% endif %}
     <div class="header-bottom-inner">
 
       {% if front_page %}
@@ -53,7 +53,7 @@
           </div>
         </div>
       {% elsif blog_article_page %}
-        {% if editmode %}
+        {% if editmode or header_bg %}
           <div class="wrap is-photoheader">
             <div class="header-body">
               <h1 class="article-title">{% if editmode %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
@@ -61,7 +61,7 @@
               <div class="article-author">{{ article.author.name }}</div>
             </div>
           </div>
-        {% elsif article.data.content_top_bg.imageSizes == nil or article.data.content_top_bg.imageSizes == "" %}
+        {% elsif article.data.header_bg.imageSizes == nil or article.data.header_bg.imageSizes == "" %}
           <div class="wrap">
             <div class="header-body">
               {% for item in site.menuitems_with_hidden %}
