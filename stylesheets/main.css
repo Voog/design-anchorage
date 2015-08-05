@@ -492,10 +492,6 @@ a img {
   max-width: 1120px;
 }
 
-.blog-article-page .wrap {
-  max-width: 700px;
-}
-
 .is-untranslated {
   opacity: .2;
 }

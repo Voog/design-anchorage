@@ -167,9 +167,9 @@ a {
     @extend %wide-wrap;
   }
 
-  .blog-article-page & {
-    @extend %medium-wrap;
-  }
+  // .blog-article-page & {
+  //   @extend %medium-wrap;
+  // }
 }
 
 .inner {
