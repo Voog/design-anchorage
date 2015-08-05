@@ -861,14 +861,14 @@ a img {
     box-shadow: none;
   }
 }
-.article-comments.active {
+.article-comments.selected {
   top: 0;
   right: 0;
   transition: 250ms;
   box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
 }
 @media screen and (max-width: 480px) {
-  .article-comments.active {
+  .article-comments.selected {
     position: relative;
   }
 }
@@ -1466,8 +1466,8 @@ a img {
     color: #ffffff;
     color: rgba(255, 255, 255, 0.5);
   }
-  #mobile-menu .navigation-menu ul a.active,
-  #mobile-menu .lang-menu ul a.active {
+  #mobile-menu .navigation-menu ul a.selected,
+  #mobile-menu .lang-menu ul a.selected {
     color: white;
   }
 }
@@ -2066,7 +2066,7 @@ a img {
   max-width: 100%;
   margin: 0 10px;
 }
-.search.active {
+.search.selected {
   position: absolute;
   top: 90px;
   right: 50px;
@@ -2104,7 +2104,7 @@ a img {
   -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
-.search-form, .search-form.active {
+.search-form, .search-form.selected {
   max-width: 400px;
   margin: 0 auto;
   border: none;
@@ -2382,7 +2382,7 @@ a img {
 .site-sidebar .submenu a:hover {
   color: #222222;
 }
-.site-sidebar .submenu .active {
+.site-sidebar .submenu .selected {
   font-weight: 400;
   color: #222222;
 }
@@ -2406,7 +2406,7 @@ a img {
 .site-sidebar .submenu .submenu-lvl2 a:hover {
   font-weight: 400;
 }
-.site-sidebar .submenu .submenu-lvl2 .active {
+.site-sidebar .submenu .submenu-lvl2 .selected {
   font-weight: 400;
 }
 

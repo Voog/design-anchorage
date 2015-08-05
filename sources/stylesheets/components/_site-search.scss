@@ -52,7 +52,7 @@
     }
   }
 
-  &.active {
+  &.selected {
     position: absolute;
     top: 90px;
     right: 50px;
@@ -89,7 +89,7 @@
   @include box-shadow(0, 2px, 4px, 0, rgba($black-base, .1));
 
   &,
-  &.active {
+  &.selected {
     max-width: 400px;
     margin: 0 auto;
     border: none;
