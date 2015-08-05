@@ -216,7 +216,7 @@ a {
       @include color($white, 1);
     }
   }
-  .menu li.is-active a {
+  .menu li.selected a {
     @include color($white, 1);
   }
   .lang-title {
@@ -231,7 +231,7 @@ a {
           @include color($white, 1);
         }
       }
-      .lang-title a.is-active {
+      .lang-title a.selected {
         @include color($white, 1);
       }
     }
@@ -266,7 +266,7 @@ a {
         @include color($black, 1);
       }
     }
-    .menu li.is-active a {
+    .menu li.selected a {
       @include color($black, 1);
     }
   }
@@ -285,7 +285,7 @@ a {
       }
     }
 
-    .lang-title a.is-active {
+    .lang-title a.selected {
       @include color($black, 1);
     }
   }

@@ -1,15 +1,17 @@
 <nav class="menu-main visibility-lrg">
   <ul class="menu">
     {% unless site.root_item.hidden? %}
-      <li {% if site.root_item.selected? %} class="is-active"{% endif %}>
+{% comment %}      <li {% if site.root_item.selected? %} class="is-active"{% endif %}>
         <a href="{{ site.root_item.url }}">{{ site.root_item.title }}</a>
-      </li>
+      </li>{% endcomment %}
+      {% menulink site.root_item wrapper-tag="li" %}
     {% endunless %}
 
     {% for item in site.visible_menuitems %}
-      <li{% if item.selected? %} class="is-active"{% endif %}{% unless item.translated? %} class="is-untranslated fci-editor-menuadd"{% endunless %}>
+{% comment %}      <li{% if item.selected? %} class="is-active"{% endif %}{% unless item.translated? %} class="is-untranslated fci-editor-menuadd"{% endunless %}>
         {% menulink item %}
-      </li>
+      </li>{% endcomment %}
+      {% menulink item wrapper-tag="li" %}
     {% endfor %}
 
     {% if editmode %}

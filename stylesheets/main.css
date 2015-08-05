@@ -279,7 +279,7 @@ a img {
 .dark-background .menu li a:hover {
   color: white;
 }
-.dark-background .menu li.is-active a {
+.dark-background .menu li.selected a {
   color: white;
 }
 .dark-background .lang-title {
@@ -292,7 +292,7 @@ a img {
 .dark-background .lang-menu.lang-menu-bilingual .lang-title a:hover {
   color: white;
 }
-.dark-background .lang-menu.lang-menu-bilingual .lang-title a.is-active {
+.dark-background .lang-menu.lang-menu-bilingual .lang-title a.selected {
   color: white;
 }
 .dark-background .voog-reference svg path {
@@ -321,7 +321,7 @@ a img {
 .site-header .light-background .menu li a:hover {
   color: #222222;
 }
-.site-header .light-background .menu li.is-active a {
+.site-header .light-background .menu li.selected a {
   color: #222222;
 }
 .site-footer .light-background {
@@ -333,7 +333,7 @@ a img {
 .light-background .lang-menu-bilingual .lang-title a:hover {
   color: #222222;
 }
-.light-background .lang-menu-bilingual .lang-title a.is-active {
+.light-background .lang-menu-bilingual .lang-title a.selected {
   color: #222222;
 }
 
@@ -1145,7 +1145,7 @@ a img {
 .menu li:last-child {
   margin-right: 0;
 }
-.menu li.is-active {
+.menu li.selected {
   font-weight: 400;
 }
 .menu li a {
