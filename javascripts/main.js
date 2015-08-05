@@ -9568,15 +9568,15 @@ return jQuery;
       event.stopPropagation();
 
       $(this).addClass('open');
-      $('.submenu').addClass('open');
-      $('.submenu-close-lvl1').addClass('open');
+      $(this).next().addClass('open');
+      $(this).next().next().addClass('open');
     });
 
     $('.submenu-close-lvl1').click(function(event) {
       event.stopPropagation();
-      $('.submenu').removeClass('open');
-      $('.submenu-load-more-lvl1').removeClass('open');
-      $('.submenu-close-lvl1').removeClass('open');
+      $(this).removeClass('open');
+      $(this).prev().removeClass('open');
+      $(this).next().removeClass('open');
     });
 
     // Submenu lvl2 load more on mobile.
@@ -9591,8 +9591,8 @@ return jQuery;
     $('.submenu-close-lvl2').click(function(event) {
       event.stopPropagation();
       $(this).removeClass('open');
+      $(this).prev().removeClass('open');
       $(this).next().removeClass('open');
-      $(this).next().next().removeClass('open');
     });
 
 

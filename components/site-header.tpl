@@ -53,7 +53,7 @@
           </div>
         </div>
       {% elsif blog_article_page %}
-        {% if editmode or header_bg %}
+        {% if editmode %}
           <div class="wrap is-photoheader">
             <div class="header-body">
               <h1 class="article-title">{% if editmode %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>

@@ -1502,7 +1502,7 @@ a img {
     visibility: hidden;
     height: 0;
     opacity: 0;
-    transition: 500ms;
+    transition: 0;
   }
   #mobile-menu .navigation-menu .submenu.open,
   #mobile-menu .navigation-menu .submenu-lvl2.open {

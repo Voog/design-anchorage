@@ -424,14 +424,14 @@
         visibility: hidden;
         height: 0;
         opacity: 0;
-        transition: $transition;
+        transition: 0;
       }
       .submenu.open,
       .submenu-lvl2.open {
         visibility: visible;
         height: auto;
         opacity: 1;
-        transition: $transition
+        transition: $transition;
       }
     }
 
