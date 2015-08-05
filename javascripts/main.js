@@ -9583,17 +9583,16 @@ return jQuery;
     $('.submenu-load-more-lvl2').click(function(event) {
       event.stopPropagation();
 
-      console.log(this);
       $(this).addClass('open');
-      $('.submenu-lvl2').addClass('open');
-      $('.submenu-close-lvl2').addClass('open');
+      $(this).next().addClass('open');
+      $(this).next().next().addClass('open');
     });
 
     $('.submenu-close-lvl2').click(function(event) {
       event.stopPropagation();
-      $('.submenu-lvl2').removeClass('open');
-      $('.submenu-load-more-lvl2').removeClass('open');
-      $('.submenu-close-lvl2').removeClass('open');
+      $(this).removeClass('open');
+      $(this).next().removeClass('open');
+      $(this).next().next().removeClass('open');
     });
 
 
