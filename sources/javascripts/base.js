@@ -372,6 +372,7 @@
     $('.submenu-load-more-lvl2').click(function(event) {
       event.stopPropagation();
 
+      console.log(this);
       $(this).addClass('open');
       $('.submenu-lvl2').addClass('open');
       $('.submenu-close-lvl2').addClass('open');
