@@ -354,21 +354,19 @@ a {
 }
 
 .edy-img-drop-area {
-  /*position: static!important;*/
-}
+  &.over {
+    background-color: rgba(0,0,0,.2);
+  }
 
-.edy-img-drop-area-placeholder {
-  text-align: left;
-  padding: 113px 5px;
-}
+  .edy-img-drop-area-placeholder {
+    text-align: left;
+    padding: 113px 5px;
+  }
 
-.edy-img-drop-area-positionable.over {
-  background-color: rgba(0,0,0,.2);
-}
-.edy-img-drop-area-remove-image {
-  top: 0!important;
-  left: 9px!important;
-  z-index: 1;
+  .edy-img-drop-area-remove-image {
+    top: 5px;
+    right: 5px;
+  }
 }
 
 
