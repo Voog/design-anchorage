@@ -34,7 +34,7 @@
       <ul>
         {% for language in site.languages %}
           <li>
-            <a class="{% if language.selected? %} active{% endif %}" href="{{ language.url }}">{{ language.title }}</a>
+            <a class="{% if language.selected? %} selected{% endif %}" href="{{ language.url }}">{{ language.title }}</a>
           </li>
         {% endfor %}
         {% if editmode %}<li>{% languageadd %}</li>{% endif %}
@@ -54,32 +54,32 @@
   <div class="navigation-menu">
     <ul>
       {% unless site.root_item.hidden? %}
-        <li><a href="{{site.root_item.url}}"{% if site.root_item.selected? %} class="active"{% endif %}>{{site.root_item.title}}</a></li>
+        <li><a href="{{site.root_item.url}}"{% if site.root_item.selected? %} class="selected"{% endif %}>{{site.root_item.title}}</a></li>
       {% endunless %}
       {% for item in site.visible_menuitems %}
         <li>
-          <a href="{{ item.url }}" {% if item.selected? %} class="active"{% endif %}{% unless item.translated? %} class="fci-editor-menuadd untranslated"{% endunless %}>
+          <a href="{{ item.url }}" {% if item.selected? %} class="selected"{% endif %}{% unless item.translated? %} class="fci-editor-menuadd untranslated"{% endunless %}>
             {{ item.title }}
           </a>
 
           {% if editmode or item.children? %}
-            <div class="submenu-load-more submenu-load-more-lvl1"></div>
-            <div class="submenu-load-more submenu-close-lvl1"></div>
-            <ul class="submenu">
+            <div class="submenu-load-more submenu-load-more-lvl1{% if item.selected? %} open{% endif %}"></div>
+            <div class="submenu-load-more submenu-close-lvl1{% if item.selected? %} open{% endif %}"></div>
+            <ul class="submenu{% if item.selected? %} open{% endif %}">
 
               {% for level2 in item.visible_children %}
                 <li{% unless level2.translated? %} class="untranslated"{% endunless %}>
-                  <a href="{{ level2.url }}"{% if level2.selected? %} class="active"{% endif %}>{{ level2.title }}</a>
+                  <a href="{{ level2.url }}"{% if level2.selected? %} class="selected"{% endif %}>{{ level2.title }}</a>
 
                   {% if level2.selected? %}
                     {% if editmode or level2.children? %}
-                      <div class="submenu-load-more submenu-load-more-lvl2"></div>
-                      <div class="submenu-load-more submenu-close-lvl2"></div>
-                      <ul class="submenu-lvl2">
+                      <div class="submenu-load-more submenu-load-more-lvl2{% if level2.selected? %} open{% endif %}"></div>
+                      <div class="submenu-load-more submenu-close-lvl2{% if level2.selected? %} open{% endif %}"></div>
+                      <ul class="submenu-lvl2{% if level2.selected? %} open{% endif %}">
 
                         {% for level3 in level2.visible_children %}
                           <li{% unless level3.translated? %} class="untranslated"{% endunless %}>
-                            <a href="{{ level3.url }}"{% if level3.selected? %} class="active"{% endif%}>{{ level3.title }}</a>
+                            <a href="{{ level3.url }}"{% if level3.selected? %} class="selected"{% endif%}>{{ level3.title }}</a>
                           </li>
                         {% endfor %}
 
