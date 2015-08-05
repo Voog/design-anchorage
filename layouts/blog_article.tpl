@@ -5,9 +5,6 @@
     {% include 'template-variables' with 'blog_article_page' %}
     {% include 'html-head' %}
     {% include 'template-styles' %}
-    {% if editmode %}
-      <link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.css">
-    {% endif %}
   </head>
 
   <body class="blog-article-page">
