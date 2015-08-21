@@ -118,7 +118,7 @@
       {% endif %}
     {% endif %}
   {% else %}
-    {% assign content_bg_1_type = 'dark-background' %}
+    {% assign content_bg_1_type = 'light-background' %}
   {% endif %}
 
   {% if content_bg_1_image == nil %}
