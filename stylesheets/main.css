@@ -1009,7 +1009,6 @@ a img {
 }
 .site-header .header-top .site-options {
   position: relative;
-  margin-bottom: 20px;
 }
 .site-header .header-title {
   word-break: break-word;
@@ -1057,6 +1056,9 @@ a img {
   .no-flexbox .site-header .header-left {
     float: none;
   }
+}
+.site-header .header-right {
+  text-align: right;
 }
 .no-flexbox .site-header .header-right {
   float: right;
@@ -1174,12 +1176,10 @@ a img {
 
 .menu-main {
   margin-right: 20px;
-  margin-bottom: 20px;
   text-transform: uppercase;
 }
 .menu-main li {
   margin-left: 20px;
-  margin-bottom: 10px;
 }
 
 .menu-sub li {
@@ -1924,6 +1924,7 @@ a img {
 
 /* langmenu */
 .lang-menu {
+  position: relative;
   display: inline-block;
   vertical-align: middle;
   margin-left: 20px;
@@ -1959,7 +1960,7 @@ a img {
   color: #222222;
 }
 .lang-menu a.lang-flag:before, .lang-menu a.lang-flag:after {
-  top: 4px;
+  top: 6px;
   left: 12px;
 }
 .lang-menu a.lang-flag:before, .lang-menu a.lang-flag:after {
@@ -2025,7 +2026,7 @@ a img {
   position: absolute;
   z-index: 1;
   top: 35px;
-  right: 60px;
+  right: -11px;
   display: none;
   min-width: 122px;
   padding: 5px 0;
@@ -2202,7 +2203,7 @@ a img {
   width: 26px;
   height: 26px;
   font-size: 0;
-  margin: 0 20px;
+  margin-left: 5px;
 }
 .front-page .header-options .search-btn {
   top: 1px;

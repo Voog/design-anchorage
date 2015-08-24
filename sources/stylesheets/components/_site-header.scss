@@ -22,29 +22,11 @@
       padding-top: $header-padding;
       padding-right: $header-padding;
       padding-left: $header-padding;
-
-      // width: 100%;
-      // max-width: 1340px;
-
-      // @include query($tablet-2) {
-      //   padding: $margin-low;
-      //   padding-bottom: 0;
-
-      //   .flexbox & {
-      //     @include display(flex);
-      //   }
-
-      //   .no-flexbox & {
-      //     display: table;
-      //     width: 100%;
-      //     box-sizing: border-box;
-      //   }
-      // }
     }
 
     .site-options {
       position: relative;
-      margin-bottom: 20px;
+      // margin-bottom: 20px;
     }
   }
 
@@ -73,11 +55,6 @@
   }
 
   .header-left {
-    // float: left;
-
-    // @include querymin($tablet-2) {
-    //   max-width: 20%;
-    // }
     .flexbox & {
       @include flex(1 0 auto);
     }
@@ -90,13 +67,8 @@
       }
     }
   }
-  .header-right {
-    // float: right;
-    // text-align: right;
-
-    // @include querymin($tablet-2) {
-    //   max-width: 80%;
-    // }
+  .header-right { 
+    text-align: right;
 
     .no-flexbox & {
       float: right;
@@ -191,5 +163,4 @@
       }
     }
   }
-
 }

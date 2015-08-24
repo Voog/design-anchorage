@@ -31,12 +31,12 @@
 // Main menu
 .menu-main {
   margin-right: $margin-low;
-  margin-bottom: $margin-low;
+  // margin-bottom: $margin-low;
   text-transform: uppercase;
 
   li {
     margin-left: $margin-low;
-    margin-bottom: $margin-low - 10px;
+    // margin-bottom: $margin-low - 10px;
   }
 }
 
@@ -785,6 +785,7 @@ $flags:
 
 /* langmenu */
 .lang-menu {
+  position: relative;
   display: inline-block;
   vertical-align: middle;
   margin-left: 20px;
@@ -822,7 +823,7 @@ $flags:
       }
       &:before,
       &:after {
-        top: 4px;
+        top: 6px;
         left: 12px;
       }
 
@@ -907,7 +908,7 @@ $flags:
   position: absolute;
   z-index: 1;
   top: 35px;
-  right: 60px;
+  right: -11px;
   display: none;
   min-width: 122px;
   padding: 5px 0;
