@@ -703,7 +703,7 @@ a img {
   position: relative;
   padding: 40px 0;
   word-break: break-word;
-  word-break: break-all;
+  word-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -1031,7 +1031,7 @@ a img {
 }
 .site-header .header-title {
   word-break: break-word;
-  word-break: break-all;
+  word-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -2476,7 +2476,7 @@ a img {
 }
 .site-footer .blog-article-nav {
   word-break: break-word;
-  word-break: break-all;
+  word-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -2585,7 +2585,7 @@ a img {
 
 .content-area {
   word-break: break-word;
-  word-break: break-all;
+  word-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -2762,6 +2762,7 @@ a img {
 .content-area table,
 .content-area form {
   word-break: normal;
+  word-wrap: normal;
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
@@ -2829,7 +2830,7 @@ a img {
   margin: 10px;
   cursor: pointer;
   word-break: break-word;
-  word-break: break-all;
+  word-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
