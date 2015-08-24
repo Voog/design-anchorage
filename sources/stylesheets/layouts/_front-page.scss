@@ -64,15 +64,19 @@
 
       &:nth-child(3n+1),
       &:nth-child(3n+2) {
-        .aspect-ratio-inner:not(.active) {
-          border-left-style: dashed;
+        .editmode & {
+          .aspect-ratio-inner:not(.active) {
+            border-left-style: dashed;
+          }
         }
       }
 
       &:nth-child(3n+2),
       &:nth-child(3n+3) {
-        .aspect-ratio-inner:not(.active) {
-          border-right-style: dashed;
+        .editmode & {
+          .aspect-ratio-inner:not(.active) {
+            border-right-style: dashed;
+          }
         }
       }
 
@@ -87,6 +91,12 @@
 
     .feature-image {
       @include aspect-ratio(266, 177);
+
+      @media screen and (max-width: $tablet-3) {
+        &:empty {
+          display: none;
+        }
+      }
     }
 
     .aspect-ratio-inner {
@@ -96,12 +106,14 @@
       background-position: center;
 
       &:not(.active) {
-        border-top-style: dashed;
-        border-bottom-style: dashed;
+        .editmode & {        
+          border-top-style: dashed;
+          border-bottom-style: dashed;
 
-        @media screen and (max-width: $tablet-3) {        
-          border-right-style: dashed;
-          border-left-style: dashed;
+          @media screen and (max-width: $tablet-3) {        
+            border-right-style: dashed;
+            border-left-style: dashed;
+          }
         }
       }
 
