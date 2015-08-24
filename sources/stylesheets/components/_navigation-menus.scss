@@ -171,7 +171,7 @@
   opacity: 0;
   overflow: auto;
   @include bg($black-base, .9);
-  transition: $transition;
+  @include transition($transition);
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
 
@@ -188,11 +188,7 @@
     left: auto;
     right: -300px;
     width: 300px;
-    -webkit-transition: right 0.3s;
-    -ms-transition: right 0.3s;
-    -moz-transition: right 0.3s;
-    -o-transition: right 0.3s;
-    transition: right 0.3s;
+    @include transition(right 0.3s)
   }
 
   .mobile-site-options {
@@ -424,14 +420,14 @@
         visibility: hidden;
         height: 0;
         opacity: 0;
-        transition: 0;
+        @include transition(0);
       }
       .submenu.open,
       .submenu-lvl2.open {
         visibility: visible;
         height: auto;
         opacity: 1;
-        transition: $transition;
+        @include transition($transition);
       }
     }
 

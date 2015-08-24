@@ -53,7 +53,7 @@
       }
 
       &:hover {
-        transition: $transition;
+        @include transition($transition);
 
         .article-nav-title {
           @include color($black, 1);

@@ -115,7 +115,7 @@
 
       &:hover {
         @include bg($black-light, 1);
-        transition: $transition;
+        @include transition($transition);
 
         .dark-background & {
           @include bg($white-cloudy, 1);

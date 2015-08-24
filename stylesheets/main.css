@@ -91,9 +91,7 @@ a img {
 @media screen and (min-width: 641px) {
   .site-container {
     -webkit-transition: left 0.3s;
-    -ms-transition: left 0.3s;
     -moz-transition: left 0.3s;
-    -o-transition: left 0.3s;
     transition: left 0.3s;
   }
   .mobilemenu-open .site-container {
@@ -870,6 +868,8 @@ a img {
   right: -420px;
   width: 300px;
   padding: 45px 30px;
+  -webkit-transition: 250ms;
+  -moz-transition: 250ms;
   transition: 250ms;
   box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
   background-color: white;
@@ -885,6 +885,8 @@ a img {
 .article-comments.open {
   top: 0;
   right: 0;
+  -webkit-transition: 250ms;
+  -moz-transition: 250ms;
   transition: 250ms;
   box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
 }
@@ -944,6 +946,8 @@ a img {
 @media screen and (min-width: 769px) {
   .article-comments .comments-close .btn-close:hover {
     background-color: #4a4a4a;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
     transition: 500ms;
   }
 }
@@ -957,6 +961,8 @@ a img {
   }
   .article-comments .comments-close .btn-close .ico-close:hover {
     fill: #4a4a4a;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
     transition: 500ms;
   }
 }
@@ -1286,6 +1292,8 @@ a img {
     overflow: auto;
     background-color: #000;
     background-color: rgba(0, 0, 0, 0.9);
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
     transition: 500ms;
     overflow: hidden;
     -webkit-overflow-scrolling: touch;
@@ -1307,9 +1315,7 @@ a img {
     right: -300px;
     width: 300px;
     -webkit-transition: right 0.3s;
-    -ms-transition: right 0.3s;
     -moz-transition: right 0.3s;
-    -o-transition: right 0.3s;
     transition: right 0.3s;
   }
 }
@@ -1519,6 +1525,8 @@ a img {
     visibility: hidden;
     height: 0;
     opacity: 0;
+    -webkit-transition: 0;
+    -moz-transition: 0;
     transition: 0;
   }
   #mobile-menu .navigation-menu .submenu.open,
@@ -1526,6 +1534,8 @@ a img {
     visibility: visible;
     height: auto;
     opacity: 1;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
     transition: 500ms;
   }
 }
@@ -2483,6 +2493,8 @@ a img {
 }
 .site-footer .blog-article-nav .article-nav-full:hover,
 .site-footer .blog-article-nav .article-nav-half:hover {
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
   transition: 500ms;
 }
 .site-footer .blog-article-nav .article-nav-full:hover .article-nav-title,
@@ -2818,6 +2830,8 @@ a img {
   border: 2px solid #ffffff;
   background-color: #222222;
   color: white;
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
   transition: 500ms;
 }
 .light-background .content-area .custom-btn:hover {
@@ -3087,6 +3101,8 @@ a img {
 }
 .content-area .form_submit input:hover {
   background-color: #4a4a4a;
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
   transition: 500ms;
 }
 .dark-background .content-area .form_submit input:hover {

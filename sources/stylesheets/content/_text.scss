@@ -249,7 +249,7 @@
       border: 2px solid $white;
       @include bg($black, 1);
       @include color($white, 1);
-      transition: $transition;
+      @include transition($transition);
 
       .light-background & {
         border: 2px solid $white;

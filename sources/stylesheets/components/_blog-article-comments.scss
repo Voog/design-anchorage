@@ -6,8 +6,8 @@
 
   width: 300px;
   padding: 45px 30px;
-
-  transition: 250ms;
+  
+  @include transition(250ms);
 
   box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
   @include bg($white, 1);
@@ -25,13 +25,9 @@
     top: 0;
     right: 0;
 
-    transition: 250ms;
+    @include transition(250ms);
 
     box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
-
-    // @include query($mobile-1) {
-    //   position: relative;
-    // }
   }
 
   .comments-body {
@@ -104,7 +100,7 @@
       @media screen and (min-width: $tablet-2 + 1) {
         &:hover {
           @include bg($black-light, 1);
-          transition: $transition;
+          @include transition($transition);
         }
       }
 
@@ -117,7 +113,7 @@
 
           &:hover {
             fill: rgba($black-light, 1);
-            transition: $transition;
+            @include transition($transition);
           }
         }
       }
