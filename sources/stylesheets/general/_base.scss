@@ -176,6 +176,10 @@ a {
   margin: 0 auto;
   padding: $margin-half $margin-medium;
 
+  .front-page .main-content & {
+    padding: 75px $margin-medium;    
+  }
+
   .common-page .top-row & {
     padding: $margin-half $margin-medium $margin-low;
   }

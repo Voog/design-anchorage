@@ -241,6 +241,9 @@ a img {
   margin: 0 auto;
   padding: 50px 30px;
 }
+.front-page .main-content .inner {
+  padding: 75px 30px;
+}
 .common-page .top-row .inner {
   padding: 50px 30px 20px;
 }
@@ -482,7 +485,7 @@ a img {
   font-size: 32px;
   font-size: 2rem;
   font-weight: 300;
-  line-height: 1.7;
+  line-height: 1.5;
   text-align: center;
 }
 .front-page .main-feature .wrap {
@@ -540,7 +543,7 @@ a img {
 }
 .front-page .main-feature .feature-image {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 .front-page .main-feature .feature-image:before {
   display: block;
@@ -605,12 +608,18 @@ a img {
   font-size: 14px;
 }
 .front-page .main-feature .feature-content {
-  margin: 0 30px 40px;
+  margin: 0 30px 30px;
   font-size: 18px;
   text-align: center;
 }
 .front-page .main-feature .feature-content:empty {
   display: none;
+}
+.front-page .main-feature .content-area {
+  line-height: 1.7;
+}
+.front-page .main-feature .content-area h3 {
+  margin-bottom: 8px;
 }
 .front-page .blog-feed {
   padding: 70px 0;
@@ -2693,8 +2702,8 @@ a img {
 .content-area h4,
 .content-area h5,
 .content-area h6 {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 .content-area h1 {
   font-size: 36px;
@@ -2717,8 +2726,8 @@ a img {
 .content-area h4,
 .content-area h5,
 .content-area h6 {
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 22px;
+  font-size: 1.375rem;
 }
 .contacts .content-area h3, .contacts
 .content-area h4, .contacts
