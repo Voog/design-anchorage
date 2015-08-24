@@ -35,18 +35,6 @@
     padding: $margin-medium $margin-low;
   }
 
-  .comments-open-btn.open,
-  .comments-close-btn {
-    display: none
-  }
-  .comments-close-btn.open {
-    display: inline-block;
-
-    @include query($mobile-1) {
-      display: none;
-    }
-  }
-
   .main-content {
     .article-meta {
       display: inline-block;
@@ -76,23 +64,6 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       display: inline;
-    }
-  }
-}
-
-.comments-open {
-  @include query($mobile-1) {
-    .inner {
-      padding: 0;
-    }
-    .article-header,
-    .article-meta {
-      display: none!important;
-    }
-    #article-comments {
-      .comments-close-btn.open {
-        display: inline-block;
-      }
     }
   }
 }

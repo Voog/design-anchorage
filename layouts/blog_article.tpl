@@ -28,19 +28,10 @@
                 {% else %}
                 {% endif %}
 
-                <div class="comments-title comments-btn comments-open-btn js-comments-open-btn">
+                <div class="comments-title comments-btn comments-toggle-btn js-comments-toggle-btn">
                   {% if article.comments_count > 0 %}
                     {{ "comments_for_count" | lc }}
-                    <span class="voog-site-blog-comments-count"> ({{ article.comments_count }})</span>
-                  {% else %}
-                    {{ "comment" | lc }}
-                  {% endif %}
-                </div>
-
-                <div class="comments-title comments-btn comments-close-btn js-comments-close-btn">
-                  {% if article.comments_count > 0 %}
-                    {{ "comments_for_count" | lc }}
-                    <span class="voog-site-blog-comments-count"> ({{ article.comments_count }})</span>
+                    <span class="voog-site-blog-comments-count">({{ article.comments_count }})</span>
                   {% else %}
                     {{ "comment" | lc }}
                   {% endif %}
@@ -59,7 +50,6 @@
                 </section>
 
                 {% include 'blog-article-comments' %}
-
               </div>
             </div>
           </div>

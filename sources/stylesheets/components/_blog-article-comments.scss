@@ -10,8 +10,8 @@
   transition: 250ms;
 
   box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
-
   @include bg($white, 1);
+
   @include query($mobile-1) {
     right: -100vw;
 
@@ -21,7 +21,7 @@
     box-shadow: none;
   }
 
-  &.selected {
+  &.open {
     top: 0;
     right: 0;
 
@@ -29,10 +29,9 @@
 
     box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
 
-    @include query($mobile-1) {
-      position: relative;
-
-    }
+    // @include query($mobile-1) {
+    //   position: relative;
+    // }
   }
 
   .comments-body {
@@ -87,14 +86,14 @@
     .btn-close {
       position: absolute;
       top: 0px;
-      left: -55px;
-
-      width: 55px;
-      height: 55px;
-
+      left: -46px;
+      width: 46px;
+      height: 46px;
       cursor: pointer;
+      line-height: 1;
 
       @include bg($black, 1);
+
       @include query($tablet-2) {
         right: 0;
         left: auto;
@@ -102,28 +101,26 @@
         @include bg($white, 1);
       }
 
-      .xcross {
-        z-index: 2000;
-
-        width: 2px;
-        height: 25px;
-        margin-top: 15px;
-
-        @include bg($white, 1);
-        @include query($tablet-2) {
-          @include bg($black, 1);
+      @media screen and (min-width: $tablet-2 + 1) {
+        &:hover {
+          @include bg($black-light, 1);
+          transition: $transition;
         }
-
       }
-      .xcross-l {
-        margin-left: 29px;
 
-        @include rotate(45deg);
-      }
-      .xcross-r {
-        @include rotate(90deg);
+      .ico-close {
+        padding: 15px;
+        fill: rgba($white, 1);
+
+        @media screen and (max-width: $tablet-2) {
+          fill: rgba($black, 1);
+
+          &:hover {
+            fill: rgba($black-light, 1);
+            transition: $transition;
+          }
+        }
       }
     }
-
   }
 }

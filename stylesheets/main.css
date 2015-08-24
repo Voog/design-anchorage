@@ -830,18 +830,6 @@ a img {
 .blog-article-page .inner {
   padding: 30px 20px;
 }
-.blog-article-page .comments-open-btn.open,
-.blog-article-page .comments-close-btn {
-  display: none;
-}
-.blog-article-page .comments-close-btn.open {
-  display: inline-block;
-}
-@media screen and (max-width: 480px) {
-  .blog-article-page .comments-close-btn.open {
-    display: none;
-  }
-}
 .blog-article-page .main-content .article-meta {
   display: inline-block;
   margin-right: 30px;
@@ -870,19 +858,6 @@ a img {
 }
 
 @media screen and (max-width: 480px) {
-  .comments-open .inner {
-    padding: 0;
-  }
-  .comments-open .article-header,
-  .comments-open .article-meta {
-    display: none !important;
-  }
-  .comments-open #article-comments .comments-close-btn.open {
-    display: inline-block;
-  }
-}
-
-@media screen and (max-width: 480px) {
   .comments-open .blog-article {
     display: none;
   }
@@ -907,16 +882,11 @@ a img {
     box-shadow: none;
   }
 }
-.article-comments.selected {
+.article-comments.open {
   top: 0;
   right: 0;
   transition: 250ms;
   box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
-}
-@media screen and (max-width: 480px) {
-  .article-comments.selected {
-    position: relative;
-  }
 }
 .article-comments .comments-body {
   overflow-y: scroll;
@@ -957,10 +927,11 @@ a img {
 .article-comments .comments-close .btn-close {
   position: absolute;
   top: 0px;
-  left: -55px;
-  width: 55px;
-  height: 55px;
+  left: -46px;
+  width: 46px;
+  height: 46px;
   cursor: pointer;
+  line-height: 1;
   background-color: #222222;
 }
 @media screen and (max-width: 768px) {
@@ -970,28 +941,24 @@ a img {
     background-color: white;
   }
 }
-.article-comments .comments-close .btn-close .xcross {
-  z-index: 2000;
-  width: 2px;
-  height: 25px;
-  margin-top: 15px;
-  background-color: white;
-}
-@media screen and (max-width: 768px) {
-  .article-comments .comments-close .btn-close .xcross {
-    background-color: #222222;
+@media screen and (min-width: 769px) {
+  .article-comments .comments-close .btn-close:hover {
+    background-color: #4a4a4a;
+    transition: 500ms;
   }
 }
-.article-comments .comments-close .btn-close .xcross-l {
-  margin-left: 29px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  transform: rotate(45deg);
+.article-comments .comments-close .btn-close .ico-close {
+  padding: 15px;
+  fill: white;
 }
-.article-comments .comments-close .btn-close .xcross-r {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  transform: rotate(90deg);
+@media screen and (max-width: 768px) {
+  .article-comments .comments-close .btn-close .ico-close {
+    fill: #222222;
+  }
+  .article-comments .comments-close .btn-close .ico-close:hover {
+    fill: #4a4a4a;
+    transition: 500ms;
+  }
 }
 
 .site-header {

@@ -325,27 +325,32 @@
 
 
     // Opens the comments modal.
-    $('.js-comments-open-btn').click(function(event) {
+    $('.js-comments-toggle-btn').click(function(event) {
       event.stopPropagation();
-      if ($('.js-menu-btn').hasClass('open')) {
-        $('.js-menu-btn').trigger('click');
-      }
+      // if ($('.js-menu-btn').hasClass('open')) {
+      //   $('.js-menu-btn').trigger('click');
+      // }
 
-      $(this).addClass('open');
-      $('.js-comments-close-btn').addClass('open');
-      $('body').addClass('comments-open');
-      $('.js-comments').addClass('active');
+      // $(this).addClass('open');
+      // $('.js-comments-close-btn').addClass('open');
+      // $('body').addClass('comments-open');
+      // $('.js-comments').addClass('active');
+      // $('.js-comments-input').val('').focus();
+
+      $(this).toggleClass('open');
+      $('.js-comments').toggleClass('open');
+      $('body').toggleClass('comments-open');
       $('.js-comments-input').val('').focus();
     });
 
     // Closes the comments modal.
-    $('.js-comments-close-btn').click(function(event) {
-      event.stopPropagation();
-      $('.js-comments-open-btn, .js-comments-close-btn').removeClass('open');
-      $('body').removeClass('comments-open');
-      $('.js-comments').removeClass('active');
-      $('.js-voog-comments-modal').removeClass('comments-results-active');
-    });
+    // $('.js-comments-close-btn').click(function(event) {
+    //   event.stopPropagation();
+    //   $('.js-comments-toggle-btn, .js-comments-close-btn').removeClass('open');
+    //   $('body').removeClass('comments-open');
+    //   $('.js-comments').removeClass('active');
+    //   $('.js-voog-comments-modal').removeClass('comments-results-active');
+    // });
 
     $('.js-comments-form, .js-voog-comments-modal').click(function(event) {
       event.stopPropagation();
