@@ -166,19 +166,20 @@
   display: block;
   font-family: $font-main;
   top: 0;
+  right: -300px;
   bottom: 0;
   visibility: hidden;
   opacity: 0;
   overflow: auto;
   @include bg($black-base, .9);
-  @include transition($transition);
+  // @include transition($transition);
+  @include transition(opacity $transition);
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
 
   @include query($tablet-3) {
     position: absolute;
     left: 0;
-    right: 0;
   }
 
   @include querymin($tablet-3) {
@@ -186,9 +187,8 @@
     visibility: visible;
     opacity: 1;
     left: auto;
-    right: -300px;
     width: 300px;
-    @include transition(right 0.3s)
+    @include transition(right 0.3s);
   }
 
   .mobile-site-options {

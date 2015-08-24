@@ -1286,15 +1286,16 @@ a img {
     display: block;
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     top: 0;
+    right: -300px;
     bottom: 0;
     visibility: hidden;
     opacity: 0;
     overflow: auto;
     background-color: #000;
     background-color: rgba(0, 0, 0, 0.9);
-    -webkit-transition: 500ms;
-    -moz-transition: 500ms;
-    transition: 500ms;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    transition: opacity 500ms;
     overflow: hidden;
     -webkit-overflow-scrolling: touch;
   }
@@ -1303,7 +1304,6 @@ a img {
   #mobile-menu {
     position: absolute;
     left: 0;
-    right: 0;
   }
 }
 @media screen and (max-width: 768px) and (min-width: 641px) {
@@ -1312,7 +1312,6 @@ a img {
     visibility: visible;
     opacity: 1;
     left: auto;
-    right: -300px;
     width: 300px;
     -webkit-transition: right 0.3s;
     -moz-transition: right 0.3s;
