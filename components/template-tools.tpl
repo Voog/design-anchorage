@@ -17,20 +17,22 @@
             type: 'page',
             id: '{{ page.id }}'
           });
-
-      $('.js-img-dropper-area').each(function(index, imgDropperArea) {
-        var dataImgKey = $(imgDropperArea).data('img-key');
-
-        var imgDropper = new Edicy.ImgDropArea($(imgDropperArea), {
-          positionable: true,
-          target_width: 1280,
-
-          change: function(data) {
-            pageData.set(dataImgKey, data);
-          }
-        });
-      });
     {% endif %}
+
+    $('.js-img-dropper-area').each(function(index, imgDropperArea) {
+      var dataImgKey = $(imgDropperArea).data('img-key');
+
+      var imgDropper = new Edicy.ImgDropArea($(imgDropperArea), {
+        positionable: false,
+        target_width: 1280,
+
+        change: function(data) {
+          var saveObj = {};
+          saveObj[dataImgKey] = data;
+          pageData.set(saveObj);
+        }
+      });
+    });
 
     $('.js-bg-picker-area').each(function(index, bgPickerArea) {
       var bgPickerButton = $(bgPickerArea).find('.js-background-settings'),

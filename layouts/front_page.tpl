@@ -13,7 +13,7 @@
       {% include 'site-header' %}
 
       <main class="page-content" role="main">
-        {% include "front-page-variables" %}
+        {% comment %}{% include "front-page-variables" %}{% endcomment %}
 
         <div class="main-inner-row content-full js-bg-picker-area">
           <div class="background-image js-background-image"></div>
@@ -31,58 +31,41 @@
           </div>
 
           <div class="main-feature">
-
             <div class="wrap">
-              <div class="feature-left inner inner-left content-area{% if editmode %} narrow-feature{% else %}{% unless feature_left_size contains '-' %} narrow-feature{% endunless %}{% endif %}">
-                {% if feature_picture_total_size_num > 0 or editmode %}
-                  <div class="feature-picture {% if feature_picture_1_size_num < 0 %}empty{% endif %}">
-                    {% if editmode %}
-                      <div class="cover-image editable-cover-image js-img-dropper-area" data-img-key="feature_picture_1" data-image="{{ page.data.feature_picture_1.url }}" data-dimensions="{{ page.data.feature_picture_1.width }},{{ page.data.feature_picture_1.height }}" data-position="{{ page.data.feature_picture_1.top }},{{ page.data.feature_picture_1.left }}"></div>
-                    {% else %}
-                      {% if page.data.feature_picture_1.url %}
-                        <div class="cover-image" style="background-image: url('{{ page.data.feature_picture_1.url }}'); background-position: {{ fp_left_width_diff_per }}% {{ fp_left_height_diff_per }}%;"></div>
-                      {% elsif feature_left_size contains '' %}
-                        <div class="cover-image"></div>
-                      {% endif %}
-                    {% endif %}
-                  </div>
-                {% endif %}
-                {% content name="feature_left" %}
-              </div>
-              <div class="feature-center inner inner-center content-area{% if editmode %} narrow-feature{% else %}{% unless feature_center_size contains '-' %} narrow-feature{% endunless %}{% endif %}">
-                {% if feature_picture_total_size_num > 0 or editmode %}
-                  <div class="feature-picture {% if feature_picture_2_size_num < 0 %}empty{% endif %}">
-                    {% if editmode %}
-                      <div class="cover-image editable-cover-image js-img-dropper-area" data-img-key="feature_picture_2" data-image="{{ page.data.feature_picture_2.url }}" data-dimensions="{{ page.data.feature_picture_2.width }},{{ page.data.feature_picture_2.height }}" data-position="{{ page.data.feature_picture_2.top }},{{ page.data.feature_picture_2.left }}"></div>
-                    {% else %}
-                      {% if page.data.feature_picture_2.url %}
-                        <div class="cover-image" style="background-image: url('{{ page.data.feature_picture_2.url }}'); background-position: {{ fp_center_width_diff_per }}% {{ fp_center_height_diff_per }}%;"></div>
-                      {% elsif feature_center_size contains '' %}
-                        <div class="cover-image"></div>
-                      {% endif %}
-                    {% endif %}
-                  </div>
-                {% endif %}
-                {% content name="feature_center" %}
-              </div>
-              <div class="feature-right inner inner-right content-area{% if editmode %} narrow-feature{% else %}{% unless feature_right_size contains '-' %} narrow-feature{% endunless %}{% endif %}">
-                {% if feature_picture_total_size_num > 0 or editmode %}
-                  <div class="feature-picture {% if feature_picture_3_size_num < 0 %}empty{% endif %}">
-                    {% if editmode %}
-                      <div class="cover-image editable-cover-image js-img-dropper-area" data-img-key="feature_picture_3" data-image="{{ page.data.feature_picture_3.url }}" data-dimensions="{{ page.data.feature_picture_3.width }},{{ page.data.feature_picture_3.height }}" data-position="{{ page.data.feature_picture_3.top }},{{ page.data.feature_picture_3.left }}"></div>
-                    {% else %}
-                      {% if page.data.feature_picture_3.url %}
-                        <div class="cover-image" style="background-image: url('{{ page.data.feature_picture_3.url }}'); background-position: {{ fp_right_width_diff_per }}% {{ fp_right_height_diff_per }}%;"></div>
-                      {% elsif feature_right_size contains '' %}
-                        <div class="cover-image"></div>
-                      {% endif %}
-                    {% endif %}
-                  </div>
-                {% endif %}
-                {% content name="feature_right" %}
-              </div>
-            </div>
 
+
+              <div class="feature">
+                <div class="feature-image">
+                  {% if editmode %}
+                    <div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_1" data-image="{{ page.data.feature_image_1.url }}"></div>
+                  {% else %}
+                    <div class="aspect-ratio-inner" style="background-image: url('{{ page.data.feature_image_1.url }}')"></div>
+                  {% endif %}
+                </div>
+                <div class="feature-content">{% content name="feature_1" %}</div>
+              </div>
+
+                <div class="feature">
+                  <div class="feature-image">
+                    {% if editmode %}
+                      <div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_2" data-image="{{ page.data.feature_image_2.url }}"></div>
+                    {% else %}
+                      <div class="aspect-ratio-inner" style="background-image: url('{{ page.data.feature_image_2.url }}')"></div>
+                    {% endif %}
+                  </div>
+                  <div class="feature-content">{% content name="feature_2" %}</div>
+                </div>
+
+                <div class="feature">
+                  <div class="feature-image">
+                    {% if editmode %}
+                      <div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_3" data-image="{{ page.data.feature_image_3.url }}"></div>
+                    {% else %}
+                      <div class="aspect-ratio-inner" style="background-image: url('{{ page.data.feature_image_3.url }}')"></div>
+                    {% endif %}
+                  </div>
+                  <div class="feature-content">{% content name="feature_3" %}</div>
+                </div>
           </div>
 
         </div>

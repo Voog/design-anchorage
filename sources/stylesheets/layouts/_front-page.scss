@@ -44,15 +44,93 @@
   }
 
   .main-feature {
-    padding-bottom: $padding-general;
+    .wrap {
+      font-size: 0;
 
-    .narrow-feature {
-      @include querymin($tablet-2) {
-        float: left;
-        width: calc(100% / 3);
-        min-width: 250px;
-        box-sizing: border-box;
-        padding: 0 30px;
+
+      @media screen and (min-width: $tablet-3 + 1) {
+        .flexbox & {
+          @include display(flex);
+          @include flex-wrap(wrap);
+          @include justify-content(center);
+        }
+      }
+    }
+
+    .feature {
+      @media screen and (min-width: $tablet-3 + 1) {
+        max-width: 373px;
+      }
+
+      &:nth-child(3n+1),
+      &:nth-child(3n+2) {
+        .aspect-ratio-inner:not(.active) {
+          border-left-style: dashed;
+        }
+      }
+
+      &:nth-child(3n+2),
+      &:nth-child(3n+3) {
+        .aspect-ratio-inner:not(.active) {
+          border-right-style: dashed;
+        }
+      }
+
+      &:empty {
+        display: none;
+      }
+
+      .flexbox & {
+        @include flex(1);
+      }
+    }
+
+    .feature-image {
+      @include aspect-ratio(266, 177);
+    }
+
+    .aspect-ratio-inner {
+      border-width: 1px;
+      border-color: rgba(27,33,36,.33);
+      background-size: cover;
+      background-position: center;
+
+      &:not(.active) {
+        border-top-style: dashed;
+        border-bottom-style: dashed;
+
+        @media screen and (max-width: $tablet-3) {        
+          border-right-style: dashed;
+          border-left-style: dashed;
+        }
+      }
+
+
+      .editmode & {
+        @include display(flex !important);
+        @include align-items(center);
+        @include justify-content(center);
+      }
+    }
+
+    .edy-img-drop-area {
+      .edy-img-drop-area-remove-image {
+        top: 5px;
+        right: 5px;
+      }
+    }
+
+    .edy-img-drop-area-placeholder {
+      font-size: $font-size-small;
+    }
+
+    .feature-content {
+      margin: 40px 30px;
+      font-size: $font-size-normal;
+      text-align: center;
+
+      &:empty {
+        display: none;
       }
     }
   }
