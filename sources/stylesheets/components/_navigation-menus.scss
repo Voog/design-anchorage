@@ -207,7 +207,7 @@
       width: $button-square;
       height: $button-square;
 
-      svg path {
+      svg {
         @include fill($white, 1);
 
         .mobile-search-open & {

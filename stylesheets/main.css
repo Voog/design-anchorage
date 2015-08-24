@@ -1339,10 +1339,10 @@ a img {
     width: 42px;
     height: 42px;
   }
-  #mobile-menu .mobile-site-options .search-btn svg path {
+  #mobile-menu .mobile-site-options .search-btn svg {
     fill: white;
   }
-  .mobile-search-open #mobile-menu .mobile-site-options .search-btn svg path {
+  .mobile-search-open #mobile-menu .mobile-site-options .search-btn svg {
     fill: #aaaaaa;
   }
   #mobile-menu .mobile-site-options .lang-title {
