@@ -540,6 +540,7 @@ a img {
 }
 .front-page .main-feature .feature-image {
   position: relative;
+  margin-bottom: 40px;
 }
 .front-page .main-feature .feature-image:before {
   display: block;
@@ -604,7 +605,7 @@ a img {
   font-size: 14px;
 }
 .front-page .main-feature .feature-content {
-  margin: 40px 30px;
+  margin: 0 30px 40px;
   font-size: 18px;
   text-align: center;
 }

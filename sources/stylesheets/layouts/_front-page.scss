@@ -91,6 +91,7 @@
 
     .feature-image {
       @include aspect-ratio(266, 177);
+      margin-bottom: 40px;
 
       @media screen and (max-width: $tablet-3) {
         &:empty {
@@ -137,7 +138,7 @@
     }
 
     .feature-content {
-      margin: 40px 30px;
+      margin: 0 30px 40px;
       font-size: $font-size-normal;
       text-align: center;
 
