@@ -26,7 +26,8 @@
 
     .site-options {
       position: relative;
-      // margin-bottom: 20px;
+      vertical-align: middle;
+      top: -2px;
     }
   }
 
@@ -44,9 +45,21 @@
     line-height: $line-height-normal;
     text-transform: uppercase;
 
+    .content-formatted {
+      @include query($mobile-1 - 58) {
+        font-size: 24px;
+      }
+    }
+
     h1 {
       @extend .header-body;
       margin: 0;
+    }
+
+    h2 {
+      @include rem-fallback(font-size, $font-size-huge);
+      text-transform: initial;
+      // line-height: $line-height-small;
     }
 
     @include query($tablet-2) {
@@ -67,7 +80,7 @@
       }
     }
   }
-  .header-right { 
+  .header-right {
     text-align: right;
 
     .no-flexbox & {
@@ -94,10 +107,10 @@
         vertical-align: middle;
         padding: 60px 20px;
         .front-page & {
-          @include rem-fallback(height, 422px);
+          @include rem-fallback(height, 532px);
         }
         &.is-photoheader{
-          @include rem-fallback(height, 422px);
+          @include rem-fallback(height, 532px);
         }
       }
 

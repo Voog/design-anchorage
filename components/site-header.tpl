@@ -1,5 +1,4 @@
 <header class="site-header content-full js-bg-picker-area">
-
   <div class="background-image js-background-image"></div>
   <div class="background-color js-background-color"></div>
 

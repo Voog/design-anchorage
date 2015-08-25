@@ -626,26 +626,32 @@ a img {
   font-size: 32px;
   font-size: 2rem;
   font-weight: 300;
-  line-height: 1.7;
+  line-height: 1.5;
   text-align: center;
 }
+.front-page .blog-feed .content-area h1 {
+  font-size: 70px;
+  font-size: 4.375rem;
+}
+.front-page .blog-feed .content-area h2 {
+  font-size: 36px;
+  font-size: 2.25rem;
+}
+.front-page .blog-feed .content-area h3,
+.front-page .blog-feed .content-area h4
+h5,
+.front-page .blog-feed .content-area h6 {
+  font-size: 32px;
+  font-size: 2rem;
+}
 .front-page .blog-feed .wrap {
-  height: 500px;
+  height: 360px;
   display: table;
 }
 .front-page .blog-feed .wrap .inner {
   display: table-cell;
   vertical-align: middle;
   width: 100%;
-}
-.front-page .blog-feed h1 {
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1;
-  text-transform: uppercase;
-}
-.front-page .blog-feed h2 {
-  line-height: 1;
 }
 .front-page .blog-feed .inner {
   text-align: center;
@@ -1009,6 +1015,8 @@ a img {
 }
 .site-header .header-top .site-options {
   position: relative;
+  vertical-align: middle;
+  top: -2px;
 }
 .site-header .header-title {
   word-break: break-word;
@@ -1031,8 +1039,18 @@ a img {
   line-height: 1;
   text-transform: uppercase;
 }
+@media screen and (max-width: 422px) {
+  .site-header .header-body .content-formatted {
+    font-size: 24px;
+  }
+}
 .site-header .header-body h1 {
   margin: 0;
+}
+.site-header .header-body h2 {
+  font-size: 32px;
+  font-size: 2rem;
+  text-transform: initial;
 }
 @media screen and (max-width: 768px) {
   .site-header .header-body, .site-header .header-body h1 {
@@ -1081,12 +1099,12 @@ a img {
   padding: 60px 20px;
 }
 .front-page .site-header .header-bottom .header-bottom-inner .wrap {
-  height: 422px;
-  height: 26.375rem;
+  height: 532px;
+  height: 33.25rem;
 }
 .site-header .header-bottom .header-bottom-inner .wrap.is-photoheader {
-  height: 422px;
-  height: 26.375rem;
+  height: 532px;
+  height: 33.25rem;
 }
 @media screen and (max-width: 422px) {
   .site-header .header-bottom .header-bottom-inner .wrap {
@@ -1972,7 +1990,7 @@ a img {
   padding: 5px;
 }
 .lang-menu.flags-disabled a.lang-flag {
-  padding: 6px 13px 5px;
+  padding: 6px 5px 5px;
 }
 .lang-menu .lang-title {
   display: inline-block;
@@ -2203,7 +2221,7 @@ a img {
   width: 26px;
   height: 26px;
   font-size: 0;
-  margin-left: 5px;
+  margin-left: 25px;
 }
 .front-page .header-options .search-btn {
   top: 1px;
@@ -2450,6 +2468,15 @@ a img {
   font-size: 1rem;
   line-height: 1.7;
   text-align: center;
+  color: #222222;
+  color: rgba(34, 34, 34, 0.31);
+}
+.site-footer .content-area a {
+  color: #222222;
+  text-decoration: underline;
+}
+.site-footer .content-area a:hover {
+  text-decoration: none;
 }
 .site-footer .voog-reference {
   color: #222222;
@@ -2592,14 +2619,6 @@ a img {
   font-size: 20px;
   font-size: 1.25rem;
 }
-.content-area.header-body, .site-header .header-body h1.content-area {
-  line-height: 1.5em;
-}
-@media screen and (max-width: 422px) {
-  .content-area.header-body, .site-header .header-body h1.content-area {
-    font-size: 24px;
-  }
-}
 .content-area.footer-left {
   font-size: 20px;
   font-size: 1.25rem;
@@ -2677,13 +2696,6 @@ a img {
 .content-area h6 {
   font-weight: 300;
 }
-.content-area h3,
-.content-area h4,
-.content-area h5,
-.content-area h6 {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
 .content-area h1 {
   font-size: 36px;
   font-size: 2.25rem;
@@ -2693,8 +2705,6 @@ a img {
   font-size: 32px;
 }
 .content-area h2 {
-  margin-top: 30px;
-  margin-bottom: 30px;
   font-size: 26px;
   font-size: 1.625rem;
 }
@@ -2718,23 +2728,21 @@ a img {
 .content-area p {
   font-size: 18px;
   font-size: 1.125rem;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 .header-bottom-inner .content-area ul, .header-bottom-inner
 .content-area ol, .header-bottom-inner
 .content-area dl {
   text-align: left;
 }
-.content-area a {
+.page-content .content-area a {
   color: #222222;
   border-bottom: 1px solid #4a4a4a;
 }
-.dark-background .content-area a {
+.dark-background .page-content .content-area a {
   color: white;
   border-bottom: 1px solid #dedede;
 }
-.content-area a:hover {
+.page-content .content-area a:hover {
   text-decoration: none;
 }
 .footer .content-area a {
@@ -2807,8 +2815,8 @@ a img {
   background-color: #222222;
   background-color: rgba(34, 34, 34, 0);
   box-sizing: border-box;
-  width: 250px;
-  padding: 15px 10px;
+  min-width: 225px;
+  padding: 12px 10px 13px;
   text-transform: uppercase;
   font-size: 16px;
   font-size: 1rem;

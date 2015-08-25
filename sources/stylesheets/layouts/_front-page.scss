@@ -111,7 +111,7 @@
           border-top-style: dashed;
           border-bottom-style: dashed;
 
-          @media screen and (max-width: $tablet-3) {        
+          @media screen and (max-width: $tablet-3) {
             border-right-style: dashed;
             border-left-style: dashed;
           }
@@ -162,12 +162,27 @@
     .content-area {
       @include rem-fallback(font-size, $font-size-huge);
       font-weight: $font-weight-light;
-      line-height: $line-height-medium;
+      line-height: 1.5;
       text-align: center;
+
+      h1 {
+        @include rem-fallback(font-size, $font-size-header);
+      }
+
+      h2 {
+        @include rem-fallback(font-size, $font-size-xl);
+      }
+
+      h3,
+      h4
+      h5,
+      h6 {
+        @include rem-fallback(font-size, $font-size-huge);
+      }
     }
 
     .wrap {
-      height: 500px;
+      height: 360px;
       display: table;
 
       .inner {
@@ -177,15 +192,15 @@
       }
     }
 
-    h1 {
-      @include rem-fallback(font-size, $font-size-small);
-      line-height: $line-height-normal;
-      text-transform: uppercase;
-    }
+    // h1 {
+    //   @include rem-fallback(font-size, $font-size-small);
+    //   line-height: $line-height-normal;
+    //   text-transform: uppercase;
+    // }
 
-    h2 {
-      line-height: $line-height-normal;
-    }
+    // h2 {
+    //   line-height: $line-height-normal;
+    // }
 
     .inner {
       text-align: center;

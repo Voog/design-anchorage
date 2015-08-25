@@ -141,6 +141,10 @@
   line-height: inherit;
 }
 
+%widest-wrap {
+  max-width: 1340px;
+}
+
 %wide-wrap {
   max-width: $width-max;
 }

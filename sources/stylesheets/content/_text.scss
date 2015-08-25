@@ -18,14 +18,6 @@
     @include rem-fallback(font-size, $font-size-20);
   }
 
-  &.header-body {
-    line-height: 1.5em;
-
-    @include query($mobile-1 - 58) {
-      font-size: 24px;
-    }
-  }
-
   &.footer-left {
     @include rem-fallback(font-size, $font-size-20);
   }
@@ -90,13 +82,6 @@
     font-weight: $font-weight-light;
   }
 
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-top: 8px;
-    margin-bottom: 8px;
-  }
 
   h1 {
     @include rem-fallback(font-size, $font-size-xl);
@@ -108,8 +93,6 @@
   }
 
   h2 {
-    margin-top: 30px;
-    margin-bottom: 30px;
     @include rem-fallback(font-size, $font-size-large);
 
     .contacts & {
@@ -132,8 +115,6 @@
   // Styling rules for the editable content area paragraphs, lists and links.
   p {
     @include rem-fallback(font-size, $font-size-normal);
-    margin-top: 20px;
-    margin-bottom: 20px;
   }
 
   ul,
@@ -145,16 +126,18 @@
   }
 
   a {
-    @include color($black, 1);
-    border-bottom: 1px solid $black-light;
+    .page-content & {
+      @include color($black, 1);
+      border-bottom: 1px solid $black-light;
 
-    .dark-background & {
-      @include color($white, 1);
-      border-bottom: 1px solid $white-cloudy;
-    }
+      .dark-background & {
+        @include color($white, 1);
+        border-bottom: 1px solid $white-cloudy;
+      }
 
-    &:hover {
-      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
     }
 
     .footer & {
@@ -232,8 +215,8 @@
     display: inline-block;
     @include bg($black, .0);
     box-sizing: border-box;
-    width: 250px;
-    padding: 15px 10px;
+    min-width: 225px;
+    padding: 12px 10px 13px;
     text-transform: uppercase;
     @include rem-fallback(font-size, $font-size-base);
     font-weight: $font-weight-normal;
