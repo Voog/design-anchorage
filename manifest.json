@@ -574,6 +574,12 @@
       "filename": "front-header-bg_large.jpg"
     },
     {
+      "content_type": "image/png",
+      "file": "images/ico-flags.png",
+      "kind": "images",
+      "filename": "ico-flags.png"
+    },
+    {
       "content_type": "image/jpeg",
       "file": "images/page-header-bg.jpg",
       "kind": "images",
