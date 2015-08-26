@@ -2898,22 +2898,26 @@ h5,
 .contacts .content-area table, .editmode .contacts .content-area table {
   margin-bottom: 0;
 }
-.content-area table tr th,
-.content-area table tr td {
+.content-area table th,
+.content-area table td {
   padding: 9px 13px;
 }
-.content-area table tr th {
+.dark-background .content-area table th, .dark-background
+.content-area table td {
+  border: 1px solid white;
+}
+.content-area table th {
   text-align: left;
   font-weight: 400;
   color: white;
   background-color: #222222;
   border: 1px solid #222222;
 }
-.footer .content-area table tr th {
+.footer .content-area table th {
   color: #ffffff;
   color: rgba(255, 255, 255, 0.5);
 }
-.content-area table tr td {
+.content-area table td {
   border-top: 1px solid #222222;
   border-top: 1px solid rgba(34, 34, 34, 0.1);
   border-right: 1px solid #222222;
@@ -2923,7 +2927,7 @@ h5,
   border-left: 1px solid #222222;
   border-left: 1px solid rgba(34, 34, 34, 0.1);
 }
-.dark-background .content-area table tr td {
+.dark-background .content-area table td {
   border-top: 1px solid #ffffff;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-right: 1px solid #ffffff;

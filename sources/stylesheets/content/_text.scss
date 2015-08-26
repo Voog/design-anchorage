@@ -321,38 +321,43 @@
       margin-bottom: 0;
     }
 
-    tr {
-      th,
-      td {
-        padding: 9px 13px;
-      }
 
-      th {
-        text-align: left;
-        font-weight: 400;
-        @include color($white);
-        @include bg($black);
-        @include border(all, 1px,solid,$black);
+    th,
+    td {
+      padding: 9px 13px;
 
-        .footer & {
-          @include color($white, .5);
-        }
-      }
-
-      td {
-        @include border(top, 1px, solid, $black, .1);
-        @include border(right, 1px, solid, $black, .1);
-        @include border(bottom, 1px, solid, $black, .1);
-        @include border(left, 1px, solid, $black, .1);
-
-        .dark-background & {
-          @include border(top, 1px, solid, $white, .1);
-          @include border(right, 1px, solid, $white, .1);
-          @include border(bottom, 1px, solid, $white, .1);
-          @include border(left, 1px, solid, $white, .1);
-        }
+      .dark-background & {
+        @include border(all, 1px,solid,$white);
       }
     }
+
+    th {
+      text-align: left;
+      font-weight: 400;
+      @include color($white);
+      @include bg($black);
+      @include border(all, 1px,solid,$black);
+
+
+      .footer & {
+        @include color($white, .5);
+      }
+    }
+
+    td {
+      @include border(top, 1px, solid, $black, .1);
+      @include border(right, 1px, solid, $black, .1);
+      @include border(bottom, 1px, solid, $black, .1);
+      @include border(left, 1px, solid, $black, .1);
+
+      .dark-background & {
+        @include border(top, 1px, solid, $white, .1);
+        @include border(right, 1px, solid, $white, .1);
+        @include border(bottom, 1px, solid, $white, .1);
+        @include border(left, 1px, solid, $white, .1);
+      }
+    }
+
 
     .contacts &,
     .footer & {
