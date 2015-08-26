@@ -31,7 +31,9 @@
             {% endif %}
           </div>
 
-          <a href="#" class="mobile-menu-toggler"><span></span></a>
+          <button class="mobile-menu-toggler">
+            <span></span>
+          </button>
 
         </div>
 

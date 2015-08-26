@@ -383,19 +383,19 @@ a img {
   hyphens: auto;
 }
 
-.lang-menu-btn, .search-btn,
+.mobile-menu-toggler, .lang-menu-btn, .search-btn,
 .search-submit {
   margin: 0;
   padding: 0;
-  background-color: none;
+  background-color: transparent;
   border-style: none;
   cursor: pointer;
 }
-.lang-menu-btn:focus, .search-btn:focus,
+.mobile-menu-toggler:focus, .lang-menu-btn:focus, .search-btn:focus,
 .search-submit:focus {
   outline: none;
 }
-.lang-menu-btn::-moz-focus-inner, .search-btn::-moz-focus-inner,
+.mobile-menu-toggler::-moz-focus-inner, .lang-menu-btn::-moz-focus-inner, .search-btn::-moz-focus-inner,
 .search-submit::-moz-focus-inner {
   padding: 0;
   border-style: none;
@@ -1251,7 +1251,7 @@ h5,
 
   .mobile-menu-toggler {
     position: absolute;
-    top: -13px;
+    top: -18px;
     right: -13px;
     display: block;
     width: 42px;
@@ -1325,6 +1325,7 @@ h5,
 @media screen and (max-width: 768px) and (max-width: 640px) {
   #mobile-menu {
     position: absolute;
+    right: 0;
     left: 0;
   }
 }
