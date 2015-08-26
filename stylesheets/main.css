@@ -982,9 +982,6 @@ h5,
   padding-bottom: 30px;
   position: relative;
 }
-.site-header ul, .site-header li {
-  list-style: none;
-}
 .search-open .site-header {
   position: static;
 }
@@ -2724,8 +2721,8 @@ h5,
   font-size: 18px;
   font-size: 1.125rem;
 }
-.header-bottom-inner .content-area ul, .header-bottom-inner
-.content-area ol, .header-bottom-inner
+.content-area ul,
+.content-area ol,
 .content-area dl {
   text-align: left;
 }

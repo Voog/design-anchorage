@@ -3,10 +3,6 @@
   padding-bottom: $padding-general - 40px;
   position: relative;
 
-  ul, li {
-    list-style: none;
-  }
-
   .search-open & {
     position: static;
   }
