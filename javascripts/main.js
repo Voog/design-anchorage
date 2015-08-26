@@ -9498,8 +9498,8 @@ return jQuery;
     //   $('.js-voog-search-modal').removeClass('search-results-active');
     // });
 
-    $('.js-header-right .js-search-input').on('input', function() {
-      var searchCleanBtn = $('.js-search-reset-btn');
+    $('.js-search-input').on('input', function() {
+      var searchCleanBtn = $(this).parent().next();
 
       if ($(this).val().length > 0) {
         searchCleanBtn.addClass('active');
@@ -9508,10 +9508,10 @@ return jQuery;
       };
     });
 
-    $('.js-header-right .js-search-reset-btn').click(function(event) {
+    $('.js-search-reset-btn').click(function(event) {
       event.stopPropagation();
-      $('.js-header-right .js-search-input').val('').focus();
-      $('.js-search-reset-btn').removeClass('active');
+      $(this).prev().find('.js-search-input').val('').focus();
+      $(this).removeClass('active');
     });
 
     $('.js-search-form, .js-voog-search-modal').click(function(event) {
@@ -9519,37 +9519,42 @@ return jQuery;
     });
 
 
-
+    $('.js-mobile-search-toggle-btn').click(function(event) {
+      event.stopPropagation();
+      $('body').toggleClass('mobile-search-open');
+      $('#mobile-search .js-search').toggleClass('active');
+      $('#mobile-search .js-search-input').focus();
+    });
 
     // Hides mobile search modal on side click
-    $('#mobile-menu .js-search').click(function() {
-      $('#mobile-menu .js-mobile-search-close-btn').trigger('click');
-      $('#mobile-menu .search-btn').removeClass('open');
-    });
+    // $('#mobile-menu .js-search').click(function() {
+    //   $('#mobile-menu .js-mobile-search-close-btn').trigger('click');
+    //   $('#mobile-menu .search-btn').removeClass('open');
+    // });
 
-    // Opens the mobile search modal.
-    $('#mobile-menu .js-mobile-search-open-btn').click(function(event) {
-      event.stopPropagation();
-      $('body').removeClass('lang-menu-open');
-      if ($('#mobile-menu .js-menu-btn').hasClass('open')) {
-        $('#mobile-menu .js-menu-btn').trigger('click');
-      }
+    // // Opens the mobile search modal.
+    // $('#mobile-menu .js-mobile-search-open-btn').click(function(event) {
+    //   event.stopPropagation();
+    //   $('body').removeClass('lang-menu-open');
+    //   if ($('#mobile-menu .js-menu-btn').hasClass('open')) {
+    //     $('#mobile-menu .js-menu-btn').trigger('click');
+    //   }
 
-      $(this).addClass('open');
-      $('#mobile-menu .js-mobile-search-close-btn').addClass('open');
-      $('body').addClass('mobile-search-open');
-      $('#mobile-menu .js-search').addClass('active');
-      $('#mobile-menu .js-search-input').val('').focus();
-    });
+    //   $(this).addClass('open');
+    //   $('#mobile-menu .js-mobile-search-close-btn').addClass('open');
+    //   $('body').addClass('mobile-search-open');
+    //   $('#mobile-menu .js-search').addClass('active');
+    //   $('#mobile-menu .js-search-input').val('').focus();
+    // });
 
-    // Closes the mobile search modal.
-    $('#mobile-menu .js-mobile-search-close-btn').click(function(event) {
-      event.stopPropagation();
-      $('#mobile-menu .js-mobile-search-open-btn, #mobile-menu .js-mobile-search-close-btn').removeClass('open');
-      $('#mobile-menu .js-search').removeClass('active');
-      $('body').removeClass('mobile-search-open');
-      $('#mobile-menu .js-voog-search-modal').removeClass('search-results-active');
-    });
+    // // Closes the mobile search modal.
+    // $('#mobile-menu .js-mobile-search-close-btn').click(function(event) {
+    //   event.stopPropagation();
+    //   $('#mobile-menu .js-mobile-search-open-btn, #mobile-menu .js-mobile-search-close-btn').removeClass('open');
+    //   $('#mobile-menu .js-search').removeClass('active');
+    //   $('body').removeClass('mobile-search-open');
+    //   $('#mobile-menu .js-voog-search-modal').removeClass('search-results-active');
+    // });
 
     $('#mobile-menu .js-search-form, #mobile-menu .js-voog-search-modal').click(function(event) {
       event.stopPropagation();
