@@ -9232,27 +9232,34 @@ return jQuery;
 
 
   $('.mobile-menu-toggler').click(function(event) {
+      event.stopPropagation();
       event.preventDefault();
       $('body').toggleClass('mobilemenu-open');
       $('body').removeClass('mobilesearch-open');
   });
 
   $('.mobile-menu-close').on('click', function(event) {
-      event.preventDefault();
+    event.stopPropagation();
+    event.preventDefault();
 
-      if ($('body').hasClass('lang-menu-open')) {
-        $('body').removeClass('lang-menu-open');
-      }
-      else if ($('body').hasClass('mobile-search-open')) {
-        $('body').removeClass('mobile-search-open');
-        $('.search-btn').removeClass('open');
-      }
-      else {
-        $('body').removeClass('mobilemenu-open');
-      }
+    if ($('body').hasClass('lang-menu-open')) {
+      $('body').removeClass('lang-menu-open');
+    }
+    else if ($('body').hasClass('mobile-search-open')) {
+      $('body').removeClass('mobile-search-open');
+      $('.search-btn').removeClass('open');
+    }
+    else {
+      $('body').removeClass('mobilemenu-open');
+    }
+  });
+
+  $('.js-menu-lang-wrap').on('click', function(event) {
+     event.stopPropagation();
   });
 
   $('.lang-menu-btn').on('click', function(event) {
+      event.stopPropagation();
       event.preventDefault();
 
       if ($('body').hasClass('lang-menu-open')) {
@@ -9439,6 +9446,9 @@ return jQuery;
         $('body').removeClass('mobile-search-open');
       }
 
+      if ($('body').hasClass('mobilemenu-open')) {
+        $('.mobile-menu-toggler').trigger('click');
+      };
     });
 
     // Toggles the popover main menu (visible on smalles screens).
