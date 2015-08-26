@@ -2,7 +2,7 @@
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% assign blog_article_page = true %}
-    {% include 'template-variables' with 'blog_article_page' %}
+    {% include 'template-variables' %}
     {% include 'html-head' %}
     {% include 'template-styles' %}
   </head>

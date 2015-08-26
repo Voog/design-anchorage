@@ -7,7 +7,7 @@
         background-image: none;
       }
     {% else %}
-      {% for imageSize in page.data.header_bg.imageSizes %}
+      {% for imageSize in header_bg.imageSizes %}
         {% if forloop.first %}
           .site-header .background-image {
             background-image: url("{{ imageSize.url }}");
@@ -65,7 +65,7 @@
         background-image: none;
       }
     {% else %}
-      {% for imageSize in page.data.content_bg_1.imageSizes %}
+      {% for imageSize in content_bg_1.imageSizes %}
         {% if forloop.first %}
           .main-inner-row .background-image {
             background-image: url("{{ imageSize.url }}");
@@ -97,7 +97,7 @@
         background-image: none;
       }
     {% else %}
-      {% for imageSize in page.data.content_bg_2.imageSizes %}
+      {% for imageSize in content_bg_2.imageSizes %}
         {% if forloop.first %}
           .blog-feed .background-image {
             background-image: url("{{ imageSize.url }}");
@@ -148,7 +148,7 @@
         background-image: none;
       }
     {% else %}
-      {% for imageSize in page.data.footer_bg.imageSizes %}
+      {% for imageSize in footer_bg.imageSizes %}
         {% if forloop.first %}
           .site-footer .background-image {
             background-image: url("{{ imageSize.url }}");
