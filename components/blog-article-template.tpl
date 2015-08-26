@@ -22,16 +22,19 @@
   {% endif %}
 
   {% unless blog_article_page %}{% comment %}<!--Blog and news user custom photo-->{% endcomment %}
-    {% for imageSize in article.data.header_bg.imageSizes %}
-      {% if forloop.first %}
-        <footer class="article-footer">
-          <div class="article-image">
-            <div class="background-image" style="background-image: url( {{ imageSize.url }} );"></div>
-            <a href="{{ article.url }}" class="stretch"></a>
-          </div>
-        </footer>
-      {% endif %}
-    {% endfor %}
+    {% if article.data.header_bg.image and article.data.header_bg.image != '' %}
+      {% for imageSize in article.data.header_bg.imageSizes %}
+        {% if forloop.first %}
+          <footer class="article-footer">
+            <div class="article-image">
+              <div class="background-image" style="background-image: url( {{ imageSize.url }} );"></div>
+              <a href="{{ article.url }}" class="stretch"></a>
+            </div>
+          </footer>
+          {% break %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
   {% endunless %}
 
 </article>
