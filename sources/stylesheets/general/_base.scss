@@ -158,14 +158,9 @@ a {
   margin: 0 auto;
   @extend %wide-wrap;
 
-  .front-page &,
-  .common-page & {
-    @extend %wide-wrap;
+  .header-top & {
+    @extend %widest-wrap;
   }
-
-  // .blog-article-page & {
-  //   @extend %medium-wrap;
-  // }
 }
 
 .inner {
@@ -173,7 +168,7 @@ a {
   padding: $margin-half $margin-medium;
 
   .front-page .main-content & {
-    padding: 75px $margin-medium;    
+    padding: 75px $margin-medium;
   }
 
   .common-page .top-row & {

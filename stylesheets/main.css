@@ -415,7 +415,11 @@ a img {
   line-height: inherit;
 }
 
-.wrap, .front-page .wrap, .common-page .wrap {
+.header-top .wrap {
+  max-width: 1340px;
+}
+
+.wrap {
   max-width: 1120px;
 }
 
