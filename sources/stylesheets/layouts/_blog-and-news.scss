@@ -67,7 +67,8 @@
 
   .articles-listing {
     @extend %clearfix;
-    margin: 0 $margin-general;
+    margin: 0 auto;
+    max-width: 860px;
 
     .articles-listing-header {
       margin: 0 0 $margin-medium;

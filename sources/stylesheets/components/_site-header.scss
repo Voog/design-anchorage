@@ -111,7 +111,7 @@
         .front-page & {
           @include rem-fallback(height, 532px);
         }
-        .common-page &.
+        .common-page &,
         .blog-news-page &,
         .blog-article-page & {
           @include rem-fallback(height, 105px);
