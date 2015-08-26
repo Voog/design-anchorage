@@ -25,6 +25,7 @@
     {% endif %}
 
   {% else %}
+
     {% if front_page %}
       {% assign bg_image_prefix = images_path | append: "/front-header-bg" %}
     {% elsif blog_article_page %}
