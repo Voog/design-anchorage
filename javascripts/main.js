@@ -9470,25 +9470,48 @@ return jQuery;
       $('.js-search-close-btn').trigger('click');
     });
 
-    // Opens the search modal.
-    $('.js-search-open-btn').click(function(event) {
+    // Toggles the search modal.
+    $('.js-search-toggle-btn').click(function(event) {
       event.stopPropagation();
-      if ($('.js-menu-btn').hasClass('open')) {
-        $('.js-menu-btn').trigger('click');
-      }
-
-      $(this).addClass('open');
-      $('.js-search-close-btn').addClass('open');
       $('.js-search').addClass('active');
-      $('.js-search-input').val('').focus();
+      $('.js-search-input').focus();
     });
 
-    // Closes the search modal.
-    $('.js-search-close-btn').click(function(event) {
+    // Opens the search modal.
+    // $('.js-search-open-btn').click(function(event) {
+    //   event.stopPropagation();
+    //   if ($('.js-menu-btn').hasClass('open')) {
+    //     $('.js-menu-btn').trigger('click');
+    //   }
+
+    //   $(this).addClass('open');
+    //   $('.js-search-close-btn').addClass('open');
+    //   $('.js-search').addClass('active');
+    //   $('.js-search-input').val('').focus();
+    // });
+
+    // // Closes the search modal.
+    // $('.js-search-close-btn').click(function(event) {
+    //   event.stopPropagation();
+    //   $('.js-search-open-btn, .js-search-close-btn').removeClass('open');
+    //   $('.js-search').removeClass('active');
+    //   $('.js-voog-search-modal').removeClass('search-results-active');
+    // });
+
+    $('.js-header-right .js-search-input').on('input', function() {
+      var searchCleanBtn = $('.js-search-reset-btn');
+
+      if ($(this).val().length > 0) {
+        searchCleanBtn.addClass('active');
+      } else {
+        searchCleanBtn.removeClass('active');
+      };
+    });
+
+    $('.js-header-right .js-search-reset-btn').click(function(event) {
       event.stopPropagation();
-      $('.js-search-open-btn, .js-search-close-btn').removeClass('open');
-      $('.js-search').removeClass('active');
-      $('.js-voog-search-modal').removeClass('search-results-active');
+      $('.js-header-right .js-search-input').val('').focus();
+      $('.js-search-reset-btn').removeClass('active');
     });
 
     $('.js-search-form, .js-voog-search-modal').click(function(event) {
