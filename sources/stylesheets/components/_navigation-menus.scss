@@ -181,6 +181,12 @@
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
 
+  .language-menu-btn {
+    position: absolute;
+    top: -14px;
+    left: -25px;
+  }
+
   @include query($tablet-3) {
     position: absolute;
     right: 0;
@@ -851,7 +857,7 @@ $flags:
 
   &.flags-disabled {
     a.lang-flag {
-      padding: 6px 5px 5px;
+      padding: 6px 20px 5px;
     }
   }
 
@@ -913,7 +919,7 @@ $flags:
   position: absolute;
   z-index: 1;
   top: 25px;
-  right: -11px;
+  right: -12px;
   display: none;
   min-width: 122px;
   padding: 5px 0;

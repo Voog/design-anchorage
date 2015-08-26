@@ -1322,6 +1322,11 @@ h5,
     overflow: hidden;
     -webkit-overflow-scrolling: touch;
   }
+  #mobile-menu .language-menu-btn {
+    position: absolute;
+    top: -14px;
+    left: -25px;
+  }
 }
 @media screen and (max-width: 768px) and (max-width: 640px) {
   #mobile-menu {
@@ -1996,7 +2001,7 @@ h5,
   padding: 5px;
 }
 .lang-menu.flags-disabled a.lang-flag {
-  padding: 6px 5px 5px;
+  padding: 6px 20px 5px;
 }
 .lang-menu .lang-title {
   display: inline-block;
@@ -2050,7 +2055,7 @@ h5,
   position: absolute;
   z-index: 1;
   top: 25px;
-  right: -11px;
+  right: -12px;
   display: none;
   min-width: 122px;
   padding: 5px 0;
