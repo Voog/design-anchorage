@@ -9477,27 +9477,6 @@ return jQuery;
       $('.js-search-input').focus();
     });
 
-    // Opens the search modal.
-    // $('.js-search-open-btn').click(function(event) {
-    //   event.stopPropagation();
-    //   if ($('.js-menu-btn').hasClass('open')) {
-    //     $('.js-menu-btn').trigger('click');
-    //   }
-
-    //   $(this).addClass('open');
-    //   $('.js-search-close-btn').addClass('open');
-    //   $('.js-search').addClass('active');
-    //   $('.js-search-input').val('').focus();
-    // });
-
-    // // Closes the search modal.
-    // $('.js-search-close-btn').click(function(event) {
-    //   event.stopPropagation();
-    //   $('.js-search-open-btn, .js-search-close-btn').removeClass('open');
-    //   $('.js-search').removeClass('active');
-    //   $('.js-voog-search-modal').removeClass('search-results-active');
-    // });
-
     $('.js-search-input').on('input', function() {
       var searchCleanBtn = $(this).parent().next();
 
@@ -9721,6 +9700,17 @@ return jQuery;
     }
   };
 
+  // Scrolls to the comment-form if comment submit failed (to show the error messages to the user)
+  var focusFormWithErrors = function() {
+    $(document).ready(function() {
+      if ($('.comment-form').hasClass('form_with_errors')) {
+        $('html, body').scrollTop($('.comment-form').offset().top);
+      } else if ($('form').find('.form_error, .form_notice').length > 0) {
+        $('html, body').scrollTop($('.form_error, .form_notice').closest('form').offset().top);
+      }
+    });
+  };
+
   var tableWrapper = function() {
     $('body:not(.editmode) table').each(function() {
       $(this).wrap('<div class="table-holder" />');
@@ -9749,6 +9739,7 @@ return jQuery;
     handleElementsClick();
     stickyFooterVarHeight();
     tableWrapper();
+    focusFormWithErrors();
 
     if (!Modernizr.flexbox && editmode) {
       bindFallbackHeaderLeftWidthCalculation();
