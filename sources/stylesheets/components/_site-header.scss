@@ -111,6 +111,11 @@
         .front-page & {
           @include rem-fallback(height, 532px);
         }
+        .common-page &.
+        .blog-news-page &,
+        .blog-article-page & {
+          @include rem-fallback(height, 105px);
+        }
         &.is-photoheader{
           @include rem-fallback(height, 532px);
         }
