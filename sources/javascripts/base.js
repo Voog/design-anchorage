@@ -447,6 +447,43 @@
     };
   };
 
+  // Sets the position of the footer to the bottom of the page
+  var handleContentMutations = function() {
+    var MutationObserver = (function () {
+      var prefixes = ['WebKit', 'Moz', 'O', 'Ms', '']
+      for(var i=0; i < prefixes.length; i++) {
+        if(prefixes[i] + 'MutationObserver' in window) {
+          return window[prefixes[i] + 'MutationObserver'];
+        }
+      }
+      return false;
+    }());
+
+    if(MutationObserver) {
+      var mObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+
+      // create an observer instance
+      var targetFooter = document.querySelector('.site-footer'),
+          config = {
+            attributes: true,
+            childList: true,
+            subtree: true,
+          };
+
+      var observer = new mObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            stickyFooterVarHeight();
+          });
+      });
+
+      observer.observe(targetFooter, config);
+    } else {
+      setInterval(function() {
+        stickyFooterVarHeight();
+      }, 1000);
+    }
+  };
+
   // Set article comments section the height of the document minus the header section
   var commentsHeight = function() {
     $('.article-comments').removeAttr('style');
@@ -545,6 +582,7 @@
     stickyFooterVarHeight();
     tableWrapper();
     focusFormWithErrors();
+    handleContentMutations();
 
     if (!Modernizr.flexbox && editmode) {
       bindFallbackHeaderLeftWidthCalculation();
