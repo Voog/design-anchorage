@@ -1,34 +1,28 @@
 <footer class="site-footer content-full content-bottom js-bg-picker-area">
-
   <div class="background-image js-background-image"></div>
   <div class="background-color js-background-color"></div>
   {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-key="footer_bg" data-bg-picture-boolean="false" data-bg-image="{{ footer_bg_image }}" data-bg-image-sizes="{{ footer_bg_image_sizes_str | escape }}" data-bg-color="{{ footer_bg_color }}" data-bg-color-data="{{ footer_bg_color_data_str | escape }}"></button>{% endif %}
+
 
   {% if site-footer == "blog_article_page" %}
     <div class="blog-article-nav">
 
       {% capture dont_render %}
-
         {% comment %}Assign next and previous blog post values{% endcomment %}
 
-        {% assign article_current = article.title %}
+        {% assign article_current = article.id %}
         {% assign article_prev_empty = true %}
         {% assign article_next_empty = true %}
 
-        {% for blog in site.blogs %}
-          {% for article in blog.articles %}
-
-            {% if article_current == article.title %}
-              {% assign article_next = forloop.index0 | plus: 1 %}
-              {% assign article_prev = forloop.index0 | minus: 1 %}
-            {% endif %}
-
-          {% endfor %}
+        {% for article in blog.articles %}
+          {% if article_current == article.id %}
+            {% assign article_next = forloop.index0 | plus: 1 %}
+            {% assign article_prev = forloop.index0 | minus: 1 %}
+          {% endif %}
         {% endfor %}
 
         {% for blog in site.blogs %}
           {% for article in blog.articles %}
-
             {% if article_prev == forloop.index0 %}
               {% assign article_prev_empty = false %}
             {% endif %}
@@ -36,28 +30,22 @@
             {% if article_next == forloop.index0 %}
               {% assign article_next_empty = false %}
             {% endif %}
-
           {% endfor %}
         {% endfor %}
-
       {% endcapture %}
 
       {% if article_prev_empty == false %}
         <div class="{% if article_next_empty == true %}article-nav-full{% else %}article-nav-half{% endif %} article-nav-prev">
           <div class="article-nav-bg"></div>
-          {% for blog in site.blogs %}
-            {% for article in blog.articles %}
-
-              {% if article_prev == forloop.index0 %}
-                <a href="{{ article.url }}">
-                  <div class="article-nav-direction">{{ previous_story }}</div>
-                  <div class="article-nav-title">
-                    {{ article.title }}
-                  </div>
-                </a>
-              {% endif %}
-
-            {% endfor %}
+          {% for article in blog.articles %}
+            {% if article_prev == forloop.index0 %}
+              <a href="{{ article.url }}">
+                <div class="article-nav-direction">{{ previous_story }}</div>
+                <div class="article-nav-title">
+                  {{ article.title }}
+                </div>
+              </a>
+            {% endif %}
           {% endfor %}
         </div>
       {% endif %}
@@ -65,9 +53,7 @@
       {% if article_next_empty == false %}
         <div class="{% if article_prev_empty == true %}article-nav-full{% else %}article-nav-half{% endif %} article-nav-next">
           <div class="article-nav-bg"></div>
-          {% for blog in site.blogs %}
             {% for article in blog.articles %}
-
               {% if article_next == forloop.index0 %}
                 <a href="{{ article.url }}">
                   <div class="article-nav-direction">{{ next_story }}</div>
@@ -76,9 +62,7 @@
                   </div>
                 </a>
               {% endif %}
-
             {% endfor %}
-          {% endfor %}
         </div>
       {% endif %}
 
