@@ -29,7 +29,7 @@
       </button>
   {% endif %}
 
-    <div class="lang-menu-popover js-popup-menu-popover">
+    <div class="lang-menu-popover js-popup-menu-popover js-prevent-sideclick">
       {% if editmode or site.has_many_languages? %}
         <ul class="menu">
           {% for language in site.languages %}

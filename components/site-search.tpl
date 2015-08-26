@@ -1,5 +1,5 @@
 {% if site.search.enabled %}
-  <div class="search js-search">
+  <div class="search js-search js-prevent-sideclick">
     <div class="search-middle">
       <div class="search-inner js-search-inner">
         <form id="search" class="search-form js-search-form" method="get" action="#">
