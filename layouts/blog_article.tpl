@@ -22,7 +22,7 @@
                 {% if editmode %}
                 {% elsif article.data.header_bg.imageSizes == nil or article.data.header_bg.imageSizes == "" %}
                   <div class="article-meta">
-                    <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | date: "%d. %B %Y" }}, </time>
+                    <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: 'long' }}, </time>
                     <div class="article-author">{{ article.author.name }}</div>
                   </div>
                 {% else %}

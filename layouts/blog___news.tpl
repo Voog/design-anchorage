@@ -34,7 +34,7 @@
                     {% for article in articles offset: 5 %}
                       <article class="blog-article">
                         <header class="article-header">
-                          <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | date: "%d. %B %Y" }}</time>
+                          <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: 'long' }}</time>
                           <h1 class="article-title"><a href="{{ article.url }}">{{ article.title }}</a></h1>
                         </header>
                       </article>

@@ -2,7 +2,7 @@
 
   {% unless blog_article_page %}{% comment %}<!--Blog and news article header-->{% endcomment %}
     <header class="article-header">
-      <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | date: "%d. %B %Y" }}, </time>
+      <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: 'long' }}, </time>
       <div class="article-author">{{ article.author.name }}</div>
       <h1 class="article-title">{% if blog-article-template == "blog_article_page" %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
     </header>
