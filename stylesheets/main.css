@@ -617,6 +617,7 @@ h5,
 .front-page .blog-feed .wrap {
   height: 360px;
   display: table;
+  width: 100%;
 }
 .front-page .blog-feed .wrap .inner {
   display: table-cell;
