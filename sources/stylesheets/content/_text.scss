@@ -128,13 +128,15 @@
       @include color($black, 1);
       border-bottom: 1px solid $black-light;
 
-      .dark-background & {
-        @include color($white, 1);
-        border-bottom: 1px solid $white-cloudy;
-      }
-
       &:hover {
         text-decoration: none;
+      }
+    }
+
+    .dark-background & {
+      .page-content & {
+        @include color($white, 1);
+        border-bottom: 1px solid $white-cloudy;
       }
     }
 
