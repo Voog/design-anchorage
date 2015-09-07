@@ -24,6 +24,14 @@
     a {
       display: block;
       border-style: none;
+
+      &.untranslated {
+        color: rgba($red, .7);
+
+        &:hover {
+          color: rgba($red, 1);
+        }
+      }
     }
   }
 }
