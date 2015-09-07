@@ -226,7 +226,7 @@
       {% endif %}
     {% endif %}
   {% else %}
-    {% assign footer_bg_type = 'dark-background' %}
+    {% assign footer_bg_type = 'light-background' %}
   {% endif %}
 
   {% if footer_bg_image == nil %}
