@@ -2693,7 +2693,10 @@ h5,
   font-weight: 400;
   font-size: 24px;
 }
-.content-area p {
+.content-area p,
+.content-area ul,
+.content-area ol,
+.content-area dl {
   font-size: 18px;
   font-size: 1.125rem;
 }

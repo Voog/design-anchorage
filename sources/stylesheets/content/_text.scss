@@ -113,7 +113,10 @@
   }
 
   // Styling rules for the editable content area paragraphs, lists and links.
-  p {
+  p,
+  ul,
+  ol,
+  dl {
     @include rem-fallback(font-size, $font-size-normal);
   }
 
