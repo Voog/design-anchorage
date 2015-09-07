@@ -522,12 +522,9 @@
 
   // Initiations
   var initWindowResize = function() {
-    $(window).resize(function() {
-      // Add window resizing functions here.
-      stickyFooterVarHeight();
-      commentsHeight();
-      mobileResize();
-    });
+    $(window).resize(debounce(stickyFooterVarHeight, 100));
+    $(window).resize(debounce(commentsHeight, 100));
+    $(window).resize(debounce(mobileResize, 100));
   };
 
   // Close elements not intended for the specific viewport when resizing
