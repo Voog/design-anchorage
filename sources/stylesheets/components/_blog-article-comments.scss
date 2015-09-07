@@ -6,7 +6,7 @@
 
   width: 300px;
   padding: 45px 30px;
-  
+
   @include transition(250ms);
 
   box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
@@ -31,8 +31,6 @@
   }
 
   .comments-body {
-    overflow-y: scroll;
-
     max-height: 100%;
 
     .comments-title {

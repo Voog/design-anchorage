@@ -869,7 +869,6 @@ h5,
   box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
 }
 .article-comments .comments-body {
-  overflow-y: scroll;
   max-height: 100%;
 }
 .article-comments .comments-body .comments-title {
