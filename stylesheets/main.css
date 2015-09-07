@@ -1057,6 +1057,7 @@ h5,
 }
 .site-header .header-bottom .header-bottom-inner {
   display: table;
+  table-layout: fixed;
   border-collapse: collapse;
   width: 100%;
   max-width: 1120px;

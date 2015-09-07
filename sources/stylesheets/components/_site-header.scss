@@ -94,6 +94,7 @@
 
     .header-bottom-inner {
       display: table;
+      table-layout: fixed;
       border-collapse: collapse;
       width: 100%;
       max-width: $width-max;
