@@ -46,20 +46,13 @@
   .main-feature {
     .wrap {
       font-size: 0;
-
-
-      @media screen and (min-width: $tablet-3 + 1) {
-        .flexbox & {
-          @include display(flex);
-          @include flex-wrap(wrap);
-          @include justify-content(center);
-        }
-      }
     }
 
     .feature {
       @media screen and (min-width: $tablet-3 + 1) {
-        max-width: 373px;
+        display: inline-block;
+        vertical-align: top;
+        width: 33.3%;
       }
 
       &:nth-child(3n+1),
@@ -82,10 +75,6 @@
 
       &:empty {
         display: none;
-      }
-
-      .flexbox & {
-        @include flex(1);
       }
     }
 
