@@ -5,6 +5,9 @@
       <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: 'long' }}, </time>
       <div class="article-author">{{ article.author.name }}</div>
       <h1 class="article-title">{% if blog-article-template == "blog_article_page" %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
+      {% unless article.data.header_bg.image and article.data.header_bg.image != '' %}
+        <div class="article-excerpt content-area">{{ article.excerpt }}</div>
+      {% endunless %}
     </header>
   {% endunless %}
 
