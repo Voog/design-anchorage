@@ -20,13 +20,13 @@
   }
 
   .content-area {
-    @include rem-fallback(font-size, $font-size-base);
+    @include rem-fallback(font-size, $font-size-small);
     line-height: $line-height-medium;
     text-align: center;
     @include color($black,.31);
 
     a {
-      @include color($black,1);
+      @include color($black,.71);
       text-decoration: underline;
 
       &:hover {
