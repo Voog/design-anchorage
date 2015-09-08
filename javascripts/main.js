@@ -9272,9 +9272,7 @@ return jQuery;
 
 
   var toggleFlags = function() {
-    $('.js-option-toggle-flags').on('click', function(event) {
-      // event.stopPropagation();
-
+    $('.js-option-toggle-flags').on('click', function() {
       if ($(this).hasClass('js-flag-disable-btn')) {
         var flagsState = false;
       } else {
@@ -9458,8 +9456,7 @@ return jQuery;
     });
 
     // Toggles the popover main menu (visible on smalles screens).
-    $('.js-menu-btn').click(function(event) {
-      // event.stopPropagation();
+    $('.js-menu-btn').click(function() {
       $(this).toggleClass('open');
       $('.js-menu-main').toggleClass('expanded');
 
@@ -9469,14 +9466,12 @@ return jQuery;
     });
 
     // Toggles the popover language menu.
-    $('.js-menu-lang-btn').click(function(event) {
-      // event.stopPropagation();
+    $('.js-menu-lang-btn').click(function() {
       $('.js-menu-lang-btn').toggleClass('open');
       $('.js-menu-lang').toggleClass('expanded');
     });
 
-    $('.js-tags-btn').click(function(event) {
-      // event.stopPropagation();
+    $('.js-tags-btn').click(function() {
       $(this).toggleClass('open');
       $('.js-menu-tags').toggleClass('expanded');
     });
@@ -9487,8 +9482,7 @@ return jQuery;
     });
 
     // Toggles the search modal.
-    $('.js-search-toggle-btn').click(function(event) {
-      // event.stopPropagation();
+    $('.js-search-toggle-btn').click(function() {
       $('.js-search').addClass('active');
       $('.js-search-input').focus();
     });
@@ -9500,130 +9494,53 @@ return jQuery;
         searchCleanBtn.addClass('active');
       } else {
         searchCleanBtn.removeClass('active');
-      };
+      }
     });
 
-    $('.js-search-reset-btn').click(function(event) {
-      // event.stopPropagation();
+    $('.js-search-reset-btn').click(function() {
       $(this).prev().find('.js-search-input').val('').focus();
       $(this).removeClass('active');
     });
 
-    $('.js-search-form, .js-voog-search-modal').click(function(event) {
-      // event.stopPropagation();
-    });
-
-
-    $('.js-mobile-search-toggle-btn').click(function(event) {
-      // event.stopPropagation();
+    $('.js-mobile-search-toggle-btn').click(function() {
       $('body').toggleClass('mobile-search-open');
       $('#mobile-search .js-search').toggleClass('active');
       $('#mobile-search .js-search-input').focus();
     });
 
-    // Hides mobile search modal on side click
-    // $('#mobile-menu .js-search').click(function() {
-    //   $('#mobile-menu .js-mobile-search-close-btn').trigger('click');
-    //   $('#mobile-menu .search-btn').removeClass('open');
-    // });
-
-    // // Opens the mobile search modal.
-    // $('#mobile-menu .js-mobile-search-open-btn').click(function(event) {
-      // event.stopPropagation();
-    //   $('body').removeClass('lang-menu-open');
-    //   if ($('#mobile-menu .js-menu-btn').hasClass('open')) {
-    //     $('#mobile-menu .js-menu-btn').trigger('click');
-    //   }
-
-    //   $(this).addClass('open');
-    //   $('#mobile-menu .js-mobile-search-close-btn').addClass('open');
-    //   $('body').addClass('mobile-search-open');
-    //   $('#mobile-menu .js-search').addClass('active');
-    //   $('#mobile-menu .js-search-input').val('').focus();
-    // });
-
-    // // Closes the mobile search modal.
-    // $('#mobile-menu .js-mobile-search-close-btn').click(function(event) {
-      // event.stopPropagation();
-    //   $('#mobile-menu .js-mobile-search-open-btn, #mobile-menu .js-mobile-search-close-btn').removeClass('open');
-    //   $('#mobile-menu .js-search').removeClass('active');
-    //   $('body').removeClass('mobile-search-open');
-    //   $('#mobile-menu .js-voog-search-modal').removeClass('search-results-active');
-    // });
-
-    $('#mobile-menu .js-search-form, #mobile-menu .js-voog-search-modal').click(function(event) {
-      // event.stopPropagation();
-    });
-
-
-
-
     // Opens the comments modal.
     $('.js-comments-toggle-btn').click(function(event) {
-      // event.stopPropagation();
-      // if ($('.js-menu-btn').hasClass('open')) {
-      //   $('.js-menu-btn').trigger('click');
-      // }
-
-      // $(this).addClass('open');
-      // $('.js-comments-close-btn').addClass('open');
-      // $('body').addClass('comments-open');
-      // $('.js-comments').addClass('active');
-      // $('.js-comments-input').val('').focus();
-
       $(this).toggleClass('open');
       $('.js-comments').toggleClass('open');
       $('body').toggleClass('comments-open');
       $('.js-comments-input').val('').focus();
     });
 
-    // Closes the comments modal.
-    // $('.js-comments-close-btn').click(function(event) {
-      // event.stopPropagation();
-    //   $('.js-comments-toggle-btn, .js-comments-close-btn').removeClass('open');
-    //   $('body').removeClass('comments-open');
-    //   $('.js-comments').removeClass('active');
-    //   $('.js-voog-comments-modal').removeClass('comments-results-active');
-    // });
-
-    $('.js-comments-form, .js-voog-comments-modal').click(function(event) {
-      // event.stopPropagation();
-    });
-
-
     // Submenu lvl1 load more on mobile.
-    $('.submenu-load-more-lvl1').click(function(event) {
-      // event.stopPropagation();
-
+    $('.submenu-load-more-lvl1').click(function() {
       $(this).addClass('open');
       $(this).next().addClass('open');
       $(this).next().next().addClass('open');
     });
 
-    $('.submenu-close-lvl1').click(function(event) {
-      // event.stopPropagation();
+    $('.submenu-close-lvl1').click(function() {
       $(this).removeClass('open');
       $(this).prev().removeClass('open');
       $(this).next().removeClass('open');
     });
 
     // Submenu lvl2 load more on mobile.
-    $('.submenu-load-more-lvl2').click(function(event) {
-      // event.stopPropagation();
-
+    $('.submenu-load-more-lvl2').click(function() {
       $(this).addClass('open');
       $(this).next().addClass('open');
       $(this).next().next().addClass('open');
     });
 
-    $('.submenu-close-lvl2').click(function(event) {
-      // event.stopPropagation();
+    $('.submenu-close-lvl2').click(function() {
       $(this).removeClass('open');
       $(this).prev().removeClass('open');
       $(this).next().removeClass('open');
     });
-
-
   };
 
   // Sets the search modal height.
@@ -9655,13 +9572,14 @@ return jQuery;
     }
     else {
       $('.page-content').css('margin-bottom', $('.site-footer').outerHeight());
-    };
+    }
   };
 
   // Sets the position of the footer to the bottom of the page
   var handleContentMutations = function() {
     var MutationObserver = (function () {
-      var prefixes = ['WebKit', 'Moz', 'O', 'Ms', '']
+      var prefixes = ['WebKit', 'Moz', 'O', 'Ms', ''];
+
       for(var i=0; i < prefixes.length; i++) {
         if(prefixes[i] + 'MutationObserver' in window) {
           return window[prefixes[i] + 'MutationObserver'];
@@ -9794,7 +9712,7 @@ return jQuery;
 
     if (!Modernizr.flexbox && editmode) {
       bindFallbackHeaderLeftWidthCalculation();
-    };
+    }
   };
 
   // Enables the usage of the initiations outside this file.
@@ -9814,38 +9732,6 @@ return jQuery;
   });
 
   init();
-})(jQuery);
-
-(function($) {
-    $.fn.extend({
-        jsPopupMenu: function(options) {
-            this.each(function() {
-                var $menu = $(this),
-                    $btn = $menu.find('.js-popup-menu-btn'),
-                    $pop = $menu.find('.js-popup-menu-popover');
-
-                $pop.hide();
-                $btn.on('click', function(event) {
-                    event.preventDefault();
-                    if ($pop.is(':hidden')) {
-                        $pop.show();
-                        $btn.addClass('open');
-
-                        setTimeout(function() {
-                            $(document).on('click.js-popup-menu-click', function() {
-                                $pop.hide();
-                                $btn.removeClass('open');
-                                $(this).off('.js-popup-menu-click');
-                            });
-                        },0);
-
-                    }
-                });
-            });
-            return this;
-        }
-    });
-
 })(jQuery);
 
 // quantize.js, Copyright 2012 Shao-Chung Chen.
