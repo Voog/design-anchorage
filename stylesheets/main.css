@@ -2813,18 +2813,6 @@ h5,
   border: 2px solid #4a4a4a;
   color: #4a4a4a;
 }
-.content-area .custom-btn:hover {
-  border: 2px solid #ffffff;
-  background-color: black;
-  color: white;
-  -webkit-transition: 500ms;
-  -moz-transition: 500ms;
-  transition: 500ms;
-}
-.light-background .content-area .custom-btn:hover {
-  border: 2px solid #ffffff;
-  color: white;
-}
 .dark-background .content-area .custom-btn {
   border: 2px solid #ffffff;
   color: white;
@@ -2832,6 +2820,18 @@ h5,
 .light-background .content-area .custom-btn {
   border: 2px solid rgba(0, 0, 0, 0.87);
   color: black;
+}
+.content-area .custom-btn:hover {
+  border: 2px solid #ffffff;
+  background-color: white;
+  color: #4a4a4a;
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
+  transition: 500ms;
+}
+.light-background .content-area .custom-btn:hover {
+  border: 2px solid #ffffff;
+  color: white;
 }
 .content-area .contacts::first-line {
   color: red !important;

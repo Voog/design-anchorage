@@ -231,25 +231,26 @@
     border: 2px solid $black-light;
     @include color($black-light, 1);
 
+    .dark-background & {
+      border: 2px solid $white;
+      @include color($white, 1);
+    }
+
+    .light-background & {
+      border: 2px solid $black;
+      @include color($black, 1);
+    }
+
     &:hover {
       border: 2px solid $white;
-      @include bg($black, 1);
-      @include color($white, 1);
+      @include bg($white, 1);
+      @include color(#4a4a4a, 1);
       @include transition($transition);
 
       .light-background & {
         border: 2px solid $white;
         @include color($white, 1);
       }
-    }
-
-    .dark-background & {
-      border: 2px solid $white;
-      @include color($white, 1);
-    }
-    .light-background & {
-      border: 2px solid $black;
-      @include color($black, 1);
     }
   }
 
