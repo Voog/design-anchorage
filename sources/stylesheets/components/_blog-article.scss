@@ -1,9 +1,7 @@
-.blog-article {
-
-  .comments-open & {
-    @include query($mobile-1) {
-      display: none;
-    }
-  }
-
+.blog-article-page {
+	.main-content {
+		.wrap {
+			max-width: 740px;
+		}
+	}
 }
