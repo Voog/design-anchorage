@@ -1,5 +1,10 @@
 /* NAVIGATION MENUS*/
 // Base
+.menu-btn-wrap {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .menu {
   @extend %hyphens-true;
   margin-top: 0;
@@ -807,7 +812,6 @@ $flags:
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  margin-left: 20px;
 
   li {
     display: block;
@@ -846,7 +850,7 @@ $flags:
         left: 12px;
       }
 
-      padding: 6px 40px 5px 13px;
+      padding: 5px 40px 5px 13px;
       text-align: right;
 
       &:before,
@@ -865,22 +869,23 @@ $flags:
 
   &.flags-disabled {
     a.lang-flag {
-      padding: 6px 5px 5px;
+      padding: 5px 13px;
     }
   }
+}
 
   .lang-title {
     display: inline-block;
     background-color: transparent;
     text-transform: uppercase;
     @include rem-fallback(font-size, $font-size-small);
+
     a {
       background-color: transparent;
       text-transform: uppercase;
       @include rem-fallback(font-size, $font-size-small);
     }
   }
-}
 
 .lang-menu-btn {
   margin: 0;
@@ -913,7 +918,7 @@ $flags:
 
   .ico-popover-toggle {
     position: relative;
-    top: -1px;
+    top: -2px;
     display: inline-block;
     font-size: 7.2px;
 
@@ -926,10 +931,7 @@ $flags:
 .lang-menu-popover {
   position: absolute;
   z-index: 1;
-  top: 25px;
-  right: -12px;
   display: none;
-  min-width: 122px;
   padding: 5px 0;
   line-height: 1;
   text-align: left;
@@ -943,7 +945,17 @@ $flags:
   .editmode & {
     padding-bottom: 0;
   }
+
   .lang-menu-open & {
     display: block;
+  }
+
+  a {
+    &:hover {
+      background-color: rgba($black, .1);
+    }
+    &.active {
+      background-color: rgba($black, .2);
+    }
   }
 }

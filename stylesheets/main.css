@@ -291,7 +291,7 @@ a img {
   color: #ffffff;
   color: rgba(255, 255, 255, 0.7);
 }
-.dark-background .lang-menu.lang-menu-bilingual .lang-title a:hover {
+.dark-background .lang-menu.lang-menu-bilingual .lang-title a.is-active, .dark-background .lang-menu.lang-menu-bilingual .lang-title a:hover {
   color: white;
 }
 .dark-background .lang-menu.lang-menu-bilingual .lang-title a.selected {
@@ -1143,6 +1143,11 @@ h5,
 }
 
 /* NAVIGATION MENUS*/
+.menu-btn-wrap {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .menu {
   margin-top: 0;
   margin-bottom: 0;
@@ -1931,7 +1936,6 @@ h5,
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  margin-left: 20px;
 }
 .lang-menu li {
   display: block;
@@ -1953,7 +1957,7 @@ h5,
   position: relative;
   display: block;
   padding: 6px 10px 5px 40px;
-  padding: 6px 40px 5px 13px;
+  padding: 5px 40px 5px 13px;
   text-align: right;
 }
 .dark-background .lang-menu a.lang-flag, .light-background .lang-menu a.lang-flag {
@@ -1976,16 +1980,17 @@ h5,
   padding: 5px;
 }
 .lang-menu.flags-disabled a.lang-flag {
-  padding: 6px 5px 5px;
+  padding: 5px 13px;
 }
-.lang-menu .lang-title {
+
+.lang-title {
   display: inline-block;
   background-color: transparent;
   text-transform: uppercase;
   font-size: 14px;
   font-size: 0.875rem;
 }
-.lang-menu .lang-title a {
+.lang-title a {
   background-color: transparent;
   text-transform: uppercase;
   font-size: 14px;
@@ -2018,7 +2023,7 @@ h5,
 }
 .lang-menu-btn .ico-popover-toggle {
   position: relative;
-  top: -1px;
+  top: -2px;
   display: inline-block;
   font-size: 7.2px;
 }
@@ -2029,10 +2034,7 @@ h5,
 .lang-menu-popover {
   position: absolute;
   z-index: 1;
-  top: 25px;
-  right: -12px;
   display: none;
-  min-width: 122px;
   padding: 5px 0;
   line-height: 1;
   text-align: left;
@@ -2049,6 +2051,12 @@ h5,
 }
 .lang-menu-open .lang-menu-popover {
   display: block;
+}
+.lang-menu-popover a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.lang-menu-popover a.active {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .site-search {

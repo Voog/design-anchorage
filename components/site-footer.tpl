@@ -89,3 +89,5 @@
     {% endif %}
   </div>
 </footer>
+
+{% include "menu-language-popover" %}

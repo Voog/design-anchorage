@@ -9254,22 +9254,36 @@ return jQuery;
     }
   });
 
-  $('.js-menu-lang-wrap').on('click', function(event) {
-     // event.stopPropagation();
-  });
 
-  $('.lang-menu-btn').on('click', function(event) {
-      // event.stopPropagation();
-      event.preventDefault();
-
+  $('.js-lang-menu-btn').on('click', function() {
       if ($('body').hasClass('lang-menu-open')) {
-          $('body').removeClass('lang-menu-open');
-      }
-      else {
-          $('body').addClass('lang-menu-open');
+        $('body').removeClass('lang-menu-open');
+      } else {
+        bindLanguageMenuPositioning($(this), 10);
+
+        $('body').addClass('lang-menu-open');
       }
   });
 
+  var bindLanguageMenuPositioning = function(currentButton, whitespace) {
+      if (currentButton.parent().hasClass('flags-disabled')) {
+        var offsetItem = currentButton.find('.js-lang-title-inner');
+      } else {
+        var offsetItem = currentButton;
+      }
+
+      if ($(window).height() - offsetItem.offset().top - offsetItem.outerHeight() - whitespace - $('.js-popup-menu-popover').outerHeight() > 0) {
+        $('.js-popup-menu-popover').css({
+          top: offsetItem.offset().top + offsetItem.outerHeight() + whitespace,
+          right: $(window).width() - offsetItem.offset().left - offsetItem.outerWidth() - 12
+        });
+      } else {
+        $('.js-popup-menu-popover').css({
+          top: offsetItem.offset().top - offsetItem.outerHeight() - $('.js-popup-menu-popover').outerHeight(),
+          right: $(window).width() - offsetItem.offset().left - offsetItem.outerWidth() - 12
+        });
+      }
+  };
 
   var toggleFlags = function() {
     $('.js-option-toggle-flags').on('click', function() {
@@ -9280,7 +9294,9 @@ return jQuery;
       }
 
       $(this).toggleClass('js-flag-disable-btn');
-      $('.js-menu-lang-wrap').toggleClass('flags-enabled flags-disabled');
+      $('.js-menu-lang-wrap, .js-menu-btn-wrap').toggleClass('flags-enabled flags-disabled');
+
+      bindLanguageMenuPositioning($('.js-lang-menu-btn'), 10)
 
       siteData.set("flags_state", flagsState);
     });

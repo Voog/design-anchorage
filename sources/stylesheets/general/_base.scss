@@ -223,6 +223,7 @@ a {
       .lang-title a {
         @include color($white, .7);
 
+        &.is-active,
         &:hover {
           @include color($white, 1);
         }
