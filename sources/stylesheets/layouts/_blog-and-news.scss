@@ -35,7 +35,7 @@
   .article-author,
   .article-date {
     @include rem-fallback(font-size, $font-size-small);
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-light;
     line-height: $line-height-normal;
     @include color($black-lighter, 1);
     text-transform: uppercase;
@@ -86,7 +86,7 @@
 
       .article-date {
         @include rem-fallback(font-size, $font-size-xs);
-        font-weight: $font-weight-normal;
+        font-weight: $font-weight-light;
         line-height: $line-height-medium;
         @include color($black-lighter, 1);
         letter-spacing: 1px;
