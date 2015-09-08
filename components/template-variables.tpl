@@ -198,7 +198,11 @@
 
   {% comment %}FRONT PAGE FOOTER RELATED VARIABLES.{% endcomment %}
   {% comment %}Assign variables based on page type.{% endcomment %}
-  {% assign footer_bg = page.data.footer_bg %}
+  {% if front_page %}
+    {% assign footer_bg = page.data.footer_bg %}
+  {% else %}
+    {% assign footer_bg = site.data.footer_bg %}
+  {% endif %}
 
   {% assign footer_bg_image = footer_bg.image %}
   {% assign footer_bg_image_sizes = footer_bg.imageSizes %}
@@ -240,7 +244,11 @@
   {% endif %}
 
   {% if footer_bg_color == nil %}
-    {% assign footer_bg_color = '' %}
+    {% if front_page %}
+      {% assign footer_bg_color = '' %}
+    {% else %}
+      {% assign footer_bg_color = 'rgb(230,230,230)' %}
+    {% endif %}
   {% endif %}
 
   {% if footer_bg_color_data == nil %}

@@ -2,8 +2,6 @@
   <div class="js-background-type {{ footer_bg_type }}">
     <div class="background-image js-background-image"></div>
     <div class="background-color js-background-color"></div>
-    {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-key="footer_bg" data-bg-picture-boolean="false" data-bg-image="{{ footer_bg_image }}" data-bg-image-sizes="{{ footer_bg_image_sizes_str | escape }}" data-bg-color="{{ footer_bg_color }}" data-bg-color-data="{{ footer_bg_color_data_str | escape }}"></button>{% endif %}
-
 
     {% if site-footer == "blog_article_page" %}
       <div class="blog-article-nav">
@@ -71,6 +69,8 @@
     {% endif %}
 
     <div class="footer-body content-area">
+      {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-key="footer_bg" data-bg-picture-boolean="false" data-bg-image="{{ footer_bg_image }}" data-bg-image-sizes="{{ footer_bg_image_sizes_str | escape }}" data-bg-color="{{ footer_bg_color }}" data-bg-color-data="{{ footer_bg_color_data_str | escape }}"></button>{% endif %}
+
       <div class="wrap">
         <div class="inner content-area">
           {% xcontent name='footer' %}

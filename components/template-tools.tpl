@@ -11,12 +11,27 @@
     {% if blog_article_page %}
       var pageType = 'articlePage';
 
+      siteData = new Edicy.CustomData({
+        type: 'site'
+      });
+    {% elsif front_page %}
+      var pageType = 'frontPage',
+
+      pageData = new Edicy.CustomData({
+        type: 'page',
+        id: '{{ page.id }}'
+      });
     {% else %}
       var pageType = 'contentPage',
-          pageData = new Edicy.CustomData({
-            type: 'page',
-            id: '{{ page.id }}'
-          });
+
+      siteData = new Edicy.CustomData({
+        type: 'site'
+      });
+
+      pageData = new Edicy.CustomData({
+        type: 'page',
+        id: '{{ page.id }}'
+      });
     {% endif %}
 
     $('.js-img-dropper-area').each(function(index, imgDropperArea) {

@@ -77,6 +77,7 @@ a img {
 
 .voog-bg-picker-btn {
   top: 0;
+  left: 0;
   background-color: transparent;
   border-style: none;
 }
@@ -2573,6 +2574,9 @@ h5,
   .comments-open .site-footer {
     display: none;
   }
+}
+.site-footer .footer-body {
+  position: relative;
 }
 
 .content-area {

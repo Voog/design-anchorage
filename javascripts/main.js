@@ -9382,7 +9382,7 @@ return jQuery;
   };
 
   // Header background image and color save logic function.
-  var bgPickerCommit = function(dataKey, data) {
+  var bgPickerCommit = function(dataBgKey, data) {
     var commitData = $.extend(true, {}, data);
     commitData.image = data.image || '';
     commitData.imageSizes = data.imageSizes || '';
@@ -9390,10 +9390,18 @@ return jQuery;
     commitData.combinedLightness = bgPickerCombinedLightness;
 
     if (pageType === 'articlePage') {
-      Edicy.articles.currentArticle.setData(dataKey, commitData);
+      if (dataBgKey == 'footer_bg') {
+        siteData.set(dataBgKey, commitData);
+      } else {
+        Edicy.articles.currentArticle.setData(dataBgKey, commitData);
+      }
     } else {
-      pageData.set(dataKey, commitData);
-    };
+      if (pageType === 'contentPage' && dataBgKey === 'footer_bg') {
+        siteData.set(dataBgKey, commitData);
+      } else {
+        pageData.set(dataBgKey, commitData);
+      }
+    }
   };
 
   var colorSum = function(bgColor, fgColor) {
