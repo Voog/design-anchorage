@@ -9471,12 +9471,17 @@ return jQuery;
 
         if ($('body').hasClass('mobilemenu-open')) {
           $('.mobile-menu-toggler').trigger('click');
-        };
+        }
 
         if ($('body').hasClass('lang-menu-open')) {
           $('body').removeClass('lang-menu-open');
-        };
-      };
+        }
+
+        if ($('body').hasClass('comments-open')) {
+          $('body').removeClass('comments-open');
+          $('.js-comments-toggle-btn, .js-voog-comments-modal').removeClass('open');
+        }
+      }
     });
 
     // Toggles the popover main menu (visible on smalles screens).
