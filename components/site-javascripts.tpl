@@ -11,7 +11,7 @@
       resultsContainer: $('.js-voog-search-modal').get(0), // if given an element results are rendered inside that element instead of modal (with scroll lazy load support)
       sideclick: true, // if modal should close on sideclick
       mobileModeWidth: 480, // mobile checkpoint (adds class "voog-search-mobile-mode" if <=)
-      updateOnKeypress: false // updates results on every keypress
+      updateOnKeypress: true // updates results on every keypress
     });
 
     var mobileSearch = new VoogSearch($('#mobile-search .js-search-form').get(0), {
@@ -20,7 +20,7 @@
       resultsContainer: $('#mobile-search .js-voog-search-modal').get(0), // if given an element results are rendered inside that element instead of modal (with scroll lazy load support)
       sideclick: true, // if modal should close on sideclick
       mobileModeWidth: 480, // mobile checkpoint (adds class "voog-search-mobile-mode" if <=)
-      updateOnKeypress: false // updates results on every keypress
+      updateOnKeypress: true // updates results on every keypress
     });
   </script>
 {% endif %}
