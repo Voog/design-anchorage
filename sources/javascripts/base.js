@@ -296,8 +296,8 @@
 
     // Toggles the search modal.
     $('.js-search-toggle-btn').click(function() {
-      $('.js-search').addClass('active');
-      $('.js-search-input').focus();
+      $('.js-search').toggleClass('active');
+      $('.js-search').hasClass('active') ? $('.js-search-input').focus() : '';
     });
 
     $('.js-search-input').on('input', function() {
