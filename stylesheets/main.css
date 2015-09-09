@@ -737,19 +737,21 @@ h5,
 }
 .blog-news-page .articles-listing {
   margin: 0 auto;
-  max-width: 860px;
+  max-width: 695px;
 }
 .blog-news-page .articles-listing .articles-listing-header {
-  margin: 0 0 30px;
+  margin: 62px 0 30px;
 }
 .blog-news-page .articles-listing .articles-listing-title {
+  font-size: 22px;
+  font-size: 1.375rem;
   text-transform: uppercase;
 }
 .blog-news-page .articles-listing .blog-article {
   padding: 0;
 }
 .blog-news-page .articles-listing .blog-article .article-header {
-  margin: 0 0 30px;
+  margin: 0 0 20px;
 }
 .blog-news-page .articles-listing .blog-article .article-date {
   font-size: 12px;
@@ -765,8 +767,8 @@ h5,
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: 300;
-  line-height: 1.7;
-  margin-left: 150px;
+  line-height: 1.4;
+  margin-left: 180px;
 }
 @media screen and (max-width: 480px) {
   .blog-news-page .articles-listing {
