@@ -2493,6 +2493,7 @@ h5,
 .site-footer .blog-article-nav .article-nav-half {
   width: 50%;
   display: table-cell;
+  vertical-align: top;
   box-sizing: border-box;
   position: relative;
 }
@@ -2519,7 +2520,7 @@ h5,
 }
 .site-footer .blog-article-nav .article-nav-full a,
 .site-footer .blog-article-nav .article-nav-half a {
-  padding: 40px;
+  padding: 55px 50px;
   display: block;
   height: 100%;
   overflow: auto;
@@ -2553,9 +2554,15 @@ h5,
     margin-left: 0;
   }
 }
+.site-footer .blog-article-nav .article-nav-inner {
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+}
 .site-footer .blog-article-nav .article-nav-direction {
   font-size: 12px;
   font-size: 0.75rem;
+  margin-bottom: 3px;
   font-weight: 400;
   line-height: 2;
   letter-spacing: 1px;

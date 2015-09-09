@@ -39,9 +39,9 @@
             {% for article in blog.articles %}
               {% if article_prev == forloop.index0 %}
                 <a href="{{ article.url }}">
-                  <div class="article-nav-direction">{{ previous_story }}</div>
-                  <div class="article-nav-title">
-                    {{ article.title }}
+                  <div class="article-nav-inner">
+                    <div class="article-nav-direction">{{ previous_story }}</div>
+                    <div class="article-nav-title">{{ article.title }}</div>
                   </div>
                 </a>
               {% endif %}
@@ -55,9 +55,9 @@
               {% for article in blog.articles %}
                 {% if article_next == forloop.index0 %}
                   <a href="{{ article.url }}">
-                    <div class="article-nav-direction">{{ next_story }}</div>
-                    <div class="article-nav-title">
-                      {{ article.title }}
+                    <div class="article-nav-inner">
+                      <div class="article-nav-direction">{{ next_story }}</div>
+                      <div class="article-nav-title">{{ article.title }}</div>
                     </div>
                   </a>
                 {% endif %}
