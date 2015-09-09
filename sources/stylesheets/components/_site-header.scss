@@ -37,10 +37,6 @@
     min-width: 140px;
   }
   .header-body {
-    @include rem-fallback(font-size, $font-size-header);
-    font-weight: $font-weight-bold;
-    line-height: $line-height-normal;
-    text-transform: uppercase;
 
     .content-formatted {
       @include query($mobile-1 - 58) {
@@ -49,14 +45,15 @@
     }
 
     h1 {
-      @extend .header-body;
-      margin: 0;
+      @include rem-fallback(font-size, $font-size-header);
+      font-weight: $font-weight-bold;
+      line-height: $line-height-normal;
+      text-transform: uppercase;
     }
 
     h2 {
       @include rem-fallback(font-size, $font-size-huge);
       text-transform: initial;
-      // line-height: $line-height-small;
     }
 
     @include query($tablet-2) {

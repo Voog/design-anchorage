@@ -1008,20 +1008,17 @@ h5,
   position: relative;
   min-width: 140px;
 }
-.site-header .header-body, .site-header .header-body h1 {
-  font-size: 70px;
-  font-size: 4.375rem;
-  font-weight: 700;
-  line-height: 1;
-  text-transform: uppercase;
-}
 @media screen and (max-width: 422px) {
   .site-header .header-body .content-formatted {
     font-size: 24px;
   }
 }
 .site-header .header-body h1 {
-  margin: 0;
+  font-size: 70px;
+  font-size: 4.375rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
 }
 .site-header .header-body h2 {
   font-size: 32px;
@@ -1029,7 +1026,7 @@ h5,
   text-transform: initial;
 }
 @media screen and (max-width: 768px) {
-  .site-header .header-body, .site-header .header-body h1 {
+  .site-header .header-body {
     font-size: 36px;
     font-size: 2.25rem;
   }
