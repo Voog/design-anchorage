@@ -242,6 +242,13 @@ a {
     @include fill($white, 1);
   }
 
+  .main-feature {
+    .aspect-ratio-inner {
+      .front-page & {
+        border-color: rgba($white, .33);
+      }
+    }
+  }
 }
 
 .light-background {

@@ -304,6 +304,9 @@ a img {
 .dark-background .site-options .search-btn svg path {
   fill: white;
 }
+.front-page .dark-background .main-feature .aspect-ratio-inner {
+  border-color: rgba(255, 255, 255, 0.33);
+}
 
 .light-background {
   color: black;
