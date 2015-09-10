@@ -2732,7 +2732,7 @@ h5,
   text-align: left;
 }
 .content-area ul {
-  padding-left: 20px;
+  padding-left: 15px;
   list-style-type: none;
 }
 .content-area ul li {
@@ -2740,12 +2740,14 @@ h5,
 }
 .content-area ul li:before {
   position: relative;
-  left: -20px;
+  top: 0.2em;
+  left: -15px;
   display: inline-block;
   vertical-align: middle;
-  font-size: 0.7em;
+  font-size: 1em;
+  font-weight: 700;
   line-height: inherit;
-  content: '○';
+  content: '°';
 }
 .content-area a {
   color: black;
