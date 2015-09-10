@@ -7,13 +7,14 @@
     {% for item in site.visible_menuitems %}
       {% menulink item wrapper-tag="li" %}
     {% endfor %}
-
-    {% if editmode %}
+  </ul>
+  {% if editmode %}
+    <ul class="menu">
       {% if site.hidden_menuitems.size > 0 %}
         <li>{% menubtn site.hidden_menuitems %}</li>
       {% endif %}
 
       <li>{% menuadd %}</li>
-    {% endif %}
-  </ul>
+    </ul>
+  {% endif %}
 </nav>

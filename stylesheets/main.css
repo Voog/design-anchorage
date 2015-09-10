@@ -80,6 +80,7 @@ a img {
   left: 0;
   background-color: transparent;
   border-style: none;
+  opacity: .9;
 }
 
 .site-container {
@@ -993,9 +994,11 @@ h5,
   -ms-flex-pack: end;
 }
 .site-header .header-top .site-options {
+  vertical-align: top;
+}
+.editmode .site-header .header-top .site-options {
   position: relative;
-  vertical-align: middle;
-  top: -2px;
+  top: -1px;
 }
 .site-header .header-title {
   word-break: break-word;
