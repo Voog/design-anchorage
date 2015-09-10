@@ -78,11 +78,7 @@
       {% else %}
         <div class="wrap">
           <div class="header-body">
-            {% for item in site.menuitems_with_hidden %}
-              {% if item.selected? %}
-                <h1><a href="{{ item.url }}">{{ item.title }}</a></h1>
-              {% endif %}
-            {% endfor %}
+            {% contentblock name="header" publish_default_content="true" %}<h1>{{ page.title }}</h1>{% endcontentblock %}
           </div>
         </div>
       {% endif %}
