@@ -35,6 +35,10 @@
   }
 
   .main-content {
+    @include transition(min-height 250ms);
+    min-height: 0;
+    will-change: min-height;
+
     .wrap {
       max-width: 740px;
     }

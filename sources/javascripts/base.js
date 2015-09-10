@@ -270,6 +270,8 @@
           $('body').removeClass('comments-open');
           $('.js-comments-toggle-btn, .js-voog-comments-modal').removeClass('open');
         }
+
+        handleCommentsToggleing();
       }
     });
 
@@ -327,12 +329,27 @@
     });
 
     // Opens the comments modal.
-    $('.js-comments-toggle-btn').click(function(event) {
+    $('.js-comments-toggle-btn').click(function() {
       $(this).toggleClass('open');
       $('.js-comments').toggleClass('open');
       $('body').toggleClass('comments-open');
       $('.js-comments-input').val('').focus();
+
+      handleCommentsToggleing();
     });
+
+    var handleCommentsToggleing = function() {
+      var mainContent = $('.main-content');
+
+      if ($('body').hasClass('comments-open')) {
+        var articleCommentsHeight = $('.article-comments').outerHeight(),
+            siteFooterHeight = $('.site-footer').outerHeight();
+
+        mainContent.css('min-height', articleCommentsHeight - siteFooterHeight);
+      } else {
+        mainContent.removeAttr('style');
+      }
+    };
 
     // Submenu lvl1 load more on mobile.
     $('.submenu-load-more-lvl1').click(function() {
@@ -445,7 +462,7 @@
         commentsTarget = (mainHeight + headerHeight + footerHeight) - headerHeight - commentsPadTop - commentsPadBottom;
 
     if ($(window).width() > 480) {
-      $('.article-comments').css('height', commentsTarget);
+      $('.article-comments').css('min-height', commentsTarget);
     }
 
   };
