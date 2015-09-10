@@ -467,6 +467,10 @@
   // Prevent page scroll while scrolling comments
   $('.comments-body').isolatedScroll();
 
+  var autoSizeTextareas = function() {
+    $('.form_field_textarea').textareaAutoSize();
+  };
+
   // Initiations
   var initWindowResize = function() {
     $(window).resize(debounce(stickyFooterVarHeight, 100));
@@ -527,6 +531,7 @@
     tableWrapper();
     focusFormWithErrors();
     handleContentMutations();
+    autoSizeTextareas();
 
     if (!Modernizr.flexbox && editmode) {
       bindFallbackHeaderLeftWidthCalculation();

@@ -28,7 +28,7 @@
 
             <div class="form_field">
               <label for="comment-body">{% if comment_body_error %}<span class="form_field_error">{{ 'comment_body_blank' | lc }}</span>{% endif %}</label>
-              <textarea id="comment-body" class="form_field_textarea form_field_size_large" name="comment[body]" placeholder="{{ 'comment' | lc }}" rows="1">{{ comment.body }}</textarea>
+              <textarea id="comment-body" class="form_field_textarea form_field_size_large js-autogrow-textarea" name="comment[body]" placeholder="{{ 'comment' | lc }}" rows="1">{{ comment.body }}</textarea>
             </div>
           </div>
 
