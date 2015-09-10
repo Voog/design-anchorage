@@ -688,6 +688,7 @@ h5,
 }
 .blog-news-page .article-title a, .blog-news-page .site-header .header-body .article-title a a, .site-header .header-body .article-title .blog-news-page a a {
   color: black;
+  text-decoration: none;
 }
 .blog-news-page .blog-article {
   position: relative;
@@ -2847,6 +2848,7 @@ h5,
   hyphens: auto;
   border: 2px solid #4a4a4a;
   color: #4a4a4a;
+  text-decoration: none;
 }
 .dark-background .content-area .custom-btn {
   border: 2px solid #ffffff;

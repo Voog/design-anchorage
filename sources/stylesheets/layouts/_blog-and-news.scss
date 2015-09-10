@@ -12,6 +12,7 @@
 
     a {
       @include color($black, 1);
+      text-decoration: none;
     }
 
   }

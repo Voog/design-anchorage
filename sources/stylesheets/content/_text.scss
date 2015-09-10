@@ -242,6 +242,7 @@
     @include hyphenate(true);
     border: 2px solid $black-light;
     @include color($black-light, 1);
+    text-decoration: none;
 
     .dark-background & {
       border: 2px solid $white;
