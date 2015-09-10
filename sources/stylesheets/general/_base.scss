@@ -177,7 +177,7 @@ a {
   }
 
   .common-page .bottom-row & {
-    padding: 0 $margin-medium $margin-half;
+    padding: 0 $margin-low $margin-half;
   }
 
   @include query($tablet-2) {

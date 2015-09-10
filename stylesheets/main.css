@@ -247,7 +247,7 @@ a img {
   padding: 50px 30px 20px;
 }
 .common-page .bottom-row .inner {
-  padding: 0 30px 50px;
+  padding: 0 20px 50px;
 }
 @media screen and (max-width: 768px) {
   .inner {
