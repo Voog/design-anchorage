@@ -44,7 +44,7 @@
     @include rem-fallback(font-size, $font-size-small);
     font-weight: $font-weight-light;
     line-height: $font-size-large;
-    @include color($black-lighter, 1);
+    @include color($black-light, 1);
     background-color: transparent;
     border-width: 1px;
     border-style: solid;
@@ -62,6 +62,10 @@
 
     &.form_field_size_large {
       width: 580px;
+    }
+
+    @include placeholder {
+      @include color($black-lighter, 1);
     }
   }
 
