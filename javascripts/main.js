@@ -9287,28 +9287,10 @@ return jQuery;
 
 
   $('.mobile-menu-toggler').click(function(event) {
-      // event.stopPropagation();
       event.preventDefault();
       $('body').toggleClass('mobilemenu-open');
-      $('body').removeClass('mobilesearch-open');
+      $('body').removeClass('mobilesearch-open, lang-menu-open');
   });
-
-  $('.mobile-menu-close').on('click', function(event) {
-    // event.stopPropagation();
-    event.preventDefault();
-
-    if ($('body').hasClass('lang-menu-open')) {
-      $('body').removeClass('lang-menu-open');
-    }
-    else if ($('body').hasClass('mobile-search-open')) {
-      $('body').removeClass('mobile-search-open');
-      $('.search-btn').removeClass('open');
-    }
-    else {
-      $('body').removeClass('mobilemenu-open');
-    }
-  });
-
 
   $('.js-lang-menu-btn').on('click', function() {
       if ($('body').hasClass('lang-menu-open')) {

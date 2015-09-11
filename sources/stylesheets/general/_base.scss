@@ -43,7 +43,7 @@ a {
     @include transition(left 0.3s);
 
     .mobilemenu-open & {
-      left: -300px;
+      left: -160px;
     }
   }
 }

@@ -183,22 +183,15 @@
   display: block;
   font-family: $font-main;
   top: 0;
-  right: -300px;
+  right: -160px;
   bottom: 0;
   visibility: hidden;
   opacity: 0;
   overflow: auto;
-  @include bg($black-base, .9);
-  // @include transition($transition);
+  @include bg($white, .9);
   @include transition(opacity $transition);
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
-
-  .language-menu-btn {
-    position: absolute;
-    top: -14px;
-    left: -25px;
-  }
 
   @include query($tablet-3) {
     position: absolute;
@@ -211,40 +204,10 @@
     visibility: visible;
     opacity: 1;
     left: auto;
-    width: 300px;
+    width: 160px;
     @include transition(right 0.3s);
   }
 
-  .mobile-site-options {
-    margin: $margin-low;
-    margin-bottom: 0;
-    position: relative;
-
-    @include querymin($tablet-3) {
-      margin-left: $margin-medium;
-    }
-
-    .search-btn {
-      position: absolute;
-      top: -13px;
-      right: 35px;
-      width: $button-square;
-      height: $button-square;
-
-      svg {
-        @include fill($white, 1);
-
-        .mobile-search-open & {
-          @include fill($grey, 1);
-        }
-      }
-    }
-    .lang-title {
-      font-size: $font-size-20;
-      text-transform: uppercase;
-      line-height: 42px;
-    }
-  }
   .mobilemenu-open & {
     right: 0;
     position: fixed;
@@ -255,117 +218,34 @@
     box-shadow: -10px 19px 30px rgba(68,68,68,.31);
   }
 
-  .mobile-menu-close {
+  .search-btn {
     position: absolute;
-    z-index: 9999;
-    top: -13px;
-    right: -13px;
-    display: block;
-    width: 42px;
-    height: 42px;
-    outline: 0;
+    top: 28px;
+    left: 0;
+    width: $button-square;
+    height: $button-square;
+    margin-left: 0;
 
-    &:before,
-    &:after {
-      position: absolute;
-      top: 19px;
-      left: 12px;
-      display: block;
-      width: 20px;
-      height: 3px;
-      content: '';
-      background: white;
-      @include border-radius(3px);
-    }
+    svg {
+      @include fill($black-base, 1);
 
-    &:before {
-      @include rotate(45deg);
-    }
-
-    &:after {
-      @include rotate(-45deg);
-    }
-  }
-
-  .lang-menu-btn {
-    position: absolute;
-    top: 14px;
-    left: 15px;
-    display: block;
-    width: 42px;
-    height: 42px;
-    outline: 0;
-
-    .mobile-search-open & {
-      display: none!important;
-    }
-
-    .lang-menu-btn {
-      position: absolute;
-      top: 14px;
-      left: 11px;
-
-      @include query($tablet-3) {
-        position: static;
+      .mobile-search-open & {
+        @include fill($grey, 1);
       }
     }
   }
 
-  &.flags-enabled {
-    .lang-menu-btn {
-      .lang-title {
-        display: none;
-      }
-    }
-  }
-
-  &.flags-disabled {
-    .lang-menu-btn {
-      top: -13px;
-      left: 0;
-      width: auto;
-      height: auto;
-      display: inline-block;
-      @include color($white, 1);
-
-      &:before,
-      &:after {
-        display: none;
-      }
-
-      .lang-menu-btn {
-        position: static;
-      }
-
-      .lang-title {
-        display: inline-block;
-        position: static;
-        @include color($white, 1);
-
-        &:after {
-          content: "▼";
-          font-size: 7px;
-          position: absolute;
-          right: -13px;
-          top: 2px;
-        }
-      }
-    }
-  }
-
-  .lang-menu-open & {
-    .lang-menu-btn {
-      display: none;
-    }
-  }
-
-  .navigation-menu,
-  .lang-menu {
+  .navigation-menu {
     display: table;
     width: 100%;
     height: calc(100% - 80px);
     word-break: break-all;
-    margin: 0;
+    margin-top: 40px;
+
+    .lang-menu-open &,
+    .mobile-search-open & {
+      display: none;
+    }
 
     .option-btn {
       @include color($white, 1);
@@ -375,7 +255,7 @@
     ul {
       display: table-cell;
       height: 100%;
-      padding: 50px 30px;
+      padding: 50px 20px;
       list-style-type: none;
       text-align: center;
       vertical-align: middle;
@@ -385,34 +265,29 @@
         margin: 0;
         padding: 15px 0;
         text-align: center;
+
+        &.edit-btn {
+          padding: 10px 0;
+        }
+
+        @include querymin($tablet-3) {
+          text-align: left;
+          padding: 0;
+        }
       }
 
       a {
-        @include rem-fallback(font-size, 24px);
-        line-height: $line-height;
-        @include color($white, .5);
+        @include rem-fallback(font-size, $font-size-normal);
+        display: block;
+        padding: 10px 0;
+        text-transform: uppercase;
+        line-height: 1.3;
+        @include color($black-base, 1);
 
         &.selected {
-          @include color($white, 1);
+          @include color($black-base, .62);
         }
       }
-    }
-  }
-
-  .navigation-menu {
-
-    @include querymin($tablet-3) {
-      ul {
-        li {
-          text-align: left;
-          padding: $margin-base 0;
-        }
-      }
-    }
-
-    .lang-menu-open &,
-    .mobile-search-open & {
-      display: none;
     }
 
     .submenu {
@@ -421,10 +296,13 @@
       padding-top: $margin-low / 2;
 
       li {
+        padding: 0;
         a {
-          @include rem-fallback(font-size, $font-size-normal);
+          @include rem-fallback(font-size, $font-size-small);
+          padding: 5px 0 5px 10px;
         }
       }
+
       .submenu-lvl2 {
         display: block;
         padding-bottom: 0;
@@ -457,11 +335,7 @@
 
     @include querymin($tablet-3) {
       .submenu {
-        padding: $margin-low 0 0 $margin-base;
-
-        li {
-          padding: 5px $margin-base;
-        }
+        padding: 0;
 
         .submenu-lvl2 {
           padding: $margin-low 0 0 $margin-base;

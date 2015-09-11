@@ -25,7 +25,7 @@
             {% endif %}
           </div>
 
-          <button class="mobile-menu-toggler">
+          <button class="mobile-menu-toggler js-prevent-sideclick">
             <span></span>
           </button>
 
