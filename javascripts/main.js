@@ -9287,10 +9287,66 @@ return jQuery;
 
 
   $('.mobile-menu-toggler').click(function(event) {
+      // event.stopPropagation();
       event.preventDefault();
       $('body').toggleClass('mobilemenu-open');
-      $('body').removeClass('mobilesearch-open, lang-menu-open');
+      $('body').removeClass('mobilesearch-open');
   });
+
+  $('.js-menu-prev-btn').click(function() {
+    var currentMenu = $('.current-menu');
+
+    currentMenu.find('li a').removeClass('visible indented');
+    currentMenu.parent().closest('ul').addClass('current-menu');
+    currentMenu.removeClass('current-menu');
+
+    currentMenu = $('.current-menu');
+    currentMenu.find('> li > a').addClass('visible');
+
+    $('.js-has-children').addClass('visible');
+    $('.sub-menu').find('a').addClass('indented');
+
+    $('.child-menu').removeClass('child-menu');
+    $('.js-edit-menu').addClass('child-menu');
+  });
+
+  $('.js-toggle-sub-menu').click(function() {
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active');
+      $(this).parent().find('> ul > li > a').removeClass('visible');
+    } else {
+      $('.js-toggle-sub-menu').removeClass('active');
+      $('.sub-menu').find('a').removeClass('visible');
+      $(this).addClass('active');
+      $(this).parent().find('> ul > li > a').addClass('visible');
+    }
+  });
+
+
+  // $('.js-toggle-sub-menu').click(function() {
+  //   $('.js-menu-prev-btn').addClass('visible');
+  //   $('.navigation-menu ul li').removeClass('visible');
+  //   $(this).closest('ul').addClass('current-parent');
+  //   $(this).parent().addClass('visible');
+  //   $(this).next().find('> li').addClass('visible');
+  //   $(this).addClass('hidden');
+  // });
+
+  $('.mobile-menu-close').on('click', function() {
+    event.preventDefault();
+
+    if ($('body').hasClass('lang-menu-open')) {
+      $('body').removeClass('lang-menu-open');
+    }
+    else if ($('body').hasClass('mobile-search-open')) {
+      $('body').removeClass('mobile-search-open');
+      $('.search-btn').removeClass('open');
+    }
+    else {
+      $('body').removeClass('mobilemenu-open');
+    }
+  });
+
 
   $('.js-lang-menu-btn').on('click', function() {
       if ($('body').hasClass('lang-menu-open')) {
@@ -9574,6 +9630,7 @@ return jQuery;
       $('body').toggleClass('mobile-search-open');
       $('#mobile-search .js-search').toggleClass('active');
       $('#mobile-search .js-search-input').focus();
+      $('.js-menu-prev-btn').addClass('visible');
     });
 
     // Opens the comments modal.

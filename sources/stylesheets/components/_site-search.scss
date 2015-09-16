@@ -72,8 +72,17 @@
   max-width: 400px;
   @include box-shadow(0, 2px, 4px, 0, rgba($black-base, .1));
 
+  #mobile-search & {
+    box-shadow: none;
+  }
+
   .search-close-btn {
     display: none;
+
+    .mobile-search-open & {
+      top: 15px;
+      right: 0;
+    }
 
     &.active {
       display: block;
@@ -82,6 +91,7 @@
       right: 10px;
       z-index: 20;
       margin-right: 0;
+
     }
   }
 }
@@ -91,6 +101,11 @@
   z-index: 20;
   @include bg($white, 1);
   @include box-shadow(0, 2px, 4px, 0, rgba($black-base, .1));
+
+  #mobile-search & {
+    box-shadow: none;
+    background-color: transparent;
+  }
 
   &,
   &.selected {
@@ -114,6 +129,11 @@
   background: none;
   box-sizing: border-box;
   border: none;
+  border-bottom: 1px solid $black-base;
+
+  .mobile-search-open & {
+    padding: 0 30px;
+  }
 
   // Removes the clear input button in IE11
   &::-ms-clear {
@@ -312,6 +332,6 @@
   }
   .search {
     padding: 0;
-    top: 60px;
+    top: 20px;
   }
 }
