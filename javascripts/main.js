@@ -9294,20 +9294,27 @@ return jQuery;
   });
 
   $('.js-menu-prev-btn').click(function() {
-    var currentMenu = $('.current-menu');
+    if ($('body').hasClass('mobile-search-open')) {
+      $('body').removeClass('mobile-search-open');
+      $('.js-mobile-search-toggle-btn').removeClass('search-active');
+    } else {
+      $('.js-menu-prev-btn').removeClass('visible');
+      $('.js-mobile-search-toggle-btn').addClass('no-back-btn');
+      var currentMenu = $('.current-menu');
 
-    currentMenu.find('li a').removeClass('visible indented');
-    currentMenu.parent().closest('ul').addClass('current-menu');
-    currentMenu.removeClass('current-menu');
+      currentMenu.find('li a').removeClass('visible indented');
+      currentMenu.parent().closest('ul').addClass('current-menu');
+      currentMenu.removeClass('current-menu');
 
-    currentMenu = $('.current-menu');
-    currentMenu.find('> li > a').addClass('visible');
+      currentMenu = $('.current-menu');
+      currentMenu.find('> li > a').addClass('visible');
 
-    $('.js-has-children').addClass('visible');
-    $('.sub-menu').find('a').addClass('indented');
+      $('.js-has-children').addClass('visible');
+      $('.sub-menu').find('a').addClass('indented');
 
-    $('.child-menu').removeClass('child-menu');
-    $('.js-edit-menu').addClass('child-menu');
+      $('.child-menu').removeClass('child-menu');
+      $('.js-edit-menu').addClass('child-menu');
+    }
   });
 
   $('.js-toggle-sub-menu').click(function() {
@@ -9612,25 +9619,29 @@ return jQuery;
     });
 
     $('.js-search-input').on('input', function() {
-      var searchCleanBtn = $(this).parent().next();
+      var searchCleanBtn = $(this).parent().next()
+          mobileSearchToggleBtn = $('.js-mobile-search-toggle-btn');
 
       if ($(this).val().length > 0) {
         searchCleanBtn.addClass('active');
+        mobileSearchToggleBtn.addClass('search-active');
       } else {
         searchCleanBtn.removeClass('active');
+        mobileSearchToggleBtn.removeClass('search-active');
       }
     });
 
     $('.js-search-reset-btn').click(function() {
       $(this).prev().find('.js-search-input').val('').focus();
       $(this).removeClass('active');
+      $('.js-mobile-search-toggle-btn').removeClass('search-active');
     });
 
     $('.js-mobile-search-toggle-btn').click(function() {
       $('body').toggleClass('mobile-search-open');
-      $('#mobile-search .js-search').toggleClass('active');
-      $('#mobile-search .js-search-input').focus();
-      $('.js-menu-prev-btn').addClass('visible');
+      $('#mobile-search .js-search').addClass('active');
+      $('#mobile-search .js-search-input').val('').focus();
+      $('.js-search-reset-btn').removeClass('active');
     });
 
     // Opens the comments modal.

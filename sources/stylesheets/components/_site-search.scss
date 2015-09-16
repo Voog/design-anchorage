@@ -79,11 +79,6 @@
   .search-close-btn {
     display: none;
 
-    .mobile-search-open & {
-      top: 15px;
-      right: 0;
-    }
-
     &.active {
       display: block;
       position: absolute;
@@ -92,6 +87,11 @@
       z-index: 20;
       margin-right: 0;
 
+      .mobile-search-open & {
+        top: 15px;
+        right: 0;
+        z-index: 9999;
+      }
     }
   }
 }
@@ -333,5 +333,14 @@
   .search {
     padding: 0;
     top: 20px;
+  }
+
+  .voog-search-modal {
+    position: fixed;
+    top: 70px;
+    bottom: 0;
+    max-height: initial;
+    left: 0;
+    right: 0;
   }
 }

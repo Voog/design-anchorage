@@ -1214,8 +1214,12 @@ h5,
   left: 6px;
   padding: 10px;
   display: none;
+  z-index: 999;
 }
 .menu-prev-btn.visible {
+  display: block;
+}
+.mobile-search-open .menu-prev-btn {
   display: block;
 }
 
@@ -1365,9 +1369,9 @@ h5,
     -webkit-overflow-scrolling: touch;
     box-sizing: border-box;
     z-index: 1000;
-    -webkit-transition: -webkit-transform 0.5s;
-    -moz-transition: -moz-transform 0.5s;
-    transition: transform 0.5s;
+    -webkit-transition: -webkit-transform 0.5s, width 0.3s;
+    -moz-transition: -moz-transform 0.5s, width 0.3s;
+    transition: transform 0.5s, width 0.3s;
     -webkit-transform: translate3d(100%, 0, 0);
     -moz-transform: translate3d(100%, 0, 0);
     -ms-transform: translate3d(100%, 0, 0);
@@ -1401,6 +1405,9 @@ h5,
   #mobile-menu .search-open-btn.no-back-btn {
     right: 108px;
   }
+  #mobile-menu .search-open-btn.search-active {
+    display: none;
+  }
   .mobile-search-open #mobile-menu .search-open-btn {
     right: 0;
   }
@@ -1429,7 +1436,8 @@ h5,
     padding: 10px 0;
     text-transform: uppercase;
     line-height: 1.3;
-    color: black;
+    color: #000;
+    color: rgba(0, 0, 0, 0.62);
   }
   #mobile-menu .navigation-menu {
     word-break: break-all;
@@ -1444,7 +1452,7 @@ h5,
     display: block;
   }
   #mobile-menu .navigation-menu ul a.selected {
-    font-weight: 700;
+    color: black;
   }
   #mobile-menu .navigation-menu ul a.indented {
     margin-left: 10px;
@@ -1454,6 +1462,9 @@ h5,
   }
   #mobile-menu .navigation-menu ul a.edy-cbtn.visible {
     display: inline !important;
+  }
+  #mobile-menu .navigation-menu ul.current-menu > li:first-child > a {
+    text-transform: uppercase;
   }
   #mobile-menu .navigation-menu ul.child-menu li a.edy-cbtn {
     display: inline !important;
@@ -2013,10 +2024,6 @@ h5,
 .search-inner .search-close-btn {
   display: none;
 }
-.mobile-search-open .search-inner .search-close-btn {
-  top: 15px;
-  right: 0;
-}
 .search-inner .search-close-btn.active {
   display: block;
   position: absolute;
@@ -2024,6 +2031,11 @@ h5,
   right: 10px;
   z-index: 20;
   margin-right: 0;
+}
+.mobile-search-open .search-inner .search-close-btn.active {
+  top: 15px;
+  right: 0;
+  z-index: 9999;
 }
 
 .search-form {
@@ -2237,6 +2249,14 @@ h5,
 #mobile-search .search {
   padding: 0;
   top: 20px;
+}
+#mobile-search .voog-search-modal {
+  position: fixed;
+  top: 70px;
+  bottom: 0;
+  max-height: initial;
+  left: 0;
+  right: 0;
 }
 
 .site-sidebar {

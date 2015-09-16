@@ -27,7 +27,7 @@
             <ul class="sub-menu menu-level-2{% if page.level >= 2 %} current-menu{% endif %}">
               {% for level2 in item.visible_children %}
                 <li>
-                  <li><a href="{{ level2.url }}"{% if item.current? %} class="visible indented"{% elsif level2.current? %} class="visible selected"{% elsif (level2.selected? or item.current?) and page.level > 2 %} class="visible"{% else %} class="indented"{% endif %}>{{ level2.title }}</a></li>
+                  <a href="{{ level2.url }}"{% if item.current? %} class="visible indented"{% elsif level2.current? %} class="visible selected"{% elsif (level2.selected? or item.current?) and page.level > 2 %} class="visible"{% else %} class="indented"{% endif %}>{{ level2.title }}</a>
 
                   {% if editmode or level2.children? %}
                     <ul class="sub-menu menu-level-3{% if level2.selected? %} child-menu{% endif %}">
