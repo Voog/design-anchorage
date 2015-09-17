@@ -2,9 +2,9 @@
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% assign front_page = true %}
-    {% include 'template-variables' %}
-    {% include 'html-head' %}
-    {% include 'template-styles' %}
+    {% include "template-variables" %}
+    {% include "html-head" %}
+    {% include "template-styles" %}
     {% include "front-page-variables" %}
     {% include "front-page-styles" %}
   </head>
@@ -12,7 +12,7 @@
   <body class="front-page">
 
     <div class="site-container">
-      {% include 'site-header' %}
+      {% include "site-header" %}
 
       <main class="page-content" role="main">
         <div class="main-inner-row content-full js-bg-picker-area">
@@ -74,12 +74,12 @@
         </div>
       </main>
 
-      {% include 'site-footer' %}
+      {% include "site-footer" %}
     </div>
 
-    {% include 'menu-mobile' %}
-    {% include 'site-javascripts' %}
-    {% include 'template-tools' with 'front_page' %}
+    {% include "menu-mobile" %}
+    {% include "site-javascripts" %}
+    {% include "template-tools" with "front_page" %}
     <script>
       site.initFrontPage();
       site.initWindowResize();

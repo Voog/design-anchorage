@@ -2,17 +2,17 @@
 {% comment %}https://developers.facebook.com/tools/debug - Debug after each modification{% endcomment %}
 {% if site.data.fb_admin %}<meta property="fb:admins" content="{{ site.data.fb_admin }}">{% endif %}
 <meta property="og:type" content="{% if article %}article{% else %}website{% endif %}">
-<meta property="og:url" content="{{ site.url }}{% if article %}{{ article.url | remove_first:'/' }}{% else %}{{ page.url | remove_first:'/' }}{% endif %}">
+<meta property="og:url" content="{{ site.url }}{% if article %}{{ article.url | remove_first:"/" }}{% else %}{{ page.url | remove_first:"/" }}{% endif %}">
 <meta property="og:title" content="{{ page_title | escape }}">
 <meta property="og:site_name" content="{{ page.site_title | escape }}">
 
 {% comment %}Open Graph image{% endcomment %}
 {% if page.image == nil and front_page %}
-  {% if header_bg_image_sizes != nil and header_bg_image_sizes != '' %}
+  {% if header_bg_image_sizes != nil and header_bg_image_sizes != "" %}
     {% assign og_image = header_bg_image_sizes[0] %}
-  {% elsif content_bg_1_image_sizes != nil and content_bg_1_image_sizes != '' %}
+  {% elsif content_bg_1_image_sizes != nil and content_bg_1_image_sizes != "" %}
     {% assign og_image = content_bg_1_image_sizes[0] %}
-  {% elsif content_bg_2_image_sizes != nil and content_bg_2_image_sizes != '' %}
+  {% elsif content_bg_2_image_sizes != nil and content_bg_2_image_sizes != "" %}
     {% assign og_image = content_bg_2_image_sizes[0] %}
   {% endif %}
 {% else %}
@@ -39,7 +39,7 @@
   {% assign description = page.description %}
 {% endif %}
 
-{% if description != nil and description != '' %}
+{% if description != nil and description != "" %}
   <meta property="og:description" content="{{ description | escape }}">
   <meta name="description" content="{{ description | escape }}">
 {% endif %}

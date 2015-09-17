@@ -2,14 +2,14 @@
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% assign blog_article_page = true %}
-    {% include 'template-variables' %}
-    {% include 'html-head' %}
-    {% include 'template-styles' %}
+    {% include "template-variables" %}
+    {% include "html-head" %}
+    {% include "template-styles" %}
   </head>
 
   <body class="blog-article-page">
     <div class="site-container">
-      {% include 'site-header' %}
+      {% include "site-header" %}
 
       <main class="page-content" role="main">
 
@@ -22,7 +22,7 @@
                 {% if editmode %}
                 {% elsif article.data.header_bg.imageSizes == nil or article.data.header_bg.imageSizes == "" %}
                   <div class="article-meta">
-                    <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: 'long' }}, </time>
+                    <time class="article-date" datetime="{{ article.created_at | date: "%Y-%m-%d" }}">{{ article.created_at | format_date: "long" }}, </time>
                     <div class="article-author">{{ article.author.name }}</div>
                   </div>
                 {% else %}
@@ -46,10 +46,10 @@
                 {% endif %}
 
                 <section class="blog-article content-area">
-                  {% include 'blog-article-template' with 'blog_article_page' %}
+                  {% include "blog-article-template" with "blog_article_page" %}
                 </section>
 
-                {% include 'blog-article-comments' %}
+                {% include "blog-article-comments" %}
               </div>
             </div>
           </div>
@@ -58,13 +58,13 @@
 
       </main>
 
-      {% include 'site-footer' with 'blog_article_page' %}
+      {% include "site-footer" with "blog_article_page" %}
     </div>
 
 
-    {% include 'menu-mobile' %}
-    {% include 'site-javascripts' %}
-    {% include 'template-tools' with 'blog_article_page' %}
+    {% include "menu-mobile" %}
+    {% include "site-javascripts" %}
+    {% include "template-tools" with "blog_article_page" %}
     <script>
       site.initArticlePage();
       site.initWindowResize();

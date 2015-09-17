@@ -2,20 +2,20 @@
 <html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% assign common_page = true %}
-    {% include 'template-variables' %}
-    {% include 'html-head' %}
-    {% include 'template-styles' %}
+    {% include "template-variables" %}
+    {% include "html-head" %}
+    {% include "template-styles" %}
   </head>
 
   <body class="common-page">
     <div class="site-container">
-      {% include 'site-header' %}
+      {% include "site-header" %}
 
       {% for item in site.menuitems_with_hidden %}
         {% if item.selected? %}
           {% if editmode or item.children? %}
             <div class="page-body sidebar-active">
-              {% include 'site-sidebar' %}
+              {% include "site-sidebar" %}
           {% else %}
             <div class="page-body">
           {% endif %}
@@ -66,12 +66,12 @@
         </main>
       </div>
 
-      {% include 'site-footer' %}
+      {% include "site-footer" %}
     </div>
 
     {% include "menu-mobile" %}
-    {% include 'site-javascripts' %}
-    {% include 'template-tools' with 'common_page' %}
+    {% include "site-javascripts" %}
+    {% include "template-tools" with "common_page" %}
     <script>
       site.initCommonPage();
       site.initWindowResize();

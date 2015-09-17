@@ -40,7 +40,7 @@
               {% if article_prev == forloop.index0 %}
                 <a href="{{ article.url }}">
                   <div class="article-nav-inner">
-                    <div class="article-nav-direction">{{ previous_story }}</div>
+                    <div class="article-nav-direction">{{ "previous" | lc }}</div>
                     <div class="article-nav-title">{{ article.title }}</div>
                   </div>
                 </a>
@@ -56,7 +56,7 @@
                 {% if article_next == forloop.index0 %}
                   <a href="{{ article.url }}">
                     <div class="article-nav-inner">
-                      <div class="article-nav-direction">{{ next_story }}</div>
+                      <div class="article-nav-direction">{{ "next" | lc }}</div>
                       <div class="article-nav-title">{{ article.title }}</div>
                     </div>
                   </a>
@@ -73,7 +73,7 @@
 
       <div class="wrap">
         <div class="inner content-area">
-          {% xcontent name='footer' %}
+          {% xcontent name="footer" %}
         </div>
       </div>
     </div>

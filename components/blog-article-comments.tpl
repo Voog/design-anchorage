@@ -1,7 +1,7 @@
 <section class="article-comments content-area js-comments js-voog-comments-modal js-prevent-sideclick{% unless comment.valid? %} open{% endunless %}">
   <div class="comments-body">
     <header class="comments-header">
-      <h1 class="comments-title">{{ leave_comment }}</h1>
+      <h1 class="comments-title">{{ "add_a_comment" | lc }}</h1>
     </header>
 
     <div class="comment-form{% unless comment.valid? %} form_with_errors{% endunless %}">
@@ -17,23 +17,23 @@
         <div class="form_area">
           <div class="form_fields">
             <div class="form_field">
-              <label for="comment-name">{% if comment_name_error %}<span class="form_field_error">{{ 'comment_author_blank' | lc }}</span>{% endif %}</label>
-              <input id="comment-name" class="form_field_textfield form_field_size_medium" name="comment[author]" placeholder="{{ 'name' | lc }}" value="{{ comment.author }}">
+              <label for="comment-name">{% if comment_name_error %}<span class="form_field_error">{{ "comment_author_blank" | lc }}</span>{% endif %}</label>
+              <input id="comment-name" class="form_field_textfield form_field_size_medium" name="comment[author]" placeholder="{{ "name" | lc }}" value="{{ comment.author }}">
             </div>
 
             <div class="form_field">
-              <label for="comment-email">{% if comment_email_error %}<span class="form_field_error">{{ 'comment_email_blank' | lc }}</span>{% endif %}</label>
-              <input id="comment-email" class="form_field_textfield form_field_size_medium" name="comment[author_email]" placeholder="{{ 'email' | lc }}" value="{{ comment.author_email }}">
+              <label for="comment-email">{% if comment_email_error %}<span class="form_field_error">{{ "comment_email_blank" | lc }}</span>{% endif %}</label>
+              <input id="comment-email" class="form_field_textfield form_field_size_medium" name="comment[author_email]" placeholder="{{ "email" | lc }}" value="{{ comment.author_email }}">
             </div>
 
             <div class="form_field">
-              <label for="comment-body">{% if comment_body_error %}<span class="form_field_error">{{ 'comment_body_blank' | lc }}</span>{% endif %}</label>
-              <textarea id="comment-body" class="form_field_textarea form_field_size_large js-autogrow-textarea" name="comment[body]" placeholder="{{ 'comment' | lc }}" rows="1">{{ comment.body }}</textarea>
+              <label for="comment-body">{% if comment_body_error %}<span class="form_field_error">{{ "comment_body_blank" | lc }}</span>{% endif %}</label>
+              <textarea id="comment-body" class="form_field_textarea form_field_size_large js-autogrow-textarea" name="comment[body]" placeholder="{{ "comment" | lc }}" rows="1">{{ comment.body }}</textarea>
             </div>
           </div>
 
           <div class="form_submit">
-            <input type="submit" value="{{ 'submit' | lc }}">
+            <input type="submit" value="{{ "submit" | lc }}">
           </div>
         </div>
       {% endcommentform %}
@@ -45,7 +45,7 @@
         <article class="comment edy-site-blog-comment">
           <span class="comment-body">{{ comment.body_html }}</span>
           <span class="comment-author">{{ comment.author }} · </span>
-          <span class="comment-date">{{ comment.created_at | format_date: 'long' }}</span>
+          <span class="comment-date">{{ comment.created_at | format_date: "long" }}</span>
           <span class="comment-delete">{% removebutton %}</span>
         </article>
       {% endfor %}

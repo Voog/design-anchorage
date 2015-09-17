@@ -10,11 +10,11 @@
       </div>
 
       <div class="header-right js-header-right">
-        {% include 'menu-main' %}
+        {% include "menu-main" %}
 
         <div class="site-options">
           <div class="visibility-lrg">
-            {% include 'menu-language' %}
+            {% include "menu-language" %}
 
             {% if site.search.enabled %}
               <button class="search-btn js-search-toggle-btn js-prevent-sideclick">
@@ -52,7 +52,7 @@
           <div class="wrap is-photoheader">
             <div class="header-body">
               <h1 class="article-title">{% if editmode %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
-              <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: 'long' }}, </time>
+              <time class="article-date" datetime="{{ article.created_at | date: "%Y-%m-%d" }}">{{ article.created_at | format_date: "long" }}, </time>
               <div class="article-author">{{ article.author.name }}</div>
             </div>
           </div>
@@ -70,7 +70,7 @@
           <div class="wrap is-photoheader">
             <div class="header-body">
               <h1 class="article-title">{% if editmode %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
-              <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: 'long' }}, </time>
+              <time class="article-date" datetime="{{ article.created_at | date: "%Y-%m-%d" }}">{{ article.created_at | format_date: "long" }}, </time>
               <div class="article-author">{{ article.author.name }}</div>
             </div>
           </div>

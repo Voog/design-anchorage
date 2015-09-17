@@ -15,7 +15,7 @@
 <script src="{{ javascripts_path }}/modernizr.js"></script>
 
 {% comment %}STYLESHEETS{% endcomment %}
-{% stylesheet_link 'main.min.css' %}
+{% stylesheet_link "main.min.css" %}
 {% if editmode %}
   <link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.css">
 {% endif %}
@@ -25,6 +25,5 @@
 <title>{{ page_title }}</title>
 
 {% comment %}MISC{% endcomment %}
-{% include 'open-graph' %}
-{% include 'site-translations' %}
+{% include "site-meta" %}
 {% if blog %}{{ blog.rss_link }}{% endif %}
