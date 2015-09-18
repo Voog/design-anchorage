@@ -27,9 +27,17 @@ a {
 .voog-bg-picker-btn {
   top: 0;
   left: 0;
-  background-color: transparent;
+  padding: 0;
   border-style: none;
   opacity: .9;
+
+  .header-bottom & {
+    top: 65px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
 .site-container {

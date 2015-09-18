@@ -78,9 +78,15 @@ a img {
 .voog-bg-picker-btn {
   top: 0;
   left: 0;
-  background-color: transparent;
+  padding: 0;
   border-style: none;
   opacity: .9;
+}
+.header-bottom .voog-bg-picker-btn {
+  top: 65px;
+}
+.header-bottom .voog-bg-picker-btn:hover {
+  opacity: 1;
 }
 
 .site-container {
@@ -2669,7 +2675,7 @@ h5,
   position: relative;
 }
 .content-area ul li:before {
-  position: relative;
+  position: absolute;
   top: 0.2em;
   left: -15px;
   display: inline-block;
