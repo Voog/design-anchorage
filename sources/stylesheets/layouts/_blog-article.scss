@@ -58,8 +58,8 @@
       }
 
       .article-title {
-        @include rem-fallback(font-size, $font-size-large);
-        line-height: 1.6;
+        @include rem-fallback(font-size, $font-size-xl);
+        line-height: 1.4;
       }
 
       a {

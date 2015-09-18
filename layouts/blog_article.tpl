@@ -40,7 +40,7 @@
                 {% if editmode %}
                 {% elsif article.data.header_bg.imageSizes == nil or article.data.header_bg.imageSizes == "" %}
                   <header class="article-header">
-                    <h1 class="article-title">{% if editmode %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
+                    <h1 class="article-title">{% editable article.title %}</h1>
                   </header>
                 {% else %}
                 {% endif %}
