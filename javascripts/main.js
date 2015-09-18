@@ -9357,10 +9357,8 @@ return jQuery;
 
   $('.js-lang-menu-btn').on('click', function() {
     if ($('body').hasClass('lang-menu-open')) {
-      console.log(1);
       $('body').removeClass('lang-menu-open');
     } else {
-      console.log(2);
       bindLanguageMenuPositioning($(this), 10);
 
       $('body').addClass('lang-menu-open');
