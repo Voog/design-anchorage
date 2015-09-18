@@ -513,6 +513,7 @@ a img {
 .front-page .main-feature .wrap {
   font-size: 0;
   text-align: center;
+  max-width: 1123px;
 }
 @media screen and (min-width: 641px) {
   .front-page .main-feature .feature {
