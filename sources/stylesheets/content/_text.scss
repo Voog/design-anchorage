@@ -80,6 +80,11 @@
   h6 {
     font-weight: $font-weight-light;
     @include color($black-base, .87);
+
+    a {
+      @include color($black-base, 1);
+      text-decoration: none;
+    }
   }
 
 

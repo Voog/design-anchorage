@@ -1039,6 +1039,9 @@ h5,
   position: relative;
   min-width: 140px;
 }
+.site-header .header-title a {
+  text-decoration: none;
+}
 @media screen and (max-width: 422px) {
   .site-header .header-body .content-formatted {
     font-size: 24px;
@@ -2607,6 +2610,15 @@ h5,
   font-weight: 300;
   color: #000;
   color: rgba(0, 0, 0, 0.87);
+}
+.content-area h1 a,
+.content-area h2 a,
+.content-area h3 a,
+.content-area h4 a,
+.content-area h5 a,
+.content-area h6 a {
+  color: black;
+  text-decoration: none;
 }
 .content-area h1 {
   font-size: 36px;

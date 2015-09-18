@@ -38,6 +38,10 @@
     line-height: $line-height-normal;
     position: relative;
     min-width: 140px;
+
+    a {
+      text-decoration: none;
+    }
   }
   .header-body {
 
