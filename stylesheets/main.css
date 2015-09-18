@@ -790,7 +790,7 @@ h5,
   font-size: 1.125rem;
   font-weight: 300;
   line-height: 1.4;
-  margin-left: 180px;
+  margin-left: 140px;
 }
 @media screen and (max-width: 480px) {
   .blog-news-page .articles-listing {
