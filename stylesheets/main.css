@@ -1255,7 +1255,7 @@ h5,
 }
 
 .menu-main {
-  margin-right: 20px;
+  margin-right: 40px;
   text-transform: uppercase;
 }
 .menu-main li {
@@ -1835,6 +1835,10 @@ h5,
   display: inline-block;
   vertical-align: middle;
 }
+.lang-menu.lang-menu-bilingual .lang-title a.is-active {
+  color: black;
+  font-weight: 400;
+}
 .lang-menu li {
   display: block;
   font-size: 14px;
@@ -1878,7 +1882,7 @@ h5,
   padding: 5px;
 }
 .lang-menu.flags-disabled a.lang-flag {
-  padding: 5px 13px;
+  padding: 5px;
 }
 
 .lang-title {

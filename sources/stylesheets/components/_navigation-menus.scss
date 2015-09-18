@@ -93,7 +93,7 @@
 
 // Main menu
 .menu-main {
-  margin-right: $margin-low;
+  margin-right: $margin-large;
   text-transform: uppercase;
 
   li {
@@ -709,6 +709,15 @@ $flags:
   display: inline-block;
   vertical-align: middle;
 
+  &.lang-menu-bilingual {
+    .lang-title a {
+      &.is-active {
+        @include color($black, 1);
+        font-weight: $font-weight-normal;
+      }
+    }
+  }
+
   li {
     display: block;
     @include rem-fallback(font-size, $font-size-small);
@@ -765,7 +774,7 @@ $flags:
 
   &.flags-disabled {
     a.lang-flag {
-      padding: 5px 13px;
+      padding: 5px;
     }
   }
 }
