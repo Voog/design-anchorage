@@ -1164,6 +1164,7 @@ h5,
   line-height: 2;
   letter-spacing: 1px;
   display: inline;
+  text-transform: uppercase;
 }
 .site-header .header-body .article-title, .site-header .header-body .article-title a {
   font-size: 60px;
