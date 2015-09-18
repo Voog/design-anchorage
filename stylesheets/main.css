@@ -2365,11 +2365,9 @@ h5,
   line-height: 1.7;
   text-align: center;
   color: rgba(0, 0, 0, 0.87);
-  color: rgba(0, 0, 0, 0.31);
+  color: rgba(0, 0, 0, 0.6);
 }
 .site-footer .content-area a {
-  color: rgba(0, 0, 0, 0.87);
-  color: rgba(0, 0, 0, 0.71);
   text-decoration: underline;
 }
 .site-footer .content-area a:hover {
