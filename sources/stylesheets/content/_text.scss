@@ -230,18 +230,15 @@
     display: inline-block;
     @include bg($black, .0);
     box-sizing: border-box;
-    min-width: 225px;
-    padding: 12px 10px 13px;
+    padding: 12px 30px 13px;
     text-transform: uppercase;
     @include rem-fallback(font-size, $font-size-base);
     font-weight: $font-weight-normal;
     line-height: $line-height-medium;
     text-align: center;
-    margin: 10px;
+    margin: 10px 0;
     cursor: pointer;
     @include hyphenate(true);
-    border: 2px solid $black-light;
-    @include color($black-light, 1);
     text-decoration: none;
 
     .dark-background & {
@@ -250,18 +247,22 @@
     }
 
     .light-background & {
-      border: 2px solid $black;
-      @include color($black, 1);
+      border: 2px solid #222;
+      @include color(#222222);
     }
 
     &:hover {
-      border: 2px solid $white;
-      @include bg($white, 1);
-      @include color(#4a4a4a, 1);
       @include transition($transition);
 
-      .light-background & {
+      .dark-background & {
         border: 2px solid $white;
+        @include bg($white, 1);
+        @include color(#4a4a4a, 1);
+      }
+
+      .light-background & {
+        border: 2px solid #222222;
+        @include bg(#222222);
         @include color($white, 1);
       }
     }

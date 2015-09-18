@@ -2737,15 +2737,14 @@ h5,
   background-color: rgba(0, 0, 0, 0.87);
   background-color: transparent;
   box-sizing: border-box;
-  min-width: 225px;
-  padding: 12px 10px 13px;
+  padding: 12px 30px 13px;
   text-transform: uppercase;
   font-size: 16px;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.7;
   text-align: center;
-  margin: 10px;
+  margin: 10px 0;
   cursor: pointer;
   word-break: break-word;
   word-wrap: break-word;
@@ -2753,8 +2752,6 @@ h5,
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-  border: 2px solid #4a4a4a;
-  color: #4a4a4a;
   text-decoration: none;
 }
 .dark-background .content-area .custom-btn {
@@ -2762,19 +2759,22 @@ h5,
   color: white;
 }
 .light-background .content-area .custom-btn {
-  border: 2px solid rgba(0, 0, 0, 0.87);
-  color: black;
+  border: 2px solid #222;
+  color: #222222;
 }
 .content-area .custom-btn:hover {
-  border: 2px solid #ffffff;
-  background-color: white;
-  color: #4a4a4a;
   -webkit-transition: 500ms;
   -moz-transition: 500ms;
   transition: 500ms;
 }
-.light-background .content-area .custom-btn:hover {
+.dark-background .content-area .custom-btn:hover {
   border: 2px solid #ffffff;
+  background-color: white;
+  color: #4a4a4a;
+}
+.light-background .content-area .custom-btn:hover {
+  border: 2px solid #222222;
+  background-color: #222222;
   color: white;
 }
 .content-area .contacts::first-line {
