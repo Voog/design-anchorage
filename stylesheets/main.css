@@ -2605,6 +2605,8 @@ h5,
 .content-area h5,
 .content-area h6 {
   font-weight: 300;
+  color: #000;
+  color: rgba(0, 0, 0, 0.87);
 }
 .content-area h1 {
   font-size: 36px;

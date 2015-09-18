@@ -79,6 +79,7 @@
   h5,
   h6 {
     font-weight: $font-weight-light;
+    @include color($black-base, .87);
   }
 
 
