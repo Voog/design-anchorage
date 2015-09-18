@@ -9356,33 +9356,35 @@ return jQuery;
 
 
   $('.js-lang-menu-btn').on('click', function() {
-      if ($('body').hasClass('lang-menu-open')) {
-        $('body').removeClass('lang-menu-open');
-      } else {
-        bindLanguageMenuPositioning($(this), 10);
+    if ($('body').hasClass('lang-menu-open')) {
+      console.log(1);
+      $('body').removeClass('lang-menu-open');
+    } else {
+      console.log(2);
+      bindLanguageMenuPositioning($(this), 10);
 
-        $('body').addClass('lang-menu-open');
-      }
+      $('body').addClass('lang-menu-open');
+    }
   });
 
   var bindLanguageMenuPositioning = function(currentButton, whitespace) {
-      if (currentButton.parent().hasClass('flags-disabled')) {
-        var offsetItem = currentButton.find('.js-lang-title-inner');
-      } else {
-        var offsetItem = currentButton;
-      }
+    if (currentButton.parent().hasClass('flags-disabled')) {
+      var offsetItem = currentButton.find('.js-lang-title-inner');
+    } else {
+      var offsetItem = currentButton;
+    }
 
-      if ($(window).height() - offsetItem.offset().top - offsetItem.outerHeight() - whitespace - $('.js-popup-menu-popover').outerHeight() > 0) {
-        $('.js-popup-menu-popover').css({
-          top: offsetItem.offset().top + offsetItem.outerHeight() + whitespace,
-          right: $(window).width() - offsetItem.offset().left - offsetItem.outerWidth() - 12
-        });
-      } else {
-        $('.js-popup-menu-popover').css({
-          top: offsetItem.offset().top - offsetItem.outerHeight() - $('.js-popup-menu-popover').outerHeight(),
-          right: $(window).width() - offsetItem.offset().left - offsetItem.outerWidth() - 12
-        });
-      }
+    if ($(window).height() - offsetItem.offset().top - offsetItem.outerHeight() - whitespace - $('.js-popup-menu-popover').outerHeight() > 0) {
+      $('.js-popup-menu-popover').css({
+        top: offsetItem.offset().top + offsetItem.outerHeight() + whitespace,
+        right: $(window).width() - offsetItem.offset().left - offsetItem.outerWidth() - 12
+      });
+    } else {
+      $('.js-popup-menu-popover').css({
+        top: offsetItem.offset().top - offsetItem.outerHeight() - $('.js-popup-menu-popover').outerHeight(),
+        right: $(window).width() - offsetItem.offset().left - offsetItem.outerWidth() - 12
+      });
+    }
   };
 
   var toggleFlags = function() {
