@@ -50,7 +50,7 @@
       {% elsif blog_article_page %}
         {% if editmode %}
           <div class="wrap is-photoheader">
-            <div class="header-body">
+            <div class="header-body content-area">
               <h1 class="article-title">{% if editmode %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
               <time class="article-date" datetime="{{ article.created_at | date: "%Y-%m-%d" }}">{{ article.created_at | format_date: "long" }}, </time>
               <div class="article-author">{{ article.author.name }}</div>
@@ -58,7 +58,7 @@
           </div>
         {% elsif article.data.header_bg.imageSizes == nil or article.data.header_bg.imageSizes == "" %}
           <div class="wrap">
-            <div class="header-body">
+            <div class="header-body content-area">
               {% for item in site.menuitems_with_hidden %}
                 {% if item.selected? %}
                   <h1><a href="{{ item.url }}">{{ item.title }}</a></h1>
@@ -68,7 +68,7 @@
           </div>
         {% else %}
           <div class="wrap is-photoheader">
-            <div class="header-body">
+            <div class="header-body content-area">
               <h1 class="article-title">{% if editmode %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
               <time class="article-date" datetime="{{ article.created_at | date: "%Y-%m-%d" }}">{{ article.created_at | format_date: "long" }}, </time>
               <div class="article-author">{{ article.author.name }}</div>
@@ -77,7 +77,7 @@
         {% endif %}
       {% else %}
         <div class="wrap">
-          <div class="header-body">
+          <div class="header-body content-area">
             {% contentblock name="header" publish_default_content="true" %}<h1>{{ page.title }}</h1>{% endcontentblock %}
           </div>
         </div>
