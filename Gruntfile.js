@@ -124,7 +124,7 @@ module.exports = function(grunt) {
     watch: {
       js: {
         files: 'sources/javascripts/*.js',
-        tasks: ['concat:build', 'uglify:build']
+        tasks: ['concat:build', 'uglify:build', 'exec:kit:javascripts/*.js']
       },
 
       css: {
@@ -132,7 +132,7 @@ module.exports = function(grunt) {
           'sources/stylesheets/*.scss',
           'sources/stylesheets/*/*.scss'
         ],
-        tasks: ['sass:build', 'cssmin:build']
+        tasks: ['sass:build', 'cssmin:build', 'exec:kit:stylesheets/*.css']
       },
 
       img: {
@@ -150,7 +150,7 @@ module.exports = function(grunt) {
       },
 
       voog: {
-        files: ['javascripts/*.js', 'stylesheets/*.css', 'layouts/*.tpl', 'components/*.tpl'],
+        files: ['layouts/*.tpl', 'components/*.tpl'],
         options: {
           spawn: false
         }
