@@ -2391,8 +2391,8 @@ h5,
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
   display: table;
   width: 100%;
 }
@@ -2455,13 +2455,13 @@ h5,
   text-align: right;
 }
 .site-footer .blog-article-nav .article-nav-next {
-  border-left: 1px solid transparent;
+  border-left: 1px solid #e6e6e6;
   margin-left: -1px;
   /* Hide border from one side */
 }
 @media screen and (max-width: 480px) {
   .site-footer .blog-article-nav .article-nav-next {
-    border-top: 1px solid transparent;
+    border-top: 1px solid #e6e6e6;
     border-left: 0;
     margin-left: 0;
   }

@@ -48,8 +48,8 @@
   .blog-article-nav {
     @extend %clearfix;
     @include hyphenate(true);
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
+    border-top: 1px solid rgba($grey-2, 1);
+    border-bottom: 1px solid rgba($grey-2, 1);
     display: table;
     width: 100%;
 
@@ -107,11 +107,11 @@
       text-align: right;
     }
     .article-nav-next {
-      border-left: 1px solid transparent;
+      border-left: 1px solid rgba($grey-2, 1);
       margin-left: -1px;/* Hide border from one side */
 
       @include query($mobile-1) {
-        border-top: 1px solid transparent;
+        border-top: 1px solid rgba($grey-2, 1);
         border-left: 0;
         margin-left: 0;
       }
