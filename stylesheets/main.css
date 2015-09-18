@@ -820,7 +820,7 @@ h5,
 .blog-article-page .comments-title {
   font-size: 14px;
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.7;
   color: #a4a3a3;
   text-transform: uppercase;
@@ -1160,7 +1160,7 @@ h5,
 .site-header .header-body .article-date {
   font-size: 14px;
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 2;
   letter-spacing: 1px;
   display: inline;
