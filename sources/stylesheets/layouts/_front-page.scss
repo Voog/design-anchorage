@@ -29,18 +29,18 @@
       margin-bottom: 80px;
     }
 
-    .content-area {
-      @extend %normal-text;
-    }
+    // .content-area {
+    //   @extend %normal-text;
+    // }
   }
 
   .main-content {
-    .content-area {
-      @include rem-fallback(font-size, $font-size-huge);
-      font-weight: $font-weight-light;
-      line-height: 1.5;
-      text-align: center;
-    }
+    // .content-area {
+    //   @include rem-fallback(font-size, $font-size-huge);
+    //   font-weight: $font-weight-light;
+    //   line-height: 1.5;
+    //   text-align: center;
+    // }
   }
 
   .main-feature {
@@ -130,7 +130,7 @@
     .feature-content {
       margin: 0 30px 92px;
       font-size: $font-size-normal;
-      text-align: center;
+      // text-align: center;
 
       &:empty {
         display: none;
@@ -138,6 +138,7 @@
     }
 
     .content-area {
+      text-align: left;
       line-height: $line-height-medium;
 
       h3 {
@@ -149,27 +150,27 @@
   .blog-feed {
     padding: $padding-general 0;
 
-    .content-area {
-      @include rem-fallback(font-size, $font-size-huge);
-      font-weight: $font-weight-light;
-      line-height: 1.5;
-      text-align: center;
+    // .content-area {
+    //   @include rem-fallback(font-size, $font-size-huge);
+    //   font-weight: $font-weight-light;
+    //   line-height: 1.5;
+    //   text-align: center;
 
-      h1 {
-        @include rem-fallback(font-size, $font-size-header);
-      }
+    //   h1 {
+    //     @include rem-fallback(font-size, $font-size-header);
+    //   }
 
-      h2 {
-        @include rem-fallback(font-size, $font-size-xl);
-      }
+    //   h2 {
+    //     @include rem-fallback(font-size, $font-size-xl);
+    //   }
 
-      h3,
-      h4
-      h5,
-      h6 {
-        @include rem-fallback(font-size, $font-size-huge);
-      }
-    }
+    //   h3,
+    //   h4
+    //   h5,
+    //   h6 {
+    //     @include rem-fallback(font-size, $font-size-huge);
+    //   }
+    // }
 
     .wrap {
       height: 360px;
@@ -194,7 +195,7 @@
     // }
 
     .inner {
-      text-align: center;
+      // text-align: center;
     }
   }
 

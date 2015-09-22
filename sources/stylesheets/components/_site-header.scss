@@ -43,30 +43,30 @@
       text-decoration: none;
     }
   }
-  .header-body {
+  // .header-body {
 
-    .content-formatted {
-      @include query($mobile-1 - 58) {
-        font-size: 24px;
-      }
-    }
+  //   // .content-formatted {
+  //   //   @include query($mobile-1 - 58) {
+  //   //     font-size: 24px;
+  //   //   }
+  //   // }
 
-    h1 {
-      @include rem-fallback(font-size, $font-size-header);
-      font-weight: $font-weight-bold;
-      line-height: $line-height-normal;
-      text-transform: uppercase;
-    }
+  //   // h1 {
+  //   //   @include rem-fallback(font-size, $font-size-header);
+  //   //   font-weight: $font-weight-bold;
+  //   //   line-height: $line-height-normal;
+  //   //   text-transform: uppercase;
+  //   // }
 
-    h2 {
-      @include rem-fallback(font-size, $font-size-huge);
-      text-transform: initial;
-    }
+  //   // h2 {
+  //   //   @include rem-fallback(font-size, $font-size-huge);
+  //   //   text-transform: initial;
+  //   // }
 
-    @include query($tablet-2) {
-      @include rem-fallback(font-size, $font-size-xl);
-    }
-  }
+  //   // @include query($tablet-2) {
+  //   //   @include rem-fallback(font-size, $font-size-xl);
+  //   // }
+  // }
 
   .header-left {
     .flexbox & {
@@ -103,7 +103,7 @@
       width: 100%;
       max-width: $width-max;
       margin: 0 auto;
-      text-align: center;
+      // text-align: center;
 
       .wrap {
         display: table-cell;

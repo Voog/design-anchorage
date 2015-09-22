@@ -12,10 +12,10 @@
     @include color($white, 1);
   }
 
-  .contacts & {
-    text-align: center;
-    @include rem-fallback(font-size, $font-size-20);
-  }
+  // .contacts & {
+  //   text-align: center;
+  //   @include rem-fallback(font-size, $font-size-20);
+  // }
 
   &.footer-left {
     @include rem-fallback(font-size, $font-size-20);
