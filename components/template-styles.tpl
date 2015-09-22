@@ -28,8 +28,6 @@
 
     {% if front_page %}
       {% assign bg_image_prefix = images_path | append: "/front-header-bg" %}
-    {% elsif blog_article_page %}
-      {% assign bg_image_prefix = images_path | append: "/article-header-bg" %}
     {% else %}
       {% assign bg_image_prefix = images_path | append: "/page-header-bg" %}
     {% endif %}
@@ -51,10 +49,60 @@
     }
   {% endif %}
 
-  {% comment %}/* Front page header background color style */{% endcomment %}
+  {% comment %}/* Site header background color style */{% endcomment %}
   .site-header .background-color {
     background-color: {{ header_bg_color }};
   }
+
+
+  {% if article_header_bg.imageSizes != nil %}
+    {% if article_header_bg.imageSizes == "" %}
+      .site-header.photo-article .background-image {
+        background-image: none;
+      }
+    {% else %}
+      {% for imageSize in article_header_bg.imageSizes %}
+        {% if forloop.first %}
+          .site-header.photo-article .background-image {
+            background-image: url("{{ imageSize.url }}");
+          }
+        {% elsif imageSize.url contains "_block" %}
+          {% break %}
+        {% else %}
+          @media screen and (max-width: {{ imageSize.width }}px) {
+            .site-header.photo-article .background-image {
+              background-image: url("{{ imageSize.url }}");
+            }
+          }
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+  {% else %}
+    {% assign bg_image_prefix = images_path | append: "/article-header-bg" %}
+
+    .site-header.photo-article .background-image {
+      background-image: url("{{ bg_image_prefix }}.jpg");
+    }
+
+    @media screen and (max-width: 2048px) {
+      .site-header.photo-article .background-image {
+        background-image: url("{{ bg_image_prefix }}_huge.jpg");
+      }
+    }
+
+    @media screen and (max-width: 1280px) {
+      .site-header.photo-article .background-image {
+        background-image: url("{{ bg_image_prefix }}_large.jpg");
+      }
+    }
+  {% endif %}
+
+  {% comment %}/* Site header background color style */{% endcomment %}
+  .site-header.photo-article .background-color {
+    background-color: {{ article_header_bg_color }};
+  }
+
 
 
   {% comment %}/* FRONT PAGE CONTENT AREA 1 RELATED STYLES. */{% endcomment %}

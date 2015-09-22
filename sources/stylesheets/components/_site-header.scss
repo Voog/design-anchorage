@@ -163,13 +163,17 @@
 
   .header-body {
     .article-author,
-    .article-date{
+    .article-date {
       @include rem-fallback(font-size, $font-size-small);
       font-weight: $font-weight-light;
       line-height: $line-height-double;
       letter-spacing: 1px;
       display: inline;
       text-transform: uppercase;
+
+      &.is-hidden {
+        display: none;
+      }
     }
     .article-title {
       font-size: 60px;
@@ -182,6 +186,12 @@
         @extend .article-title;
         font-size: 1em;
         text-decoration: none;
+      }
+    }
+
+    .blog-title {
+      &.is-hidden {
+        display: none;
       }
     }
   }

@@ -26,7 +26,7 @@ a {
 
 .voog-bg-picker-btn {
   top: 0;
-  left: 0;
+  left: 10px;
   padding: 0;
   border-style: none;
   opacity: .9;
@@ -36,8 +36,11 @@ a {
   }
 
   .header-bottom & {
-    top: 113px;
-    left: 10px;
+    top: 70px;
+
+    .blog-article-page & {
+      top: 113px;
+    }
 
     &:hover {
       opacity: 1;

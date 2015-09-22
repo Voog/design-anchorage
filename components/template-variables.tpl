@@ -8,17 +8,7 @@
 
   {% comment %}SITE HEADER RELATED VARIABLES.{% endcomment %}
   {% comment %}Assign variables based on page type.{% endcomment %}
-  {% if blog_article_page %}
-    {% assign header_bg = article.data.header_bg %}
-
-    {% comment %}{% endcomment %}
-    {% if article.data.photo_article_state %}
-      {% assign photo_article = true %}
-    {% endif %}
-  {% else %}
-    {% assign header_bg = page.data.header_bg %}
-  {% endif %}
-
+  {% assign header_bg = page.data.header_bg %}
   {% assign header_bg_image = header_bg.image %}
   {% assign header_bg_image_sizes = header_bg.imageSizes %}
   {% assign header_bg_color = header_bg.color %}
@@ -51,8 +41,6 @@
   {% if header_bg_image == nil %}
     {% if front_page %}
       {% assign header_bg_image = images_path | append: "/front-header-bg_block.jpg" %}
-    {% elsif blog_article_page %}
-      {% assign header_bg_image = images_path | append: "/article-header-bg_block.jpg" %}
     {% else %}
       {% assign header_bg_image = images_path | append: "/page-header-bg_block.jpg" %}
     {% endif %}
@@ -61,8 +49,6 @@
   {% if header_bg_image_sizes == nil %}
     {% if front_page %}
       {% assign header_bg_image_sizes_str = '[{"url":"' | append: images_path | append: '/front-header-bg.jpg", "width":2560, "height":1702}, {"url":"' | append: images_path | append: '/front-header-bg_huge.jpg", "width":2048, "height":1362}, {"url":"' | append: images_path | append: '/front-header-bg_large.jpg", "width":1280, "height":851}]' %}
-    {% elsif blog_article_page %}
-      {% assign header_bg_image_sizes_str = '[{"url":"' | append: images_path | append: '/article-header-bg.jpg", "width":2560, "height":1709}, {"url":"' | append: images_path | append: '/article-header-bg_huge.jpg", "width":2048, "height":1367}, {"url":"' | append: images_path | append: '/article-header-bg_large.jpg", "width":1280, "height":854}]' %}
     {% else %}
       {% assign header_bg_image_sizes_str = '[{"url":"' | append: images_path | append: '/page-header-bg.jpg", "width":2560, "height":1707}, {"url":"' | append: images_path | append: '/page-header-bg_huge.jpg", "width":2048, "height":1366}, {"url":"' | append: images_path | append: '/page-header-bg_large.jpg", "width":1280, "height":853}]' %}
     {% endif %}
@@ -73,8 +59,6 @@
   {% if header_bg_color == nil %}
     {% if front_page %}
       {% assign header_bg_color = "rgba(0, 0, 0, 0.1)" %}
-    {% elsif blog_page or blog_article_page %}
-      {% assign header_bg_color = "rgba(0, 0, 0, 0.4)" %}
     {% else %}
       {% assign header_bg_color = "rgba(0, 0, 0, 0.1)" %}
     {% endif %}
@@ -83,13 +67,70 @@
   {% if header_bg_color_data == nil %}
     {% if front_page %}
       {% assign header_bg_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0.1, "lightness": 0}' %}
-    {% elsif blog_page or blog_article_page %}
-      {% assign header_bg_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0.4, "lightness": 0}' %}
     {% else %}
       {% assign header_bg_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0.1, "lightness": 0}' %}
     {% endif %}
   {% else %}
     {% assign header_bg_color_data_str = header_bg_color_data | json %}
+  {% endif %}
+
+
+  {% comment %}Boolean for article type.{% endcomment %}
+  {% if blog_article_page and article.data.photo_article_state %}
+    {% assign photo_article = true %}
+  {% endif %}
+
+  {% comment %}Assign variables for blog article.{% endcomment %}
+  {% assign article_header_bg = article.data.header_bg %}
+  {% assign article_header_bg_image = article_header_bg.image %}
+  {% assign article_header_bg_image_sizes = article_header_bg.imageSizes %}
+  {% assign article_header_bg_color = article_header_bg.color %}
+  {% assign article_header_bg_color_data = article_header_bg.colorData %}
+  {% assign article_header_bg_combined_lightness = article_header_bg.combinedLightness %}
+
+  {% if blog_article_page %}
+    {% comment %}Sets the background type to choose active CMS color scheme.{% endcomment %}
+    {% if article_header_bg %}
+      {% if article_header_bg_combined_lightness %}
+        {% if article_header_bg_combined_lightness > 0.5 %}
+          {% assign article_header_bg_type = "light-background" %}
+        {% else %}
+          {% assign article_header_bg_type = "dark-background" %}
+        {% endif %}
+      {% else %}
+        {% if article_header_bg_color_data.a >= 0.5 %}
+          {% if article_header_bg_color_data.lightness >= 0.5 %}
+            {% assign article_header_bg_type = "light-background" %}
+          {% else %}
+            {% assign article_header_bg_type = "dark-background" %}
+          {% endif %}
+        {% else %}
+          {% assign article_header_bg_type = "light-background" %}
+        {% endif %}
+      {% endif %}
+    {% else %}
+      {% assign article_header_bg_type = "dark-background" %}
+    {% endif %}
+
+    {% if article_header_bg_image == nil %}
+      {% assign article_header_bg_image = images_path | append: "/article-header-bg_block.jpg" %}
+    {% endif %}
+
+    {% if article_header_bg_image_sizes == nil %}
+      {% assign header_bg_image_sizes_str = '[{"url":"' | append: images_path | append: '/article-header-bg.jpg", "width":2560, "height":1709}, {"url":"' | append: images_path | append: '/article-header-bg_huge.jpg", "width":2048, "height":1367}, {"url":"' | append: images_path | append: '/article-header-bg_large.jpg", "width":1280, "height":854}]' %}
+    {% else %}
+      {% assign article_header_bg_image_sizes_str = article_header_bg_image_sizes | json %}
+    {% endif %}
+
+    {% if article_header_bg_color == nil %}
+      {% assign header_bg_color = "rgba(0, 0, 0, 0.4)" %}
+    {% endif %}
+
+    {% if article_header_bg_color_data == nil %}
+      {% assign header_bg_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0.4, "lightness": 0}' %}
+    {% else %}
+      {% assign article_header_bg_color_data_str = article_header_bg_color_data | json %}
+    {% endif %}
   {% endif %}
 
 

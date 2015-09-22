@@ -589,10 +589,11 @@
       $('.js-text-article-component').addClass('is-hidden');
       $('.js-photo-article-component').removeClass('is-hidden');
 
-    //   $('.js-site-header .background-image').addClass('photoarticle-background').removeClass('textarticle-background');
-    //   $('.js-site-header .background-color').addClass('photoarticle-color');
+      $('.js-site-header').addClass('photo-article');
       $('.js-site-header .js-background-settings').removeClass('is-hidden');
-    //   $('.js-site-header .js-background-settings').click();
+
+      var headerBgType = $('.js-site-header .js-background-type').data('article-bg-type');
+      $('.js-site-header .js-background-type').removeClass('dark-background light-background').addClass(headerBgType);
 
       Edicy.articles.currentArticle.setData('photo_article_state', true);
     } else {
@@ -602,9 +603,11 @@
       $('.js-photo-article-component').addClass('is-hidden');
       $('.js-text-article-component').removeClass('is-hidden');
 
-      // $('.js-site-header').find('.background-image').removeClass('photoarticle-background').addClass('textarticle-background');
-      // $('.js-site-header').find('.background-color').removeClass('photoarticle-color');
+      $('.js-site-header').removeClass('photo-article')
       $('.js-site-header .js-background-settings').addClass('is-hidden');
+
+      var headerBgType = $('.js-site-header .js-background-type').data('blog-bg-type');
+      $('.js-site-header .js-background-type').removeClass('dark-background light-background').addClass(headerBgType);
 
       Edicy.articles.currentArticle.setData('photo_article_state', false);
     }
