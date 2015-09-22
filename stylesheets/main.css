@@ -933,9 +933,9 @@ h5,
   position: absolute;
   z-index: 1;
   top: 0;
-  right: -420px;
-  width: 300px;
-  padding: 45px 30px;
+  right: -486px;
+  width: 360px;
+  padding: 45px 40px;
   -webkit-transition: 250ms;
   -moz-transition: 250ms;
   transition: 250ms;
@@ -967,11 +967,15 @@ h5,
   text-transform: none;
   font-weight: 300;
   line-height: 1.7;
-  font-size: 26px;
-  font-size: 1.625rem;
+  font-size: 24px;
+  font-size: 1.5rem;
   color: black;
 }
 .article-comments .comments-body .comments-title .voog-site-blog-comments-count {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  font-size: 0.875rem;
   color: #a4a3a3;
 }
 .article-comments .comment {

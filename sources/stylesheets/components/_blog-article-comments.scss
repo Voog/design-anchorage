@@ -2,10 +2,10 @@
   position: absolute;
   z-index: 1;
   top: 0;
-  right: -420px;
+  right: -486px;
 
-  width: 300px;
-  padding: 45px 30px;
+  width: 360px;
+  padding: 45px 40px;
 
   @include transition(250ms);
 
@@ -42,10 +42,13 @@
       font-weight: $font-weight-light;
       line-height: $line-height-medium;
 
-      @include rem-fallback(font-size, $font-size-large);
+      @include rem-fallback(font-size, 24px);
       @include color($black, 1);
 
       .voog-site-blog-comments-count {
+        display: inline-block;
+        vertical-align: middle;
+        @include rem-fallback(font-size, $font-size-small);
         @include color($black-lighter, 1);
       }
     }
