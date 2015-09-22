@@ -24,10 +24,10 @@
       {% for imageSize in article.data.header_bg.imageSizes %}
         {% if forloop.first %}
           <footer class="article-footer">
-            <div class="article-image">
-              <div class="background-image" style="background-image: url( {{ imageSize.url }} );"></div>
-              <a href="{{ article.url }}" class="stretch"></a>
-            </div>
+            {% comment %}<div class="background-image" style="background-image: url( {{ imageSize.url }} );"></div>{% endcomment %}
+            <a href="{{ article.url }}" class="article-image-wrap">
+              <img class="article-image" src="{{ imageSize.url }}" title="{{ article.title }}">
+            </a>
           </footer>
           {% break %}
         {% endif %}
