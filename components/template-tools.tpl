@@ -52,11 +52,12 @@
     $('.js-bg-picker-area').each(function(index, bgPickerArea) {
       var bgPickerButton = $(bgPickerArea).find('.js-background-settings'),
           dataBgKey = $(bgPickerButton).data('bg-key'),
-          pictureBoolean = $(bgPickerButton).data('bg-picture-boolean');
+          pictureBoolean = $(bgPickerButton).data('bg-picture-boolean'),
+          targetWidth = $(bgPickerButton).data('target-width');
 
       var bgPicker = new Edicy.BgPicker(bgPickerButton, {
             picture: pictureBoolean,
-            target_width: 600,
+            target_width: targetWidth,
             color: true,
             showAlpha: true,
 

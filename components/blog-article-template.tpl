@@ -13,25 +13,20 @@
       <div class="article-excerpt content-area">{% if blog-article-template == "blog_article_page" %}{% editable article.excerpt %}{% else %}{{ article.excerpt }}{% endif %}</div>
       <div class="article-body content-area">{% editable article.body %}</div>
     </div>
-  {% elsif article.data.header_bg.imageSizes == nil or article.data.header_bg.imageSizes == "" %}{% comment %}<!--Blog and news excerpt when no article photo-->{% endcomment %}
+  {% elsif photo_article == false %}{% comment %}<!--Blog and news excerpt when no article photo-->{% endcomment %}
     <div class="article-content">
-      <div class="article-excerpt content-area">{% if blog-article-template == "blog_article_page" %}{% editable article.excerpt %}{% else %}{{ article.excerpt }}{% endif %}</div>
+      <div class="article-excerpt content-area">{{ article.excerpt }}</div>
     </div>
   {% endif %}
 
   {% unless blog_article_page %}{% comment %}<!--Blog and news user custom photo-->{% endcomment %}
-    {% if article.data.header_bg.image and article.data.header_bg.image != "" %}
-      {% for imageSize in article.data.header_bg.imageSizes %}
-        {% if forloop.first %}
-          <footer class="article-footer">
-            {% comment %}<div class="background-image" style="background-image: url( {{ imageSize.url }} );"></div>{% endcomment %}
-            <a href="{{ article.url }}" class="article-image-wrap">
-              <img class="article-image" src="{{ imageSize.url }}" title="{{ article.title }}">
-            </a>
-          </footer>
-          {% break %}
-        {% endif %}
-      {% endfor %}
+    {% if article.data.photo_article_state == true %}
+      <footer class="article-footer">
+        {% comment %}<div class="background-image" style="background-image: url( {{ imageSize.url }} );"></div>{% endcomment %}
+        <a href="{{ article.url }}" class="article-image-wrap">
+          <img class="article-image" src="{{ article.data.header_bg.image }}" title="{{ article.title }}" alt="{{ article.title }} image">
+        </a>
+      </footer>
     {% endif %}
   {% endunless %}
 

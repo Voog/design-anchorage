@@ -41,13 +41,13 @@
     <div class="header-bottom">
       {% if editmode %}
         {% if blog_article_page %}
-          <button class="voog-bg-picker-btn js-background-settings{% unless photo_article %} is-hidden{% endunless %}" data-bg-key="article_header_bg" data-bg-picture-boolean="true" data-bg-image="{{ article_header_bg_image }}" data-bg-image-sizes="{{ article_header_bg_image_sizes_str | escape }}" data-bg-color="{{ article_header_bg_color }}" data-bg-color-data="{{ article_header_bg_color_data_str | escape }}"></button>
+          <button class="voog-bg-picker-btn js-background-settings{% unless photo_article %} is-hidden{% endunless %}" data-bg-key="header_bg" data-bg-picture-boolean="true" data-target-width="2048" data-bg-image="{{ article_header_bg_image }}" data-bg-image-sizes="{{ article_header_bg_image_sizes_str | escape }}" data-bg-color="{{ article_header_bg_color }}" data-bg-color-data="{{ article_header_bg_color_data_str | escape }}"></button>
           <div class="article-types-toggle">
             <button class="type-btn js-type-btn{% unless photo_article %} is-active{% endunless %}" data-article-type="text-article">Text</button>
             <button class="type-btn js-type-btn{% if photo_article %} is-active{% endif %}" data-article-type="photo-article">Photo</button>
           </div>
         {% else %}
-          <button class="voog-bg-picker-btn js-background-settings" data-bg-key="header_bg" data-bg-picture-boolean="true" data-bg-image="{{ header_bg_image }}" data-bg-image-sizes="{{ header_bg_image_sizes_str | escape }}" data-bg-color="{{ header_bg_color }}" data-bg-color-data="{{ header_bg_color_data_str | escape }}"></button>
+          <button class="voog-bg-picker-btn js-background-settings" data-bg-key="header_bg" data-bg-picture-boolean="true" data-target-width="600" data-bg-image="{{ header_bg_image }}" data-bg-image-sizes="{{ header_bg_image_sizes_str | escape }}" data-bg-color="{{ header_bg_color }}" data-bg-color-data="{{ header_bg_color_data_str | escape }}"></button>
         {% endif %}
       {% endif %}
 
