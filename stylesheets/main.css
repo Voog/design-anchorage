@@ -731,20 +731,15 @@ h5,
 .blog-news-page .blog-article:first-child {
   padding-top: 0;
 }
-.blog-news-page .blog-article .article-image-wrap {
-  display: block;
+.blog-news-page .blog-article .article-image {
+  position: relative;
   height: 500px;
 }
 @media screen and (max-width: 768px) {
-  .blog-news-page .blog-article .article-image-wrap {
+  .blog-news-page .blog-article .article-image {
     margin: 0 -20px;
     height: 250px;
   }
-}
-.blog-news-page .blog-article .article-image-wrap .article-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 .blog-news-page .article-author,
 .blog-news-page .article-date {

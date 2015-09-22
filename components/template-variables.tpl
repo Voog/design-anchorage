@@ -113,7 +113,7 @@
     {% endif %}
 
     {% if article_header_bg_image == nil %}
-      {% assign article_header_bg_image = images_path | append: "/article-header-bg_block.jpg" %}
+      {% assign article_header_bg_image = images_path | append: "/article-header-bg_huge.jpg" %}
     {% endif %}
 
     {% if article_header_bg_image_sizes == nil %}

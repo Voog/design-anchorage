@@ -1,6 +1,6 @@
 <article class="blog-article">
-
-  {% unless blog_article_page %}{% comment %}<!--Blog and news article header-->{% endcomment %}
+  {% comment %}<!--Blog and news article header-->{% endcomment %}
+  {% unless blog_article_page %}
     <header class="article-header">
       <time class="article-date" datetime="{{ article.created_at | date: "%Y-%m-%d" }}">{{ article.created_at | format_date: "long" }}, </time>
       <div class="article-author">{{ article.author.name }}</div>
@@ -8,24 +8,27 @@
     </header>
   {% endunless %}
 
-  {% if blog-article-template == "blog_article_page" %}{% comment %}<!--Blog article page excerpt and body-->{% endcomment %}
+  {% comment %}<!--Blog article page excerpt and body-->{% endcomment %}
+  {% if blog-article-template == "blog_article_page" %}
     <div class="article-content">
       <div class="article-excerpt content-area">{% if blog-article-template == "blog_article_page" %}{% editable article.excerpt %}{% else %}{{ article.excerpt }}{% endif %}</div>
       <div class="article-body content-area">{% editable article.body %}</div>
     </div>
-  {% elsif photo_article == false %}{% comment %}<!--Blog and news excerpt when no article photo-->{% endcomment %}
+  {% comment %}<!--Blog and news excerpt when no article photo-->{% endcomment %}
+  {% elsif photo_article == false %}
     <div class="article-content">
       <div class="article-excerpt content-area">{{ article.excerpt }}</div>
     </div>
   {% endif %}
 
-  {% unless blog_article_page %}{% comment %}<!--Blog and news user custom photo-->{% endcomment %}
-    {% if article.data.photo_article_state == true %}
+  {% comment %}<!--Blog and news user custom photo-->{% endcomment %}
+  {% unless blog_article_page %}
+    {% if article.data.photo_article_state %}
       <footer class="article-footer">
-        {% comment %}<div class="background-image" style="background-image: url( {{ imageSize.url }} );"></div>{% endcomment %}
-        <a href="{{ article.url }}" class="article-image-wrap">
-          <img class="article-image" src="{{ article.data.header_bg.image }}" title="{{ article.title }}" alt="{{ article.title }} image">
-        </a>
+        <div class="article-image">
+          <div class="background-image" style="background-image: url({{ article.data.header_bg.image }});"></div>
+          <a href="{{ article.url }}" class="stretch"></a>
+        </div>
       </footer>
     {% endif %}
   {% endunless %}
