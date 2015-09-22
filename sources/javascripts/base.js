@@ -385,6 +385,12 @@
       $('body').toggleClass('comments-open');
       $('.js-comments-input').val('').focus();
 
+      if ($('body').hasClass('comments-open')) {
+        $('html, body').animate({
+            scrollTop: $('.js-voog-comments-modal').offset().top
+        }, 300);
+      }
+
       handleCommentsToggleing();
     });
 
