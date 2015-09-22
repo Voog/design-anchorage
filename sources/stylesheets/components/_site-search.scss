@@ -53,11 +53,14 @@
 
   &.active {
     position: absolute;
-    top: 40px;
+    margin-top: 10px;
     right: -10px;
     z-index: 20;
     display: block;
-    margin: 0;
+
+    #mobile-search & {
+      margin-top: 0;
+    }
   }
 }
 
@@ -76,24 +79,24 @@
     box-shadow: none;
   }
 
-  .search-close-btn {
-    display: none;
+  // .search-close-btn {
+  //   display: none;
 
-    &.active {
-      display: block;
-      position: absolute;
-      top: 12px;
-      right: 10px;
-      z-index: 20;
-      margin-right: 0;
+  //   &.active {
+  //     display: block;
+  //     position: absolute;
+  //     top: 12px;
+  //     right: 10px;
+  //     z-index: 20;
+  //     margin-right: 0;
 
-      .mobile-search-open & {
-        top: 15px;
-        right: 0;
-        z-index: 9999;
-      }
-    }
-  }
+  //     .mobile-search-open & {
+  //       top: 15px;
+  //       right: 0;
+  //       z-index: 9999;
+  //     }
+  //   }
+  // }
 }
 
 .search-form {
@@ -119,17 +122,20 @@
 .search-input {
   vertical-align: middle;
   width: 100%;
-  height: 50px;
+  height: 40px;
   margin: 0;
-  padding: 0 46px 0 20px;
+  padding: 0 15px;
   font-family: inherit;
-  font-size: $font-size-base;
+  font-size: $font-size-small;
   line-height: 20px;
   @include color($black, 1);
   background: none;
   box-sizing: border-box;
   border: none;
-  border-bottom: 1px solid $black-base;
+
+  #mobile-search & {
+    border-bottom: 1px solid $black-base;
+  }
 
   .mobile-search-open & {
     padding: 0 30px;
@@ -189,6 +195,7 @@
 
 .search-btn {
   position: relative;
+  top: 1px;
   z-index: 19;
   vertical-align: middle;
   width: 26px;
@@ -268,8 +275,6 @@
 }
 
 .voog-search-modal-results {
-  font-weight: $font-weight-light;
-
   @include querymin($tablet-2) {
     max-height: 70vh;
   }
@@ -284,12 +289,12 @@
 
   h3 {
     margin: 0;
-    font-size: 24px;
+    @include rem-fallback(font-size, $font-size-base);
     @include color($black, 1);
+    font-weight: $font-weight-light;
 
     a {
       text-decoration: none;
-      font-weight: 300;
       @include color($black, 1);
 
       &:hover {
@@ -314,7 +319,7 @@
 }
 
 .voog-search-modal-result {
-  padding: 20px;
+  padding: 20px 15px;
   border-top: $white-cloudy solid 1px;
 
   &:first-of-type {

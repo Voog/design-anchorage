@@ -9591,9 +9591,9 @@ return jQuery;
       $(this).toggleClass('open');
       $('.js-menu-main').toggleClass('expanded');
 
-      if ($('.js-search-close-btn').hasClass('open')) {
-        $('.js-search-close-btn').trigger('click');
-      }
+      // if ($('.js-search-close-btn').hasClass('open')) {
+      //   $('.js-search-close-btn').trigger('click');
+      // }
     });
 
     // Toggles the popover language menu.
@@ -9608,9 +9608,9 @@ return jQuery;
     });
 
     // Hides search modal on side click
-    $('.js-search').click(function() {
-      $('.js-search-close-btn').trigger('click');
-    });
+    // $('.js-search').click(function() {
+    //   $('.js-search-close-btn').trigger('click');
+    // });
 
     // Toggles the search modal.
     $('.js-search-toggle-btn').click(function() {
@@ -9790,25 +9790,7 @@ return jQuery;
     if ($(window).width() > 480) {
       $('.article-comments').css('min-height', commentsTarget);
     }
-
   };
-
-  // Prevent page scroll while focused on a specific section
-  $.fn.isolatedScroll = function() {
-    this.bind('mousewheel DOMMouseScroll', function (e) {
-        var delta = e.wheelDelta || (e.originalEvent && e.originalEvent.wheelDelta) || -e.detail,
-            bottomOverflow = this.scrollTop + $(this).outerHeight() - this.scrollHeight >= 0,
-            topOverflow = this.scrollTop <= 0;
-
-        if ((delta < 0 && bottomOverflow) || (delta > 0 && topOverflow)) {
-            e.preventDefault();
-        }
-    });
-    return this;
-  };
-
-  // Prevent page scroll while scrolling comments
-  $('.comments-body').isolatedScroll();
 
   var autoSizeTextareas = function() {
     $('.form_field_textarea').textareaAutoSize();
