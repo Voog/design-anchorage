@@ -19,14 +19,10 @@
             <div class="wrap">
               <div class="inner content-area">
 
-                {% if editmode %}
-                {% elsif article.data.header_bg.imageSizes == nil or article.data.header_bg.imageSizes == "" %}
-                  <div class="article-meta">
-                    <time class="article-date" datetime="{{ article.created_at | date: "%Y-%m-%d" }}">{{ article.created_at | format_date: "long" }}, </time>
-                    <div class="article-author">{{ article.author.name }}</div>
-                  </div>
-                {% else %}
-                {% endif %}
+                <div class="article-meta js-text-article-component{% if photo_article %} is-hidden{% endif %}">
+                  <time class="article-date" datetime="{{ article.created_at | date: "%Y-%m-%d" }}">{{ article.created_at | format_date: "long" }}, </time>
+                  <div class="article-author">{{ article.author.name }}</div>
+                </div>
 
                 <div class="comments-title comments-btn comments-toggle-btn js-comments-toggle-btn js-prevent-sideclick">
                   {% if article.comments_count > 0 %}
@@ -37,13 +33,7 @@
                   {% endif %}
                 </div>
 
-                {% if editmode %}
-                {% elsif article.data.header_bg.imageSizes == nil or article.data.header_bg.imageSizes == "" %}
-                  <header class="article-header">
-                    <h1 class="article-title">{% editable article.title %}</h1>
-                  </header>
-                {% else %}
-                {% endif %}
+                <header class="article-header js-article-body-title-wrap">{% unless photo_article %}<h1 class="article-title js-article-title">{% editable article.title %}</h1>{% endunless %}</header>
 
                 <section class="blog-article content-area">
                   {% include "blog-article-template" with "blog_article_page" %}

@@ -10,6 +10,11 @@
   {% comment %}Assign variables based on page type.{% endcomment %}
   {% if blog_article_page %}
     {% assign header_bg = article.data.header_bg %}
+
+    {% comment %}{% endcomment %}
+    {% if article.data.photo_article_state %}
+      {% assign photo_article = true %}
+    {% endif %}
   {% else %}
     {% assign header_bg = page.data.header_bg %}
   {% endif %}

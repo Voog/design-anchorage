@@ -1,4 +1,4 @@
-<header class="site-header content-full js-bg-picker-area">
+<header class="site-header content-full js-site-header js-bg-picker-area">
   <div class="background-image js-background-image"></div>
   <div class="background-color js-background-color"></div>
 
@@ -38,7 +38,15 @@
     </div>
   </div>
   <div class="header-bottom js-background-type {{ header_bg_type }}">
-    {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-key="header_bg" data-bg-picture-boolean="true" data-bg-image="{{ header_bg_image }}" data-bg-image-sizes="{{ header_bg_image_sizes_str | escape }}" data-bg-color="{{ header_bg_color }}" data-bg-color-data="{{ header_bg_color_data_str | escape }}"></button>{% endif %}
+    {% if editmode %}<button class="voog-bg-picker-btn js-background-settings{% if blog_article_page and photo_article != true %} is-hidden{% endif %}" data-bg-key="header_bg" data-bg-picture-boolean="true" data-bg-image="{{ header_bg_image }}" data-bg-image-sizes="{{ header_bg_image_sizes_str | escape }}" data-bg-color="{{ header_bg_color }}" data-bg-color-data="{{ header_bg_color_data_str | escape }}"></button>{% endif %}
+
+    {% if blog_article_page and editmode %}
+      <div class="article-types-toggle">
+        <button class="type-btn js-type-btn{% unless photo_article %} is-active{% endunless %}" data-article-type="text-article">Text</button>
+        <button class="type-btn js-type-btn{% if photo_article %} is-active{% endif %}" data-article-type="photo-article">Photo</button>
+      </div>
+    {% endif %}
+
     <div class="header-bottom-inner">
 
       {% if front_page %}
@@ -48,33 +56,17 @@
           </div>
         </div>
       {% elsif blog_article_page %}
-        {% if editmode %}
-          <div class="wrap is-photoheader">
-            <div class="header-body content-area">
-              <h1 class="article-title">{% if editmode %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
-              <time class="article-date" datetime="{{ article.created_at | date: "%Y-%m-%d" }}">{{ article.created_at | format_date: "long" }}, </time>
-              <div class="article-author">{{ article.author.name }}</div>
-            </div>
+        <div class="wrap js-toggle-article-type{% if photo_article %} is-photoheader{% endif %}">
+          <div class="header-body content-area js-article-header-title-wrap">
+            {% comment %}Photo article header components{% endcomment %}
+            {% if photo_article %}<h1 class="article-title js-article-title">{% if editmode %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>{% endif %}
+            <time class="article-date js-photo-article-component{% unless photo_article %} is-hidden{% endunless %}" datetime="{{ article.created_at | date: "%Y-%m-%d" }}">{{ article.created_at | format_date: "long" }}, </time>
+            <div class="article-author js-photo-article-component{% unless photo_article %} is-hidden{% endunless %}">{{ article.author.name }}</div>
+
+            {% comment %}Text article header components{% endcomment %}
+            <h1 class="blog-title js-text-article-component{% if photo_article %} is-hidden{% endif %}"><a href="{{ page.url }}">{{ page.title }}</a></h1>
           </div>
-        {% elsif article.data.header_bg.imageSizes == nil or article.data.header_bg.imageSizes == "" %}
-          <div class="wrap">
-            <div class="header-body content-area">
-              {% for item in site.menuitems_with_hidden %}
-                {% if item.selected? %}
-                  <h1><a href="{{ item.url }}">{{ item.title }}</a></h1>
-                {% endif %}
-              {% endfor %}
-            </div>
-          </div>
-        {% else %}
-          <div class="wrap is-photoheader">
-            <div class="header-body content-area">
-              <h1 class="article-title">{% if editmode %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
-              <time class="article-date" datetime="{{ article.created_at | date: "%Y-%m-%d" }}">{{ article.created_at | format_date: "long" }}, </time>
-              <div class="article-author">{{ article.author.name }}</div>
-            </div>
-          </div>
-        {% endif %}
+        </div>
       {% else %}
         <div class="wrap">
           <div class="header-body content-area">

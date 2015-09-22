@@ -31,8 +31,13 @@ a {
   border-style: none;
   opacity: .9;
 
+  &.is-hidden {
+    display: none;
+  }
+
   .header-bottom & {
-    top: 65px;
+    top: 113px;
+    left: 10px;
 
     &:hover {
       opacity: 1;
