@@ -43,7 +43,10 @@
       text-decoration: none;
     }
   }
-  // .header-body {
+  .header-body {
+    .blog-article-page & {
+      text-align: center;
+    }
 
   //   // .content-formatted {
   //   //   @include query($mobile-1 - 58) {
@@ -66,7 +69,7 @@
   //   // @include query($tablet-2) {
   //   //   @include rem-fallback(font-size, $font-size-xl);
   //   // }
-  // }
+  }
 
   .header-left {
     .flexbox & {
@@ -190,6 +193,13 @@
     }
 
     .blog-title {
+      margin-top: 0;
+      @include rem-fallback(font-size, $font-size-header);
+      font-weight: $font-weight-bold;
+      line-height: $line-height-normal;
+      text-transform: uppercase;
+
+
       &.is-hidden {
         display: none;
       }

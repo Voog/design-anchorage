@@ -1060,6 +1060,9 @@ a img {
 .site-header .header-title a {
   text-decoration: none;
 }
+.blog-article-page .site-header .header-body {
+  text-align: center;
+}
 .flexbox .site-header .header-left {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
@@ -1178,6 +1181,14 @@ a img {
 .site-header .header-body .article-title a {
   font-size: 1em;
   text-decoration: none;
+}
+.site-header .header-body .blog-title {
+  margin-top: 0;
+  font-size: 70px;
+  font-size: 4.375rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
 }
 .site-header .header-body .blog-title.is-hidden {
   display: none;
