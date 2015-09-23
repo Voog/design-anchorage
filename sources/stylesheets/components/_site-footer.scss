@@ -99,7 +99,7 @@
       width: 100%;
 
       a {
-        // text-align: center;
+        text-align: center;
       }
     }
 
@@ -108,7 +108,6 @@
     }
     .article-nav-next {
       border-left: 1px solid rgba($grey-2, 1);
-      margin-left: -1px;/* Hide border from one side */
 
       @include query($mobile-1) {
         border-top: 1px solid rgba($grey-2, 1);

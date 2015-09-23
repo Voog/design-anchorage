@@ -2434,13 +2434,14 @@ a img {
   display: block;
   width: 100%;
 }
+.site-footer .blog-article-nav .article-nav-full a {
+  text-align: center;
+}
 .site-footer .blog-article-nav .article-nav-prev {
   text-align: right;
 }
 .site-footer .blog-article-nav .article-nav-next {
   border-left: 1px solid #e6e6e6;
-  margin-left: -1px;
-  /* Hide border from one side */
 }
 @media screen and (max-width: 480px) {
   .site-footer .blog-article-nav .article-nav-next {
