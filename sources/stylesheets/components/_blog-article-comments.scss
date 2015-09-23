@@ -24,11 +24,12 @@
   &.open {
     top: 0;
     right: 0;
-    width: 100%;
-
     @include transition(250ms);
-
     box-shadow: 0 0 20px rgba($black-base, .1);
+
+    @include query($mobile-1) {
+      width: 100%;
+    }
   }
 
   .comments-body {

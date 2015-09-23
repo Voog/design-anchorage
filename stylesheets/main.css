@@ -923,11 +923,15 @@ a img {
 .article-comments.open {
   top: 0;
   right: 0;
-  width: 100%;
   -webkit-transition: 250ms;
   -moz-transition: 250ms;
   transition: 250ms;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 480px) {
+  .article-comments.open {
+    width: 100%;
+  }
 }
 .article-comments .comments-body {
   max-height: 100%;
@@ -1050,6 +1054,12 @@ a img {
   -o-justify-content: flex-end;
   justify-content: flex-end;
   -ms-flex-pack: end;
+}
+@media screen and (max-width: 768px) {
+  .site-header .header-top .wrap {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 .site-header .header-top .site-options {
   display: inline-block;
