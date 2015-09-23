@@ -315,8 +315,6 @@
           $('body').removeClass('comments-open');
           $('.js-comments-toggle-btn, .js-voog-comments-modal').removeClass('open');
         }
-
-        handleCommentsToggleing();
       }
     });
 
