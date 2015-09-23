@@ -13,10 +13,10 @@
   @include bg($white, 1);
 
   @include query($mobile-1) {
-    right: -100vw;
+    // right: -100vw;
 
     box-sizing: border-box;
-    width: 100vw;
+    // width: 100vw;
 
     box-shadow: none;
   }
@@ -24,6 +24,7 @@
   &.open {
     top: 0;
     right: 0;
+    width: 100%;
 
     @include transition(250ms);
 

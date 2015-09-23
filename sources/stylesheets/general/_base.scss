@@ -50,9 +50,8 @@ a {
 
 .site-container {
   margin: 0 auto;
-  overflow: hidden;
   position: relative;
-  min-height: 100vh;
+  // min-height: 100vh;
   // @include transition(left 0.3s);
 
     perspective: 1000px;
@@ -72,6 +71,12 @@ a {
     transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
   }
 
+  .flexbox & {
+    @include display(flex);
+    @include flex-direction(column);
+    min-height: 100vh;
+  }
+
   .mobilemenu-open & {
     -webkit-transform: translate3d(-160px, 0, 0);
     transform: translate3d(-160px, 0, 0);
@@ -84,29 +89,26 @@ a {
       transition: opacity 0.5s;
     }
   }
+
+  .blog-article-page & {
+    overflow: hidden;
+  }
+
+  .comments-open & {
+    overflow: visible;
+  }
+}
+
+.page-body {
+  .flexbox & {
+    @include flex(1);
+  }
 }
 
 .page-content {
   display: block;
   position: relative;
-  margin-bottom: $margin-general;
   max-width: 100vw;
-
-  .blog-article-page & {
-    margin-bottom: 240px;
-
-    @include query($mobile-1) {
-      margin-bottom: 335px;
-    }
-
-  }
-
-  .blog-article-page.comments-open & {
-    @include query($mobile-1) {
-      margin-bottom: 0!important;
-    }
-  }
-
 }
 
 // Independent elements that can be located everywhere in the DOM and always have the same styling rules.

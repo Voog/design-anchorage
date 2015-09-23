@@ -459,53 +459,6 @@
     });
   };
 
-  var stickyFooterVarHeight = function() {
-    if ($('.site-container').find('.page-body').hasClass('sidebar-active')) {
-      $('.page-body').css('margin-bottom', $('.site-footer').outerHeight());
-    }
-    else {
-      $('.page-content').css('margin-bottom', $('.site-footer').outerHeight());
-    }
-  };
-
-  // Sets the position of the footer to the bottom of the page
-  var handleContentMutations = function() {
-    var MutationObserver = (function () {
-      var prefixes = ['WebKit', 'Moz', 'O', 'Ms', ''];
-
-      for(var i=0; i < prefixes.length; i++) {
-        if(prefixes[i] + 'MutationObserver' in window) {
-          return window[prefixes[i] + 'MutationObserver'];
-        }
-      }
-      return false;
-    }());
-
-    if(MutationObserver) {
-      var mObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
-
-      // create an observer instance
-      var targetFooter = document.querySelector('.site-footer'),
-          config = {
-            attributes: true,
-            childList: true,
-            subtree: true,
-          };
-
-      var observer = new mObserver(function(mutations) {
-          mutations.forEach(function(mutation) {
-            stickyFooterVarHeight();
-          });
-      });
-
-      observer.observe(targetFooter, config);
-    } else {
-      setInterval(function() {
-        stickyFooterVarHeight();
-      }, 1000);
-    }
-  };
-
   // Set article comments section the height of the document minus the header section
   var commentsHeight = function() {
     $('.article-comments').removeAttr('style');
@@ -530,7 +483,6 @@
 
   // Initiations
   var initWindowResize = function() {
-    $(window).resize(debounce(stickyFooterVarHeight, 100));
     $(window).resize(debounce(commentsHeight, 100));
     $(window).resize(debounce(mobileResize, 100));
   };
@@ -619,10 +571,8 @@
   var init = function() {
     // Add site wide functions here.
     handleElementsClick();
-    stickyFooterVarHeight();
     tableWrapper();
     focusFormWithErrors();
-    handleContentMutations();
     autoSizeTextareas();
 
     if (!Modernizr.flexbox && editmode) {
