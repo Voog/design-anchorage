@@ -1,6 +1,4 @@
 .site-search {
-  display: inline-block;
-  vertical-align: middle;
   margin-right: 10px;
 
   .search-input {
@@ -194,14 +192,12 @@
 }
 
 .search-btn {
-  position: relative;
-  top: 1px;
   z-index: 19;
   vertical-align: middle;
   width: 26px;
   height: 26px;
   font-size: 0;
-  margin-left: 25px;
+  margin-left: 28px;
 
   .header-options & {
     .front-page & {

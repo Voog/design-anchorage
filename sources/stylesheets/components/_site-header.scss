@@ -22,12 +22,8 @@
     }
 
     .site-options {
+      display: inline-block;
       vertical-align: top;
-
-      .editmode & {
-        position: relative;
-        top: -1px;
-      }
     }
   }
 
@@ -94,7 +90,7 @@
   }
   .menu-main,
   .site-options {
-    display: inline-block;
+    // display: inline-block;
   }
 
   .header-bottom {
@@ -157,7 +153,7 @@
     }
 
     .header-right {
-      display: inline-block;
+      // display: inline-block;
     }
     .visibility-lrg {
       display: none;
