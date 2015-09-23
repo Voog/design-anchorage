@@ -2,7 +2,7 @@
   {% assign numb_of_lang = forloop.length %}
 {% endfor %}
 
-{% if site.has_many_languages? %}
+{% if editmode or site.has_many_languages? %}
   {% if editmode or flags_state == true or numb_of_lang > 2 %}
   {% comment %}tahan kui editmode, lipud nähvavad ja keeli on rohkem kui 2{% endcomment %}
     <div class="menu-btn-wrap js-menu-btn-wrap {% if flags_state %}flags-enabled{% else %}flags-disabled{% endif %}">
