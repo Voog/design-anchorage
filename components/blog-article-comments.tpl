@@ -41,14 +41,16 @@
 
     {% if article.comments_count > 0 %}
       <div class="comments-title">{{ "comments_for_count" | lc }} <span class="voog-site-blog-comments-count">({{ article.comments_count }})</span></div>
-      {% for comment in article.comments %}
-        <article class="comment edy-site-blog-comment">
-          <span class="comment-body">{{ comment.body_html }}</span>
-          <span class="comment-author">{{ comment.author }} · </span>
-          <span class="comment-date">{{ comment.created_at | format_date: "long" }}</span>
-          <span class="comment-delete">{% removebutton %}</span>
-        </article>
-      {% endfor %}
+      <div>
+        {% for comment in article.comments %}
+          <div class="comment edy-site-blog-comment">
+            <span class="comment-body">{{ comment.body_html }}</span>
+            <span class="comment-author">{{ comment.author }} · </span>
+            <span class="comment-date">{{ comment.created_at | format_date: "long" }}</span>
+            <span class="comment-delete">{% removebutton %}</span>
+          </div>
+        {% endfor %}
+      </div>
     {% endif %}
   </div>
 

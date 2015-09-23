@@ -75,7 +75,7 @@
         {% else %}
           <div class="wrap">
             <div class="header-body content-area">
-              {% contentblock name="header" publish_default_content="true" %}<h1>{{ page.title }}</h1>{% endcontentblock %}
+              {% contentblock name="header" publish_default_content="true" %}<h1 style="text-align: center;">{{ page.title }}</h1>{% endcontentblock %}
             </div>
           </div>
         {% endif %}

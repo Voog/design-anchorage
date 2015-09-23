@@ -10,12 +10,21 @@
 
   .dark-background & {
     @include color($white, 1);
+
+    .site-footer & {
+      @include color($white, 1);
+    }
   }
 
   // .contacts & {
   //   text-align: center;
   //   @include rem-fallback(font-size, $font-size-20);
   // }
+
+  .site-footer & {
+    @include rem-fallback(font-size, $font-size-small);
+    @include color($black-base, .6);
+  }
 
   &.footer-left {
     @include rem-fallback(font-size, $font-size-20);
@@ -87,18 +96,45 @@
     }
   }
 
+  h1,
+  h2 {
+    .site-header & {
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 
   h1 {
-    @include rem-fallback(font-size, $font-size-xl);
+    @include rem-fallback(font-size, $font-size-huge);
     line-height: $line-height-middle;
 
-    .contacts & {
-      font-size: 32px;
+    .site-header & {
+      margin-top: .3em;
+      margin-bottom: .3em;
+      text-transform: uppercase;
+      @include rem-fallback(font-size, $font-size-header);
+      font-weight: $font-weight-bold;
+      line-height: $line-height-small;
     }
+
+    // .contacts & {
+    //   font-size: 32px;
+    // }
   }
 
   h2 {
     @include rem-fallback(font-size, $font-size-large);
+    line-height: 1.5;
+
+    .site-header & {
+      margin-top: .2em;
+      margin-bottom: .2em;
+    }
 
     .contacts & {
       font-size: 28px;
@@ -123,6 +159,17 @@
   ol,
   dl {
     @include rem-fallback(font-size, $font-size-normal);
+
+    .site-footer & {
+      @include rem-fallback(font-size, $font-size-small);
+      @include color($black-base, .6);
+    }
+
+    .dark-background & {
+      .site-footer & {
+        @include color($white, 1);
+      }
+    }
   }
 
   ul,
@@ -220,7 +267,9 @@
   }
 
   blockquote {
-    margin: 20px 40px;
+    margin: 20px 40px 20px 0;
+    padding-left: 20px;
+    border-left: 2px solid;
   }
 
   // Styling rules for the editable content area images, embedded videos, preformatted texts, code examples etc.
@@ -246,6 +295,10 @@
     cursor: pointer;
     @include hyphenate(true);
     text-decoration: none;
+
+    .site-header & {
+      margin: 30px 0;
+    }
 
     .dark-background & {
       border: 2px solid $white;

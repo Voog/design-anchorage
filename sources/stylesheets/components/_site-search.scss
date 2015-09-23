@@ -126,7 +126,7 @@
   margin: 0;
   padding: 0 15px;
   font-family: inherit;
-  font-size: $font-size-small;
+  font-size: $font-size-base;
   line-height: 20px;
   @include color($black, 1);
   background: none;
@@ -291,7 +291,8 @@
     margin: 0;
     @include rem-fallback(font-size, $font-size-base);
     @include color($black, 1);
-    font-weight: $font-weight-light;
+    font-weight: $font-weight-normal;
+    line-height: 1.3;
 
     a {
       text-decoration: none;
@@ -307,7 +308,7 @@
     margin: 5px 0 0;
     @include rem-fallback(font-size, $font-size-small);
     line-height: 24px;
-    @include color($grey, 1);
+    @include color($black-light);
   }
 
   em {
@@ -319,7 +320,7 @@
 }
 
 .voog-search-modal-result {
-  padding: 20px 15px;
+  padding: 15px;
   border-top: $white-cloudy solid 1px;
 
   &:first-of-type {

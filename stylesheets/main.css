@@ -263,6 +263,9 @@ a img {
 .wrap {
   margin: 0 auto;
 }
+.header-top .wrap {
+  max-width: 100%;
+}
 
 .inner {
   margin: 0 auto;
@@ -275,7 +278,7 @@ a img {
   padding: 50px 30px 20px;
 }
 .common-page .bottom-row .inner {
-  padding: 0 20px 50px;
+  padding: 0 30px 50px;
 }
 @media screen and (max-width: 768px) {
   .inner {
@@ -339,7 +342,7 @@ a img {
 .light-background {
   color: black;
 }
-.light-background h1, .light-background h2, .light-background h3, .light-background h4, .light-background p {
+.light-background h1, .light-background h2, .light-background h3, .light-background h4 {
   color: black;
 }
 .site-header .light-background a {
@@ -445,10 +448,6 @@ a img {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-}
-
-.header-top .wrap {
-  max-width: 1340px;
 }
 
 .wrap {
@@ -664,8 +663,8 @@ a img {
 }
 
 .blog-news-page .article-title, .blog-news-page .site-header .header-body .article-title a, .site-header .header-body .article-title .blog-news-page a {
-  font-size: 36px;
-  font-size: 2.25rem;
+  font-size: 32px;
+  font-size: 2rem;
   font-weight: 300;
   line-height: 1.3;
   margin: 10px 0 0;
@@ -764,7 +763,7 @@ a img {
   font-size: 1.125rem;
   font-weight: 300;
   line-height: 1.4;
-  margin-left: 140px;
+  margin-left: 170px;
 }
 @media screen and (max-width: 480px) {
   .blog-news-page .articles-listing {
@@ -868,8 +867,8 @@ a img {
   }
 }
 .blog-article-page .main-content .article-header .article-title, .blog-article-page .main-content .article-header .site-header .header-body .article-title a, .site-header .header-body .article-title .blog-article-page .main-content .article-header a {
-  font-size: 36px;
-  font-size: 2.25rem;
+  font-size: 32px;
+  font-size: 2rem;
   line-height: 1.4;
 }
 .blog-article-page .main-content .article-header a {
@@ -879,7 +878,7 @@ a img {
 .blog-article-page .main-content .article-date {
   font-size: 14px;
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1;
   color: #a4a3a3;
   text-transform: uppercase;
@@ -918,13 +917,16 @@ a img {
   -webkit-transition: 250ms;
   -moz-transition: 250ms;
   transition: 250ms;
-  box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 .article-comments .comments-body {
   max-height: 100%;
 }
+.article-comments .comments-body .comments-header .comments-title {
+  margin-top: 0;
+}
 .article-comments .comments-body .comments-title {
-  margin: 0 0 20px 0;
+  margin: 20px 0 20px 0;
   cursor: text;
   text-transform: none;
   font-weight: 300;
@@ -944,6 +946,9 @@ a img {
   margin: 20px 0 0;
   color: #4a4a4a;
 }
+.article-comments .comment:first-child {
+  margin-top: 0;
+}
 .article-comments .comment .comment-body {
   display: block;
   line-height: 24px;
@@ -952,7 +957,7 @@ a img {
 }
 .article-comments .comment .comment-author,
 .article-comments .comment .comment-date {
-  font-weight: 400;
+  font-weight: 300;
   line-height: 2;
   color: #aaaaaa;
   font-size: 14px;
@@ -1008,8 +1013,8 @@ a img {
 }
 .site-header .header-top .wrap {
   padding-top: 40px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 80px;
+  padding-left: 80px;
 }
 .flexbox .site-header .header-top .wrap {
   display: -webkit-box;
@@ -2070,7 +2075,7 @@ a img {
   margin: 0;
   padding: 0 15px;
   font-family: inherit;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   color: black;
   background: none;
@@ -2213,7 +2218,8 @@ a img {
   font-size: 16px;
   font-size: 1rem;
   color: black;
-  font-weight: 300;
+  font-weight: 400;
+  line-height: 1.3;
 }
 .voog-search-modal-results h3 a {
   text-decoration: none;
@@ -2228,7 +2234,7 @@ a img {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 24px;
-  color: #aaaaaa;
+  color: #4a4a4a;
 }
 .voog-search-modal-results em {
   font-style: normal;
@@ -2239,7 +2245,7 @@ a img {
 }
 
 .voog-search-modal-result {
-  padding: 20px 15px;
+  padding: 15px;
   border-top: #dedede solid 1px;
 }
 .voog-search-modal-result:first-of-type {
@@ -2508,6 +2514,15 @@ a img {
 .dark-background .content-area {
   color: white;
 }
+.site-footer .dark-background .content-area {
+  color: white;
+}
+.site-footer .content-area {
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #000;
+  color: rgba(0, 0, 0, 0.6);
+}
 .content-area.footer-left {
   font-size: 20px;
   font-size: 1.25rem;
@@ -2596,17 +2611,36 @@ a img {
   color: black;
   text-decoration: none;
 }
+.site-header .content-area h1:first-child, .site-header
+.content-area h2:first-child {
+  margin-top: 0;
+}
+.site-header .content-area h1:last-child, .site-header
+.content-area h2:last-child {
+  margin-bottom: 0;
+}
 .content-area h1 {
-  font-size: 36px;
-  font-size: 2.25rem;
+  font-size: 32px;
+  font-size: 2rem;
   line-height: 1.4;
 }
-.contacts .content-area h1 {
-  font-size: 32px;
+.site-header .content-area h1 {
+  margin-top: .3em;
+  margin-bottom: .3em;
+  text-transform: uppercase;
+  font-size: 70px;
+  font-size: 4.375rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
 .content-area h2 {
   font-size: 26px;
   font-size: 1.625rem;
+  line-height: 1.5;
+}
+.site-header .content-area h2 {
+  margin-top: .2em;
+  margin-bottom: .2em;
 }
 .contacts .content-area h2 {
   font-size: 28px;
@@ -2631,6 +2665,21 @@ a img {
 .content-area dl {
   font-size: 18px;
   font-size: 1.125rem;
+}
+.site-footer .content-area p, .site-footer
+.content-area ul, .site-footer
+.content-area ol, .site-footer
+.content-area dl {
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #000;
+  color: rgba(0, 0, 0, 0.6);
+}
+.site-footer .dark-background .content-area p, .site-footer .dark-background
+.content-area ul, .site-footer .dark-background
+.content-area ol, .site-footer .dark-background
+.content-area dl {
+  color: white;
 }
 .content-area ul,
 .content-area ol,
@@ -2718,7 +2767,9 @@ a img {
   word-break: break-all;
 }
 .content-area blockquote {
-  margin: 20px 40px;
+  margin: 20px 40px 20px 0;
+  padding-left: 20px;
+  border-left: 2px solid;
 }
 .content-area iframe {
   max-width: 100%;
@@ -2747,6 +2798,9 @@ a img {
   -ms-hyphens: auto;
   hyphens: auto;
   text-decoration: none;
+}
+.site-header .content-area .custom-btn {
+  margin: 30px 0;
 }
 .dark-background .content-area .custom-btn {
   border: 2px solid #ffffff;
@@ -2960,9 +3014,9 @@ a img {
 }
 .content-area .form_field_textfield,
 .content-area .form_field_textarea {
-  padding: 7px;
-  font-size: 14px;
-  font-size: 0.875rem;
+  padding: 10px 13px;
+  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 26px;
   color: #4a4a4a;

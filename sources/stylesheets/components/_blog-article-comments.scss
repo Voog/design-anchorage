@@ -27,14 +27,20 @@
 
     @include transition(250ms);
 
-    box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
+    box-shadow: 0 0 20px rgba($black-base, .1);
   }
 
   .comments-body {
     max-height: 100%;
 
+    .comments-header {
+      .comments-title {
+        margin-top: 0;
+      }
+    }
+
     .comments-title {
-      margin: 0 0 $margin-low 0;
+      margin: 20px 0 $margin-low 0;
 
       cursor: text;
       text-transform: none;
@@ -57,6 +63,10 @@
   .comment {
     margin: 20px 0 0;
 
+    &:first-child {
+      margin-top: 0;
+    }
+
     @include color($black-light, 1);
 
     .comment-body {
@@ -69,7 +79,7 @@
 
     .comment-author,
     .comment-date {
-      font-weight: $font-weight-normal;
+      font-weight: $font-weight-light;
       line-height: $line-height-double;
 
       @include color($grey, 1);

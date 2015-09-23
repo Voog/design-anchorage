@@ -31,7 +31,7 @@
           {% capture content_right_html %}{% unless editmode %}{% content name="right" %}{% endunless %}{% endcapture %}
           {% capture content_right_size %}{{ content_right_html | size | minus : 1 }}{% endcapture %}
 
-          <div class="main-inner-row content-full">
+          <div class="main-inner-row content-full light-background">
 
             <div class="main-content top-row">
               <div class="wrap">

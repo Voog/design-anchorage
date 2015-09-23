@@ -199,7 +199,7 @@ a {
   @extend %wide-wrap;
 
   .header-top & {
-    @extend %widest-wrap;
+    max-width: 100%;
   }
 }
 
@@ -216,7 +216,7 @@ a {
   }
 
   .common-page .bottom-row & {
-    padding: 0 $margin-low $margin-half;
+    padding: 0 30px $margin-half;
   }
 
   @include query($tablet-2) {
@@ -293,7 +293,7 @@ a {
 .light-background {
   @include color($black, 1);
 
-  & h1, h2, h3, h4, p {
+  & h1, h2, h3, h4 {
     @include color($black, 1);
   }
   .site-header & {

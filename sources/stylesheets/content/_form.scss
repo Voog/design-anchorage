@@ -40,8 +40,8 @@
   .form_field_textarea {
     @extend %input-ios-reset;
     @extend %inherit-base-font;
-    padding: 7px;
-    @include rem-fallback(font-size, $font-size-small);
+    padding: 10px 13px;
+    @include rem-fallback(font-size, $font-size-base);
     font-weight: $font-weight-light;
     line-height: $font-size-large;
     @include color($black-light, 1);
