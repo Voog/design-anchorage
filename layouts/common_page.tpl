@@ -37,7 +37,7 @@
               <div class="wrap">
                 <div class="inner">
                   <section class="content-area">
-                    <div class="content-body content-area">{% content %}</div>
+                    <div class="content-body content-area" data-search-indexing-allowed="true">{% content %}</div>
                   </section>
                 </div>
               </div>
@@ -48,13 +48,13 @@
 
                 <div class="inner content-half content-left">
                   <section class="content-area">
-                    <div class="content-body content-area">{% content name="left" %}</div>
+                    <div class="content-body content-area" data-search-indexing-allowed="true">{% content name="left" %}</div>
                   </section>
                 </div>
 
                 <div class="inner content-half content-right">
                   <section class="content-area">
-                    <div class="content-body content-area">{% content name="right" %}</div>
+                    <div class="content-body content-area" data-search-indexing-allowed="true">{% content name="right" %}</div>
                   </section>
                 </div>
 
