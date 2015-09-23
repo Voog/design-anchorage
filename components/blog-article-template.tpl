@@ -15,7 +15,7 @@
       <div class="article-body content-area" data-search-indexing-allowed="true">{% editable article.body %}</div>
     </div>
   {% comment %}<!--Blog and news excerpt when no article photo-->{% endcomment %}
-  {% elsif photo_article == false %}
+  {% elsif article.data.photo_article_state == false %}
     <div class="article-content">
       <div class="article-excerpt content-area">{{ article.excerpt }}</div>
     </div>
