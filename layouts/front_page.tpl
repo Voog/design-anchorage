@@ -21,7 +21,7 @@
             <div class="background-color js-background-color"></div>
 
             {% if editmode %}
-              <button class="voog-bg-picker-btn js-background-settings" data-bg-key="content_bg_1" data-bg-picture-boolean="false" data-bg-color="{{ content_bg_1_color }}" data-bg-color-data="{{ content_bg_1_color_data_str | escape }}"></button>
+              <button class="voog-bg-picker-btn js-background-settings" data-bg-key="content_bg_1" data-bg-picture-boolean="false" data-bg-color-data="{{ content_bg_1_color_data_str | escape }}"></button>
             {% endif %}
 
             <div class="js-background-type {{ content_bg_1_type }}">

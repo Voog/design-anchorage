@@ -1,6 +1,6 @@
 <style>
   {% comment %}/* SITE HEADER BACKGROUND */{% endcomment %}
-  {% comment %}/* Site header background image styles */{% endcomment %}
+  {% comment %}/* Site header background image styles. */{% endcomment %}
   {% if header_bg.imageSizes != nil %}
     {% if header_bg.imageSizes == "" %}
       .site-header .background-image {
@@ -49,12 +49,12 @@
     }
   {% endif %}
 
-  {% comment %}/* Site header background color style */{% endcomment %}
+  {% comment %}/* Site header background color style. */{% endcomment %}
   .site-header .background-color {
     background-color: {{ header_bg_color }};
   }
-
-  {% comment %}/* Photo article background image styles */{% endcomment %}
+  {% comment %}/* PHOTO ARTICLE BACKGROUND */{% endcomment %}
+  {% comment %}/* Photo article background image styles. */{% endcomment %}
   {% if article_header_bg.imageSizes != nil %}
     {% if article_header_bg.imageSizes == "" %}
       .site-header.photo-article .background-image {
@@ -98,51 +98,69 @@
     }
   {% endif %}
 
-  {% comment %}/* Photo article background color style */{% endcomment %}
+  {% comment %}/* Photo article background color style. */{% endcomment %}
   .site-header.photo-article .background-color {
     background-color: {{ article_header_bg_color }};
   }
 
-  {% comment %}/* FRONT PAGE CONTENT AREA 1 RELATED STYLES. */{% endcomment %}
-  {% comment %}/* Front content area 1 background image styles */{% endcomment %}
-  {% if content_bg_1.imageSizes != nil %}
-    {% if content_bg_1.imageSizes == "" %}
-      .main-inner-row .background-image {
+  {% comment %}/* FRONT PAGE CONTENT AREA 1 BACKGROUND */{% endcomment %}
+  {% comment %}/* Front page content area 1 background color style. */{% endcomment %}
+  .main-inner-row .background-color {
+    background-color: {{ content_bg_1_color }};
+  }
+
+  {% comment %}/* FRONT PAGE CONTENT AREA 2 BACKGROUND */{% endcomment %}
+  {% comment %}/* Front content area 2 background image styles. */{% endcomment %}
+  {% if content_bg_2.imageSizes != nil %}
+    {% if content_bg_2.imageSizes == "" %}
+      .blog-feed .background-image {
         background-image: none;
       }
     {% else %}
-      {% for imageSize in content_bg_1.imageSizes %}
+      {% for imageSize in content_bg_2.imageSizes %}
         {% if forloop.first %}
-          .main-inner-row .background-image {
+          .blog-feed .background-image {
             background-image: url("{{ imageSize.url }}");
           }
         {% elsif imageSize.url contains "_block" %}
           {% break %}
         {% else %}
           @media screen and (max-width: {{ imageSize.width }}px) {
-            .main-inner-row .background-image {
+            .blog-feed .background-image {
               background-image: url("{{ imageSize.url }}");
             }
           }
         {% endif %}
       {% endfor %}
     {% endif %}
+
+  {% else %}
+    {% assign bg_image_prefix = images_path | append: "/front-header-bg" %}
+
+    .blog-feed .background-image {
+      background-image: url("{{ bg_image_prefix }}.jpg");
+    }
+
+    @media screen and (max-width: 2048px) {
+      .blog-feed .background-image {
+        background-image: url("{{ bg_image_prefix }}_huge.jpg");
+      }
+    }
+
+    @media screen and (max-width: 1280px) {
+      .blog-feed .background-image {
+        background-image: url("{{ bg_image_prefix }}_large.jpg");
+      }
+    }
   {% endif %}
 
-  {% comment %}/* Front page content area 1 background color style */{% endcomment %}
-  .main-inner-row .background-color {
-    background-color: {{ content_bg_1_color }};
-  }
-
-  {% comment %}/* FRONT PAGE CONTENT AREA 2 RELATED STYLES. */{% endcomment %}
-  {% comment %}/* Front page content area 2 background color style */{% endcomment %}
+  {% comment %}/* Front page content area 2 background color style. */{% endcomment %}
   .blog-feed .background-color {
     background-color: {{ content_bg_2_color }};
   }
 
-
-  {% comment %}/* FRONT PAGE CONTENT AREA 1 RELATED STYLES. */{% endcomment %}
-  {% comment %}/* Front page content area 1 background color style */{% endcomment %}
+  {% comment %}/* FOOTER BACKGROUND */{% endcomment %}
+  {% comment %}/* Front page content area 1 background color style. */{% endcomment %}
   .site-footer .background-color {
     background-color: {{ footer_bg_color }};
   }
