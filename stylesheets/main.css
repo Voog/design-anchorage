@@ -637,6 +637,9 @@ a img {
 .front-page .content-full {
   position: relative;
 }
+.front-page .content-full .content-full-inner {
+  position: relative;
+}
 
 .common-page .sidebar-active {
   max-width: 1000px;

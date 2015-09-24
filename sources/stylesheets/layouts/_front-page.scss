@@ -201,5 +201,9 @@
 
   .content-full {
     position: relative;
+
+    .content-full-inner {
+      position: relative;
+    }
   }
 }

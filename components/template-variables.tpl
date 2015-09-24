@@ -138,8 +138,6 @@
   {% comment %}Assign variables based on page type.{% endcomment %}
   {% assign content_bg_1 = page.data.content_bg_1 %}
 
-  {% assign content_bg_1_image = content_bg_1.image %}
-  {% assign content_bg_1_image_sizes = content_bg_1.imageSizes %}
   {% assign content_bg_1_color = content_bg_1.color %}
   {% assign content_bg_1_color_data = content_bg_1.colorData %}
   {% assign content_bg_1_combined_lightness = content_bg_1.combinedLightness %}
@@ -165,16 +163,6 @@
     {% endif %}
   {% else %}
     {% assign content_bg_1_type = "light-background" %}
-  {% endif %}
-
-  {% if content_bg_1_image == nil %}
-    {% assign content_bg_1_image = "" %}
-  {% endif %}
-
-  {% if content_bg_1_image_sizes == nil %}
-      {% assign content_bg_1_image_sizes_str = "" %}
-  {% else %}
-    {% assign content_bg_1_image_sizes_str = content_bg_1_image_sizes | json %}
   {% endif %}
 
   {% if content_bg_1_color == nil %}
