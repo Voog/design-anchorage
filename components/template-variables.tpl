@@ -238,8 +238,6 @@
     {% assign footer_bg = site.data.footer_bg %}
   {% endif %}
 
-  {% assign footer_bg_image = footer_bg.image %}
-  {% assign footer_bg_image_sizes = footer_bg.imageSizes %}
   {% assign footer_bg_color = footer_bg.color %}
   {% assign footer_bg_color_data = footer_bg.colorData %}
   {% assign footer_bg_combined_lightness = footer_bg.combinedLightness %}
@@ -265,16 +263,6 @@
     {% endif %}
   {% else %}
     {% assign footer_bg_type = "light-background" %}
-  {% endif %}
-
-  {% if footer_bg_image == nil %}
-    {% assign footer_bg_image = "" %}
-  {% endif %}
-
-  {% if footer_bg_image_sizes == nil %}
-      {% assign footer_bg_image_sizes_str = "" %}
-  {% else %}
-    {% assign footer_bg_image_sizes_str = footer_bg_image_sizes | json %}
   {% endif %}
 
   {% if footer_bg_color == nil %}
