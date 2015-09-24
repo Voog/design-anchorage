@@ -19,4 +19,10 @@
   {% unless feature_3_size contains "-" %}
     {% assign feature_3_has_content = "true" %}
   {% endunless %}
+
+  {% capture bottom_html %}{% unless editmode %}{% content name="bottom" %}{% endunless %}{% endcapture %}
+  {% capture bottom_size %}{{ bottom_html | size | minus : 1 }}{% endcapture %}
+  {% unless bottom_size contains "-" %}
+    {% assign bottom_has_content = "true" %}
+  {% endunless %}
 {% endcapture %}

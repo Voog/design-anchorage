@@ -57,16 +57,17 @@
               </div>
             </div>
           </div>
+          {% if editmode or bottom_has_content or content_bg_2_image != "" or content_bg_2_color != "" %}
+            <div class="blog-feed content-full js-bg-picker-area">
+              <div class="background-image js-background-image"></div>
+              <div class="background-color js-background-color"></div>
 
-          <div class="blog-feed content-full js-bg-picker-area">
-            <div class="background-image js-background-image"></div>
-            <div class="background-color js-background-color"></div>
-
-            {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-key="content_bg_2" data-bg-picture-boolean="true" data-target-width="600" data-bg-image="{{ content_bg_2_image }}" data-bg-image-sizes="{{ content_bg_2_image_sizes_str | escape }}" data-bg-color="{{ content_bg_2_color }}" data-bg-color-data="{{ content_bg_2_color_data_str | escape }}"></button>{% endif %}
-            <div class="wrap js-background-type {{ content_bg_2_type }}">
-              <div class="inner content-area" data-search-indexing-allowed="true">{% content name="bottom" %}</div>
+              {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-key="content_bg_2" data-bg-picture-boolean="true" data-target-width="600" data-bg-image="{{ content_bg_2_image }}" data-bg-image-sizes="{{ content_bg_2_image_sizes_str | escape }}" data-bg-color="{{ content_bg_2_color }}" data-bg-color-data="{{ content_bg_2_color_data_str | escape }}"></button>{% endif %}
+              <div class="wrap js-background-type {{ content_bg_2_type }}">
+                <div class="inner content-area" data-search-indexing-allowed="true">{% content name="bottom" %}</div>
+              </div>
             </div>
-          </div>
+          {% endif %}
         </div>
       </main>
 

@@ -9486,7 +9486,7 @@ return jQuery;
     var commitData = $.extend(true, {}, data);
     commitData.image = data.image || '';
     commitData.imageSizes = data.imageSizes || '';
-    commitData.color = data.color || 'rgba(255,255,255,0)';
+    commitData.color = data.color || '';
     commitData.combinedLightness = bgPickerCombinedLightness;
 
     if (pageType === 'articlePage') {
