@@ -112,7 +112,7 @@
       .wrap {
         display: table-cell;
         vertical-align: middle;
-        padding: 60px 20px;
+        padding: 45px 20px 75px 20px;
         .front-page & {
           @include rem-fallback(height, 532px);
         }

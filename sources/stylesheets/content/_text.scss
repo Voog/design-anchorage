@@ -119,7 +119,7 @@
       text-transform: uppercase;
       @include rem-fallback(font-size, $font-size-header);
       font-weight: $font-weight-bold;
-      line-height: $line-height-small;
+      line-height: 1.1;
     }
 
     // .contacts & {

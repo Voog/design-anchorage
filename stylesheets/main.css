@@ -1123,7 +1123,7 @@ a img {
 .site-header .header-bottom .header-bottom-inner .wrap {
   display: table-cell;
   vertical-align: middle;
-  padding: 60px 20px;
+  padding: 45px 20px 75px 20px;
 }
 .front-page .site-header .header-bottom .header-bottom-inner .wrap {
   height: 532px;
@@ -2650,7 +2650,7 @@ a img {
   font-size: 70px;
   font-size: 4.375rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 .content-area h2 {
   font-size: 26px;
