@@ -117,7 +117,7 @@
       margin-top: .3em;
       margin-bottom: .3em;
       text-transform: uppercase;
-      @include rem-fallback(font-size, $font-size-header);
+      @include rem-fallback(font-size, 40px);
       font-weight: $font-weight-bold;
       line-height: 1.1;
     }

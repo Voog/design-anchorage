@@ -20,7 +20,8 @@
       padding-right: 40px;
       padding-left: 40px;
 
-      @include query($tablet-2) {
+      @include query($tablet-3) {
+        padding-top: 20px;
         padding-right: 20px;
         padding-left: 20px;
       }
@@ -122,6 +123,11 @@
         }
         &.is-photoheader{
           @include rem-fallback(height, 532px);
+        }
+
+        @include query($tablet-3) {
+          padding-right: 20px;
+          padding-left: 20px;
         }
       }
 

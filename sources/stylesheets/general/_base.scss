@@ -211,6 +211,11 @@ a {
 
   .front-page .main-content & {
     padding: 70px 40px;
+
+    @include query($tablet-3) {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
   }
 
   .common-page .top-row & {
@@ -221,8 +226,9 @@ a {
     padding: 0 30px $margin-half;
   }
 
-  @include query($tablet-2) {
-    padding: $margin-medium $margin-low;
+  @include query($tablet-3) {
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 

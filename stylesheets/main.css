@@ -294,15 +294,22 @@ a img {
 .front-page .main-content .inner {
   padding: 70px 40px;
 }
+@media screen and (max-width: 640px) {
+  .front-page .main-content .inner {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 .common-page .top-row .inner {
   padding: 50px 30px 20px;
 }
 .common-page .bottom-row .inner {
   padding: 0 30px 50px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 640px) {
   .inner {
-    padding: 30px 20px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 
@@ -526,6 +533,12 @@ a img {
   text-align: center;
   max-width: 1123px;
 }
+@media screen and (max-width: 640px) {
+  .front-page .main-feature .wrap {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (min-width: 641px) {
   .front-page .main-feature .feature {
     display: inline-block;
@@ -611,6 +624,12 @@ a img {
 .front-page .main-feature .feature-content {
   margin: 0 30px 70px;
   font-size: 18px;
+}
+@media screen and (max-width: 640px) {
+  .front-page .main-feature .feature-content {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 .front-page .main-feature .feature-content:empty {
   display: none;
@@ -1059,8 +1078,9 @@ a img {
   justify-content: flex-end;
   -ms-flex-pack: end;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 640px) {
   .site-header .header-top .wrap {
+    padding-top: 20px;
     padding-right: 20px;
     padding-left: 20px;
   }
@@ -1137,6 +1157,12 @@ a img {
 .site-header .header-bottom .header-bottom-inner .wrap.is-photoheader {
   height: 532px;
   height: 33.25rem;
+}
+@media screen and (max-width: 640px) {
+  .site-header .header-bottom .header-bottom-inner .wrap {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 @media screen and (max-width: 422px) {
   .site-header .header-bottom .header-bottom-inner .wrap {
@@ -2648,8 +2674,8 @@ a img {
   margin-top: .3em;
   margin-bottom: .3em;
   text-transform: uppercase;
-  font-size: 70px;
-  font-size: 4.375rem;
+  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.1;
 }
