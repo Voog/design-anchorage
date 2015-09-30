@@ -207,10 +207,10 @@ a {
 
 .inner {
   margin: 0 auto;
-  padding: $margin-half $margin-medium;
+  padding: 50px 40px;
 
   .front-page .main-content & {
-    padding: 75px $margin-medium;
+    padding: 70px 40px;
   }
 
   .common-page .top-row & {

@@ -289,10 +289,10 @@ a img {
 
 .inner {
   margin: 0 auto;
-  padding: 50px 30px;
+  padding: 50px 40px;
 }
 .front-page .main-content .inner {
-  padding: 75px 30px;
+  padding: 70px 40px;
 }
 .common-page .top-row .inner {
   padding: 50px 30px 20px;
@@ -463,7 +463,7 @@ a img {
 }
 
 .wrap {
-  max-width: 960px;
+  max-width: 1040px;
 }
 
 .is-untranslated {
@@ -521,6 +521,7 @@ a img {
   margin-bottom: 80px;
 }
 .front-page .main-feature .wrap {
+  padding: 0 40px;
   font-size: 0;
   text-align: center;
   max-width: 1123px;
@@ -608,7 +609,7 @@ a img {
   font-size: 14px;
 }
 .front-page .main-feature .feature-content {
-  margin: 0 30px 92px;
+  margin: 0 30px 70px;
   font-size: 18px;
 }
 .front-page .main-feature .feature-content:empty {
@@ -1030,8 +1031,8 @@ a img {
 }
 .site-header .header-top .wrap {
   padding-top: 40px;
-  padding-right: 80px;
-  padding-left: 80px;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 .flexbox .site-header .header-top .wrap {
   display: -webkit-box;
@@ -1117,13 +1118,13 @@ a img {
   table-layout: fixed;
   border-collapse: collapse;
   width: 100%;
-  max-width: 960px;
+  max-width: 1040px;
   margin: 0 auto;
 }
 .site-header .header-bottom .header-bottom-inner .wrap {
   display: table-cell;
   vertical-align: middle;
-  padding: 45px 20px 75px 20px;
+  padding: 60px 40px;
 }
 .front-page .site-header .header-bottom .header-bottom-inner .wrap {
   height: 532px;
@@ -2394,7 +2395,7 @@ a img {
   color: black;
   opacity: .55;
   text-align: center;
-  padding: 0 0 15px;
+  padding: 0 0 40px;
 }
 .site-footer .voog-reference:hover {
   opacity: .8;

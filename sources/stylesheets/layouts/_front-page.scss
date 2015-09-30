@@ -45,6 +45,7 @@
 
   .main-feature {
     .wrap {
+      padding: 0 40px;
       font-size: 0;
       text-align: center;
       max-width: 1123px;
@@ -128,9 +129,8 @@
     }
 
     .feature-content {
-      margin: 0 30px 92px;
+      margin: 0 30px 70px;
       font-size: $font-size-normal;
-      // text-align: center;
 
       &:empty {
         display: none;
