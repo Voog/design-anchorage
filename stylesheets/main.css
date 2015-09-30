@@ -296,7 +296,7 @@ a img {
   }
 }
 .common-page .top-row .inner {
-  padding: 50px 30px 20px;
+  padding: 50px 40px 20px;
 }
 .common-page .bottom-row .inner {
   padding: 0 30px 50px;
@@ -657,7 +657,7 @@ a img {
 }
 
 .common-page .sidebar-active {
-  max-width: 1000px;
+  max-width: 1040px;
   width: 100%;
   margin: 0 auto;
 }
@@ -669,7 +669,7 @@ a img {
   margin: 0;
 }
 .common-page .sidebar-active .page-content {
-  margin-left: 240px;
+  margin-left: 260px;
 }
 @media screen and (max-width: 768px) {
   .common-page .sidebar-active .page-content {
@@ -677,7 +677,7 @@ a img {
   }
 }
 .common-page .main-content .wrap {
-  max-width: 760px;
+  max-width: 780px;
 }
 .common-page .main-content .content-half {
   float: left;
@@ -2317,8 +2317,8 @@ a img {
 
 .site-sidebar {
   float: left;
-  width: 210px;
-  margin: 50px 0 50px 30px;
+  width: 220px;
+  margin: 50px 0 50px 40px;
   position: relative;
 }
 @media screen and (max-width: 768px) {

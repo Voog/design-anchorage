@@ -1,7 +1,7 @@
 .site-sidebar {
   float: left;
-  width: 210px;
-  margin: $margin-half 0 $margin-half $margin-medium;
+  width: 220px;
+  margin: 50px 0 50px 40px;
   position: relative;
 
   @include query($tablet-2) {
