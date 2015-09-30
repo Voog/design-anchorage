@@ -1,9 +1,9 @@
 html {
   font-size: $font-size-base;
 
-  @include query($tablet-2) {
-    font-size: $font-size-small;
-  }
+  // @include query($tablet-2) {
+  //   font-size: $font-size-small;
+  // }
 }
 
 body {
