@@ -9447,7 +9447,7 @@ return jQuery;
   var bgPickerPreview = function(bgPickerArea, data, bgPicker) {
     // Defines the variables used in preview logic.
 
-    var bgPickerImagePrevious = $(bgPickerArea).css('background-image'),
+    var bgPickerImagePrevious = $(bgPickerArea).find('.js-background-image').css('background-image'),
         bgPickerImageSuitable = data.imageSizes ? getImageByWidth(data.imageSizes, $(window).width()) : null,
         bgPickerImage = (data.image && data.image !== '') ? 'url(' + bgPickerImageSuitable.url + ')' : 'none',
         bgPickerImageSizes = (data.imageSizes && data.imageSizes !== '') ? data.imageSizes : null,
