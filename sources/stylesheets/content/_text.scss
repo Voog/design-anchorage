@@ -117,9 +117,13 @@
       margin-top: .3em;
       margin-bottom: .3em;
       text-transform: uppercase;
-      @include rem-fallback(font-size, 40px);
+      @include rem-fallback(font-size, $font-size-header);
       font-weight: $font-weight-bold;
       line-height: 1.1;
+
+      @include query($tablet-3) {
+        @include rem-fallback(font-size, 40px);
+      }
     }
 
     // .contacts & {
