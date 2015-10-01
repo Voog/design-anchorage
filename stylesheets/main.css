@@ -700,8 +700,10 @@ a img {
     width: 100%;
   }
 }
-.common-page .main-content .content-right {
-  padding-left: 0;
+@media screen and (min-width: 852px) {
+  .common-page .main-content .content-right {
+    padding-left: 0;
+  }
 }
 
 .blog-news-page .article-title, .blog-news-page .site-header .header-body .article-title a, .site-header .header-body .article-title .blog-news-page a {

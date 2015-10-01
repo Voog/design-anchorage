@@ -44,8 +44,9 @@
     }
 
     .content-right {
-      padding-left: 0;
+      @include querymin($tablet-2 + 1) {
+        padding-left: 0;
+      }
     }
   }
-
 }
