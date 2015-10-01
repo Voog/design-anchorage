@@ -371,7 +371,8 @@
 
     .lang-menu {
       display: block;
-      margin-left: $margin-large;
+      margin-left: 0;
+      margin-top: 20px;
 
       .mobile-search-open & {
         display: none;
@@ -392,6 +393,7 @@
             &.lang-flag {
               &:before,
               &:after {
+                top: 8px;
                 right: auto;
                 left: 0;
               }

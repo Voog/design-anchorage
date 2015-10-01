@@ -1553,7 +1553,8 @@ a img {
   }
   #mobile-menu .lang-menu {
     display: block;
-    margin-left: 40px;
+    margin-left: 0;
+    margin-top: 20px;
   }
   .mobile-search-open #mobile-menu .lang-menu {
     display: none;
@@ -1572,6 +1573,7 @@ a img {
     font-size: 0.875rem;
   }
   #mobile-menu .lang-menu ul li a.lang-flag:before, #mobile-menu .lang-menu ul li a.lang-flag:after {
+    top: 8px;
     right: auto;
     left: 0;
   }
