@@ -37,7 +37,7 @@
       width: 50%;
       box-sizing: border-box;
 
-      @include query($tablet-2) {
+      @include query($tablet-3) {
         float: none;
         width: 100%;
       }

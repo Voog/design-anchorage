@@ -681,7 +681,7 @@ a img {
 .common-page .sidebar-active .page-content {
   margin-left: 260px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .common-page .sidebar-active .page-content {
     margin-left: 0;
   }
@@ -694,7 +694,7 @@ a img {
   width: 50%;
   box-sizing: border-box;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 640px) {
   .common-page .main-content .content-half {
     float: none;
     width: 100%;
@@ -711,7 +711,7 @@ a img {
   line-height: 1.3;
   margin: 10px 0 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .blog-news-page .article-title, .blog-news-page .site-header .header-body .article-title a, .site-header .header-body .article-title .blog-news-page a {
     font-size: 26px;
     font-size: 1.625rem;
@@ -738,7 +738,7 @@ a img {
   position: relative;
   height: 500px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .blog-news-page .blog-article .article-image {
     margin: 0 -20px;
     height: 250px;
@@ -1018,14 +1018,14 @@ a img {
   line-height: 1;
   background-color: black;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .article-comments .comments-close .btn-close {
     right: 0;
     left: auto;
     background-color: white;
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 851px) {
   .article-comments .comments-close .btn-close:hover {
     background-color: #4a4a4a;
     -webkit-transition: 500ms;
@@ -1037,7 +1037,7 @@ a img {
   padding: 15px;
   fill: white;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .article-comments .comments-close .btn-close .ico-close {
     fill: black;
   }
@@ -1185,7 +1185,7 @@ a img {
     height: 13.875rem;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .site-header .header-left,
   .site-header .header-right {
     float: none;
@@ -1367,7 +1367,7 @@ a img {
   display: block;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .site-header .header-right .menu-main {
     display: none;
   }
@@ -2252,12 +2252,12 @@ a img {
   display: block;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 851px) {
   .voog-search-modal-results {
     max-height: 70vh;
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 851px) {
   .mobile-search-open .voog-search-modal-results {
     max-height: calc(100vh - 120px);
   }
@@ -2328,7 +2328,7 @@ a img {
   margin: 50px 0 50px 40px;
   position: relative;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .site-sidebar {
     display: none;
   }
@@ -2346,7 +2346,7 @@ a img {
   text-transform: uppercase;
   margin: 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .site-sidebar .sidebar-title {
     display: none;
   }
@@ -2367,7 +2367,7 @@ a img {
   line-height: 1.7;
   margin: 15px 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .site-sidebar .submenu li {
     display: inline-block;
     margin-right: 20px;
@@ -2386,7 +2386,7 @@ a img {
 .site-sidebar .submenu .submenu-lvl2 {
   padding-left: 25px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .site-sidebar .submenu .submenu-lvl2 {
     display: none;
   }
@@ -3016,7 +3016,7 @@ a img {
     font-size: 1.25rem;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .contacts .content-area table {
     font-size: 16px;
     font-size: 1rem;
@@ -3154,7 +3154,7 @@ a img {
   background-color: white;
   color: black;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 851px) {
   .content-half .content-area .form_submit input {
     width: 100%;
   }
