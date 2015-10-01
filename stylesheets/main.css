@@ -2076,7 +2076,7 @@ a img {
 }
 .search.active {
   position: absolute;
-  margin-top: 10px;
+  top: 30px;
   right: -10px;
   z-index: 20;
   display: block;
