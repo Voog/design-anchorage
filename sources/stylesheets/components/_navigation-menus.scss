@@ -1,12 +1,15 @@
 /* NAVIGATION MENUS*/
 // Base
 .menu-btn-wrap {
+  position: relative;
+  top: 5px;
   display: inline-block;
+  vertical-align: top;
   margin-left: 40px;
 
   &.flags-enabled {
-    position: relative;
-    top: -6px;
+    // position: relative;
+    // top: -6px;
   }
 }
 
@@ -710,8 +713,8 @@ $flags:
   margin-left: 40px;
 
   &.lang-menu-bilingual {
-    position: relative;
-    top: 1px;
+    // position: relative;
+    // top: 1px;
 
     .lang-title {
       display: inline-block;
@@ -834,8 +837,8 @@ $flags:
   }
 
   .ico-popover-toggle {
-    position: relative;
-    top: -2px;
+    // position: relative;
+    // top: -2px;
     font-size: 7.2px;
 
     .flags-enabled & {

@@ -1254,12 +1254,11 @@ a img {
 
 /* NAVIGATION MENUS*/
 .menu-btn-wrap {
-  display: inline-block;
-  margin-left: 40px;
-}
-.menu-btn-wrap.flags-enabled {
   position: relative;
-  top: -6px;
+  top: 5px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 40px;
 }
 
 .toggle-sub-menu {
@@ -1910,10 +1909,6 @@ a img {
   vertical-align: top;
   margin-left: 40px;
 }
-.lang-menu.lang-menu-bilingual {
-  position: relative;
-  top: 1px;
-}
 .lang-menu.lang-menu-bilingual .lang-title {
   display: inline-block;
 }
@@ -2006,8 +2001,6 @@ a img {
   left: 0;
 }
 .lang-menu-btn .ico-popover-toggle {
-  position: relative;
-  top: -2px;
   font-size: 7.2px;
 }
 .flags-enabled .lang-menu-btn .ico-popover-toggle {
@@ -2162,7 +2155,6 @@ a img {
 
 .search-btn,
 .search-submit {
-  vertical-align: top;
   width: 30px;
   height: 50px;
   background-color: transparent;
