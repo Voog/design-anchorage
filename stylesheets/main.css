@@ -442,7 +442,7 @@ a img {
   hyphens: auto;
 }
 
-.toggle-sub-menu, .menu-prev-btn, .mobile-menu-toggler, .lang-menu-btn, .search-btn,
+.toggle-sub-menu, .mobile-menu-toggler, .lang-menu-btn, .search-btn,
 .search-submit {
   margin: 0;
   padding: 0;
@@ -450,11 +450,11 @@ a img {
   border-style: none;
   cursor: pointer;
 }
-.toggle-sub-menu:focus, .menu-prev-btn:focus, .mobile-menu-toggler:focus, .lang-menu-btn:focus, .search-btn:focus,
+.toggle-sub-menu:focus, .mobile-menu-toggler:focus, .lang-menu-btn:focus, .search-btn:focus,
 .search-submit:focus {
   outline: none;
 }
-.toggle-sub-menu::-moz-focus-inner, .menu-prev-btn::-moz-focus-inner, .mobile-menu-toggler::-moz-focus-inner, .lang-menu-btn::-moz-focus-inner, .search-btn::-moz-focus-inner,
+.toggle-sub-menu::-moz-focus-inner, .mobile-menu-toggler::-moz-focus-inner, .lang-menu-btn::-moz-focus-inner, .search-btn::-moz-focus-inner,
 .search-submit::-moz-focus-inner {
   padding: 0;
   border-style: none;
@@ -1266,8 +1266,8 @@ a img {
 .toggle-sub-menu {
   position: absolute;
   top: 14px;
-  right: 0;
-  display: none;
+  right: -6px;
+  display: block;
   margin-top: -6px;
   padding: 6px;
 }
@@ -1283,24 +1283,6 @@ a img {
 .toggle-sub-menu.active:before {
   border-width: 8px 5px 0;
   border-color: #000 transparent transparent transparent;
-}
-.toggle-sub-menu.visible {
-  display: block;
-}
-
-.menu-prev-btn {
-  position: absolute;
-  top: 27px;
-  left: 6px;
-  padding: 10px;
-  display: none;
-  z-index: 999;
-}
-.menu-prev-btn.visible {
-  display: block;
-}
-.mobile-search-open .menu-prev-btn {
-  display: block;
 }
 
 .menu {
@@ -1441,7 +1423,7 @@ a img {
     overflow: auto;
     display: block;
     width: 250px;
-    padding: 80px 20px 50px;
+    padding: 30px 20px 50px;
     background-color: white;
     overflow: hidden;
     -webkit-overflow-scrolling: touch;
@@ -1456,6 +1438,13 @@ a img {
     -o-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
   }
+}
+@media screen and (max-width: 850px) and (max-width: 640px) {
+  #mobile-menu {
+    padding-top: 10px;
+  }
+}
+@media screen and (max-width: 850px) {
   .editmode #mobile-menu {
     bottom: 40px;
   }
@@ -1523,7 +1512,7 @@ a img {
     display: none;
   }
   #mobile-menu .navigation-menu ul a {
-    display: none;
+    display: block;
   }
   #mobile-menu .navigation-menu ul a.visible {
     display: block;
@@ -1552,6 +1541,15 @@ a img {
   }
   #mobile-menu .sub-menu a  {
     text-transform: initial;
+  }
+  #mobile-menu .menu-level-2,
+  #mobile-menu .menu-level-3 {
+    display: none;
+    padding-left: 10px;
+  }
+  #mobile-menu .current-parent > .menu-level-2,
+  #mobile-menu .current-parent > .menu-level-3 {
+    display: block;
   }
   #mobile-menu .lang-menu {
     display: block;

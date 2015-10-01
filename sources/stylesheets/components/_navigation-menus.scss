@@ -17,8 +17,8 @@
   @extend %button;
   position: absolute;
   top: 14px;
-  right: 0;
-  display: none;
+  right: -6px;
+  display: block;
   margin-top: -6px;
   padding: 6px;
 
@@ -37,28 +37,6 @@
       border-width: 8px 5px 0;
       border-color: $black-base transparent transparent transparent;
     }
-  }
-
-  &.visible {
-    display: block;
-  }
-}
-
-.menu-prev-btn {
-  @extend %button;
-  position: absolute;
-  top: 27px;
-  left: 6px;
-  padding: 10px;
-  display: none;
-  z-index: 999;
-
-  &.visible {
-    display: block;
-  }
-
-  .mobile-search-open & {
-    display: block;
   }
 }
 
@@ -236,7 +214,7 @@
     overflow: auto;
     display: block;
     width: 250px;
-    padding: 80px 20px 50px;
+    padding: 30px 20px 50px;
     @include bg($white, 1);
     overflow: hidden;
     -webkit-overflow-scrolling: touch;
@@ -244,6 +222,10 @@
     z-index: 1000;
     @include transition(transform .5s, width .3s);
     @include transform(translate3d(100%, 0, 0));
+
+    @include query($tablet-3) {
+      padding-top: 10px;
+    }
 
     .editmode & {
       bottom: 40px;
@@ -320,7 +302,7 @@
 
       ul {
         a {
-          display: none;
+          display: block;
 
           &.visible {
             display: block;
@@ -374,95 +356,99 @@
       }
     }
 
-    .menu-level-2 {
-    // background-color: #ccc;
-  }
-
-  .menu-level-3 {
-    // background-color: #ddd;
-  }
-
-
-  .lang-menu {
-    display: block;
-    margin-left: $margin-large;
-
-    .mobile-search-open & {
+    .menu-level-2,
+    .menu-level-3 {
       display: none;
+      padding-left: 10px;
     }
 
-    ul {
-      margin: 0;
-      padding: 0;
+    .current-parent {
+      > .menu-level-2,
+      > .menu-level-3 {
+        display: block;
+      }
+    }
 
-      li {
-        text-align: left;
+    .lang-menu {
+      display: block;
+      margin-left: $margin-large;
 
-        a {
-          padding: 7px 0 5px;
+      .mobile-search-open & {
+        display: none;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+
+        li {
           text-align: left;
-          @include rem-fallback(font-size, $font-size-small);
 
-          &.lang-flag {
-            &:before,
-            &:after {
-              right: auto;
-              left: 0;
+          a {
+            padding: 7px 0 5px;
+            text-align: left;
+            @include rem-fallback(font-size, $font-size-small);
+
+            &.lang-flag {
+              &:before,
+              &:after {
+                right: auto;
+                left: 0;
+              }
             }
           }
         }
       }
     }
-  }
 
-  &.flags-enabled {
-    .lang-menu {
-      a {
-        padding-left: 25px;
+    &.flags-enabled {
+      .lang-menu {
+        a {
+          padding-left: 25px;
+        }
       }
     }
   }
-}
 
-.mobile-search-toggler {
-  position: absolute;
-  top: 0;
-  right: 43px;
-  display: block;
-  width: 33px;
-  height: 43px;
-  outline: 0;
-  background: url('../images/search.png') no-repeat center center;
-  background-size: 16px 16px;
+  .mobile-search-toggler {
+    position: absolute;
+    top: 0;
+    right: 43px;
+    display: block;
+    width: 33px;
+    height: 43px;
+    outline: 0;
+    background: url('../images/search.png') no-repeat center center;
+    background-size: 16px 16px;
 
-  .svg & {
-    background-image: url('../assets/search.svg');
+    .svg & {
+      background-image: url('../assets/search.svg');
+    }
+
+    .mobilesearch-open & {
+      background: none !important;
+
+      &:before,
+      &:after {
+        position: absolute;
+        top: 20px;
+        left: 7px;
+        display: block;
+        width: 20px;
+        height: 3px;
+        content: '';
+        background: $black; @include border-radius(3px);
+      }
+
+      &:before {
+        @include rotate(45deg);
+      }
+
+      &:after {
+        @include rotate(-45deg);
+      }
+    }
   }
-
-  .mobilesearch-open & {
-    background: none !important;
-
-    &:before,
-    &:after {
-      position: absolute;
-      top: 20px;
-      left: 7px;
-      display: block;
-      width: 20px;
-      height: 3px;
-      content: '';
-      background: $black; @include border-radius(3px);
-    }
-
-    &:before {
-      @include rotate(45deg);
-    }
-
-    &:after {
-      @include rotate(-45deg);
-    }
-  }
-}
 
 }
 
