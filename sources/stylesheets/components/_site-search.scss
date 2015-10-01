@@ -199,6 +199,12 @@
   font-size: 0;
   margin-left: 28px;
 
+  @include query($tablet-2) {
+    margin-right: 30px;
+    top: -5px;
+    position: relative;
+  }
+
   .header-options & {
     .front-page & {
       top: 1px;

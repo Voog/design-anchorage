@@ -1207,9 +1207,6 @@ a img {
     flex: 1;
     margin-right: 40px;
   }
-  .site-header .visibility-lrg {
-    display: none;
-  }
 }
 .site-header .header-body .article-author,
 .site-header .header-body .article-date {
@@ -1261,6 +1258,11 @@ a img {
   display: inline-block;
   vertical-align: top;
   margin-left: 40px;
+}
+@media screen and (max-width: 850px) {
+  .menu-btn-wrap {
+    display: none;
+  }
 }
 
 .toggle-sub-menu {
@@ -2197,6 +2199,13 @@ a img {
   height: 26px;
   font-size: 0;
   margin-left: 28px;
+}
+@media screen and (max-width: 850px) {
+  .search-btn {
+    margin-right: 30px;
+    top: -5px;
+    position: relative;
+  }
 }
 .front-page .header-options .search-btn {
   top: 1px;
