@@ -17,7 +17,7 @@
   right: 0;
   display: none;
   margin-top: -6px;
-  padding: 5px;
+  padding: 6px;
 
   &:before {
     display: block;
@@ -25,13 +25,13 @@
     height: 0;
     content: '';
     border-style: solid;
-    border-width: 5px 0 5px 10px;
+    border-width: 5px 0 5px 8px;
     border-color: transparent transparent transparent $black-base;
   }
 
   &.active {
     &:before {
-      border-width: 10px 5px 0 5px;
+      border-width: 8px 5px 0;
       border-color: $black-base transparent transparent transparent;
     }
   }
@@ -168,11 +168,11 @@
 
   .mobile-menu-toggler {
     position: absolute;
-    top: -11px;
-    right: -13px;
+    top: -14px;
     display: block;
-    width: $button-square;
-    height: $button-square;
+    right: -12px;
+    width: 45px;
+    height: 45px;
     outline: 0;
 
     span {
@@ -181,12 +181,11 @@
       &:after {
         position: absolute;
         top: 14px;
-        left: 11px;
+        left: 12px;
         display: block;
-        width: 20px;
+        width: 21px;
         height: 3px;
         content: '';
-        @include border-radius(5px);
         @include bg($black, 1);
 
         .dark-background & {
@@ -214,12 +213,12 @@
       }
 
       &:before {
-        top: 6px;
+        top: 7px;
         left: 0;
       }
 
       &:after {
-        top: 12px;
+        top: 14px;
         left: 0;
       }
     }
@@ -233,7 +232,7 @@
     bottom: 0;
     overflow: auto;
     display: block;
-    width: 160px;
+    width: 250px;
     padding: 80px 20px 50px;
     @include bg($white, 1);
     overflow: hidden;
@@ -300,7 +299,7 @@
       }
 
       a {
-        @include rem-fallback(font-size, $font-size-normal);
+        @include rem-fallback(font-size, $font-size-base);
         padding: 10px 0;
         text-transform: uppercase;
         line-height: 1.3;

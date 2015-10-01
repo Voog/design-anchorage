@@ -130,8 +130,8 @@ a img {
   min-height: 100vh;
 }
 .mobilemenu-open .site-container {
-  -webkit-transform: translate3d(-160px, 0, 0);
-  transform: translate3d(-160px, 0, 0);
+  -webkit-transform: translate3d(-250px, 0, 0);
+  transform: translate3d(-250px, 0, 0);
 }
 .mobilemenu-open .site-container:after {
   width: 100%;
@@ -298,8 +298,18 @@ a img {
 .common-page .top-row .inner {
   padding: 50px 40px 20px;
 }
+@media screen and (max-width: 640px) {
+  .common-page .top-row .inner {
+    padding: 30px 20px;
+  }
+}
 .common-page .bottom-row .inner {
-  padding: 0 30px 50px;
+  padding: 0 40px 50px;
+}
+@media screen and (max-width: 640px) {
+  .common-page .bottom-row .inner {
+    padding: 0 20px 20px;
+  }
 }
 @media screen and (max-width: 640px) {
   .inner {
@@ -689,6 +699,9 @@ a img {
     float: none;
     width: 100%;
   }
+}
+.common-page .main-content .content-right {
+  padding-left: 0;
 }
 
 .blog-news-page .article-title, .blog-news-page .site-header .header-body .article-title a, .site-header .header-body .article-title .blog-news-page a {
@@ -1155,8 +1168,7 @@ a img {
 }
 @media screen and (max-width: 640px) {
   .site-header .header-bottom .header-bottom-inner .wrap {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 20px;
   }
 }
 @media screen and (max-width: 422px) {
@@ -1218,6 +1230,12 @@ a img {
   margin: 0;
   text-transform: none;
 }
+@media screen and (max-width: 640px) {
+  .site-header .header-body .article-title, .site-header .header-body .article-title a,
+  .site-header .header-body .article-title a {
+    font-size: 32px;
+  }
+}
 .site-header .header-body .article-title a {
   font-size: 1em;
   text-decoration: none;
@@ -1250,7 +1268,7 @@ a img {
   right: 0;
   display: none;
   margin-top: -6px;
-  padding: 5px;
+  padding: 6px;
 }
 .toggle-sub-menu:before {
   display: block;
@@ -1258,11 +1276,11 @@ a img {
   height: 0;
   content: '';
   border-style: solid;
-  border-width: 5px 0 5px 10px;
+  border-width: 5px 0 5px 8px;
   border-color: transparent transparent transparent #000;
 }
 .toggle-sub-menu.active:before {
-  border-width: 10px 5px 0 5px;
+  border-width: 8px 5px 0;
   border-color: #000 transparent transparent transparent;
 }
 .toggle-sub-menu.visible {
@@ -1371,24 +1389,21 @@ a img {
 
   .mobile-menu-toggler {
     position: absolute;
-    top: -11px;
-    right: -13px;
+    top: -14px;
     display: block;
-    width: 42px;
-    height: 42px;
+    right: -12px;
+    width: 45px;
+    height: 45px;
     outline: 0;
   }
   .mobile-menu-toggler span, .mobile-menu-toggler span:before, .mobile-menu-toggler span:after {
     position: absolute;
     top: 14px;
-    left: 11px;
+    left: 12px;
     display: block;
-    width: 20px;
+    width: 21px;
     height: 3px;
     content: '';
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
     background-color: black;
   }
   .dark-background .mobile-menu-toggler span, .dark-background .mobile-menu-toggler span:before, .dark-background .mobile-menu-toggler span:after {
@@ -1408,11 +1423,11 @@ a img {
     color: white;
   }
   .mobile-menu-toggler span:before {
-    top: 6px;
+    top: 7px;
     left: 0;
   }
   .mobile-menu-toggler span:after {
-    top: 12px;
+    top: 14px;
     left: 0;
   }
 
@@ -1424,7 +1439,7 @@ a img {
     bottom: 0;
     overflow: auto;
     display: block;
-    width: 160px;
+    width: 250px;
     padding: 80px 20px 50px;
     background-color: white;
     overflow: hidden;
@@ -1492,8 +1507,8 @@ a img {
     padding: 10px 0;
   }
   #mobile-menu ul a {
-    font-size: 18px;
-    font-size: 1.125rem;
+    font-size: 16px;
+    font-size: 1rem;
     padding: 10px 0;
     text-transform: uppercase;
     line-height: 1.3;
@@ -2665,6 +2680,12 @@ a img {
   font-size: 2rem;
   line-height: 1.4;
 }
+@media screen and (max-width: 640px) {
+  .content-area h1 {
+    font-size: 28px;
+    font-size: 1.75rem;
+  }
+}
 .site-header .content-area h1 {
   margin-top: .3em;
   margin-bottom: .3em;
@@ -2676,14 +2697,20 @@ a img {
 }
 @media screen and (max-width: 640px) {
   .site-header .content-area h1 {
-    font-size: 40px;
-    font-size: 2.5rem;
+    font-size: 32px;
+    font-size: 2rem;
   }
 }
 .content-area h2 {
   font-size: 26px;
   font-size: 1.625rem;
   line-height: 1.5;
+}
+@media screen and (max-width: 640px) {
+  .content-area h2 {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
 }
 .site-header .content-area h2 {
   margin-top: .2em;

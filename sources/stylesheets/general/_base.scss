@@ -78,8 +78,8 @@ a {
   }
 
   .mobilemenu-open & {
-    -webkit-transform: translate3d(-160px, 0, 0);
-    transform: translate3d(-160px, 0, 0);
+    -webkit-transform: translate3d(-250px, 0, 0);
+    transform: translate3d(-250px, 0, 0);
 
     &:after {
       width: 100%;
@@ -220,10 +220,18 @@ a {
 
   .common-page .top-row & {
     padding: 50px 40px 20px;
+
+    @include query($tablet-3) {
+      padding: 30px 20px;
+    }
   }
 
   .common-page .bottom-row & {
-    padding: 0 30px $margin-half;
+    padding: 0 40px 50px;
+
+    @include query($tablet-3) {
+      padding: 0 20px 20px;
+    }
   }
 
   @include query($tablet-3) {

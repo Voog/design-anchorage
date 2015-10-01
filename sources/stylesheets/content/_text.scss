@@ -113,6 +113,10 @@
     @include rem-fallback(font-size, $font-size-huge);
     line-height: $line-height-middle;
 
+    @include query($tablet-3) {
+      @include rem-fallback(font-size, 28px);
+    }
+
     .site-header & {
       margin-top: .3em;
       margin-bottom: .3em;
@@ -122,7 +126,7 @@
       line-height: 1.1;
 
       @include query($tablet-3) {
-        @include rem-fallback(font-size, 40px);
+        @include rem-fallback(font-size, 32px);
       }
     }
 
@@ -134,6 +138,10 @@
   h2 {
     @include rem-fallback(font-size, $font-size-large);
     line-height: 1.5;
+
+    @include query($tablet-3) {
+      @include rem-fallback(font-size, 24px);
+    }
 
     .site-header & {
       margin-top: .2em;
