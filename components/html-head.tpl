@@ -27,3 +27,4 @@
 {% comment %}MISC{% endcomment %}
 {% include "site-meta" %}
 {% if blog %}{{ blog.rss_link }}{% endif %}
+{{ site.stats_header }}
