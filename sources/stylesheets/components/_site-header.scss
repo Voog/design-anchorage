@@ -90,6 +90,12 @@
   position: relative;
   text-align: right;
 
+  @include query($tablet-3) {
+    .search-open & {
+      position: static;
+    }
+  }
+
   .no-flexbox & {
     float: right;
   }

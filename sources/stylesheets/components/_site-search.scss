@@ -33,6 +33,16 @@
   height: 50px;
   line-height: 1;
 
+  @include query($tablet-3) {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+    @include bg($white, 1);
+  }
+
   #mobile-search & {
     width: 100%;
     max-width: 100%;
@@ -70,31 +80,15 @@
 
 .search-inner {
   position: relative;
-  max-width: 400px;
   @include box-shadow(0, 2px, 4px, 0, rgba($black-base, .1));
 
   #mobile-search & {
     box-shadow: none;
   }
 
-  // .search-close-btn {
-  //   display: none;
-
-  //   &.active {
-  //     display: block;
-  //     position: absolute;
-  //     top: 12px;
-  //     right: 10px;
-  //     z-index: 20;
-  //     margin-right: 0;
-
-  //     .mobile-search-open & {
-  //       top: 15px;
-  //       right: 0;
-  //       z-index: 9999;
-  //     }
-  //   }
-  // }
+  @media screen and (min-width: $tablet-3 + 1) {
+    max-width: 400px;
+  }
 }
 
 .search-form {
@@ -113,7 +107,16 @@
     max-width: 400px;
     margin: 0 auto;
     border: none;
+  }
 
+  @include query($tablet-3) {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding-top: 10px;
+    max-width: none;
+    z-index: 1000;
   }
 }
 
@@ -130,6 +133,12 @@
   background: none;
   box-sizing: border-box;
   border: none;
+
+  @include query($tablet-3) {
+    .search-open & {
+      padding: 0 40px;
+    }
+  }
 
   #mobile-search & {
     border-bottom: 1px solid $black-base;
@@ -192,7 +201,7 @@
 }
 
 .search-btn {
-  z-index: 19;
+  z-index: 21;
   vertical-align: middle;
   width: 26px;
   height: 26px;
@@ -203,6 +212,10 @@
     margin-right: 30px;
     top: -5px;
     position: relative;
+
+    .search-active & {
+      position: static;
+    }
   }
 
   .header-options & {
@@ -248,6 +261,30 @@
   }
 }
 
+.search-open-btn {
+  @include query($tablet-3) {
+    .search-open & {
+      margin: 0;
+      position: absolute;
+      top: 16px;
+      left: 10px;
+    }
+  }
+}
+
+.search-close-btn {
+  @include querymin($tablet-3 + 1) {
+    display: none;
+  }
+
+  @include query($tablet-3) {
+    position: absolute;
+    right: 0;
+    top: -14px;
+    z-index: 1000;
+  }
+}
+
 .voog-search-modal {
   display: none;
   box-sizing: border-box;
@@ -274,11 +311,29 @@
   &.search-results-active {
     display: block;
   }
+
+  @include query($tablet-3) {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    max-width: 100%;
+    max-height: none;
+    margin-top: 50px;
+    height: 100vh;
+    @include color($white, 1);
+  }
 }
 
 .voog-search-modal-results {
   @include querymin($tablet-2) {
     max-height: 70vh;
+  }
+
+  @include querymin($tablet-3) {
+    background: #FFF none repeat scroll 0% 0%;
+    margin-top: 60px;
   }
 
   .mobile-search-open & {

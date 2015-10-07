@@ -9557,6 +9557,7 @@ return jQuery;
   var handleElementsClick = function() {
     $('.site-container').on('mousedown', function(event) {
       if (!$(event.target).closest('.js-prevent-sideclick').length) {
+
         if ($('.js-btn').hasClass('open')) {
           $('.js-btn').removeClass('open');
         }
@@ -9582,6 +9583,10 @@ return jQuery;
         if ($('body').hasClass('comments-open')) {
           $('body').removeClass('comments-open');
           $('.js-comments-toggle-btn, .js-voog-comments-modal').removeClass('open');
+        }
+
+        if ($('html').hasClass('search-open')) {
+          $('html').removeClass('search-open');
         }
       }
     });
@@ -9616,6 +9621,7 @@ return jQuery;
     $('.js-search-toggle-btn').click(function() {
       $('.js-search').toggleClass('active');
       $('.js-search').hasClass('active') ? $('.js-search-input').focus() : '';
+      $('html').toggleClass('search-open');
     });
 
     $('.js-search-input').on('input', function() {
@@ -9632,9 +9638,8 @@ return jQuery;
     });
 
     $('.js-search-reset-btn').click(function() {
-      $(this).prev().find('.js-search-input').val('').focus();
-      $(this).removeClass('active');
-      $('.js-mobile-search-toggle-btn').removeClass('search-active');
+      $('html').removeClass('search-open');
+      $('.js-search').removeClass('active');
     });
 
     $('.js-mobile-search-toggle-btn').click(function() {
@@ -9752,20 +9757,20 @@ return jQuery;
   // Initiations
   var initWindowResize = function() {
     $(window).resize(debounce(commentsHeight, 100));
-    $(window).resize(debounce(mobileResize, 100));
+    // $(window).resize(debounce(mobileResize, 100));
   };
 
   // Close elements not intended for the specific viewport when resizing
-  var mobileResize = function() {
-    if ($(window).width() >= 768) {
-      $('body').removeClass('mobile-search-open');
-      $('body').removeClass('mobilemenu-open');
-    }
+  // var mobileResize = function() {
+  //   if ($(window).width() >= 768) {
+  //     $('body').removeClass('mobile-search-open');
+  //     $('body').removeClass('mobilemenu-open');
+  //   }
 
-    if ($(window).width() < 768) {
-      $('.site-header .js-search').removeClass('active');
-    }
-  };
+  //   if ($(window).width() < 768) {
+  //     $('.site-header .js-search').removeClass('active');
+  //   }
+  // };
 
   // Scrolls to the comment-form if comment submit failed (to show the error messages to the user)
   var focusFormWithErrors = function() {

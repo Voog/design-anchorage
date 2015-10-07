@@ -51,6 +51,10 @@
 html {
   font-size: 16px;
 }
+html.search-open {
+  height: 100%;
+  overflow: hidden;
+}
 
 body {
   margin: 0;
@@ -60,6 +64,13 @@ body {
   font-weight: 300;
   line-height: 1;
   -webkit-text-size-adjust: 100%;
+}
+.search-open body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 a {
@@ -366,6 +377,11 @@ a img {
 }
 .dark-background .site-options .search-btn svg path {
   fill: white;
+}
+@media screen and (max-width: 640px) {
+  .search-open .dark-background .site-options .search-btn svg path {
+    fill: black;
+  }
 }
 .front-page .dark-background .main-feature .aspect-ratio-inner {
   border-color: rgba(255, 255, 255, 0.33);
@@ -1140,6 +1156,11 @@ a img {
   position: relative;
   text-align: right;
 }
+@media screen and (max-width: 640px) {
+  .search-open .site-header .header-right {
+    position: static;
+  }
+}
 .no-flexbox .site-header .header-right {
   float: right;
 }
@@ -1262,6 +1283,11 @@ a img {
 @media screen and (max-width: 850px) {
   .menu-btn-wrap {
     display: none;
+  }
+}
+@media screen and (min-width: 642px) {
+  .search-open .menu-btn-wrap {
+    position: static;
   }
 }
 
@@ -2064,6 +2090,17 @@ a img {
   height: 50px;
   line-height: 1;
 }
+@media screen and (max-width: 640px) {
+  .search {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+    background-color: white;
+  }
+}
 #mobile-search .search {
   width: 100%;
   max-width: 100%;
@@ -2097,13 +2134,17 @@ a img {
 
 .search-inner {
   position: relative;
-  max-width: 400px;
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 #mobile-search .search-inner {
   box-shadow: none;
+}
+@media screen and (min-width: 641px) {
+  .search-inner {
+    max-width: 400px;
+  }
 }
 
 .search-form {
@@ -2123,6 +2164,17 @@ a img {
   margin: 0 auto;
   border: none;
 }
+@media screen and (max-width: 640px) {
+  .search-form {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding-top: 10px;
+    max-width: none;
+    z-index: 1000;
+  }
+}
 
 .search-input {
   vertical-align: middle;
@@ -2137,6 +2189,11 @@ a img {
   background: none;
   box-sizing: border-box;
   border: none;
+}
+@media screen and (max-width: 640px) {
+  .search-open .search-input {
+    padding: 0 40px;
+  }
 }
 #mobile-search .search-input {
   border-bottom: 1px solid #000;
@@ -2193,7 +2250,7 @@ a img {
 }
 
 .search-btn {
-  z-index: 19;
+  z-index: 21;
   vertical-align: middle;
   width: 26px;
   height: 26px;
@@ -2205,6 +2262,9 @@ a img {
     margin-right: 30px;
     top: -5px;
     position: relative;
+  }
+  .search-active .search-btn {
+    position: static;
   }
 }
 .front-page .header-options .search-btn {
@@ -2236,6 +2296,29 @@ a img {
   }
 }
 
+@media screen and (max-width: 640px) {
+  .search-open .search-open-btn {
+    margin: 0;
+    position: absolute;
+    top: 16px;
+    left: 10px;
+  }
+}
+
+@media screen and (min-width: 642px) {
+  .search-close-btn {
+    display: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  .search-close-btn {
+    position: absolute;
+    right: 0;
+    top: -14px;
+    z-index: 1000;
+  }
+}
+
 .voog-search-modal {
   display: none;
   box-sizing: border-box;
@@ -2262,10 +2345,30 @@ a img {
 .voog-search-modal.search-results-active {
   display: block;
 }
+@media screen and (max-width: 640px) {
+  .voog-search-modal {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    max-width: 100%;
+    max-height: none;
+    margin-top: 50px;
+    height: 100vh;
+    color: white;
+  }
+}
 
 @media screen and (min-width: 851px) {
   .voog-search-modal-results {
     max-height: 70vh;
+  }
+}
+@media screen and (min-width: 641px) {
+  .voog-search-modal-results {
+    background: #FFF none repeat scroll 0% 0%;
+    margin-top: 60px;
   }
 }
 @media screen and (min-width: 851px) {
