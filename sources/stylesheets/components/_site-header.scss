@@ -3,8 +3,10 @@
   padding-bottom: $padding-general - 40px;
   position: relative;
 
-  .search-open & {
-    position: static;
+  @include query($tablet-3) {
+    .search-open & {
+      position: static;
+    }
   }
 
   .header-top {

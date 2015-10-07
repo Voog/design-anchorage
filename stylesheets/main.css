@@ -1087,8 +1087,10 @@ a img {
   padding-bottom: 30px;
   position: relative;
 }
-.search-open .site-header {
-  position: static;
+@media screen and (max-width: 640px) {
+  .search-open .site-header {
+    position: static;
+  }
 }
 .site-header .header-top .wrap {
   padding-top: 40px;
@@ -1304,11 +1306,6 @@ a img {
 @media screen and (max-width: 850px) {
   .menu-btn-wrap {
     display: none;
-  }
-}
-@media screen and (min-width: 642px) {
-  .search-open .menu-btn-wrap {
-    position: static;
   }
 }
 

@@ -10,12 +10,6 @@
   @include query($tablet-2) {
     display: none;
   }
-
-  @include querymin($tablet-3 + 1) {
-    .search-open & {
-      position: static;
-    }
-  }
 }
 
 .toggle-sub-menu {
