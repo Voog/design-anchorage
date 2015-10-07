@@ -64,7 +64,7 @@
           <div class="wrap js-toggle-article-type{% if photo_article %} is-photoheader{% endif %}">
             <div class="header-body content-area js-article-header-title-wrap">
               {% comment %}Photo article header components{% endcomment %}
-              {% if photo_article %}<h1 class="article-title js-article-title">{% if editmode %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>{% endif %}
+              {% if photo_article %}<h1 class="article-title js-article-title js-slide-to-article">{% if editmode %}{% editable article.title %}{% else %}{{ article.title }}{% endif %}</h1>{% endif %}
               <time class="article-date js-photo-article-component{% unless photo_article %} is-hidden{% endunless %}" datetime="{{ article.created_at | date: "%Y-%m-%d" }}">{{ article.created_at | format_date: "long" }}, </time>
               <div class="article-author js-photo-article-component{% unless photo_article %} is-hidden{% endunless %}">{{ article.author.name }}</div>
 

@@ -1268,6 +1268,9 @@ a img {
   margin: 0;
   text-transform: none;
 }
+.public .site-header .header-body .article-title, .public .site-header .header-body .article-title a {
+  cursor: pointer;
+}
 @media screen and (max-width: 640px) {
   .site-header .header-body .article-title, .site-header .header-body .article-title a,
   .site-header .header-body .article-title a {
