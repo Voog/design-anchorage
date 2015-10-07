@@ -158,6 +158,9 @@ a img {
   overflow: visible;
 }
 
+.page-body {
+  position: relative;
+}
 .flexbox .page-body {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;

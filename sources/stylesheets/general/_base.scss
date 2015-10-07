@@ -113,6 +113,8 @@ a {
 }
 
 .page-body {
+  position: relative;
+
   .flexbox & {
     @include flex(1);
   }

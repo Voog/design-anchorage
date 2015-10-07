@@ -159,6 +159,12 @@
     background-color: {{ content_bg_2_color }};
   }
 
+  {% comment %}/* SITE MAIN CONTENT AREA BACKGROUND */{% endcomment %}
+  {% comment %}/* Site main content area background color style. */{% endcomment %}
+  .common-page .page-body .background-color {
+    background-color: {{ body_bg_color }};
+  }
+
   {% comment %}/* FOOTER BACKGROUND */{% endcomment %}
   {% comment %}/* Front page content area 1 background color style. */{% endcomment %}
   .site-footer .background-color {
