@@ -25,29 +25,31 @@
             {% endif %}
 
             <div class="js-background-type {{ content_bg_1_type }}">
-              <div class="main-content">
-                <div class="wrap">
-                  <div class="inner content-area" data-search-indexing-allowed="true">{% content %}</div>
+              {% if editmode or main_content_has_content %}
+                <div class="main-content">
+                  <div class="wrap">
+                    <div class="inner content-area" data-search-indexing-allowed="true">{% content %}</div>
+                  </div>
                 </div>
-              </div>
+              {% endif %}
 
               <div class="main-feature">
                 <div class="wrap">
-                  {% if editmode or feature_image_1 or feature_1_has_content == "true" %}
+                  {% if editmode or feature_image_1 or feature_1_has_content %}
                     <div class="feature">
                       <div class="feature-image">{% if editmode %}<div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_1" data-image="{{ feature_image_1.url }}"></div>{% elsif feature_image_1 %}<div class="aspect-ratio-inner" style="background-image: url('{{ feature_image_1.url }}')"></div>{% endif %}</div>
                       <div class="feature-content content-area" data-search-indexing-allowed="true">{% content name="feature_1" %}</div>
                     </div>
                   {% endif %}
 
-                  {% if editmode or feature_image_2 or feature_2_has_content == "true" %}
+                  {% if editmode or feature_image_2 or feature_2_has_content %}
                     <div class="feature">
                       <div class="feature-image">{% if editmode %}<div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_2" data-image="{{ feature_image_2.url }}"></div>{% elsif feature_image_2 %}<div class="aspect-ratio-inner" style="background-image: url('{{ feature_image_2.url }}')"></div>{% endif %}</div>
                       <div class="feature-content content-area" data-search-indexing-allowed="true">{% content name="feature_2" %}</div>
                     </div>
                   {% endif %}
 
-                  {% if editmode or feature_image_3 or feature_3_has_content == "true" %}
+                  {% if editmode or feature_image_3 or feature_3_has_content %}
                     <div class="feature">
                       <div class="feature-image">{% if editmode %}<div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_3" data-image="{{ feature_image_3.url }}"></div>{% elsif feature_image_3 %}<div class="aspect-ratio-inner" style="background-image: url('{{ feature_image_3.url }}')"></div>{% endif %}</div>
                       <div class="feature-content content-area" data-search-indexing-allowed="true">{% content name="feature_3" %}</div>

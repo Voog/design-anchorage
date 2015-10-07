@@ -298,7 +298,7 @@ a img {
   padding: 50px 40px;
 }
 .front-page .main-content .inner {
-  padding: 70px 40px;
+  padding: 70px 40px 0;
 }
 @media screen and (max-width: 640px) {
   .front-page .main-content .inner {
@@ -547,6 +547,9 @@ a img {
 }
 .front-page .page-content .content-slogan {
   margin-bottom: 80px;
+}
+.front-page .main-feature {
+  padding-top: 70px;
 }
 .front-page .main-feature .wrap {
   padding: 0 40px;

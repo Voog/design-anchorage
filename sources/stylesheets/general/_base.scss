@@ -223,7 +223,7 @@ a {
   padding: 50px 40px;
 
   .front-page .main-content & {
-    padding: 70px 40px;
+    padding: 70px 40px 0;
 
     @include query($tablet-3) {
       padding-right: 20px;
