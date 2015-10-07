@@ -45,68 +45,42 @@
       text-decoration: none;
     }
   }
+
   .header-body {
     .blog-article-page & {
       text-align: center;
     }
-
-  //   // .content-formatted {
-  //   //   @include query($mobile-1 - 58) {
-  //   //     font-size: 24px;
-  //   //   }
-  //   // }
-
-  //   // h1 {
-  //   //   @include rem-fallback(font-size, $font-size-header);
-  //   //   font-weight: $font-weight-bold;
-  //   //   line-height: $line-height-normal;
-  //   //   text-transform: uppercase;
-  //   // }
-
-  //   // h2 {
-  //   //   @include rem-fallback(font-size, $font-size-huge);
-  //   //   text-transform: initial;
-  //   // }
-
-  //   // @include query($tablet-2) {
-  //   //   @include rem-fallback(font-size, $font-size-xl);
-  //   // }
-}
-
-.header-left {
-  .flexbox & {
-    @include flex(1 0 auto);
   }
 
-  .no-flexbox & {
-    float: left;
+  .header-left {
+    .flexbox & {
+      @include flex(1 0 auto);
+    }
+
+    .no-flexbox & {
+      float: left;
+
+      @include query($tablet-3) {
+        float: none;
+      }
+    }
+  }
+  .header-right {
+    position: relative;
+    text-align: right;
 
     @include query($tablet-3) {
-      float: none;
+      .search-open & {
+        position: static;
+      }
     }
-  }
-}
-.header-right {
-  position: relative;
-  text-align: right;
 
-  @include query($tablet-3) {
-    .search-open & {
-      position: static;
+    .no-flexbox & {
+      float: right;
     }
-  }
-
-  .no-flexbox & {
-    float: right;
-  }
-}
-.menu-main,
-.site-options {
-    // display: inline-block;
   }
 
   .header-bottom {
-
     .header-bottom-inner {
       display: table;
       table-layout: fixed;
@@ -115,21 +89,22 @@
       max-width: $width-max;
       margin: 0 auto;
 
+      .common-page &,
+      .blog-news-page &,
+      .blog-article-page & {
+        @include rem-fallback(height, 105px);
+      }
+
+      .front-page & {
+        min-height: 300px;
+        height: 60vh;
+        max-height: 626px;
+      }
+
       .wrap {
         display: table-cell;
         vertical-align: middle;
         padding: 60px 40px;
-        .front-page & {
-          @include rem-fallback(height, 532px);
-        }
-        .common-page &,
-        .blog-news-page &,
-        .blog-article-page & {
-          @include rem-fallback(height, 105px);
-        }
-        &.is-photoheader{
-          @include rem-fallback(height, 532px);
-        }
 
         @include query($tablet-3) {
           padding: 20px;
@@ -147,6 +122,16 @@
             @include rem-fallback(height, 222px);
           }
         }
+      }
+    }
+  }
+
+  &.photo-article {
+    .header-bottom {
+      .header-bottom-inner {
+        min-height: 300px;
+        height: 60vh;
+        max-height: 626px;
       }
     }
   }

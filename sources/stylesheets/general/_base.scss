@@ -44,6 +44,11 @@ a {
   border-style: none;
   opacity: .9;
 
+  &::-moz-focus-inner {
+    padding: 0;
+    border: none;
+  }
+
   &.is-hidden {
     display: none;
   }

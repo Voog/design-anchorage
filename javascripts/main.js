@@ -9796,7 +9796,6 @@ return jQuery;
     if (currentButton.data('article-type') == 'photo-article') {
       $('.js-article-title').prependTo('.js-article-header-title-wrap');
 
-      $('.js-toggle-article-type').addClass('is-photoheader');
       $('.js-text-article-component').addClass('is-hidden');
       $('.js-photo-article-component').removeClass('is-hidden');
 
@@ -9810,7 +9809,6 @@ return jQuery;
     } else {
       $('.js-article-title').prependTo('.js-article-body-title-wrap');
 
-      $('.js-toggle-article-type').removeClass('is-photoheader');
       $('.js-photo-article-component').addClass('is-hidden');
       $('.js-text-article-component').removeClass('is-hidden');
 
