@@ -14,13 +14,15 @@
       {% for item in site.menuitems_with_hidden %}
         {% if item.selected? %}
           {% if editmode or item.children? %}
-            <div class="page-body sidebar-active">
-              {% include "site-sidebar" %}
-          {% else %}
-            <div class="page-body">
+            {% assign sidebar_active = true %}
           {% endif %}
         {% endif %}
       {% endfor %}
+
+      <div class="page-body{% if sidebar_active %} sidebar-active{% endif %}">
+        {% if sidebar_active %}
+          {% include "site-sidebar" %}
+        {% endif %}
 
         <main class="page-content" role="main">
           {% comment %}Set variables to detect if "content areas" have content{% endcomment %}
@@ -32,7 +34,6 @@
           {% capture content_right_size %}{{ content_right_html | size | minus : 1 }}{% endcapture %}
 
           <div class="main-inner-row content-full light-background">
-
             <div class="main-content top-row">
               <div class="wrap">
                 <div class="inner">
@@ -45,7 +46,6 @@
 
             <div class="main-content bottom-row">
               <div class="wrap">
-
                 <div class="inner content-half content-left">
                   <section class="content-area">
                     <div class="content-body content-area" data-search-indexing-allowed="true">{% content name="left" %}</div>
@@ -57,12 +57,9 @@
                     <div class="content-body content-area" data-search-indexing-allowed="true">{% content name="right" %}</div>
                   </section>
                 </div>
-
               </div>
             </div>
-
           </div>
-
         </main>
       </div>
 
