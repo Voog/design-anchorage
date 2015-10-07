@@ -353,7 +353,7 @@ a {
   }
 
   .site-footer & {
-    @include color($black-light, 1);
+    @include color($black-base, .71);
   }
   .lang-title {
     @include color($black, 1);

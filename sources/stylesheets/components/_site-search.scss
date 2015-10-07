@@ -365,7 +365,7 @@
     margin: 5px 0 0;
     @include rem-fallback(font-size, $font-size-small);
     line-height: 24px;
-    @include color($black-light);
+    @include color($black-base, .71);
   }
 
   em {

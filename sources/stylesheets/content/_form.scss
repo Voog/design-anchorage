@@ -45,7 +45,7 @@
     @include rem-fallback(font-size, $font-size-base);
     font-weight: $font-weight-light;
     line-height: $font-size-large;
-    @include color($black-light, 1);
+    @include color($black-base, .71);
     background-color: transparent;
     border-width: 1px;
     border-style: solid;
@@ -198,7 +198,7 @@
       }
 
       &:hover {
-        @include bg($black-light, 1);
+        @include bg($black-base, .71);
         @include transition($transition);
 
         .dark-background & {
@@ -237,7 +237,7 @@
   .form_notice {
     @include rem-fallback(font-size, $font-size-large);
     font-weight: $font-weight-light;
-    @include color($black-light, 1);
+    @include color($black-base, .71);
     margin-bottom: $margin-low;
 
     .dark-background & {

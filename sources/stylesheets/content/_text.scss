@@ -4,7 +4,7 @@
 .content-area {
   @extend %clearfix;
   @include hyphenate(true);
-  @include color($black-light);
+  @include color($black-base, .71);
   @include rem-fallback(font-size, $font-size-normal);
   line-height: $line-height-medium;
 
@@ -328,7 +328,7 @@
       .dark-background & {
         border: 2px solid $white;
         @include bg($white, 1);
-        @include color(#4a4a4a, 1);
+        @include color($black-base, .71);
       }
 
       .light-background & {

@@ -53,7 +53,7 @@
 
     font-weight: $font-weight-light;
     line-height: $line-height-medium;
-    @include color($black-light, 1);
+    @include color($black-base, .71);
   }
 
   .article-header {

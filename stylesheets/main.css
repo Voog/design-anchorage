@@ -413,7 +413,8 @@ a img {
   color: black;
 }
 .site-footer .light-background {
-  color: #4a4a4a;
+  color: #000;
+  color: rgba(0, 0, 0, 0.71);
 }
 .light-background .lang-title {
   color: black;
@@ -783,7 +784,8 @@ a img {
   font-size: 1.125rem;
   font-weight: 300;
   line-height: 1.7;
-  color: #4a4a4a;
+  color: #000;
+  color: rgba(0, 0, 0, 0.71);
 }
 .blog-news-page .article-header {
   margin: 0 100px 30px;
@@ -882,7 +884,8 @@ a img {
   font-size: 1.125rem;
   font-weight: 300;
   line-height: 1.7;
-  color: #4a4a4a;
+  color: #000;
+  color: rgba(0, 0, 0, 0.71);
   margin: 30px 0;
 }
 .blog-article-page .article-excerpt {
@@ -902,7 +905,8 @@ a img {
   cursor: pointer;
 }
 .blog-article-page .comments-title span {
-  color: #4a4a4a;
+  color: #000;
+  color: rgba(0, 0, 0, 0.71);
 }
 .blog-article-page .inner {
   padding: 30px 20px;
@@ -1013,7 +1017,8 @@ a img {
 }
 .article-comments .comment {
   margin: 20px 0 0;
-  color: #4a4a4a;
+  color: #000;
+  color: rgba(0, 0, 0, 0.71);
 }
 .article-comments .comment:first-child {
   margin-top: 0;
@@ -1051,7 +1056,8 @@ a img {
 }
 @media screen and (min-width: 851px) {
   .article-comments .comments-close .btn-close:hover {
-    background-color: #4a4a4a;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.71);
     -webkit-transition: 500ms;
     -moz-transition: 500ms;
     transition: 500ms;
@@ -1066,7 +1072,7 @@ a img {
     fill: black;
   }
   .article-comments .comments-close .btn-close .ico-close:hover {
-    fill: #4a4a4a;
+    fill: rgba(0, 0, 0, 0.71);
     -webkit-transition: 500ms;
     -moz-transition: 500ms;
     transition: 500ms;
@@ -2403,7 +2409,8 @@ a img {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 24px;
-  color: #4a4a4a;
+  color: #000;
+  color: rgba(0, 0, 0, 0.71);
 }
 .voog-search-modal-results em {
   font-style: normal;
@@ -2592,7 +2599,8 @@ a img {
 }
 .site-footer .blog-article-nav .article-nav-full:hover .article-nav-direction,
 .site-footer .blog-article-nav .article-nav-half:hover .article-nav-direction {
-  color: #4a4a4a;
+  color: #000;
+  color: rgba(0, 0, 0, 0.71);
 }
 .site-footer .blog-article-nav .article-nav-full a,
 .site-footer .blog-article-nav .article-nav-half a {
@@ -2647,7 +2655,8 @@ a img {
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 30px;
-  color: #4a4a4a;
+  color: #000;
+  color: rgba(0, 0, 0, 0.71);
 }
 .site-footer .blog-article-nav .article-nav-bg {
   position: absolute;
@@ -2674,7 +2683,8 @@ a img {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-  color: #4a4a4a;
+  color: #000;
+  color: rgba(0, 0, 0, 0.71);
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.7;
@@ -3004,7 +3014,8 @@ a img {
 .dark-background .content-area .custom-btn:hover {
   border: 2px solid #ffffff;
   background-color: white;
-  color: #4a4a4a;
+  color: #000;
+  color: rgba(0, 0, 0, 0.71);
 }
 .light-background .content-area .custom-btn:hover {
   border: 2px solid #222222;
@@ -3206,7 +3217,8 @@ a img {
   font-size: 1rem;
   font-weight: 300;
   line-height: 26px;
-  color: #4a4a4a;
+  color: #000;
+  color: rgba(0, 0, 0, 0.71);
   background-color: transparent;
   border-width: 1px;
   border-style: solid;
@@ -3364,7 +3376,8 @@ a img {
   }
 }
 .content-area .form_submit input:hover {
-  background-color: #4a4a4a;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.71);
   -webkit-transition: 500ms;
   -moz-transition: 500ms;
   transition: 500ms;
@@ -3397,7 +3410,8 @@ a img {
   font-size: 26px;
   font-size: 1.625rem;
   font-weight: 300;
-  color: #4a4a4a;
+  color: #000;
+  color: rgba(0, 0, 0, 0.71);
   margin-bottom: 20px;
 }
 .dark-background .content-area .form_notice {
