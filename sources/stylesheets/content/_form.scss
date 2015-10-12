@@ -16,6 +16,7 @@
     .form_field_label {
       position: relative;
       display: block;
+      margin-bottom: 5px;
       @include rem-fallback(font-size, $font-size-base);
     }
   }
@@ -29,26 +30,21 @@
   .form_field_textfield,
   .form_field_textarea,
   .form_field_select {
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-
-  .form_field_textfield,
-  .form_field_textarea,
-  .form_field_select {
     @extend %input-ios-reset;
     @extend %inherit-base-font;
-    padding: 10px 13px;
+    max-width: 100%;
+    padding: 8px 13px;
     @include rem-fallback(font-size, $font-size-base);
     font-weight: $font-weight-light;
     line-height: $font-size-large;
     @include color($black-base, .71);
-    background-color: transparent;
+    background-color: #dedede;
     border-width: 1px;
     border-style: solid;
     border-color: $white-cloudy;
     vertical-align: bottom;
     outline: none;
+    box-sizing: border-box;
 
     &.form_field_size_small {
       width: 280px;
@@ -112,7 +108,7 @@
         position: relative;
         display: inline-block;
         vertical-align: middle;
-        margin-right: 5px;
+        margin-right: 10px;
         border-style: solid;
         border-width: 1px;
         border-color: rgba($black-base, .2);
@@ -155,7 +151,6 @@
     .svg & {
       + .form_control_indicator {
         top: -2px;
-        border-radius: 3px;
 
         &:before {
           @include transform(scale(0) rotate(45deg));

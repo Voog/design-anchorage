@@ -3257,6 +3257,7 @@ a img {
 .content-area .form_field .form_field_label {
   position: relative;
   display: block;
+  margin-bottom: 5px;
   font-size: 16px;
   font-size: 1rem;
 }
@@ -3267,24 +3268,20 @@ a img {
 .content-area .form_field_textarea,
 .content-area .form_field_select {
   max-width: 100%;
-  box-sizing: border-box;
-}
-.content-area .form_field_textfield,
-.content-area .form_field_textarea,
-.content-area .form_field_select {
-  padding: 10px 13px;
+  padding: 8px 13px;
   font-size: 16px;
   font-size: 1rem;
   font-weight: 300;
   line-height: 26px;
   color: #000;
   color: rgba(0, 0, 0, 0.71);
-  background-color: transparent;
+  background-color: #dedede;
   border-width: 1px;
   border-style: solid;
   border-color: #dedede;
   vertical-align: bottom;
   outline: none;
+  box-sizing: border-box;
 }
 .content-area .form_field_textfield.form_field_size_small,
 .content-area .form_field_textarea.form_field_size_small,
@@ -3362,7 +3359,7 @@ a img {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  margin-right: 5px;
+  margin-right: 10px;
   border-style: solid;
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0.2);
@@ -3402,7 +3399,6 @@ a img {
 }
 .svg .content-area .form_field_checkbox + .form_control_indicator {
   top: -2px;
-  border-radius: 3px;
 }
 .svg .content-area .form_field_checkbox + .form_control_indicator:before {
   -webkit-transform: scale(0) rotate(45deg);
