@@ -144,6 +144,9 @@ a img {
   -ms-flex-direction: column;
   min-height: 100vh;
 }
+.editmode.flexbox .site-container {
+  min-height: calc(100vh - 40px);
+}
 .mobilemenu-open .site-container {
   -webkit-transform: translate3d(-250px, 0, 0);
   transform: translate3d(-250px, 0, 0);

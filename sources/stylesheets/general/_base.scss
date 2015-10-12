@@ -95,6 +95,10 @@ a {
     min-height: 100vh;
   }
 
+  .editmode.flexbox & {
+    min-height: calc(100vh - 40px);
+  }
+
   .mobilemenu-open & {
     -webkit-transform: translate3d(-250px, 0, 0);
     transform: translate3d(-250px, 0, 0);

@@ -66,9 +66,8 @@
             </div>
           </main>
         </div>
-        {% include "site-footer" %}
-
-      </div>
+      {% if sidebar_active %}</div>{% endif %}
+      {% include "site-footer" %}
     </div>
 
     {% include "menu-mobile" %}
