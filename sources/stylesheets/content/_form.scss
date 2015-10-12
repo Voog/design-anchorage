@@ -6,7 +6,7 @@
   }
 
   .form_field {
-    margin-top: 10px;
+    margin-top: 30px;
 
     &:first-child {
       margin-top: 0;
@@ -16,11 +16,7 @@
     .form_field_label {
       position: relative;
       display: block;
-      @include rem-fallback(font-size, $font-size-small);
-    }
-
-    .form_field_label {
-      font-weight: $font-weight-bold;
+      @include rem-fallback(font-size, $font-size-base);
     }
   }
 
@@ -194,8 +190,7 @@
       @include bg($black, 1);
       @include color($white, 1);
       border: none;
-      padding: 10px;
-      min-width: 200px;
+      padding: 10px 20px;
       text-transform: uppercase;
       font-family: $font-main;
       @include rem-fallback(font-size, $font-size-small);

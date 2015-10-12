@@ -767,14 +767,11 @@ a img {
   padding-top: 0;
 }
 .blog-news-page .blog-article .article-image {
-  position: relative;
-  height: 500px;
+  display: block;
 }
-@media screen and (max-width: 850px) {
-  .blog-news-page .blog-article .article-image {
-    margin: 0 -20px;
-    height: 250px;
-  }
+.blog-news-page .blog-article .article-image img {
+  max-width: 100%;
+  height: auto;
 }
 .blog-news-page .article-author,
 .blog-news-page .article-date {
@@ -1968,6 +1965,11 @@ a img {
   display: inline-block;
   vertical-align: top;
   margin-left: 40px;
+}
+@media screen and (max-width: 850px) {
+  .lang-menu {
+    display: none;
+  }
 }
 .lang-menu.lang-menu-bilingual .lang-title {
   display: inline-block;
@@ -3225,7 +3227,7 @@ a img {
   font-size: 0.875rem;
 }
 .content-area .form_field {
-  margin-top: 10px;
+  margin-top: 30px;
 }
 .content-area .form_field:first-child {
   margin-top: 0;
@@ -3234,11 +3236,8 @@ a img {
 .content-area .form_field .form_field_label {
   position: relative;
   display: block;
-  font-size: 14px;
-  font-size: 0.875rem;
-}
-.content-area .form_field .form_field_label {
-  font-weight: 700;
+  font-size: 16px;
+  font-size: 1rem;
 }
 .content-area .form_field_required .form_field_label:after {
   content: '* \a';
@@ -3420,8 +3419,7 @@ a img {
   background-color: black;
   color: white;
   border: none;
-  padding: 10px;
-  min-width: 200px;
+  padding: 10px 20px;
   text-transform: uppercase;
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;

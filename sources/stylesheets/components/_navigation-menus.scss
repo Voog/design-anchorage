@@ -698,6 +698,10 @@ $flags:
   vertical-align: top;
   margin-left: 40px;
 
+  @include query($tablet-2) {
+    display: none;
+  }
+
   &.lang-menu-bilingual {
     // position: relative;
     // top: 1px;

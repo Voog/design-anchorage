@@ -66,9 +66,9 @@
             </div>
           </main>
         </div>
-      </div>
+        {% include "site-footer" %}
 
-      {% include "site-footer" %}
+      </div>
     </div>
 
     {% include "menu-mobile" %}
