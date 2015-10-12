@@ -61,8 +61,8 @@
 
   &.active {
     position: absolute;
-    top: 30px;
-    right: -10px;
+    top: 0;
+    right: 0;
     z-index: 20;
     display: block;
 
@@ -285,10 +285,10 @@
   @include query($tablet-3) {
     position: absolute;
     right: 0;
-    top: -18px;
+    top: 10px;
     z-index: 1000;
     margin: 0;
-    padding: 12px 30px 12px 20px;
+    padding: 12px 20px;
     width: auto;
     height: auto;
     border-left: 1px solid #eeeeee;
@@ -330,7 +330,7 @@
     left: 0px;
     max-width: 100%;
     max-height: none;
-    margin-top: 57px;
+    padding-top: 57px;
     height: 100vh;
     @include color($white, 1);
     background-color: #f7f7f7;
