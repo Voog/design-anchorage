@@ -61,13 +61,12 @@
 
   &.active {
     position: absolute;
-    top: 0;
     right: 0;
     z-index: 20;
     display: block;
 
-    #mobile-search & {
-      margin-top: 0;
+    @include querymin($tablet-3) {
+      top: 30px;
     }
   }
 }
@@ -267,11 +266,6 @@
 }
 
 .search-open-btn {
-  @include querymin($tablet-3 + 1) {
-    .search-open & {
-      display: none;
-    }
-  }
   @include query($tablet-3) {
     .search-open & {
       margin: 0;
