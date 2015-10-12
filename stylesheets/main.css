@@ -2334,6 +2334,11 @@ a img {
   }
 }
 
+@media screen and (min-width: 642px) {
+  .search-open .search-open-btn {
+    display: none;
+  }
+}
 @media screen and (max-width: 640px) {
   .search-open .search-open-btn {
     margin: 0;

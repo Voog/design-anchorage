@@ -267,6 +267,11 @@
 }
 
 .search-open-btn {
+  @include querymin($tablet-3 + 1) {
+    .search-open & {
+      display: none;
+    }
+  }
   @include query($tablet-3) {
     .search-open & {
       margin: 0;
