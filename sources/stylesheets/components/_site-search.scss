@@ -40,7 +40,7 @@
     left: 0;
     height: 100%;
     width: auto;
-    @include bg($white, 1);
+    background-color: #f7f7f7;
   }
 
   #mobile-search & {
@@ -97,6 +97,10 @@
   @include bg($white, 1);
   @include box-shadow(0, 2px, 4px, 0, rgba($black-base, .1));
 
+  @include query($tablet-3) {
+    @include box-shadow(0, 1px, 1px, 0, rgba($black-base, .1));
+  }
+
   #mobile-search & {
     box-shadow: none;
     background-color: transparent;
@@ -115,6 +119,7 @@
     right: 0;
     top: 0;
     padding-top: 10px;
+    padding-bottom: 6px;
     max-width: none;
     z-index: 1000;
   }
@@ -136,7 +141,7 @@
 
   @include query($tablet-3) {
     .search-open & {
-      padding: 0 40px;
+      padding: 0px 61px 0 42px;
     }
   }
 
@@ -209,7 +214,7 @@
   margin-left: 28px;
 
   @include query($tablet-2) {
-    margin-right: 30px;
+    margin-right: 36px;
     top: -5px;
     position: relative;
 
@@ -280,8 +285,13 @@
   @include query($tablet-3) {
     position: absolute;
     right: 0;
-    top: -14px;
+    top: -18px;
     z-index: 1000;
+    margin: 0;
+    padding: 12px 30px 12px 20px;
+    width: auto;
+    height: auto;
+    border-left: 1px solid #eeeeee;
   }
 }
 
@@ -320,20 +330,16 @@
     left: 0px;
     max-width: 100%;
     max-height: none;
-    margin-top: 50px;
+    margin-top: 57px;
     height: 100vh;
     @include color($white, 1);
+    background-color: #f7f7f7;
   }
 }
 
 .voog-search-modal-results {
   @include querymin($tablet-2) {
     max-height: 70vh;
-  }
-
-  @include querymin($tablet-3) {
-    background: #FFF none repeat scroll 0% 0%;
-    margin-top: 60px;
   }
 
   .mobile-search-open & {

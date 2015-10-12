@@ -318,7 +318,7 @@ a {
 
     @include query($tablet-3) {
       .search-open & {
-        @include fill($black-base, 1);
+        @include fill($black-base, .71);
       }
     }
   }

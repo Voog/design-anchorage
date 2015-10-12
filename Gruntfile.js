@@ -45,6 +45,17 @@ module.exports = function(grunt) {
       }
     },
 
+    copy: {
+      formstone_dropdown: {
+        src: 'bower_components/formstone/dist/css/dropdown.css',
+        dest: 'sources/stylesheets/vendor/formstone/_dropdown.scss',
+      },
+      formstone_scrollbar: {
+        src: 'bower_components/formstone/dist/css/scrollbar.css',
+        dest: 'sources/stylesheets/vendor/formstone/_scrollbar.scss',
+      }
+    },
+
     // Compiles the stylesheet files.
     sass: {
       build: {
@@ -159,6 +170,7 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -168,7 +180,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-modernizr');
   grunt.loadNpmTasks('grunt-svgmin');
 
-  grunt.registerTask('default', ['modernizr', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
+  grunt.registerTask('default', ['modernizr', 'concat', 'uglify', 'copy', 'sass', 'cssmin', 'imagemin', 'svgmin']);
 
   grunt.event.on('watch', function(action, filepath, target) {
     if (target == 'voog') {

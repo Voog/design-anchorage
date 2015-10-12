@@ -15,22 +15,19 @@
       <div class="article-body content-area" data-search-indexing-allowed="true">{% editable article.body %}</div>
     </div>
   {% comment %}<!--Blog and news excerpt when no article photo-->{% endcomment %}
-  {% elsif article.data.photo_article_state == false or article.data.header_bg.image == "" %}
+  {% else %}
     <div class="article-content">
       <div class="article-excerpt content-area">{{ article.excerpt }}</div>
-    </div>
-  {% endif %}
 
   {% comment %}<!--Blog and news user custom photo-->{% endcomment %}
   {% unless blog_article_page %}
     {% if article.data.photo_article_state and article.data.header_bg.image != "" %}
-      <footer class="article-footer">
-        <div class="article-image">
-          <div class="background-image" style="background-image: url({{ article.data.header_bg.image }});"></div>
-          <a href="{{ article.url }}" class="stretch"></a>
-        </div>
-      </footer>
+      <div class="article-image">
+        <div class="background-image" style="background-image: url({{ article.data.header_bg.image }});"></div>
+        <a href="{{ article.url }}" class="stretch"></a>
+      </div>
     {% endif %}
   {% endunless %}
-
+    </div>
+  {% endif %}
 </article>

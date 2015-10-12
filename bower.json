@@ -1,7 +1,8 @@
 {
   "name": "voog-design-anchorage",
   "devDependencies": {
-    "bourbon": "~4.2.3"
+    "bourbon": "~4.2.3",
+    "formstone": "~0.8.19"
   },
   "dependencies": {
     "jquery": "~2.1.4",

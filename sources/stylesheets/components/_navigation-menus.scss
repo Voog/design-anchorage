@@ -151,7 +151,7 @@
     display: block;
     right: -12px;
     width: 45px;
-    height: 45px;
+    height: 44px;
     outline: 0;
 
     span {
@@ -163,7 +163,7 @@
         left: 12px;
         display: block;
         width: 21px;
-        height: 3px;
+        height: 2px;
         content: '';
         @include bg($black, 1);
 

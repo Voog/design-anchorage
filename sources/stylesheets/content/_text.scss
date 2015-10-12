@@ -48,7 +48,8 @@
   code,
   .edy-positionable-container-left-block,
   .edy-positionable-container-right-block,
-  .edy-positionable-container-center-block {
+  .edy-positionable-container-center-block,
+  .custom-btn {
     &:first-child {
       margin-top: 0;
     }
@@ -310,6 +311,14 @@
 
     .site-header & {
       margin: 30px 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     .dark-background & {

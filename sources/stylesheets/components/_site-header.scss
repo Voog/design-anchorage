@@ -1,6 +1,5 @@
 .site-header {
   @extend %clearfix;
-  padding-bottom: $padding-general - 40px;
   position: relative;
 
   @include query($tablet-3) {
@@ -94,13 +93,19 @@
       .common-page &,
       .blog-news-page &,
       .blog-article-page & {
-        @include rem-fallback(height, 105px);
+        @include rem-fallback(height, 253px);
+
+        @include query($tablet-3) {
+          @include rem-fallback(height, 130px);
+        }
       }
 
       .front-page & {
-        min-height: 300px;
-        height: 60vh;
-        max-height: 626px;
+        min-height: 684px;
+
+        @include query($tablet-3) {
+          min-height: 400px;
+        }
       }
 
       .wrap {
@@ -108,32 +113,49 @@
         vertical-align: middle;
         padding: 60px 40px;
 
+        .common-page &,
+        .blog-news-page &,
+        .blog-article-page & {
+          padding-top: 30px;
+
+          @include query($tablet-3) {
+            padding-top: 0;
+            padding-bottom: 20px;
+          }
+        }
+
         @include query($tablet-3) {
           padding: 20px;
         }
       }
 
-      @include query($mobile-1 - 58) {
-        .wrap {
-          @include rem-fallback(height, 222px);
+      // @include query($mobile-1 - 58) {
+      //   .wrap {
+      //     @include rem-fallback(height, 222px);
 
-          .front-page & {
-            @include rem-fallback(height, 222px);
-          }
-          &.is-photoheader{
-            @include rem-fallback(height, 222px);
-          }
-        }
-      }
+      //     .front-page & {
+      //       @include rem-fallback(height, 222px);
+      //     }
+      //     &.is-photoheader{
+      //       @include rem-fallback(height, 222px);
+      //     }
+      //   }
+      // }
     }
   }
 
   &.photo-article {
     .header-bottom {
       .header-bottom-inner {
-        min-height: 300px;
-        height: 60vh;
-        max-height: 626px;
+        min-height: 684px;
+
+        .wrap {
+          padding-top: 60px;
+        }
+
+        @include query($tablet-3) {
+          min-height: 400px;
+        }
       }
     }
   }
