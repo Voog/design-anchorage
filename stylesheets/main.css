@@ -2517,6 +2517,9 @@ a img {
 .site-sidebar .sidebar-title a {
   color: black;
 }
+.dark-background .site-sidebar .sidebar-title a {
+  color: white;
+}
 .site-sidebar .submenu {
   padding: 0;
 }
@@ -2539,12 +2542,22 @@ a img {
 .site-sidebar .submenu a {
   color: #a4a3a3;
 }
+.dark-background .site-sidebar .submenu a {
+  color: white;
+}
 .site-sidebar .submenu a:hover {
   color: black;
+}
+.dark-background .site-sidebar .submenu a:hover {
+  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
 }
 .site-sidebar .submenu .selected {
   font-weight: 400;
   color: black;
+}
+.dark-background .site-sidebar .submenu .selected {
+  color: white;
 }
 .site-sidebar .submenu .submenu-lvl2 {
   padding-left: 25px;
@@ -2562,6 +2575,9 @@ a img {
 }
 .site-sidebar .submenu .submenu-lvl2 a {
   color: black;
+}
+.dark-background .site-sidebar .submenu .submenu-lvl2 a {
+  color: white;
 }
 .site-sidebar .submenu .submenu-lvl2 a:hover {
   font-weight: 400;

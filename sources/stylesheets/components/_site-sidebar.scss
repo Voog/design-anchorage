@@ -24,6 +24,10 @@
 
     a {
       @include color($black, 1);
+
+      .dark-background & {
+        @include color($white, 1);
+      }
     }
 
   }
@@ -49,13 +53,25 @@
     a {
       @include color($black-lighter, 1);
 
+      .dark-background & {
+        @include color($white, 1);
+      }
+
       &:hover {
         @include color($black, 1);
+
+        .dark-background & {
+          @include color($white, .8);
+        }
       }
     }
     .selected {
       font-weight: $font-weight-normal;
       @include color($black, 1);
+
+      .dark-background & {
+        @include color($white, 1);
+      }
     }
 
     .submenu-lvl2 {
@@ -73,6 +89,10 @@
       a {
         @include color($black, 1);
 
+        .dark-background & {
+          @include color($white, 1);
+        }
+
         &:hover {
           font-weight: $font-weight-normal;
         }
@@ -83,5 +103,4 @@
     }
 
   }
-
 }
