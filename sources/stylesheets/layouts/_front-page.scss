@@ -46,6 +46,10 @@
   .main-feature {
     padding-top: 70px;
 
+    @include query($tablet-3) {
+      padding-top: 40px;
+    }
+
     .wrap {
       padding: 0 40px;
       font-size: 0;
@@ -90,7 +94,7 @@
 
     .feature-image {
       @include aspect-ratio(266, 177);
-      margin-bottom: 32px;
+      margin-bottom: 25px;
 
       @media screen and (max-width: $tablet-3) {
         &:empty {
@@ -140,8 +144,7 @@
       font-size: $font-size-normal;
 
       @include query($tablet-3) {
-          margin-right: 0;
-          margin-left: 0;
+        margin: 0 0 40px;
       }
 
       &:empty {
@@ -159,31 +162,7 @@
     }
   }
 
-  .blog-feed {
-    padding: $padding-general 0;
-
-    // .content-area {
-    //   @include rem-fallback(font-size, $font-size-huge);
-    //   font-weight: $font-weight-light;
-    //   line-height: 1.5;
-    //   text-align: center;
-
-    //   h1 {
-    //     @include rem-fallback(font-size, $font-size-header);
-    //   }
-
-    //   h2 {
-    //     @include rem-fallback(font-size, $font-size-xl);
-    //   }
-
-    //   h3,
-    //   h4
-    //   h5,
-    //   h6 {
-    //     @include rem-fallback(font-size, $font-size-huge);
-    //   }
-    // }
-
+  .front-page-content-bottom {
     .wrap {
       height: 360px;
       display: table;
@@ -194,20 +173,6 @@
         vertical-align: middle;
         width: 100%;
       }
-    }
-
-    // h1 {
-    //   @include rem-fallback(font-size, $font-size-small);
-    //   line-height: $line-height-normal;
-    //   text-transform: uppercase;
-    // }
-
-    // h2 {
-    //   line-height: $line-height-normal;
-    // }
-
-    .inner {
-      // text-align: center;
     }
   }
 

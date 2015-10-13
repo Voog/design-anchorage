@@ -61,7 +61,7 @@
               </div>
             </div>
             {% if editmode or bottom_has_content or content_bg_2_image != "" or content_bg_2_color != "" %}
-              <div class="blog-feed content-full js-bg-picker-area">
+              <div class="front-page-content-bottom content-full js-bg-picker-area">
                 <div class="background-image js-background-image"></div>
                 <div class="background-color js-background-color"></div>
 

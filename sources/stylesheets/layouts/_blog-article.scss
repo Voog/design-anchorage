@@ -40,7 +40,7 @@
     font-weight: $font-weight-light;
     line-height: $line-height-medium;
     @include color($black-base, .71);
-    margin: 30px 0;
+    margin: 30px 0 0;
   }
 
   .article-excerpt {
@@ -66,9 +66,9 @@
     }
   }
 
-  .inner {
-    padding: $margin-medium 40px;
-  }
+  // .inner {
+  //   padding: $margin-medium 40px;
+  // }
 
   .main-content {
     @include transition(min-height 250ms);

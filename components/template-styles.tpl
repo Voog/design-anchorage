@@ -113,20 +113,20 @@
   {% comment %}/* Front content area 2 background image styles. */{% endcomment %}
   {% if content_bg_2.imageSizes != nil %}
     {% if content_bg_2.imageSizes == "" %}
-      .blog-feed .background-image {
+      .front-page-content-bottom .background-image {
         background-image: none;
       }
     {% else %}
       {% for imageSize in content_bg_2.imageSizes %}
         {% if forloop.first %}
-          .blog-feed .background-image {
+          .front-page-content-bottom .background-image {
             background-image: url("{{ imageSize.url }}");
           }
         {% elsif imageSize.url contains "_block" %}
           {% break %}
         {% else %}
           @media screen and (max-width: {{ imageSize.width }}px) {
-            .blog-feed .background-image {
+            .front-page-content-bottom .background-image {
               background-image: url("{{ imageSize.url }}");
             }
           }
@@ -137,25 +137,25 @@
   {% else %}
     {% assign bg_image_prefix = images_path | append: "/front-header-bg" %}
 
-    .blog-feed .background-image {
+    .front-page-content-bottom .background-image {
       background-image: url("{{ bg_image_prefix }}.jpg");
     }
 
     @media screen and (max-width: 2048px) {
-      .blog-feed .background-image {
+      .front-page-content-bottom .background-image {
         background-image: url("{{ bg_image_prefix }}_huge.jpg");
       }
     }
 
     @media screen and (max-width: 1280px) {
-      .blog-feed .background-image {
+      .front-page-content-bottom .background-image {
         background-image: url("{{ bg_image_prefix }}_large.jpg");
       }
     }
   {% endif %}
 
   {% comment %}/* Front page content area 2 background color style. */{% endcomment %}
-  .blog-feed .background-color {
+  .front-page-content-bottom .background-color {
     background-color: {{ content_bg_2_color }};
   }
 

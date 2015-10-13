@@ -27,7 +27,7 @@
                 <div class="main-content top-row">
                   <div class="wrap">
                     {% if editmode or main_has_content %}
-                      <div class="inner">
+                      <div class="inner{% if editmode or left_has-content or right_has_content %} has-bottom-content{% endif %}">
                         <section class="content-area">
                           <div class="content-body content-area" data-search-indexing-allowed="true">{% content %}</div>
                         </section>

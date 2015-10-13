@@ -111,22 +111,21 @@
       .wrap {
         display: table-cell;
         vertical-align: middle;
-        padding: 60px 40px;
+        padding: 60px 40px 90px;
 
-        .common-page &,
-        .blog-news-page &,
-        .blog-article-page & {
-          padding-top: 30px;
-
+        // .common-page &,
+        // .blog-news-page &,
+        // .blog-article-page & {
           @include query($tablet-3) {
-            padding-top: 0;
-            padding-bottom: 20px;
+            // padding-top: 0;
+            // padding-bottom: 20px;
+            padding: 40px 20px 60px;
           }
-        }
+        // }
 
-        @include query($tablet-3) {
-          padding: 20px;
-        }
+        // @include query($tablet-3) {
+        //   padding: 20px;
+        // }
       }
 
       // @include query($mobile-1 - 58) {

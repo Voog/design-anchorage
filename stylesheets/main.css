@@ -309,29 +309,22 @@ a img {
 
 .inner {
   margin: 0 auto;
-  padding: 50px 40px;
+  padding: 50px 40px 60px;
+}
+.inner.has-bottom-content {
+  padding-bottom: 30px;
 }
 .front-page .main-content .inner {
   padding: 70px 40px 0;
 }
 @media screen and (max-width: 640px) {
   .front-page .main-content .inner {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-}
-.common-page .top-row .inner {
-  padding: 50px 40px 60px;
-}
-@media screen and (max-width: 640px) {
-  .common-page .top-row .inner {
-    padding: 30px 20px;
+    padding: 40px 20px 0;
   }
 }
 @media screen and (max-width: 640px) {
   .inner {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 30px 20px 40px;
   }
 }
 
@@ -561,6 +554,11 @@ a img {
 .front-page .main-feature {
   padding-top: 70px;
 }
+@media screen and (max-width: 640px) {
+  .front-page .main-feature {
+    padding-top: 40px;
+  }
+}
 .front-page .main-feature .wrap {
   padding: 0 40px;
   font-size: 0;
@@ -591,7 +589,7 @@ a img {
 }
 .front-page .main-feature .feature-image {
   position: relative;
-  margin-bottom: 32px;
+  margin-bottom: 25px;
 }
 .front-page .main-feature .feature-image:before {
   display: block;
@@ -661,8 +659,7 @@ a img {
 }
 @media screen and (max-width: 640px) {
   .front-page .main-feature .feature-content {
-    margin-right: 0;
-    margin-left: 0;
+    margin: 0 0 40px;
   }
 }
 .front-page .main-feature .feature-content:empty {
@@ -675,15 +672,12 @@ a img {
 .front-page .main-feature .content-area h3 {
   margin-bottom: 8px;
 }
-.front-page .blog-feed {
-  padding: 70px 0;
-}
-.front-page .blog-feed .wrap {
+.front-page .front-page-content-bottom .wrap {
   height: 360px;
   display: table;
   width: 100%;
 }
-.front-page .blog-feed .wrap .inner {
+.front-page .front-page-content-bottom .wrap .inner {
   display: table-cell;
   vertical-align: middle;
   width: 100%;
@@ -796,6 +790,7 @@ a img {
 }
 .blog-news-page .blog-article .article-image {
   position: relative;
+  z-index: 1;
   margin-top: 25px;
 }
 .blog-news-page .blog-article .article-image:before {
@@ -915,7 +910,7 @@ a img {
   line-height: 1.7;
   color: #000;
   color: rgba(0, 0, 0, 0.71);
-  margin: 30px 0;
+  margin: 30px 0 0;
 }
 .blog-article-page .article-excerpt {
   font-weight: 400;
@@ -936,9 +931,6 @@ a img {
 .blog-article-page .comments-title span {
   color: #000;
   color: rgba(0, 0, 0, 0.71);
-}
-.blog-article-page .inner {
-  padding: 30px 40px;
 }
 .blog-article-page .main-content {
   -webkit-transition: min-height 250ms;
@@ -1332,20 +1324,11 @@ a img {
 .site-header .header-bottom .header-bottom-inner .wrap {
   display: table-cell;
   vertical-align: middle;
-  padding: 60px 40px;
-}
-.common-page .site-header .header-bottom .header-bottom-inner .wrap, .blog-news-page .site-header .header-bottom .header-bottom-inner .wrap, .blog-article-page .site-header .header-bottom .header-bottom-inner .wrap {
-  padding-top: 30px;
-}
-@media screen and (max-width: 640px) {
-  .common-page .site-header .header-bottom .header-bottom-inner .wrap, .blog-news-page .site-header .header-bottom .header-bottom-inner .wrap, .blog-article-page .site-header .header-bottom .header-bottom-inner .wrap {
-    padding-top: 0;
-    padding-bottom: 20px;
-  }
+  padding: 60px 40px 90px;
 }
 @media screen and (max-width: 640px) {
   .site-header .header-bottom .header-bottom-inner .wrap {
-    padding: 20px;
+    padding: 40px 20px 60px;
   }
 }
 .site-header.photo-article .header-bottom .header-bottom-inner {
@@ -3557,7 +3540,7 @@ a img {
 }
 .svg .dark-background .content-area .form_field_radio + .form_control_indicator, .svg .dark-background
 .content-area .form_field_checkbox + .form_control_indicator {
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: white;
 }
 .svg .content-area .form_field_radio + .form_control_indicator {
   top: -1px;
@@ -3593,8 +3576,7 @@ a img {
   transition: transform 0.15s ease;
 }
 .svg .dark-background .content-area .form_field_radio:checked + .form_control_indicator:before {
-  background-color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: white;
 }
 .svg .content-area .form_field_checkbox + .form_control_indicator {
   top: -2px;

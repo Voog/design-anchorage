@@ -146,7 +146,7 @@
     .dark-background & {
       .svg & {
         + .form_control_indicator {
-          border-color: rgba($white, .2);
+          border-color: rgba($white, 1);
         }
       }
     }
@@ -187,7 +187,7 @@
         &:checked {
           + .form_control_indicator {
             &:before {
-              @include bg($white, .4);
+              @include bg($white, 1);
             }
           }
         }
