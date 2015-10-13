@@ -22,7 +22,13 @@
             <ul class="sub-menu menu-level-2">
               {% for level2 in item.visible_children %}
                 <li{% if level2.selected? %} class="current-parent"{% endif %}>
-                  {% if level2.children? %}<button class="toggle-sub-menu js-toggle-sub-menu{% if level2.selected? %} active{% endif %}"></button>{% endif %}
+                  {% if level2.children? %}
+                    <button class="toggle-sub-menu js-toggle-sub-menu{% if level2.selected? %} active{% endif %}">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 10" width="8px" height="10px">
+                        <path d="M0,10V0l8,5L0,10z"></path>
+                      </svg>
+                    </button>
+                  {% endif %}
                   {% menulink level2 %}
 
                   {% if editmode or level2.children? %}
