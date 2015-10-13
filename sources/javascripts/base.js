@@ -29,7 +29,7 @@
 
   $('.tags-toggle').click(function() {
     $(this).find('.ico-arrow').toggleClass('active');
-    $('.tags-bottom').toggleClass('hidden');
+    $('.tags-bottom').toggleClass('visible');
   });
 
   // $('.js-menu-prev-btn').click(function() {

@@ -9,7 +9,13 @@
 
       {% for item in site.visible_menuitems %}
         <li{% if item.selected? %} class="current-parent"{% endif %}>
-          {% if item.children? %}<button class="toggle-sub-menu js-toggle-sub-menu{% if item.selected? %} active{% endif %}"></button>{% endif %}
+          {% if item.children? %}
+            <button class="toggle-sub-menu js-toggle-sub-menu{% if item.selected? %} active{% endif %}">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 10" width="8px" height="10px">
+                <path d="M0,10V0l8,5L0,10z"></path>
+              </svg>
+            </button>
+          {% endif %}
           {% menulink item %}
 
           {% if editmode or item.children? %}

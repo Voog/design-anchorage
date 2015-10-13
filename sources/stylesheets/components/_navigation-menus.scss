@@ -21,20 +21,33 @@
   margin-top: -6px;
   padding: 6px;
 
-  &:before {
-    display: block;
-    width: 0;
-    height: 0;
-    content: '';
-    border-style: solid;
-    border-width: 5px 0 5px 8px;
-    border-color: transparent transparent transparent $black-base;
+  .no-svg & {
+    &:before {
+      display: block;
+      width: 0;
+      height: 0;
+      content: '';
+      border-style: solid;
+      border-width: 5px 0 5px 8px;
+      border-color: transparent transparent transparent $black-base;
+    }
+  }
+
+  .svg & {
+    fill: rgba($black-base, .5);
   }
 
   &.active {
-    &:before {
-      border-width: 8px 5px 0;
-      border-color: $black-base transparent transparent transparent;
+    .no-svg & {
+      &:before {
+        border-width: 8px 5px 0;
+        border-color: $black-base transparent transparent transparent;
+      }
+    }
+
+    .svg & {
+      @include transform(rotate(90deg));
+      fill: rgba($black-base, 1);
     }
   }
 }

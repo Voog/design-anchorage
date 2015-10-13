@@ -1113,20 +1113,33 @@ a img {
 }
 
 .blog-tags {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  color: #000;
+  color: rgba(0, 0, 0, 0.71);
+}
+.dark-background .blog-tags {
+  color: #ffffff;
+  color: rgba(255, 255, 255, 0.71);
 }
 .blog-article .blog-tags {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+}
+.blog-tags .tags-toggle {
+  color: inherit;
 }
 .blog-tags .tags-icon {
+  position: relative;
+  top: 1px;
   display: inline-block;
   vertical-align: middle;
+  fill: rgba(0, 0, 0, 0.71);
 }
 .blog-tags .tags-bottom {
+  display: none;
   margin-top: 15px;
 }
-.blog-tags .tags-bottom.hidden {
-  display: none;
+.blog-tags .tags-bottom.visible {
+  display: block;
 }
 .blog-tags .tags-title {
   display: inline-block;
@@ -1144,6 +1157,7 @@ a img {
   display: inline-block;
   vertical-align: middle;
   margin-left: 10px;
+  fill: rgba(0, 0, 0, 0.71);
 }
 .blog-tags .ico-arrow.active {
   -webkit-transform: rotate(-90deg);
@@ -1159,6 +1173,7 @@ a img {
 .blog-tags .menu .menu-item {
   display: inline-block;
   vertical-align: top;
+  margin-top: 5px;
 }
 .blog-tags .menu .menu-item:before {
   display: none;
@@ -1171,6 +1186,17 @@ a img {
   background-color: #000;
   background-color: rgba(0, 0, 0, 0.03);
   border-radius: 3px;
+}
+.blog-tags .menu .menu-link:hover {
+  opacity: .7;
+}
+.blog-tags .menu .menu-link.active {
+  color: white;
+  background-color: #a4a4a4;
+}
+.dark-background .blog-tags .menu .menu-link {
+  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .site-header {
@@ -1417,7 +1443,7 @@ a img {
   margin-top: -6px;
   padding: 6px;
 }
-.toggle-sub-menu:before {
+.no-svg .toggle-sub-menu:before {
   display: block;
   width: 0;
   height: 0;
@@ -1426,9 +1452,20 @@ a img {
   border-width: 5px 0 5px 8px;
   border-color: transparent transparent transparent #000;
 }
-.toggle-sub-menu.active:before {
+.svg .toggle-sub-menu {
+  fill: rgba(0, 0, 0, 0.5);
+}
+.no-svg .toggle-sub-menu.active:before {
   border-width: 8px 5px 0;
   border-color: #000 transparent transparent transparent;
+}
+.svg .toggle-sub-menu.active {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  fill: black;
 }
 
 .menu {
