@@ -17,6 +17,8 @@
 {% endif %}
 {% stylesheet_link "main.min.css" %}
 
+<link href='https://fonts.googleapis.com/css?family=Roboto:500,500italic' rel='stylesheet' type='text/css'>
+
 {% comment %}MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC{% endcomment %}
 <script src="{{ javascripts_path }}/modernizr.js"></script>
 

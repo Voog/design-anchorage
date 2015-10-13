@@ -6,7 +6,7 @@
   }
 
   .form_field {
-    margin-top: 30px;
+    margin-top: 15px;
 
     &:first-child {
       margin-top: 0;
@@ -29,6 +29,18 @@
 
   .form_field_textfield,
   .form_field_textarea,
+  .form_field_select,
+  .form_field_radio+.form_control_indicator,
+  .form_field_checkbox+.form_control_indicator {
+    background-color: rgba($black-base, .03);
+
+    .dark-background & {
+      background-color: rgba($white, .1);
+    }
+  }
+
+  .form_field_textfield,
+  .form_field_textarea,
   .form_field_select {
     @extend %input-ios-reset;
     @extend %inherit-base-font;
@@ -38,13 +50,24 @@
     font-weight: $font-weight-light;
     line-height: $font-size-large;
     @include color($black-base, .71);
-    background-color: #dedede;
     border-width: 1px;
     border-style: solid;
-    border-color: $white-cloudy;
+    border-color: rgba($black-base, .13);
     vertical-align: bottom;
     outline: none;
     box-sizing: border-box;
+
+    .dark-background & {
+      border-color: rgba($white, .3);
+    }
+
+    &:focus {
+      border-color: rgba($black-base, .33);
+
+      .dark-background & {
+        border-color: rgba($white, 1);
+      }
+    }
 
     &.form_field_size_small {
       width: 280px;
@@ -55,7 +78,11 @@
     }
 
     &.form_field_size_large {
-      width: 580px;
+      width: 100%;
+    }
+
+    .dark-background & {
+      @include color($white, 1);
     }
 
     @include placeholder {
@@ -65,6 +92,7 @@
 
   .form_field_select {
     position: relative;
+    padding-right: 27px;
     -moz-appearance: none;
     background-position: right 10px center;
     background-image: url('../assets/ico-arrow.svg');
@@ -178,7 +206,7 @@
   }
 
   .form_submit {
-    margin-top: 10px;
+    margin-top: 15px;
 
     input {
       @include inputiosreset;
@@ -196,6 +224,10 @@
       .dark-background & {
         @include bg($white, 1);
         @include color($black, 1);
+
+        &:hover {
+          @include bg($white, .71);
+        }
       }
 
       @include querymin($tablet-2) {
@@ -215,7 +247,7 @@
         @include transition($transition);
 
         .dark-background & {
-          @include bg($white-cloudy, 1);
+          @include bg(rgba($black-base, .13), 1);
         }
       }
       &:focus {
@@ -232,25 +264,36 @@
   }
 
   .form_error,
+  .form_notice {
+    @include rem-fallback(font-size, 22px);
+    font-weight: 300;
+
+  }
+
+  .form_error,
   .form_field_error {
     color: rgba($error-color, 1);
   }
 
   .form_error {
-    @include rem-fallback(font-size, $font-size-normal);
-    font-weight: $font-weight-light;
     @include color($error-color, 1);
     margin-bottom: $margin-low;
   }
+
+  .form_field_with_errors {
+    .form_field_textfield,
+    .form_field_textarea {
+      border: 1px solid rgba($error-color, 1);
+    }
+  }
+
 
   .form_field_error {
     @include rem-fallback(font-size, $font-size-small);
   }
 
   .form_notice {
-    @include rem-fallback(font-size, $font-size-large);
-    font-weight: $font-weight-light;
-    @include color($black-base, .71);
+    @include color($success-color, .71);
     margin-bottom: $margin-low;
 
     .dark-background & {

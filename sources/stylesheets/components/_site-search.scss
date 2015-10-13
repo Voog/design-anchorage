@@ -383,7 +383,7 @@
 
 .voog-search-modal-result {
   padding: 15px;
-  border-top: $white-cloudy solid 1px;
+  border-top: rgba($black-base, .13) solid 1px;
 
   &:first-of-type {
     border-top: 1px solid transparent;

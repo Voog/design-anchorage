@@ -11,6 +11,11 @@
 
     .wrap {
       margin: 0;
+
+      @include query($tablet-2) {
+        margin-right: auto;
+        margin-left: auto;
+      }
     }
 
     .inner {
@@ -43,9 +48,23 @@
       }
     }
 
+    .content-left {
+      @include querymin($tablet-2 + 1) {
+        padding: 0 20px 50px 40px;
+      }
+
+      @include query($tablet-3) {
+        padding: 0 20px 20px;
+      }
+    }
+
     .content-right {
       @include querymin($tablet-2 + 1) {
-        padding-left: 0;
+        padding: 0 40px 50px 20px;
+      }
+
+      @include query($tablet-3) {
+        padding: 0 20px 20px;
       }
     }
   }

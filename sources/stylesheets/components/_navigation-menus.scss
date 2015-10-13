@@ -308,6 +308,7 @@
 
           &.selected {
             @include color($black-base, 1);
+            font-weight: 500;
           }
 
           &.indented {
@@ -351,6 +352,7 @@
     .sub-menu {
       a {
         text-transform: initial;
+        @include color($black-base, 1);
       }
     }
 

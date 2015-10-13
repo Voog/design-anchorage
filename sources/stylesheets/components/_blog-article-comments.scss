@@ -60,6 +60,13 @@
         @include color($black-lighter, 1);
       }
     }
+
+    .form_field_textfield,
+    .form_field_textarea {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: rgba($white, 1);
+    }
   }
 
   .comment {
