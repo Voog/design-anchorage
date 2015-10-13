@@ -62,14 +62,14 @@
   li {
     @include rem-fallback(font-size, $font-size-base);
     line-height: $line-height-medium;
-    font-weight: $font-weight-light;
+    font-weight: 300;
 
     &:last-child {
       margin-right: 0;
     }
 
     &.selected {
-      font-weight: $font-weight-normal;
+      font-weight: 400;
     }
 
     a {
@@ -732,7 +732,7 @@ $flags:
       a {
         &.is-active {
           @include color($black, 1);
-          font-weight: $font-weight-normal;
+          font-weight: 400;
         }
       }
     }
@@ -747,7 +747,7 @@ $flags:
 
     a {
       @include color($black, .7);
-      font-weight: $font-weight-normal;
+      font-weight: 400;
     }
 
     &.add-lang-btn {

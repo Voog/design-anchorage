@@ -37,7 +37,7 @@
   .header-title {
     @include hyphenate(true);
     @include rem-fallback(font-size, $font-size-title);
-    font-weight: $font-weight-light;
+    font-weight: 300;
     line-height: $line-height-normal;
     position: relative;
     min-width: 140px;
@@ -180,7 +180,7 @@
     .article-author,
     .article-date {
       @include rem-fallback(font-size, $font-size-small);
-      font-weight: $font-weight-light;
+      font-weight: 300;
       line-height: $line-height-double;
       letter-spacing: 1px;
       display: inline;
@@ -193,7 +193,7 @@
     .article-title {
       font-size: 60px;
       line-height: $line-height-small;
-      font-weight: $font-weight-thin;
+      font-weight: 100;
       margin: 0;
       text-transform: none;
       margin-bottom: 0;
@@ -219,7 +219,7 @@
     .blog-title {
       margin-top: 0;
       @include rem-fallback(font-size, $font-size-header);
-      font-weight: $font-weight-bold;
+      font-weight: 700;
       line-height: $line-height-normal;
       text-transform: uppercase;
 

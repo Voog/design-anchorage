@@ -47,7 +47,7 @@
     max-width: 100%;
     padding: 8px 13px;
     @include rem-fallback(font-size, $font-size-base);
-    font-weight: $font-weight-light;
+    font-weight: 300;
     line-height: $font-size-large;
     @include color($black-base, .71);
     border-width: 1px;
@@ -247,7 +247,7 @@
       text-transform: uppercase;
       font-family: $font-main;
       @include rem-fallback(font-size, $font-size-small);
-      font-weight: $font-weight-normal;
+      font-weight: 400;
       line-height: $line-height-double;
       cursor: pointer;
 

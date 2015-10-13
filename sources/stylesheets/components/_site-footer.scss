@@ -120,7 +120,7 @@
     .article-nav-direction {
       @include rem-fallback(font-size, $font-size-xs);
       margin-bottom: 3px;
-      font-weight: $font-weight-normal;
+      font-weight: 400;
       line-height: $line-height-double;
       letter-spacing: 1px;
       @include color($black-lighter, 1);

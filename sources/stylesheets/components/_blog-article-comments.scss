@@ -47,7 +47,7 @@
       cursor: text;
       text-transform: none;
 
-      font-weight: $font-weight-light;
+      font-weight: 300;
       line-height: $line-height-medium;
 
       @include rem-fallback(font-size, 24px);
@@ -88,7 +88,7 @@
 
     .comment-author,
     .comment-date {
-      font-weight: $font-weight-light;
+      font-weight: 300;
       line-height: $line-height-double;
 
       @include color($grey, 1);
