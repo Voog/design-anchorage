@@ -142,6 +142,14 @@
         border-color: rgba($black-base, .2);
       }
     }
+
+    .dark-background & {
+      .svg & {
+        + .form_control_indicator {
+          border-color: rgba($white, .2);
+        }
+      }
+    }
   }
 
 
@@ -173,6 +181,18 @@
         }
       }
     }
+
+    .dark-background & {
+      .svg & {
+        &:checked {
+          + .form_control_indicator {
+            &:before {
+              @include bg($white, .4);
+            }
+          }
+        }
+      }
+    }
   }
 
   .form_field_checkbox {
@@ -199,6 +219,16 @@
           &:before {
             @include transform(scale(1) rotate(45deg));
             @include transition(transform .15s ease);
+          }
+        }
+      }
+    }
+
+    .dark-background & {
+      .svg & {
+        + .form_control_indicator {
+          &:before {
+            border-color: rgba($white, .2);
           }
         }
       }
