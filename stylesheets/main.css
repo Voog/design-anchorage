@@ -3552,9 +3552,6 @@ a img {
   -moz-transition: 500ms;
   transition: 500ms;
 }
-.dark-background .content-area .form_submit input:hover {
-  background-color: black;
-}
 .content-area .form_submit input:focus {
   outline: none;
 }

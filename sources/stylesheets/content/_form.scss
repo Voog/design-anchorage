@@ -275,11 +275,8 @@
       &:hover {
         @include bg($black-base, .71);
         @include transition($transition);
-
-        .dark-background & {
-          @include bg(rgba($black-base, .13), 1);
-        }
       }
+
       &:focus {
         outline: none;
       }
