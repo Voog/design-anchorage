@@ -1,0 +1,66 @@
+.blog-tags {
+  margin-bottom: 25px;
+
+  .blog-article & {
+    margin-bottom: 20px;
+  }
+
+  .tags-toggle {
+    @extend %button;
+  }
+
+  .tags-icon {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .tags-bottom {
+    margin-top: 15px;
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .tags-title {
+    display: inline-block;
+    vertical-align: top;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .ico-arrow {
+    @include transform(rotate(90deg));
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+
+    &.active {
+      @include transform(rotate(-90deg));
+    }
+  }
+
+  .menu {
+    display: inline-block;
+    padding-left: 0;
+
+    .menu-item {
+      display: inline-block;
+      vertical-align: top;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .menu-link {
+      padding: 1px 5px;
+      text-decoration: none;
+      font-size: 12px;
+      @include color(#a4a4a4, 1);
+      @include bg($black-base, .03);
+      border-radius: 3px;
+    }
+  }
+}

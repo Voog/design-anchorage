@@ -9293,6 +9293,11 @@ return jQuery;
       $('body').removeClass('mobilesearch-open');
   });
 
+  $('.tags-toggle').click(function() {
+    $(this).find('.ico-arrow').toggleClass('active');
+    $('.tags-bottom').toggleClass('hidden');
+  });
+
   // $('.js-menu-prev-btn').click(function() {
   //   if ($('body').hasClass('mobile-search-open')) {
   //     $('body').removeClass('mobile-search-open');

@@ -19,6 +19,7 @@
             <div class="main-content">
               <div class="wrap">
                 <div class="inner">
+                  {% include "blog-news-tags" %}
                   <section class="blog-articles content-area">
                     {% addbutton %}
                     {% for article in articles limit: 5 %}

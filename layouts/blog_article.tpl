@@ -34,7 +34,12 @@
                     {% endif %}
                   </div>
 
-                  <header class="article-header js-article-body-title-wrap">{% unless photo_article %}<h1 class="article-title js-article-title">{% editable article.title %}</h1>{% endunless %}</header>
+                  <header class="article-header js-article-body-title-wrap">
+                    {% unless photo_article %}
+                      <h1 class="article-title js-article-title">{% editable article.title %}</h1>
+                    {% endunless %}
+                    {% include "blog-article-tags" %}
+                  </header>
 
                   <section class="blog-article content-area">
                     {% include "blog-article-template" with "blog_article_page" %}

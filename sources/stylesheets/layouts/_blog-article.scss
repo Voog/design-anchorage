@@ -67,7 +67,7 @@
   }
 
   .inner {
-    padding: $margin-medium $margin-low;
+    padding: $margin-medium 40px;
   }
 
   .main-content {
@@ -76,7 +76,7 @@
     will-change: min-height;
 
     .wrap {
-      max-width: 740px;
+      max-width: 780px;
     }
 
     .article-meta {
@@ -89,7 +89,7 @@
     }
 
     .article-header {
-      margin: $margin-medium 0;
+      margin: 10px 0 $margin-medium;
 
       &.comments-open & {
         @include query($mobile-1) {
@@ -98,6 +98,7 @@
       }
 
       .article-title {
+        margin-bottom: 0;
         @include rem-fallback(font-size, $font-size-huge);
         line-height: 1.4;
       }
