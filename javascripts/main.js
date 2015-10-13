@@ -9756,7 +9756,7 @@ return jQuery;
     }
   };
 
-  var autoSizeTextareas = function() {
+  var autoSizeCommentAreas = function() {
     $('.form_field_textarea').textareaAutoSize();
   };
 
@@ -9850,7 +9850,7 @@ return jQuery;
     handleElementsClick();
     tableWrapper();
     focusFormWithErrors();
-    autoSizeTextareas();
+    autoSizeCommentAreas();
 
     if (!Modernizr.flexbox && editmode) {
       bindFallbackHeaderLeftWidthCalculation();
