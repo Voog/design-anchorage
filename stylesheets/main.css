@@ -959,8 +959,6 @@ a img {
 }
 .blog-article-page .main-content .article-header .article-title, .blog-article-page .main-content .article-header .site-header .header-body .article-title a, .site-header .header-body .article-title .blog-article-page .main-content .article-header a {
   margin-bottom: 0;
-  font-size: 32px;
-  font-size: 2rem;
   line-height: 1.4;
 }
 .blog-article-page .main-content .article-header a {
@@ -1380,8 +1378,9 @@ a img {
 .site-header .header-body .article-title, .site-header .header-body .article-title a {
   font-size: 60px;
   line-height: 1.2;
-  font-weight: 100;
+  font-weight: 300;
   margin: 0;
+  margin-bottom: 10px;
   text-transform: none;
   margin-bottom: 0;
 }
@@ -1400,8 +1399,6 @@ a img {
 }
 .site-header .header-body .blog-title {
   margin-top: 0;
-  font-size: 70px;
-  font-size: 4.375rem;
   font-weight: 700;
   line-height: 1;
   text-transform: uppercase;

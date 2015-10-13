@@ -99,7 +99,6 @@
 
       .article-title {
         margin-bottom: 0;
-        @include rem-fallback(font-size, $font-size-huge);
         line-height: 1.4;
       }
 

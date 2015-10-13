@@ -193,8 +193,9 @@
     .article-title {
       font-size: 60px;
       line-height: $line-height-small;
-      font-weight: 100;
+      font-weight: 300;
       margin: 0;
+      margin-bottom: 10px;
       text-transform: none;
       margin-bottom: 0;
 
@@ -218,7 +219,6 @@
 
     .blog-title {
       margin-top: 0;
-      @include rem-fallback(font-size, $font-size-header);
       font-weight: 700;
       line-height: $line-height-normal;
       text-transform: uppercase;
