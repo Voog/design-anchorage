@@ -243,7 +243,7 @@ a {
   }
 
   .common-page .top-row & {
-    padding: 50px 40px 20px;
+    padding: 50px 40px 60px;
 
     @include query($tablet-3) {
       padding: 30px 20px;

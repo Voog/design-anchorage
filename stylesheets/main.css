@@ -321,7 +321,7 @@ a img {
   }
 }
 .common-page .top-row .inner {
-  padding: 50px 40px 20px;
+  padding: 50px 40px 60px;
 }
 @media screen and (max-width: 640px) {
   .common-page .top-row .inner {
@@ -729,6 +729,9 @@ a img {
   width: 50%;
   box-sizing: border-box;
 }
+.common-page .main-content .content-half.has-padding {
+  padding-top: 50px;
+}
 @media screen and (max-width: 640px) {
   .common-page .main-content .content-half {
     float: none;
@@ -737,7 +740,7 @@ a img {
 }
 @media screen and (min-width: 852px) {
   .common-page .main-content .content-left {
-    padding: 0 20px 50px 40px;
+    padding: 0 20px 60px 40px;
   }
 }
 @media screen and (max-width: 640px) {
@@ -747,7 +750,7 @@ a img {
 }
 @media screen and (min-width: 852px) {
   .common-page .main-content .content-right {
-    padding: 0 40px 50px 20px;
+    padding: 0 40px 60px 20px;
   }
 }
 @media screen and (max-width: 640px) {
@@ -1133,6 +1136,9 @@ a img {
   display: inline-block;
   vertical-align: middle;
   fill: rgba(0, 0, 0, 0.71);
+}
+.dark-background .blog-tags .tags-icon {
+  fill: rgba(255, 255, 255, 0.71);
 }
 .blog-tags .tags-bottom {
   display: none;
@@ -2690,7 +2696,7 @@ a img {
 .dark-background .site-sidebar .submenu .selected {
   color: white;
 }
-.dark-background .site-sidebar .submenu .selected a:hover {
+.dark-background .site-sidebar .submenu .selected:hover {
   color: white;
 }
 .site-sidebar .submenu .submenu-lvl2 {
@@ -2713,12 +2719,22 @@ a img {
 .dark-background .site-sidebar .submenu .submenu-lvl2 a {
   color: white;
 }
+.dark-background .site-sidebar .submenu .submenu-lvl2 a:hover {
+  color: #ffffff;
+  color: rgba(255, 255, 255, 0.5);
+}
 .site-sidebar .submenu .submenu-lvl2 a:hover {
   color: #000;
   color: rgba(0, 0, 0, 0.5);
 }
 .site-sidebar .submenu .submenu-lvl2 .selected {
   font-weight: 500;
+}
+.dark-background .site-sidebar .submenu .submenu-lvl2 .selected {
+  color: white;
+}
+.dark-background .site-sidebar .submenu .submenu-lvl2 .selected a:hover {
+  color: white;
 }
 .site-sidebar .submenu .submenu-lvl2 .selected a:hover {
   color: black;

@@ -161,6 +161,13 @@
 
   {% comment %}/* SITE MAIN CONTENT AREA BACKGROUND */{% endcomment %}
   {% comment %}/* Site main content area background color style. */{% endcomment %}
+  .blog-news-page .page-body .background-color,
+  .blog-article-page .page-body .background-color {
+    background-color: {{ blog_body_bg_color }};
+  }
+
+  {% comment %}/* SITE BLOG PAGE CONTENT AREA BACKGROUND */{% endcomment %}
+  {% comment %}/* Site main content area background color style. */{% endcomment %}
   .common-page .page-body .background-color {
     background-color: {{ body_bg_color }};
   }

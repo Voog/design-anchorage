@@ -11,44 +11,51 @@
     <div class="site-container">
       {% include "site-header" %}
 
-      <div class="page-body">
-        <main class="page-content" role="main">
+      <div class="page-body js-bg-picker-area">
+        <div class="js-background-type {{ blog_body_bg_type }}">
+          <div class="background-image js-background-image"></div>
+          <div class="background-color js-background-color"></div>
 
-          <div class="main-inner-row content-full">
+          {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-key="blog_body_bg" data-bg-picture-boolean="false" data-bg-color="{{ blog_body_bg_color }}" data-bg-color-data="{{ blog_body_bg_color_data_str | escape }}"></button>{% endif %}
 
-            <div class="main-content">
-              <div class="wrap">
-                <div class="inner">
-                  {% include "blog-news-tags" %}
-                  <section class="blog-articles content-area">
-                    {% addbutton %}
-                    {% for article in articles limit: 5 %}
-                      {% include "blog-article-template" %}
-                    {% endfor %}
-                  </section>
+          <main class="page-content" role="main">
 
-                  {% assign articles_size = articles | size %}
-                  {% if articles_size >= 6 %}
-                    <section class="articles-listing content-area">
-                      <header class="articles-listing-header">
-                        <h2 class="articles-listing-title">{{ "older_news" | lc }}</h2>
-                      </header>
-                      {% for article in articles offset: 5 %}
-                        <article class="blog-article">
-                          <header class="article-header">
-                            <time class="article-date" datetime="{{ article.created_at | date: "%Y-%m-%d" }}">{{ article.created_at | format_date: "long" }}</time>
-                            <h1 class="article-title"><a href="{{ article.url }}">{{ article.title }}</a></h1>
-                          </header>
-                        </article>
+            <div class="main-inner-row content-full">
+
+              <div class="main-content">
+                <div class="wrap">
+                  <div class="inner">
+                    {% include "blog-news-tags" %}
+                    <section class="blog-articles content-area">
+                      {% addbutton %}
+                      {% for article in articles limit: 5 %}
+                        {% include "blog-article-template" %}
                       {% endfor %}
                     </section>
-                  {% endif %}
+
+                    {% assign articles_size = articles | size %}
+                    {% if articles_size >= 6 %}
+                      <section class="articles-listing content-area">
+                        <header class="articles-listing-header">
+                          <h2 class="articles-listing-title">{{ "older_news" | lc }}</h2>
+                        </header>
+                        {% for article in articles offset: 5 %}
+                          <article class="blog-article">
+                            <header class="article-header">
+                              <time class="article-date" datetime="{{ article.created_at | date: "%Y-%m-%d" }}">{{ article.created_at | format_date: "long" }}</time>
+                              <h1 class="article-title"><a href="{{ article.url }}">{{ article.title }}</a></h1>
+                            </header>
+                          </article>
+                        {% endfor %}
+                      </section>
+                    {% endif %}
+                  </div>
                 </div>
               </div>
-            </div>
 
-          </div>
-        </main>
+            </div>
+          </main>
+        </div>
       </div>
 
       {% include "site-footer" %}

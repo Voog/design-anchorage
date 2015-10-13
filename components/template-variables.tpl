@@ -272,6 +272,48 @@
   {% endif %}
 
 
+  {% comment %}SITE BLOG PAGE CONTENT AREA RELATED VARIABLES.{% endcomment %}
+  {% comment %}Assign variables based on page type.{% endcomment %}
+  {% assign blog_body_bg = page.data.blog_body_bg %}
+
+  {% assign blog_body_bg_color = blog_body_bg.color %}
+  {% assign blog_body_bg_color_data = blog_body_bg.colorData %}
+  {% assign blog_body_bg_combined_lightness = blog_body_bg.combinedLightness %}
+
+  {% comment %}Sets the background type to choose active CMS color scheme.{% endcomment %}
+  {% if blog_body_bg %}
+    {% if blog_body_bg_combined_lightness %}
+      {% if blog_body_bg_combined_lightness > 0.5 %}
+        {% assign blog_body_bg_type = "light-background" %}
+      {% else %}
+        {% assign blog_body_bg_type = "dark-background" %}
+      {% endif %}
+    {% else %}
+      {% if blog_body_bg_color_data.a >= 0.5 %}
+        {% if blog_body_bg_color_data.lightness >= 0.5 %}
+          {% assign blog_body_bg_type = "light-background" %}
+        {% else %}
+          {% assign blog_body_bg_type = "dark-background" %}
+        {% endif %}
+      {% else %}
+        {% assign blog_body_bg_type = "light-background" %}
+      {% endif %}
+    {% endif %}
+  {% else %}
+    {% assign blog_body_bg_type = "light-background" %}
+  {% endif %}
+
+  {% if blog_body_bg_color == nil %}
+    {% assign blog_body_bg_color = "" %}
+  {% endif %}
+
+  {% if blog_body_bg_color_data == nil %}
+    {% assign blog_body_bg_color_data_str = "" %}
+  {% else %}
+    {% assign blog_body_bg_color_data_str = blog_body_bg_color_data | json %}
+  {% endif %}
+
+
   {% comment %}FRONT PAGE FOOTER RELATED VARIABLES.{% endcomment %}
   {% comment %}Assign variables based on page type.{% endcomment %}
   {% if front_page %}

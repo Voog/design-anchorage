@@ -72,7 +72,7 @@
       .dark-background & {
         @include color($white, 1);
 
-        a:hover {
+        &:hover {
           @include color($white, 1);
         }
       }
@@ -95,6 +95,10 @@
 
         .dark-background & {
           @include color($white, 1);
+
+          &:hover {
+            @include color($white, .5);
+          }
         }
 
         &:hover {
@@ -103,6 +107,14 @@
       }
       .selected {
         font-weight: 500;
+
+        .dark-background & {
+          @include color($white, 1);
+
+          a:hover {
+            @include color($white, 1);
+          }
+        }
 
         a:hover {
           @include color($black, 1);

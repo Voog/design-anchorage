@@ -7,6 +7,12 @@
     {% endif %}
   {% endfor %}
 
+  {% capture main_html %}{% unless editmode %}{% content %}{% endunless %}{% endcapture %}
+  {% capture main_size %}{{ main_html | size | minus : 1 }}{% endcapture %}
+  {% unless main_size contains "-" %}
+    {% assign main_has_content = true %}
+  {% endunless %}
+
   {% capture left_html %}{% unless editmode %}{% content name="left" %}{% endunless %}{% endcapture %}
   {% capture left_size %}{{ left_html | size | minus : 1 }}{% endcapture %}
   {% unless left_size contains "-" %}

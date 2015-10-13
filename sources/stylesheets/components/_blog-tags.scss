@@ -21,6 +21,10 @@
     display: inline-block;
     vertical-align: middle;
     fill: rgba($black-base, .71);
+
+    .dark-background & {
+      fill: rgba($white, .71);
+    }
   }
 
   .tags-bottom {

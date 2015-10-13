@@ -26,18 +26,20 @@
               <div class="main-inner-row content-full">
                 <div class="main-content top-row">
                   <div class="wrap">
-                    <div class="inner">
-                      <section class="content-area">
-                        <div class="content-body content-area" data-search-indexing-allowed="true">{% content %}</div>
-                      </section>
-                    </div>
+                    {% if editmode or main_has_content %}
+                      <div class="inner">
+                        <section class="content-area">
+                          <div class="content-body content-area" data-search-indexing-allowed="true">{% content %}</div>
+                        </section>
+                      </div>
+                    {% endif %}
                   </div>
                 </div>
 
                 <div class="main-content bottom-row">
                   <div class="wrap">
                     {% if editmode or left_has_content %}
-                      <div class="inner content-half content-left">
+                      <div class="inner content-half content-left{% unless editmode or main_has_content %} has-padding{% endunless %}">
                         <section class="content-area">
                           <div class="content-body content-area" data-search-indexing-allowed="true">{% content name="left" %}</div>
                         </section>
@@ -45,7 +47,7 @@
                     {% endif %}
 
                     {% if editmode or right_has_content %}
-                      <div class="inner content-half content-right">
+                      <div class="inner content-half content-right{% unless editmode or main_has_content %} has-padding{% endunless %}">
                         <section class="content-area">
                           <div class="content-body content-area" data-search-indexing-allowed="true">{% content name="right" %}</div>
                         </section>

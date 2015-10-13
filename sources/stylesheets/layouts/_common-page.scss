@@ -42,6 +42,10 @@
       width: 50%;
       box-sizing: border-box;
 
+      &.has-padding {
+        padding-top: 50px;
+      }
+
       @include query($tablet-3) {
         float: none;
         width: 100%;
@@ -50,7 +54,7 @@
 
     .content-left {
       @include querymin($tablet-2 + 1) {
-        padding: 0 20px 50px 40px;
+        padding: 0 20px 60px 40px;
       }
 
       @include query($tablet-3) {
@@ -60,7 +64,7 @@
 
     .content-right {
       @include querymin($tablet-2 + 1) {
-        padding: 0 40px 50px 20px;
+        padding: 0 40px 60px 20px;
       }
 
       @include query($tablet-3) {
