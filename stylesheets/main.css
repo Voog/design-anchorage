@@ -1762,6 +1762,10 @@ a img {
     right: auto;
     left: 0;
   }
+  #mobile-menu .lang-menu ul li a.is-active {
+    color: black;
+    font-weight: 500;
+  }
   #mobile-menu.flags-enabled .lang-menu a {
     padding-left: 25px;
   }
