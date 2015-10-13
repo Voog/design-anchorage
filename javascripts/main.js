@@ -9619,6 +9619,7 @@ return jQuery;
 
     // Toggles the search modal.
     $('.js-search-toggle-btn').click(function() {
+      $('body').removeClass('mobilemenu-open');
       $('.js-search').toggleClass('active');
       $('.js-search').hasClass('active') ? $('.js-search-input').focus() : '';
       $('html').toggleClass('search-open');
