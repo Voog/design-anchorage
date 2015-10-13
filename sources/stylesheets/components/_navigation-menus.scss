@@ -7,7 +7,7 @@
   vertical-align: top;
   margin-left: 40px;
 
-  @include query($tablet-2) {
+  @include query($tablet-1) {
     display: none;
   }
 }
@@ -135,7 +135,7 @@
   }
 }
 
-@include query($tablet-2) {
+@include query($tablet-1) {
   .site-header {
     .header-right {
       .menu-main {
@@ -718,7 +718,7 @@ $flags:
   vertical-align: top;
   margin-left: 40px;
 
-  @include query($tablet-2) {
+  @include query($tablet-1) {
     display: none;
   }
 

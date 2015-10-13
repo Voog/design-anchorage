@@ -697,7 +697,7 @@ a img {
 .common-page .sidebar-active .wrap {
   margin: 0;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1024px) {
   .common-page .sidebar-active .wrap {
     margin-right: auto;
     margin-left: auto;
@@ -710,7 +710,7 @@ a img {
 .common-page .sidebar-active .page-content {
   margin-left: 260px;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1024px) {
   .common-page .sidebar-active .page-content {
     margin-left: 0;
   }
@@ -1418,7 +1418,7 @@ a img {
   vertical-align: top;
   margin-left: 40px;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1024px) {
   .menu-btn-wrap {
     display: none;
   }
@@ -1523,7 +1523,7 @@ a img {
   display: block;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1024px) {
   .site-header .header-right .menu-main {
     display: none;
   }
@@ -1611,12 +1611,12 @@ a img {
     transform: translate3d(100%, 0, 0);
   }
 }
-@media screen and (max-width: 850px) and (max-width: 640px) {
+@media screen and (max-width: 1024px) and (max-width: 640px) {
   #mobile-menu {
     padding-top: 10px;
   }
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1024px) {
   .editmode #mobile-menu {
     bottom: 40px;
   }
@@ -2089,7 +2089,7 @@ a img {
   vertical-align: top;
   margin-left: 40px;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1024px) {
   .lang-menu {
     display: none;
   }
@@ -2421,7 +2421,7 @@ a img {
   font-size: 0;
   margin-left: 28px;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1024px) {
   .search-btn {
     margin-right: 36px;
     top: -5px;
@@ -2610,7 +2610,7 @@ a img {
   margin: 50px 0 50px 40px;
   position: relative;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1024px) {
   .site-sidebar {
     display: none;
   }
@@ -2628,7 +2628,7 @@ a img {
   text-transform: uppercase;
   margin: 0;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1024px) {
   .site-sidebar .sidebar-title {
     display: none;
   }
@@ -2652,7 +2652,7 @@ a img {
   line-height: 1.7;
   margin: 15px 0;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1024px) {
   .site-sidebar .submenu li {
     display: inline-block;
     margin-right: 20px;
@@ -2685,7 +2685,7 @@ a img {
 .site-sidebar .submenu .submenu-lvl2 {
   padding-left: 25px;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1024px) {
   .site-sidebar .submenu .submenu-lvl2 {
     display: none;
   }

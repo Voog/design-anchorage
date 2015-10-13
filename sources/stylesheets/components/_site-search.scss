@@ -212,7 +212,7 @@
   font-size: 0;
   margin-left: 28px;
 
-  @include query($tablet-2) {
+  @include query($tablet-1) {
     margin-right: 36px;
     top: -5px;
     position: relative;

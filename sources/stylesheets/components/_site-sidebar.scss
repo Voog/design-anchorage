@@ -4,7 +4,7 @@
   margin: 50px 0 50px 40px;
   position: relative;
 
-  @include query($tablet-2) {
+  @include query($tablet-1) {
     display: none;
   }
   @include querymin($wide-1) {
@@ -18,7 +18,7 @@
     text-transform: uppercase;
     margin: 0;
 
-    @include query($tablet-2) {
+    @include query($tablet-1) {
       display: none;
     }
 
@@ -45,7 +45,7 @@
       line-height: $line-height-medium;
       margin: 15px 0;
 
-      @include query($tablet-2) {
+      @include query($tablet-1) {
         display: inline-block;
         margin-right: $margin-low;
       }
@@ -81,7 +81,7 @@
     .submenu-lvl2 {
       padding-left: 25px;
 
-      @include query($tablet-2) {
+      @include query($tablet-1) {
         display: none;
       }
 
