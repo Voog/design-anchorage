@@ -1,9 +1,9 @@
 // FONTS
-@include font-face('Roboto', '../assets/roboto-thin', 100);
-@include font-face('Roboto', '../assets/roboto-thin-italic', 100, italic);
 @include font-face('Roboto', '../assets/roboto-light', 300);
 @include font-face('Roboto', '../assets/roboto-light-italic', 300, italic);
 @include font-face('Roboto', '../assets/roboto-regular', 400);
 @include font-face('Roboto', '../assets/roboto-italic', 400, italic);
+@include font-face('Roboto', '../assets/roboto-medium', 500);
+@include font-face('Roboto', '../assets/roboto-medium-italic', 500, italic);
 @include font-face('Roboto', '../assets/roboto-bold', 700);
 @include font-face('Roboto', '../assets/roboto-bold-italic', 700, italic);

@@ -274,12 +274,6 @@
       "filename": "roboto-italic.eot"
     },
     {
-      "content_type": "image/svg+xml",
-      "file": "assets/roboto-italic.svg",
-      "kind": "assets",
-      "filename": "roboto-italic.svg"
-    },
-    {
       "content_type": "application/x-font-truetype",
       "file": "assets/roboto-italic.ttf",
       "kind": "assets",
@@ -302,12 +296,6 @@
       "file": "assets/roboto-light-italic.eot",
       "kind": "assets",
       "filename": "roboto-light-italic.eot"
-    },
-    {
-      "content_type": "image/svg+xml",
-      "file": "assets/roboto-light-italic.svg",
-      "kind": "assets",
-      "filename": "roboto-light-italic.svg"
     },
     {
       "content_type": "application/x-font-truetype",
@@ -359,6 +347,54 @@
     },
     {
       "content_type": "application/vnd.ms-fontobject",
+      "file": "assets/roboto-medium-italic.eot",
+      "kind": "assets",
+      "filename": "roboto-medium-italic.eot"
+    },
+    {
+      "content_type": "application/x-font-truetype",
+      "file": "assets/roboto-medium-italic.ttf",
+      "kind": "assets",
+      "filename": "roboto-medium-italic.ttf"
+    },
+    {
+      "content_type": "application/font-woff",
+      "file": "assets/roboto-medium-italic.woff",
+      "kind": "assets",
+      "filename": "roboto-medium-italic.woff"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "assets/roboto-medium-italic.woff2",
+      "kind": "assets",
+      "filename": "roboto-medium-italic.woff2"
+    },
+    {
+      "content_type": "application/vnd.ms-fontobject",
+      "file": "assets/roboto-medium.eot",
+      "kind": "assets",
+      "filename": "roboto-medium.eot"
+    },
+    {
+      "content_type": "application/x-font-truetype",
+      "file": "assets/roboto-medium.ttf",
+      "kind": "assets",
+      "filename": "roboto-medium.ttf"
+    },
+    {
+      "content_type": "application/font-woff",
+      "file": "assets/roboto-medium.woff",
+      "kind": "assets",
+      "filename": "roboto-medium.woff"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "assets/roboto-medium.woff2",
+      "kind": "assets",
+      "filename": "roboto-medium.woff2"
+    },
+    {
+      "content_type": "application/vnd.ms-fontobject",
       "file": "assets/roboto-regular.eot",
       "kind": "assets",
       "filename": "roboto-regular.eot"
@@ -386,66 +422,6 @@
       "file": "assets/roboto-regular.woff2",
       "kind": "assets",
       "filename": "roboto-regular.woff2"
-    },
-    {
-      "content_type": "application/vnd.ms-fontobject",
-      "file": "assets/roboto-thin-italic.eot",
-      "kind": "assets",
-      "filename": "roboto-thin-italic.eot"
-    },
-    {
-      "content_type": "image/svg+xml",
-      "file": "assets/roboto-thin-italic.svg",
-      "kind": "assets",
-      "filename": "roboto-thin-italic.svg"
-    },
-    {
-      "content_type": "application/x-font-truetype",
-      "file": "assets/roboto-thin-italic.ttf",
-      "kind": "assets",
-      "filename": "roboto-thin-italic.ttf"
-    },
-    {
-      "content_type": "application/font-woff",
-      "file": "assets/roboto-thin-italic.woff",
-      "kind": "assets",
-      "filename": "roboto-thin-italic.woff"
-    },
-    {
-      "content_type": "text/unknown",
-      "file": "assets/roboto-thin-italic.woff2",
-      "kind": "assets",
-      "filename": "roboto-thin-italic.woff2"
-    },
-    {
-      "content_type": "application/vnd.ms-fontobject",
-      "file": "assets/roboto-thin.eot",
-      "kind": "assets",
-      "filename": "roboto-thin.eot"
-    },
-    {
-      "content_type": "image/svg+xml",
-      "file": "assets/roboto-thin.svg",
-      "kind": "assets",
-      "filename": "roboto-thin.svg"
-    },
-    {
-      "content_type": "application/x-font-truetype",
-      "file": "assets/roboto-thin.ttf",
-      "kind": "assets",
-      "filename": "roboto-thin.ttf"
-    },
-    {
-      "content_type": "application/font-woff",
-      "file": "assets/roboto-thin.woff",
-      "kind": "assets",
-      "filename": "roboto-thin.woff"
-    },
-    {
-      "content_type": "text/unknown",
-      "file": "assets/roboto-thin.woff2",
-      "kind": "assets",
-      "filename": "roboto-thin.woff2"
     },
     {
       "content_type": "image/svg+xml",
