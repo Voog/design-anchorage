@@ -19,7 +19,9 @@
   {% else %}
     <div class="article-content">
       <div class="article-excerpt content-area">{{ article.excerpt }}</div>
-      {% if article.data.photo_article_state and article.data.header_bg.image != "" %}
+      <h1>{{ article.data.header_bg | escape }}</h1>
+
+      {% if article.data.photo_article_state and article.data.header_bg != "" and article.data.header_bg != nil %}
         <div class="article-image">
           <a href="{{ article.url }}" class="background-image" style="background-image: url({{ article.data.header_bg.image }});"></a>
         </div>
