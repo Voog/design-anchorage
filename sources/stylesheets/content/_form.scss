@@ -124,6 +124,10 @@
     &.form_field_size_large {
       min-width: 184px;
     }
+
+    .dark-background & {
+      background-image: url('../assets/ico-arrow-white.svg');
+    }
   }
 
   .form_field_radio,

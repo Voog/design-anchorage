@@ -191,6 +191,12 @@
   "assets": [
     {
       "content_type": "image/svg+xml",
+      "file": "assets/ico-arrow-white.svg",
+      "kind": "assets",
+      "filename": "ico-arrow-white.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
       "file": "assets/ico-arrow.svg",
       "kind": "assets",
       "filename": "ico-arrow.svg"

@@ -1025,7 +1025,6 @@ a img {
     overflow: auto;
     height: 100vh;
     box-sizing: border-box;
-    z-index: 9999;
   }
 }
 .article-comments .comments-body .comments-header .comments-title {
@@ -3523,6 +3522,9 @@ a img {
 }
 .content-area .form_field_select.form_field_size_large {
   min-width: 184px;
+}
+.dark-background .content-area .form_field_select {
+  background-image: url("../assets/ico-arrow-white.svg");
 }
 .svg .content-area .form_field_radio, .svg
 .content-area .form_field_checkbox {
