@@ -2,7 +2,8 @@ html {
   font-size: $font-size-base;
 
   @include query($tablet-3) {
-    &.search-open {
+    &.search-open,
+    &.comments-open {
       height: 100%;
       overflow: hidden;
     }
@@ -18,7 +19,8 @@ body {
   -webkit-text-size-adjust: 100%;
 
   @include query($tablet-3) {
-    .search-open & {
+    .search-open &,
+    .comments-open & {
       position: fixed;
       top: 0;
       left: 0;
@@ -127,12 +129,24 @@ a {
   .flexbox & {
     @include flex(1);
   }
+
+  // @include query($tablet-3) {
+  //   .comments-open & {
+  //     position: static;
+  //   }
+  // }
 }
 
 .page-content {
   display: block;
   position: relative;
   max-width: 100vw;
+
+  // @include query($tablet-3) {
+  //   .comments-open & {
+  //     position: static;
+  //   }
+  // }
 }
 
 // Independent elements that can be located everywhere in the DOM and always have the same styling rules.

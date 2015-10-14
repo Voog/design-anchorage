@@ -321,8 +321,8 @@
           $('body').removeClass('lang-menu-open');
         }
 
-        if ($('body').hasClass('comments-open')) {
-          $('body').removeClass('comments-open');
+        if ($('html').hasClass('comments-open')) {
+          $('html').removeClass('comments-open');
           $('.js-comments-toggle-btn, .js-voog-comments-modal').removeClass('open');
         }
 
@@ -395,10 +395,10 @@
     $('.js-comments-toggle-btn').click(function() {
       $(this).toggleClass('open');
       $('.js-comments').toggleClass('open');
-      $('body').toggleClass('comments-open');
+      $('html').toggleClass('comments-open');
       $('.js-comments-input').val('').focus();
 
-      if ($('body').hasClass('comments-open')) {
+      if ($('html').hasClass('comments-open')) {
         $('html, body').animate({
             scrollTop: $('.js-voog-comments-modal').offset().top
         }, 300);
@@ -410,7 +410,7 @@
     var handleCommentsToggleing = function() {
       var mainContent = $('.main-content');
 
-      if ($('body').hasClass('comments-open')) {
+      if ($('html').hasClass('comments-open')) {
         var articleCommentsHeight = $('.article-comments').outerHeight(),
             siteFooterHeight = $('.site-footer').outerHeight();
 

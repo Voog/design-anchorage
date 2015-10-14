@@ -52,14 +52,13 @@
         {% endfor %}
       </div>
     {% endif %}
-  </div>
 
-  <div class="comments-close">
-    <div class="btn-close comment-btn comments-close-btn js-comments-toggle-btn">
-      <svg class="ico-close" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-        <path d="M15.778,1.636 L9.414,8.000 L15.778,14.364 L14.364,15.778 L8.000,9.414 L1.636,15.778 L0.222,14.364 L6.586,8.000 L0.222,1.636 L1.636,0.222 L8.000,6.586 L14.364,0.222 L15.778,1.636 Z" class="cls-1"/>
-      </svg>
+    <div class="comments-close">
+      <div class="btn-close comment-btn comments-close-btn js-comments-toggle-btn">
+        <svg class="ico-close" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+          <path d="M15.778,1.636 L9.414,8.000 L15.778,14.364 L14.364,15.778 L8.000,9.414 L1.636,15.778 L0.222,14.364 L6.586,8.000 L0.222,1.636 L1.636,0.222 L8.000,6.586 L14.364,0.222 L15.778,1.636 Z" class="cls-1"/>
+        </svg>
+      </div>
     </div>
   </div>
-
 </section>
