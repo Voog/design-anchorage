@@ -38,7 +38,7 @@
                   <div class="wrap">
                     {% if editmode or feature_image_1 or feature_1_has_content %}
                       <div class="feature">
-                        <div class="feature-image">{% if editmode %}<div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_1" data-image="{{ feature_image_1.url }}"></div>{% elsif feature_image_1 %}<div class="aspect-ratio-inner" style="background-image: url('{{ feature_image_1.url }}')"></div>{% endif %}</div>
+                        <div class="feature-image">{% if editmode %}<div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_1" data-image="{{ feature_image_1 }}"></div>{% elsif feature_image_1 != "" %}<div class="aspect-ratio-inner" style="background-image: url('{{ feature_image_1 }}')"></div>{% endif %}</div>
                         <div class="feature-content content-area" data-search-indexing-allowed="true">{% content name="feature_1" %}</div>
                       </div>
                     {% endif %}
