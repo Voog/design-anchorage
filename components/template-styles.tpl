@@ -82,19 +82,7 @@
     {% assign bg_image_prefix = images_path | append: "/article-header-bg" %}
 
     .site-header.photo-article .background-image {
-      background-image: url("{{ bg_image_prefix }}.jpg");
-    }
-
-    @media screen and (max-width: 2048px) {
-      .site-header.photo-article .background-image {
-        background-image: url("{{ bg_image_prefix }}_huge.jpg");
-      }
-    }
-
-    @media screen and (max-width: 1280px) {
-      .site-header.photo-article .background-image {
-        background-image: url("{{ bg_image_prefix }}_large.jpg");
-      }
+      background-image: none;
     }
   {% endif %}
 

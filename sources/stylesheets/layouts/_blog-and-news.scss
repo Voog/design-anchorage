@@ -27,7 +27,7 @@
   .blog-article {
     position: relative;
     padding-top: 50px;
-    @include hyphenate(true);
+    @include hyphens(auto);
 
     &:first-child {
       padding-top: 0;

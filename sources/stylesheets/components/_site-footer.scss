@@ -44,7 +44,7 @@
 
   .blog-article-nav {
     @extend %clearfix;
-    @include hyphenate(true);
+    @include hyphens(auto);
     border-top: 1px solid rgba($grey-2, 1);
     border-bottom: 1px solid rgba($grey-2, 1);
     display: table;

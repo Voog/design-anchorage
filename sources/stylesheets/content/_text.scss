@@ -3,7 +3,7 @@
 // NB! Contact forms, image galleries and tables styling rules are located in the separate partials: "_forms.scss", "_gallery.scss" and "_tables.scss".
 .content-area {
   @extend %clearfix;
-  @include hyphenate(true);
+  @include hyphens(auto);
   @include color($black-base, .71);
   @include rem-fallback(font-size, $font-size-normal);
   line-height: $line-height-medium;
@@ -15,11 +15,6 @@
       @include color($white, 1);
     }
   }
-
-  // .contacts & {
-  //   text-align: center;
-  //   @include rem-fallback(font-size, $font-size-20);
-  // }
 
   .site-footer & {
     @include rem-fallback(font-size, $font-size-small);
@@ -310,7 +305,7 @@
     text-align: center;
     margin: 10px 0;
     cursor: pointer;
-    @include hyphenate(true);
+    @include hyphens(auto);
     text-decoration: none;
 
     .site-header & {

@@ -35,7 +35,7 @@
   }
 
   .header-title {
-    @include hyphenate(true);
+    @include hyphens(auto);
     @include rem-fallback(font-size, $font-size-title);
     font-weight: 300;
     line-height: $line-height-normal;
