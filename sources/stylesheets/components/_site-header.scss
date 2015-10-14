@@ -194,24 +194,18 @@
       font-size: 60px;
       line-height: $line-height-small;
       font-weight: 300;
-      margin: 0;
-      margin-bottom: 10px;
+      margin: 0 0 10px;
       text-transform: none;
-      margin-bottom: 0;
 
       .public & {
         cursor: pointer;
       }
 
       @include query($tablet-3) {
-        &,
-        a {
-          font-size: 32px;
-        }
+        font-size: 32px;
       }
 
       a {
-        @extend .article-title;
         font-size: 1em;
         text-decoration: none;
       }

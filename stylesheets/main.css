@@ -756,19 +756,19 @@ a img {
 .blog-news-page .main-content .wrap {
   max-width: 780px;
 }
-.blog-news-page .article-title, .blog-news-page .site-header .header-body .article-title a, .site-header .header-body .article-title .blog-news-page a {
+.blog-news-page .article-title {
   font-size: 32px;
   font-size: 2rem;
   font-weight: 300;
   margin: 10px 0 0;
 }
 @media screen and (max-width: 850px) {
-  .blog-news-page .article-title, .blog-news-page .site-header .header-body .article-title a, .site-header .header-body .article-title .blog-news-page a {
+  .blog-news-page .article-title {
     font-size: 26px;
     font-size: 1.625rem;
   }
 }
-.blog-news-page .article-title a, .blog-news-page .site-header .header-body .article-title a a, .site-header .header-body .article-title .blog-news-page a a {
+.blog-news-page .article-title a {
   color: black;
   text-decoration: none;
 }
@@ -848,7 +848,7 @@ a img {
   position: absolute;
   top: 4px;
 }
-.blog-news-page .articles-listing .blog-article .article-title, .blog-news-page .articles-listing .blog-article .site-header .header-body .article-title a, .site-header .header-body .article-title .blog-news-page .articles-listing .blog-article a {
+.blog-news-page .articles-listing .blog-article .article-title {
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: 300;
@@ -862,7 +862,7 @@ a img {
   .blog-news-page .articles-listing .blog-article .article-date {
     position: static;
   }
-  .blog-news-page .articles-listing .blog-article .article-title, .blog-news-page .articles-listing .blog-article .site-header .header-body .article-title a, .site-header .header-body .article-title .blog-news-page .articles-listing .blog-article a {
+  .blog-news-page .articles-listing .blog-article .article-title {
     margin: 0;
   }
 }
@@ -955,7 +955,7 @@ a img {
     display: none;
   }
 }
-.blog-article-page .main-content .article-header .article-title, .blog-article-page .main-content .article-header .site-header .header-body .article-title a, .site-header .header-body .article-title .blog-article-page .main-content .article-header a {
+.blog-article-page .main-content .article-header .article-title {
   margin-bottom: 0;
   line-height: 1.4;
 }
@@ -1371,21 +1371,18 @@ a img {
 .site-header .header-body .article-date.is-hidden {
   display: none;
 }
-.site-header .header-body .article-title, .site-header .header-body .article-title a {
+.site-header .header-body .article-title {
   font-size: 60px;
   line-height: 1.2;
   font-weight: 300;
-  margin: 0;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
   text-transform: none;
-  margin-bottom: 0;
 }
-.public .site-header .header-body .article-title, .public .site-header .header-body .article-title a {
+.public .site-header .header-body .article-title {
   cursor: pointer;
 }
 @media screen and (max-width: 640px) {
-  .site-header .header-body .article-title, .site-header .header-body .article-title a,
-  .site-header .header-body .article-title a {
+  .site-header .header-body .article-title {
     font-size: 32px;
   }
 }
