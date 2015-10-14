@@ -9466,6 +9466,7 @@ return jQuery;
 
     if (colorExtractImageUrl) {
       if (bgPickerImageSizesContains(bgPickerImageSizes, bgPickerImagePrevious)) {
+        bgPicker.bgPickerImageColor = bgPicker.bgPickerImageColor ? bgPicker.bgPickerImageColor : 'rgba(41,42,39,1)';
         bgPickerCombinedLightness = getCombinedLightness(bgPicker.bgPickerImageColor, bgPickerColor);
         bgPickerContentLightnessClass(bgPickerArea);
       } else {
@@ -9479,6 +9480,7 @@ return jQuery;
         });
       };
     } else {
+      bgPicker.bgPickerImageColor = 'rgba(255,255,255,1)';
       bgPickerCombinedLightness = getCombinedLightness('rgba(255,255,255,1)', bgPickerColor);
       bgPickerContentLightnessClass(bgPickerArea);
     };
