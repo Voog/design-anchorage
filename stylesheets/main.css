@@ -2093,7 +2093,7 @@ a img {
   display: none;
   padding: 5px 0;
   text-align: left;
-  color: white;
+  background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 .no-boxshadow .lang-menu-popover {

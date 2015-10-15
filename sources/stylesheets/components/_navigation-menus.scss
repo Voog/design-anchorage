@@ -761,7 +761,7 @@ $flags:
   display: none;
   padding: 5px 0;
   text-align: left;
-  color: rgba($white, 1);
+  background-color: rgba($white, 1);
   box-shadow: 0 0 5px rgba($black-base, .3);
 
   .no-boxshadow & {
