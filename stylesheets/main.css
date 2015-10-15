@@ -2599,8 +2599,6 @@ a img {
   hyphens: auto;
   display: table;
   width: 100%;
-  border-top: 1px solid #e6e6e6;
-  border-bottom: 1px solid #e6e6e6;
 }
 @media screen and (max-width: 480px) {
   .site-footer .blog-article-nav {
@@ -2614,6 +2612,7 @@ a img {
   box-sizing: border-box;
   width: 50%;
   vertical-align: top;
+  border-top: 1px solid #e6e6e6;
 }
 @media screen and (max-width: 480px) {
   .site-footer .blog-article-nav .article-nav-full,
