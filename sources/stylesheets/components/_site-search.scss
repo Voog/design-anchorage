@@ -33,13 +33,19 @@
   line-height: 1;
 
   @media screen and (max-width: $tablet-3) {
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    height: 100%;
+    height: auto;
     width: auto;
+    height: 100vh;
     background-color: #f7f7f7;
+
+    .editmode & {
+      height: calc(100vh - 40px);
+    }
   }
 
   #mobile-search & {
@@ -64,9 +70,9 @@
     z-index: 20;
     display: block;
 
-    @media screen and (min-width: $tablet-3) {
-      top: 30px;
-    }
+    // @media screen and (min-width: $tablet-3) {
+    //   top: 30px;
+    // }
   }
 }
 
@@ -74,6 +80,10 @@
   vertical-align: middle;
   width: 100%;
   box-sizing: border-box;
+
+  @media screen and (max-width: $tablet-3) {
+    height: 100vh;
+  }
 }
 
 .search-inner {
@@ -84,9 +94,9 @@
     box-shadow: none;
   }
 
-  @media screen and (min-width: $tablet-3 + 1) {
-    max-width: 400px;
-  }
+  // @media screen and (min-width: $tablet-3 + 1) {
+  //   max-width: 400px;
+  // }
 }
 
 .search-form {
@@ -96,6 +106,8 @@
   box-shadow: 0, 2px, 4px, 0, rgba($black-base, .1);
 
   @media screen and (max-width: $tablet-3) {
+    padding-top: 10px;
+    padding-bottom: 6px;
     box-shadow: 0, 1px, 1px, 0, rgba($black-base, .1);
   }
 
@@ -111,16 +123,16 @@
     border: none;
   }
 
-  @media screen and (max-width: $tablet-3) {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    padding-top: 10px;
-    padding-bottom: 6px;
-    max-width: none;
-    z-index: 1000;
-  }
+  // @media screen and (max-width: $tablet-3) {
+  //   position: fixed;
+  //   left: 0;
+  //   right: 0;
+  //   top: 0;
+  //   padding-top: 10px;
+  //   padding-bottom: 6px;
+  //   max-width: none;
+  //   z-index: 1000;
+  // }
 }
 
 .search-input {
@@ -304,12 +316,12 @@
   z-index: 999;
   width: 100%;
   max-width: 400px;
-  max-height: 100vw;
+  max-height: 100vh;
   margin: 0 auto;
   background-color: rgba($white, 1);
   box-shadow: none;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
   text-align: left;
 
   #mobile-search & {
@@ -326,18 +338,20 @@
   }
 
   @media screen and (max-width: $tablet-3) {
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    max-width: 100%;
-    max-height: none;
-    padding-top: 57px;
-    height: 100vh;
-    color: rgba($white, 1);
-    background-color: #f7f7f7;
+    height: calc(100vh - 56px);
   }
+  //   position: fixed;
+  //   top: 0px;
+  //   right: 0px;
+  //   bottom: 0px;
+  //   left: 0px;
+  //   max-width: 100%;
+  //   max-height: none;
+  //   padding-top: 57px;
+  //   height: 100vh;
+  //   color: rgba($white, 1);
+  //   background-color: #f7f7f7;
+  // }
 }
 
 .voog-search-modal-results {

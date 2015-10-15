@@ -415,6 +415,7 @@ a img {
 
 .table-holder {
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
   max-width: 100%;
 }
 
@@ -976,6 +977,7 @@ a img {
     bottom: 0;
     left: 0;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
     box-sizing: border-box;
     height: 100vh;
     padding: 20px;
@@ -1551,7 +1553,7 @@ a img {
     bottom: 0;
     display: block;
     overflow: auto;
-    overflow: auto;
+    -webkit-overflow-scrolling: touch;
     box-sizing: border-box;
     width: 250px;
     padding: 30px 20px 50px;
@@ -2137,13 +2139,18 @@ a img {
 }
 @media screen and (max-width: 640px) {
   .search {
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    height: 100%;
+    height: auto;
     width: auto;
+    height: 100vh;
     background-color: #f7f7f7;
+  }
+  .editmode .search {
+    height: calc(100vh - 40px);
   }
 }
 #mobile-search .search {
@@ -2166,16 +2173,16 @@ a img {
   z-index: 20;
   display: block;
 }
-@media screen and (min-width: 640px) {
-  .search.active {
-    top: 30px;
-  }
-}
 
 .search-middle {
   vertical-align: middle;
   width: 100%;
   box-sizing: border-box;
+}
+@media screen and (max-width: 640px) {
+  .search-middle {
+    height: 100vh;
+  }
 }
 
 .search-inner {
@@ -2184,11 +2191,6 @@ a img {
 }
 #mobile-search .search-inner {
   box-shadow: none;
-}
-@media screen and (min-width: 641px) {
-  .search-inner {
-    max-width: 400px;
-  }
 }
 
 .search-form {
@@ -2199,6 +2201,8 @@ a img {
 }
 @media screen and (max-width: 640px) {
   .search-form {
+    padding-top: 10px;
+    padding-bottom: 6px;
     box-shadow: 0, 1px, 1px, 0, rgba(0, 0, 0, 0.1);
   }
 }
@@ -2210,18 +2214,6 @@ a img {
   max-width: 400px;
   margin: 0 auto;
   border: none;
-}
-@media screen and (max-width: 640px) {
-  .search-form {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    padding-top: 10px;
-    padding-bottom: 6px;
-    max-width: none;
-    z-index: 1000;
-  }
 }
 
 .search-input {
@@ -2377,12 +2369,12 @@ a img {
   z-index: 999;
   width: 100%;
   max-width: 400px;
-  max-height: 100vw;
+  max-height: 100vh;
   margin: 0 auto;
   background-color: white;
   box-shadow: none;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
   text-align: left;
 }
 #mobile-search .voog-search-modal {
@@ -2397,17 +2389,7 @@ a img {
 }
 @media screen and (max-width: 640px) {
   .voog-search-modal {
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    max-width: 100%;
-    max-height: none;
-    padding-top: 57px;
-    height: 100vh;
-    color: white;
-    background-color: #f7f7f7;
+    height: calc(100vh - 56px);
   }
 }
 
@@ -2658,6 +2640,7 @@ a img {
 .site-footer .blog-article-nav .article-nav-half a {
   display: block;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
   height: 100%;
   padding: 55px 50px;
 }
@@ -2977,6 +2960,7 @@ a img {
 }
 .content-area pre {
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
   padding: 10px;
 }
 .content-area pre code {
