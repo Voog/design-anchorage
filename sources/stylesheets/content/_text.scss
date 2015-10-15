@@ -4,29 +4,29 @@
 .content-area {
   @extend %clearfix;
   @include hyphens(auto);
-  @include color($black-base, .71);
-  @include rem-fallback(font-size, $font-size-normal);
-  line-height: $line-height-medium;
+  color: rgba($black-base, .71);
+  font-size: 18px;
+  line-height: 1.7;
 
   .dark-background & {
-    @include color($white, 1);
+    color: rgba($white, 1);
 
     .site-footer & {
-      @include color($white, 1);
+      color: rgba($white, 1);
     }
   }
 
   .site-footer & {
-    @include rem-fallback(font-size, $font-size-small);
-    @include color($black-base, .6);
+    font-size: 14px;
+    color: rgba($black-base, .6);
   }
 
   &.footer-left {
-    @include rem-fallback(font-size, $font-size-20);
+    font-size: 20px;
   }
 
   &.footer-right {
-    @include rem-fallback(font-size, $font-size-base);
+    font-size: 16px;
   }
 
   // Resets the top margin for the first element and bottom margin for the last element in the content area (to prevent unwanted white-space at the beginning and the end of a content-area).
@@ -68,11 +68,11 @@
   code,
   table {
     .dark-background & {
-      @include color($white, 1);
+      color: rgba($white, 1);
     }
 
     .footer-inner.dark-background & {
-      @include color($white, .5);
+      color: rgba($white, .5);
     }
   }
 
@@ -84,10 +84,10 @@
   h5,
   h6 {
     font-weight: 300;
-    @include color($black-base, .87);
+    color: rgba($black-base, .87);
 
     a {
-      @include color($black-base, 1);
+      color: rgba($black-base, 1);
       text-decoration: none;
     }
   }
@@ -106,37 +106,33 @@
   }
 
   h1 {
-    @include rem-fallback(font-size, $font-size-huge);
-    line-height: $line-height-middle;
+    font-size: 32px;
+    line-height: 1.4;
 
-    @include query($tablet-3) {
-      @include rem-fallback(font-size, 28px);
+    @media screen and (max-width: $tablet-3) {
+      font-size: 28px;
     }
 
     .site-header & {
       margin-top: .3em;
       margin-bottom: .3em;
       text-transform: uppercase;
-      @include rem-fallback(font-size, $font-size-header);
+      font-size: 70px;
       font-weight: 700;
       line-height: 1.1;
 
-      @include query($tablet-3) {
-        @include rem-fallback(font-size, 32px);
+      @media screen and (max-width: $tablet-3) {
+        font-size: 32px;
       }
     }
-
-    // .contacts & {
-    //   font-size: 32px;
-    // }
   }
 
   h2 {
-    @include rem-fallback(font-size, $font-size-large);
+    font-size: 26px;
     line-height: 1.4;
 
-    @include query($tablet-3) {
-      @include rem-fallback(font-size, 24px);
+    @media screen and (max-width: $tablet-3) {
+      font-size: 24px;
     }
 
     .site-header & {
@@ -153,7 +149,7 @@
   h4,
   h5,
   h6 {
-    @include rem-fallback(font-size, $font-size-title);
+    font-size: 22px;
 
     .contacts & {
       font-weight: 400;
@@ -166,16 +162,16 @@
   ul,
   ol,
   dl {
-    @include rem-fallback(font-size, $font-size-normal);
+    font-size: 18px;
 
     .site-footer & {
-      @include rem-fallback(font-size, $font-size-small);
-      @include color($black-base, .6);
+      font-size: 14px;
+      color: rgba($black-base, .6);
     }
 
     .dark-background & {
       .site-footer & {
-        @include color($white, 1);
+        color: rgba($white, 1);
       }
     }
   }
@@ -212,7 +208,7 @@
   }
 
   a {
-    @include color($black, 1);
+    color: rgba($black, 1);
     text-decoration: underline;
 
 
@@ -221,7 +217,7 @@
     }
 
     .dark-background & {
-      @include color($white, 1);
+      color: rgba($white, 1);
     }
   }
 
@@ -254,8 +250,8 @@
   // Code blocks and preformatted content.
   pre,
   code {
-    @include rem-fallback(font-size, $font-size-small);
-    @include bg($black, .1);
+    font-size: 14px;
+    background-color: rgba($black, .1);
   }
 
   pre {
@@ -295,13 +291,13 @@
 
   .custom-btn {
     display: inline-block;
-    @include bg($black, .0);
+    background-color: transparent;
     box-sizing: border-box;
     padding: 12px 30px 13px;
     text-transform: uppercase;
-    @include rem-fallback(font-size, $font-size-base);
+    font-size: 16px;
     font-weight: 400;
-    line-height: $line-height-medium;
+    line-height: 1.7;
     text-align: center;
     margin: 10px 0;
     cursor: pointer;
@@ -322,12 +318,12 @@
 
     .dark-background & {
       border: 2px solid $white;
-      @include color($white, 1);
+      color: rgba($white, 1);
     }
 
     .light-background & {
       border: 2px solid #222;
-      @include color(#222222);
+      color: rgba(#222222, 1);
     }
 
     &:hover {
@@ -335,14 +331,14 @@
 
       .dark-background & {
         border: 2px solid $white;
-        @include bg($white, 1);
-        @include color($black-base, .71);
+        background-color: rgba($white, 1);
+        color: rgba($black-base, .71);
       }
 
       .light-background & {
         border: 2px solid #222222;
-        @include bg(#222222);
-        @include color($white, 1);
+        background-color: rgba(#222222, 1);
+        color: rgba($white, 1);
       }
     }
   }
@@ -375,8 +371,8 @@
 
   // Container around editable content-area table.
   .table-container {
-    @include border(left, 1px, solid, $black, 0.1);
-    @include border(right, 1px, solid, $black, 0.1);
+    border-right: 1px solid rgba($black, .1);
+    border-left: 1px solid rgba($black, .1);
 
     .content & {
       margin-bottom: 35px;
@@ -405,7 +401,7 @@
   table {
     width: 100%;
     margin: 0 auto;
-    @include rem-fallback(font-size, $font-size-base);
+    font-size: 16px;
     border-collapse: collapse;
     border-spacing: 0;
 
@@ -426,34 +422,29 @@
       padding: 9px 13px;
 
       .dark-background & {
-        @include border(all, 1px,solid,$white);
+        border: 1px solid rgba($white, 1);
       }
     }
 
     th {
       text-align: left;
       font-weight: 400;
-      @include color($white);
-      @include bg($black);
-      @include border(all, 1px,solid,$black);
+      color: rgba($white, 1);
+      background-color: rgba($black, 1);
+      border: 1px solid rgba($black, 1);
+
 
 
       .footer & {
-        @include color($white, .5);
+        color: rgba($white, .5);
       }
     }
 
     td {
-      @include border(top, 1px, solid, $black, .1);
-      @include border(right, 1px, solid, $black, .1);
-      @include border(bottom, 1px, solid, $black, .1);
-      @include border(left, 1px, solid, $black, .1);
+      border: 1px solid rgba($black, .1);
 
       .dark-background & {
-        @include border(top, 1px, solid, $white, .1);
-        @include border(right, 1px, solid, $white, .1);
-        @include border(bottom, 1px, solid, $white, .1);
-        @include border(left, 1px, solid, $white, .1);
+        border: 1px solid rgba($white, .1);
       }
     }
 
@@ -488,20 +479,20 @@
       tr {
         td {
           padding: 0 25px;
-          @include color($black, 0.73);
+          color: rgba($black, .73);
           border-top: none;
-          @include border(left, 2px, solid, $black, 0.2);
+          border-left: 2px solid rgba($black, .2);
           border-right: none;
           border-bottom: none;
         }
       }
 
-      @include query($tablet-1 - 40) {
-        @include rem-fallback(font-size, $font-size-20);
+      @media screen and (max-width: $tablet-1 - 40) {
+        font-size: 20px;
       }
 
-      @include query($tablet-2) {
-        @include rem-fallback(font-size, $font-size-base);
+      @media screen and (max-width: $tablet-2) {
+        font-size: 16px;
       }
     }
 
@@ -518,7 +509,7 @@
       }
     }
 
-    @include query($mobile-1 + 42) {
+    @media screen and (max-width: $mobile-1 + 42) {
       .contacts &,
       .footer & {
         &, tbody, tr {
@@ -541,7 +532,7 @@
         tr {
           td {
             border-left: none;
-            @include border(bottom, 2px, solid, $black, 0.2);
+            border-bottom: 2px solid rgba($black, .2);
           }
         }
       }

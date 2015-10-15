@@ -1,67 +1,70 @@
 .site-header {
   @extend %clearfix;
+  @media screen and (max-width: $tablet-2) {
+    .header-left,
+    .header-right {
+      float: none;
+      .no-flexbox & {
+        display: table-cell;
+        vertical-align: top;
+      }
+    }
+    .header-left {
+      @include flex(1);
+      margin-right: 40px;
+    }
+  }
   position: relative;
-
-  @include query($tablet-3) {
+  @media screen and (max-width: $tablet-3) {
     .search-open & {
       position: static;
     }
   }
-
   .header-top {
     .wrap {
+      $header-padding: 40px;
+      padding-top: $header-padding;
+      padding-right: 40px;
+      padding-left: 40px;
       .flexbox & {
         @include display(flex);
         @include flex-wrap(wrap);
         @include justify-content(flex-end);
       }
-
-      $header-padding: 40px;
-      padding-top: $header-padding;
-      padding-right: 40px;
-      padding-left: 40px;
-
-      @include query($tablet-3) {
+      @media screen and (max-width: $tablet-3) {
         padding-top: 20px;
         padding-right: 20px;
         padding-left: 20px;
       }
     }
-
     .site-options {
       display: inline-block;
       vertical-align: top;
     }
   }
-
   .header-title {
     @include hyphens(auto);
-    @include rem-fallback(font-size, $font-size-title);
+    font-size: 22px;
     font-weight: 300;
-    line-height: $line-height-normal;
+    line-height: 1;
     position: relative;
     min-width: 140px;
-
     a {
       text-decoration: none;
     }
   }
-
   .header-body {
     .blog-article-page & {
       text-align: center;
     }
   }
-
   .header-left {
     .flexbox & {
       @include flex(1 0 auto);
     }
-
     .no-flexbox & {
       float: left;
-
-      @include query($tablet-3) {
+      @media screen and (max-width: $tablet-3) {
         float: none;
       }
     }
@@ -69,155 +72,95 @@
   .header-right {
     position: relative;
     text-align: right;
-
-    @include query($tablet-3) {
+    @media screen and (max-width: $tablet-3) {
       .search-open & {
         position: static;
       }
     }
-
     .no-flexbox & {
       float: right;
     }
   }
-
   .header-bottom {
     .header-bottom-inner {
       display: table;
-      table-layout: fixed;
-      border-collapse: collapse;
       width: 100%;
       max-width: $width-max;
       margin: 0 auto;
-
+      table-layout: fixed;
+      border-collapse: collapse;
       .common-page &,
       .blog-news-page &,
       .blog-article-page & {
-        @include rem-fallback(height, 253px);
-
-        @include query($tablet-3) {
-          @include rem-fallback(height, 130px);
+        height: 253px;
+        @media screen and (max-width: $tablet-3) {
+          height: 130px;
         }
       }
-
       .front-page & {
         min-height: 684px;
-
-        @include query($tablet-3) {
+        @media screen and (max-width: $tablet-3) {
           min-height: 400px;
         }
       }
-
       .wrap {
         display: table-cell;
-        vertical-align: middle;
         padding: 60px 40px 90px;
-
-        // .common-page &,
-        // .blog-news-page &,
-        // .blog-article-page & {
-          @include query($tablet-3) {
-            // padding-top: 0;
-            // padding-bottom: 20px;
-            padding: 40px 20px 60px;
-          }
-        // }
-
-        // @include query($tablet-3) {
-        //   padding: 20px;
-        // }
+        vertical-align: middle;
+        @media screen and (max-width: $tablet-3) {
+          padding: 40px 20px 60px;
+        }
       }
-
-      // @include query($mobile-1 - 58) {
-      //   .wrap {
-      //     @include rem-fallback(height, 222px);
-
-      //     .front-page & {
-      //       @include rem-fallback(height, 222px);
-      //     }
-      //     &.is-photoheader{
-      //       @include rem-fallback(height, 222px);
-      //     }
-      //   }
-      // }
     }
   }
-
   &.photo-article {
     .header-bottom {
       .header-bottom-inner {
         min-height: 684px;
-
         .wrap {
           padding-top: 60px;
         }
-
-        @include query($tablet-3) {
+        @media screen and (max-width: $tablet-3) {
           min-height: 400px;
         }
       }
     }
   }
-
-  @include query($tablet-2) {
-    .header-left,
-    .header-right {
-      float: none;
-
-      .no-flexbox & {
-        display: table-cell;
-        vertical-align: top;
-      }
-    }
-
-    .header-left {
-      @include flex(1);
-      margin-right: 40px;
-    }
-  }
-
   .header-body {
     .article-author,
     .article-date {
-      @include rem-fallback(font-size, $font-size-small);
+      font-size: 14px;
       font-weight: 300;
-      line-height: $line-height-double;
-      letter-spacing: 1px;
+      line-height: 2;
       display: inline;
+      letter-spacing: 1px;
       text-transform: uppercase;
-
       &.is-hidden {
         display: none;
       }
     }
     .article-title {
       font-size: 60px;
-      line-height: $line-height-small;
       font-weight: 300;
+      line-height: 1.2;
       margin: 0 0 10px;
       text-transform: none;
-
       .public & {
         cursor: pointer;
       }
-
-      @include query($tablet-3) {
+      @media screen and (max-width: $tablet-3) {
         font-size: 32px;
       }
-
       a {
         font-size: 1em;
         text-decoration: none;
       }
     }
-
     .blog-title {
-      margin-top: 0;
       font-weight: 700;
-      line-height: $line-height-normal;
+      line-height: 1;
+      margin-top: 0;
       text-transform: uppercase;
-
-
       &.is-hidden {
         display: none;
       }

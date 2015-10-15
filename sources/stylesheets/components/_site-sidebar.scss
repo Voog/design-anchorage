@@ -4,29 +4,29 @@
   margin: 50px 0 50px 40px;
   position: relative;
 
-  @include query($tablet-1) {
+  @media screen and (max-width: $tablet-1) {
     display: none;
   }
-  @include querymin($wide-1) {
+  @media screen and (min-width: $wide-1) {
     width: 20%;
   }
 
   .sidebar-title {
-    @include rem-fallback(font-size, $font-size-normal);
+    font-size: 18px;
     font-weight: 400;
-    line-height: $line-height-double;
+    line-height: 2;
     text-transform: uppercase;
     margin: 0;
 
-    @include query($tablet-1) {
+    @media screen and (max-width: $tablet-1) {
       display: none;
     }
 
     a {
-      @include color($black, 1);
+      color: rgba($black, 1);
 
       .dark-background & {
-        @include color($white, 1);
+        color: rgba($white, 1);
       }
     }
 
@@ -40,40 +40,40 @@
     }
 
     li {
-      @include rem-fallback(font-size, $font-size-normal);
+      font-size: 18px;
       font-weight: 300;
-      line-height: $line-height-medium;
+      line-height: 1.7;
       margin: 15px 0;
 
-      @include query($tablet-1) {
+      @media screen and (max-width: $tablet-1) {
         display: inline-block;
         margin-right: $margin-low;
       }
     }
     a {
-      @include color($black-base, .5);
+      color: rgba($black-base, .5);
 
       .dark-background & {
-        @include color($white, 1);
+        color: rgba($white, 1);
       }
 
       &:hover {
-        @include color($black, 1);
+        color: rgba($black, 1);
 
         .dark-background & {
-          @include color($white, .8);
+          color: rgba($white, .8);
         }
       }
     }
     .selected {
       font-weight: 500;
-      @include color($black, 1);
+      color: rgba($black, 1);
 
       .dark-background & {
-        @include color($white, 1);
+        color: rgba($white, 1);
 
         &:hover {
-          @include color($white, 1);
+          color: rgba($white, 1);
         }
       }
     }
@@ -81,46 +81,45 @@
     .submenu-lvl2 {
       padding-left: 25px;
 
-      @include query($tablet-1) {
+      @media screen and (max-width: $tablet-1) {
         display: none;
       }
 
       li {
-        @include rem-fallback(font-size, $font-size-base);
-        line-height: $line-height-medium;
+        font-size: 16px;
+        line-height: 1.7;
         font-weight: 300;
       }
       a {
-        @include color($black, 1);
+        color: rgba($black, 1);
 
         .dark-background & {
-          @include color($white, 1);
+          color: rgba($white, 1);
 
           &:hover {
-            @include color($white, .5);
+            color: rgba($white, .5);
           }
         }
 
         &:hover {
-          @include color($black-base, .5);
+          color: rgba($black-base, .5);
         }
       }
       .selected {
         font-weight: 500;
 
         .dark-background & {
-          @include color($white, 1);
+          color: rgba($white, 1);
 
           a:hover {
-            @include color($white, 1);
+            color: rgba($white, 1);
           }
         }
 
         a:hover {
-          @include color($black, 1);
+          color: rgba($black, 1);
         }
       }
     }
-
   }
 }

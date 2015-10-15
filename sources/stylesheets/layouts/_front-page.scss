@@ -1,13 +1,13 @@
 %large-text {
   font-size: 50px;
   font-weight: 700;
-  line-height: $line-height-normal;
+  line-height: 1;
 }
 
 %medium-text {
   font-size: 25px;
   font-weight: 400;
-  line-height: $line-height-normal;
+  line-height: 1;
 }
 
 %normal-text {
@@ -28,25 +28,12 @@
       @extend %medium-text;
       margin-bottom: 80px;
     }
-
-    // .content-area {
-    //   @extend %normal-text;
-    // }
-  }
-
-  .main-content {
-    // .content-area {
-    //   @include rem-fallback(font-size, $font-size-huge);
-    //   font-weight: 300;
-    //   line-height: 1.5;
-    //   text-align: center;
-    // }
   }
 
   .main-feature {
     padding-top: 70px;
 
-    @include query($tablet-3) {
+    @media screen and (max-width: $tablet-3) {
       padding-top: 40px;
     }
 
@@ -56,7 +43,7 @@
       text-align: center;
       max-width: 1123px;
 
-      @include query($tablet-3) {
+      @media screen and (max-width: $tablet-3) {
         padding-right: 20px;
         padding-left: 20px;
       }
@@ -136,14 +123,14 @@
     }
 
     .edy-img-drop-area-placeholder {
-      font-size: $font-size-small;
+      font-size: 14px;
     }
 
     .feature-content {
       margin: 0 30px 70px;
-      font-size: $font-size-normal;
+      font-size: 18px;
 
-      @include query($tablet-3) {
+      @media screen and (max-width: $tablet-3) {
         margin: 0 0 40px;
       }
 
@@ -154,7 +141,7 @@
 
     .content-area {
       text-align: left;
-      line-height: $line-height-medium;
+      line-height: 1.7;
 
       h3 {
         margin-bottom: 8px;

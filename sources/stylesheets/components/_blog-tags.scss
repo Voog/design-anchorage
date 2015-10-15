@@ -1,9 +1,9 @@
 .blog-tags {
   margin-bottom: 20px;
-  @include color($black-base, .71);
+  color: rgba($black-base, .71);
 
   .dark-background & {
-    @include color($white, .71);
+    color: rgba($white, .71);
   }
 
   .blog-article & {
@@ -19,8 +19,8 @@
     position: relative;
     top: 1px;
     display: inline-block;
-    vertical-align: middle;
     fill: rgba($black-base, .71);
+    vertical-align: middle;
 
     .dark-background & {
       fill: rgba($white, .71);
@@ -38,18 +38,18 @@
 
   .tags-title {
     display: inline-block;
+    margin-left: 10px;
+    font-size: 14px;
     vertical-align: top;
     text-transform: uppercase;
-    font-size: 14px;
-    margin-left: 10px;
   }
 
   .ico-arrow {
     @include transform(rotate(90deg));
     display: inline-block;
-    vertical-align: middle;
     margin-left: 10px;
     fill: rgba($black-base, .71);
+    vertical-align: middle;
 
     &.active {
       @include transform(rotate(-90deg));
@@ -62,8 +62,8 @@
 
     .menu-item {
       display: inline-block;
-      vertical-align: top;
       margin-top: 5px;
+      vertical-align: top;
 
       &:before {
         display: none;
@@ -72,23 +72,23 @@
 
     .menu-link {
       padding: 1px 5px;
-      text-decoration: none;
       font-size: 12px;
-      @include color(#a4a4a4, 1);
-      @include bg($black-base, .03);
+      color: rgba(#a4a4a4, 1);
+      text-decoration: none;
       border-radius: 3px;
+      background-color: rgba($black-base, .03);
 
       &:hover {
         opacity: .7;
       }
 
       &.active {
-        @include color($white, 1);
-        @include bg(#a4a4a4, 1);
+        color: rgba($white, 1);
+        background-color: rgba(#a4a4a4, 1);
       }
 
       .dark-background & {
-        @include bg($white, .2);
+        background-color: rgba($white, .2);
       }
     }
   }

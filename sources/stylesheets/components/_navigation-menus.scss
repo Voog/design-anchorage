@@ -4,10 +4,10 @@
   position: relative;
   top: 5px;
   display: inline-block;
-  vertical-align: top;
   margin-left: 40px;
+  vertical-align: top;
 
-  @include query($tablet-1) {
+  @media screen and (max-width: $tablet-1) {
     display: none;
   }
 }
@@ -27,8 +27,8 @@
       width: 0;
       height: 0;
       content: '';
-      border-style: solid;
       border-width: 5px 0 5px 8px;
+      border-style: solid;
       border-color: transparent transparent transparent $black-base;
     }
   }
@@ -53,16 +53,16 @@
 }
 
 .menu {
-  @extend %hyphens-true;
+  @include hyphens(auto);
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
   list-style-type: none;
 
   li {
-    @include rem-fallback(font-size, $font-size-base);
-    line-height: $line-height-medium;
+    font-size: 16px;
     font-weight: 300;
+    line-height: 1.7;
 
     &:last-child {
       margin-right: 0;
@@ -110,7 +110,6 @@
 .menu-language {
   li {
     margin-right: 5px;
-
     a {
       font-size: 10px;
     }
@@ -121,6 +120,7 @@
 #mobile-menu {
   display: none;
 }
+
 .mobile-menu-toggler {
   @extend %button;
 }
@@ -135,7 +135,7 @@
   }
 }
 
-@include query($tablet-1) {
+@media screen and (max-width: $tablet-1) {
   .site-header {
     .header-right {
       .menu-main {
@@ -161,8 +161,8 @@
   .mobile-menu-toggler {
     position: absolute;
     top: -14px;
-    display: block;
     right: -12px;
+    display: block;
     width: 45px;
     height: 44px;
     outline: 0;
@@ -178,10 +178,10 @@
         width: 21px;
         height: 2px;
         content: '';
-        @include bg($black, 1);
+        background-color: rgba($black, 1);
 
         .dark-background & {
-          @include bg($white, 1);
+          background-color: rgba($white, 1);
         }
 
         &.flags-disabled {
@@ -189,7 +189,7 @@
             position: static;
             width: auto;
             height: auto;
-            @include bg($red, 1);
+            background-color: rgba($red, 1);
 
             &:before,
             &:after {
@@ -198,7 +198,7 @@
 
             .lang-title {
               position: static;
-              @include color($white, 1)
+              color: rgba($white, 1);
             }
           }
         }
@@ -217,24 +217,24 @@
   }
 
   #mobile-menu {
-    position: fixed;
+    @include transition(transform .5s, width .3s);
+    @include transform(translate3d(100%, 0, 0));
     font-family: $font-main;
+    position: fixed;
+    z-index: 1000;
     top: 0;
     right: 0;
     bottom: 0;
-    overflow: auto;
     display: block;
+    overflow: auto;
+    overflow: auto;
+    box-sizing: border-box;
     width: 250px;
     padding: 30px 20px 50px;
-    @include bg($white, 1);
-    overflow: auto;
+    background-color: rgba($white, 1);
     -webkit-overflow-scrolling: touch;
-    box-sizing: border-box;
-    z-index: 1000;
-    @include transition(transform .5s, width .3s);
-    @include transform(translate3d(100%, 0, 0));
 
-    @include query($tablet-3) {
+    @media screen and (max-width: $tablet-3) {
       padding-top: 10px;
     }
 
@@ -251,13 +251,13 @@
     }
 
     .search-open-btn {
+      @include transition(right .3s);
       position: absolute;
       top: 28px;
       right: 78px;
       width: $button-square;
       height: $button-square;
       margin-left: 0;
-      @include transition(right 0.3s);
 
       &.no-back-btn {
         right: 108px;
@@ -272,10 +272,9 @@
       }
 
       svg {
-        @include fill($black-base, 1);
-
+        fill: rgba($black-base, 1);
         .mobile-search-open & {
-          @include fill($grey, 1);
+          fill: rgba($grey, 1);
         }
       }
     }
@@ -295,11 +294,11 @@
       }
 
       a {
-        @include rem-fallback(font-size, $font-size-base);
+        font-size: 16px;
+        line-height: 1.3;
         padding: 10px 0;
         text-transform: uppercase;
-        line-height: 1.3;
-        @include color($black-base, .62);
+        color: rgba($black-base, .62);
       }
     }
 
@@ -320,8 +319,8 @@
           }
 
           &.selected {
-            @include color($black-base, 1);
             font-weight: 500;
+            color: rgba($black-base, 1);
           }
 
           &.indented {
@@ -330,7 +329,6 @@
 
           &.edy-cbtn {
             display: none !important;
-
             &.visible {
               display: inline !important;
             }
@@ -357,15 +355,15 @@
       }
 
       .option-btn {
-        @include color($white, 1);
         padding: 15px 0;
+        color: rgba($white, 1);
       }
     }
 
     .sub-menu {
-      a {
+      a  {
         text-transform: initial;
-        @include color($black-base, 1);
+        color: rgba($black-base, 1);
       }
     }
 
@@ -376,16 +374,15 @@
     }
 
     .current-parent {
-      > .menu-level-2,
-      > .menu-level-3 {
+      > .menu-level-2, > .menu-level-3 {
         display: block;
       }
     }
 
     .lang-menu {
       display: block;
-      margin-left: 0;
       margin-top: 20px;
+      margin-left: 0;
 
       .mobile-search-open & {
         display: none;
@@ -399,9 +396,9 @@
           text-align: left;
 
           a {
+            font-size: 14px;
             padding: 7px 0 5px;
             text-align: left;
-            @include rem-fallback(font-size, $font-size-small);
 
             &.lang-flag {
               &:before,
@@ -413,8 +410,8 @@
             }
 
             &.is-active {
-              @include color($black-base, 1);
               font-weight: 500;
+              color: rgba($black-base, 1);
             }
           }
         }
@@ -429,47 +426,6 @@
       }
     }
   }
-
-  .mobile-search-toggler {
-    position: absolute;
-    top: 0;
-    right: 43px;
-    display: block;
-    width: 33px;
-    height: 43px;
-    outline: 0;
-    background: url('../images/search.png') no-repeat center center;
-    background-size: 16px 16px;
-
-    .svg & {
-      background-image: url('../assets/search.svg');
-    }
-
-    .mobilesearch-open & {
-      background: none !important;
-
-      &:before,
-      &:after {
-        position: absolute;
-        top: 20px;
-        left: 7px;
-        display: block;
-        width: 20px;
-        height: 3px;
-        content: '';
-        background: $black; @include border-radius(3px);
-      }
-
-      &:before {
-        @include rotate(45deg);
-      }
-
-      &:after {
-        @include rotate(-45deg);
-      }
-    }
-  }
-
 }
 
 /* flags */
@@ -495,21 +451,18 @@
 }
 
 .lang-flag:before {
-  @include bg($black);
+  background-color: rgba($black, 1);
 }
 
 .lang-flag:after {
   opacity: .95;
   background-repeat: no-repeat;
-
   .no-boxshadow & {
     border: 1px solid $white;
   }
-
   .svg & {
     background-image: url('../assets/ico-flags.svg');
   }
-
   .no-svg {
     background-image: url('../images/ico-flags.png');
   }
@@ -517,108 +470,59 @@
 
 // Language flag icons positioning in the spritemap.
 $flags:
-// Albanian (Albania)
-(sq, 0 0),
-// Armenian (Armenia)
-(hy, -21px 0),
-// Bengali (Bangladesh)
-(bn, -42px 0),
-// Brazilian Portuguese (Brazil)
-// (xx, -63px 0),
-// Bulgarian (Bulgaria)
-(bg, -84px 0),
-// Chinese (China)
-(zh, -105px 0),
-// Croatian (Croatia)
-(hr, -126px 0),
-// Danish (Denmark)
-(da, -147px 0),
-// Czech (Czech Republic)
-(cs, -168px 0),
-// Estonian (Estonia)
-(et, -189px 0),
+(sq, 0 0), // Albanian (Albania)
+(hy, -21px 0), // Armenian (Armenia)
+(bn, -42px 0), // Bengali (Bangladesh)
+// (xx, -63px 0), // Brazilian Portuguese (Brazil)
+(bg, -84px 0), // Bulgarian (Bulgaria)
+(zh, -105px 0), // Chinese (China)
+(hr, -126px 0), // Croatian (Croatia)
+(da, -147px 0), // Danish (Denmark)
+(cs, -168px 0), // Czech (Czech Republic)
+(et, -189px 0), // Estonian (Estonia)
 
-// Finnish (Finland)
-(fi, 0 -15px),
-// French (France)
-(fr, -21px -15px),
-// Georgian (Georgia)
-(ka, -42px -15px),
-// German (Germany)
-(de, -63px -15px),
-// Greek (Greece)
-(el, -84px -15px),
-// Hungarian (Hungary)
-(hu, -105px -15px),
-// Icelandic (Iceland)
-(is, -126px -15px),
-// Hindi (India)
-(hi, -147px -15px),
-// Indonesian (Indonesia)
-(id, -168px -15px),
-// Iranian (Iran)
-(fa, -189px -15px),
+(fi, 0 -15px), // Finnish (Finland)
+(fr, -21px -15px), // French (France)
+(ka, -42px -15px), // Georgian (Georgia)
+(de, -63px -15px), // German (Germany)
+(el, -84px -15px), // Greek (Greece)
+(hu, -105px -15px), // Hungarian (Hungary)
+(is, -126px -15px), // Icelandic (Iceland)
+(hi, -147px -15px), // Hindi (India)
+(id, -168px -15px), // Indonesian (Indonesia)
+(fa, -189px -15px), // Iranian (Iran)
 
-// Hebrew (Israel)
-(he, 0 -30px),
-// Italian (Italy)
-(it, -21px -30px),
-// Japanese (Japan)
-(ja, -42px -30px),
-// Korean (Korea, South)
-(ko, -63px -30px),
-// Latvian (Latvia)
-(lv, -84px -30px),
-// Lithuanian (Lithuania)
-(lt, -105px -30px),
-// Malaysian (Malaysia)
-(ms, -126px -30px),
-// Dutch (Netherlands)
-(nl, -147px -30px),
-// Norwegian (Norway)
-(no, -168px -30px),
-// Urdu (Pakistan)
-(ur, -189px -30px),
+(he, 0 -30px), // Hebrew (Israel)
+(it, -21px -30px), // Italian (Italy)
+(ja, -42px -30px), // Japanese (Japan)
+(ko, -63px -30px), // Korean (Korea, South)
+(lv, -84px -30px), // Latvian (Latvia)
+(lt, -105px -30px), // Lithuanian (Lithuania)
+(ms, -126px -30px), // Malaysian (Malaysia)
+(nl, -147px -30px), // Dutch (Netherlands)
+(no, -168px -30px), // Norwegian (Norway)
+(ur, -189px -30px), // Urdu (Pakistan)
 
-// Filipino (Philippines)
-(fil, 0 -45px),
-// Polish (Poland)
-(pl, -21px -45px),
-// Romanian (Romania)
-(ro, -42px -45px),
-// Russian (Russia)
-(ru, -63px -45px),
-// Arabic (Saudi Arabia)
-(ar, -84px -45px),
-// Slovakian (Slovakia)
-(sk, -105px -45px),
-// Slovenian (Slovenia)
-(sl, -126px -45px),
-// Spanish (Spain)
-(es, -147px -45px),
-// Swedish (Sweden)
-(sv, -168px -45px),
-// Turkish (Turkey)
-(tr, -189px -45px),
+(fil, 0 -45px), // Filipino (Philippines)
+(pl, -21px -45px), // Polish (Poland)
+(ro, -42px -45px), // Romanian (Romania)
+(ru, -63px -45px), // Russian (Russia)
+(ar, -84px -45px), // Arabic (Saudi Arabia)
+(sk, -105px -45px), // Slovakian (Slovakia)
+(sl, -126px -45px), // Slovenian (Slovenia)
+(es, -147px -45px), // Spanish (Spain)
+(sv, -168px -45px), // Swedish (Sweden)
+(tr, -189px -45px), // Turkish (Turkey)
 
-// Ukrainian (Ukraine)
-(uk, 0 -60px),
-// American English (United States of America)
-(en, -21px -60px),
-// French (Ivory Coast)
-// (xx, -42px -60px),
-// British English (Great Britian)
-(en-gb, -63px -60px),
-// Portuguese (Portuguese Republic)
-(pt, -84px -60px),
-// Canadian English (Canada)
-// (xx, -105px, -60px),
-// Serbian (Republic of Serbia)
-(sr, -126px, -60px),
-// Dutch, French, German (Kingdom of Belgium)
-// (xx, -147px, -60px),
-// Australian English (Commonwealth of Australia)
-// (xx, -168px, -60px),
+(uk, 0 -60px), // Ukrainian (Ukraine)
+(en, -21px -60px), // American English (United States of America)
+// (xx, -42px -60px), // French (Ivory Coast)
+(en-gb, -63px -60px), // British English (Great Britian)
+(pt, -84px -60px), // Portuguese (Portuguese Republic)
+// (xx, -105px, -60px), // Canadian English (Canada)
+(sr, -126px, -60px), // Serbian (Republic of Serbia)
+// (xx, -147px, -60px), // Dutch, French, German (Kingdom of Belgium)
+// (xx, -168px, -60px), // Australian English (Commonwealth of Australia)
 ;
 
 @each $flag, $pos in $flags {
@@ -628,20 +532,20 @@ $flags:
 }
 
 .lang-options {
-  @include bg($black, 0.09);
+  background-color: rgba($black, .09);
 
   .menu {
     .menu-item {
-      padding: 7px 12px;
       font-size: 13px;
+      padding: 7px 12px;
 
-      @include query($tablet-1) {
+      @media screen and (max-width: $tablet-1) {
         text-align: right;
       }
     }
   }
 
-  @include query($tablet-3) {
+  @media screen and (max-width: $tablet-3) {
     background-color: transparent;
 
     .menu {
@@ -651,24 +555,24 @@ $flags:
       }
 
       .menu-item {
-        @include color($white, .5);
+        color: rgba($white, .5);
       }
     }
   }
 }
 
 .option-btn {
-  margin: 0;
-  padding: 0;
-  background: none;
-  border: none;
-  cursor: pointer;
   font-family: inherit;
   font-size: inherit;
-  @include color($blue);
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  color: rgba($blue, 1);
+  border: none;
+  background: none;
 
   &:hover {
-    @include color($blue, .8);
+    color: rgba($blue, .8);
   }
 
   &::-moz-focus-inner {
@@ -699,55 +603,51 @@ $flags:
     }
   }
 
-  @include query($tablet-3) {
-    @include color($white);
-
+  @media screen and (max-width: $tablet-3) {
+    color: rgba($white, 1);
     &:hover {
-      @include color($white, .8);
+      color: rgba($white, .8);
     }
   }
 
   #mobile-menu & {
-    @include rem-fallback(font-size, $font-size-xs);
+    font-size: 12px;
   }
 }
 
 /* langmenu */
 .lang-menu {
   display: inline-block;
-  vertical-align: top;
   margin-left: 40px;
+  vertical-align: top;
 
-  @include query($tablet-1) {
+  @media screen and (max-width: $tablet-1) {
     display: none;
   }
 
   &.lang-menu-bilingual {
-    // position: relative;
-    // top: 1px;
-
     .lang-title {
       display: inline-block;
 
       a {
         &.is-active {
-          @include color($black, 1);
           font-weight: 400;
+          color: rgba($black, 1);
         }
       }
     }
   }
 
   li {
-    display: block;
-    @include rem-fallback(font-size, $font-size-small);
-    text-align: right;
+    font-size: 14px;
     line-height: normal;
+    display: block;
+    text-align: right;
     text-transform: uppercase;
 
     a {
-      @include color($black, .7);
       font-weight: 400;
+      color: rgba($black, .7);
     }
 
     &.add-lang-btn {
@@ -760,30 +660,29 @@ $flags:
       position: relative;
       display: block;
       padding: 6px 10px 5px 40px;
+      padding: 5px 40px 5px 13px;
+      text-align: right;
 
       .dark-background &,
       .light-background & {
-        @include color($black, .7);
+        color: rgba($black, .7);
 
         &:hover {
-          @include color($black, 1);
+          color: rgba($black, 1);
         }
       }
+
       &:before,
       &:after {
         top: 6px;
         left: 12px;
       }
 
-      padding: 5px 40px 5px 13px;
-      text-align: right;
-
       &:before,
       &:after {
-        left: auto;
         right: 12px;
+        left: auto;
       }
-
     }
 
     &.edy-menu-langadd {
@@ -807,25 +706,25 @@ $flags:
 }
 
 .lang-title {
-  background-color: transparent;
+  font-size: 14px;
   text-transform: uppercase;
-  @include rem-fallback(font-size, $font-size-small);
+  background-color: transparent;
 
   a {
-    background-color: transparent;
+    font-size: 14px;
     text-transform: uppercase;
-    @include rem-fallback(font-size, $font-size-small);
+    background-color: transparent;
   }
 }
 
-.lang-menu-btn {
-  margin: 0;
-  padding: 0;  @extend %button;
+.lang-menu-btn {@extend %button;
+  font-family: inherit;
+  font-size: 12px;
   position: relative;
   display: block;
   height: 15px;
-  font-family: inherit;
-  @include rem-fallback(font-size, $font-size-xs);
+  margin: 0;
+  padding: 0;
   cursor: pointer;
   border: none;
   background: none;
@@ -847,8 +746,6 @@ $flags:
   }
 
   .ico-popover-toggle {
-    // position: relative;
-    // top: -2px;
     font-size: 7.2px;
 
     .flags-enabled & {
@@ -858,14 +755,14 @@ $flags:
 }
 
 .lang-menu-popover {
+  line-height: 1;
   position: absolute;
   z-index: 1;
   display: none;
   padding: 5px 0;
-  line-height: 1;
   text-align: left;
-  @include bg($white);
-  @include box-shadow(0,0,5px,rgba(0,0,0,.3));
+  color: rgba($white, 1);
+  box-shadow: 0, 0, 5px, rgba($black-base, .3);
 
   .no-boxshadow & {
     border: 1px solid $white;
@@ -883,6 +780,7 @@ $flags:
     &:hover {
       background-color: rgba($black, .1);
     }
+
     &.active {
       background-color: rgba($black, .2);
     }

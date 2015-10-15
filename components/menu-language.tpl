@@ -4,7 +4,6 @@
 
 {% if editmode or site.has_many_languages? %}
   {% if editmode or flags_state == true or numb_of_lang > 2 %}
-  {% comment %}tahan kui editmode, lipud nähvavad ja keeli on rohkem kui 2{% endcomment %}
     <div class="menu-btn-wrap js-menu-btn-wrap {% if flags_state %}flags-enabled{% else %}flags-disabled{% endif %}">
       <button role="button" class="lang-menu-btn js-lang-menu-btn js-popup-menu-btn js-prevent-sideclick lang-flag {% for language in site.languages %}{% if language.selected? %}lang-flag-{{ language.code }}{% endif %}{% endfor %}">
         <span class="lang-title">

@@ -21,30 +21,6 @@ $success-color: #0ecb00;
 // Font family.
 $font-main: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-// Font sizes.
-$font-size-xs: 12px;
-$font-size-small: 14px;
-$font-size-base: 16px;
-$font-size-normal: 18px;
-$font-size-20: 20px;
-$font-size-title: 22px;
-$font-size-large: 26px;
-$font-size-huge: 32px;
-$font-size-xl: 36px;
-$font-size-header: 70px;
-
-// Line heights.
-$line-height-normal: 1;
-$line-height-small: 1.2;
-$line-height-middle: 1.4;
-$line-height-medium: 1.7;
-$line-height-double: 2;
-
-// Line heights.
-$third-line-height: 48px;
-$line-height-xs: 24px;
-$line-height: 32px;
-
 // Media query breakpoints.
 $wide-1: 1500px;
 $tablet-1: 1024px;
@@ -55,7 +31,7 @@ $mobile-2: 320px;
 
 // Reusable values
 // Define the reusable variables here.
-// For example the width of several different elements, that allways have to be with the same height:
+// For example the width of several different elements, that always have to be with the same height.
 $height-base: 100px;
 
 $padding-medium: 40px;
@@ -74,11 +50,3 @@ $width-medium: 760px;
 $width-max: 1040px;
 
 $transition: 500ms;
-
-// The size of 1rem in pixels
-$baseSize: 16;
-
-// The size of a pixel in rems
-$px: 1 / $baseSize + 0rem;
-
-$rem-base: $font-size-base;

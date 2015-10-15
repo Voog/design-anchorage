@@ -1,152 +1,128 @@
 .content-area {
-
   form,
   .form {
-    @include rem-fallback(font-size, $font-size-small);
+    font-size: 14px;
   }
-
   .form_field {
     margin-top: 15px;
-
     &:first-child {
       margin-top: 0;
     }
-
     label,
     .form_field_label {
+      font-size: 16px;
       position: relative;
       display: block;
       margin-bottom: 5px;
-      @include rem-fallback(font-size, $font-size-base);
     }
   }
-
   .form_field_required {
     .form_field_label:after {
       content: '* \a';
     }
   }
-
   .form_field_textfield,
   .form_field_textarea,
   .form_field_select,
-  .form_field_radio+.form_control_indicator,
-  .form_field_checkbox+.form_control_indicator {
+  .form_field_radio + .form_control_indicator,
+  .form_field_checkbox + .form_control_indicator {
     background-color: rgba($black-base, .03);
-
     .dark-background & {
       background-color: rgba($white, .1);
     }
   }
-
   .form_field_textfield,
   .form_field_textarea,
   .form_field_select {
     @extend %input-ios-reset;
     @extend %inherit-base-font;
+    @include placeholder {
+      color: rgba($black-lighter, 1);
+    }
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+    box-sizing: border-box;
     max-width: 100%;
     padding: 8px 13px;
-    @include rem-fallback(font-size, $font-size-base);
-    font-weight: 300;
-    line-height: $font-size-large;
-    @include color($black-base, .71);
+    vertical-align: bottom;
+    color: rgba($black-base, .71);
     border-width: 1px;
     border-style: solid;
     border-color: rgba($black-base, .13);
-    vertical-align: bottom;
     outline: none;
-    box-sizing: border-box;
-
     .dark-background & {
       border-color: rgba($white, .3);
     }
-
     &:focus {
       border-color: rgba($black-base, .33);
-
       .dark-background & {
         border-color: rgba($white, 1);
       }
     }
-
     &.form_field_size_small {
       width: 280px;
     }
-
     &.form_field_size_medium {
       width: 420px;
     }
-
     &.form_field_size_large {
       width: 100%;
     }
-
     .dark-background & {
-      @include color($white, 1);
-    }
-
-    @include placeholder {
-      @include color($black-lighter, 1);
+      color: rgba($white, 1);
     }
   }
-
   .form_field_select {
     position: relative;
     padding-right: 27px;
-    -moz-appearance: none;
-    background-position: right 10px center;
     background-image: url('../assets/ico-arrow.svg');
     background-repeat: no-repeat;
+    background-position: right 10px center;
 
+    -moz-appearance: none;
     &:after {
       position: absolute;
       top: 0;
       right: 15px;
-      display: block;
       bottom: 0;
-      height: 0;
+      display: block;
       width: 0;
+      height: 0;
       margin: auto 0;
-      content: "";
-      border-top: 5px solid #CCC;
+      content: '';
+      border-top: 5px solid #cccccc;
       border-right: 5px solid transparent;
       border-left: 5px solid transparent;
     }
-
     &.form_field_size_small {
       min-width: auto;
     }
-
     &.form_field_size_medium {
       min-width: 124px;
     }
-
     &.form_field_size_large {
       min-width: 184px;
     }
-
     .dark-background & {
       background-image: url('../assets/ico-arrow-white.svg');
     }
   }
-
   .form_field_radio,
   .form_field_checkbox {
     .svg & {
       display: none;
-
       + .form_control_indicator {
         @include size(18px);
         position: relative;
         display: inline-block;
-        vertical-align: middle;
         margin-right: 10px;
-        border-style: solid;
+        vertical-align: middle;
         border-width: 1px;
+        border-style: solid;
         border-color: rgba($black-base, .2);
       }
     }
-
     .dark-background & {
       .svg & {
         + .form_control_indicator {
@@ -155,27 +131,23 @@
       }
     }
   }
-
-
   .form_field_radio {
     .svg & {
       + .form_control_indicator {
         top: -1px;
         border-radius: 100%;
-
         &:before {
           @include size(12px);
-          @include bg($black-base, .4);
           @include transform(scale(0));
           @include transition(transform .15s ease);
           position: absolute;
           top: 3px;
           left: 3px;
-          content: "";
+          content: '';
           border-radius: 100%;
+          background-color: rgba($black-base, .4);
         }
       }
-
       &:checked {
         + .form_control_indicator {
           &:before {
@@ -185,39 +157,35 @@
         }
       }
     }
-
     .dark-background & {
       .svg & {
         &:checked {
           + .form_control_indicator {
             &:before {
-              @include bg($white, 1);
+              background-color: rgba($white, 1);
             }
           }
         }
       }
     }
   }
-
   .form_field_checkbox {
     .svg & {
       + .form_control_indicator {
         top: -2px;
-
         &:before {
           @include transform(scale(0) rotate(45deg));
+          display: block;
           width: 5px;
           height: 10px;
-          border-width: 0px 2px 2px 0px;
+          margin: 1px 0 0 6px;
+          content: '';
+          transition: transform .15s ease 0s;
+          border-width: 0 2px 2px 0;
           border-style: none solid solid none;
           border-color: rgba($black-base, .4);
-          content: "";
-          display: block;
-          margin: 1px 0px 0px 6px;
-          transition: transform 0.15s ease 0s;
         }
       }
-
       &:checked {
         + .form_control_indicator {
           &:before {
@@ -227,7 +195,6 @@
         }
       }
     }
-
     .dark-background & {
       .svg & {
         + .form_control_indicator {
@@ -238,49 +205,41 @@
       }
     }
   }
-
   .form_submit {
     margin-top: 15px;
-
     input {
       @include inputiosreset;
-      @include bg($black, 1);
-      @include color($white, 1);
-      border: none;
-      padding: 10px 20px;
-      text-transform: uppercase;
       font-family: $font-main;
-      @include rem-fallback(font-size, $font-size-small);
+      font-size: 14px;
       font-weight: 400;
-      line-height: $line-height-double;
+      line-height: 2;
+      padding: 10px 20px;
       cursor: pointer;
-
+      text-transform: uppercase;
+      color: rgba($white, 1);
+      border: none;
+      background-color: rgba($black, 1);
       .dark-background & {
-        @include bg($white, 1);
-        @include color($black, 1);
-
+        color: rgba($black, 1);
+        background-color: rgba($white, 1);
         &:hover {
-          @include bg($white, .71);
+          background-color: rgba($white, .71);
         }
       }
-
-      @include querymin($tablet-2) {
+      @media screen and (min-width: $tablet-2) {
         .content-half & {
           width: 100%;
         }
       }
-
-      @include query($mobile-1) {
+      @media screen and (max-width: $mobile-1) {
         .content-half & {
           width: 100%;
         }
       }
-
       &:hover {
-        @include bg($black-base, .71);
         @include transition($transition);
+        background-color: rgba($black-base, .71);
       }
-
       &:focus {
         outline: none;
       }
@@ -293,43 +252,33 @@
       }
     }
   }
-
   .form_error,
   .form_notice {
-    @include rem-fallback(font-size, 22px);
+    font-size: 22px;
     font-weight: 300;
-
   }
-
   .form_error,
   .form_field_error {
     color: rgba($error-color, 1);
   }
-
   .form_error {
-    @include color($error-color, 1);
     margin-bottom: $margin-low;
+    color: rgba($error-color, 1);
   }
-
   .form_field_with_errors {
     .form_field_textfield,
     .form_field_textarea {
       border: 1px solid rgba($error-color, 1);
     }
   }
-
-
   .form_field_error {
-    @include rem-fallback(font-size, $font-size-small);
+    font-size: 14px;
   }
-
   .form_notice {
-    @include color($success-color, .71);
     margin-bottom: $margin-low;
-
+    color: rgba($success-color, .71);
     .dark-background & {
-      @include color($white, 1);
+      color: rgba($white, 1);
     }
   }
-
 }

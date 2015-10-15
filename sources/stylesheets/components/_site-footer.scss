@@ -10,106 +10,78 @@
 
   .dark-background {
     .content-area {
+
       a {
-        @include color($white, 1);
+        color: rgba($white, 1);
       }
     }
   }
-
-  // .content-area {
-  //   @include rem-fallback(font-size, $font-size-small);
-  //   line-height: $line-height-medium;
-  //   text-align: center;
-  //   @include color($black,.6);
-
-  //   a {
-  //     text-decoration: underline;
-
-  //     &:hover {
-  //       text-decoration: none;
-  //     }
-  //   }
-  // }
-
   .voog-reference {
-    @include color($black, 1);
     opacity: .55;
-    text-align: center;
     padding: 0 0 40px;
-
+    color: rgba($black, 1);
+    text-align: center;
     &:hover {
       opacity: .8;
     }
   }
-
   .blog-article-nav {
     @extend %clearfix;
     @include hyphens(auto);
-    border-top: 1px solid rgba($grey-2, 1);
-    border-bottom: 1px solid rgba($grey-2, 1);
     display: table;
     width: 100%;
-
-    @include query($mobile-1) {
+    border-top: 1px solid rgba($grey-2, 1);
+    border-bottom: 1px solid rgba($grey-2, 1);
+    @media screen and (max-width: $mobile-1) {
       display: block;
     }
-
     .article-nav-full,
     .article-nav-half {
-      width: 50%;
-      display: table-cell;
-      vertical-align: top;
-      box-sizing: border-box;
       position: relative;
-
-      @include query($mobile-1) {
-        width: 100%;
+      display: table-cell;
+      box-sizing: border-box;
+      width: 50%;
+      vertical-align: top;
+      @media screen and (max-width: $mobile-1) {
         display: block;
+        width: 100%;
       }
-
       &:hover {
         @include transition($transition);
-
         .article-nav-title {
-          @include color($black, 1);
+          color: rgba($black, 1);
         }
         .article-nav-direction {
-          @include color($black-base, .71);
+          color: rgba($black-base, .71);
         }
       }
-
       a {
-        padding: 55px 50px;
         display: block;
-        height: 100%;
         overflow: auto;
-
-        @include query($mobile-1) {
+        height: 100%;
+        padding: 55px 50px;
+        @media screen and (max-width: $mobile-1) {
           padding: $margin-medium $margin-low;
           text-align: left;
         }
       }
     }
-
     .article-nav-full {
       display: block;
       width: 100%;
-
       a {
         text-align: center;
       }
     }
-
     .article-nav-prev {
       text-align: right;
     }
     .article-nav-next {
       border-left: 1px solid rgba($grey-2, 1);
-
-      @include query($mobile-1) {
+      @media screen and (max-width: $mobile-1) {
+        margin-left: 0;
         border-top: 1px solid rgba($grey-2, 1);
         border-left: 0;
-        margin-left: 0;
       }
     }
     .article-nav-inner {
@@ -118,36 +90,34 @@
       max-width: 400px;
     }
     .article-nav-direction {
-      @include rem-fallback(font-size, $font-size-xs);
       margin-bottom: 3px;
+      font-size: 12px;
       font-weight: 400;
-      line-height: $line-height-double;
+      line-height: 2;
+      color: rgba($black-lighter, 1);
       letter-spacing: 1px;
-      @include color($black-lighter, 1);
       text-transform: uppercase;
     }
     .article-nav-title {
-      @include rem-fallback(font-size, $font-size-20);
+      font-size: 20px;
       line-height: 30px;
-      @include color($black-base, .71);
+      color: rgba($black-base, .71);
     }
     .article-nav-bg {
       position: absolute;
       top: 0;
+      right: 0;
       bottom: 0;
       left: 0;
-      right: 0;
-      @include bg($white, 1);
       z-index: -1;
+      background-color: rgba($white, 1);
     }
   }
-
   .comments-open & {
-    @include query($mobile-1) {
+    @media screen and (max-width: $mobile-1) {
       display: none;
     }
   }
-
   .footer-body {
     position: relative;
   }
