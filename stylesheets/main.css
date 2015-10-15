@@ -2094,7 +2094,7 @@ a img {
   padding: 5px 0;
   text-align: left;
   color: white;
-  box-shadow: 0, 0, 5px, rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 .no-boxshadow .lang-menu-popover {
   border: 1px solid #ffffff;
@@ -2187,7 +2187,7 @@ a img {
 
 .search-inner {
   position: relative;
-  box-shadow: 0, 2px, 4px, 0, rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 #mobile-search .search-inner {
   box-shadow: none;
@@ -2197,13 +2197,13 @@ a img {
   position: relative;
   z-index: 20;
   background-color: white;
-  box-shadow: 0, 2px, 4px, 0, rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 @media screen and (max-width: 640px) {
   .search-form {
     padding-top: 10px;
     padding-bottom: 6px;
-    box-shadow: 0, 1px, 1px, 0, rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   }
 }
 #mobile-search .search-form {
@@ -2647,7 +2647,7 @@ a img {
   .site-footer .blog-article-nav .article-nav-full a,
   .site-footer .blog-article-nav .article-nav-half a {
     padding: 30px 20px;
-    text-align: left;
+    text-align: center;
   }
 }
 .site-footer .blog-article-nav .article-nav-full {
