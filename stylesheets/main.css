@@ -969,7 +969,7 @@ a img {
 .article-comments .comments-body {
   max-height: 100%;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 480px) {
   .comments-open .article-comments .comments-body {
     position: fixed;
     top: 0;

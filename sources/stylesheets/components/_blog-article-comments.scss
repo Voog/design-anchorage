@@ -27,7 +27,7 @@
   .comments-body {
     max-height: 100%;
 
-    @media screen and (max-width: $tablet-3) {
+    @media screen and (max-width: $mobile-1) {
       .comments-open & {
         position: fixed;
         top: 0;

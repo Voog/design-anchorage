@@ -43,7 +43,7 @@
 
         change: function(data) {
           var saveObj = {};
-          saveObj[dataImgKey] = data;
+          saveObj[dataImgKey] = data || '';
           pageData.set(saveObj);
         }
       });

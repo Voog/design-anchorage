@@ -17,14 +17,24 @@
     {% assign feature_1_has_content = true %}
   {% endunless %}
 
-  {% assign feature_image_2 = page.data.feature_image_2 %}
+  {% if page.data.feature_image_2 == nil %}
+    {% assign feature_image_2 = images_path | append: "/feature-image-2_large.jpg" %}
+  {% else %}
+    {% assign feature_image_2 = page.data.feature_image_2.url %}
+  {% endif %}
+
   {% capture feature_2_html %}{% unless editmode %}{% content name="feature_2" %}{% endunless %}{% endcapture %}
   {% capture feature_2_size %}{{ feature_2_html | size | minus : 1 }}{% endcapture %}
   {% unless feature_2_size contains "-" %}
     {% assign feature_2_has_content = true %}
   {% endunless %}
 
-  {% assign feature_image_3 = page.data.feature_image_3 %}
+  {% if page.data.feature_image_3 == nil %}
+    {% assign feature_image_3 = images_path | append: "/feature-image-3_large.jpg" %}
+  {% else %}
+    {% assign feature_image_3 = page.data.feature_image_3.url %}
+  {% endif %}
+
   {% capture feature_3_html %}{% unless editmode %}{% content name="feature_3" %}{% endunless %}{% endcapture %}
   {% capture feature_3_size %}{{ feature_3_html | size | minus : 1 }}{% endcapture %}
   {% unless feature_3_size contains "-" %}

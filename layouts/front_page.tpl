@@ -45,14 +45,14 @@
 
                     {% if editmode or feature_image_2 or feature_2_has_content %}
                       <div class="feature">
-                        <div class="feature-image">{% if editmode %}<div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_2" data-image="{{ feature_image_2.url }}"></div>{% elsif feature_image_2 %}<div class="aspect-ratio-inner" style="background-image: url('{{ feature_image_2.url }}')"></div>{% endif %}</div>
+                        <div class="feature-image">{% if editmode %}<div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_2" data-image="{{ feature_image_2 }}"></div>{% elsif feature_image_2 != "" %}<div class="aspect-ratio-inner" style="background-image: url('{{ feature_image_2 }}')"></div>{% endif %}</div>
                         <div class="feature-content content-area" data-search-indexing-allowed="true">{% content name="feature_2" %}</div>
                       </div>
                     {% endif %}
 
                     {% if editmode or feature_image_3 or feature_3_has_content %}
                       <div class="feature">
-                        <div class="feature-image">{% if editmode %}<div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_3" data-image="{{ feature_image_3.url }}"></div>{% elsif feature_image_3 %}<div class="aspect-ratio-inner" style="background-image: url('{{ feature_image_3.url }}')"></div>{% endif %}</div>
+                        <div class="feature-image">{% if editmode %}<div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_3" data-image="{{ feature_image_3 }}"></div>{% elsif feature_image_3 != "" %}<div class="aspect-ratio-inner" style="background-image: url('{{ feature_image_3 }}')"></div>{% endif %}</div>
                         <div class="feature-content content-area" data-search-indexing-allowed="true">{% content name="feature_3" %}</div>
                       </div>
                     {% endif %}
