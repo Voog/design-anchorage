@@ -30,8 +30,7 @@
     @include hyphens(auto);
     display: table;
     width: 100%;
-    // border-top: 1px solid rgba($grey-2, 1);
-    // border-bottom: 1px solid rgba($grey-2, 1);
+
     @media screen and (max-width: $mobile-1) {
       display: block;
     }
@@ -64,7 +63,7 @@
         padding: 55px 50px;
         @media screen and (max-width: $mobile-1) {
           padding: $margin-medium $margin-low;
-          text-align: left;
+          text-align: center;
         }
       }
     }
