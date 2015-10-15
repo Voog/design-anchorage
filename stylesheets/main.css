@@ -970,12 +970,16 @@ a img {
   max-height: 100%;
 }
 @media screen and (max-width: 480px) {
+  .article-comments .comments-body {
+    display: none;
+  }
   .comments-open .article-comments .comments-body {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    display: block;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     box-sizing: border-box;

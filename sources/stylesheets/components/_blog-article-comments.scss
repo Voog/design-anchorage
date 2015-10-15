@@ -28,12 +28,15 @@
     max-height: 100%;
 
     @media screen and (max-width: $mobile-1) {
+      display: none;
+
       .comments-open & {
         position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
+        display: block;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
         box-sizing: border-box;
