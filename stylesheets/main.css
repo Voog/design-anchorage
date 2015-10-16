@@ -169,6 +169,7 @@ a img {
 
 .page-body {
   position: relative;
+  min-height: 300px;
 }
 .flexbox .page-body {
   -webkit-box-flex: 1;
@@ -1298,11 +1299,11 @@ a img {
   }
 }
 .front-page .site-header .header-bottom .header-bottom-inner {
-  min-height: 684px;
+  height: 684px;
 }
 @media screen and (max-width: 640px) {
   .front-page .site-header .header-bottom .header-bottom-inner {
-    min-height: 400px;
+    height: 400px;
   }
 }
 .site-header .header-bottom .header-bottom-inner .wrap {
@@ -1316,7 +1317,7 @@ a img {
   }
 }
 .site-header.photo-article .header-bottom .header-bottom-inner {
-  min-height: 684px;
+  height: 684px;
 }
 .site-header.photo-article .header-bottom .header-bottom-inner .wrap {
   padding-top: 60px;

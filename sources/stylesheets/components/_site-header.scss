@@ -98,9 +98,9 @@
         }
       }
       .front-page & {
-        min-height: 684px;
+        height: 684px;
         @media screen and (max-width: $tablet-3) {
-          min-height: 400px;
+          height: 400px;
         }
       }
       .wrap {
@@ -116,7 +116,7 @@
   &.photo-article {
     .header-bottom {
       .header-bottom-inner {
-        min-height: 684px;
+        height: 684px;
         .wrap {
           padding-top: 60px;
         }
