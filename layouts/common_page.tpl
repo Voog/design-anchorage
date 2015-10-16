@@ -17,7 +17,7 @@
           {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-key="body_bg" data-bg-picture-boolean="false" data-bg-color="{{ body_bg_color }}" data-bg-color-data="{{ body_bg_color_data_str | escape }}"></button>{% endif %}
           <div class="background-color js-background-color"></div>
 
-          {% if sidebar_active %}<div class="sidebar-active">{% endif %}
+          <div{% if sidebar_active %} class="sidebar-active"{% endif %}>
             {% if sidebar_active %}
               {% include "site-sidebar" %}
             {% endif %}
@@ -58,9 +58,10 @@
               </div>
             </main>
           </div>
-        {% if sidebar_active %}</div>{% endif %}
+        </div>
       </div>
-    {% include "site-footer" %}
+      {% include "site-footer" %}
+    </div>
 
     {% include "menu-mobile" %}
     {% include "site-javascripts" %}
