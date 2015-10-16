@@ -2338,7 +2338,7 @@ a img {
 .search-btn:focus {
   outline: none;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
   .content-page .header-options .search-btn {
     margin-right: 35px;
   }
@@ -2619,7 +2619,7 @@ a img {
   display: table;
   width: 100%;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
   .site-footer .blog-article-nav {
     display: block;
   }
@@ -2633,7 +2633,7 @@ a img {
   vertical-align: top;
   border-top: 1px solid #e6e6e6;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
   .site-footer .blog-article-nav .article-nav-full,
   .site-footer .blog-article-nav .article-nav-half {
     display: block;
@@ -2662,7 +2662,7 @@ a img {
   height: 100%;
   padding: 55px 50px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
   .site-footer .blog-article-nav .article-nav-full a,
   .site-footer .blog-article-nav .article-nav-half a {
     padding: 30px 20px;
@@ -2682,7 +2682,7 @@ a img {
 .site-footer .blog-article-nav .article-nav-next {
   border-left: 1px solid #e6e6e6;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
   .site-footer .blog-article-nav .article-nav-next {
     margin-left: 0;
     border-top: 1px solid #e6e6e6;
@@ -2717,7 +2717,7 @@ a img {
   z-index: -1;
   background-color: white;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
   .comments-open .site-footer {
     display: none;
   }
@@ -3450,7 +3450,7 @@ a img {
     width: 100%;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
   .content-half .content-area .form_submit input {
     width: 100%;
   }

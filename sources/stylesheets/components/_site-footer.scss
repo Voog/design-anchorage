@@ -31,7 +31,7 @@
     display: table;
     width: 100%;
 
-    @media screen and (max-width: $mobile-1) {
+    @media screen and (max-width: $tablet-3) {
       display: block;
     }
     .article-nav-full,
@@ -42,7 +42,7 @@
       width: 50%;
       vertical-align: top;
       border-top: 1px solid rgba($grey-2, 1);
-      @media screen and (max-width: $mobile-1) {
+      @media screen and (max-width: $tablet-3) {
         display: block;
         width: 100%;
       }
@@ -61,7 +61,7 @@
         -webkit-overflow-scrolling: touch;
         height: 100%;
         padding: 55px 50px;
-        @media screen and (max-width: $mobile-1) {
+        @media screen and (max-width: $tablet-3) {
           padding: $margin-medium $margin-low;
           text-align: center;
         }
@@ -79,7 +79,7 @@
     }
     .article-nav-next {
       border-left: 1px solid rgba($grey-2, 1);
-      @media screen and (max-width: $mobile-1) {
+      @media screen and (max-width: $tablet-3) {
         margin-left: 0;
         border-top: 1px solid rgba($grey-2, 1);
         border-left: 0;
@@ -115,7 +115,7 @@
     }
   }
   .comments-open & {
-    @media screen and (max-width: $mobile-1) {
+    @media screen and (max-width: $tablet-3) {
       display: none;
     }
   }
