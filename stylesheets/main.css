@@ -947,7 +947,7 @@ a img {
   background-color: white;
   box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
   .article-comments {
     box-sizing: border-box;
     box-shadow: none;
@@ -961,7 +961,7 @@ a img {
   right: 0;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
   .article-comments.open {
     width: 100%;
   }
@@ -969,7 +969,7 @@ a img {
 .article-comments .comments-body {
   max-height: 100%;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
   .article-comments .comments-body {
     display: none;
   }

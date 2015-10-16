@@ -18,12 +18,12 @@
           <div class="form_fields">
             <div class="form_field">
               <label for="comment-name">{% if comment_name_error %}<span class="form_field_error">{{ "comment_author_blank" | lc }}</span>{% endif %}</label>
-              <input id="comment-name" class="form_field_textfield form_field_size_medium" name="comment[author]" placeholder="{{ "name" | lc }}" value="{{ comment.author }}">
+              <input id="comment-name" class="form_field_textfield form_field_size_large" name="comment[author]" placeholder="{{ "name" | lc }}" value="{{ comment.author }}">
             </div>
 
             <div class="form_field">
               <label for="comment-email">{% if comment_email_error %}<span class="form_field_error">{{ "comment_email_blank" | lc }}</span>{% endif %}</label>
-              <input id="comment-email" class="form_field_textfield form_field_size_medium" name="comment[author_email]" placeholder="{{ "email" | lc }}" value="{{ comment.author_email }}">
+              <input id="comment-email" class="form_field_textfield form_field_size_large" name="comment[author_email]" placeholder="{{ "email" | lc }}" value="{{ comment.author_email }}">
             </div>
 
             <div class="form_field">

@@ -9,7 +9,7 @@
   background-color: rgba($white, 1);
   box-shadow: -10px 19px 30px rgba(68, 68, 68, .31);
 
-  @media screen and (max-width: $mobile-1) {
+  @media screen and (max-width: $tablet-3) {
     box-sizing: border-box;
     box-shadow: none;
   }
@@ -19,7 +19,7 @@
     top: 0;
     right: 0;
     box-shadow: 0 0 20px rgba($black-base, .1);
-    @media screen and (max-width: $mobile-1) {
+    @media screen and (max-width: $tablet-3) {
       width: 100%;
     }
   }
@@ -27,7 +27,7 @@
   .comments-body {
     max-height: 100%;
 
-    @media screen and (max-width: $mobile-1) {
+    @media screen and (max-width: $tablet-3) {
       display: none;
 
       .comments-open & {
