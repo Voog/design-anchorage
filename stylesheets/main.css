@@ -2215,9 +2215,13 @@ a img {
   background-color: transparent;
 }
 .search-form, .search-form.selected {
-  max-width: 400px;
   margin: 0 auto;
   border: none;
+}
+@media screen and (min-width: 641px) {
+  .search-form, .search-form.selected {
+    max-width: 400px;
+  }
 }
 
 .search-input {
@@ -2372,7 +2376,6 @@ a img {
   box-sizing: border-box;
   z-index: 999;
   width: 100%;
-  max-width: 400px;
   max-height: 100vh;
   margin: 0 auto;
   background-color: white;
@@ -2390,6 +2393,11 @@ a img {
 }
 .voog-search-modal.search-results-active {
   display: block;
+}
+@media screen and (min-width: 641px) {
+  .voog-search-modal {
+    max-width: 400px;
+  }
 }
 @media screen and (max-width: 640px) {
   .voog-search-modal {
