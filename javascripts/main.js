@@ -9551,6 +9551,8 @@ return jQuery;
         if ($('html').hasClass('search-open')) {
           $('html').removeClass('search-open');
         }
+
+        handleCommentsToggleing();
       }
     });
 
