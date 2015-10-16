@@ -208,12 +208,6 @@
       "filename": "ico-flags.svg"
     },
     {
-      "content_type": "image/svg+xml",
-      "file": "assets/loader.svg",
-      "kind": "assets",
-      "filename": "loader.svg"
-    },
-    {
       "content_type": "application/vnd.ms-fontobject",
       "file": "assets/roboto-bold-italic.eot",
       "kind": "assets",
@@ -430,12 +424,6 @@
       "filename": "roboto-regular.woff2"
     },
     {
-      "content_type": "image/svg+xml",
-      "file": "assets/search.svg",
-      "kind": "assets",
-      "filename": "search.svg"
-    },
-    {
       "content_type": "image/jpeg",
       "file": "images/article-header-bg.jpg",
       "kind": "images",
@@ -461,69 +449,15 @@
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/feature-image-1.jpg",
-      "kind": "images",
-      "filename": "feature-image-1.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/feature-image-1_block.jpg",
-      "kind": "images",
-      "filename": "feature-image-1_block.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/feature-image-1_huge.jpg",
-      "kind": "images",
-      "filename": "feature-image-1_huge.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
       "file": "images/feature-image-1_large.jpg",
       "kind": "images",
       "filename": "feature-image-1_large.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/feature-image-2.jpg",
-      "kind": "images",
-      "filename": "feature-image-2.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/feature-image-2_block.jpg",
-      "kind": "images",
-      "filename": "feature-image-2_block.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/feature-image-2_huge.jpg",
-      "kind": "images",
-      "filename": "feature-image-2_huge.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
       "file": "images/feature-image-2_large.jpg",
       "kind": "images",
       "filename": "feature-image-2_large.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/feature-image-3.jpg",
-      "kind": "images",
-      "filename": "feature-image-3.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/feature-image-3_block.jpg",
-      "kind": "images",
-      "filename": "feature-image-3_block.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/feature-image-3_huge.jpg",
-      "kind": "images",
-      "filename": "feature-image-3_huge.jpg"
     },
     {
       "content_type": "image/jpeg",
