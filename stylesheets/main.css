@@ -951,8 +951,13 @@ a img {
 }
 @media screen and (max-width: 640px) {
   .article-comments {
+    display: none;
+    right: 0;
     box-sizing: border-box;
     box-shadow: none;
+    -webkit-transition: 0ms;
+    -moz-transition: 0ms;
+    transition: 0ms;
   }
 }
 .article-comments.open {
@@ -965,6 +970,10 @@ a img {
 }
 @media screen and (max-width: 640px) {
   .article-comments.open {
+    display: block;
+    -webkit-transition: 0ms;
+    -moz-transition: 0ms;
+    transition: 0ms;
     width: 100%;
   }
 }
@@ -972,16 +981,12 @@ a img {
   max-height: 100%;
 }
 @media screen and (max-width: 640px) {
-  .article-comments .comments-body {
-    display: none;
-  }
   .comments-open .article-comments .comments-body {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    display: block;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     box-sizing: border-box;

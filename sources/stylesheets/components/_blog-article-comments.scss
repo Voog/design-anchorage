@@ -10,8 +10,11 @@
   box-shadow: -10px 19px 30px rgba(68, 68, 68, .31);
 
   @media screen and (max-width: $tablet-3) {
+    display: none;
+    right: 0;
     box-sizing: border-box;
     box-shadow: none;
+    @include transition(0ms);
   }
 
   &.open {
@@ -19,7 +22,10 @@
     top: 0;
     right: 0;
     box-shadow: 0 0 20px rgba($black-base, .1);
+
     @media screen and (max-width: $tablet-3) {
+      display: block;
+      @include transition(0ms);
       width: 100%;
     }
   }
@@ -28,15 +34,12 @@
     max-height: 100%;
 
     @media screen and (max-width: $tablet-3) {
-      display: none;
-
       .comments-open & {
         position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        display: block;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
         box-sizing: border-box;
