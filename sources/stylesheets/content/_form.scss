@@ -277,8 +277,5 @@
   .form_notice {
     margin-bottom: $margin-low;
     color: rgba($success-color, .71);
-    .dark-background & {
-      color: rgba($white, 1);
-    }
   }
 }
