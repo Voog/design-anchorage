@@ -496,6 +496,15 @@ a img {
 .dark-background .edy-texteditor-active table th.wysiwyg-tmp-selected-cell {
   outline: 1px solid rgba(255, 255, 255, 0.6);
 }
+.dark-background .edy-taglist {
+  border-color: rgba(255, 255, 255, 0.33);
+}
+.dark-background .edy-taglist-openarrow:after {
+  border-color: white transparent transparent;
+}
+.dark-background .edy-tag-suggestions .edy-tag-suggestion {
+  color: rgba(0, 0, 0, 0.75);
+}
 
 .edy-content-element > .form {
   margin: 20px 0;

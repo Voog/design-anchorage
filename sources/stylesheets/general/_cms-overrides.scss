@@ -25,6 +25,23 @@
   .edy-texteditor-active table th.wysiwyg-tmp-selected-cell {
     outline: 1px solid rgba(255, 255, 255, 0.6);
   }
+
+  .edy-taglist {
+    border-color: rgba($white, .33);
+  }
+
+  .edy-taglist-openarrow {
+    &:after {
+      border-color: rgba($white, 1) transparent transparent;
+    }
+  }
+
+  .edy-tag-suggestions {
+
+    .edy-tag-suggestion {
+      color: rgba($black-base, .75);
+    }
+  }
 }
 
 .edy-content-element > .form {
