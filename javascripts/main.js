@@ -9335,17 +9335,10 @@ return jQuery;
       var offsetItem = currentButton;
     }
 
-    if ($(window).height() - offsetItem.offset().top - offsetItem.outerHeight() - $('.js-popup-menu-popover').outerHeight() > 0) {
-      $('.js-popup-menu-popover').css({
-        top: offsetItem.offset().top + offsetItem.outerHeight() + 10,
-        right: $(window).width() - offsetItem.offset().left - offsetItem.outerWidth() - 12
-      });
-    } else {
-      $('.js-popup-menu-popover').css({
-        top: offsetItem.offset().top - offsetItem.outerHeight() - $('.js-popup-menu-popover').outerHeight() - 10,
-        right: $(window).width() - offsetItem.offset().left - offsetItem.outerWidth() - 12
-      });
-    }
+    $('.js-popup-menu-popover').css({
+      top: offsetItem.offset().top + offsetItem.outerHeight() + 10,
+      right: $(window).width() - offsetItem.offset().left - offsetItem.outerWidth() - 12
+    });
   };
 
   var toggleFlags = function() {
