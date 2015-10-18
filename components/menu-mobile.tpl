@@ -63,7 +63,7 @@
     {% if editmode %}
       <ul class="js-edit-menu {% if page.level <=1 %} child-menu{% endif %}">
         {% if site.hidden_menuitems.size > 0 %}
-          <li>{% menubtn site.hidden_menuitems %}</li>
+          <li class="edit-btn">{% menubtn site.hidden_menuitems %}</li>
         {% endif %}
         <li>{% menuadd %}</li>
       </ul>
