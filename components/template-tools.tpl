@@ -62,7 +62,7 @@
             showAlpha: true,
 
         preview: function(data) {
-          site.bgPickerPreview($(bgPickerArea), data, bgPicker);
+          site.bgPickerPreview($(bgPickerArea), data, bgPicker, pageType);
         },
 
         commit: function(data) {

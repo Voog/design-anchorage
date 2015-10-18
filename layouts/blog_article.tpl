@@ -5,6 +5,9 @@
     {% include "template-variables" %}
     {% include "html-head" %}
     {% include "template-styles" %}
+    {% if editmode %}
+      <style id="preview-style"></style>
+    {% endif %}
   </head>
 
   <body class="blog-article-page">

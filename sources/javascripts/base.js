@@ -169,8 +169,12 @@
     };
 
     // Updates the bgPickerContent background image and background color.
-    $(bgPickerArea).find('.js-background-image').css({'background-image' : bgPickerImage});
-    $(bgPickerArea).find('.js-background-color').css({'background-color' : bgPickerColor});
+    if (pageType === 'articlePage' && bgPickerArea.hasClass('site-header')) {
+      $('#preview-style').html('.photo-article.site-header .js-background-image { background-image: ' + bgPickerImage + ' } .photo-article.site-header .js-background-color { background-color: ' + bgPickerColor + ' }');
+    } else {
+      $(bgPickerArea).find('.js-background-image').css({'background-image' : bgPickerImage});
+      $(bgPickerArea).find('.js-background-color').css({'background-color' : bgPickerColor});
+    }
   };
 
   // Header background image and color save logic function.
