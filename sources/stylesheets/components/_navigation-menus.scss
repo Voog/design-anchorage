@@ -303,6 +303,14 @@
         padding: 10px 0;
         text-transform: uppercase;
         color: rgba($black-base, .62);
+
+        &.untranslated {
+          color: rgba($red, .7);
+
+          &:hover {
+            color: rgba($red, 1);
+          }
+        }
       }
     }
 

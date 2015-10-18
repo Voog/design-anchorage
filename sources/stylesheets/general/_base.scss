@@ -330,6 +330,14 @@ a {
       &:hover {
         color: rgba($black, 1);
       }
+
+      &.untranslated {
+        color: rgba($red, .7);
+
+        &:hover {
+          color: rgba($red, 1);
+        }
+      }
     }
     .menu li.selected a {
       color: rgba($black, 1);
