@@ -1372,10 +1372,13 @@ a img {
 /* NAVIGATION MENUS*/
 .menu-btn-wrap {
   position: relative;
-  top: 5px;
+  top: 1px;
   display: inline-block;
   margin-left: 40px;
   vertical-align: top;
+}
+.menu-btn-wrap.flags-enabled {
+  top: 5px;
 }
 @media screen and (max-width: 1024px) {
   .menu-btn-wrap {
@@ -1997,6 +2000,8 @@ a img {
 
 /* langmenu */
 .lang-menu {
+  position: relative;
+  top: 1px;
   display: inline-block;
   margin-left: 40px;
   vertical-align: top;
@@ -2090,6 +2095,9 @@ a img {
 .lang-menu-btn .lang-flag:before, .lang-menu-btn .lang-flag:after {
   top: 0;
   left: 0;
+}
+.lang-menu-btn .lang-title-inner {
+  vertical-align: middle;
 }
 .lang-menu-btn .ico-popover-toggle {
   font-size: 7.2px;

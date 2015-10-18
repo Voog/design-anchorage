@@ -2,10 +2,14 @@
 // Base
 .menu-btn-wrap {
   position: relative;
-  top: 5px;
+  top: 1px;
   display: inline-block;
   margin-left: 40px;
   vertical-align: top;
+
+  &.flags-enabled {
+    top: 5px;
+  }
 
   @media screen and (max-width: $tablet-1) {
     display: none;
@@ -617,6 +621,8 @@ $flags:
 
 /* langmenu */
 .lang-menu {
+  position: relative;
+  top: 1px;
   display: inline-block;
   margin-left: 40px;
   vertical-align: top;
@@ -717,7 +723,8 @@ $flags:
   }
 }
 
-.lang-menu-btn {@extend %button;
+.lang-menu-btn {
+  @extend %button;
   font-family: inherit;
   font-size: 12px;
   position: relative;
@@ -743,6 +750,10 @@ $flags:
       top: 0;
       left: 0;
     }
+  }
+
+  .lang-title-inner {
+    vertical-align: middle;
   }
 
   .ico-popover-toggle {
