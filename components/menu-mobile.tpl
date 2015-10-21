@@ -38,10 +38,10 @@
                       {% endfor %}
 
                       {% if editmode %}
-                        {% if site.hidden_menuitems.size > 0 %}
-                          <li>{% menubtn level2.hidden_menuitems %}</li>
+                        {% if level2.hidden_children.size > 0 %}
+                          <li class="edit-btn">{% menubtn level2.hidden_children %}</li>
                         {% endif %}
-                        <li>{% menuadd parent="level2" %}</li>
+                        <li class="edit-btn">{% menuadd parent="level2" %}</li>
                       {% endif %}
                     </ul>
                   {% endif %}
@@ -49,10 +49,10 @@
               {% endfor %}
 
               {% if editmode %}
-                {% if site.hidden_menuitems.size > 0 %}
-                  <li>{% menubtn item.hidden_menuitems %}</li>
+                {% if item.hidden_children.size > 0 %}
+                  <li class="edit-btn">{% menubtn item.hidden_children %}</li>
                 {% endif %}
-                <li>{% menuadd parent="item" %}</li>
+                <li class="edit-btn">{% menuadd parent="item" %}</li>
               {% endif %}
             </ul>
           {% endif %}
@@ -65,7 +65,7 @@
         {% if site.hidden_menuitems.size > 0 %}
           <li class="edit-btn">{% menubtn site.hidden_menuitems %}</li>
         {% endif %}
-        <li>{% menuadd %}</li>
+        <li class="edit-btn">{% menuadd %}</li>
       </ul>
     {% endif %}
   </div>

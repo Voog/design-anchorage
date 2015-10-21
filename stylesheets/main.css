@@ -1642,7 +1642,7 @@ a img {
     margin: 0;
   }
   #mobile-menu ul li.edit-btn {
-    padding: 10px 0;
+    margin: 10px 0;
   }
   #mobile-menu ul a {
     font-size: 16px;
@@ -1675,12 +1675,6 @@ a img {
   }
   #mobile-menu .navigation-menu ul a.indented {
     margin-left: 10px;
-  }
-  #mobile-menu .navigation-menu ul a.edy-cbtn {
-    display: none !important;
-  }
-  #mobile-menu .navigation-menu ul a.edy-cbtn.visible {
-    display: inline !important;
   }
   #mobile-menu .navigation-menu ul.current-menu > li:first-child > a {
     text-transform: uppercase;

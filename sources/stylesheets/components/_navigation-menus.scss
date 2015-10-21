@@ -293,7 +293,7 @@
         margin: 0;
 
         &.edit-btn {
-          padding: 10px 0;
+          margin: 10px 0;
         }
       }
 
@@ -339,12 +339,13 @@
             margin-left: 10px;
           }
 
-          &.edy-cbtn {
-            display: none !important;
-            &.visible {
-              display: inline !important;
-            }
-          }
+          // &.edy-cbtn {
+          //   display: none !important;
+
+          //   &.visible {
+          //     display: inline !important;
+          //   }
+          // }
         }
 
         &.current-menu {
