@@ -2638,6 +2638,7 @@ a img {
   hyphens: auto;
   display: table;
   width: 100%;
+  background-color: white;
 }
 @media screen and (max-width: 640px) {
   .site-footer .blog-article-nav {
@@ -2735,7 +2736,6 @@ a img {
   bottom: 0;
   left: 0;
   z-index: -1;
-  background-color: white;
 }
 @media screen and (max-width: 640px) {
   .comments-open .site-footer {

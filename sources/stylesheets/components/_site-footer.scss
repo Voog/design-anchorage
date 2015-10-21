@@ -30,6 +30,7 @@
     @include hyphens(auto);
     display: table;
     width: 100%;
+    background-color: rgba($white, 1);
 
     @media screen and (max-width: $tablet-3) {
       display: block;
@@ -111,7 +112,6 @@
       bottom: 0;
       left: 0;
       z-index: -1;
-      background-color: rgba($white, 1);
     }
   }
   .comments-open & {

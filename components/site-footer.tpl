@@ -35,7 +35,6 @@
 
         {% if article_prev_empty == false %}
           <div class="{% if article_next_empty == true %}article-nav-full{% else %}article-nav-half{% endif %} article-nav-prev">
-            <div class="article-nav-bg"></div>
             {% for article in blog.articles %}
               {% if article_prev == forloop.index0 %}
                 <a href="{{ article.url }}">
@@ -51,7 +50,6 @@
 
         {% if article_next_empty == false %}
           <div class="{% if article_prev_empty == true %}article-nav-full{% else %}article-nav-half{% endif %} article-nav-next">
-            <div class="article-nav-bg"></div>
               {% for article in blog.articles %}
                 {% if article_next == forloop.index0 %}
                   <a href="{{ article.url }}">
