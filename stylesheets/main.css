@@ -1335,7 +1335,7 @@ a img {
 }
 @media screen and (max-width: 640px) {
   .site-header.photo-article .header-bottom .header-bottom-inner {
-    min-height: 400px;
+    height: 400px;
   }
 }
 .site-header .header-body .article-author,
