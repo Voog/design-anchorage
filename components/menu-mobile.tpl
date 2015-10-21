@@ -70,25 +70,27 @@
     {% endif %}
   </div>
 
-  <div class="lang-menu">
-    <ul>
-      {% for language in site.languages %}
-        <li>
-          <a class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} is-active{% endif %}" href="{{ language.url }}">{{ language.title }}</a>
-        </li>
-      {% endfor %}
-      {% if editmode %}<li class="edit-btn">{% languageadd %}</li>{% endif %}
+  {% if editmode or site.has_many_languages? %}
+    <div class="lang-menu">
+      <ul>
+        {% for language in site.languages %}
+          <li>
+            <a class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} is-active{% endif %}" href="{{ language.url }}">{{ language.title }}</a>
+          </li>
+        {% endfor %}
+        {% if editmode %}<li class="edit-btn">{% languageadd %}</li>{% endif %}
 
-      {% if editmode %}
-        <div class="mobile-lang-options">
-          <button class="option-btn js-option-toggle-flags{% if flags_state %} js-flag-disable-btn{% endif %}">
-            <span class="disable-text">{{ "disable_lang_flags" | lc }}</span>
-            <span class="enable-text">{{ "enable_lang_flags" | lc }}</span>
-          </button>
-        </div>
-      {% endif %}
-    </ul>
-  </div>
+        {% if editmode %}
+          <div class="mobile-lang-options">
+            <button class="option-btn js-option-toggle-flags{% if flags_state %} js-flag-disable-btn{% endif %}">
+              <span class="disable-text">{{ "disable_lang_flags" | lc }}</span>
+              <span class="enable-text">{{ "enable_lang_flags" | lc }}</span>
+            </button>
+          </div>
+        {% endif %}
+      </ul>
+    </div>
+  {% endif %}
 
   {% if site.search.enabled %}
     <div id="mobile-search">
