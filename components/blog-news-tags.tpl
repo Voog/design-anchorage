@@ -1,5 +1,5 @@
-<section class="blog-tags">
-  {% if site.has_language_tags? %}
+{% if site.has_language_tags? %}
+  <section class="blog-tags">
     <button class="tags-toggle">
       <div class="tags-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" width="14px" height="14px">
@@ -35,5 +35,5 @@
         </ul>
       </div>
     </nav>
-  {% endif %}
-</section>
+  </section>
+{% endif %}
