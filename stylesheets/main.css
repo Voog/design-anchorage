@@ -1310,7 +1310,7 @@ a img {
   }
 }
 .front-page .site-header .header-bottom .header-bottom-inner {
-  height: 684px;
+  height: 606px;
 }
 @media screen and (max-width: 640px) {
   .front-page .site-header .header-bottom .header-bottom-inner {
@@ -1328,7 +1328,7 @@ a img {
   }
 }
 .site-header.photo-article .header-bottom .header-bottom-inner {
-  height: 684px;
+  height: 606px;
 }
 .site-header.photo-article .header-bottom .header-bottom-inner .wrap {
   padding-top: 60px;
