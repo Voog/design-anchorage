@@ -15,8 +15,8 @@
 
           {% for article in blog.articles %}
             {% if article_current == article.id %}
-              {% assign article_next = forloop.index0 | plus: 1 %}
-              {% assign article_prev = forloop.index0 | minus: 1 %}
+              {% assign article_next = forloop.index0 | minus: 1 %}
+              {% assign article_prev = forloop.index0 | plus: 1 %}
             {% endif %}
           {% endfor %}
 
