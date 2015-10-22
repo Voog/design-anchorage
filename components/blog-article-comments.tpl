@@ -1,10 +1,10 @@
-<section class="article-comments content-area js-comments js-voog-comments-modal js-prevent-sideclick{% unless comment.valid? %} open{% endunless %}">
-  <div class="comments-body">
+<section class="article-comments js-comments js-voog-comments-modal js-prevent-sideclick{% unless comment.valid? %} open{% endunless %}">
+  <div class="comments-body light-background">
     <header class="comments-header">
       <h1 class="comments-title">{{ "add_a_comment" | lc }}</h1>
     </header>
 
-    <div class="comment-form{% unless comment.valid? %} form_with_errors{% endunless %}">
+    <div class="comment-form content-area{% unless comment.valid? %} form_with_errors{% endunless %}">
       {% commentform %}
         {% unless comment.valid? %}
             {% for error in comment.errors %}
@@ -53,7 +53,7 @@
       </div>
     {% endif %}
 
-    <div class="comments-close">
+    <div class="comments-close js-background-type {{ blog_body_bg_type }}">
       <div class="btn-close comment-btn comments-close-btn js-comments-toggle-btn">
         <svg class="ico-close" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
           <path d="M15.778,1.636 L9.414,8.000 L15.778,14.364 L14.364,15.778 L8.000,9.414 L1.636,15.778 L0.222,14.364 L6.586,8.000 L0.222,1.636 L1.636,0.222 L8.000,6.586 L14.364,0.222 L15.778,1.636 Z" class="cls-1"/>

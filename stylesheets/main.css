@@ -1050,6 +1050,20 @@ a img {
   line-height: 2;
   color: #aaaaaa;
 }
+.article-comments .comments-close.dark-background .btn-close {
+  background-color: white;
+}
+.article-comments .comments-close.dark-background .btn-close .ico-close {
+  fill: black;
+}
+@media screen and (min-width: 851px) {
+  .article-comments .comments-close.dark-background .btn-close:hover {
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    transition: 500ms;
+    background-color: rgba(255, 255, 255, 0.71);
+  }
+}
 .article-comments .comments-close .btn-close {
   position: absolute;
   top: 0;
@@ -3234,19 +3248,19 @@ a img {
 .content-area .form_field_required .form_field_label:after {
   content: '* \a';
 }
-.content-area .form_field_textfield,
-.content-area .form_field_textarea,
-.content-area .form_field_select,
-.content-area .form_field_radio + .form_control_indicator,
-.content-area .form_field_checkbox + .form_control_indicator {
-  background-color: rgba(0, 0, 0, 0.03);
-}
 .dark-background .content-area .form_field_textfield, .dark-background
 .content-area .form_field_textarea, .dark-background
 .content-area .form_field_select, .dark-background
 .content-area .form_field_radio + .form_control_indicator, .dark-background
 .content-area .form_field_checkbox + .form_control_indicator {
   background-color: rgba(255, 255, 255, 0.1);
+}
+.light-background .content-area .form_field_textfield, .light-background
+.content-area .form_field_textarea, .light-background
+.content-area .form_field_select, .light-background
+.content-area .form_field_radio + .form_control_indicator, .light-background
+.content-area .form_field_checkbox + .form_control_indicator {
+  background-color: rgba(0, 0, 0, 0.03);
 }
 .content-area .form_field_textfield,
 .content-area .form_field_textarea,
@@ -3258,10 +3272,8 @@ a img {
   max-width: 100%;
   padding: 8px 13px;
   vertical-align: bottom;
-  color: rgba(0, 0, 0, 0.71);
   border-width: 1px;
   border-style: solid;
-  border-color: rgba(0, 0, 0, 0.13);
   outline: none;
 }
 .content-area .form_field_textfield::-webkit-input-placeholder,
@@ -3287,17 +3299,24 @@ a img {
 .dark-background .content-area .form_field_textfield, .dark-background
 .content-area .form_field_textarea, .dark-background
 .content-area .form_field_select {
+  color: white;
   border-color: rgba(255, 255, 255, 0.3);
 }
-.content-area .form_field_textfield:focus,
-.content-area .form_field_textarea:focus,
-.content-area .form_field_select:focus {
-  border-color: rgba(0, 0, 0, 0.33);
+.light-background .content-area .form_field_textfield, .light-background
+.content-area .form_field_textarea, .light-background
+.content-area .form_field_select {
+  color: rgba(0, 0, 0, 0.71);
+  border-color: rgba(0, 0, 0, 0.13);
 }
 .dark-background .content-area .form_field_textfield:focus, .dark-background
 .content-area .form_field_textarea:focus, .dark-background
 .content-area .form_field_select:focus {
   border-color: white;
+}
+.light-background .content-area .form_field_textfield:focus, .light-background
+.content-area .form_field_textarea:focus, .light-background
+.content-area .form_field_select:focus {
+  border-color: rgba(0, 0, 0, 0.33);
 }
 .content-area .form_field_textfield.form_field_size_small,
 .content-area .form_field_textarea.form_field_size_small,
@@ -3314,18 +3333,18 @@ a img {
 .content-area .form_field_select.form_field_size_large {
   width: 100%;
 }
-.dark-background .content-area .form_field_textfield, .dark-background
-.content-area .form_field_textarea, .dark-background
-.content-area .form_field_select {
-  color: white;
-}
 .content-area .form_field_select {
   position: relative;
   padding-right: 27px;
-  background-image: url("../assets/ico-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 10px center;
   -moz-appearance: none;
+}
+.dark-background .content-area .form_field_select {
+  background-image: url("../assets/ico-arrow-white.svg");
+}
+.light-background .content-area .form_field_select {
+  background-image: url("../assets/ico-arrow.svg");
 }
 .content-area .form_field_select:after {
   position: absolute;
@@ -3349,9 +3368,6 @@ a img {
 }
 .content-area .form_field_select.form_field_size_large {
   min-width: 184px;
-}
-.dark-background .content-area .form_field_select {
-  background-image: url("../assets/ico-arrow-white.svg");
 }
 .svg .content-area .form_field_radio, .svg
 .content-area .form_field_checkbox {
@@ -3454,9 +3470,7 @@ a img {
   padding: 10px 20px;
   cursor: pointer;
   text-transform: uppercase;
-  color: white;
   border: none;
-  background-color: black;
 }
 .dark-background .content-area .form_submit input {
   color: black;
@@ -3464,6 +3478,13 @@ a img {
 }
 .dark-background .content-area .form_submit input:hover {
   background-color: rgba(255, 255, 255, 0.71);
+}
+.light-background .content-area .form_submit input {
+  color: white;
+  background-color: black;
+}
+.light-background .content-area .form_submit input:hover {
+  background-color: rgba(0, 0, 0, 0.71);
 }
 @media screen and (min-width: 850px) {
   .content-half .content-area .form_submit input {
@@ -3479,7 +3500,6 @@ a img {
   -webkit-transition: 500ms;
   -moz-transition: 500ms;
   transition: 500ms;
-  background-color: rgba(0, 0, 0, 0.71);
 }
 .content-area .form_submit input:focus {
   outline: none;

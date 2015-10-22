@@ -104,6 +104,23 @@
   }
 
   .comments-close {
+    &.dark-background {
+      .btn-close {
+        background-color: rgba($white, 1);
+
+        .ico-close {
+          fill: rgba($black, 1);
+        }
+
+        @media screen and (min-width: $tablet-2 + 1) {
+          &:hover {
+            @include transition($transition);
+            background-color: rgba($white, .71);
+          }
+        }
+      }
+    }
+
     .btn-close {
       position: absolute;
       top: 0;
