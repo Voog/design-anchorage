@@ -344,13 +344,16 @@
       $('html').toggleClass('comments-open');
       $('.js-comments-input').val('').focus();
 
-      if ($('html').hasClass('comments-open')) {
-        $('html, body').animate({
-            scrollTop: $('.js-voog-comments-modal').offset().top
-        }, 300);
-      }
 
-      handleCommentsToggleing();
+      if ($(window).width() > 640) {
+        if ($('html').hasClass('comments-open')) {
+          $('html, body').animate({
+              scrollTop: $('.js-voog-comments-modal').offset().top
+          }, 300);
+        }
+
+        handleCommentsToggleing();
+      };
     });
 
     var handleCommentsToggleing = function() {
