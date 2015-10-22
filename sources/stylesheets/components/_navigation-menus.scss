@@ -51,6 +51,15 @@
 
     .svg & {
       @include transform(rotate(90deg));
+    }
+  }
+
+  &.highlighted {
+    .no-svg & {
+      border-color: rgba($black-base, 1) transparent transparent transparent;
+    }
+
+    .svg & {
       fill: rgba($black-base, 1);
     }
   }

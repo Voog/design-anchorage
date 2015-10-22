@@ -1441,6 +1441,11 @@ a img {
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+.no-svg .toggle-sub-menu.highlighted {
+  border-color: black transparent transparent transparent;
+}
+.svg .toggle-sub-menu.highlighted {
   fill: black;
 }
 
