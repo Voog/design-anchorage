@@ -8,7 +8,9 @@
       {% endunless %}
 
       {% for item in site.visible_menuitems %}
-        <li{% if item.selected? %} class="current-parent"{% endif %}>
+        <li{% if item.children? and item.selected? %} class="with-children current-parent"{% elsif item.children? %} class="with-children"{% elsif item.selected? %} class="current-parent"{% endif %}>
+          {% menulink item %}
+
           {% if item.children? %}
             <button class="toggle-sub-menu js-toggle-sub-menu{% if item.selected? %} active highlighted{% endif %}">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 10" width="8px" height="10px">
@@ -16,12 +18,13 @@
               </svg>
             </button>
           {% endif %}
-          {% menulink item %}
 
           {% if editmode or item.children? %}
             <ul class="sub-menu menu-level-2">
               {% for level2 in item.visible_children %}
-                <li{% if level2.selected? %} class="current-parent"{% endif %}>
+                <li{% if level2.children? and level2.selected? %} class="with-children current-parent"{% elsif level2.children? %} class="with-children"{% elsif level2.selected? %} class="current-parent"{% endif %}>
+                  {% menulink level2 %}
+
                   {% if level2.children? %}
                     <button class="toggle-sub-menu js-toggle-sub-menu{% if level2.selected? %} active highlighted{% endif %}">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 10" width="8px" height="10px">
@@ -29,7 +32,6 @@
                       </svg>
                     </button>
                   {% endif %}
-                  {% menulink level2 %}
 
                   {% if editmode or level2.children? %}
                     <ul class="sub-menu menu-level-3">

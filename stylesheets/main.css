@@ -1413,11 +1413,11 @@ a img {
 
 .toggle-sub-menu {
   position: absolute;
-  top: 14px;
-  right: -6px;
+  top: 11px;
+  right: -10px;
   display: block;
+  padding: 9px 11px 8px;
   margin-top: -6px;
-  padding: 6px;
 }
 .no-svg .toggle-sub-menu:before {
   display: block;
@@ -1682,11 +1682,14 @@ a img {
   .lang-menu-open #mobile-menu .navigation-menu, .mobile-search-open #mobile-menu .navigation-menu {
     display: none;
   }
+  #mobile-menu .navigation-menu .with-children > a {
+    margin-right: 30px;
+  }
   #mobile-menu .navigation-menu ul a {
     display: block;
   }
   #mobile-menu .navigation-menu ul a.visible {
-    display: block;
+    display: inline-block;
   }
   #mobile-menu .navigation-menu ul a.selected {
     font-weight: 500;

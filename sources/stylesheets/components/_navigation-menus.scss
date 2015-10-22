@@ -19,11 +19,11 @@
 .toggle-sub-menu {
   @extend %button;
   position: absolute;
-  top: 14px;
-  right: -6px;
+  top: 11px;
+  right: -10px;
   display: block;
+  padding: 9px 11px 8px;
   margin-top: -6px;
-  padding: 6px;
 
   .no-svg & {
     &:before {
@@ -331,12 +331,18 @@
         display: none;
       }
 
+      .with-children {
+        > a {
+          margin-right: 30px;
+        }
+      }
+
       ul {
         a {
           display: block;
 
           &.visible {
-            display: block;
+            display: inline-block;
           }
 
           &.selected {
@@ -347,14 +353,6 @@
           &.indented {
             margin-left: 10px;
           }
-
-          // &.edy-cbtn {
-          //   display: none !important;
-
-          //   &.visible {
-          //     display: inline !important;
-          //   }
-          // }
         }
 
         &.current-menu {
