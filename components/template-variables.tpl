@@ -117,10 +117,13 @@
     {% endif %}
 
     {% if article_header_bg_image_sizes == nil %}
-      {% assign article_header_bg_image_sizes_str = "" %}
+      {% assign article_header_bg_image_sizes_str = '[{"url":"' | append: images_path | append: '/article-header-bg.jpg", "width":2560, "height":1709}, {"url":"' | append: images_path | append: '/article-header-bg_huge.jpg", "width":2048, "height":1367}, {"url":"' | append: images_path | append: '/article-header-bg_large.jpg", "width":1280, "height":854}]' %}
     {% else %}
-      {% assign article_header_bg_image_sizes_str = "" %}
+      {% assign article_header_bg_image_sizes_str = article_header_bg_image_sizes | json %}
     {% endif %}
+
+
+
 
     {% if article_header_bg_color == nil %}
       {% assign article_header_bg_color = "rgba(0, 0, 0, 0.4)" %}
