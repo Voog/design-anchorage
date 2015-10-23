@@ -13,7 +13,6 @@
 
     .header-left {
       @include flex(1);
-      max-width: 100%;
     }
   }
   position: relative;
@@ -72,6 +71,8 @@
   }
 
   .header-left {
+    max-width: 100%;
+
     .flexbox & {
       @include flex(1 0 auto);
     }

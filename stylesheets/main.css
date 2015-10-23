@@ -1213,7 +1213,6 @@ a img {
     -moz-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    max-width: 100%;
   }
 }
 @media screen and (max-width: 640px) {
@@ -1283,6 +1282,9 @@ a img {
 }
 .blog-article-page .site-header .header-body {
   text-align: center;
+}
+.site-header .header-left {
+  max-width: 100%;
 }
 .flexbox .site-header .header-left {
   -webkit-box-flex: 1;
