@@ -47,6 +47,10 @@
     display: inline;
     letter-spacing: 1px;
     text-transform: uppercase;
+
+    .dark-background & {
+      color: rgba($white, .36);
+    }
   }
   .article-excerpt {
     color: rgba($black-base, .71);
@@ -102,6 +106,13 @@
           margin: 0;
         }
       }
+    }
+  }
+
+  .dark-background {
+    .article-author,
+    .article-date {
+      color: rgba($white, .36);
     }
   }
 }

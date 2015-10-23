@@ -792,6 +792,10 @@ a img {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+.dark-background .blog-news-page .article-author, .dark-background
+.blog-news-page .article-date {
+  color: rgba(255, 255, 255, 0.36);
+}
 .blog-news-page .article-excerpt {
   color: rgba(0, 0, 0, 0.71);
   font-size: rem-calc(18px);
@@ -846,6 +850,10 @@ a img {
   .blog-news-page .articles-listing .blog-article .article-title {
     margin: 0;
   }
+}
+.blog-news-page .dark-background .article-author,
+.blog-news-page .dark-background .article-date {
+  color: rgba(255, 255, 255, 0.36);
 }
 
 .blog-article-page .article-types-toggle {
