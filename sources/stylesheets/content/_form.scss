@@ -48,7 +48,7 @@
     @extend %inherit-base-font;
 
     @include placeholder {
-      color: rgba($black-lighter, 1);
+      color: rgba($black-base, .36);
     }
 
     font-size: 16px;

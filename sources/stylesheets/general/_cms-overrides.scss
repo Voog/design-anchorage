@@ -30,6 +30,10 @@
     border-color: rgba($white, .33);
   }
 
+  .edy-tag-input {
+    color: rgba($white, 1);
+  }
+
   .edy-taglist-openarrow {
     &:after {
       border-color: rgba($white, 1) transparent transparent;

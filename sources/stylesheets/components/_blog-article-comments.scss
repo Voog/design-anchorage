@@ -64,10 +64,10 @@
       cursor: text;
       text-transform: none;
 
-      .voog-site-blog-comments-count {
+      .comments-count {
         display: inline-block;
         font-size: 14px;
-        color: rgba($black-lighter, 1);
+        color: rgba($black-base, .36);
         vertical-align: middle;
       }
     }

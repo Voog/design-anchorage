@@ -505,6 +505,9 @@ a img {
 .dark-background .edy-taglist {
   border-color: rgba(255, 255, 255, 0.33);
 }
+.dark-background .edy-tag-input {
+  color: white;
+}
 .dark-background .edy-taglist-openarrow:after {
   border-color: white transparent transparent;
 }
@@ -782,7 +785,7 @@ a img {
 .blog-news-page .article-author,
 .blog-news-page .article-date {
   font-size: 14px;
-  color: #a4a3a3;
+  color: rgba(0, 0, 0, 0.36);
   font-weight: 300;
   line-height: 1;
   display: inline;
@@ -820,7 +823,7 @@ a img {
 .blog-news-page .articles-listing .blog-article .article-date {
   font-size: 12px;
   font-size: 12px;
-  color: #a4a3a3;
+  color: rgba(0, 0, 0, 0.36);
   font-weight: 300;
   line-height: 1.7;
   position: absolute;
@@ -892,15 +895,21 @@ a img {
 }
 .blog-article-page .comments-title {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.7;
   display: inline-block;
   cursor: pointer;
   text-transform: uppercase;
-  color: #a4a3a3;
+  color: rgba(0, 0, 0, 0.36);
 }
-.blog-article-page .comments-title span {
+.blog-article-page .comments-title .comments-count {
   color: rgba(0, 0, 0, 0.71);
+}
+.blog-article-page .dark-background .comments-title {
+  color: rgba(255, 255, 255, 0.36);
+}
+.blog-article-page .dark-background .comments-count {
+  color: rgba(255, 255, 255, 0.71);
 }
 .blog-article-page .main-content {
   -webkit-transition: min-height 250ms;
@@ -942,7 +951,7 @@ a img {
   display: inline;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #a4a3a3;
+  color: rgba(0, 0, 0, 0.36);
 }
 .blog-article-page .main-content .article-author.is-hidden,
 .blog-article-page .main-content .article-date.is-hidden {
@@ -1020,10 +1029,10 @@ a img {
   cursor: text;
   text-transform: none;
 }
-.article-comments .comments-body .comments-title .voog-site-blog-comments-count {
+.article-comments .comments-body .comments-title .comments-count {
   display: inline-block;
   font-size: 14px;
-  color: #a4a3a3;
+  color: rgba(0, 0, 0, 0.36);
   vertical-align: middle;
 }
 .article-comments .comments-body .form_field_textfield,
@@ -2660,7 +2669,7 @@ a img {
   font-size: 12px;
   font-weight: 400;
   line-height: 2;
-  color: #a4a3a3;
+  color: rgba(0, 0, 0, 0.36);
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -3205,22 +3214,22 @@ a img {
 .content-area .form_field_textfield::-webkit-input-placeholder,
 .content-area .form_field_textarea::-webkit-input-placeholder,
 .content-area .form_field_select::-webkit-input-placeholder {
-  color: #a4a3a3;
+  color: rgba(0, 0, 0, 0.36);
 }
 .content-area .form_field_textfield::-moz-placeholder,
 .content-area .form_field_textarea::-moz-placeholder,
 .content-area .form_field_select::-moz-placeholder {
-  color: #a4a3a3;
+  color: rgba(0, 0, 0, 0.36);
 }
 .content-area .form_field_textfield:-moz-placeholder,
 .content-area .form_field_textarea:-moz-placeholder,
 .content-area .form_field_select:-moz-placeholder {
-  color: #a4a3a3;
+  color: rgba(0, 0, 0, 0.36);
 }
 .content-area .form_field_textfield:-ms-input-placeholder,
 .content-area .form_field_textarea:-ms-input-placeholder,
 .content-area .form_field_select:-ms-input-placeholder {
-  color: #a4a3a3;
+  color: rgba(0, 0, 0, 0.36);
 }
 .dark-background .content-area .form_field_textfield, .dark-background
 .content-area .form_field_textarea, .dark-background

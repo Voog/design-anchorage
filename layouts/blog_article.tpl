@@ -37,7 +37,7 @@
                     <div class="comments-title comments-btn comments-toggle-btn js-comments-toggle-btn js-prevent-sideclick">
                       {% if article.comments_count > 0 %}
                         {{ "comments_for_count" | lc }}
-                        <span class="voog-site-blog-comments-count">({{ article.comments_count }})</span>
+                        <span class="comments-count">({{ article.comments_count }})</span>
                       {% else %}
                         {{ "comment" | lc }}
                       {% endif %}
