@@ -4,14 +4,16 @@
     .header-left,
     .header-right {
       float: none;
+
       .no-flexbox & {
         display: table-cell;
         vertical-align: top;
       }
     }
+
     .header-left {
       @include flex(1);
-      margin-right: 40px;
+      margin-right: 20px;
     }
   }
   position: relative;
@@ -26,22 +28,26 @@
       padding-top: $header-padding;
       padding-right: 40px;
       padding-left: 40px;
+
       .flexbox & {
         @include display(flex);
         @include flex-wrap(wrap);
         @include justify-content(flex-end);
       }
+
       @media screen and (max-width: $tablet-3) {
         padding-top: 20px;
         padding-right: 20px;
         padding-left: 20px;
       }
     }
+
     .site-options {
       display: inline-block;
       vertical-align: top;
     }
   }
+
   .header-title {
     @include hyphens(auto);
     font-size: 22px;
@@ -49,19 +55,23 @@
     line-height: 1;
     position: relative;
     min-width: 140px;
+
     a {
       text-decoration: none;
     }
   }
+
   .header-body {
     .blog-article-page & {
       text-align: center;
     }
   }
+
   .header-left {
     .flexbox & {
       @include flex(1 0 auto);
     }
+
     .no-flexbox & {
       float: left;
       @media screen and (max-width: $tablet-3) {
@@ -69,18 +79,22 @@
       }
     }
   }
+
   .header-right {
     position: relative;
     text-align: right;
+
     @media screen and (max-width: $tablet-3) {
       .search-open & {
         position: static;
       }
     }
+
     .no-flexbox & {
       float: right;
     }
   }
+
   .header-bottom {
     .header-bottom-inner {
       display: table;
@@ -89,37 +103,46 @@
       margin: 0 auto;
       table-layout: fixed;
       border-collapse: collapse;
+
       .common-page &,
       .blog-news-page &,
       .blog-article-page & {
         height: 253px;
+
         @media screen and (max-width: $tablet-3) {
           height: 130px;
         }
       }
+
       .front-page & {
         height: 606px;
+
         @media screen and (max-width: $tablet-3) {
           height: 400px;
         }
       }
+
       .wrap {
         display: table-cell;
         padding: 60px 40px 90px;
         vertical-align: middle;
+
         @media screen and (max-width: $tablet-3) {
           padding: 40px 20px 60px;
         }
       }
     }
   }
+
   &.photo-article {
     .header-bottom {
       .header-bottom-inner {
         height: 606px;
+
         .wrap {
           padding-top: 60px;
         }
+
         @media screen and (max-width: $tablet-3) {
           height: 400px;
         }
@@ -135,32 +158,39 @@
       display: inline;
       letter-spacing: 1px;
       text-transform: uppercase;
+
       &.is-hidden {
         display: none;
       }
     }
+
     .article-title {
       font-size: 60px;
       font-weight: 300;
       line-height: 1.2;
       margin: 0 0 10px;
       text-transform: none;
+
       .public & {
         cursor: pointer;
       }
+
       @media screen and (max-width: $tablet-3) {
         font-size: 32px;
       }
+
       a {
         font-size: 1em;
         text-decoration: none;
       }
     }
+
     .blog-title {
       font-weight: 700;
       line-height: 1;
       margin-top: 0;
       text-transform: uppercase;
+
       &.is-hidden {
         display: none;
       }

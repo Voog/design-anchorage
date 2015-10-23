@@ -204,11 +204,14 @@
   width: 26px;
   height: 26px;
   font-size: 0;
-  margin-left: 28px;
+
+  @media screen and (min-width: $tablet-1 + 1) {
+    margin-left: 28px;
+  }
 
   @media screen and (max-width: $tablet-1) {
     margin-right: 36px;
-    top: -5px;
+    top: -3px;
     position: relative;
 
     .search-active & {
