@@ -1,8 +1,7 @@
 .site-sidebar {
-  float: left;
+  position: absolute;
   width: 220px;
   margin: 50px 0 50px 40px;
-  position: relative;
 
   @media screen and (max-width: $tablet-1) {
     display: none;
