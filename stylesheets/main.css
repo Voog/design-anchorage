@@ -3351,12 +3351,16 @@ a img {
   background-repeat: no-repeat;
   background-position: right 10px center;
   -moz-appearance: none;
+  -ms-appearance: none;
 }
 .dark-background .content-area .form_field_select {
   background-image: url("../assets/ico-arrow-white.svg");
 }
 .light-background .content-area .form_field_select {
   background-image: url("../assets/ico-arrow.svg");
+}
+.content-area .form_field_select::-ms-expand {
+  display: none;
 }
 .content-area .form_field_select:after {
   position: absolute;

@@ -102,6 +102,7 @@
     background-repeat: no-repeat;
     background-position: right 10px center;
     -moz-appearance: none;
+    -ms-appearance: none;
 
     .dark-background & {
       background-image: url('../assets/ico-arrow-white.svg');
@@ -109,6 +110,11 @@
 
     .light-background & {
       background-image: url('../assets/ico-arrow.svg');
+    }
+
+
+    &::-ms-expand {
+      display: none;
     }
 
     &:after {
