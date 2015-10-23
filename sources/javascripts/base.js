@@ -120,8 +120,8 @@
   };
 
   // Checks the lightness sum of header background image and color and sets the lightness class depending on it's value.
-  var bgPickerContentLightnessClass = function(bgPickerArea, lightness) {
-    if (lightness >= 0.5) {
+  var bgPickerContentLightnessClass = function(bgPickerArea, combinedLightness) {
+    if (combinedLightness > 0.6) {
       $(bgPickerArea).find('.js-background-type').addClass('light-background').removeClass('dark-background');
     } else {
       $(bgPickerArea).find('.js-background-type').addClass('dark-background').removeClass('light-background');
@@ -129,7 +129,7 @@
   };
 
   // Header background image and color preview logic function.
-  var bgPickerPreview = function(bgPickerArea, data, bgPicker) {
+  var bgPickerPreview = function(bgPickerArea, data, bgPicker, defaultImageColor) {
     // Defines the variables used in preview logic.
 
     var bgPickerImagePrevious = $(bgPickerArea).find('.js-background-image').css('background-image'),
@@ -144,23 +144,32 @@
 
     if (colorExtractImageUrl) {
       if (bgPickerImageSizesContains(bgPickerImageSizes, bgPickerImagePrevious)) {
-        bgPicker.bgPickerImageColor = bgPicker.bgPickerImageColor ? bgPicker.bgPickerImageColor : 'rgba(41,42,39,1)';
-        bgPicker.bgPickerCombinedLightness = getCombinedLightness(bgPicker.bgPickerImageColor, bgPickerColor);
+        console.log(1);
+        bgPicker.imageColor = bgPicker.imageColor ? bgPicker.imageColor : defaultImageColor;
+        bgPicker.combinedLightness = getCombinedLightness(bgPicker.imageColor, bgPickerColor);
         bgPickerContentLightnessClass(bgPickerArea, bgPicker.combinedLightness);
+
+        console.log(bgPicker.combinedLightness);
       } else {
+        console.log(2);
         colorExtractImage.attr('src', colorExtractImageUrl.replace(/.*\/photos/g,'/photos'));
         colorExtractImage.load(function() {
           ColorExtract.extract(colorExtractImage[0], colorExtractCanvas[0], function(data) {
-            bgPicker.bgPickerImageColor = data.bgColor ? data.bgColor : 'rgba(255,255,255,1)';
-            bgPicker.bgPickerCombinedLightness = getCombinedLightness(bgPicker.bgPickerImageColor, bgPickerColor);
+            bgPicker.imageColor = data.bgColor ? data.bgColor : 'rgba(255,255,255,1)';
+            bgPicker.combinedLightness = getCombinedLightness(bgPicker.imageColor, bgPickerColor);
             bgPickerContentLightnessClass(bgPickerArea, bgPicker.combinedLightness);
+
+            console.log(bgPicker.combinedLightness);
           });
         });
       };
     } else {
-      bgPicker.bgPickerImageColor = 'rgba(255,255,255,1)';
-      bgPicker.bgPickerCombinedLightness = getCombinedLightness('rgba(255,255,255,1)', bgPickerColor);
+      console.log(3);
+      bgPicker.imageColor = 'rgba(255,255,255,1)';
+      bgPicker.combinedLightness = getCombinedLightness(bgPicker.imageColor, bgPickerColor);
       bgPickerContentLightnessClass(bgPickerArea, bgPicker.combinedLightness);
+
+      console.log(bgPicker.combinedLightness);
     };
 
     // Updates the bgPickerContent background image and background color.
@@ -178,7 +187,7 @@
     commitData.image = data.image || '';
     commitData.imageSizes = data.imageSizes || '';
     commitData.color = data.color || '';
-    commitData.combinedLightness = bgPicker.bgPickerCombinedLightness;
+    commitData.combinedLightness = bgPicker.combinedLightness;
 
     if (pageType === 'articlePage') {
       if (dataBgKey == 'footer_bg') {

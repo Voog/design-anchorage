@@ -67,7 +67,7 @@
     {% endif %}
 
     <div class="footer-body content-area">
-      {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-key="footer_bg" data-bg-picture-boolean="false" data-bg-color="{{ footer_bg_color }}" data-bg-color-data="{{ footer_bg_color_data_str | escape }}"></button>{% endif %}
+      {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-key="footer_bg" data-bg-picture-boolean="false" data-bg-default-image-color="rgb(255, 255, 255)" data-bg-color="{{ footer_bg_color }}" data-bg-color-data="{{ footer_bg_color_data_str | escape }}"></button>{% endif %}
 
       <div class="wrap">
         <div class="inner content-area">

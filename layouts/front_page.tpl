@@ -21,7 +21,7 @@
               <div class="background-color js-background-color"></div>
 
               {% if editmode %}
-                <button class="voog-bg-picker-btn js-background-settings" data-bg-key="content_bg_1" data-bg-picture-boolean="false" data-bg-color-data="{{ content_bg_1_color_data_str | escape }}"></button>
+                <button class="voog-bg-picker-btn js-background-settings" data-bg-key="content_bg_1" data-bg-default-image-color="rgb(255, 255, 255)" data-bg-picture-boolean="false" data-bg-color-data="{{ content_bg_1_color_data_str | escape }}"></button>
               {% endif %}
 
               <div class="js-background-type {{ content_bg_1_type }}">
@@ -64,7 +64,7 @@
                 <div class="background-image js-background-image"></div>
                 <div class="background-color js-background-color"></div>
 
-                {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-key="content_bg_2" data-bg-picture-boolean="true" data-target-width="600" data-bg-image="{{ content_bg_2_image }}" data-bg-image-sizes="{{ content_bg_2_image_sizes_str | escape }}" data-bg-color="{{ content_bg_2_color }}" data-bg-color-data="{{ content_bg_2_color_data_str | escape }}"></button>{% endif %}
+                {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-key="content_bg_2" data-bg-picture-boolean="true" data-bg-default-image-color="rgb(142, 156, 169)" data-target-width="600" data-bg-image="{{ content_bg_2_image }}" data-bg-image-sizes="{{ content_bg_2_image_sizes_str | escape }}" data-bg-color="{{ content_bg_2_color }}" data-bg-color-data="{{ content_bg_2_color_data_str | escape }}"></button>{% endif %}
                 <div class="wrap js-background-type {{ content_bg_2_type }}">
                   <div class="inner content-area" data-search-indexing-allowed="true">{% content name="bottom" %}</div>
                 </div>

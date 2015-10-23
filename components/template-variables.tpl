@@ -18,14 +18,14 @@
   {% comment %}Sets the background type to choose active CMS color scheme.{% endcomment %}
   {% if header_bg %}
     {% if header_bg_combined_lightness %}
-      {% if header_bg_combined_lightness > 0.5 %}
+      {% if header_bg_combined_lightness > 0.6 %}
         {% assign header_bg_type = "light-background" %}
       {% else %}
         {% assign header_bg_type = "dark-background" %}
       {% endif %}
     {% else %}
-      {% if header_bg_color_data.a >= 0.5 %}
-        {% if header_bg_color_data.lightness >= 0.5 %}
+      {% if header_bg_color_data.a >= 0.6 %}
+        {% if header_bg_color_data.lightness >= 0.6 %}
           {% assign header_bg_type = "light-background" %}
         {% else %}
           {% assign header_bg_type = "dark-background" %}
@@ -57,19 +57,11 @@
   {% endif %}
 
   {% if header_bg_color == nil %}
-    {% if front_page %}
-      {% assign header_bg_color = "rgba(0, 0, 0, 0.1)" %}
-    {% else %}
-      {% assign header_bg_color = "rgba(0, 0, 0, 0.1)" %}
-    {% endif %}
+    {% assign header_bg_color = "rgba(0, 0, 0, 0.1)" %}
   {% endif %}
 
   {% if header_bg_color_data == nil %}
-    {% if front_page %}
-      {% assign header_bg_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0.1, "lightness": 0}' %}
-    {% else %}
-      {% assign header_bg_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0.1, "lightness": 0}' %}
-    {% endif %}
+    {% assign header_bg_color_data_str = '{"r": 0, "g": 0, "b": 0, "a": 0.1, "lightness": 0}' %}
   {% else %}
     {% assign header_bg_color_data_str = header_bg_color_data | json %}
   {% endif %}
@@ -92,14 +84,14 @@
     {% comment %}Sets the background type to choose active CMS color scheme.{% endcomment %}
     {% if article_header_bg %}
       {% if article_header_bg_combined_lightness %}
-        {% if article_header_bg_combined_lightness > 0.5 %}
+        {% if article_header_bg_combined_lightness > 0.6 %}
           {% assign article_header_bg_type = "light-background" %}
         {% else %}
           {% assign article_header_bg_type = "dark-background" %}
         {% endif %}
       {% else %}
-        {% if article_header_bg_color_data.a >= 0.5 %}
-          {% if article_header_bg_color_data.lightness >= 0.5 %}
+        {% if article_header_bg_color_data.a >= 0.6 %}
+          {% if article_header_bg_color_data.lightness >= 0.6 %}
             {% assign article_header_bg_type = "light-background" %}
           {% else %}
             {% assign article_header_bg_type = "dark-background" %}
@@ -117,7 +109,7 @@
     {% endif %}
 
     {% if article_header_bg_image_sizes == nil %}
-      {% assign article_header_bg_image_sizes_str = '[{"url":"' | append: images_path | append: '/article-header-bg.jpg", "width":2560, "height":1709}, {"url":"' | append: images_path | append: '/article-header-bg_huge.jpg", "width":2048, "height":1367}, {"url":"' | append: images_path | append: '/article-header-bg_large.jpg", "width":1280, "height":854}]' %}
+      {% assign article_header_bg_image_sizes_str = "" %}
     {% else %}
       {% assign article_header_bg_image_sizes_str = article_header_bg_image_sizes | json %}
     {% endif %}
@@ -148,14 +140,14 @@
   {% comment %}Sets the background type to choose active CMS color scheme.{% endcomment %}
   {% if content_bg_1 %}
     {% if content_bg_1_combined_lightness %}
-      {% if content_bg_1_combined_lightness > 0.5 %}
+      {% if content_bg_1_combined_lightness > 0.6 %}
         {% assign content_bg_1_type = "light-background" %}
       {% else %}
         {% assign content_bg_1_type = "dark-background" %}
       {% endif %}
     {% else %}
-      {% if content_bg_1_color_data.a >= 0.5 %}
-        {% if content_bg_1_color_data.lightness >= 0.5 %}
+      {% if content_bg_1_color_data.a >= 0.6 %}
+        {% if content_bg_1_color_data.lightness >= 0.6 %}
           {% assign content_bg_1_type = "light-background" %}
         {% else %}
           {% assign content_bg_1_type = "dark-background" %}
@@ -192,14 +184,14 @@
   {% comment %}Sets the background type to choose active CMS color scheme.{% endcomment %}
   {% if content_bg_2 %}
     {% if content_bg_2_combined_lightness %}
-      {% if content_bg_2_combined_lightness > 0.5 %}
+      {% if content_bg_2_combined_lightness > 0.6 %}
         {% assign content_bg_2_type = "light-background" %}
       {% else %}
         {% assign content_bg_2_type = "dark-background" %}
       {% endif %}
     {% else %}
-      {% if content_bg_2_color_data.a >= 0.5 %}
-        {% if content_bg_2_color_data.lightness >= 0.5 %}
+      {% if content_bg_2_color_data.a >= 0.6 %}
+        {% if content_bg_2_color_data.lightness >= 0.6 %}
           {% assign content_bg_2_type = "light-background" %}
         {% else %}
           {% assign content_bg_2_type = "dark-background" %}
@@ -223,7 +215,7 @@
   {% endif %}
 
   {% if content_bg_2_color == nil %}
-    {% assign content_bg_2_color = "" %}
+    {% assign content_bg_2_color = "rgba(0, 0, 0, 0.1)" %}
   {% endif %}
 
   {% if content_bg_2_color_data == nil %}
@@ -244,14 +236,14 @@
   {% comment %}Sets the background type to choose active CMS color scheme.{% endcomment %}
   {% if body_bg %}
     {% if body_bg_combined_lightness %}
-      {% if body_bg_combined_lightness > 0.5 %}
+      {% if body_bg_combined_lightness > 0.6 %}
         {% assign body_bg_type = "light-background" %}
       {% else %}
         {% assign body_bg_type = "dark-background" %}
       {% endif %}
     {% else %}
-      {% if body_bg_color_data.a >= 0.5 %}
-        {% if body_bg_color_data.lightness >= 0.5 %}
+      {% if body_bg_color_data.a >= 0.6 %}
+        {% if body_bg_color_data.lightness >= 0.6 %}
           {% assign body_bg_type = "light-background" %}
         {% else %}
           {% assign body_bg_type = "dark-background" %}
@@ -286,14 +278,14 @@
   {% comment %}Sets the background type to choose active CMS color scheme.{% endcomment %}
   {% if blog_body_bg %}
     {% if blog_body_bg_combined_lightness %}
-      {% if blog_body_bg_combined_lightness > 0.5 %}
+      {% if blog_body_bg_combined_lightness > 0.6 %}
         {% assign blog_body_bg_type = "light-background" %}
       {% else %}
         {% assign blog_body_bg_type = "dark-background" %}
       {% endif %}
     {% else %}
-      {% if blog_body_bg_color_data.a >= 0.5 %}
-        {% if blog_body_bg_color_data.lightness >= 0.5 %}
+      {% if blog_body_bg_color_data.a >= 0.6 %}
+        {% if blog_body_bg_color_data.lightness >= 0.6 %}
           {% assign blog_body_bg_type = "light-background" %}
         {% else %}
           {% assign blog_body_bg_type = "dark-background" %}
@@ -332,14 +324,14 @@
   {% comment %}Sets the background type to choose active CMS color scheme.{% endcomment %}
   {% if footer_bg %}
     {% if footer_bg_combined_lightness %}
-      {% if footer_bg_combined_lightness > 0.5 %}
+      {% if footer_bg_combined_lightness > 0.6 %}
         {% assign footer_bg_type = "light-background" %}
       {% else %}
         {% assign footer_bg_type = "dark-background" %}
       {% endif %}
     {% else %}
-      {% if footer_bg_color_data.a >= 0.5 %}
-        {% if footer_bg_color_data.lightness >= 0.5 %}
+      {% if footer_bg_color_data.a >= 0.6 %}
+        {% if footer_bg_color_data.lightness >= 0.6 %}
           {% assign footer_bg_type = "light-background" %}
         {% else %}
           {% assign footer_bg_type = "dark-background" %}
