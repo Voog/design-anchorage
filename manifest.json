@@ -71,13 +71,6 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/front-page-styles.tpl",
-      "layout_name": "front-page-styles",
-      "title": "front-page-styles"
-    },
-    {
-      "content_type": "component",
-      "component": true,
       "file": "components/front-page-variables.tpl",
       "layout_name": "front-page-variables",
       "title": "front-page-variables"

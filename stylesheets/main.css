@@ -587,10 +587,11 @@ a img {
   bottom: 0;
   left: 0;
 }
-@media screen and (max-width: 640px) {
-  .front-page .main-feature .feature-image:empty {
-    display: none;
-  }
+.front-page .main-feature .feature-image.has-margin {
+  margin-bottom: 70px;
+}
+.front-page .main-feature .feature-image.empty-hidden {
+  display: none;
 }
 .front-page .main-feature .aspect-ratio-inner {
   border-width: 1px;

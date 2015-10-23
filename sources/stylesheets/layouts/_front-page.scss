@@ -83,10 +83,12 @@
       @include aspect-ratio(266, 177);
       margin-bottom: 25px;
 
-      @media screen and (max-width: $tablet-3) {
-        &:empty {
-          display: none;
-        }
+      &.has-margin {
+        margin-bottom: 70px;
+      }
+
+      &.empty-hidden {
+        display: none;
       }
     }
 
