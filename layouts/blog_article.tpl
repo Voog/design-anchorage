@@ -19,8 +19,6 @@
           <div class="background-image js-background-image"></div>
           <div class="background-color js-background-color"></div>
 
-          {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-key="blog_body_bg" data-bg-picture-boolean="false" data-bg-color="{{ blog_body_bg_color }}" data-bg-color-data="{{ blog_body_bg_color_data_str | escape }}"></button>{% endif %}
-
           <main class="page-content" role="main">
 
             <div class="main-inner-row content-full">
