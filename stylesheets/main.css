@@ -1213,7 +1213,7 @@ a img {
     -moz-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    margin-right: 20px;
+    max-width: 100%;
   }
 }
 @media screen and (max-width: 640px) {
@@ -1261,6 +1261,11 @@ a img {
 .site-header .header-top .site-options {
   display: inline-block;
   vertical-align: top;
+}
+@media screen and (max-width: 1024px) {
+  .site-header .header-top .site-options {
+    margin-left: 20px;
+  }
 }
 .site-header .header-title {
   -webkit-hyphens: auto;
@@ -2384,7 +2389,7 @@ a img {
   box-sizing: border-box;
   z-index: 999;
   width: 100%;
-  max-height: 100vh;
+  max-height: calc(100vh - 140px);
   margin: 0 auto;
   background-color: white;
   box-shadow: none;
@@ -2406,15 +2411,11 @@ a img {
 }
 @media screen and (max-width: 640px) {
   .voog-search-modal {
+    max-height: calc(100vh - 56px);
     height: calc(100vh - 56px);
   }
 }
 
-@media screen and (min-width: 850px) {
-  .voog-search-modal-results {
-    max-height: 70vh;
-  }
-}
 .voog-search-modal-results h3 {
   margin: 0;
   font-size: 16px;

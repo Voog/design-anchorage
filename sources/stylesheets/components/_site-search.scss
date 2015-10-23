@@ -269,7 +269,7 @@
   box-sizing: border-box;
   z-index: 999;
   width: 100%;
-  max-height: 100vh;
+  max-height: calc(100vh - 140px);
   margin: 0 auto;
   background-color: rgba($white, 1);
   box-shadow: none;
@@ -291,14 +291,15 @@
   }
 
   @media screen and (max-width: $tablet-3) {
+    max-height: calc(100vh - 56px);
     height: calc(100vh - 56px);
   }
 }
 
 .voog-search-modal-results {
-  @media screen and (min-width: $tablet-2) {
-    max-height: 70vh;
-  }
+  // @media screen and (min-width: $tablet-2) {
+  //   max-height: 70vh;
+  // }
 
   h3 {
     margin: 0;

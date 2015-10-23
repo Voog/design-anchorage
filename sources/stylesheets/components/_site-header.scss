@@ -13,7 +13,7 @@
 
     .header-left {
       @include flex(1);
-      margin-right: 20px;
+      max-width: 100%;
     }
   }
   position: relative;
@@ -45,6 +45,10 @@
     .site-options {
       display: inline-block;
       vertical-align: top;
+
+      @media screen and (max-width: $tablet-1) {
+        margin-left: 20px;
+      }
     }
   }
 
