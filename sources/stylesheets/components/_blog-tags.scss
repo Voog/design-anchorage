@@ -11,19 +11,41 @@
   }
 
   .tags-toggle {
-    @extend %button;
-    color: inherit;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
   }
 
   .tags-icon {
-    position: relative;
-    top: 1px;
-    display: inline-block;
+    position: absolute;
+    top: -3px;
+    left: 0;
     fill: rgba($black-base, .71);
-    vertical-align: middle;
 
     .dark-background & {
       fill: rgba($white, .71);
+    }
+  }
+
+  .tags-title {
+    padding: 0px 20px 0 25px;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  .ico-arrow {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 8px 5px;
+    border-color: transparent transparent #000000 transparent;
+
+    &.active {
+      border-width: 8px 5px 0 5px;
+      border-color: #000000 transparent transparent transparent;
     }
   }
 
@@ -33,26 +55,6 @@
 
     &.visible {
       display: block;
-    }
-  }
-
-  .tags-title {
-    display: inline-block;
-    margin-left: 10px;
-    font-size: 14px;
-    vertical-align: top;
-    text-transform: uppercase;
-  }
-
-  .ico-arrow {
-    @include transform(rotate(90deg));
-    display: inline-block;
-    margin-left: 10px;
-    fill: rgba($black-base, .71);
-    vertical-align: middle;
-
-    &.active {
-      @include transform(rotate(-90deg));
     }
   }
 

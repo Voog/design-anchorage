@@ -440,7 +440,7 @@ a img {
   bottom: 0;
 }
 
-.blog-tags .tags-toggle, .toggle-sub-menu, .mobile-menu-toggler, .lang-menu-btn, .search-btn,
+.toggle-sub-menu, .mobile-menu-toggler, .lang-menu-btn, .search-btn,
 .search-submit {
   margin: 0;
   padding: 0;
@@ -448,11 +448,11 @@ a img {
   border-style: none;
   cursor: pointer;
 }
-.blog-tags .tags-toggle:focus, .toggle-sub-menu:focus, .mobile-menu-toggler:focus, .lang-menu-btn:focus, .search-btn:focus,
+.toggle-sub-menu:focus, .mobile-menu-toggler:focus, .lang-menu-btn:focus, .search-btn:focus,
 .search-submit:focus {
   outline: none;
 }
-.blog-tags .tags-toggle::-moz-focus-inner, .toggle-sub-menu::-moz-focus-inner, .mobile-menu-toggler::-moz-focus-inner, .lang-menu-btn::-moz-focus-inner, .search-btn::-moz-focus-inner,
+.toggle-sub-menu::-moz-focus-inner, .mobile-menu-toggler::-moz-focus-inner, .lang-menu-btn::-moz-focus-inner, .search-btn::-moz-focus-inner,
 .search-submit::-moz-focus-inner {
   padding: 0;
   border-style: none;
@@ -1117,17 +1117,37 @@ a img {
   margin-bottom: 15px;
 }
 .blog-tags .tags-toggle {
-  color: inherit;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 }
 .blog-tags .tags-icon {
-  position: relative;
-  top: 1px;
-  display: inline-block;
+  position: absolute;
+  top: -3px;
+  left: 0;
   fill: rgba(0, 0, 0, 0.71);
-  vertical-align: middle;
 }
 .dark-background .blog-tags .tags-icon {
   fill: rgba(255, 255, 255, 0.71);
+}
+.blog-tags .tags-title {
+  padding: 0px 20px 0 25px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.blog-tags .ico-arrow {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5px 8px 5px;
+  border-color: transparent transparent #000000 transparent;
+}
+.blog-tags .ico-arrow.active {
+  border-width: 8px 5px 0 5px;
+  border-color: #000000 transparent transparent transparent;
 }
 .blog-tags .tags-bottom {
   display: none;
@@ -1135,31 +1155,6 @@ a img {
 }
 .blog-tags .tags-bottom.visible {
   display: block;
-}
-.blog-tags .tags-title {
-  display: inline-block;
-  margin-left: 10px;
-  font-size: 14px;
-  vertical-align: top;
-  text-transform: uppercase;
-}
-.blog-tags .ico-arrow {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
-  display: inline-block;
-  margin-left: 10px;
-  fill: rgba(0, 0, 0, 0.71);
-  vertical-align: middle;
-}
-.blog-tags .ico-arrow.active {
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  transform: rotate(-90deg);
 }
 .blog-tags .menu {
   display: inline-block;
