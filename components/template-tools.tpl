@@ -66,7 +66,7 @@
         },
 
         commit: function(data) {
-          site.bgPickerCommit(dataBgKey, data, pageType);
+          site.bgPickerCommit(dataBgKey, data, bgPicker, pageType);
         }
       });
     });

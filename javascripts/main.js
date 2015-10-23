@@ -9386,8 +9386,8 @@ return jQuery;
   };
 
   // Checks the lightness sum of header background image and color and sets the lightness class depending on it's value.
-  var bgPickerContentLightnessClass = function(bgPickerArea) {
-    if (bgPickerCombinedLightness >= 0.5) {
+  var bgPickerContentLightnessClass = function(bgPickerArea, lightness) {
+    if (lightness >= 0.5) {
       $(bgPickerArea).find('.js-background-type').addClass('light-background').removeClass('dark-background');
     } else {
       $(bgPickerArea).find('.js-background-type').addClass('dark-background').removeClass('light-background');
@@ -9411,22 +9411,22 @@ return jQuery;
     if (colorExtractImageUrl) {
       if (bgPickerImageSizesContains(bgPickerImageSizes, bgPickerImagePrevious)) {
         bgPicker.bgPickerImageColor = bgPicker.bgPickerImageColor ? bgPicker.bgPickerImageColor : 'rgba(41,42,39,1)';
-        bgPickerCombinedLightness = getCombinedLightness(bgPicker.bgPickerImageColor, bgPickerColor);
-        bgPickerContentLightnessClass(bgPickerArea);
+        bgPicker.bgPickerCombinedLightness = getCombinedLightness(bgPicker.bgPickerImageColor, bgPickerColor);
+        bgPickerContentLightnessClass(bgPickerArea, bgPicker.combinedLightness);
       } else {
         colorExtractImage.attr('src', colorExtractImageUrl.replace(/.*\/photos/g,'/photos'));
         colorExtractImage.load(function() {
           ColorExtract.extract(colorExtractImage[0], colorExtractCanvas[0], function(data) {
             bgPicker.bgPickerImageColor = data.bgColor ? data.bgColor : 'rgba(255,255,255,1)';
-            bgPickerCombinedLightness = getCombinedLightness(bgPicker.bgPickerImageColor, bgPickerColor);
-            bgPickerContentLightnessClass(bgPickerArea);
+            bgPicker.bgPickerCombinedLightness = getCombinedLightness(bgPicker.bgPickerImageColor, bgPickerColor);
+            bgPickerContentLightnessClass(bgPickerArea, bgPicker.combinedLightness);
           });
         });
       };
     } else {
       bgPicker.bgPickerImageColor = 'rgba(255,255,255,1)';
-      bgPickerCombinedLightness = getCombinedLightness('rgba(255,255,255,1)', bgPickerColor);
-      bgPickerContentLightnessClass(bgPickerArea);
+      bgPicker.bgPickerCombinedLightness = getCombinedLightness('rgba(255,255,255,1)', bgPickerColor);
+      bgPickerContentLightnessClass(bgPickerArea, bgPicker.combinedLightness);
     };
 
     // Updates the bgPickerContent background image and background color.
@@ -9439,12 +9439,12 @@ return jQuery;
   };
 
   // Header background image and color save logic function.
-  var bgPickerCommit = function(dataBgKey, data) {
+  var bgPickerCommit = function(dataBgKey, data, bgPicker, pageType) {
     var commitData = $.extend(true, {}, data);
     commitData.image = data.image || '';
     commitData.imageSizes = data.imageSizes || '';
     commitData.color = data.color || '';
-    commitData.combinedLightness = bgPickerCombinedLightness;
+    commitData.combinedLightness = bgPicker.bgPickerCombinedLightness;
 
     if (pageType === 'articlePage') {
       if (dataBgKey == 'footer_bg') {
