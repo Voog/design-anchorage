@@ -41,11 +41,19 @@
     height: 0;
     border-style: solid;
     border-width: 0 5px 8px 5px;
-    border-color: transparent transparent #000000 transparent;
+    border-color: transparent transparent rgba($black-base, 1) transparent;
 
     &.active {
       border-width: 8px 5px 0 5px;
-      border-color: #000000 transparent transparent transparent;
+      border-color: rgba($black-base, 1) transparent transparent transparent;
+
+      .dark-background & {
+        border-color: rgba($white, 1) transparent transparent transparent;
+      }
+    }
+
+    .dark-background & {
+      border-color: transparent transparent rgba($white, 1) transparent;
     }
   }
 
