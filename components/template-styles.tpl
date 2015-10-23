@@ -93,7 +93,7 @@
 
   {% comment %}/* FRONT PAGE CONTENT AREA 1 BACKGROUND */{% endcomment %}
   {% comment %}/* Front page content area 1 background color style. */{% endcomment %}
-  .main-inner-row .background-color {
+  .content-full-inner .background-color {
     background-color: {{ content_bg_1_color }};
   }
 
