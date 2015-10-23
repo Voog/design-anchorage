@@ -48,22 +48,6 @@
     }
   }
 
-  #mobile-search & {
-    width: 100%;
-    max-width: 100%;
-    right: 0;
-    top: 0;
-    padding-top: 20px;
-
-    .search-form {
-      max-width: 100%;
-    }
-    .search-inner {
-      max-width: 100%;
-      margin: 0 $margin-low - 10px;
-    }
-  }
-
   &.active {
     position: absolute;
     right: 0;
@@ -85,10 +69,6 @@
 .search-inner {
   position: relative;
   box-shadow: 0 2px 4px 0 rgba($black-base, .1);
-
-  #mobile-search & {
-    box-shadow: none;
-  }
 }
 
 .search-form {
@@ -101,11 +81,6 @@
     padding-top: 10px;
     padding-bottom: 6px;
     box-shadow: 0 1px 1px 0 rgba($black-base, .1);
-  }
-
-  #mobile-search & {
-    box-shadow: none;
-    background-color: transparent;
   }
 
   &,
@@ -137,14 +112,6 @@
     .search-open & {
       padding: 0px 61px 0 42px;
     }
-  }
-
-  #mobile-search & {
-    border-bottom: 1px solid $black-base;
-  }
-
-  .mobile-search-open & {
-    padding: 0 30px;
   }
 
   // Removes the clear input button in IE11
@@ -310,10 +277,6 @@
   -webkit-overflow-scrolling: touch;
   text-align: left;
 
-  #mobile-search & {
-    max-width: 100%;
-  }
-
   &.no-content {
     padding: 20px;
     color: rgba($grey, 1);
@@ -335,14 +298,6 @@
 .voog-search-modal-results {
   @media screen and (min-width: $tablet-2) {
     max-height: 70vh;
-  }
-
-  .mobile-search-open & {
-
-    @media screen and (min-width: $tablet-2) {
-      max-height: calc(100vh - 120px);
-    }
-
   }
 
   h3 {
@@ -383,28 +338,5 @@
 
   &:first-of-type {
     border-top: 1px solid transparent;
-  }
-}
-
-#mobile-search {
-  display: none;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-
-  .mobilesearch-open & {
-    display: block;
-  }
-  .search {
-    padding: 0;
-    top: 20px;
-  }
-
-  .voog-search-modal {
-    position: fixed;
-    top: 70px;
-    bottom: 0;
-    max-height: initial;
-    left: 0;
-    right: 0;
   }
 }

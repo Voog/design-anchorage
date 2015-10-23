@@ -139,13 +139,8 @@
 }
 
 .mobile-menu-toggler,
-.mobile-menu-toggler,
-#mobile-search {
+.mobile-menu-toggler {
   display: none;
-
-  .mobile-search-open & {
-    display: block;
-  }
 }
 
 @media screen and (max-width: $tablet-1) {
@@ -259,10 +254,6 @@
       @include transform(translate3d(0, 0, 0));
     }
 
-    .mobile-search-open & {
-      width: 100%;
-    }
-
     .search-open-btn {
       @include transition(right .3s);
       position: absolute;
@@ -280,15 +271,8 @@
         display: none;
       }
 
-      .mobile-search-open & {
-        right: 0;
-      }
-
       svg {
         fill: rgba($black-base, 1);
-        .mobile-search-open & {
-          fill: rgba($grey, 1);
-        }
       }
     }
 
@@ -326,8 +310,7 @@
     .navigation-menu {
       word-break: break-all;
 
-      .lang-menu-open &,
-      .mobile-search-open & {
+      .lang-menu-open & {
         display: none;
       }
 
@@ -403,10 +386,6 @@
       display: block;
       margin-top: 20px;
       margin-left: 0;
-
-      .mobile-search-open & {
-        display: none;
-      }
 
       ul {
         margin: 0;

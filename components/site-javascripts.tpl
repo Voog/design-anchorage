@@ -13,15 +13,6 @@
       mobileModeWidth: 480,
       updateOnKeypress: true
     });
-
-    var mobileSearch = new VoogSearch($('#mobile-search .js-search-form').get(0), {
-      per_page: 6,
-      lang: '{{ page.language_code }}',
-      resultsContainer: $('#mobile-search .js-voog-search-modal').get(0),
-      sideclick: true,
-      mobileModeWidth: 480,
-      updateOnKeypress: true
-    });
   </script>
 {% endif %}
 

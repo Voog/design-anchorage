@@ -9307,12 +9307,7 @@ return jQuery;
 
     if ($('body').hasClass('lang-menu-open')) {
       $('body').removeClass('lang-menu-open');
-    }
-    else if ($('body').hasClass('mobile-search-open')) {
-      $('body').removeClass('mobile-search-open');
-      $('.search-btn').removeClass('open');
-    }
-    else {
+    } else {
       $('body').removeClass('mobilemenu-open');
     }
   });
@@ -9529,7 +9524,6 @@ return jQuery;
         if ($('.js-search').hasClass('active')) {
           $('.js-search').removeClass('active');
           $('.search-btn').removeClass('open');
-          $('body').removeClass('mobile-search-open');
         }
 
         if ($('body').hasClass('mobilemenu-open')) {
@@ -9579,28 +9573,18 @@ return jQuery;
     });
 
     $('.js-search-input').on('input', function() {
-      var searchCleanBtn = $(this).parent().next()
-          mobileSearchToggleBtn = $('.js-mobile-search-toggle-btn');
+      var searchCleanBtn = $(this).parent().next();
 
-      if ($(this).val().length > 0) {
+      if ($(this).val().length > 1) {
         searchCleanBtn.addClass('active');
-        mobileSearchToggleBtn.addClass('search-active');
       } else {
         searchCleanBtn.removeClass('active');
-        mobileSearchToggleBtn.removeClass('search-active');
       }
     });
 
     $('.js-search-reset-btn').click(function() {
       $('html').removeClass('search-open');
       $('.js-search').removeClass('active');
-    });
-
-    $('.js-mobile-search-toggle-btn').click(function() {
-      $('body').toggleClass('mobile-search-open');
-      $('#mobile-search .js-search').addClass('active');
-      $('#mobile-search .js-search-input').val('').focus();
-      $('.js-search-reset-btn').removeClass('active');
     });
 
     // Opens the comments modal.

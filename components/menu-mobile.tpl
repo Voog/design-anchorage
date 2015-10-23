@@ -93,10 +93,4 @@
       </ul>
     </div>
   {% endif %}
-
-  {% if site.search.enabled %}
-    <div id="mobile-search">
-      {% include "site-search" %}
-    </div>
-  {% endif %}
 </div>
