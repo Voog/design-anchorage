@@ -359,14 +359,12 @@
 
       .option-btn {
         padding: 15px 0;
-        color: rgba($white, 1);
       }
     }
 
     .sub-menu {
       a  {
         text-transform: initial;
-        // color: rgba($black-base, 1);
       }
     }
 
@@ -599,13 +597,6 @@ $flags:
   .enable-text {
     &:first-letter {
       text-transform: capitalize;
-    }
-  }
-
-  @media screen and (max-width: $tablet-3) {
-    color: rgba($white, 1);
-    &:hover {
-      color: rgba($white, .8);
     }
   }
 

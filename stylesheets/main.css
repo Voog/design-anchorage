@@ -1699,7 +1699,6 @@ a img {
   }
   #mobile-menu .navigation-menu .option-btn {
     padding: 15px 0;
-    color: white;
   }
   #mobile-menu .sub-menu a  {
     text-transform: initial;
@@ -2007,14 +2006,6 @@ a img {
 .option-btn .disable-text:first-letter,
 .option-btn .enable-text:first-letter {
   text-transform: capitalize;
-}
-@media screen and (max-width: 640px) {
-  .option-btn {
-    color: white;
-  }
-  .option-btn:hover {
-    color: rgba(255, 255, 255, 0.8);
-  }
 }
 #mobile-menu .option-btn {
   font-size: 12px;
