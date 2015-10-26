@@ -9324,15 +9324,12 @@ return jQuery;
   });
 
   var bindLanguageMenuPositioning = function(currentButton) {
-    if (currentButton.parent().hasClass('flags-disabled')) {
-      var offsetItem = currentButton.find('.js-lang-title-inner');
-    } else {
-      var offsetItem = currentButton;
-    }
+    var offsetItem = currentButton.parent().hasClass('flags-disabled') ? currentButton.find('.js-lang-title-inner') : currentButton,
+        rightOffsetHelper = currentButton.parent().hasClass('flags-disabled') ? 5 : 9;
 
     $('.js-popup-menu-popover').css({
-      top: offsetItem.offset().top + offsetItem.outerHeight() + 10,
-      right: $(window).width() - offsetItem.offset().left - offsetItem.outerWidth() - 12
+      top: offsetItem.offset().top + offsetItem.outerHeight() + 4,
+      right: $(window).width() - offsetItem.offset().left - offsetItem.outerWidth() - rightOffsetHelper
     });
   };
 
@@ -9347,7 +9344,7 @@ return jQuery;
       $(this).toggleClass('js-flag-disable-btn');
       $('.js-menu-lang-wrap, .js-menu-btn-wrap').toggleClass('flags-enabled flags-disabled');
 
-      bindLanguageMenuPositioning($('.js-lang-menu-btn'), 10)
+      bindLanguageMenuPositioning($('.js-lang-menu-btn'))
 
       siteData.set("flags_state", flagsState);
     });

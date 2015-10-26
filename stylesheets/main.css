@@ -1423,14 +1423,9 @@ a img {
 
 /* NAVIGATION MENUS*/
 .menu-btn-wrap {
-  position: relative;
-  top: 1px;
   display: inline-block;
-  margin-left: 40px;
   vertical-align: top;
-}
-.menu-btn-wrap.flags-enabled {
-  top: 5px;
+  margin-left: 40px;
 }
 @media screen and (max-width: 1024px) {
   .menu-btn-wrap {
@@ -2111,31 +2106,41 @@ a img {
   font-size: 12px;
   position: relative;
   display: block;
-  height: 15px;
   margin: 0;
-  padding: 0;
+  padding: 3px;
   cursor: pointer;
   border: none;
   background: none;
 }
 .flags-enabled .lang-menu-btn {
   width: 21px;
+  padding: 13px 14px 13px 13px;
 }
 .flags-enabled .lang-menu-btn .lang-title {
   display: none;
 }
-.lang-menu-btn .lang-flag:before, .lang-menu-btn .lang-flag:after {
-  top: 0;
-  left: 0;
+.lang-menu-btn.lang-flag:before, .lang-menu-btn.lang-flag:after {
+  top: 6px;
+  left: 3px;
 }
 .lang-menu-btn .lang-title-inner {
-  vertical-align: middle;
+  position: relative;
+  padding-right: 12px;
 }
-.lang-menu-btn .ico-popover-toggle {
-  font-size: 7.2px;
+.lang-menu-btn .lang-title-inner:after {
+  position: absolute;
+  top: 7px;
+  right: 0;
+  display: block;
+  width: 0;
+  height: 0;
+  content: "";
+  border-style: solid;
+  border-width: 6px 3px 0 3px;
+  border-color: black transparent transparent transparent;
 }
-.flags-enabled .lang-menu-btn .ico-popover-toggle {
-  display: none;
+.dark-background .lang-menu-btn .lang-title-inner:after {
+  border-color: white transparent transparent transparent;
 }
 
 .lang-menu-popover {
@@ -2207,6 +2212,7 @@ a img {
 }
 .search.active {
   position: absolute;
+  top: 30px;
   right: 0;
   z-index: 20;
   display: block;
