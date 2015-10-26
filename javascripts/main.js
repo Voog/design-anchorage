@@ -9545,7 +9545,7 @@ return jQuery;
 
         if ($('html').hasClass('comments-open')) {
           $('html').removeClass('comments-open');
-          $('.js-comments-toggle-btn, .js-voog-comments-modal').removeClass('open');
+          $('.js-comments-toggle-btn, .js-comments').removeClass('open');
         }
 
         if ($('html').hasClass('search-open')) {
@@ -9607,7 +9607,7 @@ return jQuery;
       if ($(window).width() > 640) {
         if ($('html').hasClass('comments-open')) {
           $('html, body').animate({
-              scrollTop: $('.js-voog-comments-modal').offset().top
+              scrollTop: $('.js-comments').offset().top
           }, 300);
         }
 
@@ -9621,6 +9621,10 @@ return jQuery;
       if ($('html').hasClass('comments-open')) {
         var articleCommentsHeight = $('.article-comments').outerHeight(),
             siteFooterHeight = $('.site-footer').outerHeight();
+
+            console.log(articleCommentsHeight);
+
+            console.log(siteFooterHeight);
 
         mainContent.css('min-height', articleCommentsHeight - siteFooterHeight);
       } else {

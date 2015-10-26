@@ -1,4 +1,4 @@
-<section class="article-comments js-comments js-voog-comments-modal js-prevent-sideclick{% unless comment.valid? %} open{% endunless %}">
+<section class="article-comments js-comments js-prevent-sideclick{% unless comment.valid? %} open{% endunless %}">
   <div class="comments-body light-background">
     <header class="comments-header">
       <h1 class="comments-title">{{ "add_a_comment" | lc }}</h1>
