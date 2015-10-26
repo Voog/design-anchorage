@@ -141,14 +141,11 @@
 
     if (colorExtractImageUrl) {
       if (bgPickerImageSizesContains(bgPickerImageSizes, bgPickerImagePrevious)) {
-        console.log(1);
         bgPicker.imageColor = bgPicker.imageColor ? bgPicker.imageColor : defaultImageColor;
         bgPicker.combinedLightness = getCombinedLightness(bgPicker.imageColor, bgPickerColor);
         bgPickerContentLightnessClass(bgPickerArea, bgPicker.combinedLightness);
 
-        console.log(bgPicker.combinedLightness);
       } else {
-        console.log(2);
         colorExtractImage.attr('src', colorExtractImageUrl.replace(/.*\/photos/g,'/photos'));
         colorExtractImage.load(function() {
           ColorExtract.extract(colorExtractImage[0], colorExtractCanvas[0], function(data) {
@@ -156,17 +153,14 @@
             bgPicker.combinedLightness = getCombinedLightness(bgPicker.imageColor, bgPickerColor);
             bgPickerContentLightnessClass(bgPickerArea, bgPicker.combinedLightness);
 
-            console.log(bgPicker.combinedLightness);
           });
         });
       };
     } else {
-      console.log(3);
       bgPicker.imageColor = 'rgba(255,255,255,1)';
       bgPicker.combinedLightness = getCombinedLightness(bgPicker.imageColor, bgPickerColor);
       bgPickerContentLightnessClass(bgPickerArea, bgPicker.combinedLightness);
 
-      console.log(bgPicker.combinedLightness);
     };
 
     // Updates the bgPickerContent background image and background color.
@@ -349,11 +343,6 @@
             articleComments = $('.article-comments'),
             articleCommentsHeight = articleComments.outerHeight(),
             siteFooterHeight = $('.site-footer').outerHeight();
-
-        console.log(documentHeight);
-        console.log(headerHeight);
-        console.log(articleCommentsHeight);
-        console.log(siteFooterHeight);
 
         articleComments.css('min-height', documentHeight - headerHeight);
         mainContent.css('min-height', articleCommentsHeight - siteFooterHeight);
