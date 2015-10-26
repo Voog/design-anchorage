@@ -974,10 +974,11 @@ a img {
   top: 0;
   right: -486px;
   z-index: 1;
-  width: 360px;
+  width: 440px;
   padding: 45px 40px;
   background-color: white;
   box-shadow: -10px 19px 30px rgba(68, 68, 68, 0.31);
+  box-sizing: border-box;
 }
 @media screen and (max-width: 640px) {
   .article-comments {

@@ -339,12 +339,6 @@
 
 
       if ($(window).width() > 640) {
-        if ($('html').hasClass('comments-open')) {
-          $('html, body').animate({
-              scrollTop: $('.js-comments').offset().top
-          }, 300);
-        }
-
         handleCommentsToggleing();
       };
     });
@@ -353,14 +347,23 @@
       var mainContent = $('.main-content');
 
       if ($('html').hasClass('comments-open')) {
-        var articleCommentsHeight = $('.article-comments').outerHeight(),
+        var documentHeight = $(document).outerHeight(),
+            headerHeight = $('.js-site-header').outerHeight(),
+            articleComments = $('.article-comments'),
+            articleCommentsHeight = articleComments.outerHeight(),
             siteFooterHeight = $('.site-footer').outerHeight();
 
-            console.log(articleCommentsHeight);
+        console.log(documentHeight);
+        console.log(headerHeight);
+        console.log(articleCommentsHeight);
+        console.log(siteFooterHeight);
 
-            console.log(siteFooterHeight);
-
+        articleComments.css('min-height', documentHeight - headerHeight);
         mainContent.css('min-height', articleCommentsHeight - siteFooterHeight);
+
+        $('html, body').animate({
+            scrollTop: $('.js-comments').offset().top
+        }, 300);
       } else {
         mainContent.removeAttr('style');
       }

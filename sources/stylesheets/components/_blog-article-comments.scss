@@ -4,10 +4,11 @@
   top: 0;
   right: -486px;
   z-index: 1;
-  width: 360px;
+  width: 440px;
   padding: 45px 40px;
   background-color: rgba($white, 1);
   box-shadow: -10px 19px 30px rgba(68, 68, 68, .31);
+  box-sizing: border-box;
 
   @media screen and (max-width: $tablet-3) {
     display: none;
