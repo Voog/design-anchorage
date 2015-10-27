@@ -221,7 +221,7 @@
   #mobile-menu {
     @include transition(right .5s, width .3s);
     // @include transform(translate3d(100%, 0, 0));
-    @include transform(translate3d(0, 0, 0));
+    // @include transform(translate3d(0, 0, 0));
     font-family: $font-main;
     position: fixed;
     z-index: 1000;
