@@ -433,8 +433,8 @@
     }
   };
 
-  var autoSizeCommentAreas = function() {
-    $('.form_field_textarea').textareaAutoSize();
+  var autoSizeFormCommentArea = function() {
+    $('.comment-form .form_field_textarea').textareaAutoSize();
   };
 
   // Initiations
@@ -515,7 +515,7 @@
     handleElementsClick();
     tableWrapper();
     focusFormWithErrors();
-    autoSizeCommentAreas();
+    autoSizeFormCommentArea();
 
     if (!Modernizr.flexbox && editmode) {
       bindFallbackHeaderLeftWidthCalculation();
