@@ -786,7 +786,7 @@ a img {
 .blog-news-page .article-date {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.36);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1;
   display: inline;
   letter-spacing: 1px;
@@ -954,7 +954,7 @@ a img {
 .blog-article-page .main-content .article-author,
 .blog-article-page .main-content .article-date {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1;
   display: inline;
   letter-spacing: 1px;
@@ -1032,9 +1032,9 @@ a img {
 .article-comments .comments-body .comments-title {
   margin: 20px 0 20px 0;
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.7;
-  color: black;
+  color: rgba(0, 0, 0, 0.36);
   cursor: text;
   text-transform: none;
 }
@@ -1382,7 +1382,7 @@ a img {
 .site-header .header-body .article-author,
 .site-header .header-body .article-date {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 2;
   display: inline;
   letter-spacing: 1px;
