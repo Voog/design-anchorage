@@ -1605,11 +1605,6 @@ a img {
     -webkit-transition: right 0.5s, width 0.3s;
     -moz-transition: right 0.5s, width 0.3s;
     transition: right 0.5s, width 0.3s;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     position: fixed;
     z-index: 1000;
