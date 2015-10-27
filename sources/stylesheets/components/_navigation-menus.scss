@@ -219,18 +219,18 @@
   }
 
   #mobile-menu {
-    @include transition(transform .5s, width .3s);
-    @include transform(translate3d(100%, 0, 0));
+    @include transition(right .5s, width .3s);
+    // @include transform(translate3d(100%, 0, 0));
+    @include transform(translate3d(0, 0, 0));
     font-family: $font-main;
     position: fixed;
     z-index: 1000;
     top: 0;
-    right: 0;
+    right: -250px;
     bottom: 0;
     display: block;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    -webkit-transform: translate3d(0,0,0);
     box-sizing: border-box;
     width: 250px;
     padding: 30px 20px 50px;
@@ -245,7 +245,8 @@
     }
 
     .mobilemenu-open & {
-      @include transform(translate3d(0, 0, 0));
+      // @include transform(translate3d(0, 0, 0));
+      right: 0;
     }
 
     .search-open-btn {
