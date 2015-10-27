@@ -129,4 +129,11 @@
       }
     }
   }
+
+  .dark-background {
+    .article-author,
+    .article-date {
+      color: rgba($white, .36);
+    }
+  }
 }

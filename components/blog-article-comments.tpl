@@ -40,7 +40,7 @@
     </div>
 
     {% if article.comments_count > 0 %}
-      <div class="comments-title">{{ "comments_for_count" | lc }} <span class="voog-site-blog-comments-count">({{ article.comments_count }})</span></div>
+      <div class="comments-title">{{ "comments_for_count" | lc }} <span class="comments-count">({{ article.comments_count }})</span></div>
       <div>
         {% for comment in article.comments %}
           <div class="comment edy-site-blog-comment">

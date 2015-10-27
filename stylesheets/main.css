@@ -965,6 +965,10 @@ a img {
 .blog-article-page .main-content .article-date.is-hidden {
   display: none;
 }
+.blog-article-page .dark-background .article-author,
+.blog-article-page .dark-background .article-date {
+  color: rgba(255, 255, 255, 0.36);
+}
 
 .article-comments {
   -webkit-transition: 250ms;
