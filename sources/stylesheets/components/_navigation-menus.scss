@@ -229,12 +229,12 @@
     bottom: 0;
     display: block;
     overflow: auto;
-    -webkit-overflow-scrolling: touch;
+    // -webkit-overflow-scrolling: touch;
     box-sizing: border-box;
     width: 250px;
     padding: 30px 20px 50px;
     background-color: rgba($white, 1);
-    -webkit-overflow-scrolling: touch;
+    // -webkit-overflow-scrolling: touch;
 
     @media screen and (max-width: $tablet-3) {
       padding-top: 10px;

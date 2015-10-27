@@ -420,7 +420,6 @@ a img {
 
 .table-holder {
   overflow: auto;
-  -webkit-overflow-scrolling: touch;
   max-width: 100%;
 }
 
@@ -1023,7 +1022,6 @@ a img {
     bottom: 0;
     left: 0;
     overflow: auto;
-    -webkit-overflow-scrolling: touch;
     box-sizing: border-box;
     height: 100vh;
     padding: 20px;
@@ -1618,12 +1616,10 @@ a img {
     bottom: 0;
     display: block;
     overflow: auto;
-    -webkit-overflow-scrolling: touch;
     box-sizing: border-box;
     width: 250px;
     padding: 30px 20px 50px;
     background-color: white;
-    -webkit-overflow-scrolling: touch;
   }
 }
 @media screen and (max-width: 1024px) and (max-width: 640px) {
@@ -2420,7 +2416,6 @@ a img {
   background-color: white;
   box-shadow: none;
   overflow: auto;
-  -webkit-overflow-scrolling: touch;
   text-align: left;
 }
 .voog-search-modal.no-content {
@@ -2662,7 +2657,6 @@ a img {
 .site-footer .blog-article-nav .article-nav-half a {
   display: block;
   overflow: auto;
-  -webkit-overflow-scrolling: touch;
   height: 100%;
   padding: 55px 50px;
 }
@@ -3006,7 +3000,6 @@ a img {
 }
 .content-area pre {
   overflow: auto;
-  -webkit-overflow-scrolling: touch;
   padding: 10px;
 }
 .content-area pre code {
@@ -3112,7 +3105,6 @@ a img {
 }
 .content-area .overthrow {
   overflow: auto;
-  -webkit-overflow-scrolling: touch;
 }
 .contacts .content-area .overthrow {
   -webkit-overflow-scrolling: none;

@@ -59,7 +59,7 @@
       a {
         display: block;
         overflow: auto;
-        -webkit-overflow-scrolling: touch;
+        // -webkit-overflow-scrolling: touch;
         height: 100%;
         padding: 55px 50px;
         @media screen and (max-width: $tablet-3) {

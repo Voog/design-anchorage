@@ -278,7 +278,7 @@
   background-color: rgba($white, 1);
   box-shadow: none;
   overflow: auto;
-  -webkit-overflow-scrolling: touch;
+  // -webkit-overflow-scrolling: touch;
   text-align: left;
 
   &.no-content {
