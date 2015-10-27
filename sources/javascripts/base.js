@@ -22,8 +22,9 @@
 
   $('.mobile-menu-toggler').click(function(event) {
       event.preventDefault();
-      $('body').toggleClass('mobilemenu-open');
+      $('html').toggleClass('mobilemenu-open');
       $('body').removeClass('mobilesearch-open');
+      $('#mobile-menu').removeClass('reset-touch').addClass('reset-touch');
   });
 
   $('.tags-toggle').click(function() {
@@ -32,6 +33,8 @@
   });
 
   $('.js-toggle-sub-menu').click(function() {
+    // TODO: Remove this hack if iOS Safari rendering issue is fixed.
+    $('#mobile-menu').removeClass('reset-touch').addClass('reset-touch');
     $(this).toggleClass('active');
     $(this).parent('li').toggleClass('current-parent');
   });
@@ -42,7 +45,7 @@
     if ($('body').hasClass('lang-menu-open')) {
       $('body').removeClass('lang-menu-open');
     } else {
-      $('body').removeClass('mobilemenu-open');
+      $('html').removeClass('mobilemenu-open');
     }
   });
 
@@ -260,7 +263,7 @@
           $('.search-btn').removeClass('open');
         }
 
-        if ($('body').hasClass('mobilemenu-open')) {
+        if ($('html').hasClass('mobilemenu-open')) {
           $('.mobile-menu-toggler').trigger('click');
         }
 
@@ -300,7 +303,7 @@
 
     // Toggles the search modal.
     $('.js-search-toggle-btn').click(function() {
-      $('body').removeClass('mobilemenu-open');
+      $('html').removeClass('mobilemenu-open');
       $('.js-search').toggleClass('active');
       $('.js-search').hasClass('active') ? $('.js-search-input').focus() : '';
       $('html').toggleClass('search-open');
