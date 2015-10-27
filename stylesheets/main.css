@@ -2216,10 +2216,14 @@ a img {
 }
 .search.active {
   position: absolute;
-  top: 30px;
   right: 0;
   z-index: 20;
   display: block;
+}
+@media screen and (min-width: 641px) {
+  .search.active {
+    top: 30px;
+  }
 }
 
 .search-middle {

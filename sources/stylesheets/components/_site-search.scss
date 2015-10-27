@@ -50,10 +50,13 @@
 
   &.active {
     position: absolute;
-    top: 30px;
     right: 0;
     z-index: 20;
     display: block;
+
+    @media screen and (min-width: $tablet-3 + 1) {
+      top: 30px;
+    }
   }
 }
 
