@@ -3422,7 +3422,7 @@ a img {
   transition: transform 0.15s ease;
 }
 .svg .dark-background .content-area .form_field_checkbox + .form_control_indicator:before {
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: white;
 }
 .content-area .form_submit {
   margin-top: 15px;

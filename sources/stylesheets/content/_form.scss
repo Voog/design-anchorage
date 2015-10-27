@@ -245,7 +245,7 @@
       .svg & {
         + .form_control_indicator {
           &:before {
-            border-color: rgba($white, .2);
+            border-color: rgba($white, 1);
           }
         }
       }
