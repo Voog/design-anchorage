@@ -255,7 +255,7 @@
 
   pre {
     overflow: auto;
-    // -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
     padding: 10px;
 
     code {
@@ -382,7 +382,7 @@
   // Overthrow plugin to support horizontal scrolling on older devices that have touch-screens. For example Android 2.3 devices.
   .overthrow {
     overflow: auto;
-    // -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
 
     .contacts & {
       -webkit-overflow-scrolling: none;
