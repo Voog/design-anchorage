@@ -2,8 +2,13 @@
 // Base
 .menu-btn-wrap {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   margin-left: 40px;
+
+  &.flags-enabled {
+    position: relative;
+    top: -1px;
+  }
 
   @media screen and (max-width: $tablet-1) {
     display: none;
@@ -99,6 +104,7 @@
   display: inline-block;
   vertical-align: top;
   text-transform: uppercase;
+  // background-color: yellow;
 
   li {
     display: inline-block;
@@ -222,7 +228,7 @@
   }
 
   #mobile-menu {
-    @include transition(transform .5s, width .3s);
+    @include transition(transform .5s);
     @include transform(translate3d(100%, 0, 0));
     font-family: $font-main;
     position: absolute;
@@ -719,6 +725,7 @@ $flags:
   cursor: pointer;
   border: none;
   background: none;
+  line-height: 1;
 
   .flags-enabled & {
     width: 21px;

@@ -44,6 +44,8 @@
     .site-options {
       display: inline-block;
       vertical-align: top;
+      height: 27px;
+      // background-color: grey;
 
       @media screen and (max-width: $tablet-1) {
         margin-left: 20px;
@@ -88,6 +90,7 @@
   .header-right {
     position: relative;
     text-align: right;
+    // background-color: blue;
 
     @media screen and (max-width: $tablet-3) {
       .search-open & {

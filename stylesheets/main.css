@@ -1293,6 +1293,7 @@ a img {
 .site-header .header-top .site-options {
   display: inline-block;
   vertical-align: top;
+  height: 27px;
 }
 @media screen and (max-width: 1024px) {
   .site-header .header-top .site-options {
@@ -1438,8 +1439,12 @@ a img {
 /* NAVIGATION MENUS*/
 .menu-btn-wrap {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   margin-left: 40px;
+}
+.menu-btn-wrap.flags-enabled {
+  position: relative;
+  top: -1px;
 }
 @media screen and (max-width: 1024px) {
   .menu-btn-wrap {
@@ -1615,9 +1620,9 @@ a img {
   }
 
   #mobile-menu {
-    -webkit-transition: -webkit-transform 0.5s, width 0.3s;
-    -moz-transition: -moz-transform 0.5s, width 0.3s;
-    transition: transform 0.5s, width 0.3s;
+    -webkit-transition: -webkit-transform 0.5s;
+    -moz-transition: -moz-transform 0.5s;
+    transition: transform 0.5s;
     -webkit-transform: translate3d(100%, 0, 0);
     -moz-transform: translate3d(100%, 0, 0);
     -ms-transform: translate3d(100%, 0, 0);
@@ -2129,6 +2134,7 @@ a img {
   cursor: pointer;
   border: none;
   background: none;
+  line-height: 1;
 }
 .flags-enabled .lang-menu-btn {
   width: 21px;
