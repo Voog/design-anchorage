@@ -1,5 +1,6 @@
 .site-sidebar {
-  position: absolute;
+  display: inline-block;
+  vertical-align: top;
   width: 220px;
   margin: 50px 0 50px 40px;
 
@@ -32,6 +33,7 @@
   }
 
   .submenu {
+    margin-bottom: 0;
     padding: 0;
 
     ul, li {
@@ -43,6 +45,10 @@
       font-weight: 300;
       line-height: 1.7;
       margin: 15px 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
 
       @media screen and (max-width: $tablet-1) {
         display: inline-block;

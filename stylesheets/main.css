@@ -694,12 +694,11 @@ a img {
   width: auto;
   margin: 0;
 }
-.common-page .sidebar-active .page-content {
-  margin-left: 260px;
-}
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .common-page .sidebar-active .page-content {
-    margin-left: 0;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 265px);
   }
 }
 .common-page .main-content .wrap {
@@ -2478,7 +2477,8 @@ a img {
 }
 
 .site-sidebar {
-  position: absolute;
+  display: inline-block;
+  vertical-align: top;
   width: 220px;
   margin: 50px 0 50px 40px;
 }
@@ -2511,6 +2511,7 @@ a img {
   color: white;
 }
 .site-sidebar .submenu {
+  margin-bottom: 0;
   padding: 0;
 }
 .site-sidebar .submenu ul, .site-sidebar .submenu li {
@@ -2521,6 +2522,9 @@ a img {
   font-weight: 300;
   line-height: 1.7;
   margin: 15px 0;
+}
+.site-sidebar .submenu li:last-child {
+  margin-bottom: 0;
 }
 @media screen and (max-width: 1024px) {
   .site-sidebar .submenu li {

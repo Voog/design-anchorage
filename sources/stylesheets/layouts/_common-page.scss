@@ -21,13 +21,12 @@
       width: auto;
       margin: 0;
     }
-    .page-content {
-      margin-left: 260px;
-    }
 
-    @media screen and (max-width: $tablet-1) {
-      .page-content {
-        margin-left: 0;
+    .page-content {
+      @media screen and (min-width: $tablet-1 + 1) {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% - 265px);
       }
     }
   }
