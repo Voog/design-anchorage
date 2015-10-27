@@ -150,7 +150,8 @@
   {% comment %}/* SITE MAIN CONTENT AREA BACKGROUND */{% endcomment %}
   {% comment %}/* Site main content area background color style. */{% endcomment %}
   .blog-news-page .page-body .background-color,
-  .blog-article-page .page-body .background-color {
+  .blog-article-page .page-body .background-color,
+  .site-footer .blog-article-nav {
     background-color: {{ blog_body_bg_color }};
   }
 

@@ -4,8 +4,7 @@
     <div class="background-color js-background-color"></div>
 
     {% if site-footer == "blog_article_page" %}
-      <div class="blog-article-nav">
-
+      <div class="blog-article-nav js-background-type {{ blog_body_bg_type }}">
         {% capture dont_render %}
           {% comment %}Assign next and previous blog post values{% endcomment %}
 
