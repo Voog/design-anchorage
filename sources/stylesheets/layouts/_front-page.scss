@@ -78,7 +78,7 @@
         display: none;
       }
 
-      @media screen and (max-width: $tablet-1) {
+      @media screen and (min-width: $tablet-3) and (max-width: $tablet-1) {
         &:first-child {
           .feature-content {
             margin-right: 15px;
