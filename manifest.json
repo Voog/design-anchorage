@@ -267,6 +267,12 @@
       "filename": "roboto-italic.eot"
     },
     {
+      "content_type": "image/svg+xml",
+      "file": "assets/roboto-italic.svg",
+      "kind": "assets",
+      "filename": "roboto-italic.svg"
+    },
+    {
       "content_type": "application/x-font-truetype",
       "file": "assets/roboto-italic.ttf",
       "kind": "assets",
@@ -289,6 +295,12 @@
       "file": "assets/roboto-light-italic.eot",
       "kind": "assets",
       "filename": "roboto-light-italic.eot"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/roboto-light-italic.svg",
+      "kind": "assets",
+      "filename": "roboto-light-italic.svg"
     },
     {
       "content_type": "application/x-font-truetype",
@@ -345,6 +357,12 @@
       "filename": "roboto-medium-italic.eot"
     },
     {
+      "content_type": "image/svg+xml",
+      "file": "assets/roboto-medium-italic.svg",
+      "kind": "assets",
+      "filename": "roboto-medium-italic.svg"
+    },
+    {
       "content_type": "application/x-font-truetype",
       "file": "assets/roboto-medium-italic.ttf",
       "kind": "assets",
@@ -367,6 +385,12 @@
       "file": "assets/roboto-medium.eot",
       "kind": "assets",
       "filename": "roboto-medium.eot"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/roboto-medium.svg",
+      "kind": "assets",
+      "filename": "roboto-medium.svg"
     },
     {
       "content_type": "application/x-font-truetype",
