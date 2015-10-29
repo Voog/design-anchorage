@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="{% if editmode %}editmode{% else %}public{% endif %}{% unless comment.valid? %} comments-open{% endunless %}" lang="{{ page.language_code }}">
+<html class="{% if editmode %}editmode{% else %}public{% endif %}{% unless comment.valid? %} comments-open js-calculate-comments-height{% endunless %}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% assign blog_article_page = true %}
     {% include "template-variables" %}

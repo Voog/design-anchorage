@@ -337,27 +337,6 @@
       };
     });
 
-    var handleCommentsToggleing = function() {
-      var mainContent = $('.main-content');
-
-      if ($('html').hasClass('comments-open')) {
-        var documentHeight = $(document).outerHeight(),
-            headerHeight = $('.js-site-header').outerHeight(),
-            articleComments = $('.article-comments'),
-            articleCommentsHeight = articleComments.outerHeight(),
-            siteFooterHeight = $('.site-footer').outerHeight();
-
-        articleComments.css('min-height', documentHeight - headerHeight);
-        mainContent.css('min-height', articleCommentsHeight - siteFooterHeight);
-
-        $('html, body').animate({
-            scrollTop: $('.js-comments').offset().top
-        }, 300);
-      } else {
-        mainContent.removeAttr('style');
-      }
-    };
-
     // Submenu lvl1 load more on mobile.
     $('.submenu-load-more-lvl1').click(function() {
       $(this).addClass('open');
@@ -393,6 +372,27 @@
         scrollTop: $('.page-content').offset().top
       }, 300);
     });
+  };
+
+  var handleCommentsToggleing = function() {
+    var mainContent = $('.main-content');
+
+    if ($('html').hasClass('comments-open')) {
+      var documentHeight = $(document).outerHeight(),
+          headerHeight = $('.js-site-header').outerHeight(),
+          articleComments = $('.article-comments'),
+          articleCommentsHeight = articleComments.outerHeight(),
+          siteFooterHeight = $('.site-footer').outerHeight();
+
+      articleComments.css('min-height', documentHeight - headerHeight);
+      mainContent.css('min-height', articleCommentsHeight - siteFooterHeight);
+
+      $('html, body').animate({
+          scrollTop: $('.js-comments').offset().top
+      }, 300);
+    } else {
+      mainContent.removeAttr('style');
+    }
   };
 
   // Sets the search modal height.
@@ -503,6 +503,11 @@
   var initArticlePage = function() {
     // Add single post layout specific functions here.
     commentsHeight();
+
+    if ($('html').hasClass('js-calculate-comments-height')) {
+      console.log(true);
+      handleCommentsToggleing();
+    };
   };
 
   var initCommonPage = function() {
