@@ -10,10 +10,6 @@
 {% if page.image == nil and front_page %}
   {% if header_bg_image_sizes != nil and header_bg_image_sizes != "" %}
     {% assign og_image = header_bg_image_sizes[0] %}
-  {% elsif content_bg_1_image_sizes != nil and content_bg_1_image_sizes != "" %}
-    {% assign og_image = content_bg_1_image_sizes[0] %}
-  {% elsif content_bg_2_image_sizes != nil and content_bg_2_image_sizes != "" %}
-    {% assign og_image = content_bg_2_image_sizes[0] %}
   {% endif %}
 {% else %}
   {% if article %}
