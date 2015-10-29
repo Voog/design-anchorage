@@ -586,12 +586,14 @@ a img {
 @media screen and (max-width: 1024px) {
   .front-page .main-feature .feature:first-child .feature-content {
     margin-right: 15px;
+    margin-left: 0;
   }
   .front-page .main-feature .feature:nth-child(2) .feature-content {
     margin-right: 15px;
     margin-left: 15px;
   }
   .front-page .main-feature .feature:last-child .feature-content {
+    margin-right: 0;
     margin-left: 15px;
   }
 }

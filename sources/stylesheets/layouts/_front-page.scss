@@ -82,6 +82,7 @@
         &:first-child {
           .feature-content {
             margin-right: 15px;
+            margin-left: 0;
           }
         }
 
@@ -94,6 +95,7 @@
 
         &:last-child {
           .feature-content {
+            margin-right: 0;
             margin-left: 15px;
           }
         }
