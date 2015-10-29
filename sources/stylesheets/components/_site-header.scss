@@ -54,7 +54,7 @@
   }
 
   .header-title {
-    @include hyphens(auto);
+    @include hyphenate(true);
     font-size: 22px;
     font-weight: 300;
     line-height: 1;

@@ -27,7 +27,7 @@
   }
   .blog-article-nav {
     @extend %clearfix;
-    @include hyphens(auto);
+    @include hyphenate(true);
     display: table;
     width: 100%;
     background-color: rgba($white, 1);

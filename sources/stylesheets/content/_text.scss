@@ -3,7 +3,7 @@
 // NB! Contact forms, image galleries and tables styling rules are located in the separate partials: "_forms.scss", "_gallery.scss" and "_tables.scss".
 .content-area {
   @extend %clearfix;
-  @include hyphens(auto);
+  @include hyphenate(true);
   color: rgba($black-base, .71);
   font-size: 18px;
   line-height: 1.7;
@@ -301,7 +301,7 @@
     text-align: center;
     margin: 10px 0;
     cursor: pointer;
-    @include hyphens(auto);
+    @include hyphenate(true);
     text-decoration: none;
 
     .site-header & {

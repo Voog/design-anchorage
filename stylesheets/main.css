@@ -782,6 +782,8 @@ a img {
   margin-top: 20px;
 }
 .blog-news-page .blog-article {
+  word-break: break-word;
+  word-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -1314,6 +1316,8 @@ a img {
   }
 }
 .site-header .header-title {
+  word-break: break-word;
+  word-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -1504,6 +1508,8 @@ a img {
 }
 
 .menu {
+  word-break: break-word;
+  word-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -2645,6 +2651,8 @@ a img {
   opacity: .8;
 }
 .site-footer .blog-article-nav {
+  word-break: break-word;
+  word-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -2784,6 +2792,8 @@ a img {
 }
 
 .content-area {
+  word-break: break-word;
+  word-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -3077,6 +3087,8 @@ a img {
   text-align: center;
   margin: 10px 0;
   cursor: pointer;
+  word-break: break-word;
+  word-wrap: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
