@@ -1164,6 +1164,7 @@ a img {
 }
 .blog-tags .tags-title {
   padding: 0px 20px 0 25px;
+  font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
 }
