@@ -784,10 +784,6 @@ a img {
 .blog-news-page .blog-article {
   word-break: break-word;
   word-wrap: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
   position: relative;
   padding-top: 50px;
 }
@@ -1318,10 +1314,6 @@ a img {
 .site-header .header-title {
   word-break: break-word;
   word-wrap: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
   font-size: 22px;
   font-weight: 300;
   line-height: 1;
@@ -1510,10 +1502,6 @@ a img {
 .menu {
   word-break: break-word;
   word-wrap: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -2653,10 +2641,6 @@ a img {
 .site-footer .blog-article-nav {
   word-break: break-word;
   word-wrap: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
   display: table;
   width: 100%;
   background-color: white;
@@ -2794,10 +2778,6 @@ a img {
 .content-area {
   word-break: break-word;
   word-wrap: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
   color: rgba(0, 0, 0, 0.71);
   font-size: 18px;
   line-height: 1.7;
@@ -3023,10 +3003,6 @@ a img {
 .content-area form {
   word-break: normal;
   word-wrap: normal;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
 }
 .content-area pre,
 .content-area .edy-positionable-container-left-block,
@@ -3089,10 +3065,6 @@ a img {
   cursor: pointer;
   word-break: break-word;
   word-wrap: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
   text-decoration: none;
 }
 .site-header .content-area .custom-btn {
