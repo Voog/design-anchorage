@@ -77,6 +77,27 @@
       &:empty {
         display: none;
       }
+
+      @media screen and (max-width: $tablet-1) {
+        &:first-child {
+          .feature-content {
+            margin-right: 15px;
+          }
+        }
+
+        &:nth-child(2) {
+          .feature-content {
+            margin-right: 15px;
+            margin-left: 15px;
+          }
+        }
+
+        &:last-child {
+          .feature-content {
+            margin-left: 15px;
+          }
+        }
+      }
     }
 
     .feature-image {

@@ -583,6 +583,18 @@ a img {
 .front-page .main-feature .feature:empty {
   display: none;
 }
+@media screen and (max-width: 1024px) {
+  .front-page .main-feature .feature:first-child .feature-content {
+    margin-right: 15px;
+  }
+  .front-page .main-feature .feature:nth-child(2) .feature-content {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  .front-page .main-feature .feature:last-child .feature-content {
+    margin-left: 15px;
+  }
+}
 .front-page .main-feature .feature-image {
   position: relative;
   margin-bottom: 25px;
