@@ -225,7 +225,7 @@
       "filename": "roboto-bold-italic.woff"
     },
     {
-      "content_type": "text/unknown",
+      "content_type": "application/font-woff2",
       "file": "assets/roboto-bold-italic.woff2",
       "kind": "assets",
       "filename": "roboto-bold-italic.woff2"
@@ -255,7 +255,7 @@
       "filename": "roboto-bold.woff"
     },
     {
-      "content_type": "text/unknown",
+      "content_type": "application/font-woff2",
       "file": "assets/roboto-bold.woff2",
       "kind": "assets",
       "filename": "roboto-bold.woff2"
@@ -285,7 +285,7 @@
       "filename": "roboto-italic.woff"
     },
     {
-      "content_type": "text/unknown",
+      "content_type": "application/font-woff2",
       "file": "assets/roboto-italic.woff2",
       "kind": "assets",
       "filename": "roboto-italic.woff2"
@@ -315,7 +315,7 @@
       "filename": "roboto-light-italic.woff"
     },
     {
-      "content_type": "text/unknown",
+      "content_type": "application/font-woff2",
       "file": "assets/roboto-light-italic.woff2",
       "kind": "assets",
       "filename": "roboto-light-italic.woff2"
@@ -345,7 +345,7 @@
       "filename": "roboto-light.woff"
     },
     {
-      "content_type": "text/unknown",
+      "content_type": "application/font-woff2",
       "file": "assets/roboto-light.woff2",
       "kind": "assets",
       "filename": "roboto-light.woff2"
@@ -375,7 +375,7 @@
       "filename": "roboto-medium-italic.woff"
     },
     {
-      "content_type": "text/unknown",
+      "content_type": "application/font-woff2",
       "file": "assets/roboto-medium-italic.woff2",
       "kind": "assets",
       "filename": "roboto-medium-italic.woff2"
@@ -405,7 +405,7 @@
       "filename": "roboto-medium.woff"
     },
     {
-      "content_type": "text/unknown",
+      "content_type": "application/font-woff2",
       "file": "assets/roboto-medium.woff2",
       "kind": "assets",
       "filename": "roboto-medium.woff2"
@@ -435,7 +435,7 @@
       "filename": "roboto-regular.woff"
     },
     {
-      "content_type": "text/unknown",
+      "content_type": "application/font-woff2",
       "file": "assets/roboto-regular.woff2",
       "kind": "assets",
       "filename": "roboto-regular.woff2"
