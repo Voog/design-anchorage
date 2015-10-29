@@ -1046,9 +1046,9 @@ a img {
 .article-comments .comments-body .comments-title {
   margin: 20px 0 20px 0;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.7;
-  color: rgba(0, 0, 0, 0.36);
+  color: black;
   cursor: text;
   text-transform: none;
 }
