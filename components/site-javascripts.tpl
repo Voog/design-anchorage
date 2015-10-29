@@ -6,7 +6,7 @@
   <script src="{{ site.static_asset_host }}/libs/edicy-search/latest/edicy-search.js"></script>
   <script>
     var search = new VoogSearch($('.js-search-form').get(0), {
-      per_page: 3,
+      per_page: 10,
       lang: '{{ page.language_code }}',
       resultsContainer: $('.js-voog-search-modal').get(0),
       sideclick: true,

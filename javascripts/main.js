@@ -9583,6 +9583,8 @@ return jQuery;
       } else {
         searchCleanBtn.removeClass('active');
       }
+
+      handleMobileSearchHeight();
     });
 
     $('.js-search-reset-btn').click(function() {
@@ -9709,7 +9711,7 @@ return jQuery;
   // Initiations
   var initWindowResize = function() {
     $(window).resize(debounce(commentsHeight, 100));
-    // $(window).resize(debounce(mobileResize, 100));
+    $(window).resize(debounce(handleMobileSearchHeight, 100));;
   };
 
   // Scrolls to the comment-form if comment submit failed (to show the error messages to the user)
@@ -9759,6 +9761,14 @@ return jQuery;
       $('.js-site-header .js-background-type').removeClass('dark-background light-background').addClass(headerBgType);
 
       Edicy.articles.currentArticle.setData('photo_article_state', false);
+    }
+  };
+
+  var handleMobileSearchHeight = function() {
+    if ($(window).width() <= 640) {
+      $('.js-voog-search-modal').css('max-height', $(window).height() - 56);
+    } else {
+      $('.js-voog-search-modal').css('max-height', 'auto');
     }
   };
 

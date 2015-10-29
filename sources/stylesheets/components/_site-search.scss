@@ -40,12 +40,7 @@
     left: 0;
     height: auto;
     width: auto;
-    height: 100vh;
     background-color: #f7f7f7;
-
-    .editmode & {
-      height: calc(100vh - 40px);
-    }
   }
 
   &.active {
@@ -64,10 +59,6 @@
   vertical-align: middle;
   width: 100%;
   box-sizing: border-box;
-
-  @media screen and (max-width: $tablet-3) {
-    height: 100vh;
-  }
 }
 
 .search-inner {
@@ -293,18 +284,9 @@
   @media screen and (min-width: $tablet-3 + 1) {
     max-width: 400px;
   }
-
-  @media screen and (max-width: $tablet-3) {
-    max-height: calc(100vh - 56px);
-    height: calc(100vh - 56px);
-  }
 }
 
 .voog-search-modal-results {
-  // @media screen and (min-width: $tablet-2) {
-  //   max-height: 70vh;
-  // }
-
   h3 {
     margin: 0;
     font-size: 16px;
