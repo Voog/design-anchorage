@@ -2866,6 +2866,7 @@ a img {
 .content-area h6 {
   font-weight: 300;
   color: rgba(0, 0, 0, 0.87);
+  line-height: 1.4;
 }
 .content-area h1 a,
 .content-area h2 a,
@@ -2886,7 +2887,6 @@ a img {
 }
 .content-area h1 {
   font-size: 32px;
-  line-height: 1.4;
 }
 @media screen and (max-width: 640px) {
   .content-area h1 {

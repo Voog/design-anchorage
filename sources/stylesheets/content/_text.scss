@@ -85,6 +85,7 @@
   h6 {
     font-weight: 300;
     color: rgba($black-base, .87);
+    line-height: 1.4;
 
     a {
       color: rgba($black-base, 1);
@@ -107,7 +108,6 @@
 
   h1 {
     font-size: 32px;
-    line-height: 1.4;
 
     @media screen and (max-width: $tablet-3) {
       font-size: 28px;
