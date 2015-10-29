@@ -3255,6 +3255,7 @@ a img {
 
 .content-area form,
 .content-area .form {
+  clear: both;
   font-size: 14px;
 }
 .content-area .form_field {
