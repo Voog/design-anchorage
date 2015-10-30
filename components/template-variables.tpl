@@ -176,7 +176,6 @@
   {% assign content_bg_2 = page.data.content_bg_2 %}
 
   {% assign content_bg_2_image = content_bg_2.image %}
-  {% assign content_bg_2_image_sizes = content_bg_2.imageSizes %}
   {% assign content_bg_2_color = content_bg_2.color %}
   {% assign content_bg_2_color_data = content_bg_2.colorData %}
   {% assign content_bg_2_combined_lightness = content_bg_2.combinedLightness %}
@@ -208,10 +207,10 @@
     {% assign content_bg_2_image = images_path | append: "/front-header-bg_block.jpg" %}
   {% endif %}
 
-  {% if content_bg_2_image_sizes == nil %}
+  {% if content_bg_2.imageSizes == nil %}
       {% assign content_bg_2_image_sizes_str = '[{"url":"' | append: images_path | append: '/front-header-bg.jpg", "width":2560, "height":1702}, {"url":"' | append: images_path | append: '/front-header-bg_huge.jpg", "width":2048, "height":1362}, {"url":"' | append: images_path | append: '/front-header-bg_large.jpg", "width":1280, "height":851}]' %}
   {% else %}
-    {% assign content_bg_2_image_sizes_str = content_bg_2_image_sizes | json %}
+    {% assign content_bg_2_image_sizes_str = content_bg_2.imageSizes | json %}
   {% endif %}
 
   {% if content_bg_2_color == nil %}
