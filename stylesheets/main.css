@@ -1352,6 +1352,11 @@ a img {
   position: relative;
   text-align: right;
 }
+@media screen and (max-width: 1024px) {
+  .site-header .header-right {
+    margin-top: 1px;
+  }
+}
 @media screen and (max-width: 640px) {
   .search-open .site-header .header-right {
     position: static;

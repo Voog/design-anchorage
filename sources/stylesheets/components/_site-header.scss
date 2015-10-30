@@ -90,7 +90,10 @@
   .header-right {
     position: relative;
     text-align: right;
-    // background-color: blue;
+
+    @media screen and (max-width: $tablet-1) {
+      margin-top: 1px;
+    }
 
     @media screen and (max-width: $tablet-3) {
       .search-open & {
