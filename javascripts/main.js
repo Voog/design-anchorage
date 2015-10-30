@@ -9781,7 +9781,6 @@ return jQuery;
     commentsHeight();
 
     if ($('html').hasClass('js-calculate-comments-height')) {
-      console.log(true);
       handleCommentsToggleing();
     };
   };
