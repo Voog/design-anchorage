@@ -1661,7 +1661,7 @@ a img {
 }
 @media screen and (max-width: 1024px) {
   .editmode #mobile-menu {
-    bottom: 40px;
+    height: calc(100% - 40px);
   }
   .mobilemenu-open #mobile-menu {
     -webkit-transform: translate3d(0, 0, 0);

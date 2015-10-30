@@ -252,7 +252,7 @@
     }
 
     .editmode & {
-      bottom: 40px;
+      height: calc(100% - 40px);
     }
 
     .mobilemenu-open & {
