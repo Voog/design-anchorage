@@ -220,11 +220,6 @@
     }
   }
 
-  // Sets the dynamic line-height for the text.
-  span[style*="font-size"] {
-    line-height: 1.3;
-  }
-
   // Disables hyphenation for the elements that shouldn't hyphenate.
   pre,
   code,

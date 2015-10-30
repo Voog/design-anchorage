@@ -2995,9 +2995,6 @@ a img {
 .dark-background .content-area a {
   color: white;
 }
-.content-area span[style*="font-size"] {
-  line-height: 1.3;
-}
 .content-area pre,
 .content-area code,
 .content-area iframe,
