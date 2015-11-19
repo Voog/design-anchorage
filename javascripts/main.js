@@ -9711,7 +9711,7 @@ return jQuery;
   // Initiations
   var initWindowResize = function() {
     $(window).resize(debounce(commentsHeight, 100));
-    $(window).resize(debounce(handleMobileSearchHeight, 100));;
+    $(window).resize(debounce(handleMobileSearchHeight, 100));
   };
 
   // Scrolls to the comment-form if comment submit failed (to show the error messages to the user)
