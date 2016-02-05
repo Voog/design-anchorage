@@ -24,6 +24,7 @@
                 {% assign activestr = " active" %}
               {% endif %}
             {% endfor %}
+            
             <li class="menu-item">
               <a class="menu-link{{ activestr }}" href="/{{ page.path }}/tagged/{{ tag.path }}">{{ tag.name }}</a>
             </li>
