@@ -116,7 +116,7 @@
         @media screen and (min-width: $tablet-2 + 1) {
           &:hover {
             @include transition($transition);
-            background-color: rgba($white, .71);
+            background-color: rgba($white, .7);
           }
         }
       }

@@ -900,7 +900,7 @@ a img {
   color: rgba(255, 255, 255, 0.36);
 }
 .blog-article-page .dark-background .comments-count {
-  color: rgba(255, 255, 255, 0.71);
+  color: rgba(255, 255, 255, 0.7);
 }
 .blog-article-page .main-content {
   transition: min-height 250ms;
@@ -1055,7 +1055,7 @@ a img {
 @media screen and (min-width: 851px) {
   .article-comments .comments-close.dark-background .btn-close:hover {
     transition: 500ms;
-    background-color: rgba(255, 255, 255, 0.71);
+    background-color: rgba(255, 255, 255, 0.7);
   }
 }
 .article-comments .comments-close .btn-close {
@@ -1100,7 +1100,7 @@ a img {
   color: rgba(0, 0, 0, 0.7);
 }
 .dark-background .blog-tags {
-  color: rgba(255, 255, 255, 0.71);
+  color: rgba(255, 255, 255, 0.7);
 }
 .blog-article .blog-tags {
   margin-bottom: 15px;
@@ -1117,7 +1117,7 @@ a img {
   fill: rgba(0, 0, 0, 0.71);
 }
 .dark-background .blog-tags .tags-icon {
-  fill: rgba(255, 255, 255, 0.71);
+  fill: rgba(255, 255, 255, 0.7);
 }
 .blog-tags .tags-title {
   padding: 0px 20px 0 25px;
@@ -2674,10 +2674,10 @@ a img {
 }
 .site-footer .blog-article-nav.dark-background .article-nav-full:hover .article-nav-direction,
 .site-footer .blog-article-nav.dark-background .article-nav-half:hover .article-nav-direction {
-  color: rgba(255, 255, 255, 0.71);
+  color: rgba(255, 255, 255, 0.7);
 }
 .site-footer .blog-article-nav.dark-background .article-nav-title {
-  color: rgba(255, 255, 255, 0.71);
+  color: rgba(255, 255, 255, 0.7);
 }
 .site-footer .blog-article-nav.dark-background .article-nav-direction {
   color: rgba(255, 255, 255, 0.36);
@@ -3400,7 +3400,7 @@ a img {
   background-color: white;
 }
 .dark-background .content-area .form_submit input:hover {
-  background-color: rgba(255, 255, 255, 0.71);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 .light-background .content-area .form_submit input {
   color: white;
