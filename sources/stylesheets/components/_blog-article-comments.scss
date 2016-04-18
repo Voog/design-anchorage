@@ -150,11 +150,11 @@
         fill: rgba($white, 1);
 
         @media screen and (max-width: $tablet-2) {
-          fill: rgba($black, .71);
+          fill: rgba($black, .7);
 
           &:hover {
             @include transition($transition);
-            fill: rgba($black, .71);
+            fill: rgba($black, .7);
           }
         }
       }
