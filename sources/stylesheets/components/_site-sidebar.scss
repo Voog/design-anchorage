@@ -57,7 +57,7 @@
     }
 
     a {
-      color: rgba($black-base, .5);
+      color: rgba($black, .5);
 
       .dark-background & {
         color: rgba($white, 1);
@@ -116,7 +116,7 @@
         }
 
         &:hover {
-          color: rgba($black-base, .5);
+          color: rgba($black, .5);
         }
 
         &.untranslated {

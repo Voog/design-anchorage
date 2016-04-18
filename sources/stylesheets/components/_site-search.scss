@@ -63,19 +63,19 @@
 
 .search-inner {
   position: relative;
-  box-shadow: 0 2px 4px 0 rgba($black-base, .1);
+  box-shadow: 0 2px 4px 0 rgba($black, .1);
 }
 
 .search-form {
   position: relative;
   z-index: 20;
   background-color: rgba($white, 1);
-  box-shadow: 0 2px 4px 0 rgba($black-base, .1);
+  box-shadow: 0 2px 4px 0 rgba($black, .1);
 
   @media screen and (max-width: $tablet-3) {
     padding-top: 10px;
     padding-bottom: 6px;
-    box-shadow: 0 1px 1px 0 rgba($black-base, .1);
+    box-shadow: 0 1px 1px 0 rgba($black, .1);
   }
 
   &,
@@ -274,7 +274,7 @@
 
   &.no-content {
     padding: 20px;
-    color: rgba($grey, 1);
+    color: rgba($black, .33);
   }
 
   &.search-results-active {
@@ -308,7 +308,7 @@
     margin: 5px 0 0;
     font-size: 14px;
     line-height: 24px;
-    color: rgba($black-base, .71);
+    color: rgba($black, .71);
   }
 
   em {
@@ -321,7 +321,7 @@
 
 .voog-search-modal-result {
   padding: 15px;
-  border-top: rgba($black-base, .13) solid 1px;
+  border-top: rgba($black, .13) solid 1px;
 
   &:first-of-type {
     border-top: 1px solid transparent;

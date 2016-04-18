@@ -4,7 +4,7 @@
 .content-area {
   @extend %clearfix;
   @include hyphenate(true);
-  color: rgba($black-base, .71);
+  color: rgba($black, .71);
   font-size: 18px;
   line-height: 1.7;
 
@@ -18,7 +18,7 @@
 
   .site-footer & {
     font-size: 14px;
-    color: rgba($black-base, .6);
+    color: rgba($black, .6);
   }
 
   &.footer-left {
@@ -84,11 +84,11 @@
   h5,
   h6 {
     font-weight: 300;
-    color: rgba($black-base, .87);
+    color: rgba($black, .87);
     line-height: 1.4;
 
     a {
-      color: rgba($black-base, 1);
+      color: rgba($black, 1);
       text-decoration: none;
     }
   }
@@ -166,7 +166,7 @@
 
     .site-footer & {
       font-size: 14px;
-      color: rgba($black-base, .6);
+      color: rgba($black, .6);
     }
 
     .dark-background & {
@@ -327,7 +327,7 @@
       .dark-background & {
         border: 2px solid $white;
         background-color: rgba($white, 1);
-        color: rgba($black-base, .71);
+        color: rgba($black, .71);
       }
 
       .light-background & {

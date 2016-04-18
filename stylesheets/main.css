@@ -1044,7 +1044,7 @@ a img {
   font-size: 14px;
   font-weight: 300;
   line-height: 2;
-  color: #aaaaaa;
+  color: rgba(0, 0, 0, 0.33);
 }
 .article-comments .comments-close.dark-background .btn-close {
   background-color: white;
@@ -2369,7 +2369,7 @@ a img {
 }
 .voog-search-modal.no-content {
   padding: 20px;
-  color: #aaaaaa;
+  color: rgba(0, 0, 0, 0.33);
 }
 .voog-search-modal.search-results-active {
   display: block;

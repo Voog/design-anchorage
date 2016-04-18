@@ -23,14 +23,14 @@
       color: rgba($white, 1);
       border-style: none;
       outline: none;
-      background-color: rgba($black-base, .5);
+      background-color: rgba($black, .5);
 
       &:hover {
-        background-color: rgba($black-base, .75);
+        background-color: rgba($black, .75);
       }
 
       &.is-active {
-        background-color: rgba($black-base, 1);
+        background-color: rgba($black, 1);
       }
     }
   }
@@ -40,7 +40,7 @@
     font-weight: 300;
     line-height: 1.7;
     margin: 30px 0 0;
-    color: rgba($black-base, .71);
+    color: rgba($black, .71);
   }
 
   .article-excerpt {
@@ -59,11 +59,11 @@
     display: inline-block;
     cursor: pointer;
     text-transform: uppercase;
-    color: rgba($black-base, .36);
+    color: rgba($black, .36);
 
 
     .comments-count {
-      color: rgba($black-base, .71);
+      color: rgba($black, .71);
     }
   }
 
@@ -122,7 +122,7 @@
       display: inline;
       letter-spacing: 1px;
       text-transform: uppercase;
-      color: rgba($black-base, .36);
+      color: rgba($black, .36);
 
       &.is-hidden {
         display: none;
