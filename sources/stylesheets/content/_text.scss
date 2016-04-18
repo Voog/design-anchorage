@@ -18,7 +18,7 @@
 
   .site-footer & {
     font-size: 14px;
-    color: rgba($black, .6);
+    color: rgba($black, .7);
   }
 
   &.footer-left {
@@ -166,7 +166,7 @@
 
     .site-footer & {
       font-size: 14px;
-      color: rgba($black, .6);
+      color: rgba($black, .7);
     }
 
     .dark-background & {
@@ -312,27 +312,27 @@
     }
 
     .dark-background & {
-      border: 2px solid $white;
+      border: 2px solid rgba($white, 1);
       color: rgba($white, 1);
     }
 
     .light-background & {
-      border: 2px solid #222;
-      color: rgba(#222222, 1);
+      border: 2px solid rgba($grey, 1);
+      color: rgba($grey, 1);
     }
 
     &:hover {
       @include transition($transition);
 
       .dark-background & {
-        border: 2px solid $white;
+        border: 2px solid rgba($white, 1);
         background-color: rgba($white, 1);
         color: rgba($black, .7);
       }
 
       .light-background & {
-        border: 2px solid #222222;
-        background-color: rgba(#222222, 1);
+        border: 2px solid rgba($grey, 1);
+        background-color: rgba($grey, 1);
         color: rgba($white, 1);
       }
     }
@@ -474,7 +474,7 @@
       tr {
         td {
           padding: 0 25px;
-          color: rgba($black, .73);
+          color: rgba($black, .7);
           border-top: none;
           border-left: 2px solid rgba($black, .2);
           border-right: none;

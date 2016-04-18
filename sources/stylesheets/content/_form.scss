@@ -49,7 +49,7 @@
     @extend %inherit-base-font;
 
     @include placeholder {
-      color: rgba($black, .36);
+      color: rgba($black, .35);
     }
 
     font-size: 16px;
@@ -80,7 +80,7 @@
       }
 
       .light-background & {
-        border-color: rgba($black, .33);
+        border-color: rgba($black, .35);
       }
     }
 
@@ -345,6 +345,6 @@
 
   .form_notice {
     margin-bottom: $margin-low;
-    color: rgba($success-color, .71);
+    color: rgba($success-color, .70);
   }
 }

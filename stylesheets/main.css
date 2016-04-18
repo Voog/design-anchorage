@@ -345,7 +345,7 @@ a img {
 }
 @media screen and (max-width: 640px) {
   .search-open .dark-background .site-options .search-btn svg path {
-    fill: rgba(0, 0, 0, 0.71);
+    fill: rgba(0, 0, 0, 0.7);
   }
 }
 .front-page .dark-background .main-feature .aspect-ratio-inner {
@@ -485,7 +485,7 @@ a img {
   border-color: white transparent transparent;
 }
 .dark-background .edy-tag-suggestions .edy-tag-suggestion {
-  color: rgba(0, 0, 0, 0.75);
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .edy-content-element > .form {
@@ -767,7 +767,7 @@ a img {
 .blog-news-page .article-author,
 .blog-news-page .article-date {
   font-size: 14px;
-  color: rgba(0, 0, 0, 0.36);
+  color: rgba(0, 0, 0, 0.35);
   font-weight: 400;
   line-height: 1;
   display: inline;
@@ -776,7 +776,7 @@ a img {
 }
 .dark-background .blog-news-page .article-author, .dark-background
 .blog-news-page .article-date {
-  color: rgba(255, 255, 255, 0.36);
+  color: rgba(255, 255, 255, 0.35);
 }
 .blog-news-page .article-excerpt {
   color: rgba(0, 0, 0, 0.7);
@@ -809,7 +809,7 @@ a img {
 .blog-news-page .articles-listing .blog-article .article-date {
   font-size: 12px;
   font-size: 12px;
-  color: rgba(0, 0, 0, 0.36);
+  color: rgba(0, 0, 0, 0.35);
   font-weight: 400;
   line-height: 1.7;
   position: absolute;
@@ -836,7 +836,7 @@ a img {
 .blog-news-page .dark-background .article-author,
 .blog-news-page .dark-background .article-date,
 .blog-news-page .dark-background .articles-listing .article-date {
-  color: rgba(255, 255, 255, 0.36);
+  color: rgba(255, 255, 255, 0.35);
 }
 
 .blog-article-page .article-types-toggle {
@@ -866,7 +866,7 @@ a img {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .blog-article-page .article-types-toggle .type-btn:hover {
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .blog-article-page .article-types-toggle .type-btn.is-active {
   background-color: black;
@@ -891,13 +891,13 @@ a img {
   display: inline-block;
   cursor: pointer;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.36);
+  color: rgba(0, 0, 0, 0.35);
 }
 .blog-article-page .comments-title .comments-count {
   color: rgba(0, 0, 0, 0.7);
 }
 .blog-article-page .dark-background .comments-title {
-  color: rgba(255, 255, 255, 0.36);
+  color: rgba(255, 255, 255, 0.35);
 }
 .blog-article-page .dark-background .comments-count {
   color: rgba(255, 255, 255, 0.7);
@@ -940,7 +940,7 @@ a img {
   display: inline;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.36);
+  color: rgba(0, 0, 0, 0.35);
 }
 .blog-article-page .main-content .article-author.is-hidden,
 .blog-article-page .main-content .article-date.is-hidden {
@@ -948,7 +948,7 @@ a img {
 }
 .blog-article-page .dark-background .article-author,
 .blog-article-page .dark-background .article-date {
-  color: rgba(255, 255, 255, 0.36);
+  color: rgba(255, 255, 255, 0.35);
 }
 
 .article-comments {
@@ -1018,7 +1018,7 @@ a img {
 .article-comments .comments-body .comments-title .comments-count {
   display: inline-block;
   font-size: 14px;
-  color: rgba(0, 0, 0, 0.36);
+  color: rgba(0, 0, 0, 0.35);
   vertical-align: middle;
 }
 .article-comments .comments-body .form_field_textfield,
@@ -1044,7 +1044,7 @@ a img {
   font-size: 14px;
   font-weight: 300;
   line-height: 2;
-  color: rgba(0, 0, 0, 0.33);
+  color: rgba(0, 0, 0, 0.35);
 }
 .article-comments .comments-close.dark-background .btn-close {
   background-color: white;
@@ -1087,11 +1087,11 @@ a img {
 }
 @media screen and (max-width: 850px) {
   .article-comments .comments-close .btn-close .ico-close {
-    fill: rgba(0, 0, 0, 0.71);
+    fill: rgba(0, 0, 0, 0.7);
   }
   .article-comments .comments-close .btn-close .ico-close:hover {
     transition: 500ms;
-    fill: rgba(0, 0, 0, 0.71);
+    fill: rgba(0, 0, 0, 0.7);
   }
 }
 
@@ -1114,7 +1114,7 @@ a img {
   position: absolute;
   top: -3px;
   left: 0;
-  fill: rgba(0, 0, 0, 0.71);
+  fill: rgba(0, 0, 0, 0.7);
 }
 .dark-background .blog-tags .tags-icon {
   fill: rgba(255, 255, 255, 0.7);
@@ -1410,14 +1410,14 @@ a img {
   content: '';
   border-width: 5px 0 5px 8px;
   border-style: solid;
-  border-color: transparent transparent transparent #000;
+  border-color: transparent transparent transparent black;
 }
 .svg .toggle-sub-menu {
   fill: rgba(0, 0, 0, 0.2);
 }
 .no-svg .toggle-sub-menu.active:before {
   border-width: 8px 5px 0;
-  border-color: #000 transparent transparent transparent;
+  border-color: black transparent transparent transparent;
 }
 .svg .toggle-sub-menu.active {
   -webkit-transform: rotate(90deg);
@@ -1631,7 +1631,7 @@ a img {
     line-height: 1.3;
     padding: 10px 0;
     text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.62);
+    color: rgba(0, 0, 0, 0.7);
   }
   #mobile-menu ul a.untranslated {
     color: rgba(199, 9, 9, 0.7);
@@ -1737,7 +1737,7 @@ a img {
   background-repeat: no-repeat;
 }
 .no-boxshadow .lang-flag:after {
-  border: 1px solid #ffffff;
+  border: 1px solid white;
 }
 .svg .lang-flag:after {
   background-image: url("../assets/ico-flags.svg");
@@ -2111,7 +2111,7 @@ a img {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 .no-boxshadow .lang-menu-popover {
-  border: 1px solid #ffffff;
+  border: 1px solid white;
 }
 .editmode .lang-menu-popover {
   padding-bottom: 0;
@@ -2300,7 +2300,7 @@ a img {
   top: 4px;
 }
 .header-options .search-btn svg {
-  fill: rgba(0, 0, 0, 0.67);
+  fill: rgba(0, 0, 0, 0.7);
 }
 .front-page .header-options .search-btn svg {
   fill: white;
@@ -2369,7 +2369,7 @@ a img {
 }
 .voog-search-modal.no-content {
   padding: 20px;
-  color: rgba(0, 0, 0, 0.33);
+  color: rgba(0, 0, 0, 0.35);
 }
 .voog-search-modal.search-results-active {
   display: block;
@@ -2647,7 +2647,7 @@ a img {
   font-size: 12px;
   font-weight: 400;
   line-height: 2;
-  color: rgba(0, 0, 0, 0.36);
+  color: rgba(0, 0, 0, 0.35);
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -2680,7 +2680,7 @@ a img {
   color: rgba(255, 255, 255, 0.7);
 }
 .site-footer .blog-article-nav.dark-background .article-nav-direction {
-  color: rgba(255, 255, 255, 0.36);
+  color: rgba(255, 255, 255, 0.35);
 }
 .site-footer .blog-article-nav.dark-background .article-nav-next {
   border-left: 1px solid rgba(255, 255, 255, 0.1);
@@ -2714,7 +2714,7 @@ a img {
 }
 .site-footer .content-area {
   font-size: 14px;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.7);
 }
 .content-area.footer-left {
   font-size: 20px;
@@ -2872,7 +2872,7 @@ a img {
 .content-area ol, .site-footer
 .content-area dl {
   font-size: 14px;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.7);
 }
 .site-footer .dark-background .content-area p, .site-footer .dark-background
 .content-area ul, .site-footer .dark-background
@@ -2998,18 +2998,18 @@ a img {
   margin-bottom: 0;
 }
 .dark-background .content-area .custom-btn {
-  border: 2px solid #ffffff;
+  border: 2px solid white;
   color: white;
 }
 .light-background .content-area .custom-btn {
-  border: 2px solid #222;
+  border: 2px solid #222222;
   color: #222222;
 }
 .content-area .custom-btn:hover {
   transition: 500ms;
 }
 .dark-background .content-area .custom-btn:hover {
-  border: 2px solid #ffffff;
+  border: 2px solid white;
   background-color: white;
   color: rgba(0, 0, 0, 0.7);
 }
@@ -3111,7 +3111,7 @@ a img {
 }
 .contacts .content-area table tr td {
   padding: 0 25px;
-  color: rgba(0, 0, 0, 0.73);
+  color: rgba(0, 0, 0, 0.7);
   border-top: none;
   border-left: 2px solid rgba(0, 0, 0, 0.2);
   border-right: none;
@@ -3205,22 +3205,22 @@ a img {
 .content-area .form_field_textfield::-webkit-input-placeholder,
 .content-area .form_field_textarea::-webkit-input-placeholder,
 .content-area .form_field_select::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.36);
+  color: rgba(0, 0, 0, 0.35);
 }
 .content-area .form_field_textfield::-moz-placeholder,
 .content-area .form_field_textarea::-moz-placeholder,
 .content-area .form_field_select::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.36);
+  color: rgba(0, 0, 0, 0.35);
 }
 .content-area .form_field_textfield:-moz-placeholder,
 .content-area .form_field_textarea:-moz-placeholder,
 .content-area .form_field_select:-moz-placeholder {
-  color: rgba(0, 0, 0, 0.36);
+  color: rgba(0, 0, 0, 0.35);
 }
 .content-area .form_field_textfield:-ms-input-placeholder,
 .content-area .form_field_textarea:-ms-input-placeholder,
 .content-area .form_field_select:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.36);
+  color: rgba(0, 0, 0, 0.35);
 }
 .dark-background .content-area .form_field_textfield, .dark-background
 .content-area .form_field_textarea, .dark-background
@@ -3242,7 +3242,7 @@ a img {
 .light-background .content-area .form_field_textfield:focus, .light-background
 .content-area .form_field_textarea:focus, .light-background
 .content-area .form_field_select:focus {
-  border-color: rgba(0, 0, 0, 0.33);
+  border-color: rgba(0, 0, 0, 0.35);
 }
 .content-area .form_field_textfield.form_field_size_small,
 .content-area .form_field_textarea.form_field_size_small,
@@ -3450,5 +3450,5 @@ a img {
 }
 .content-area .form_notice {
   margin-bottom: 20px;
-  color: rgba(14, 203, 0, 0.71);
+  color: rgba(14, 203, 0, 0.7);
 }

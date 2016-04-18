@@ -193,7 +193,7 @@
 
   svg {
     .header-options & {
-      fill: rgba($black, .67);
+      fill: rgba($black, .7);
 
       .front-page & {
         fill: rgba($white, 1);
@@ -274,7 +274,7 @@
 
   &.no-content {
     padding: 20px;
-    color: rgba($black, .33);
+    color: rgba($black, .35);
   }
 
   &.search-results-active {

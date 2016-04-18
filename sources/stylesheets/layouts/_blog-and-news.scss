@@ -41,7 +41,7 @@
   .article-author,
   .article-date {
     font-size: 14px;
-    color: rgba($black, .36);
+    color: rgba($black, .35);
     font-weight: 400;
     line-height: 1;
     display: inline;
@@ -49,7 +49,7 @@
     text-transform: uppercase;
 
     .dark-background & {
-      color: rgba($white, .36);
+      color: rgba($white, .35);
     }
   }
   .article-excerpt {
@@ -82,7 +82,7 @@
       .article-date {
         font-size: 12px;
         font-size: 12px;
-        color: rgba($black, .36);
+        color: rgba($black, .35);
         font-weight: 400;
         line-height: 1.7;
         position: absolute;
@@ -113,7 +113,7 @@
     .article-author,
     .article-date,
     .articles-listing .article-date {
-      color: rgba($white, .36);
+      color: rgba($white, .35);
     }
   }
 }

@@ -26,7 +26,7 @@
       background-color: rgba($black, .5);
 
       &:hover {
-        background-color: rgba($black, .75);
+        background-color: rgba($black, .7);
       }
 
       &.is-active {
@@ -59,7 +59,7 @@
     display: inline-block;
     cursor: pointer;
     text-transform: uppercase;
-    color: rgba($black, .36);
+    color: rgba($black, .35);
 
 
     .comments-count {
@@ -69,7 +69,7 @@
 
   .dark-background {
     .comments-title {
-      color: rgba($white, .36);
+      color: rgba($white, .35);
     }
 
     .comments-count {
@@ -122,7 +122,7 @@
       display: inline;
       letter-spacing: 1px;
       text-transform: uppercase;
-      color: rgba($black, .36);
+      color: rgba($black, .35);
 
       &.is-hidden {
         display: none;
@@ -133,7 +133,7 @@
   .dark-background {
     .article-author,
     .article-date {
-      color: rgba($white, .36);
+      color: rgba($white, .35);
     }
   }
 }
