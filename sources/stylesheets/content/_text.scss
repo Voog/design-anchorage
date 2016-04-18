@@ -4,7 +4,7 @@
 .content-area {
   @extend %clearfix;
   @include hyphenate(true);
-  color: rgba($black, .71);
+  color: rgba($black, .7);
   font-size: 18px;
   line-height: 1.7;
 
@@ -327,7 +327,7 @@
       .dark-background & {
         border: 2px solid $white;
         background-color: rgba($white, 1);
-        color: rgba($black, .71);
+        color: rgba($black, .7);
       }
 
       .light-background & {

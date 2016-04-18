@@ -83,7 +83,7 @@
 
   .comment {
     margin: 20px 0 0;
-    color: rgba($black, .71);
+    color: rgba($black, .7);
 
     &:first-child {
       margin-top: 0;
@@ -141,7 +141,7 @@
       @media screen and (min-width: $tablet-2 + 1) {
         &:hover {
           @include transition($transition);
-          background-color: rgba($black, .71);
+          background-color: rgba($black, .7);
         }
       }
 
