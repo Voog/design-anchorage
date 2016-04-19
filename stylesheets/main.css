@@ -3320,7 +3320,7 @@ a img {
 }
 .svg .dark-background .content-area .form_field_radio + .form_control_indicator, .svg .dark-background
 .content-area .form_field_checkbox + .form_control_indicator {
-  border-color: white;
+  border-color: rgba(255, 255, 255, 0.2);
 }
 .svg .content-area .form_field_radio + .form_control_indicator {
   top: -1px;
@@ -3381,7 +3381,7 @@ a img {
   transition: transform 0.15s ease, -webkit-transform 0.15s ease;
 }
 .svg .dark-background .content-area .form_field_checkbox + .form_control_indicator:before {
-  border-color: white;
+  border-color: rgba(255, 255, 255, 0.2);
 }
 .content-area .form_submit {
   margin-top: 15px;

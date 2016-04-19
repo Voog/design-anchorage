@@ -377,20 +377,6 @@
   color: var(--global-primary-color);
 }
 
-.dark-background .content-area .form_field_textfield, .dark-background
-.content-area .form_field_textarea, .dark-background
-.content-area .form_field_select, .dark-background
-.content-area .form_field_radio + .form_control_indicator, .dark-background
-.content-area .form_field_checkbox + .form_control_indicator {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-.light-background .content-area .form_field_textfield, .light-background
-.content-area .form_field_textarea, .light-background
-.content-area .form_field_select, .light-background
-.content-area .form_field_radio + .form_control_indicator, .light-background
-.content-area .form_field_checkbox + .form_control_indicator {
-  background-color: rgba(0, 0, 0, 0.03);
-}
 .dark-background .content-area .form_field_textfield,
 .dark-background .content-area .form_field_textarea,
 .dark-background .content-area .form_field_select {
@@ -447,7 +433,7 @@
 }
 .svg .dark-background .content-area .form_field_radio + .form_control_indicator, .svg .dark-background
 .content-area .form_field_checkbox + .form_control_indicator {
-  border-color: white;
+  border-color: rgba(255, 255, 255, 0.2);
 }
 .svg .content-area .form_field_radio + .form_control_indicator:before {
   background-color: rgba(0, 0, 0, 0.4);

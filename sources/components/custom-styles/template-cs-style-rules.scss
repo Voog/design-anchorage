@@ -641,20 +641,6 @@
 // "FORM" TYPE CONTENT AREA
 //==============================================================================
 .content-area {
-  .form_field_textfield,
-  .form_field_textarea,
-  .form_field_select,
-  .form_field_radio + .form_control_indicator,
-  .form_field_checkbox + .form_control_indicator {
-    .dark-background & {
-      background-color: rgba($white, .1);
-    }
-
-    .light-background & {
-      background-color: rgba($black, .03);
-    }
-  }
-
   .dark-background & {
     .form_field_textfield,
     .form_field_textarea,
@@ -690,7 +676,7 @@
     .dark-background & {
       .svg & {
         + .form_control_indicator {
-          border-color: rgba($white, 1);
+          border-color: rgba($white, .2);
         }
       }
     }

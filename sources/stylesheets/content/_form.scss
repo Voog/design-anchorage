@@ -47,12 +47,6 @@
   .form_field_select {
     @extend %input-ios-reset;
     @extend %inherit-base-font;
-
-    @include placeholder {
-      color: rgba($black, 1);
-      opacity: .35;
-    }
-
     font-size: 16px;
     font-weight: 300;
     line-height: 26px;
@@ -63,6 +57,11 @@
     border-width: 1px;
     border-style: solid;
     outline: none;
+
+    @include placeholder {
+      color: rgba($black, 1);
+      opacity: .35;
+    }
 
     .dark-background & {
       color: rgba($white, 1);
@@ -75,7 +74,6 @@
     }
 
     &:focus {
-
       .dark-background & {
         border-color: rgba($white, 1);
       }
@@ -166,7 +164,7 @@
     .dark-background & {
       .svg & {
         + .form_control_indicator {
-          border-color: rgba($white, 1);
+          border-color: rgba($white, .2);
         }
       }
     }
@@ -247,7 +245,7 @@
       .svg & {
         + .form_control_indicator {
           &:before {
-            border-color: rgba($white, 1);
+            border-color: rgba($white, .2);
           }
         }
       }
