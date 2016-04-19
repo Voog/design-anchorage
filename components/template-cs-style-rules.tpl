@@ -290,10 +290,10 @@
   color: var(--global-secondary-color);
 }
 .site-footer .blog-article-nav.dark-background .article-nav-title {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--global-third-color);
 }
 .site-footer .blog-article-nav.dark-background .article-nav-direction {
-  color: rgba(255, 255, 255, 0.35);
+  color: var(--global-third-color);
 }
 
 .content-area {

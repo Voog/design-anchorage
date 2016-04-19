@@ -511,16 +511,15 @@
 
     &.dark-background {
       .article-nav-title {
-        color: rgba($white, .7);
+        color: var(--global-third-color);
       }
 
       .article-nav-direction {
-        color: rgba($white, .35);
+        color: var(--global-third-color);
       }
     }
   }
 }
-
 
 // =============================================================================
 // TEXT TYPE CONTENT AREA

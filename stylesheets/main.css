@@ -2678,14 +2678,6 @@ a img {
 .site-footer .blog-article-nav.dark-background .article-nav-half {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-.site-footer .blog-article-nav.dark-background .article-nav-full:hover .article-nav-title,
-.site-footer .blog-article-nav.dark-background .article-nav-half:hover .article-nav-title {
-  color: white;
-}
-.site-footer .blog-article-nav.dark-background .article-nav-full:hover .article-nav-direction,
-.site-footer .blog-article-nav.dark-background .article-nav-half:hover .article-nav-direction {
-  color: rgba(255, 255, 255, 0.7);
-}
 .site-footer .blog-article-nav.dark-background .article-nav-title {
   color: rgba(255, 255, 255, 0.7);
 }

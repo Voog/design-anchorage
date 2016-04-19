@@ -128,15 +128,6 @@
       .article-nav-full,
       .article-nav-half {
         border-top: 1px solid rgba($white, .1);
-
-        &:hover {
-          .article-nav-title {
-            color: rgba($white, 1);
-          }
-          .article-nav-direction {
-            color: rgba($white, .7);
-          }
-        }
       }
 
       .article-nav-title {
