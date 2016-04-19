@@ -295,43 +295,6 @@
   }
 }
 
-
-//==============================================================================
-// BLOG TAGS
-//==============================================================================
-.blog-tags {
-  color: var(--global-primary-color);
-
-  .dark-background & {
-    color: rgba($white, .7);
-  }
-
-  .tags-icon {
-    fill: var(--global-primary-color);
-
-    .dark-background & {
-      fill: rgba($white, .7);
-    }
-  }
-
-  .ico-arrow {
-    border-color: var(--global-secondary-color) transparent transparent transparent;
-
-    &.active {
-      border-width: 0 5px 8px 5px;
-      border-color: transparent transparent var(--global-secondary-color) transparent;
-
-      .dark-background & {
-        border-color: var(--global-third-color) transparent transparent transparent;
-      }
-    }
-
-    .dark-background & {
-      border-color: transparent transparent var(--global-third-color) transparent;
-    }
-  }
-}
-
 // =============================================================================
 // NAVIGATION MENUS
 // =============================================================================
