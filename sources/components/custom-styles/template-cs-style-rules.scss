@@ -40,8 +40,6 @@
   }
 
   .site-footer & {
-    color: rgba($white, .7);
-
     a,
     b {
       color: var(--global-third-color);
@@ -91,14 +89,6 @@
     @media screen and (max-width: $tablet-3) {
       .search-open & {
         fill: var(--global-primary-color);
-      }
-    }
-  }
-
-  .main-feature {
-    .aspect-ratio-inner {
-      .front-page & {
-        border-color: rgba($white, .33);
       }
     }
   }
@@ -231,7 +221,14 @@
   .dark-background {
     .article-author,
     .article-date {
-      color: rgba($white, .35);
+      color: var(--global-third-color);
+    }
+  }
+
+  .light-background {
+    .article-author,
+    .article-date {
+      color: var(--global-secondary-color);
     }
   }
 }
@@ -240,10 +237,6 @@
 // BLOG ARTICLE COMMENTS
 // =============================================================================
 .article-comments {
-  &.open {
-    box-shadow: 0 0 20px rgba($black, .1)
-  }
-
   .comments-body {
     @media screen and (max-width: $tablet-3) {
       .comments-open & {

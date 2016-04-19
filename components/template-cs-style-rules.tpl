@@ -15,9 +15,6 @@
 .dark-background .content-area table {
   color: var(--global-third-color);
 }
-.site-footer .dark-background {
-  color: rgba(255, 255, 255, 0.7);
-}
 .site-footer .dark-background a,
 .site-footer .dark-background b {
   color: var(--global-third-color);
@@ -53,9 +50,6 @@
   .search-open .dark-background .site-options .search-btn svg path {
     fill: var(--global-primary-color);
   }
-}
-.front-page .dark-background .main-feature .aspect-ratio-inner {
-  border-color: rgba(255, 255, 255, 0.33);
 }
 
 .light-background {
@@ -139,12 +133,13 @@
 }
 .blog-article-page .dark-background .article-author,
 .blog-article-page .dark-background .article-date {
-  color: rgba(255, 255, 255, 0.35);
+  color: var(--global-third-color);
+}
+.blog-article-page .light-background .article-author,
+.blog-article-page .light-background .article-date {
+  color: var(--global-secondary-color);
 }
 
-.article-comments.open {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
 @media screen and (max-width: 640px) {
   .comments-open .article-comments .comments-body {
     background-color: var(--global-third-color);

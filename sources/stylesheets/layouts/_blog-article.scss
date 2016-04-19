@@ -141,10 +141,15 @@
     }
   }
 
+  .article-author,
+  .article-date {
+    opacity: .35;
+  }
+
   .dark-background {
     .article-author,
     .article-date {
-      color: rgba($white, .35);
+      color: rgba($white, 1);
     }
   }
 }
