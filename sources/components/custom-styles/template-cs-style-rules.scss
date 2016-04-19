@@ -558,10 +558,6 @@
     .dark-background & {
       color: var(--global-third-color);
     }
-
-    .footer-inner.dark-background & {
-      color: rgba($white, .5);
-    }
   }
 
   // Styling rules for the editable content area headings.
@@ -603,20 +599,10 @@
   }
 
   // Code blocks and preformatted content.
-  pre,
-  code {
-    background-color: rgba($black, .1);
-  }
-
   .custom-btn {
     .dark-background & {
       border-color: var(--global-third-color);
       color: var(--global-third-color);
-    }
-
-    .light-background & {
-      border-color: rgba($grey, 1);
-      color: rgba($grey, 1);
     }
 
     &:hover {
@@ -624,12 +610,6 @@
         border-color: var(--global-third-color);
         background-color: var(--global-third-color);
         color: var(--global-primary-color);
-      }
-
-      .light-background & {
-        border-color: rgba($grey, 1);
-        background-color: rgba($grey, 1);
-        color: var(--global-third-color);
       }
     }
   }
@@ -645,10 +625,6 @@
     th {
       color: var(--global-third-color);
       background-color: var(--global-secondary-color);
-
-      .footer & {
-        color: rgba($white, .5);
-      }
     }
 
     .contacts & {

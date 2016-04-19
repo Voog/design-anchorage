@@ -322,20 +322,6 @@
 .content-area table {
   color: var(--global-third-color);
 }
-.footer-inner.dark-background .content-area h1, .footer-inner.dark-background
-.content-area h2, .footer-inner.dark-background
-.content-area h3, .footer-inner.dark-background
-.content-area h4, .footer-inner.dark-background
-.content-area h5, .footer-inner.dark-background
-.content-area h6, .footer-inner.dark-background
-.content-area p, .footer-inner.dark-background
-.content-area ul, .footer-inner.dark-background
-.content-area ol, .footer-inner.dark-background
-.content-area pre, .footer-inner.dark-background
-.content-area code, .footer-inner.dark-background
-.content-area table {
-  color: rgba(255, 255, 255, 0.5);
-}
 .content-area h1,
 .content-area h2,
 .content-area h3,
@@ -370,27 +356,14 @@
 .dark-background .content-area a {
   color: var(--global-third-color);
 }
-.content-area pre,
-.content-area code {
-  background-color: rgba(0, 0, 0, 0.1);
-}
 .dark-background .content-area .custom-btn {
   border-color: var(--global-third-color);
   color: var(--global-third-color);
-}
-.light-background .content-area .custom-btn {
-  border-color: #222222;
-  color: #222222;
 }
 .dark-background .content-area .custom-btn:hover {
   border-color: var(--global-third-color);
   background-color: var(--global-third-color);
   color: var(--global-primary-color);
-}
-.light-background .content-area .custom-btn:hover {
-  border-color: #222222;
-  background-color: #222222;
-  color: var(--global-third-color);
 }
 .dark-background .content-area table th, .dark-background
 .content-area table td {
@@ -399,9 +372,6 @@
 .content-area table th {
   color: var(--global-third-color);
   background-color: var(--global-secondary-color);
-}
-.footer .content-area table th {
-  color: rgba(255, 255, 255, 0.5);
 }
 .contacts .content-area table tr td {
   color: var(--global-primary-color);
