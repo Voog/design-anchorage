@@ -200,6 +200,26 @@
   fill: var(--global-secondary-color);
 }
 
+.menu-main a {
+  font-style: var(--global-menu-main-font-style);
+  font-weight: var(--global-menu-main-font-weight);
+  text-decoration: var(--global-menu-main-text-decoration);
+  text-transform: var(--global-menu-main-text-transform);
+}
+.menu-main a:hover {
+  font-style: var(--global-menu-main-hover-font-style);
+  font-weight: var(--global-menu-main-hover-font-weight);
+  text-decoration: var(--global-menu-main-hover-text-decoration);
+  text-transform: var(--global-menu-main-hover-text-transform);
+}
+.menu-main .selected a,
+.menu-main .current a {
+  font-style: var(--global-menu-main-active-font-style);
+  font-weight: var(--global-menu-main-active-font-weight);
+  text-decoration: var(--global-menu-main-active-text-decoration);
+  text-transform: var(--global-menu-main-active-text-transform);
+}
+
 @media screen and (max-width: 1024px) {
   .mobile-menu-toggler span, .mobile-menu-toggler span:before, .mobile-menu-toggler span:after {
     background-color: var(--global-secondary-color);
@@ -216,6 +236,24 @@
   }
   #mobile-menu ul a {
     color: var(--global-primary-color);
+  }
+  #mobile-menu .navigation-menu > ul > li > a {
+    font-style: var(--global-menu-main-font-style);
+    font-weight: var(--global-menu-main-font-weight);
+    text-decoration: var(--global-menu-main-text-decoration);
+    text-transform: var(--global-menu-main-text-transform);
+  }
+  #mobile-menu .navigation-menu > ul > li > a:hover {
+    font-style: var(--global-menu-main-hover-font-style);
+    font-weight: var(--global-menu-main-hover-font-weight);
+    text-decoration: var(--global-menu-main-hover-text-decoration);
+    text-transform: var(--global-menu-main-hover-text-transform);
+  }
+  #mobile-menu .navigation-menu > ul > li > a.selected, #mobile-menu .navigation-menu > ul > li > a.current {
+    font-style: var(--global-menu-main-active-font-style);
+    font-weight: var(--global-menu-main-active-font-weight);
+    text-decoration: var(--global-menu-main-active-text-decoration);
+    text-transform: var(--global-menu-main-active-text-transform);
   }
   #mobile-menu .navigation-menu ul a.selected {
     color: var(--global-secondary-color);

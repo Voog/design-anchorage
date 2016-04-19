@@ -328,6 +328,32 @@
   }
 }
 
+.menu-main {
+  a {
+    font-style: var(--global-menu-main-font-style);
+    font-weight: var(--global-menu-main-font-weight);
+    text-decoration: var(--global-menu-main-text-decoration);
+    text-transform: var(--global-menu-main-text-transform);
+
+    &:hover {
+      font-style: var(--global-menu-main-hover-font-style);
+      font-weight: var(--global-menu-main-hover-font-weight);
+      text-decoration: var(--global-menu-main-hover-text-decoration);
+      text-transform: var(--global-menu-main-hover-text-transform);
+    }
+  }
+
+  .selected,
+  .current {
+    a {
+      font-style: var(--global-menu-main-active-font-style);
+      font-weight: var(--global-menu-main-active-font-weight);
+      text-decoration: var(--global-menu-main-active-text-decoration);
+      text-transform: var(--global-menu-main-active-text-transform);
+    }
+  }
+}
+
 @media screen and (max-width: $tablet-1) {
   .mobile-menu-toggler {
     span {
@@ -365,6 +391,31 @@
     }
 
     .navigation-menu {
+      > ul {
+        > li {
+          > a {
+            font-style: var(--global-menu-main-font-style);
+            font-weight: var(--global-menu-main-font-weight);
+            text-decoration: var(--global-menu-main-text-decoration);
+            text-transform: var(--global-menu-main-text-transform);
+
+            &:hover {
+              font-style: var(--global-menu-main-hover-font-style);
+              font-weight: var(--global-menu-main-hover-font-weight);
+              text-decoration: var(--global-menu-main-hover-text-decoration);
+              text-transform: var(--global-menu-main-hover-text-transform);
+            }
+
+            &.selected,
+            &.current {
+              font-style: var(--global-menu-main-active-font-style);
+              font-weight: var(--global-menu-main-active-font-weight);
+              text-decoration: var(--global-menu-main-active-text-decoration);
+              text-transform: var(--global-menu-main-active-text-transform);
+            }
+          }
+        }
+      }
       ul {
         a {
           &.selected {
