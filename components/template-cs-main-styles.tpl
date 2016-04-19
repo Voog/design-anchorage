@@ -19,7 +19,7 @@
     "boundVariables": [
     ]
   */
-  --global-main-color: rgba(0, 0, 0, 0.7);
+  --global-primary-color: rgba(0, 0, 0, 0.7);
   /* VoogStyle
     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
     "titleI18n": "custom_styles.secondary_color",
@@ -30,4 +30,14 @@
     ]
   */
   --global-secondary-color: black;
+  /* VoogStyle
+    "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
+    "titleI18n": "custom_styles.third_color",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global",
+    "boundVariables": [
+    ]
+  */
+  --global-third-color: white;
 }

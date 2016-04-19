@@ -1,0 +1,851 @@
+// =============================================================================
+// TEMPLATE CUSTOM STYLES.
+// This file sets the configuration for design editor tool.
+//
+// This file will be converted to CSS, copied under "/components" and renamed to
+// "*.tpl".
+//
+// The output component can be included in any "layout" or "component".
+// =============================================================================
+
+// =============================================================================
+// Modules
+// =============================================================================
+@import '../../../bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import '../../stylesheets/modules/variables';
+
+// =============================================================================
+// Default stylesheet override styles.
+//
+// BASICS
+// =============================================================================
+.dark-background {
+  color: var(--global-third-color);
+
+  h1, h2, h3, h4, p, pre {
+    color: var(--global-third-color);
+  }
+
+  .site-footer & {
+    color: rgba($white, .7);
+
+    a,
+    b {
+      color: var(--global-third-color);
+    }
+  }
+
+  .header-title a {
+    color: var(--global-third-color);
+  }
+
+  .menu li a {
+    color: var(--global-third-color);
+  }
+
+  .menu li.selected a {
+    color: var(--global-third-color);
+  }
+
+  .lang-title {
+    color: var(--global-third-color);
+  }
+
+  .lang-menu {
+    &.lang-menu-bilingual {
+      .lang-title a {
+        color: rgba($white, .7);
+
+        &.is-active,
+        &:hover {
+          color: var(--global-third-color);
+        }
+      }
+
+      .lang-title a.selected {
+        color: var(--global-third-color);
+      }
+    }
+  }
+
+  .voog-reference svg path {
+    fill: var(--global-third-color);
+  }
+
+  .site-options .search-btn svg path {
+    fill: var(--global-third-color);
+
+    @media screen and (max-width: $tablet-3) {
+      .search-open & {
+        fill: var(--global-primary-color);
+      }
+    }
+  }
+
+  .main-feature {
+    .aspect-ratio-inner {
+      .front-page & {
+        border-color: rgba($white, .33);
+      }
+    }
+  }
+}
+
+.light-background {
+  color: var(--global-secondary-color);
+
+  h1, h2, h3, h4 {
+    color: var(--global-secondary-color);
+  }
+  .site-header & {
+    a {
+      color: var(--global-secondary-color);
+    }
+
+    .header-title a {
+      color: var(--global-secondary-color);
+    }
+
+    .menu li a {
+      color: var(--global-primary-color);
+
+      &:hover {
+        color: var(--global-secondary-color);
+      }
+    }
+
+    .menu li.selected a {
+      color: var(--global-secondary-color);
+    }
+  }
+
+  .site-footer & {
+    color: var(--global-primary-color);
+  }
+  .lang-title {
+    color: var(--global-secondary-color);
+  }
+
+  .lang-menu-bilingual {
+    .lang-title a {
+      &:hover {
+        color: var(--global-secondary-color);
+      }
+    }
+
+    .lang-title a.selected {
+      color: var(--global-secondary-color);
+    }
+  }
+}
+
+// =============================================================================
+// BLOG & NEWS LAYOUT
+// =============================================================================
+.blog-news-page {
+  .article-title {
+    a {
+      color: var(--global-secondary-color);
+    }
+  }
+
+  .article-author,
+  .article-date {
+    color: var(--global-secondary-color);
+
+    .dark-background & {
+      color: rgba($white, .35);
+    }
+  }
+
+  .article-excerpt {
+    color: var(--global-primary-color);
+  }
+
+  @media screen and (max-width: $tablet-3) {
+    .article-header {
+      margin: 0;
+    }
+  }
+
+  .articles-listing {
+    .blog-article {
+      .article-date {
+        color: var(--global-secondary-color);
+      }
+    }
+  }
+
+  .dark-background {
+    .article-author,
+    .article-date,
+    .articles-listing .article-date {
+      color: rgba($white, .35);
+    }
+  }
+}
+
+// =============================================================================
+// BLOG ARTICLE LAYOUT
+// =============================================================================
+.blog-article-page {
+  .article-excerpt,
+  .article-body {
+    color: var(--global-primary-color);
+  }
+
+  .comments-title {
+    color: var(--global-secondary-color);
+  }
+
+  .dark-background {
+    .comments-title {
+      color: var(--global-third-color);
+    }
+  }
+
+  .main-content {
+    .article-author,
+    .article-date {
+      color: var(--global-secondary-color);
+    }
+  }
+
+  .dark-background {
+    .article-author,
+    .article-date {
+      color: rgba($white, .35);
+    }
+  }
+}
+
+// =============================================================================
+// BLOG ARTICLE COMMENTS
+// =============================================================================
+.article-comments {
+  &.open {
+    box-shadow: 0 0 20px rgba($black, .1)
+  }
+
+  .comments-body {
+    @media screen and (max-width: $tablet-3) {
+      .comments-open & {
+        background-color: var(--global-third-color);
+      }
+    }
+
+    .comments-title {
+      color: var(--global-secondary-color);
+
+      .comments-count {
+        color: var(--global-secondary-color);
+      }
+    }
+
+    // .form_field_textfield,
+    // .form_field_textarea {
+    //   background-color: var(--global-third-color);
+    // }
+  }
+
+  .comment {
+    color: var(--global-primary-color);
+
+    .comment-author,
+    .comment-date {
+      color: var(--global-secondary-color);
+    }
+  }
+
+  .comments-close {
+    &.dark-background {
+      .btn-close {
+        background-color: var(--global-third-color);
+
+        .ico-close {
+          fill: var(--global-secondary-color);
+        }
+
+        @media screen and (min-width: $tablet-2 + 1) {
+          &:hover {
+            background-color: rgba($white, .7);
+          }
+        }
+      }
+    }
+
+    .btn-close {
+      background-color: var(--global-secondary-color);
+
+      @media screen and (max-width: $tablet-2) {
+        background-color: var(--global-third-color);
+      }
+
+      @media screen and (min-width: $tablet-2 + 1) {
+        &:hover {
+          background-color: var(--global-primary-color);
+        }
+      }
+
+      .ico-close {
+        fill: var(--global-third-color);
+
+        @media screen and (max-width: $tablet-2) {
+          fill: var(--global-primary-color);
+
+          &:hover {
+            fill: var(--global-primary-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//==============================================================================
+// BLOG TAGS
+//==============================================================================
+.blog-tags {
+  color: var(--global-primary-color);
+
+  .dark-background & {
+    color: rgba($white, .7);
+  }
+
+  .tags-icon {
+    fill: var(--global-primary-color);
+
+    .dark-background & {
+      fill: rgba($white, .7);
+    }
+  }
+
+  .ico-arrow {
+    border-color: var(--global-secondary-color) transparent transparent transparent;
+
+    &.active {
+      border-width: 0 5px 8px 5px;
+      border-color: transparent transparent var(--global-secondary-color) transparent;
+
+      .dark-background & {
+        border-color: var(--global-third-color) transparent transparent transparent;
+      }
+    }
+
+    .dark-background & {
+      border-color: transparent transparent var(--global-third-color) transparent;
+    }
+  }
+}
+
+// =============================================================================
+// NAVIGATION MENUS
+// =============================================================================
+.toggle-sub-menu {
+  .no-svg & {
+    &:before {
+      border-color: transparent transparent transparent var(--global-secondary-color);
+    }
+  }
+
+  .svg & {
+    fill: var(--global-primary-color);
+  }
+
+  &.active {
+    .no-svg & {
+      &:before {
+        border-color: var(--global-secondary-color)transparent transparent transparent;
+      }
+    }
+  }
+
+  &.highlighted {
+    .no-svg & {
+      border-color: var(--global-secondary-color) transparent transparent transparent;
+    }
+
+    .svg & {
+      fill: var(--global-secondary-color);
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-1) {
+  .mobile-menu-toggler {
+    span {
+      &,
+      &:before,
+      &:after {
+        background-color: var(--global-secondary-color);
+
+        .dark-background & {
+          background-color: var(--global-third-color);
+        }
+
+        &.flags-disabled {
+          .lang-menu-btn {
+            .lang-title {
+              color: var(--global-third-color);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #mobile-menu {
+    .search-open-btn {
+      svg {
+        fill: var(--global-secondary-color);
+      }
+    }
+
+    ul {
+      a {
+        color: var(--global-primary-color);
+      }
+    }
+
+    .navigation-menu {
+      ul {
+        a {
+          &.selected {
+            color: var(--global-secondary-color);
+          }
+        }
+      }
+    }
+
+    .lang-menu {
+      ul {
+        li {
+          a {
+            &.is-active {
+              color: var(--global-secondary-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.lang-flag:before {
+  background-color: var(--global-secondary-color);
+}
+
+/* langmenu */
+.lang-menu {
+  &.lang-menu-bilingual {
+    .lang-title {
+      a {
+        &.is-active {
+          color: var(--global-secondary-color);
+        }
+      }
+    }
+  }
+
+  li {
+    a {
+      color: var(--global-primary-color);
+    }
+  }
+
+  a {
+    &.lang-flag {
+      .dark-background &,
+      .light-background & {
+        color: var(--global-primary-color);
+
+        &:hover {
+          color: var(--global-secondary-color);
+        }
+      }
+    }
+  }
+}
+
+.lang-menu-btn {
+  .lang-title-inner {
+    &:after {
+      border-color: var(--global-secondary-color) transparent transparent transparent;
+
+      .dark-background & {
+        border-color: var(--global-third-color) transparent transparent transparent;
+      }
+    }
+  }
+}
+
+.lang-menu-popover {
+  background-color: var(--global-third-color);
+  box-shadow: 0 0 5px rgba($black, .3);
+
+  .no-boxshadow & {
+    border-color: var(--global-third-color);
+  }
+
+  .editmode & {
+    padding-bottom: 0;
+  }
+
+  a {
+    &:hover {
+      background-color: rgba($black, .1);
+    }
+
+    &.active {
+      background-color: rgba($black, .2);
+    }
+  }
+}
+
+//==============================================================================
+// SITE SIDEBAR
+//==============================================================================
+.site-sidebar {
+  .sidebar-title {
+    a {
+      color: var(--global-secondary-color);
+
+      .dark-background & {
+        color: var(--global-third-color);
+      }
+    }
+  }
+
+  .submenu {
+    a {
+      color: var(--global-secondary-color);
+
+      .dark-background & {
+        color: var(--global-third-color);
+      }
+    }
+
+    .selected {
+      color: var(--global-secondary-color);
+
+      .dark-background & {
+        color: var(--global-third-color);
+      }
+    }
+
+    .submenu-lvl2 {
+      a {
+        color: var(--global-secondary-color);
+
+        .dark-background & {
+          color: var(--global-third-color);
+        }
+      }
+      .selected {
+        .dark-background & {
+          color: var(--global-third-color);
+        }
+      }
+    }
+  }
+}
+
+// =============================================================================
+// SITE FOOTER
+// =============================================================================
+.site-footer {
+  .dark-background {
+    .content-area {
+      a {
+        color: var(--global-third-color);
+      }
+    }
+  }
+
+  .voog-reference {
+    color: var(--global-secondary-color);
+  }
+
+  .blog-article-nav {
+    .article-nav-direction {
+      color: var(--global-secondary-color);
+    }
+
+    .article-nav-title {
+      color: var(--global-secondary-color);
+    }
+
+    &.dark-background {
+      .article-nav-title {
+        color: rgba($white, .7);
+      }
+
+      .article-nav-direction {
+        color: rgba($white, .35);
+      }
+    }
+  }
+}
+
+
+// =============================================================================
+// TEXT TYPE CONTENT AREA
+// =============================================================================
+// Styling rules for the site's editable content areas.
+// NB! Each editable content-area - {% content %} - should be wrapped in the element that has the "content-area" class.
+// NB! Contact forms, image galleries and tables styling rules are located in the separate partials: "_forms.scss", "_gallery.scss" and "_tables.scss".
+.content-area {
+  color: var(--global-primary-color);
+
+  .dark-background & {
+    color: var(--global-third-color);
+
+    .site-footer & {
+      color: var(--global-third-color);
+    }
+  }
+
+  .site-footer & {
+    color: var(--global-primary-color);
+  }
+
+  // Styling rules for the editable content area headings and paragraphs.
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  pre,
+  code,
+  table {
+    .dark-background & {
+      color: var(--global-third-color);
+    }
+
+    .footer-inner.dark-background & {
+      color: rgba($white, .5);
+    }
+  }
+
+  // Styling rules for the editable content area headings.
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--global-secondary-color);
+
+    a {
+      color: var(--global-secondary-color);
+    }
+  }
+
+  // Styling rules for the editable content area paragraphs, lists and links.
+  p,
+  ul,
+  ol,
+  dl {
+    .site-footer & {
+      color: var(--global-primary-color);
+    }
+
+    .dark-background & {
+      .site-footer & {
+        color: var(--global-third-color);
+      }
+    }
+  }
+
+  a {
+    color: var(--global-secondary-color);
+
+    .dark-background & {
+      color: var(--global-third-color);
+    }
+  }
+
+  // Code blocks and preformatted content.
+  pre,
+  code {
+    background-color: rgba($black, .1);
+  }
+
+  .custom-btn {
+    .dark-background & {
+      border-color: var(--global-third-color);
+      color: var(--global-third-color);
+    }
+
+    .light-background & {
+      border-color: rgba($grey, 1);
+      color: rgba($grey, 1);
+    }
+
+    &:hover {
+      .dark-background & {
+        border-color: var(--global-third-color);
+        background-color: var(--global-third-color);
+        color: var(--global-primary-color);
+      }
+
+      .light-background & {
+        border-color: rgba($grey, 1);
+        background-color: rgba($grey, 1);
+        color: var(--global-third-color);
+      }
+    }
+  }
+
+  table {
+    th,
+    td {
+      .dark-background & {
+        border-color: var(--global-third-color);
+      }
+    }
+
+    th {
+      color: var(--global-third-color);
+      background-color: var(--global-secondary-color);
+
+      .footer & {
+        color: rgba($white, .5);
+      }
+    }
+
+    .contacts & {
+      tr {
+        td {
+          color: var(--global-primary-color);
+        }
+      }
+    }
+  }
+}
+
+//==============================================================================
+// "FORM" TYPE CONTENT AREA
+//==============================================================================
+.content-area {
+  .form_field_textfield,
+  .form_field_textarea,
+  .form_field_select,
+  .form_field_radio + .form_control_indicator,
+  .form_field_checkbox + .form_control_indicator {
+    .dark-background & {
+      background-color: rgba($white, .1);
+    }
+
+    .light-background & {
+      background-color: rgba($black, .03);
+    }
+  }
+
+  .form_field_textfield,
+  .form_field_textarea,
+  .form_field_select {
+    @include placeholder {
+      color: rgba($black, 1);
+      opacity: .35;
+    }
+
+    .dark-background & {
+      color: rgba($white, 1);
+      border-color: rgba($white, .3);
+    }
+
+    .light-background & {
+      color: rgba($black, .7);
+      border-color: rgba($black, .13);
+    }
+
+    &:focus {
+      .dark-background & {
+        border-color: rgba($white, 1);
+      }
+
+      .light-background & {
+        border-color: rgba($black, 1);
+      }
+    }
+  }
+
+  .form_field_radio,
+  .form_field_checkbox {
+    .svg & {
+      + .form_control_indicator {
+        border-color: rgba($black, .2);
+      }
+    }
+
+    .dark-background & {
+      .svg & {
+        + .form_control_indicator {
+          border-color: rgba($white, 1);
+        }
+      }
+    }
+  }
+
+  .form_field_radio {
+    .svg & {
+      + .form_control_indicator {
+        &:before {
+          background-color: rgba($black, .4);
+        }
+      }
+    }
+
+    .dark-background & {
+      .svg & {
+        &:checked {
+          + .form_control_indicator {
+            &:before {
+              background-color: rgba($white, 1);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .form_field_checkbox {
+    .svg & {
+      + .form_control_indicator {
+        &:before {
+          border-color: rgba($black, .4);
+        }
+      }
+    }
+
+    .dark-background & {
+      .svg & {
+        + .form_control_indicator {
+          &:before {
+            border-color: rgba($white, 1);
+          }
+        }
+      }
+    }
+  }
+
+  .form_submit {
+    input {
+      .dark-background & {
+        color: var(--global-secondary-color);
+        background-color: var(--global-third-color);
+      }
+
+      .light-background & {
+        color: var(--global-third-color);
+        background-color: var(--global-secondary-color);
+      }
+    }
+  }
+}

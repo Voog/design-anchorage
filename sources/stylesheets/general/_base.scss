@@ -275,14 +275,15 @@ a {
     color: rgba($white, 1);
   }
   .menu li a {
-    color: rgba($white, .7);
+    color: rgba($white, 1);
+    opacity: .7;
 
     &:hover {
-      color: rgba($white, 1);
+      opacity: 1;
     }
   }
   .menu li.selected a {
-    color: rgba($white, 1);
+    opacity: 1;
   }
   .lang-title {
     color: rgba($white, 1);
@@ -328,16 +329,19 @@ a {
 .light-background {
   color: rgba($black, 1);
 
-  & h1, h2, h3, h4 {
+  h1, h2, h3, h4 {
     color: rgba($black, 1);
   }
+
   .site-header & {
     a {
       color: rgba($black, 1);
     }
+
     .header-title a {
       color: rgba($black, 1);
     }
+
     .menu li a {
       color: rgba($black, .7);
 
@@ -353,6 +357,7 @@ a {
         }
       }
     }
+
     .menu li.selected a {
       color: rgba($black, 1);
     }

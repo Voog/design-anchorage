@@ -49,7 +49,8 @@
     @extend %inherit-base-font;
 
     @include placeholder {
-      color: rgba($black, .35);
+      color: rgba($black, 1);
+      opacity: .35;
     }
 
     font-size: 16px;
@@ -80,7 +81,8 @@
       }
 
       .light-background & {
-        border-color: rgba($black, .35);
+        border-color: rgba($black, 1);
+        opacity: .35;
       }
     }
 
@@ -267,23 +269,19 @@
       text-transform: uppercase;
       border: none;
 
+      &:hover {
+        opacity: .7;
+      }
+
       .dark-background & {
         color: rgba($black, 1);
         background-color: rgba($white, 1);
 
-        &:hover {
-          background-color: rgba($white, .7);
-        }
       }
 
       .light-background & {
         color: rgba($white, 1);
         background-color: rgba($black, 1);
-
-        &:hover {
-
-          background-color: rgba($black, .7);
-        }
       }
 
       @media screen and (min-width: $tablet-2) {

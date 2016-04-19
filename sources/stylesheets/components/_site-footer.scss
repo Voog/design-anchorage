@@ -43,19 +43,23 @@
       width: 50%;
       vertical-align: top;
       border-top: 1px solid rgba($black, .1);
+
       @media screen and (max-width: $tablet-3) {
         display: block;
         width: 100%;
       }
+
       &:hover {
         @include transition($transition);
         .article-nav-title {
-          color: rgba($black, 1);
+          opacity: 1;
         }
+
         .article-nav-direction {
-          color: rgba($black, .7);
+          opacity: .7;
         }
       }
+
       a {
         display: block;
         // overflow: auto;
@@ -92,20 +96,25 @@
       width: 100%;
       max-width: 400px;
     }
+
     .article-nav-direction {
       margin-bottom: 3px;
       font-size: 12px;
       font-weight: 400;
       line-height: 2;
-      color: rgba($black, .35);
+      color: rgba($black, 1);
+      opacity: .35;
       letter-spacing: 1px;
       text-transform: uppercase;
     }
+
     .article-nav-title {
       font-size: 20px;
       line-height: 30px;
-      color: rgba($black, .7);
+      color: rgba($black, 1);
+      opacity: .7;
     }
+
     .article-nav-bg {
       position: absolute;
       top: 0;

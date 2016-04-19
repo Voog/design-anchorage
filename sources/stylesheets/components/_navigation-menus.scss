@@ -37,7 +37,8 @@
   }
 
   .svg & {
-    fill: rgba($black, .2);
+    fill: rgba($black, 1);
+    opacity: .2;
   }
 
   &.active {

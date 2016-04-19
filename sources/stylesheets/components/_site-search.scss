@@ -274,7 +274,8 @@
 
   &.no-content {
     padding: 20px;
-    color: rgba($black, .35);
+    color: rgba($black, 1);
+    opacity: .35;
   }
 
   &.search-results-active {

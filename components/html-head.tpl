@@ -22,6 +22,24 @@
 {% comment %}MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC{% endcomment %}
 <script src="{{ javascripts_path }}/modernizr-custom.min.js"></script>
 
+{% customstyle %}
+  {% include "template-cs-main-styles" %}
+{% comment %}
+{% include "template-cs-header" %}
+  {% include "template-cs-headings" %}
+  {% if template-head == "blog_listing_page" %}
+    {% include "template-cs-blog-list" %}
+  {% endif %}
+  {% include "template-cs-content" %}
+  {% include "template-cs-list" %}
+  {% include "template-cs-table" %}
+  {% include "template-cs-form" %}
+  {% include "template-cs-footer" %}
+{% endcomment %}
+
+  {% include "template-cs-style-rules" %}
+{% endcustomstyle %}
+
 {% comment %}SITE TITLE{% endcomment %}
 {% capture page_title %}{% if article %}{{ article.title }}{% unless page.site_title == "" %} — {{ page.site_title }}{% endunless %}{% else %}{% if site.root_item.selected? and page.site_title != "" %}{{ page.site_title }}{% else %}{{ page.title }}{% unless page.site_title == "" %} — {{ page.site_title }}{% endunless %}{% endif %}{% endif %}{% endcapture %}
 <title>{{ page_title }}</title>
