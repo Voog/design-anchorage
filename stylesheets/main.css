@@ -888,17 +888,14 @@ a img {
 .blog-article-page .comments-title:hover .comments-count {
   opacity: 1;
 }
+.dark-background .blog-article-page .comments-title {
+  color: white;
+}
 .blog-article-page .comments-title .comments-title-inner {
   opacity: .35;
 }
 .blog-article-page .comments-title .comments-count {
   opacity: .7;
-}
-.blog-article-page .dark-background .comments-title {
-  color: rgba(255, 255, 255, 0.35);
-}
-.blog-article-page .dark-background .comments-count {
-  color: rgba(255, 255, 255, 0.7);
 }
 .blog-article-page .main-content {
   transition: min-height 250ms;

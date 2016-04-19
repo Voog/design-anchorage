@@ -68,22 +68,16 @@
       }
     }
 
+    .dark-background & {
+      color: rgba($white, 1);
+    }
+
     .comments-title-inner {
       opacity: .35;
     }
 
     .comments-count {
       opacity: .7;
-    }
-  }
-
-  .dark-background {
-    .comments-title {
-      color: rgba($white, .35);
-    }
-
-    .comments-count {
-      color: rgba($white, .7);
     }
   }
 
