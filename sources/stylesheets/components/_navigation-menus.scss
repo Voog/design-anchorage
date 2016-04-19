@@ -628,9 +628,15 @@ $flags:
       display: inline-block;
 
       a {
+        opacity: .7;
+
+        &:hover {
+          opacity: 1;
+        }
+
         &.is-active {
           font-weight: 400;
-          color: rgba($black, 1);
+          opacity: 1;
         }
       }
     }

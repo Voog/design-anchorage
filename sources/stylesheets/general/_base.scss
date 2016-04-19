@@ -291,14 +291,6 @@ a {
   .lang-menu {
     &.lang-menu-bilingual {
       .lang-title a {
-        color: rgba($white, .7);
-
-        &.is-active,
-        &:hover {
-          color: rgba($white, 1);
-        }
-      }
-      .lang-title a.selected {
         color: rgba($white, 1);
       }
     }
@@ -366,20 +358,9 @@ a {
   .site-footer & {
     color: rgba($black, .7);
   }
+
   .lang-title {
     color: rgba($black, 1);
-  }
-
-  .lang-menu-bilingual {
-    .lang-title a {
-      &:hover {
-        color: rgba($black, 1);
-      }
-    }
-
-    .lang-title a.selected {
-      color: rgba($black, 1);
-    }
   }
 }
 

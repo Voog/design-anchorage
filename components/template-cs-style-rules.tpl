@@ -35,7 +35,7 @@
   color: var(--global-third-color);
 }
 .dark-background .lang-menu.lang-menu-bilingual .lang-title a {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--global-third-color);
 }
 .dark-background .lang-menu.lang-menu-bilingual .lang-title a.is-active, .dark-background .lang-menu.lang-menu-bilingual .lang-title a:hover {
   color: var(--global-third-color);
@@ -267,7 +267,7 @@
   color: var(--global-primary-color);
 }
 .dark-background .lang-menu a.lang-flag, .light-background .lang-menu a.lang-flag {
-  color: var(--global-primary-color);
+  color: var(--global-secondary-color);
 }
 .dark-background .lang-menu a.lang-flag:hover, .light-background .lang-menu a.lang-flag:hover {
   color: var(--global-secondary-color);
@@ -278,23 +278,6 @@
 }
 .dark-background .lang-menu-btn .lang-title-inner:after {
   border-color: var(--global-third-color) transparent transparent transparent;
-}
-
-.lang-menu-popover {
-  background-color: var(--global-third-color);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-.no-boxshadow .lang-menu-popover {
-  border-color: var(--global-third-color);
-}
-.editmode .lang-menu-popover {
-  padding-bottom: 0;
-}
-.lang-menu-popover a:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.lang-menu-popover a.active {
-  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .site-sidebar .sidebar-title a {

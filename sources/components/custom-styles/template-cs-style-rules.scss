@@ -67,7 +67,7 @@
   .lang-menu {
     &.lang-menu-bilingual {
       .lang-title a {
-        color: rgba($white, .7);
+        color: var(--global-third-color);
 
         &.is-active,
         &:hover {
@@ -458,7 +458,7 @@
     &.lang-flag {
       .dark-background &,
       .light-background & {
-        color: var(--global-primary-color);
+        color: var(--global-secondary-color);
 
         &:hover {
           color: var(--global-secondary-color);
@@ -476,29 +476,6 @@
       .dark-background & {
         border-color: var(--global-third-color) transparent transparent transparent;
       }
-    }
-  }
-}
-
-.lang-menu-popover {
-  background-color: var(--global-third-color);
-  box-shadow: 0 0 5px rgba($black, .3);
-
-  .no-boxshadow & {
-    border-color: var(--global-third-color);
-  }
-
-  .editmode & {
-    padding-bottom: 0;
-  }
-
-  a {
-    &:hover {
-      background-color: rgba($black, .1);
-    }
-
-    &.active {
-      background-color: rgba($black, .2);
     }
   }
 }
