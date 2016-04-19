@@ -1,7 +1,18 @@
 .dark-background {
   color: var(--global-third-color);
 }
-.dark-background h1, .dark-background h2, .dark-background h3, .dark-background h4, .dark-background p, .dark-background pre {
+.dark-background .content-area h1,
+.dark-background .content-area h2,
+.dark-background .content-area h3,
+.dark-background .content-area h4,
+.dark-background .content-area h5,
+.dark-background .content-area h6,
+.dark-background .content-area p,
+.dark-background .content-area ul,
+.dark-background .content-area ol,
+.dark-background .content-area dl,
+.dark-background .content-area pre,
+.dark-background .content-area table {
   color: var(--global-third-color);
 }
 .site-footer .dark-background {
@@ -60,7 +71,7 @@
   color: var(--global-secondary-color);
 }
 .site-header .light-background .menu li a {
-  color: var(--global-primary-color);
+  color: var(--global-secondary-color);
 }
 .site-header .light-background .menu li a:hover {
   color: var(--global-secondary-color);
@@ -79,6 +90,9 @@
 }
 .light-background .lang-menu-bilingual .lang-title a.selected {
   color: var(--global-secondary-color);
+}
+.light-background .site-options .search-btn svg path {
+  fill: var(--global-secondary-color);
 }
 
 .blog-news-page .article-title a {
@@ -155,22 +169,12 @@
 .article-comments .comments-close.dark-background .btn-close .ico-close {
   fill: var(--global-secondary-color);
 }
-@media screen and (min-width: 851px) {
-  .article-comments .comments-close.dark-background .btn-close:hover {
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-}
 .article-comments .comments-close .btn-close {
   background-color: var(--global-secondary-color);
 }
 @media screen and (max-width: 850px) {
   .article-comments .comments-close .btn-close {
     background-color: var(--global-third-color);
-  }
-}
-@media screen and (min-width: 851px) {
-  .article-comments .comments-close .btn-close:hover {
-    background-color: var(--global-primary-color);
   }
 }
 .article-comments .comments-close .btn-close .ico-close {
@@ -465,51 +469,55 @@
 .content-area .form_field_checkbox + .form_control_indicator {
   background-color: rgba(0, 0, 0, 0.03);
 }
-.content-area .form_field_textfield::-webkit-input-placeholder,
-.content-area .form_field_textarea::-webkit-input-placeholder,
-.content-area .form_field_select::-webkit-input-placeholder {
-  color: black;
-  opacity: .35;
+.dark-background .content-area .form_field_textfield,
+.dark-background .content-area .form_field_textarea,
+.dark-background .content-area .form_field_select {
+  color: var(--global-third-color);
 }
-.content-area .form_field_textfield::-moz-placeholder,
-.content-area .form_field_textarea::-moz-placeholder,
-.content-area .form_field_select::-moz-placeholder {
-  color: black;
-  opacity: .35;
+.dark-background .content-area .form_field_textfield::-webkit-input-placeholder,
+.dark-background .content-area .form_field_textarea::-webkit-input-placeholder,
+.dark-background .content-area .form_field_select::-webkit-input-placeholder {
+  color: var(--global-third-color);
 }
-.content-area .form_field_textfield:-moz-placeholder,
-.content-area .form_field_textarea:-moz-placeholder,
-.content-area .form_field_select:-moz-placeholder {
-  color: black;
-  opacity: .35;
+.dark-background .content-area .form_field_textfield::-moz-placeholder,
+.dark-background .content-area .form_field_textarea::-moz-placeholder,
+.dark-background .content-area .form_field_select::-moz-placeholder {
+  color: var(--global-third-color);
 }
-.content-area .form_field_textfield:-ms-input-placeholder,
-.content-area .form_field_textarea:-ms-input-placeholder,
-.content-area .form_field_select:-ms-input-placeholder {
-  color: black;
-  opacity: .35;
+.dark-background .content-area .form_field_textfield:-moz-placeholder,
+.dark-background .content-area .form_field_textarea:-moz-placeholder,
+.dark-background .content-area .form_field_select:-moz-placeholder {
+  color: var(--global-third-color);
 }
-.dark-background .content-area .form_field_textfield, .dark-background
-.content-area .form_field_textarea, .dark-background
-.content-area .form_field_select {
-  color: white;
-  border-color: rgba(255, 255, 255, 0.3);
+.dark-background .content-area .form_field_textfield:-ms-input-placeholder,
+.dark-background .content-area .form_field_textarea:-ms-input-placeholder,
+.dark-background .content-area .form_field_select:-ms-input-placeholder {
+  color: var(--global-third-color);
 }
-.light-background .content-area .form_field_textfield, .light-background
-.content-area .form_field_textarea, .light-background
-.content-area .form_field_select {
-  color: rgba(0, 0, 0, 0.7);
-  border-color: rgba(0, 0, 0, 0.13);
+.light-background .content-area .form_field_textfield,
+.light-background .content-area .form_field_textarea,
+.light-background .content-area .form_field_select {
+  color: var(--global-primary-color);
 }
-.dark-background .content-area .form_field_textfield:focus, .dark-background
-.content-area .form_field_textarea:focus, .dark-background
-.content-area .form_field_select:focus {
-  border-color: white;
+.light-background .content-area .form_field_textfield::-webkit-input-placeholder,
+.light-background .content-area .form_field_textarea::-webkit-input-placeholder,
+.light-background .content-area .form_field_select::-webkit-input-placeholder {
+  color: var(--global-primary-color);
 }
-.light-background .content-area .form_field_textfield:focus, .light-background
-.content-area .form_field_textarea:focus, .light-background
-.content-area .form_field_select:focus {
-  border-color: black;
+.light-background .content-area .form_field_textfield::-moz-placeholder,
+.light-background .content-area .form_field_textarea::-moz-placeholder,
+.light-background .content-area .form_field_select::-moz-placeholder {
+  color: var(--global-primary-color);
+}
+.light-background .content-area .form_field_textfield:-moz-placeholder,
+.light-background .content-area .form_field_textarea:-moz-placeholder,
+.light-background .content-area .form_field_select:-moz-placeholder {
+  color: var(--global-primary-color);
+}
+.light-background .content-area .form_field_textfield:-ms-input-placeholder,
+.light-background .content-area .form_field_textarea:-ms-input-placeholder,
+.light-background .content-area .form_field_select:-ms-input-placeholder {
+  color: var(--global-primary-color);
 }
 .svg .content-area .form_field_radio + .form_control_indicator, .svg
 .content-area .form_field_checkbox + .form_control_indicator {

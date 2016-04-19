@@ -1065,12 +1065,6 @@ a img {
 .article-comments .comments-close.dark-background .btn-close .ico-close {
   fill: black;
 }
-@media screen and (min-width: 851px) {
-  .article-comments .comments-close.dark-background .btn-close:hover {
-    transition: 500ms;
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-}
 .article-comments .comments-close .btn-close {
   position: absolute;
   top: 0;
@@ -1091,7 +1085,7 @@ a img {
 @media screen and (min-width: 851px) {
   .article-comments .comments-close .btn-close:hover {
     transition: 500ms;
-    background-color: rgba(0, 0, 0, 0.7);
+    opacity: .7;
   }
 }
 .article-comments .comments-close .btn-close .ico-close {
@@ -2384,7 +2378,6 @@ a img {
 .voog-search-modal.no-content {
   padding: 20px;
   color: black;
-  opacity: .35;
 }
 .voog-search-modal.search-results-active {
   display: block;
@@ -3265,8 +3258,7 @@ a img {
 .light-background .content-area .form_field_textfield:focus, .light-background
 .content-area .form_field_textarea:focus, .light-background
 .content-area .form_field_select:focus {
-  border-color: black;
-  opacity: .35;
+  border-color: rgba(0, 0, 0, 0.35);
 }
 .content-area .form_field_textfield.form_field_size_small,
 .content-area .form_field_textarea.form_field_size_small,

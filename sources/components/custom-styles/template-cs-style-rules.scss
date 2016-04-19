@@ -22,8 +22,21 @@
 .dark-background {
   color: var(--global-third-color);
 
-  h1, h2, h3, h4, p, pre {
-    color: var(--global-third-color);
+  .content-area {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    dl,
+    pre,
+    table {
+      color: var(--global-third-color);
+    }
   }
 
   .site-footer & {
@@ -107,7 +120,7 @@
     }
 
     .menu li a {
-      color: var(--global-primary-color);
+      color: var(--global-secondary-color);
 
       &:hover {
         color: var(--global-secondary-color);
@@ -136,6 +149,10 @@
     .lang-title a.selected {
       color: var(--global-secondary-color);
     }
+  }
+
+  .site-options .search-btn svg path {
+    fill: var(--global-secondary-color);
   }
 }
 
@@ -241,11 +258,6 @@
         color: var(--global-secondary-color);
       }
     }
-
-    // .form_field_textfield,
-    // .form_field_textarea {
-    //   background-color: var(--global-third-color);
-    // }
   }
 
   .comment {
@@ -265,12 +277,6 @@
         .ico-close {
           fill: var(--global-secondary-color);
         }
-
-        @media screen and (min-width: $tablet-2 + 1) {
-          &:hover {
-            background-color: rgba($white, .7);
-          }
-        }
       }
     }
 
@@ -279,12 +285,6 @@
 
       @media screen and (max-width: $tablet-2) {
         background-color: var(--global-third-color);
-      }
-
-      @media screen and (min-width: $tablet-2 + 1) {
-        &:hover {
-          background-color: var(--global-primary-color);
-        }
       }
 
       .ico-close {
@@ -747,31 +747,26 @@
     }
   }
 
-  .form_field_textfield,
-  .form_field_textarea,
-  .form_field_select {
-    @include placeholder {
-      color: rgba($black, 1);
-      opacity: .35;
-    }
+  .dark-background & {
+    .form_field_textfield,
+    .form_field_textarea,
+    .form_field_select {
+      color: var(--global-third-color);
 
-    .dark-background & {
-      color: rgba($white, 1);
-      border-color: rgba($white, .3);
-    }
-
-    .light-background & {
-      color: rgba($black, .7);
-      border-color: rgba($black, .13);
-    }
-
-    &:focus {
-      .dark-background & {
-        border-color: rgba($white, 1);
+      @include placeholder {
+        color: var(--global-third-color);
       }
+    }
+  }
 
-      .light-background & {
-        border-color: rgba($black, 1);
+  .light-background & {
+    .form_field_textfield,
+    .form_field_textarea,
+    .form_field_select {
+      color: var(--global-primary-color);
+
+      @include placeholder {
+        color: var(--global-primary-color);
       }
     }
   }

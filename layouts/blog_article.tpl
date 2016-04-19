@@ -37,7 +37,7 @@
                         <span class="comments-title-inner">{{ "comments_for_count" | lc }}</span>
                         <span class="comments-count">({{ article.comments_count }})</span>
                       {% else %}
-                        {{ "comment" | lc }}
+                        <span class="comments-title-inner">{{ "comment" | lc }}</span>
                       {% endif %}
                     </div>
 
