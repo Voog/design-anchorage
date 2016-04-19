@@ -308,6 +308,13 @@
 .site-footer .content-area {
   color: var(--global-primary-color);
 }
+.content-area.header-title {
+  font-size: var(--global-header-body-font-size);
+  font-style: var(--global-header-body-font-style);
+  font-weight: var(--global-header-body-font-weight);
+  text-decoration: var(--global-header-body-text-decoration);
+  text-transform: var(--global-header-body-text-transform);
+}
 .dark-background .content-area h1, .dark-background
 .content-area h2, .dark-background
 .content-area h3, .dark-background

@@ -542,6 +542,14 @@
     color: var(--global-primary-color);
   }
 
+  &.header-title {
+    font-size: var(--global-header-body-font-size);
+    font-style: var(--global-header-body-font-style);
+    font-weight: var(--global-header-body-font-weight);
+    text-decoration: var(--global-header-body-text-decoration);
+    text-transform: var(--global-header-body-text-transform);
+  }
+
   // Styling rules for the editable content area headings and paragraphs.
   h1,
   h2,

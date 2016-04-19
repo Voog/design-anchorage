@@ -24,8 +24,8 @@
 
 {% customstyle %}
   {% include "template-cs-main-styles" %}
+  {% include "template-cs-header" %}
 {% comment %}
-{% include "template-cs-header" %}
   {% include "template-cs-headings" %}
   {% if template-head == "blog_listing_page" %}
     {% include "template-cs-blog-list" %}
