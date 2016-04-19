@@ -204,7 +204,7 @@
         &:checked {
           + .form_control_indicator {
             &:before {
-              background-color: rgba($white, 1);
+              background-color: rgba($white, .4);
             }
           }
         }

@@ -3351,7 +3351,7 @@ a img {
   transition: transform 0.15s ease, -webkit-transform 0.15s ease;
 }
 .svg .dark-background .content-area .form_field_radio:checked + .form_control_indicator:before {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 .svg .content-area .form_field_checkbox + .form_control_indicator {
   top: -2px;

@@ -665,65 +665,6 @@
     }
   }
 
-  .form_field_radio,
-  .form_field_checkbox {
-    .svg & {
-      + .form_control_indicator {
-        border-color: rgba($black, .2);
-      }
-    }
-
-    .dark-background & {
-      .svg & {
-        + .form_control_indicator {
-          border-color: rgba($white, .2);
-        }
-      }
-    }
-  }
-
-  .form_field_radio {
-    .svg & {
-      + .form_control_indicator {
-        &:before {
-          background-color: rgba($black, .4);
-        }
-      }
-    }
-
-    .dark-background & {
-      .svg & {
-        &:checked {
-          + .form_control_indicator {
-            &:before {
-              background-color: rgba($white, 1);
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .form_field_checkbox {
-    .svg & {
-      + .form_control_indicator {
-        &:before {
-          border-color: rgba($black, .4);
-        }
-      }
-    }
-
-    .dark-background & {
-      .svg & {
-        + .form_control_indicator {
-          &:before {
-            border-color: rgba($white, 1);
-          }
-        }
-      }
-    }
-  }
-
   .form_submit {
     input {
       .dark-background & {

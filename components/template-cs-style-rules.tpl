@@ -427,26 +427,6 @@
 .light-background .content-area .form_field_select:-ms-input-placeholder {
   color: var(--global-primary-color);
 }
-.svg .content-area .form_field_radio + .form_control_indicator, .svg
-.content-area .form_field_checkbox + .form_control_indicator {
-  border-color: rgba(0, 0, 0, 0.2);
-}
-.svg .dark-background .content-area .form_field_radio + .form_control_indicator, .svg .dark-background
-.content-area .form_field_checkbox + .form_control_indicator {
-  border-color: rgba(255, 255, 255, 0.2);
-}
-.svg .content-area .form_field_radio + .form_control_indicator:before {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.svg .dark-background .content-area .form_field_radio:checked + .form_control_indicator:before {
-  background-color: white;
-}
-.svg .content-area .form_field_checkbox + .form_control_indicator:before {
-  border-color: rgba(0, 0, 0, 0.4);
-}
-.svg .dark-background .content-area .form_field_checkbox + .form_control_indicator:before {
-  border-color: white;
-}
 .dark-background .content-area .form_submit input {
   color: var(--global-secondary-color);
   background-color: var(--global-third-color);
