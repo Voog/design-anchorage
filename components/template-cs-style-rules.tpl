@@ -89,10 +89,6 @@
   fill: var(--global-secondary-color);
 }
 
-.common-page .sidebar-active {
-  max-width: var(--global-content-max-width);
-}
-
 .blog-news-page .article-title a {
   color: var(--global-secondary-color);
 }
@@ -448,7 +444,9 @@
 .content-area dl {
   color: var(--global-third-color);
 }
-.content-area h1 {
+.content-area h1,
+.content-area h1 a,
+.content-area h1 a:hover {
   text-align: var(--global-headings-title-text-alignment);
   line-height: var(--global-headings-title-line-height);
   font-size: var(--global-headings-title-font-size);
@@ -457,7 +455,9 @@
   text-decoration: var(--global-headings-title-text-decoration);
   text-transform: var(--global-headings-title-text-transform);
 }
-.content-area h2 {
+.content-area h2,
+.content-area h2 a,
+.content-area h2 a:hover {
   text-align: var(--global-headings-heading-text-alignment);
   line-height: var(--global-headings-heading-line-height);
   font-size: var(--global-headings-heading-font-size);
@@ -467,9 +467,17 @@
   text-transform: var(--global-headings-heading-text-transform);
 }
 .content-area h3,
+.content-area h3 a,
+.content-area h3 a:hover,
 .content-area h4,
+.content-area h4 a,
+.content-area h4 a:hover,
 .content-area h5,
-.content-area h6 {
+.content-area h5 a,
+.content-area h5 a:hover,
+.content-area h6,
+.content-area h6 a,
+.content-area h6 a:hover {
   text-align: var(--global-headings-subheading-text-alignment);
   line-height: var(--global-headings-subheading-line-height);
   font-size: var(--global-headings-subheading-font-size);
@@ -479,7 +487,17 @@
   text-transform: var(--global-headings-subheading-text-transform);
 }
 .content-area a {
+  font-style: var(--global-content-link-font-style);
+  font-weight: var(--global-content-link-font-weight);
   color: var(--global-secondary-color);
+  text-decoration: var(--global-content-link-text-decoration);
+  text-transform: var(--global-content-link-text-transform);
+}
+.content-area a:hover {
+  font-style: var(--global-content-link-hover-font-style);
+  font-weight: var(--global-content-link-hover-font-weight);
+  text-decoration: var(--global-content-link-hover-text-decoration);
+  text-transform: var(--global-content-link-hover-text-transform);
 }
 .dark-background .content-area a {
   color: var(--global-third-color);

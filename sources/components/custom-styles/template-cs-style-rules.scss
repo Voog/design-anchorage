@@ -147,15 +147,6 @@
 }
 
 // =============================================================================
-// COMMON PAGE LAYOUT
-// =============================================================================
-.common-page {
-  .sidebar-active {
-    max-width: var(--global-content-max-width);
-  }
-}
-
-// =============================================================================
 // BLOG & NEWS LAYOUT
 // =============================================================================
 .blog-news-page {
@@ -714,40 +705,63 @@
   }
 
   h1 {
-    text-align: var(--global-headings-title-text-alignment);
-    line-height: var(--global-headings-title-line-height);
-    font-size: var(--global-headings-title-font-size);
-    font-weight: var(--global-headings-title-font-weight);
-    font-style: var(--global-headings-title-font-style);
-    text-decoration: var(--global-headings-title-text-decoration);
-    text-transform: var(--global-headings-title-text-transform);
+    &,
+    a,
+    a:hover {
+      text-align: var(--global-headings-title-text-alignment);
+      line-height: var(--global-headings-title-line-height);
+      font-size: var(--global-headings-title-font-size);
+      font-weight: var(--global-headings-title-font-weight);
+      font-style: var(--global-headings-title-font-style);
+      text-decoration: var(--global-headings-title-text-decoration);
+      text-transform: var(--global-headings-title-text-transform);
+    }
   }
 
   h2 {
-    text-align: var(--global-headings-heading-text-alignment);
-    line-height: var(--global-headings-heading-line-height);
-    font-size: var(--global-headings-heading-font-size);
-    font-weight: var(--global-headings-heading-font-weight);
-    font-style: var(--global-headings-heading-font-style);
-    text-decoration: var(--global-headings-heading-text-decoration);
-    text-transform: var(--global-headings-heading-text-transform);
+    &,
+    a,
+    a:hover {
+      text-align: var(--global-headings-heading-text-alignment);
+      line-height: var(--global-headings-heading-line-height);
+      font-size: var(--global-headings-heading-font-size);
+      font-weight: var(--global-headings-heading-font-weight);
+      font-style: var(--global-headings-heading-font-style);
+      text-decoration: var(--global-headings-heading-text-decoration);
+      text-transform: var(--global-headings-heading-text-transform);
+    }
   }
 
   h3,
   h4,
   h5,
   h6 {
-    text-align: var(--global-headings-subheading-text-alignment);
-    line-height: var(--global-headings-subheading-line-height);
-    font-size: var(--global-headings-subheading-font-size);
-    font-weight: var(--global-headings-subheading-font-weight);
-    font-style: var(--global-headings-subheading-font-style);
-    text-decoration: var(--global-headings-subheading-text-decoration);
-    text-transform: var(--global-headings-subheading-text-transform);
+    &,
+    a,
+    a:hover {
+      text-align: var(--global-headings-subheading-text-alignment);
+      line-height: var(--global-headings-subheading-line-height);
+      font-size: var(--global-headings-subheading-font-size);
+      font-weight: var(--global-headings-subheading-font-weight);
+      font-style: var(--global-headings-subheading-font-style);
+      text-decoration: var(--global-headings-subheading-text-decoration);
+      text-transform: var(--global-headings-subheading-text-transform);
+    }
   }
 
   a {
+    font-style: var(--global-content-link-font-style);
+    font-weight: var(--global-content-link-font-weight);
     color: var(--global-secondary-color);
+    text-decoration: var(--global-content-link-text-decoration);
+    text-transform: var(--global-content-link-text-transform);
+
+    &:hover {
+      font-style: var(--global-content-link-hover-font-style);
+      font-weight: var(--global-content-link-hover-font-weight);
+      text-decoration: var(--global-content-link-hover-text-decoration);
+      text-transform: var(--global-content-link-hover-text-transform);
+    }
 
     .dark-background & {
       color: var(--global-third-color);

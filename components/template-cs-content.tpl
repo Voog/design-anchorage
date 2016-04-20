@@ -1,27 +1,5 @@
 :root {
   /* VoogStyle
-    "pathI18n": ["custom_styles.content"],
-    "titleI18n": "custom_styles.maximum_width",
-    "editor": "rangePicker",
-    "min": 100,
-    "max": 2000,
-    "step": 1,
-    "unit": "px",
-    "scope": "global"
-  */
-  --global-content-max-width: 1040px;
-  /* VoogStyle
-    "pathI18n": ["custom_styles.content"],
-    "titleI18n": "custom_styles.padding",
-    "editor": "rangePicker",
-    "min": 0,
-    "max": 200,
-    "step": 1,
-    "unit": "px",
-    "scope": "global"
-  */
-  --global-content-padding: 0;
-  /* VoogStyle
     "pathI18n": ["custom_styles.content", "custom_styles.text"],
     "titleI18n": "custom_styles.size",
     "editor": "rangePicker",
@@ -181,7 +159,7 @@
     "icon": "underline",
     "scope": "global"
   */
-  --global-content-link-hover-text-decoration: none;
+  --global-content-link-hover-text-decoration: underline;
   /* VoogStyle
     "pathI18n": ["custom_styles.content", "custom_styles.link", "custom_styles.normal"],
     "titleI18n": "custom_styles.text_transform",
