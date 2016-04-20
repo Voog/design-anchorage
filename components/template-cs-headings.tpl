@@ -14,6 +14,7 @@
     "min": 8,
     "max": 100,
     "unit": "px",
+    "featured": true,
     "scope": "global"
   */
   --global-headings-title-font-size: 32px;
@@ -95,6 +96,7 @@
     "min": 8,
     "max": 100,
     "unit": "px",
+    "featured": true,
     "scope": "global"
   */
   --global-headings-heading-font-size: 26px;
@@ -176,6 +178,7 @@
     "min": 8,
     "max": 100,
     "unit": "px",
+    "featured": true,
     "scope": "global"
   */
   --global-headings-subheading-font-size: 24px;
