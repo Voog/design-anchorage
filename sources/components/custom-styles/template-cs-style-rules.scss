@@ -799,6 +799,9 @@
   table {
     th,
     td {
+      padding: calc(var(--global-table-padding) - 4px) var(--global-table-padding);
+      border-style: var(--global-table-border-style);
+
       .dark-background & {
         border-color: var(--global-third-color);
       }
