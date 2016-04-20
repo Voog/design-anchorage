@@ -528,6 +528,7 @@
 .content-area table th,
 .content-area table td {
   padding: calc(var(--global-table-padding) - 4px) var(--global-table-padding);
+  font-size: var(--global-table-font-size);
   border-style: var(--global-table-border-style);
 }
 .dark-background .content-area table th, .dark-background

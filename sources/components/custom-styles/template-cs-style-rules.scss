@@ -800,6 +800,7 @@
     th,
     td {
       padding: calc(var(--global-table-padding) - 4px) var(--global-table-padding);
+      font-size: var(--global-table-font-size);
       border-style: var(--global-table-border-style);
 
       .dark-background & {

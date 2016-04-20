@@ -12,6 +12,16 @@
   --global-table-padding: 13px;
   /* VoogStyle
     "pathI18n": ["custom_styles.table"],
+    "titleI18n": "custom_styles.size",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 100,
+    "unit": "px",
+    "scope": "global"
+  */
+  --global-table-font-size: 16px;
+  /* VoogStyle
+    "pathI18n": ["custom_styles.table"],
     "titleI18n": "custom_styles.border_style",
     "editor": "listPicker",
     "list": {{ base_border_style_set }},
