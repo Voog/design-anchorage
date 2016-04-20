@@ -9,7 +9,7 @@
     "unit": "px",
     "scope": "global"
   */
-  --global-table-padding: 13px;
+  --table-padding: 13px;
   /* VoogStyle
     "pathI18n": ["custom_styles.table"],
     "titleI18n": "custom_styles.size",
@@ -19,7 +19,7 @@
     "unit": "px",
     "scope": "global"
   */
-  --global-table-font-size: 16px;
+  --table-font-size: 16px;
   /* VoogStyle
     "pathI18n": ["custom_styles.table"],
     "titleI18n": "custom_styles.border_style",
@@ -28,5 +28,5 @@
     "featured": true,
     "scope": "global"
   */
-  --global-table-border-style: solid;
+  --table-border-style: solid;
 }

@@ -29,7 +29,7 @@
     "boundVariables": [
     ]
   */
-  --global-main-font-family: "Roboto", sans-serif;
+  --main-font-family: "Roboto", sans-serif;
 
   /* VoogStyle
     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
@@ -40,7 +40,7 @@
     "boundVariables": [
     ]
   */
-  --global-primary-color: rgba($black, .7);
+  --primary-color: rgba($black, .7);
 
   /* VoogStyle
     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
@@ -51,7 +51,7 @@
     "boundVariables": [
     ]
   */
-  --global-secondary-color: rgba($black, 1);
+  --secondary-color: rgba($black, 1);
 
   /* VoogStyle
     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
@@ -62,7 +62,7 @@
     "boundVariables": [
     ]
   */
-  --global-third-color: rgba($white, 1);
+  --third-color: rgba($white, 1);
 
   // scss-lint:enable Comment, Indentation
 }

@@ -9,7 +9,7 @@
     "featured": true,
     "scope": "global"
   */
-  --global-header-body-font-size: 22px;
+  --header-body-font-size: 22px;
   /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.title", "custom_styles.normal"],
     "titleI18n": "custom_styles.font_size",
@@ -22,7 +22,7 @@
     "icon": "bold",
     "scope": "global"
   */
-  --global-header-body-font-weight: 300;
+  --header-body-font-weight: 300;
   /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.title", "custom_styles.normal"],
     "titleI18n": "custom_styles.font_style",
@@ -35,7 +35,7 @@
     "icon": "italic",
     "scope": "global"
   */
-  --global-header-body-font-style: normal;
+  --header-body-font-style: normal;
   /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.title", "custom_styles.normal"],
     "titleI18n": "custom_styles.text_decoration",
@@ -48,7 +48,7 @@
     "icon": "underline",
     "scope": "global"
   */
-  --global-header-body-text-decoration: none;
+  --header-body-text-decoration: none;
   /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.title", "custom_styles.normal"],
     "titleI18n": "custom_styles.text_transform",
@@ -61,7 +61,7 @@
     "icon": "uppercase",
     "scope": "global"
   */
-  --global-header-body-text-transform: none;
+  --header-body-text-transform: none;
   /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.main_menu", "custom_styles.normal"],
     "titleI18n": "custom_styles.font_size",
@@ -74,11 +74,11 @@
     "icon": "bold",
     "scope": "global",
     "boundVariables": [
-      "--global-menu-main-hover-font-weight",
-      "--global-menu-main-active-font-weight"
+      "--menu-main-hover-font-weight",
+      "--menu-main-active-font-weight"
     ]
   */
-  --global-menu-main-font-weight: 300;
+  --menu-main-font-weight: 300;
   /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.main_menu", "custom_styles.hover"],
     "titleI18n": "custom_styles.font_size",
@@ -91,10 +91,10 @@
     "icon": "bold",
     "scope": "global",
     "boundVariables": [
-      "--global-menu-main-active-font-weight"
+      "--menu-main-active-font-weight"
     ]
   */
-  --global-menu-main-hover-font-weight: 300;
+  --menu-main-hover-font-weight: 300;
   /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.main_menu", "custom_styles.active"],
     "titleI18n": "custom_styles.font_size",
@@ -107,7 +107,7 @@
     "icon": "bold",
     "scope": "global"
   */
-  --global-menu-main-active-font-weight: 500;
+  --menu-main-active-font-weight: 500;
   /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.main_menu", "custom_styles.normal"],
     "titleI18n": "custom_styles.font_style",
@@ -120,11 +120,11 @@
     "icon": "italic",
     "scope": "global",
     "boundVariables": [
-      "--global-menu-main-hover-font-style",
-      "--global-menu-main-active-font-style"
+      "--menu-main-hover-font-style",
+      "--menu-main-active-font-style"
     ]
   */
-  --global-menu-main-font-style: normal;
+  --menu-main-font-style: normal;
   /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.main_menu", "custom_styles.hover"],
     "titleI18n": "custom_styles.font_style",
@@ -137,10 +137,10 @@
     "icon": "italic",
     "scope": "global",
     "boundVariables": [
-      "--global-menu-main-active-font-style"
+      "--menu-main-active-font-style"
     ]
   */
-  --global-menu-main-hover-font-style: normal;
+  --menu-main-hover-font-style: normal;
   /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.main_menu", "custom_styles.active"],
     "titleI18n": "custom_styles.font_style",
@@ -153,7 +153,7 @@
     "icon": "italic",
     "scope": "global"
   */
-  --global-menu-main-active-font-style: normal;
+  --menu-main-active-font-style: normal;
   /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.main_menu", "custom_styles.normal"],
     "titleI18n": "custom_styles.text_decoration",
@@ -166,11 +166,11 @@
     "icon": "underline",
     "scope": "global",
     "boundVariables": [
-      "--global-menu-main-hover-text-decoration",
-      "--global-menu-main-active-text-decoration"
+      "--menu-main-hover-text-decoration",
+      "--menu-main-active-text-decoration"
     ]
   */
-  --global-menu-main-text-decoration: none;
+  --menu-main-text-decoration: none;
   /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.main_menu", "custom_styles.hover"],
     "titleI18n": "custom_styles.text_decoration",
@@ -183,10 +183,10 @@
     "icon": "underline",
     "scope": "global",
     "boundVariables": [
-      "--global-menu-main-active-text-decoration"
+      "--menu-main-active-text-decoration"
     ]
   */
-  --global-menu-main-hover-text-decoration: none;
+  --menu-main-hover-text-decoration: none;
   /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.main_menu", "custom_styles.active"],
     "titleI18n": "custom_styles.text_decoration",
@@ -199,7 +199,7 @@
     "icon": "underline",
     "scope": "global"
   */
-  --global-menu-main-active-text-decoration: none;
+  --menu-main-active-text-decoration: none;
   /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.main_menu", "custom_styles.normal"],
     "titleI18n": "custom_styles.text_transform",
@@ -212,11 +212,11 @@
     "icon": "uppercase",
     "scope": "global",
     "boundVariables": [
-      "--global-menu-main-hover-text-transform",
-      "--global-menu-main-active-text-transform"
+      "--menu-main-hover-text-transform",
+      "--menu-main-active-text-transform"
     ]
   */
-  --global-menu-main-text-transform: uppercase;
+  --menu-main-text-transform: uppercase;
   /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.main_menu", "custom_styles.hover"],
     "titleI18n": "custom_styles.text_transform",
@@ -229,10 +229,10 @@
     "icon": "uppercase",
     "scope": "global",
     "boundVariables": [
-      "--global-menu-main-active-text-transform"
+      "--menu-main-active-text-transform"
     ]
   */
-  --global-menu-main-hover-text-transform: uppercase;
+  --menu-main-hover-text-transform: uppercase;
   /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.main_menu", "custom_styles.active"],
     "titleI18n": "custom_styles.text_transform",
@@ -245,5 +245,5 @@
     "icon": "uppercase",
     "scope": "global"
   */
-  --global-menu-main-active-text-transform: uppercase;
+  --menu-main-active-text-transform: uppercase;
 }

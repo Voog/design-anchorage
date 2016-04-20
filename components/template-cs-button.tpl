@@ -9,7 +9,7 @@
     "unit": "px",
     "scope": "global"
   */
-  --global-button-padding: 30px;
+  --button-padding: 30px;
   /* VoogStyle
     "pathI18n": ["custom_styles.button", "custom_styles.normal"],
     "titleI18n": "custom_styles.size",
@@ -20,7 +20,7 @@
     "featured": true,
     "scope": "global"
   */
-  --global-button-font-size: 16px;
+  --button-font-size: 16px;
   /* VoogStyle
     "pathI18n": ["custom_styles.button", "custom_styles.normal"],
     "titleI18n": "custom_styles.font_size",
@@ -33,10 +33,10 @@
     "icon": "bold",
     "scope": "global",
     "boundVariables": [
-      "--global-button-hover-font-weight"
+      "--button-hover-font-weight"
     ]
   */
-  --global-button-font-weight: 400;
+  --button-font-weight: 400;
   /* VoogStyle
     "pathI18n": ["custom_styles.button", "custom_styles.hover"],
     "titleI18n": "custom_styles.font_size",
@@ -49,7 +49,7 @@
     "icon": "bold",
     "scope": "global"
   */
-  --global-button-hover-font-weight: 400;
+  --button-hover-font-weight: 400;
   /* VoogStyle
     "pathI18n": ["custom_styles.button", "custom_styles.normal"],
     "titleI18n": "custom_styles.font_style",
@@ -62,10 +62,10 @@
     "icon": "italic",
     "scope": "global",
     "boundVariables": [
-      "--global-button-hover-font-style"
+      "--button-hover-font-style"
     ]
   */
-  --global-button-font-style: normal;
+  --button-font-style: normal;
   /* VoogStyle
     "pathI18n": ["custom_styles.button", "custom_styles.hover"],
     "titleI18n": "custom_styles.font_style",
@@ -78,7 +78,7 @@
     "icon": "italic",
     "scope": "global"
   */
-  --global-button-hover-font-style: normal;
+  --button-hover-font-style: normal;
   /* VoogStyle
     "pathI18n": ["custom_styles.button", "custom_styles.normal"],
     "titleI18n": "custom_styles.text_decoration",
@@ -91,10 +91,10 @@
     "icon": "underline",
     "scope": "global",
     "boundVariables": [
-      "--global-button-hover-text-decoration"
+      "--button-hover-text-decoration"
     ]
   */
-  --global-button-text-decoration: none;
+  --button-text-decoration: none;
   /* VoogStyle
     "pathI18n": ["custom_styles.button", "custom_styles.hover"],
     "titleI18n": "custom_styles.text_decoration",
@@ -107,7 +107,7 @@
     "icon": "underline",
     "scope": "global"
   */
-  --global-button-hover-text-decoration: none;
+  --button-hover-text-decoration: none;
   /* VoogStyle
     "pathI18n": ["custom_styles.button", "custom_styles.normal"],
     "titleI18n": "custom_styles.text_transform",
@@ -120,10 +120,10 @@
     "icon": "uppercase",
     "scope": "global",
     "boundVariables": [
-      "--global-button-hover-text-transform"
+      "--button-hover-text-transform"
     ]
   */
-  --global-button-text-transform: uppercase;
+  --button-text-transform: uppercase;
   /* VoogStyle
     "pathI18n": ["custom_styles.button", "custom_styles.hover"],
     "titleI18n": "custom_styles.text_transform",
@@ -136,5 +136,5 @@
     "icon": "uppercase",
     "scope": "global"
   */
-  --global-button-hover-text-transform: uppercase;
+  --button-hover-text-transform: uppercase;
 }

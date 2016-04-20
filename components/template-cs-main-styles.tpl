@@ -9,7 +9,7 @@
     "boundVariables": [
     ]
   */
-  --global-main-font-family: "Roboto", sans-serif;
+  --main-font-family: "Roboto", sans-serif;
   /* VoogStyle
     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
     "titleI18n": "custom_styles.primary_color",
@@ -19,7 +19,7 @@
     "boundVariables": [
     ]
   */
-  --global-primary-color: rgba(0, 0, 0, 0.7);
+  --primary-color: rgba(0, 0, 0, 0.7);
   /* VoogStyle
     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
     "titleI18n": "custom_styles.secondary_color",
@@ -29,7 +29,7 @@
     "boundVariables": [
     ]
   */
-  --global-secondary-color: black;
+  --secondary-color: black;
   /* VoogStyle
     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
     "titleI18n": "custom_styles.third_color",
@@ -39,5 +39,5 @@
     "boundVariables": [
     ]
   */
-  --global-third-color: white;
+  --third-color: white;
 }
