@@ -2916,6 +2916,10 @@ a img {
 .dark-background .content-area a {
   color: white;
 }
+.content-area b,
+.content-area strong {
+  font-weight: 400;
+}
 .content-area pre,
 .content-area code,
 .content-area iframe,

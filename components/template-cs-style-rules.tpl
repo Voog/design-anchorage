@@ -89,6 +89,10 @@
   fill: var(--global-secondary-color);
 }
 
+.common-page .sidebar-active {
+  max-width: var(--global-content-max-width);
+}
+
 .blog-news-page .article-title a {
   color: var(--global-secondary-color);
 }
@@ -372,7 +376,13 @@
 }
 
 .content-area {
+  font-size: var(--global-content-body-font-size);
+  font-style: var(--global-content-body-font-style);
+  font-weight: var(--global-content-body-font-weight);
+  line-height: var(--global-content-body-line-height);
   color: var(--global-primary-color);
+  text-decoration: var(--global-content-body-text-decoration);
+  text-transform: var(--global-content-body-text-transform);
 }
 .dark-background .content-area {
   color: var(--global-third-color);
@@ -419,6 +429,12 @@
 .content-area h5 a,
 .content-area h6 a {
   color: var(--global-secondary-color);
+}
+.content-area p,
+.content-area ul,
+.content-area ol,
+.content-area dl {
+  font-size: var(--global-content-body-font-size);
 }
 .site-footer .content-area p, .site-footer
 .content-area ul, .site-footer

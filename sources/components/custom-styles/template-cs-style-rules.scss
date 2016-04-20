@@ -147,6 +147,15 @@
 }
 
 // =============================================================================
+// COMMON PAGE LAYOUT
+// =============================================================================
+.common-page {
+  .sidebar-active {
+    max-width: var(--global-content-max-width);
+  }
+}
+
+// =============================================================================
 // BLOG & NEWS LAYOUT
 // =============================================================================
 .blog-news-page {
@@ -626,7 +635,13 @@
 // NB! Each editable content-area - {% content %} - should be wrapped in the element that has the "content-area" class.
 // NB! Contact forms, image galleries and tables styling rules are located in the separate partials: "_forms.scss", "_gallery.scss" and "_tables.scss".
 .content-area {
+  font-size: var(--global-content-body-font-size);
+  font-style: var(--global-content-body-font-style);
+  font-weight: var(--global-content-body-font-weight);
+  line-height: var(--global-content-body-line-height);
   color: var(--global-primary-color);
+  text-decoration: var(--global-content-body-text-decoration);
+  text-transform: var(--global-content-body-text-transform);
 
   .dark-background & {
     color: var(--global-third-color);
@@ -685,6 +700,8 @@
   ul,
   ol,
   dl {
+    font-size: var(--global-content-body-font-size);
+
     .site-footer & {
       color: var(--global-primary-color);
     }

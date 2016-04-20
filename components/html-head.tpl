@@ -29,11 +29,11 @@
     {% include "template-cs-sidebar" %}
   {% endif %}
   {% include "template-cs-headings" %}
+  {% include "template-cs-content" %}
 {% comment %}
   {% if html-head == "blog_listing_page" %}
     {% include "template-cs-blog-list" %}
   {% endif %}
-  {% include "template-cs-content" %}
   {% include "template-cs-list" %}
   {% include "template-cs-table" %}
   {% include "template-cs-form" %}
