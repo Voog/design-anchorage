@@ -491,26 +491,6 @@
         "value": "dashed"
       },
       {
-        "title": "Double",
-        "value": "double"
-      },
-      {
-        "title": "Groove",
-        "value": "groove"
-      },
-      {
-        "title": "Ridge",
-        "value": "ridge"
-      },
-      {
-        "title": "Inset",
-        "value": "inset"
-      },
-      {
-        "title": "Outset",
-        "value": "outset"
-      },
-      {
         "title": "None",
         "value": "hidden"
       }
