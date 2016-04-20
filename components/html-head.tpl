@@ -33,12 +33,7 @@
   {% include "template-cs-button" %}
   {% include "template-cs-table" %}
   {% include "template-cs-form" %}
-{% comment %}
-  {% if html-head == "blog_listing_page" %}
-    {% include "template-cs-blog-list" %}
-  {% endif %}
   {% include "template-cs-footer" %}
-{% endcomment %}
 
   {% include "template-cs-style-rules" %}
 {% endcustomstyle %}

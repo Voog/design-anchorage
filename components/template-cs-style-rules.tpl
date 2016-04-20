@@ -387,7 +387,13 @@
   color: var(--global-third-color);
 }
 .site-footer .content-area {
+  font-size: var(--global-footer-body-font-size);
+  font-style: var(--global-footer-body-font-style);
+  font-weight: var(--global-footer-body-font-weight);
   color: var(--global-primary-color);
+  text-align: var(--global-footer-body-alignment);
+  text-decoration: var(--global-footer-body-text-decoration);
+  text-transform: var(--global-footer-body-text-transform);
 }
 .content-area.header-title {
   font-size: var(--global-header-body-font-size);

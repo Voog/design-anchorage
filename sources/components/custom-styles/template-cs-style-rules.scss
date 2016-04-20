@@ -622,9 +622,6 @@
 // =============================================================================
 // TEXT TYPE CONTENT AREA
 // =============================================================================
-// Styling rules for the site's editable content areas.
-// NB! Each editable content-area - {% content %} - should be wrapped in the element that has the "content-area" class.
-// NB! Contact forms, image galleries and tables styling rules are located in the separate partials: "_forms.scss", "_gallery.scss" and "_tables.scss".
 .content-area {
   font-size: var(--global-content-body-font-size);
   font-style: var(--global-content-body-font-style);
@@ -643,7 +640,13 @@
   }
 
   .site-footer & {
+    font-size: var(--global-footer-body-font-size);
+    font-style: var(--global-footer-body-font-style);
+    font-weight: var(--global-footer-body-font-weight);
     color: var(--global-primary-color);
+    text-align: var(--global-footer-body-alignment);
+    text-decoration: var(--global-footer-body-text-decoration);
+    text-transform: var(--global-footer-body-text-transform);
   }
 
   &.header-title {
