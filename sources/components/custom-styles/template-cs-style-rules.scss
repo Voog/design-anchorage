@@ -831,12 +831,6 @@
 // "FORM" TYPE CONTENT AREA
 //==============================================================================
 .content-area {
-  .form_field_textfield,
-  .form_field_textarea,
-  .form_field_select {
-    border-style: var(--global-form-field-border-style);
-  }
-
   .dark-background & {
     .form_field_textfield,
     .form_field_textarea,

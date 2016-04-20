@@ -496,17 +496,4 @@
       }
     ]
   {% endcapture %}
-
-  {% capture slim_border_style_set %}
-    [
-      {
-        "title": "On",
-        "value": "solid"
-      },
-      {
-        "title": "Off",
-        "value": "hidden"
-      }
-    ]
-  {% endcapture %}
 {% endcapture %}
