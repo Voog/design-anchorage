@@ -543,6 +543,11 @@
   color: var(--global-primary-color);
 }
 
+.content-area .form_field_textfield,
+.content-area .form_field_textarea,
+.content-area .form_field_select {
+  border-style: var(--global-form-field-border-style);
+}
 .dark-background .content-area .form_field_textfield,
 .dark-background .content-area .form_field_textarea,
 .dark-background .content-area .form_field_select {

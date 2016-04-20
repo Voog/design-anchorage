@@ -30,13 +30,12 @@
   {% endif %}
   {% include "template-cs-headings" %}
   {% include "template-cs-content" %}
-  {% comment %}{% include "template-cs-list" %}{% endcomment %}
   {% include "template-cs-table" %}
+  {% include "template-cs-form" %}
 {% comment %}
   {% if html-head == "blog_listing_page" %}
     {% include "template-cs-blog-list" %}
   {% endif %}
-  {% include "template-cs-form" %}
   {% include "template-cs-footer" %}
 {% endcomment %}
 
