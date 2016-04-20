@@ -769,18 +769,32 @@
   }
 
   // Code blocks and preformatted content.
-  .custom-btn {
-    .dark-background & {
-      border-color: var(--global-third-color);
-      color: var(--global-third-color);
-    }
+  a.custom-btn {
+    padding: calc(var(--global-content-button-padding) - 18px) var(--global-content-button-padding) calc(var(--global-content-button-padding) - 17px);
+    font-size: var(--global-content-button-font-size);
+    font-style: var(--global-content-button-font-style);
+    font-weight: var(--global-content-button-font-weight);
+    text-decoration: var(--global-content-button-text-decoration);
+    text-transform: var(--global-content-button-text-transform);
+    background-color: var(--global-content-button-background-color);
 
     &:hover {
+      font-style: var(--global-content-button-hover-font-style);
+      font-weight: var(--global-content-button-hover-font-weight);
+      text-decoration: var(--global-content-button-hover-text-decoration);
+      text-transform: var(--global-content-button-hover-text-transform);
+      background-color: var(--global-content-button-hover-background-color);
+
       .dark-background & {
         border-color: var(--global-third-color);
         background-color: var(--global-third-color);
         color: var(--global-primary-color);
       }
+    }
+
+    .dark-background & {
+      border-color: var(--global-third-color);
+      color: var(--global-third-color);
     }
   }
 

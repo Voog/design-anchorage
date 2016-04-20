@@ -502,14 +502,30 @@
 .dark-background .content-area a {
   color: var(--global-third-color);
 }
-.dark-background .content-area .custom-btn {
-  border-color: var(--global-third-color);
-  color: var(--global-third-color);
+.content-area a.custom-btn {
+  padding: calc(var(--global-content-button-padding) - 18px) var(--global-content-button-padding) calc(var(--global-content-button-padding) - 17px);
+  font-size: var(--global-content-button-font-size);
+  font-style: var(--global-content-button-font-style);
+  font-weight: var(--global-content-button-font-weight);
+  text-decoration: var(--global-content-button-text-decoration);
+  text-transform: var(--global-content-button-text-transform);
+  background-color: var(--global-content-button-background-color);
 }
-.dark-background .content-area .custom-btn:hover {
+.content-area a.custom-btn:hover {
+  font-style: var(--global-content-button-hover-font-style);
+  font-weight: var(--global-content-button-hover-font-weight);
+  text-decoration: var(--global-content-button-hover-text-decoration);
+  text-transform: var(--global-content-button-hover-text-transform);
+  background-color: var(--global-content-button-hover-background-color);
+}
+.dark-background .content-area a.custom-btn:hover {
   border-color: var(--global-third-color);
   background-color: var(--global-third-color);
   color: var(--global-primary-color);
+}
+.dark-background .content-area a.custom-btn {
+  border-color: var(--global-third-color);
+  color: var(--global-third-color);
 }
 .dark-background .content-area table th, .dark-background
 .content-area table td {
