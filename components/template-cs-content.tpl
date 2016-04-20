@@ -1,6 +1,14 @@
 :root {
   /* VoogStyle
     "pathI18n": ["custom_styles.content", "custom_styles.text"],
+    "titleI18n": "custom_styles.alignment",
+    "editor": "listPicker",
+    "list": {{ base_alignment_set }},
+    "scope": "global"
+  */
+  --global-content-body-alignment: left;
+  /* VoogStyle
+    "pathI18n": ["custom_styles.content", "custom_styles.text"],
     "titleI18n": "custom_styles.size",
     "editor": "rangePicker",
     "min": 8,
