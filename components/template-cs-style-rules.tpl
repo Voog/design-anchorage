@@ -503,18 +503,18 @@
   color: var(--global-third-color);
 }
 .content-area a.custom-btn {
-  padding: calc(var(--global-content-button-padding) - 18px) var(--global-content-button-padding) calc(var(--global-content-button-padding) - 17px);
-  font-size: var(--global-content-button-font-size);
-  font-style: var(--global-content-button-font-style);
-  font-weight: var(--global-content-button-font-weight);
-  text-decoration: var(--global-content-button-text-decoration);
-  text-transform: var(--global-content-button-text-transform);
+  padding: calc(var(--global-button-padding) - 18px) var(--global-button-padding) calc(var(--global-button-padding) - 17px);
+  font-size: var(--global-button-font-size);
+  font-style: var(--global-button-font-style);
+  font-weight: var(--global-button-font-weight);
+  text-decoration: var(--global-button-text-decoration);
+  text-transform: var(--global-button-text-transform);
 }
 .content-area a.custom-btn:hover {
-  font-style: var(--global-content-button-hover-font-style);
-  font-weight: var(--global-content-button-hover-font-weight);
-  text-decoration: var(--global-content-button-hover-text-decoration);
-  text-transform: var(--global-content-button-hover-text-transform);
+  font-style: var(--global-button-hover-font-style);
+  font-weight: var(--global-button-hover-font-weight);
+  text-decoration: var(--global-button-hover-text-decoration);
+  text-transform: var(--global-button-hover-text-transform);
 }
 .dark-background .content-area a.custom-btn:hover {
   border-color: var(--global-third-color);
@@ -597,6 +597,20 @@
 .light-background .content-area .form_field_textarea:-ms-input-placeholder,
 .light-background .content-area .form_field_select:-ms-input-placeholder {
   color: var(--global-primary-color);
+}
+.content-area .form_submit input {
+  padding: calc(var(--global-button-padding) - 18px) var(--global-button-padding) calc(var(--global-button-padding) - 17px);
+  font-size: var(--global-button-font-size);
+  font-style: var(--global-button-font-style);
+  font-weight: var(--global-button-font-weight);
+  text-decoration: var(--global-button-text-decoration);
+  text-transform: var(--global-button-text-transform);
+}
+.content-area .form_submit input:hover {
+  font-style: var(--global-button-hover-font-style);
+  font-weight: var(--global-button-hover-font-weight);
+  text-decoration: var(--global-button-hover-text-decoration);
+  text-transform: var(--global-button-hover-text-transform);
 }
 .dark-background .content-area .form_submit input {
   color: var(--global-secondary-color);
