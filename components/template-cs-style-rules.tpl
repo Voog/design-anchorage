@@ -432,6 +432,36 @@
 .content-area dl {
   color: var(--global-third-color);
 }
+.content-area h1 {
+  text-align: var(--global-headings-title-text-alignment);
+  line-height: var(--global-headings-title-line-height);
+  font-size: var(--global-headings-title-font-size);
+  font-weight: var(--global-headings-title-font-weight);
+  font-style: var(--global-headings-title-font-style);
+  text-decoration: var(--global-headings-title-text-decoration);
+  text-transform: var(--global-headings-title-text-transform);
+}
+.content-area h2 {
+  text-align: var(--global-headings-heading-text-alignment);
+  line-height: var(--global-headings-heading-line-height);
+  font-size: var(--global-headings-heading-font-size);
+  font-weight: var(--global-headings-heading-font-weight);
+  font-style: var(--global-headings-heading-font-style);
+  text-decoration: var(--global-headings-heading-text-decoration);
+  text-transform: var(--global-headings-heading-text-transform);
+}
+.content-area h3,
+.content-area h4,
+.content-area h5,
+.content-area h6 {
+  text-align: var(--global-headings-subheading-text-alignment);
+  line-height: var(--global-headings-subheading-line-height);
+  font-size: var(--global-headings-subheading-font-size);
+  font-weight: var(--global-headings-subheading-font-weight);
+  font-style: var(--global-headings-subheading-font-style);
+  text-decoration: var(--global-headings-subheading-text-decoration);
+  text-transform: var(--global-headings-subheading-text-transform);
+}
 .content-area a {
   color: var(--global-secondary-color);
 }

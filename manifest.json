@@ -36,9 +36,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-mobile.tpl",
-      "layout_name": "menu-mobile",
-      "title": "menu-mobile"
+      "file": "components/menu-sub.tpl",
+      "layout_name": "menu-sub",
+      "title": "menu-sub"
     },
     {
       "content_type": "component",
@@ -106,16 +106,16 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/blog-article-comments.tpl",
-      "layout_name": "blog-article-comments",
-      "title": "blog-article-comments"
+      "file": "components/menu-mobile.tpl",
+      "layout_name": "menu-mobile",
+      "title": "menu-mobile"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-sub.tpl",
-      "layout_name": "menu-sub",
-      "title": "menu-sub"
+      "file": "components/blog-article-comments.tpl",
+      "layout_name": "blog-article-comments",
+      "title": "blog-article-comments"
     },
     {
       "content_type": "component",
@@ -165,6 +165,13 @@
       "file": "components/template-cs-header.tpl",
       "layout_name": "template-cs-header",
       "title": "template-cs-header"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-headings.tpl",
+      "layout_name": "template-cs-headings",
+      "title": "template-cs-headings"
     },
     {
       "content_type": "component",

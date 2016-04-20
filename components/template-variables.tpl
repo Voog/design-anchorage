@@ -458,4 +458,21 @@
       }
     ]
   {% endcapture %}
+
+  {% capture base_alignment_set %}
+    [
+      {
+        "title": "Left",
+        "value": "left"
+      },
+      {
+        "title": "Center",
+        "value": "center"
+      },
+      {
+        "title": "Right",
+        "value": "right"
+      }
+    ]
+  {% endcapture %}
 {% endcapture %}

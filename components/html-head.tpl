@@ -28,8 +28,8 @@
   {% if sidebar %}
     {% include "template-cs-sidebar" %}
   {% endif %}
-{% comment %}
   {% include "template-cs-headings" %}
+{% comment %}
   {% if html-head == "blog_listing_page" %}
     {% include "template-cs-blog-list" %}
   {% endif %}
