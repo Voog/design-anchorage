@@ -257,7 +257,7 @@ module.exports = function(grunt) {
 
       custom_styles: {
         files: 'sources/components/custom-styles/*.scss',
-        tasks: ['sass:build_custom_styles', 'copy:custom_styles', 'clean:remove', 'exec:kitmanifest']
+        tasks: ['sass:build_custom_styles', 'postcss:custom_styles', 'copy:custom_styles', 'clean:remove', 'exec:kitmanifest']
       },
 
       img_copy: {
