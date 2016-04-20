@@ -25,9 +25,12 @@
 {% customstyle %}
   {% include "template-cs-main-styles" %}
   {% include "template-cs-header" %}
+  {% if sidebar %}
+    {% include "template-cs-sidebar" %}
+  {% endif %}
 {% comment %}
   {% include "template-cs-headings" %}
-  {% if template-head == "blog_listing_page" %}
+  {% if html-head == "blog_listing_page" %}
     {% include "template-cs-blog-list" %}
   {% endif %}
   {% include "template-cs-content" %}

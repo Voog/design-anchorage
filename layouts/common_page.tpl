@@ -3,7 +3,7 @@
   <head prefix="og: http://ogp.me/ns#">
     {% assign common_page = true %}
     {% include "template-variables" %}
-    {% include "html-head" %}
+    {% include "html-head" sidebar: true %}
     {% include "template-styles" %}
   </head>
 

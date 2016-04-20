@@ -258,6 +258,24 @@
   #mobile-menu .navigation-menu ul a.selected {
     color: var(--global-secondary-color);
   }
+  #mobile-menu .navigation-menu .sub-menu a {
+    font-style: var(--global-menu-sub-font-style);
+    font-weight: var(--global-menu-sub-font-weight);
+    text-decoration: var(--global-menu-sub-text-decoration);
+    text-transform: var(--global-menu-sub-text-transform);
+  }
+  #mobile-menu .navigation-menu .sub-menu a:hover {
+    font-style: var(--global-menu-sub-hover-font-style);
+    font-weight: var(--global-menu-sub-hover-font-weight);
+    text-decoration: var(--global-menu-sub-hover-text-decoration);
+    text-transform: var(--global-menu-sub-hover-text-transform);
+  }
+  #mobile-menu .navigation-menu .sub-menu a.selected, #mobile-menu .navigation-menu .sub-menu a.current {
+    font-style: var(--global-menu-sub-active-font-style);
+    font-weight: var(--global-menu-sub-active-font-weight);
+    text-decoration: var(--global-menu-sub-active-text-decoration);
+    text-transform: var(--global-menu-sub-active-text-transform);
+  }
   #mobile-menu .lang-menu ul li a.is-active {
     color: var(--global-secondary-color);
   }
@@ -294,10 +312,29 @@
   color: var(--global-third-color);
 }
 .site-sidebar .submenu a {
+  font-weight: var(--global-menu-sub-font-weight);
+  font-style: var(--global-menu-sub-font-style);
+  text-decoration: var(--global-menu-sub-text-decoration);
+  text-transform: var(--global-menu-sub-text-transform);
   color: var(--global-secondary-color);
+}
+.site-sidebar .submenu a:hover {
+  font-weight: var(--global-menu-sub-hover-font-weight);
+  font-style: var(--global-menu-sub-hover-font-style);
+  text-decoration: var(--global-menu-sub-hover-text-decoration);
+  text-transform: var(--global-menu-sub-hover-text-transform);
 }
 .dark-background .site-sidebar .submenu a {
   color: var(--global-third-color);
+}
+.site-sidebar .submenu .selected,
+.site-sidebar .submenu .selected a,
+.site-sidebar .submenu .current,
+.site-sidebar .submenu .current a {
+  font-weight: var(--global-menu-sub-active-font-weight);
+  font-style: var(--global-menu-sub-active-font-style);
+  text-decoration: var(--global-menu-sub-active-text-decoration);
+  text-transform: var(--global-menu-sub-active-text-transform);
 }
 .site-sidebar .submenu .selected {
   color: var(--global-secondary-color);
