@@ -509,14 +509,12 @@
   font-weight: var(--global-content-button-font-weight);
   text-decoration: var(--global-content-button-text-decoration);
   text-transform: var(--global-content-button-text-transform);
-  background-color: var(--global-content-button-background-color);
 }
 .content-area a.custom-btn:hover {
   font-style: var(--global-content-button-hover-font-style);
   font-weight: var(--global-content-button-hover-font-weight);
   text-decoration: var(--global-content-button-hover-text-decoration);
   text-transform: var(--global-content-button-hover-text-transform);
-  background-color: var(--global-content-button-hover-background-color);
 }
 .dark-background .content-area a.custom-btn:hover {
   border-color: var(--global-third-color);
