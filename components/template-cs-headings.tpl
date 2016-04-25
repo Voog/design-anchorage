@@ -71,6 +71,7 @@
   /* VoogStyle
     "pathI18n": ["custom_styles.headings", "custom_styles.title"],
     "titleI18n": "custom_styles.text_transform",
+    "type": "button",
     "editor": "toggleIcon",
     "states": {
       "on": "uppercase",

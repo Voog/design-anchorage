@@ -377,13 +377,9 @@ body {
 
 .content-area {
   font-size: var(--content-body-font-size);
-  font-style: var(--content-body-font-style);
-  font-weight: var(--content-body-font-weight);
   line-height: var(--content-body-line-height);
   color: var(--primary-color);
   text-align: var(--content-body-alignment);
-  text-decoration: var(--content-body-text-decoration);
-  text-transform: var(--content-body-text-transform);
 }
 .dark-background .content-area {
   color: var(--third-color);
@@ -554,6 +550,14 @@ body {
   color: var(--primary-color);
 }
 
+.content-area .form_field_textfield,
+.content-area .form_field_textarea {
+  font-style: var(--form-field-font-style);
+  font-weight: var(--form-field-font-weight);
+  font-size: var(--form-field-font-size);
+  text-decoration: var(--form-field-text-decoration);
+  text-transform: var(--form-field-text-transform);
+}
 .dark-background .content-area .form_field_textfield,
 .dark-background .content-area .form_field_textarea,
 .dark-background .content-area .form_field_select {
