@@ -517,12 +517,6 @@ body {
   text-decoration: var(--button-text-decoration);
   text-transform: var(--button-text-transform);
 }
-.content-area a.custom-btn:hover {
-  font-style: var(--button-hover-font-style);
-  font-weight: var(--button-hover-font-weight);
-  text-decoration: var(--button-hover-text-decoration);
-  text-transform: var(--button-hover-text-transform);
-}
 .dark-background .content-area a.custom-btn:hover {
   border-color: var(--third-color);
   background-color: var(--third-color);
@@ -615,12 +609,6 @@ body {
   font-weight: var(--button-font-weight);
   text-decoration: var(--button-text-decoration);
   text-transform: var(--button-text-transform);
-}
-.content-area .form_submit input:hover {
-  font-style: var(--button-hover-font-style);
-  font-weight: var(--button-hover-font-weight);
-  text-decoration: var(--button-hover-text-decoration);
-  text-transform: var(--button-hover-text-transform);
 }
 .dark-background .content-area .form_submit input {
   color: var(--secondary-color);

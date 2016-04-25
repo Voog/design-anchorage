@@ -782,11 +782,6 @@ body {
     text-transform: var(--button-text-transform);
 
     &:hover {
-      font-style: var(--button-hover-font-style);
-      font-weight: var(--button-hover-font-weight);
-      text-decoration: var(--button-hover-text-decoration);
-      text-transform: var(--button-hover-text-transform);
-
       .dark-background & {
         border-color: var(--third-color);
         background-color: var(--third-color);
@@ -873,13 +868,6 @@ body {
       font-weight: var(--button-font-weight);
       text-decoration: var(--button-text-decoration);
       text-transform: var(--button-text-transform);
-
-      &:hover {
-        font-style: var(--button-hover-font-style);
-        font-weight: var(--button-hover-font-weight);
-        text-decoration: var(--button-hover-text-decoration);
-        text-transform: var(--button-hover-text-transform);
-      }
 
       .dark-background & {
         color: var(--secondary-color);
