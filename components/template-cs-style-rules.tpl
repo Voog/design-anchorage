@@ -1,3 +1,7 @@
+body {
+  font-family: var(--main-font-family);
+}
+
 .dark-background {
   color: var(--third-color);
 }
