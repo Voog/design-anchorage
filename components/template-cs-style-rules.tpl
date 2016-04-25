@@ -396,7 +396,7 @@ body {
   text-decoration: var(--footer-body-text-decoration);
   text-transform: var(--footer-body-text-transform);
 }
-.content-area.header-title {
+.content-area.header-title, .content-area.header-title a {
   font-size: var(--header-body-font-size);
   font-style: var(--header-body-font-style);
   font-weight: var(--header-body-font-weight);

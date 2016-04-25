@@ -20,7 +20,7 @@
 // BASICS
 // =============================================================================
 body {
-  font-family: var(--main-font-family);  
+  font-family: var(--main-font-family);
 }
 
 .dark-background {
@@ -651,11 +651,14 @@ body {
   }
 
   &.header-title {
-    font-size: var(--header-body-font-size);
-    font-style: var(--header-body-font-style);
-    font-weight: var(--header-body-font-weight);
-    text-decoration: var(--header-body-text-decoration);
-    text-transform: var(--header-body-text-transform);
+    &,
+    & a {
+      font-size: var(--header-body-font-size);
+      font-style: var(--header-body-font-style);
+      font-weight: var(--header-body-font-weight);
+      text-decoration: var(--header-body-text-decoration);
+      text-transform: var(--header-body-text-transform);
+    }
   }
 
   // Styling rules for the editable content area headings and paragraphs.
@@ -826,7 +829,7 @@ body {
 // "FORM" TYPE CONTENT AREA
 //==============================================================================
 .content-area {
-  
+
   .form_field_textfield,
   .form_field_textarea {
     font-style: var(--form-field-font-style);
@@ -835,7 +838,7 @@ body {
     text-decoration: var(--form-field-text-decoration);
     text-transform: var(--form-field-text-transform);
   }
-  
+
   .dark-background & {
     .form_field_textfield,
     .form_field_textarea,
