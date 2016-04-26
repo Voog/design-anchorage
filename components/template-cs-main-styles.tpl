@@ -1,7 +1,7 @@
 :root {
   /* VoogStyle
-    "pathI18n": ["custom_styles.main_styles"],
-    "titleI18n": "custom_styles.font",
+    "pathI18n": ["main_styles"],
+    "titleI18n": "font",
     "editor": "listPicker",
     "list": {{ base_font_set }},
     "featured": true,
@@ -11,8 +11,8 @@
   */
   --main-font-family: "Roboto", sans-serif;
   /* VoogStyle
-    "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
-    "titleI18n": "custom_styles.primary_color",
+    "pathI18n": ["main_styles", "colors"],
+    "titleI18n": "primary_color",
     "editor": "colorPicker",
     "featured": true,
     "scope": "global",
@@ -21,8 +21,8 @@
   */
   --primary-color: rgba(0, 0, 0, 0.7);
   /* VoogStyle
-    "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
-    "titleI18n": "custom_styles.secondary_color",
+    "pathI18n": ["main_styles", "colors"],
+    "titleI18n": "secondary_color",
     "editor": "colorPicker",
     "featured": true,
     "scope": "global",
@@ -31,8 +31,8 @@
   */
   --secondary-color: black;
   /* VoogStyle
-    "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
-    "titleI18n": "custom_styles.third_color",
+    "pathI18n": ["main_styles", "colors"],
+    "titleI18n": "third_color",
     "editor": "colorPicker",
     "featured": true,
     "scope": "global",

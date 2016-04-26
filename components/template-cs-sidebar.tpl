@@ -1,7 +1,7 @@
 :root {
   /* VoogStyle
-    "pathI18n": ["custom_styles.sidebar", "custom_styles.sub_menu", "custom_styles.normal"],
-    "titleI18n": "custom_styles.font_size",
+    "pathI18n": ["sidebar", "sub_menu", "normal"],
+    "titleI18n": "font_size",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -17,8 +17,8 @@
   */
   --menu-sub-font-weight: 300;
   /* VoogStyle
-    "pathI18n": ["custom_styles.sidebar", "custom_styles.sub_menu", "custom_styles.hover"],
-    "titleI18n": "custom_styles.font_size",
+    "pathI18n": ["sidebar", "sub_menu", "hover"],
+    "titleI18n": "font_size",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -33,8 +33,8 @@
   */
   --menu-sub-hover-font-weight: 300;
   /* VoogStyle
-    "pathI18n": ["custom_styles.sidebar", "custom_styles.sub_menu", "custom_styles.active"],
-    "titleI18n": "custom_styles.font_size",
+    "pathI18n": ["sidebar", "sub_menu", "active"],
+    "titleI18n": "font_size",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -46,8 +46,8 @@
   */
   --menu-sub-active-font-weight: 500;
   /* VoogStyle
-    "pathI18n": ["custom_styles.sidebar", "custom_styles.sub_menu", "custom_styles.normal"],
-    "titleI18n": "custom_styles.font_style",
+    "pathI18n": ["sidebar", "sub_menu", "normal"],
+    "titleI18n": "font_style",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -63,8 +63,8 @@
   */
   --menu-sub-font-style: normal;
   /* VoogStyle
-    "pathI18n": ["custom_styles.sidebar", "custom_styles.sub_menu", "custom_styles.hover"],
-    "titleI18n": "custom_styles.font_style",
+    "pathI18n": ["sidebar", "sub_menu", "hover"],
+    "titleI18n": "font_style",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -79,8 +79,8 @@
   */
   --menu-sub-hover-font-style: normal;
   /* VoogStyle
-    "pathI18n": ["custom_styles.sidebar", "custom_styles.sub_menu", "custom_styles.active"],
-    "titleI18n": "custom_styles.font_style",
+    "pathI18n": ["sidebar", "sub_menu", "active"],
+    "titleI18n": "font_style",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -92,8 +92,8 @@
   */
   --menu-sub-active-font-style: normal;
   /* VoogStyle
-    "pathI18n": ["custom_styles.sidebar", "custom_styles.sub_menu", "custom_styles.normal"],
-    "titleI18n": "custom_styles.text_decoration",
+    "pathI18n": ["sidebar", "sub_menu", "normal"],
+    "titleI18n": "text_decoration",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -109,8 +109,8 @@
   */
   --menu-sub-text-decoration: none;
   /* VoogStyle
-    "pathI18n": ["custom_styles.sidebar", "custom_styles.sub_menu", "custom_styles.hover"],
-    "titleI18n": "custom_styles.text_decoration",
+    "pathI18n": ["sidebar", "sub_menu", "hover"],
+    "titleI18n": "text_decoration",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -125,8 +125,8 @@
   */
   --menu-sub-hover-text-decoration: none;
   /* VoogStyle
-    "pathI18n": ["custom_styles.sidebar", "custom_styles.sub_menu", "custom_styles.active"],
-    "titleI18n": "custom_styles.text_decoration",
+    "pathI18n": ["sidebar", "sub_menu", "active"],
+    "titleI18n": "text_decoration",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -138,8 +138,8 @@
   */
   --menu-sub-active-text-decoration: none;
   /* VoogStyle
-    "pathI18n": ["custom_styles.sidebar", "custom_styles.sub_menu", "custom_styles.normal"],
-    "titleI18n": "custom_styles.text_transform",
+    "pathI18n": ["sidebar", "sub_menu", "normal"],
+    "titleI18n": "text_transform",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -155,8 +155,8 @@
   */
   --menu-sub-text-transform: none;
   /* VoogStyle
-    "pathI18n": ["custom_styles.sidebar", "custom_styles.sub_menu", "custom_styles.hover"],
-    "titleI18n": "custom_styles.text_transform",
+    "pathI18n": ["sidebar", "sub_menu", "hover"],
+    "titleI18n": "text_transform",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -171,8 +171,8 @@
   */
   --menu-sub-hover-text-transform: none;
   /* VoogStyle
-    "pathI18n": ["custom_styles.sidebar", "custom_styles.sub_menu", "custom_styles.active"],
-    "titleI18n": "custom_styles.text_transform",
+    "pathI18n": ["sidebar", "sub_menu", "active"],
+    "titleI18n": "text_transform",
     "type": "button",
     "editor": "toggleIcon",
     "states": {

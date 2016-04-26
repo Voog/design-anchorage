@@ -1,7 +1,7 @@
 :root {
   /* VoogStyle
-    "pathI18n": ["custom_styles.table"],
-    "titleI18n": "custom_styles.padding",
+    "pathI18n": ["table"],
+    "titleI18n": "padding",
     "editor": "rangePicker",
     "min": 0,
     "max": 200,
@@ -11,8 +11,8 @@
   */
   --table-padding: 13px;
   /* VoogStyle
-    "pathI18n": ["custom_styles.table"],
-    "titleI18n": "custom_styles.size",
+    "pathI18n": ["table"],
+    "titleI18n": "size",
     "editor": "rangePicker",
     "min": 8,
     "max": 100,
@@ -21,8 +21,8 @@
   */
   --table-font-size: 16px;
   /* VoogStyle
-    "pathI18n": ["custom_styles.table"],
-    "titleI18n": "custom_styles.border_style",
+    "pathI18n": ["table"],
+    "titleI18n": "border_style",
     "editor": "listPicker",
     "list": {{ base_border_style_set }},
     "featured": true,
