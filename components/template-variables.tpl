@@ -462,15 +462,15 @@
   {% capture base_alignment_set %}
     [
       {
-        "title": "Left",
+        "titleI18n": "custom_styles.left",
         "value": "left"
       },
       {
-        "title": "Center",
+        "titleI18n": "custom_styles.center",
         "value": "center"
       },
       {
-        "title": "Right",
+        "titleI18n": "custom_styles.right",
         "value": "right"
       }
     ]
@@ -479,19 +479,19 @@
   {% capture base_border_style_set %}
     [
       {
-        "title": "Solid",
+        "titleI18n": "custom_styles.solid",
         "value": "solid"
       },
       {
-        "title": "Dotted",
+        "titleI18n": "custom_styles.dotted",
         "value": "dotted"
       },
       {
-        "title": "Dashed",
+        "titleI18n": "custom_styles.dashed",
         "value": "dashed"
       },
       {
-        "title": "None",
+        "titleI18n": "custom_styles.none",
         "value": "hidden"
       }
     ]
