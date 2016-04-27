@@ -483,14 +483,6 @@
         "value": "solid"
       },
       {
-        "titleI18n": "dotted",
-        "value": "dotted"
-      },
-      {
-        "titleI18n": "dashed",
-        "value": "dashed"
-      },
-      {
         "titleI18n": "none",
         "value": "hidden"
       }
