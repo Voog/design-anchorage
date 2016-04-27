@@ -38,7 +38,7 @@
     }
 
     .light-background & {
-      background-color: rgba($black-base, .03);
+      background-color: rgba($black, .03);
     }
   }
 
@@ -47,11 +47,6 @@
   .form_field_select {
     @extend %input-ios-reset;
     @extend %inherit-base-font;
-
-    @include placeholder {
-      color: rgba($black-base, .36);
-    }
-
     font-size: 16px;
     font-weight: 300;
     line-height: 26px;
@@ -63,24 +58,28 @@
     border-style: solid;
     outline: none;
 
+    @include placeholder {
+      color: rgba($black, 1);
+      opacity: .35;
+    }
+
     .dark-background & {
       color: rgba($white, 1);
       border-color: rgba($white, .3);
     }
 
     .light-background & {
-      color: rgba($black-base, .71);
-      border-color: rgba($black-base, .13);
+      color: rgba($black, .7);
+      border-color: rgba($black, .13);
     }
 
     &:focus {
-
       .dark-background & {
         border-color: rgba($white, 1);
       }
 
       .light-background & {
-        border-color: rgba($black-base, .33);
+        border-color: rgba($black, .35);
       }
     }
 
@@ -158,14 +157,14 @@
         vertical-align: middle;
         border-width: 1px;
         border-style: solid;
-        border-color: rgba($black-base, .2);
+        border-color: rgba($black, .2);
       }
     }
 
     .dark-background & {
       .svg & {
         + .form_control_indicator {
-          border-color: rgba($white, 1);
+          border-color: rgba($white, .2);
         }
       }
     }
@@ -186,7 +185,7 @@
           left: 3px;
           content: '';
           border-radius: 100%;
-          background-color: rgba($black-base, .4);
+          background-color: rgba($black, .4);
         }
       }
 
@@ -205,7 +204,7 @@
         &:checked {
           + .form_control_indicator {
             &:before {
-              background-color: rgba($white, 1);
+              background-color: rgba($white, .4);
             }
           }
         }
@@ -228,7 +227,7 @@
           transition: transform .15s ease 0s;
           border-width: 0 2px 2px 0;
           border-style: none solid solid none;
-          border-color: rgba($black-base, .4);
+          border-color: rgba($black, .4);
         }
       }
 
@@ -246,7 +245,7 @@
       .svg & {
         + .form_control_indicator {
           &:before {
-            border-color: rgba($white, 1);
+            border-color: rgba($white, .2);
           }
         }
       }
@@ -267,23 +266,19 @@
       text-transform: uppercase;
       border: none;
 
+      &:hover {
+        opacity: .7;
+      }
+
       .dark-background & {
         color: rgba($black, 1);
         background-color: rgba($white, 1);
 
-        &:hover {
-          background-color: rgba($white, .71);
-        }
       }
 
       .light-background & {
         color: rgba($white, 1);
         background-color: rgba($black, 1);
-
-        &:hover {
-
-          background-color: rgba($black-base, .71);
-        }
       }
 
       @media screen and (min-width: $tablet-2) {
@@ -345,6 +340,6 @@
 
   .form_notice {
     margin-bottom: $margin-low;
-    color: rgba($success-color, .71);
+    color: rgba($success-color, .70);
   }
 }

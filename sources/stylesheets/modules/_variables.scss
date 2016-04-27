@@ -3,18 +3,15 @@
 // Comment out the "_variables.scss" partial in the "main.scss" file if not used.
 
 // Basic colors.
-$black-base: #000;
-$black: rgba($black-base, .87);
-$black-lighter: #a4a3a3;
-$grey: #aaaaaa;
-$white: #ffffff;
-$white-cloudy: #dedede;
-$blue: #0066BB;
-$yellow: #F9EC5A;
+$black: #000;
+$white: #fff;
+$grey: #222;
+$blue: #06b;
+$yellow: #f9ec5a;
 $red: #c70909;
 
 // Specific colors.
-$error-color: #ff0000;
+$error-color: #f00;
 $success-color: #0ecb00;
 
 // Font family.

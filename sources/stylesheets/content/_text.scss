@@ -4,7 +4,7 @@
 .content-area {
   @extend %clearfix;
   @include hyphenate(true);
-  color: rgba($black-base, .71);
+  color: rgba($black, .7);
   font-size: 18px;
   line-height: 1.7;
 
@@ -18,7 +18,7 @@
 
   .site-footer & {
     font-size: 14px;
-    color: rgba($black-base, .6);
+    color: rgba($black, .7);
   }
 
   &.footer-left {
@@ -84,11 +84,11 @@
   h5,
   h6 {
     font-weight: 300;
-    color: rgba($black-base, .87);
+    color: rgba($black, 1);
     line-height: 1.4;
 
     a {
-      color: rgba($black-base, 1);
+      color: rgba($black, 1);
       text-decoration: none;
     }
   }
@@ -166,7 +166,7 @@
 
     .site-footer & {
       font-size: 14px;
-      color: rgba($black-base, .6);
+      color: rgba($black, .7);
     }
 
     .dark-background & {
@@ -218,6 +218,11 @@
     .dark-background & {
       color: rgba($white, 1);
     }
+  }
+
+  b,
+  strong {
+    font-weight: 400;
   }
 
   // Disables hyphenation for the elements that shouldn't hyphenate.
@@ -312,27 +317,27 @@
     }
 
     .dark-background & {
-      border: 2px solid $white;
+      border: 2px solid rgba($white, 1);
       color: rgba($white, 1);
     }
 
     .light-background & {
-      border: 2px solid #222;
-      color: rgba(#222222, 1);
+      border: 2px solid rgba($grey, 1);
+      color: rgba($grey, 1);
     }
 
     &:hover {
       @include transition($transition);
 
       .dark-background & {
-        border: 2px solid $white;
+        border: 2px solid rgba($white, 1);
         background-color: rgba($white, 1);
-        color: rgba($black-base, .71);
+        color: rgba($black, .7);
       }
 
       .light-background & {
-        border: 2px solid #222222;
-        background-color: rgba(#222222, 1);
+        border: 2px solid rgba($grey, 1);
+        background-color: rgba($grey, 1);
         color: rgba($white, 1);
       }
     }
@@ -417,7 +422,9 @@
       padding: 9px 13px;
 
       .dark-background & {
-        border: 1px solid rgba($white, 1);
+        border-color: rgba($white, 1);
+        border-style: solid;
+        border-width: 1px;
       }
     }
 
@@ -426,9 +433,9 @@
       font-weight: 400;
       color: rgba($white, 1);
       background-color: rgba($black, 1);
-      border: 1px solid rgba($black, 1);
-
-
+      border-color: rgba($black, 1);
+      border-style: solid;
+      border-width: 1px;
 
       .footer & {
         color: rgba($white, .5);
@@ -436,13 +443,16 @@
     }
 
     td {
-      border: 1px solid rgba($black, .1);
+      border-color: rgba($black, .1);
+      border-style: solid;
+      border-width: 1px;
 
       .dark-background & {
-        border: 1px solid rgba($white, .1);
+        border-color: rgba($white, .1);
+        border-style: solid;
+        border-width: 1px;
       }
     }
-
 
     .contacts &,
     .footer & {
@@ -474,7 +484,7 @@
       tr {
         td {
           padding: 0 25px;
-          color: rgba($black, .73);
+          color: rgba($black, .7);
           border-top: none;
           border-left: 2px solid rgba($black, .2);
           border-right: none;

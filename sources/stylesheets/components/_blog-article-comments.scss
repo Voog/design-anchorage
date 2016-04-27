@@ -22,7 +22,7 @@
     @include transition(250ms);
     top: 0;
     right: 0;
-    box-shadow: 0 0 20px rgba($black-base, .1);
+    box-shadow: 0 0 20px rgba($black, .1);
 
     @media screen and (max-width: $tablet-3) {
       display: block;
@@ -68,7 +68,8 @@
       .comments-count {
         display: inline-block;
         font-size: 14px;
-        color: rgba($black-base, .36);
+        color: rgba($black, 1);
+        opacity: .35;
         vertical-align: middle;
       }
     }
@@ -83,7 +84,7 @@
 
   .comment {
     margin: 20px 0 0;
-    color: rgba($black-base, .71);
+    color: rgba($black, .7);
 
     &:first-child {
       margin-top: 0;
@@ -100,7 +101,8 @@
       font-size: 14px;
       font-weight: 300;
       line-height: 2;
-      color: rgba($grey, 1);
+      color: rgba($black, 1);
+      opacity: .35;
     }
   }
 
@@ -111,13 +113,6 @@
 
         .ico-close {
           fill: rgba($black, 1);
-        }
-
-        @media screen and (min-width: $tablet-2 + 1) {
-          &:hover {
-            @include transition($transition);
-            background-color: rgba($white, .71);
-          }
         }
       }
     }
@@ -141,7 +136,7 @@
       @media screen and (min-width: $tablet-2 + 1) {
         &:hover {
           @include transition($transition);
-          background-color: rgba($black-base, .71);
+          opacity: .7;
         }
       }
 
@@ -150,11 +145,11 @@
         fill: rgba($white, 1);
 
         @media screen and (max-width: $tablet-2) {
-          fill: rgba($black, .71);
+          fill: rgba($black, .7);
 
           &:hover {
             @include transition($transition);
-            fill: rgba($black-base, .71);
+            fill: rgba($black, .7);
           }
         }
       }

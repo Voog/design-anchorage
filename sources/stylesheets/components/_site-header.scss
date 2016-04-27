@@ -29,9 +29,9 @@
       padding-left: 40px;
 
       .flexbox & {
-        @include display(flex);
-        @include flex-wrap(wrap);
-        @include justify-content(flex-end);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
       }
 
       @media screen and (max-width: $tablet-3) {
@@ -63,6 +63,10 @@
 
     a {
       text-decoration: none;
+      
+      &:hover {
+        opacity: .7;
+      }
     }
   }
 

@@ -32,19 +32,20 @@
       content: '';
       border-width: 5px 0 5px 8px;
       border-style: solid;
-      border-color: transparent transparent transparent $black-base;
+      border-color: transparent transparent transparent rgba($black, 1);
     }
   }
 
   .svg & {
-    fill: rgba($black-base, .2);
+    fill: rgba($black, 1);
+    opacity: .2;
   }
 
   &.active {
     .no-svg & {
       &:before {
         border-width: 8px 5px 0;
-        border-color: $black-base transparent transparent transparent;
+        border-color:rgba($black, 1)transparent transparent transparent;
       }
     }
 
@@ -55,11 +56,11 @@
 
   &.highlighted {
     .no-svg & {
-      border-color: rgba($black-base, 1) transparent transparent transparent;
+      border-color: rgba($black, 1) transparent transparent transparent;
     }
 
     .svg & {
-      fill: rgba($black-base, 1);
+      fill: rgba($black, 1);
     }
   }
 }
@@ -81,7 +82,7 @@
     }
 
     &.selected {
-      font-weight: 400;
+      font-weight: 500;
     }
 
     a {
@@ -277,7 +278,7 @@
       }
 
       svg {
-        fill: rgba($black-base, 1);
+        fill: rgba($black, 1);
       }
     }
 
@@ -300,7 +301,7 @@
         line-height: 1.3;
         padding: 10px 0;
         text-transform: uppercase;
-        color: rgba($black-base, .62);
+        color: rgba($black, .7);
 
         &.untranslated {
           color: rgba($red, .7);
@@ -335,7 +336,7 @@
 
           &.selected {
             font-weight: 500;
-            color: rgba($black-base, 1);
+            color: rgba($black, 1);
           }
 
           &.indented {
@@ -413,7 +414,7 @@
 
             &.is-active {
               font-weight: 500;
-              color: rgba($black-base, 1);
+              color: rgba($black, 1);
             }
           }
         }
@@ -460,7 +461,7 @@
   opacity: .95;
   background-repeat: no-repeat;
   .no-boxshadow & {
-    border: 1px solid $white;
+    border: 1px solid rgba($white, 1);
   }
   .svg & {
     background-image: url('../assets/ico-flags.svg');
@@ -627,9 +628,15 @@ $flags:
       display: inline-block;
 
       a {
+        opacity: .7;
+
+        &:hover {
+          opacity: 1;
+        }
+
         &.is-active {
           font-weight: 400;
-          color: rgba($black, 1);
+          opacity: 1;
         }
       }
     }
@@ -758,7 +765,7 @@ $flags:
       content: "";
       border-style: solid;
       border-width: 6px 3px 0 3px;
-      border-color: rgba($black-base, 1) transparent transparent transparent;
+      border-color: rgba($black, 1) transparent transparent transparent;
 
       .dark-background & {
         border-color: rgba($white, 1) transparent transparent transparent;
@@ -775,10 +782,10 @@ $flags:
   padding: 5px 0;
   text-align: left;
   background-color: rgba($white, 1);
-  box-shadow: 0 0 5px rgba($black-base, .3);
+  box-shadow: 0 0 5px rgba($black, .3);
 
   .no-boxshadow & {
-    border: 1px solid $white;
+    border: 1px solid rgba($white, 1);
   }
 
   .editmode & {

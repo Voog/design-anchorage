@@ -1,3 +1,6 @@
+// =============================================================================
+// BASICS
+// =============================================================================
 html {
   @media screen and (max-width: $tablet-3) {
     &.search-open,
@@ -100,7 +103,7 @@ a {
   }
 
   .flexbox & {
-    @include display(flex);
+    display: flex;
     @include flex-direction(column);
     min-height: 100vh;
   }
@@ -272,14 +275,15 @@ a {
     color: rgba($white, 1);
   }
   .menu li a {
-    color: rgba($white, .7);
+    color: rgba($white, 1);
+    opacity: .7;
 
     &:hover {
-      color: rgba($white, 1);
+      opacity: 1;
     }
   }
   .menu li.selected a {
-    color: rgba($white, 1);
+    opacity: 1;
   }
   .lang-title {
     color: rgba($white, 1);
@@ -287,14 +291,6 @@ a {
   .lang-menu {
     &.lang-menu-bilingual {
       .lang-title a {
-        color: rgba($white, .7);
-
-        &.is-active,
-        &:hover {
-          color: rgba($white, 1);
-        }
-      }
-      .lang-title a.selected {
         color: rgba($white, 1);
       }
     }
@@ -308,7 +304,7 @@ a {
 
     @media screen and (max-width: $tablet-3) {
       .search-open & {
-        fill: rgba($black-base, .71);
+        fill: rgba($black, .70);
       }
     }
   }
@@ -325,16 +321,19 @@ a {
 .light-background {
   color: rgba($black, 1);
 
-  & h1, h2, h3, h4 {
+  h1, h2, h3, h4 {
     color: rgba($black, 1);
   }
+
   .site-header & {
     a {
       color: rgba($black, 1);
     }
+
     .header-title a {
       color: rgba($black, 1);
     }
+
     .menu li a {
       color: rgba($black, .7);
 
@@ -350,28 +349,18 @@ a {
         }
       }
     }
+
     .menu li.selected a {
       color: rgba($black, 1);
     }
   }
 
   .site-footer & {
-    color: rgba($black-base, .71);
+    color: rgba($black, .7);
   }
+
   .lang-title {
     color: rgba($black, 1);
-  }
-
-  .lang-menu-bilingual {
-    .lang-title a {
-      &:hover {
-        color: rgba($black, 1);
-      }
-    }
-
-    .lang-title a.selected {
-      color: rgba($black, 1);
-    }
   }
 }
 

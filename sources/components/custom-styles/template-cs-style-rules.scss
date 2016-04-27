@@ -1,0 +1,892 @@
+// =============================================================================
+// TEMPLATE CUSTOM STYLES.
+// This file sets the configuration for design editor tool.
+//
+// This file will be converted to CSS, copied under "/components" and renamed to
+// "*.tpl".
+//
+// The output component can be included in any "layout" or "component".
+// =============================================================================
+
+// =============================================================================
+// Modules
+// =============================================================================
+@import '../../../bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import '../../stylesheets/modules/variables';
+
+// =============================================================================
+// Default stylesheet override styles.
+//
+// BASICS
+// =============================================================================
+body {
+  font-family: var(--main-font-family);
+}
+
+.dark-background {
+  color: var(--third-color);
+
+  .content-area {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    dl,
+    pre,
+    table {
+      color: var(--third-color);
+    }
+  }
+
+  .site-footer & {
+    a,
+    b {
+      color: var(--third-color);
+    }
+  }
+
+  .header-title a,
+  .header-title a:hover {
+    color: var(--third-color);
+  }
+
+  .menu li a {
+    color: var(--third-color);
+  }
+
+  .menu li.selected a {
+    color: var(--third-color);
+  }
+
+  .lang-title {
+    color: var(--third-color);
+  }
+
+  .lang-menu {
+    &.lang-menu-bilingual {
+      .lang-title a {
+        color: var(--third-color);
+
+        &.is-active,
+        &:hover {
+          color: var(--third-color);
+        }
+      }
+
+      .lang-title a.selected {
+        color: var(--third-color);
+      }
+    }
+  }
+
+  .voog-reference svg path {
+    fill: var(--third-color);
+  }
+
+  .site-options .search-btn svg path {
+    fill: var(--third-color);
+
+    @media screen and (max-width: $tablet-3) {
+      .search-open & {
+        fill: var(--primary-color);
+      }
+    }
+  }
+}
+
+.light-background {
+  color: var(--secondary-color);
+
+  h1, h2, h3, h4 {
+    color: var(--secondary-color);
+  }
+  .site-header & {
+    a {
+      color: var(--secondary-color);
+    }
+
+    .header-title a,
+    .header-title a:hover {
+      color: var(--secondary-color);
+    }
+
+    .menu li a {
+      color: var(--secondary-color);
+
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+
+    .menu li.selected a {
+      color: var(--secondary-color);
+    }
+  }
+
+  .site-footer & {
+    color: var(--primary-color);
+  }
+  .lang-title {
+    color: var(--secondary-color);
+  }
+
+  .lang-menu-bilingual {
+    .lang-title a {
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+
+    .lang-title a.selected {
+      color: var(--secondary-color);
+    }
+  }
+
+  .site-options .search-btn svg path {
+    fill: var(--secondary-color);
+  }
+}
+
+// =============================================================================
+// BLOG & NEWS LAYOUT
+// =============================================================================
+.blog-news-page {
+  .article-title {
+    a {
+      color: var(--secondary-color);
+    }
+  }
+
+  .article-author,
+  .article-date {
+    color: var(--secondary-color);
+
+    .dark-background & {
+      color: rgba($white, .35);
+    }
+  }
+
+  .article-excerpt {
+    color: var(--primary-color);
+  }
+
+  @media screen and (max-width: $tablet-3) {
+    .article-header {
+      margin: 0;
+    }
+  }
+
+  .articles-listing {
+    .blog-article {
+      .article-date {
+        color: var(--secondary-color);
+      }
+    }
+  }
+
+  .dark-background {
+    .article-author,
+    .article-date,
+    .articles-listing .article-date {
+      color: rgba($white, .35);
+    }
+  }
+}
+
+// =============================================================================
+// BLOG ARTICLE LAYOUT
+// =============================================================================
+.blog-article-page {
+  .article-excerpt,
+  .article-body {
+    color: var(--primary-color);
+  }
+
+  .comments-title {
+    color: var(--secondary-color);
+  }
+
+  .dark-background {
+    .comments-title {
+      color: var(--third-color);
+    }
+  }
+
+  .main-content {
+    .article-author,
+    .article-date {
+      color: var(--secondary-color);
+    }
+  }
+
+  .dark-background {
+    .article-author,
+    .article-date {
+      color: var(--third-color);
+    }
+  }
+
+  .light-background {
+    .article-author,
+    .article-date {
+      color: var(--secondary-color);
+    }
+  }
+}
+
+// =============================================================================
+// BLOG ARTICLE COMMENTS
+// =============================================================================
+.article-comments {
+  .comments-body {
+    @media screen and (max-width: $tablet-3) {
+      .comments-open & {
+        background-color: var(--third-color);
+      }
+    }
+
+    .comments-title {
+      color: var(--secondary-color);
+
+      .comments-count {
+        color: var(--secondary-color);
+      }
+    }
+  }
+
+  .comment {
+    color: var(--primary-color);
+
+    .comment-author,
+    .comment-date {
+      color: var(--secondary-color);
+    }
+  }
+
+  .comments-close {
+    &.dark-background {
+      .btn-close {
+        background-color: var(--third-color);
+
+        .ico-close {
+          fill: var(--secondary-color);
+        }
+      }
+    }
+
+    .btn-close {
+      background-color: var(--secondary-color);
+
+      @media screen and (max-width: $tablet-2) {
+        background-color: var(--third-color);
+      }
+
+      .ico-close {
+        fill: var(--third-color);
+
+        @media screen and (max-width: $tablet-2) {
+          fill: var(--primary-color);
+
+          &:hover {
+            fill: var(--primary-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+// =============================================================================
+// NAVIGATION MENUS
+// =============================================================================
+.toggle-sub-menu {
+  .no-svg & {
+    &:before {
+      border-color: transparent transparent transparent var(--secondary-color);
+    }
+  }
+
+  .svg & {
+    fill: var(--primary-color);
+  }
+
+  &.active {
+    .no-svg & {
+      &:before {
+        border-color: var(--secondary-color)transparent transparent transparent;
+      }
+    }
+  }
+
+  &.highlighted {
+    .no-svg & {
+      border-color: var(--secondary-color) transparent transparent transparent;
+    }
+
+    .svg & {
+      fill: var(--secondary-color);
+    }
+  }
+}
+
+.menu-main {
+  a {
+    font-style: var(--menu-main-font-style);
+    font-weight: var(--menu-main-font-weight);
+    text-decoration: var(--menu-main-text-decoration);
+    text-transform: var(--menu-main-text-transform);
+
+    &:hover {
+      font-style: var(--menu-main-hover-font-style);
+      font-weight: var(--menu-main-hover-font-weight);
+      text-decoration: var(--menu-main-hover-text-decoration);
+      text-transform: var(--menu-main-hover-text-transform);
+    }
+  }
+
+  .selected,
+  .current {
+    a {
+      font-style: var(--menu-main-active-font-style);
+      font-weight: var(--menu-main-active-font-weight);
+      text-decoration: var(--menu-main-active-text-decoration);
+      text-transform: var(--menu-main-active-text-transform);
+    }
+  }
+}
+
+@media screen and (max-width: $tablet-1) {
+  .mobile-menu-toggler {
+    span {
+      &,
+      &:before,
+      &:after {
+        background-color: var(--secondary-color);
+
+        .dark-background & {
+          background-color: var(--third-color);
+        }
+
+        &.flags-disabled {
+          .lang-menu-btn {
+            .lang-title {
+              color: var(--third-color);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #mobile-menu {
+    .search-open-btn {
+      svg {
+        fill: var(--secondary-color);
+      }
+    }
+
+    ul {
+      a {
+        color: var(--primary-color);
+      }
+    }
+
+    .navigation-menu {
+      > ul {
+        > li {
+          > a {
+            font-style: var(--menu-main-font-style);
+            font-weight: var(--menu-main-font-weight);
+            text-decoration: var(--menu-main-text-decoration);
+            text-transform: var(--menu-main-text-transform);
+
+            &:hover {
+              font-style: var(--menu-main-hover-font-style);
+              font-weight: var(--menu-main-hover-font-weight);
+              text-decoration: var(--menu-main-hover-text-decoration);
+              text-transform: var(--menu-main-hover-text-transform);
+            }
+
+            &.selected,
+            &.current {
+              font-style: var(--menu-main-active-font-style);
+              font-weight: var(--menu-main-active-font-weight);
+              text-decoration: var(--menu-main-active-text-decoration);
+              text-transform: var(--menu-main-active-text-transform);
+            }
+          }
+        }
+      }
+
+      ul {
+        a {
+          &.selected {
+            color: var(--secondary-color);
+          }
+        }
+      }
+
+      .sub-menu {
+        a {
+          font-style: var(--menu-sub-font-style);
+          font-weight: var(--menu-sub-font-weight);
+          text-decoration: var(--menu-sub-text-decoration);
+          text-transform: var(--menu-sub-text-transform);
+
+          &:hover {
+            font-style: var(--menu-sub-hover-font-style);
+            font-weight: var(--menu-sub-hover-font-weight);
+            text-decoration: var(--menu-sub-hover-text-decoration);
+            text-transform: var(--menu-sub-hover-text-transform);
+          }
+
+          &.selected,
+          &.current {
+            font-style: var(--menu-sub-active-font-style);
+            font-weight: var(--menu-sub-active-font-weight);
+            text-decoration: var(--menu-sub-active-text-decoration);
+            text-transform: var(--menu-sub-active-text-transform);
+          }
+        }
+      }
+    }
+
+    .lang-menu {
+      ul {
+        li {
+          a {
+            &.is-active {
+              color: var(--secondary-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.lang-flag:before {
+  background-color: var(--secondary-color);
+}
+
+/* langmenu */
+.lang-menu {
+  &.lang-menu-bilingual {
+    .lang-title {
+      a {
+        &.is-active {
+          color: var(--secondary-color);
+        }
+      }
+    }
+  }
+
+  li {
+    a {
+      color: var(--primary-color);
+    }
+  }
+
+  a {
+    &.lang-flag {
+      .dark-background &,
+      .light-background & {
+        color: var(--secondary-color);
+
+        &:hover {
+          color: var(--secondary-color);
+        }
+      }
+    }
+  }
+}
+
+.lang-menu-btn {
+  .lang-title-inner {
+    &:after {
+      border-color: var(--secondary-color) transparent transparent transparent;
+
+      .dark-background & {
+        border-color: var(--third-color) transparent transparent transparent;
+      }
+    }
+  }
+}
+
+//==============================================================================
+// SITE SIDEBAR
+//==============================================================================
+.site-sidebar {
+  .sidebar-title {
+    a {
+      color: var(--secondary-color);
+
+      .dark-background & {
+        color: var(--third-color);
+      }
+    }
+  }
+
+  .submenu {
+    a {
+      font-weight: var(--menu-sub-font-weight);
+      font-style: var(--menu-sub-font-style);
+      text-decoration: var(--menu-sub-text-decoration);
+      text-transform: var(--menu-sub-text-transform);
+      color: var(--secondary-color);
+
+      &:hover {
+        font-weight: var(--menu-sub-hover-font-weight);
+        font-style: var(--menu-sub-hover-font-style);
+        text-decoration: var(--menu-sub-hover-text-decoration);
+        text-transform: var(--menu-sub-hover-text-transform);
+      }
+
+      .dark-background & {
+        color: var(--third-color);
+      }
+    }
+
+    .selected,
+    .current {
+      &,
+      a {
+        font-weight: var(--menu-sub-active-font-weight);
+        font-style: var(--menu-sub-active-font-style);
+        text-decoration: var(--menu-sub-active-text-decoration);
+        text-transform: var(--menu-sub-active-text-transform);
+      }
+    }
+
+    .selected {
+      color: var(--secondary-color);
+
+      .dark-background & {
+        color: var(--third-color);
+      }
+    }
+
+    .submenu-lvl2 {
+      a {
+        color: var(--secondary-color);
+
+        .dark-background & {
+          color: var(--third-color);
+        }
+      }
+      .selected {
+        .dark-background & {
+          color: var(--third-color);
+        }
+      }
+    }
+  }
+}
+
+// =============================================================================
+// SITE FOOTER
+// =============================================================================
+.site-footer {
+  .dark-background {
+    .content-area {
+      a {
+        color: var(--third-color);
+      }
+    }
+  }
+
+  .voog-reference {
+    color: var(--secondary-color);
+  }
+
+  .blog-article-nav {
+    .article-nav-direction {
+      color: var(--secondary-color);
+    }
+
+    .article-nav-title {
+      color: var(--secondary-color);
+    }
+
+    &.dark-background {
+      .article-nav-title {
+        color: var(--third-color);
+      }
+
+      .article-nav-direction {
+        color: var(--third-color);
+      }
+    }
+  }
+}
+
+// =============================================================================
+// TEXT TYPE CONTENT AREA
+// =============================================================================
+.content-area {
+  font-size: var(--content-body-font-size);
+  line-height: var(--content-body-line-height);
+  color: var(--primary-color);
+  text-align: var(--content-body-alignment);
+
+  .dark-background & {
+    color: var(--third-color);
+
+    .site-footer & {
+      color: var(--third-color);
+    }
+  }
+
+  .site-footer & {
+    font-size: var(--footer-body-font-size);
+    font-style: var(--footer-body-font-style);
+    font-weight: var(--footer-body-font-weight);
+    color: var(--primary-color);
+    text-align: var(--footer-body-alignment);
+    text-decoration: var(--footer-body-text-decoration);
+    text-transform: var(--footer-body-text-transform);
+  }
+
+  &.header-title {
+    &,
+    & a,
+    & a:hover {
+      font-size: var(--header-body-font-size);
+      font-style: var(--header-body-font-style);
+      font-weight: var(--header-body-font-weight);
+      text-decoration: var(--header-body-text-decoration);
+      text-transform: var(--header-body-text-transform);
+    }
+  }
+
+  // Styling rules for the editable content area headings and paragraphs.
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  pre,
+  code,
+  table {
+    .dark-background & {
+      color: var(--third-color);
+    }
+  }
+
+  // Styling rules for the editable content area headings.
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--secondary-color);
+
+    a {
+      color: var(--secondary-color);
+    }
+  }
+
+  // Styling rules for the editable content area paragraphs, lists and links.
+  p,
+  ul,
+  ol,
+  dl {
+    font-size: var(--content-body-font-size);
+
+    .site-footer & {
+      color: var(--primary-color);
+    }
+
+    .dark-background & {
+      .site-footer & {
+        color: var(--third-color);
+      }
+    }
+  }
+
+  h1 {
+    &,
+    a,
+    a:hover {
+      text-align: var(--headings-title-text-alignment);
+      line-height: var(--headings-title-line-height);
+      font-size: var(--headings-title-font-size);
+      font-weight: var(--headings-title-font-weight);
+      font-style: var(--headings-title-font-style);
+      text-decoration: var(--headings-title-text-decoration);
+      text-transform: var(--headings-title-text-transform);
+    }
+  }
+
+  h2 {
+    &,
+    a,
+    a:hover {
+      text-align: var(--headings-heading-text-alignment);
+      line-height: var(--headings-heading-line-height);
+      font-size: var(--headings-heading-font-size);
+      font-weight: var(--headings-heading-font-weight);
+      font-style: var(--headings-heading-font-style);
+      text-decoration: var(--headings-heading-text-decoration);
+      text-transform: var(--headings-heading-text-transform);
+    }
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    &,
+    a,
+    a:hover {
+      text-align: var(--headings-subheading-text-alignment);
+      line-height: var(--headings-subheading-line-height);
+      font-size: var(--headings-subheading-font-size);
+      font-weight: var(--headings-subheading-font-weight);
+      font-style: var(--headings-subheading-font-style);
+      text-decoration: var(--headings-subheading-text-decoration);
+      text-transform: var(--headings-subheading-text-transform);
+    }
+  }
+
+  a {
+    font-style: var(--content-link-font-style);
+    font-weight: var(--content-link-font-weight);
+    color: var(--secondary-color);
+    text-decoration: var(--content-link-text-decoration);
+    text-transform: var(--content-link-text-transform);
+
+    &:hover {
+      font-style: var(--content-link-hover-font-style);
+      font-weight: var(--content-link-hover-font-weight);
+      text-decoration: var(--content-link-hover-text-decoration);
+      text-transform: var(--content-link-hover-text-transform);
+    }
+
+    .dark-background & {
+      color: var(--third-color);
+    }
+  }
+
+  // Code blocks and preformatted content.
+  a.custom-btn {
+    padding: calc(var(--button-padding) - 18px) var(--button-padding) calc(var(--button-padding) - 17px);
+    font-size: var(--button-font-size);
+    font-style: var(--button-font-style);
+    font-weight: var(--button-font-weight);
+    text-decoration: var(--button-text-decoration);
+    text-transform: var(--button-text-transform);
+
+    &:hover {
+      .dark-background & {
+        border-color: var(--third-color);
+        background-color: var(--third-color);
+        color: var(--primary-color);
+      }
+    }
+
+    .dark-background & {
+      border-color: var(--third-color);
+      color: var(--third-color);
+    }
+  }
+
+  table {
+    th, td {
+      padding: calc(var(--table-padding) - 4px) var(--table-padding);
+      font-size: var(--table-font-size);
+      border-style: var(--table-border-style);
+
+      .dark-background & {
+        border-style: var(--table-border-style);
+      }
+
+      .light-background & {
+        border-style: var(--table-border-style);
+      }
+    }
+
+    th {
+      color: var(--third-color);
+      background-color: var(--secondary-color);
+    }
+
+    .contacts & {
+      tr {
+        td {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+}
+
+//==============================================================================
+// "FORM" TYPE CONTENT AREA
+//==============================================================================
+.content-area {
+
+  .form_field_textfield,
+  .form_field_textarea {
+    font-style: var(--form-field-font-style);
+    font-weight: var(--form-field-font-weight);
+    font-size: var(--form-field-font-size);
+    text-decoration: var(--form-field-text-decoration);
+    text-transform: var(--form-field-text-transform);
+  }
+
+  .dark-background & {
+    .form_field_textfield,
+    .form_field_textarea,
+    .form_field_select {
+      color: var(--third-color);
+
+      @include placeholder {
+        color: var(--third-color);
+      }
+    }
+  }
+
+  .light-background & {
+    .form_field_textfield,
+    .form_field_textarea,
+    .form_field_select {
+      color: var(--primary-color);
+
+      @include placeholder {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  .form_submit {
+    input {
+      padding: calc(var(--button-padding) - 18px) var(--button-padding) calc(var(--button-padding) - 17px);
+      font-size: var(--button-font-size);
+      font-style: var(--button-font-style);
+      font-weight: var(--button-font-weight);
+      text-decoration: var(--button-text-decoration);
+      text-transform: var(--button-text-transform);
+
+      .dark-background & {
+        color: var(--secondary-color);
+        background-color: var(--third-color);
+      }
+
+      .light-background & {
+        color: var(--third-color);
+        background-color: var(--secondary-color);
+      }
+    }
+  }
+}
