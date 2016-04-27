@@ -50,7 +50,8 @@ body {
     }
   }
 
-  .header-title a {
+  .header-title a,
+  .header-title a:hover {
     color: var(--third-color);
   }
 
@@ -109,7 +110,8 @@ body {
       color: var(--secondary-color);
     }
 
-    .header-title a {
+    .header-title a,
+    .header-title a:hover {
       color: var(--secondary-color);
     }
 
@@ -652,7 +654,8 @@ body {
 
   &.header-title {
     &,
-    & a {
+    & a,
+    & a:hover {
       font-size: var(--header-body-font-size);
       font-style: var(--header-body-font-style);
       font-weight: var(--header-body-font-weight);

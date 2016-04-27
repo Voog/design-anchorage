@@ -23,7 +23,8 @@ body {
 .site-footer .dark-background b {
   color: var(--third-color);
 }
-.dark-background .header-title a {
+.dark-background .header-title a,
+.dark-background .header-title a:hover {
   color: var(--third-color);
 }
 .dark-background .menu li a {
@@ -65,7 +66,8 @@ body {
 .site-header .light-background a {
   color: var(--secondary-color);
 }
-.site-header .light-background .header-title a {
+.site-header .light-background .header-title a,
+.site-header .light-background .header-title a:hover {
   color: var(--secondary-color);
 }
 .site-header .light-background .menu li a {
@@ -396,7 +398,7 @@ body {
   text-decoration: var(--footer-body-text-decoration);
   text-transform: var(--footer-body-text-transform);
 }
-.content-area.header-title, .content-area.header-title a {
+.content-area.header-title, .content-area.header-title a, .content-area.header-title a:hover {
   font-size: var(--header-body-font-size);
   font-style: var(--header-body-font-style);
   font-weight: var(--header-body-font-weight);

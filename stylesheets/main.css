@@ -1250,6 +1250,9 @@ a img {
 .site-header .header-title a {
   text-decoration: none;
 }
+.site-header .header-title a:hover {
+  opacity: .7;
+}
 .blog-article-page .site-header .header-body {
   text-align: center;
 }
