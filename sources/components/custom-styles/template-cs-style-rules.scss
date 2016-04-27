@@ -802,14 +802,17 @@ body {
   }
 
   table {
-    th,
-    td {
+    th, td {
       padding: calc(var(--table-padding) - 4px) var(--table-padding);
       font-size: var(--table-font-size);
       border-style: var(--table-border-style);
 
       .dark-background & {
-        border-color: var(--third-color);
+        border-style: var(--table-border-style);
+      }
+
+      .light-background & {
+        border-style: var(--table-border-style);
       }
     }
 

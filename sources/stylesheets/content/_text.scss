@@ -422,7 +422,9 @@
       padding: 9px 13px;
 
       .dark-background & {
-        border: 1px solid rgba($white, 1);
+        border-color: rgba($white, 1);
+        border-style: solid;
+        border-width: 1px;
       }
     }
 
@@ -431,9 +433,9 @@
       font-weight: 400;
       color: rgba($white, 1);
       background-color: rgba($black, 1);
-      border: 1px solid rgba($black, 1);
-
-
+      border-color: rgba($black, 1);
+      border-style: solid;
+      border-width: 1px;
 
       .footer & {
         color: rgba($white, .5);
@@ -441,13 +443,16 @@
     }
 
     td {
-      border: 1px solid rgba($black, .1);
+      border-color: rgba($black, .1);
+      border-style: solid;
+      border-width: 1px;
 
       .dark-background & {
-        border: 1px solid rgba($white, .1);
+        border-color: rgba($white, .1);
+        border-style: solid;
+        border-width: 1px;
       }
     }
-
 
     .contacts &,
     .footer & {

@@ -528,15 +528,16 @@ body {
   border-color: var(--third-color);
   color: var(--third-color);
 }
-.content-area table th,
-.content-area table td {
+.content-area table th, .content-area table td {
   padding: calc(var(--table-padding) - 4px) var(--table-padding);
   font-size: var(--table-font-size);
   border-style: var(--table-border-style);
 }
-.dark-background .content-area table th, .dark-background
-.content-area table td {
-  border-color: var(--third-color);
+.dark-background .content-area table th, .dark-background .content-area table td {
+  border-style: var(--table-border-style);
+}
+.light-background .content-area table th, .light-background .content-area table td {
+  border-style: var(--table-border-style);
 }
 .content-area table th {
   color: var(--third-color);
