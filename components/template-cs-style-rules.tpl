@@ -381,7 +381,6 @@ body {
   font-size: var(--content-body-font-size);
   line-height: var(--content-body-line-height);
   color: var(--primary-color);
-  text-align: var(--content-body-alignment);
 }
 .dark-background .content-area {
   color: var(--third-color);
@@ -403,6 +402,9 @@ body {
   font-weight: var(--header-body-font-weight);
   text-decoration: var(--header-body-text-decoration);
   text-transform: var(--header-body-text-transform);
+}
+.header-bottom .content-area, .page-body .content-area {
+  text-align: var(--content-body-alignment);
 }
 .dark-background .content-area h1, .dark-background
 .content-area h2, .dark-background
