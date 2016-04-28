@@ -406,31 +406,31 @@
         "list": [
           {
             "title": "Arvo",
-            "value": "\"Arvo\", sans-serif"
+            "value": "\"Arvo\", serif"
           },
           {
             "title": "Crimson Text",
-            "value": "\"Crimson Text\", sans-serif"
+            "value": "\"Crimson Text\", serif"
           },
           {
             "title": "Lora",
-            "value": "\"Lora\", sans-serif"
+            "value": "\"Lora\", serif"
           },
           {
             "title": "Noto Serif",
-            "value": "\"Noto Serif\", sans-serif"
+            "value": "\"Noto Serif\", serif"
           },
           {
             "title": "Playfair Display",
-            "value": "\"Playfair Display\", sans-serif"
+            "value": "\"Playfair Display\", serif"
           },
           {
             "title": "PT Serif",
-            "value": "\"PT Serif\", sans-serif"
+            "value": "\"PT Serif\", serif"
           },
           {
             "title": "Roboto Slab",
-            "value": "\"Roboto Slab\", sans-serif"
+            "value": "\"Roboto Slab\", serif"
           }
         ]
       },
