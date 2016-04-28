@@ -309,16 +309,16 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['clean:reset', 'modernizr_builder', 'concat', 'uglify', 'sass', 'postcss:main_styles', 'cssmin', 'imagemin', 'postcss:custom_styles', 'copy', 'clean:remove']);
 
-  grunt.event.on('watch', function(action, filepath, target) {
-    if (target == 'voog') {
-      if (action == 'added' || action == 'deleted') {
-        grunt.task.run(['exec:kitmanifest']);
-      }
-      if (grunt.file.exists('.voog')) {
-        if (action != 'deleted') {
-          grunt.task.run(['exec:kit:' + filepath]);
-        }
-      }
-    }
-  });
+  // grunt.event.on('watch', function(action, filepath, target) {
+  //   if (target == 'voog') {
+  //     if (action == 'added' || action == 'deleted') {
+  //       grunt.task.run(['exec:kitmanifest']);
+  //     }
+  //     if (grunt.file.exists('.voog')) {
+  //       if (action != 'deleted') {
+  //         grunt.task.run(['exec:kit:' + filepath]);
+  //       }
+  //     }
+  //   }
+  // });
 };
