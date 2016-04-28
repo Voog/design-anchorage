@@ -92,7 +92,6 @@
   /* VoogStyle
     "pathI18n": ["headings", "heading"],
     "titleI18n": "size",
-    "type": "button",
     "editor": "rangePicker",
     "min": 8,
     "max": 100,
