@@ -2829,10 +2829,26 @@ a img {
   font-weight: 700;
   line-height: 1.1;
 }
+.site-header .content-area h1.blog-title, .site-header .content-area h1.blog-title a {
+  margin-top: .3em;
+  margin-bottom: .3em;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 @media screen and (max-width: 640px) {
   .site-header .content-area h1 {
     font-size: 32px;
   }
+}
+.content-area h1.article-title {
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
 }
 .content-area h2 {
   font-size: 26px;

@@ -121,9 +121,30 @@
       font-weight: 700;
       line-height: 1.1;
 
+      &.blog-title {
+        &,
+        & a {
+          margin-top: .3em;
+          margin-bottom: .3em;
+          font-size: 70px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 1.1;
+          text-align: center;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+      }
+
       @media screen and (max-width: $tablet-3) {
         font-size: 32px;
       }
+    }
+
+    &.article-title {
+      font-style: normal;
+      text-align: center;
+      text-decoration: none;
     }
   }
 
