@@ -1,14 +1,6 @@
 :root {
   /* VoogStyle
     "pathI18n": ["footer"],
-    "titleI18n": "alignment",
-    "editor": "listPicker",
-    "list": {{ base_alignment_set }},
-    "scope": "global"
-  */
-  --footer-body-alignment: center;
-  /* VoogStyle
-    "pathI18n": ["footer"],
     "titleI18n": "size",
     "editor": "rangePicker",
     "min": 8,
