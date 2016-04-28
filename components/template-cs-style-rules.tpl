@@ -546,8 +546,13 @@ body {
   color: var(--primary-color);
 }
 
+.content-area .form_field .form_field_label,
+.content-area .form_field .edy-fe-label {
+  font-size: var(--form-label-font-size);
+}
 .content-area .form_field_textfield,
-.content-area .form_field_textarea {
+.content-area .form_field_textarea,
+.content-area label:not(.form_field_label) {
   font-style: var(--form-field-font-style);
   font-weight: var(--form-field-font-weight);
   font-size: var(--form-field-font-size);

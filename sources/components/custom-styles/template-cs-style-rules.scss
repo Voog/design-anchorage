@@ -834,9 +834,17 @@ body {
 // "FORM" TYPE CONTENT AREA
 //==============================================================================
 .content-area {
+  
+  .form_field {
+    .form_field_label,
+    .edy-fe-label {
+      font-size: var(--form-label-font-size);
+    }
+  }
 
   .form_field_textfield,
-  .form_field_textarea {
+  .form_field_textarea,
+  label:not(.form_field_label) {
     font-style: var(--form-field-font-style);
     font-weight: var(--form-field-font-weight);
     font-size: var(--form-field-font-size);
