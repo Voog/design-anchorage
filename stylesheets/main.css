@@ -2847,7 +2847,7 @@ a img {
 }
 .content-area h1.article-title {
   font-style: normal;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
 }
 .content-area h2 {
