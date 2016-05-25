@@ -1,11 +1,8 @@
 {
   "name": "voog-design-anchorage",
   "devDependencies": {
-    "bourbon": "~4.2.3"
-  },
-  "dependencies": {
-    "jquery": "~2.1.4",
-    "modernizr": "~2.8.3",
-    "textarea-autosize": "~0.4.1"
+    "bourbon": "^4.2.7",
+    "textarea-autosize": "^0.4.2",
+    "jquery": "^2.2.4"
   }
 }
