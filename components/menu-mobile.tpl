@@ -77,7 +77,7 @@
       <ul>
         {% for language in site.languages %}
           <li>
-            <a class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} is-active{% endif %}" href="{{ language.url }}">{{ language.title }}</a>
+            <a class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} is-active{% endif %}" href="{{ language.url }}" data-lang-code="{{ language.code }}">{{ language.title }}</a>
           </li>
         {% endfor %}
         {% if editmode %}<li class="edit-btn">{% languageadd %}</li>{% endif %}
