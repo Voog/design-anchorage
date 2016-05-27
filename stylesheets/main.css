@@ -2905,8 +2905,10 @@ a img {
 }
 .content-area h1.article-title {
   font-style: normal;
-  text-align: left;
   text-decoration: none;
+}
+.blog-article-page .content-area h1.article-title {
+  text-align: center;
 }
 .content-area h2 {
   font-size: 26px;
