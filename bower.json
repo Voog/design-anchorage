@@ -1,8 +1,14 @@
 {
   "name": "voog-design-anchorage",
+  "homepage": "https://github.com/Voog/design-anchorage",
+  "authors": [
+    "Kaspar Naaber <kaspar@voog.com>",
+    "Ott tooming <ott@voog.com>"
+  ],
+  "description": "The Anchorage design template for Voog",
+  "license": "MIT",
   "devDependencies": {
-    "bourbon": "^4.2.7",
-    "textarea-autosize": "^0.4.2",
-    "jquery": "^2.2.4"
+    "jquery": "^3.1.0",
+    "bourbon": "^4.2.7"
   }
 }
