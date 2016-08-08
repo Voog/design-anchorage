@@ -377,6 +377,10 @@ body {
   color: var(--third-color);
 }
 
+.front-page .header-top {
+  background-color: var(--header-background-color);
+}
+
 .content-area {
   font-size: var(--content-body-font-size);
   line-height: var(--content-body-line-height);

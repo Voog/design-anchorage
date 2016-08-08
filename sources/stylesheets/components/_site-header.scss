@@ -63,7 +63,7 @@
 
     a {
       text-decoration: none;
-      
+
       &:hover {
         opacity: .7;
       }
@@ -211,4 +211,12 @@
       }
     }
   }
+}
+
+.front-page .site-header .header-top .wrap { padding-bottom: 40px;}
+.front-page .header-bottom { margin-top: -40px;}
+
+@media screen and (max-width: $tablet-3) {
+  .front-page .site-header .header-top .wrap { padding-bottom: 20px;}
+  .front-page .header-bottom { margin-top: -20px;}
 }

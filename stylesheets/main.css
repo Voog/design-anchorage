@@ -1378,6 +1378,23 @@ a img {
   display: none;
 }
 
+.front-page .site-header .header-top .wrap {
+  padding-bottom: 40px;
+}
+
+.front-page .header-bottom {
+  margin-top: -40px;
+}
+
+@media screen and (max-width: 640px) {
+  .front-page .site-header .header-top .wrap {
+    padding-bottom: 20px;
+  }
+
+  .front-page .header-bottom {
+    margin-top: -20px;
+  }
+}
 /* NAVIGATION MENUS*/
 .menu-btn-wrap {
   display: inline-block;
