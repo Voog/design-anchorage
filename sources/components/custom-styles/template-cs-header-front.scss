@@ -20,6 +20,29 @@
   // scss-lint:disable Comment, Indentation
 
   /* VoogStyle
+   "pathI18n": ["header"],
+   "titleI18n": "background_color",
+   "editor": "colorPicker",
+   "scope": "global"
+  */
+  --header-background-color: transparent;
+
+  /* VoogStyle
+   "pathI18n": ["header"],
+   "titleI18n": "maximum_width",
+   "editor": "rangePicker",
+   "min": 600,
+   "max": 1800,
+   "step": 20,
+   "unit": "px",
+   "scope": "global",
+   "boundVariables": [
+    "--focus-area-width"
+   ]
+*/
+--site-width: 100%;
+
+  /* VoogStyle
     "pathI18n": ["header", "title", "normal"],
     "titleI18n": "size",
     "editor": "rangePicker",

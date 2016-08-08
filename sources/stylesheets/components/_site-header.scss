@@ -214,9 +214,9 @@
 }
 
 .front-page .site-header .header-top .wrap { padding-bottom: 40px;}
-.front-page .header-bottom { margin-top: -40px;}
+.front-page .site-header .header-bottom .header-bottom-inner { margin-bottom: -40px;}
 
 @media screen and (max-width: $tablet-3) {
   .front-page .site-header .header-top .wrap { padding-bottom: 20px;}
-  .front-page .header-bottom { margin-top: -20px;}
+  .front-page .header-bottom { margin-bottom: -20px;}
 }

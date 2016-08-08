@@ -36,9 +36,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/site-header.tpl",
-      "layout_name": "site-header",
-      "title": "site-header"
+      "file": "components/site-javascripts.tpl",
+      "layout_name": "site-javascripts",
+      "title": "site-javascripts"
     },
     {
       "content_type": "component",
@@ -127,16 +127,16 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/blog-article-comments.tpl",
-      "layout_name": "blog-article-comments",
-      "title": "blog-article-comments"
+      "file": "components/site-header.tpl",
+      "layout_name": "site-header",
+      "title": "site-header"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/site-javascripts.tpl",
-      "layout_name": "site-javascripts",
-      "title": "site-javascripts"
+      "file": "components/blog-article-comments.tpl",
+      "layout_name": "blog-article-comments",
+      "title": "blog-article-comments"
     },
     {
       "content_type": "component",
@@ -186,6 +186,13 @@
       "file": "components/template-cs-form.tpl",
       "layout_name": "template-cs-form",
       "title": "template-cs-form"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-header-front.tpl",
+      "layout_name": "template-cs-header-front",
+      "title": "template-cs-header-front"
     },
     {
       "content_type": "component",
