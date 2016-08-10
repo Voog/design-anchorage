@@ -381,10 +381,6 @@ body {
   background-color: var(--header-background-color);
 }
 
-.front-page .site-header .header-top .wrap {
-  max-width: var(--site-width);
-}
-
 .content-area {
   font-size: var(--content-body-font-size);
   line-height: var(--content-body-line-height);
