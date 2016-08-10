@@ -10,10 +10,10 @@
    "pathI18n": ["header"],
    "titleI18n": "maximum_width",
    "editor": "rangePicker",
-   "min": 0,
-   "max": 100,
-   "step": 1,
-   "unit": "%",
+   "min": 600,
+   "max": 1800,
+   "step": 20,
+   "unit": "px",
    "scope": "global",
    "boundVariables": [
     "--focus-area-width"

@@ -24,8 +24,8 @@
 
 {% customstyle %}
   {% if front_page %}
-    {% include "template-cs-main-styles" %}
     {% include "template-cs-header-front" %}
+    {% include "template-cs-main-styles" %}
     {% include "template-cs-headings" %}
     {% include "template-cs-content" %}
     {% include "template-cs-button" %}
