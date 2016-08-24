@@ -329,7 +329,7 @@ a img {
 .dark-background .lang-title {
   color: white;
 }
-.dark-background .lang-menu.lang-menu-bilingual .lang-title a {
+.dark-background .lang-menu.menu-language-list .lang-title a {
   color: white;
 }
 .dark-background .voog-reference svg path {
@@ -2010,16 +2010,16 @@ a img {
     display: none;
   }
 }
-.lang-menu.lang-menu-bilingual .lang-title {
+.lang-menu.menu-language-list .lang-title {
   display: inline-block;
 }
-.lang-menu.lang-menu-bilingual .lang-title a {
+.lang-menu.menu-language-list .lang-title a {
   opacity: .7;
 }
-.lang-menu.lang-menu-bilingual .lang-title a:hover {
+.lang-menu.menu-language-list .lang-title a:hover {
   opacity: 1;
 }
-.lang-menu.lang-menu-bilingual .lang-title a.is-active {
+.lang-menu.menu-language-list .lang-title a.is-active {
   font-weight: 400;
   opacity: 1;
 }

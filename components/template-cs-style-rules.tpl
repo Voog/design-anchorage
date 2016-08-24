@@ -36,13 +36,13 @@ body {
 .dark-background .lang-title {
   color: var(--third-color);
 }
-.dark-background .lang-menu.lang-menu-bilingual .lang-title a {
+.dark-background .lang-menu.menu-language-list .lang-title a {
   color: var(--third-color);
 }
-.dark-background .lang-menu.lang-menu-bilingual .lang-title a.is-active, .dark-background .lang-menu.lang-menu-bilingual .lang-title a:hover {
+.dark-background .lang-menu.menu-language-list .lang-title a.is-active, .dark-background .lang-menu.menu-language-list .lang-title a:hover {
   color: var(--third-color);
 }
-.dark-background .lang-menu.lang-menu-bilingual .lang-title a.selected {
+.dark-background .lang-menu.menu-language-list .lang-title a.selected {
   color: var(--third-color);
 }
 .dark-background .voog-reference svg path {
@@ -85,10 +85,10 @@ body {
 .light-background .lang-title {
   color: var(--secondary-color);
 }
-.light-background .lang-menu-bilingual .lang-title a:hover {
+.light-background .menu-language-list .lang-title a:hover {
   color: var(--secondary-color);
 }
-.light-background .lang-menu-bilingual .lang-title a.selected {
+.light-background .menu-language-list .lang-title a.selected {
   color: var(--secondary-color);
 }
 .light-background .site-options .search-btn svg path {
@@ -291,7 +291,7 @@ body {
 }
 
 /* langmenu */
-.lang-menu.lang-menu-bilingual .lang-title a.is-active {
+.lang-menu.menu-language-list .lang-title a.is-active {
   color: var(--secondary-color);
 }
 .lang-menu li a {

@@ -12,7 +12,7 @@
       </button>
     </div>
   {% else %}
-    <nav class="lang-menu lang-menu-bilingual flags-disabled">
+    <nav class="lang-menu menu-language-list flags-disabled">
       {% for language in site.languages %}
         <div class="lang-title">
           <a class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} is-active{% endif %}" href="{{ language.url }}" data-lang-code="{{ language.code }}">{{ language.title }}</a>

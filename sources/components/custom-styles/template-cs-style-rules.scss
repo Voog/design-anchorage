@@ -68,7 +68,7 @@ body {
   }
 
   .lang-menu {
-    &.lang-menu-bilingual {
+    &.menu-language-list {
       .lang-title a {
         color: var(--third-color);
 
@@ -135,7 +135,7 @@ body {
     color: var(--secondary-color);
   }
 
-  .lang-menu-bilingual {
+  .menu-language-list {
     .lang-title a {
       &:hover {
         color: var(--secondary-color);
@@ -476,7 +476,7 @@ body {
 
 /* langmenu */
 .lang-menu {
-  &.lang-menu-bilingual {
+  &.menu-language-list {
     .lang-title {
       a {
         &.is-active {
