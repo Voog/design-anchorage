@@ -322,7 +322,7 @@
     .navigation-menu {
       word-break: break-all;
 
-      .lang-menu-open & {
+      .menu-language-popover-open & {
         display: none;
       }
 
@@ -743,7 +743,7 @@ $flags:
     padding-bottom: 0;
   }
 
-  .lang-menu-open & {
+  .menu-language-popover-open & {
     display: block;
   }
 

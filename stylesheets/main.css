@@ -1662,7 +1662,7 @@ a img {
   #mobile-menu .navigation-menu {
     word-break: break-all;
   }
-  .lang-menu-open #mobile-menu .navigation-menu {
+  .menu-language-popover-open #mobile-menu .navigation-menu {
     display: none;
   }
   #mobile-menu .navigation-menu .with-children > a {
@@ -2149,7 +2149,7 @@ a img {
 .editmode .lang-menu-popover {
   padding-bottom: 0;
 }
-.lang-menu-open .lang-menu-popover {
+.menu-language-popover-open .lang-menu-popover {
   display: block;
 }
 .lang-menu-popover a:hover {
