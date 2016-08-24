@@ -7,9 +7,12 @@
 
       {% if editmode %}
         <li class="menu-item-cms">{% languageadd %}</li>
-        <li class="menu-item-cms js-menu-language-settings">
-          <button class="btn btn-js-styled js-menu-language-settings-toggle js-prevent-sideclick"></button>
-        </li>
+        
+        {% if language_menu_mode == "language-menu-mode-popover" %}
+          <li class="menu-item-cms js-menu-language-settings">
+            <button class="btn btn-js-styled js-menu-language-settings-toggle js-prevent-sideclick"></button>
+          </li>
+        {% endif %}
       {% endif %}
     </ul>
   {% endif %}

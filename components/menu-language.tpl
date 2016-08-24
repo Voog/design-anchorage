@@ -16,6 +16,12 @@
           <a class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} is-active{% endif %}" href="{{ language.url }}" data-lang-code="{{ language.code }}">{{ language.title }}</a>
         </div>
       {% endfor %}
+      
+      {% if editmode and language_menu_mode == "language-menu-mode-list" %}
+        <div class="menu-item menu-item-cms js-menu-language-settings">
+          <button class="btn btn-js-styled js-menu-language-settings-toggle js-prevent-sideclick"></button>
+        </div>
+      {% endif %}
     </nav>
   {% endif %}
 {% endif %}
