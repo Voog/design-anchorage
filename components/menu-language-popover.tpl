@@ -17,6 +17,10 @@
               <span class="enable-text">{{ "enable_lang_flags" | lc: editor_locale }}</span>
             </button>
           </li>
+          
+          <li class="menu-item menu-item-cms js-menu-language-settings">
+            <button class="btn btn-js-styled js-menu-language-settings-toggle js-prevent-sideclick"></button>
+          </li>
         </ul>
       </div>
     {% endif %}

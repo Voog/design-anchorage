@@ -10073,6 +10073,61 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
+/*!
+ * jQuery Textarea AutoSize plugin
+ * Author: Javier Julio
+ * Licensed under the MIT license
+ */
+;(function ($, window, document, undefined) {
+
+  var pluginName = "textareaAutoSize";
+  var pluginDataName = "plugin_" + pluginName;
+
+  var containsText = function (value) {
+    return (value.replace(/\s/g, '').length > 0);
+  };
+
+  function Plugin(element, options) {
+    this.element = element;
+    this.$element = $(element);
+    this.init();
+  }
+
+  Plugin.prototype = {
+    init: function() {
+      var height = this.$element.outerHeight();
+      var diff = parseInt(this.$element.css('paddingBottom')) +
+                 parseInt(this.$element.css('paddingTop')) || 0;
+
+      if (containsText(this.element.value)) {
+        this.$element.height(this.element.scrollHeight - diff);
+      }
+
+      // keyup is required for IE to properly reset height when deleting text
+      this.$element.on('input keyup', function(event) {
+        var $window = $(window);
+        var currentScrollPosition = $window.scrollTop();
+
+        $(this)
+          .height(0)
+          .height(this.scrollHeight - diff);
+
+        $window.scrollTop(currentScrollPosition);
+      });
+    }
+  };
+
+  $.fn[pluginName] = function (options) {
+    this.each(function() {
+      if (!$.data(this, pluginDataName)) {
+        $.data(this, pluginDataName, new Plugin(this, options));
+      }
+    });
+    return this;
+  };
+
+})(jQuery, window, document);
+
 ;(function($) {
   // Global variable to detect if page is in editmode.
   var editmode = $('html').hasClass('editmode'),
@@ -10159,6 +10214,107 @@ return jQuery;
       bindLanguageMenuPositioning($('.js-lang-menu-btn'))
 
       siteData.set("flags_state", flagsState);
+    });
+  };
+  
+  // ===========================================================================
+  // Toggles language menu mode.
+  // ===========================================================================
+  var bindLanguageMenuSettings = function(valuesObj) {
+    if (!('type' in valuesObj)) {
+      valuesObj.type = 'popover';
+    }
+
+    if (!('item_state' in valuesObj)) {
+      valuesObj.item_state = 'flags_and_names';
+    }
+
+    $('.js-menu-language-settings-toggle').each(function(index, languageMenuSettingsButton) {
+      var langSettingsEditor = new Edicy.SettingsEditor(languageMenuSettingsButton, {
+        menuItems: [
+          {
+            "titleI18n": "format",
+            "type": "radio",
+            "key": "type",
+            "list": [
+              {
+                "titleI18n": "dropdown_menu",
+                "value": "popover"
+              },
+              {
+                "titleI18n": "expanded_menu",
+                "value": "list"
+              },
+            ]
+          },
+          {
+            "titleI18n": "show",
+            "type": "radio",
+            "key": "item_state",
+            "list": [
+              {
+                "titleI18n": "flags_only",
+                "value": "flags_only"
+              },
+              {
+                "titleI18n": "names_only",
+                "value": "names_only"
+              },
+              {
+                "titleI18n": "flags_and_names",
+                "value": "flags_and_names"
+              }
+            ]
+          }
+        ],
+
+        values: valuesObj,
+
+        containerClass: ['js-menu-language-settings-popover', 'js-prevent-sideclick'],
+
+        preview: function(data) {
+          var $html = $('html'),
+              $languageSettingsMenuElement = $('.js-menu-language-settings');
+
+          if (data.type === 'list') {
+            $html.removeClass('language-menu-mode-popover');
+            $html.removeClass('menu-language-popover-open');
+            $html.addClass('language-menu-mode-list');
+
+            $languageSettingsMenuElement.appendTo('.js-menu-language-list-setting-parent');
+          } else {
+            $html.removeClass('language-menu-mode-list');
+            $html.addClass('language-menu-mode-popover');
+            $html.addClass('menu-language-popover-open');
+
+            $languageSettingsMenuElement.appendTo('.js-menu-language-popover-setting-parent');
+          }
+
+          if (data.item_state === 'flags_only') {
+            $html.removeClass('language-flags-disabled');
+            $html.removeClass('language-names-enabled');
+            $html.addClass('language-flags-enabled');
+            $html.addClass('language-names-disabled');
+          } else if (data.item_state === 'names_only') {
+            $html.removeClass('language-flags-enabled');
+            $html.removeClass('language-names-disabled');
+            $html.addClass('language-flags-disabled');
+            $html.addClass('language-names-enabled');
+          } else if (data.item_state === 'flags_and_names') {
+            $html.removeClass('language-flags-disabled');
+            $html.removeClass('language-names-disabled');
+            $html.addClass('language-flags-enabled');
+            $html.addClass('language-names-enabled');
+          }
+
+          positionPopoverMenu('.js-toggle-menu-language', '.js-menu-language-popover');
+          this.setPosition();
+        },
+
+        commit: function(data) {
+          siteData.set('settings_language_menu', data);
+        }
+      });
     });
   };
 
@@ -10624,7 +10780,8 @@ return jQuery;
     initArticlePage: initArticlePage,
     initCommonPage: initCommonPage,
     initFrontPage: initFrontPage,
-    toggleFlags: toggleFlags
+    toggleFlags: toggleFlags,
+    bindLanguageMenuSettings: bindLanguageMenuSettings,
   });
 
     window.site = $.extend(window.site || {}, {
