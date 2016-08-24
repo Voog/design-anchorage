@@ -10216,7 +10216,7 @@ return jQuery;
       siteData.set("flags_state", flagsState);
     });
   };
-  
+
   // ===========================================================================
   // Toggles language menu mode.
   // ===========================================================================
@@ -10308,6 +10308,7 @@ return jQuery;
           }
 
           // positionPopoverMenu('.js-toggle-menu-language', '.js-menu-language-popover');
+          bindLanguageMenuPositioning($('.js-lang-menu-btn'));
           this.setPosition();
         },
 

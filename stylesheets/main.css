@@ -1495,6 +1495,14 @@ a img {
   margin-right: 10px;
 }
 
+.menu-language-settings {
+  margin-top: 0;
+  padding-left: 0;
+}
+.menu-language-settings .menu-item-cms {
+  padding-top: 5px !important;
+}
+
 .menu-language li {
   margin-right: 5px;
 }

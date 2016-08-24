@@ -9,7 +9,7 @@
     position: relative;
     top: -1px;
   }
-  
+
   &.menu-language-popover-btn {
     .language-menu-mode-list & {
       display: none;
@@ -127,6 +127,17 @@
 }
 
 // Language menu
+.menu-language-settings {
+  margin-top: 0;
+  padding-left: 0;
+
+  .menu-item-cms {
+    // scss-lint:disable ImportantRule
+    padding-top: 5px !important;
+    // scss-lint:enable ImportantRule
+  }
+}
+
 .menu-language {
   li {
     margin-right: 5px;
@@ -568,7 +579,7 @@ $flags:
     .language-menu-mode-popover & {
       display: none;
     }
-    
+
     .lang-title {
       display: inline-block;
 
@@ -603,7 +614,7 @@ $flags:
       padding-top: 10px;
       padding-right: 12px;
       padding-left: 12px;
-      
+
       &:last-child {
         padding-bottom: 10px;
       }

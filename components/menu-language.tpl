@@ -8,19 +8,23 @@
       </button>
     </div>
   {% endif %}
-  
+
   {% if editmode or language_menu_mode == "language-menu-mode-list" %}
-    <nav class="lang-menu menu-language-list flags-disabled js-menu-language-list-setting-parent">
+    <nav class="lang-menu menu-language-list flags-disabled">
       {% for language in site.languages %}
         <div class="lang-title">
           <a class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} is-active{% endif %}" href="{{ language.url }}" data-lang-code="{{ language.code }}">{{ language.title }}</a>
         </div>
       {% endfor %}
-      
-      {% if editmode and language_menu_mode == "language-menu-mode-list" %}
-        <div class="menu-item menu-item-cms js-menu-language-settings">
-          <button class="btn btn-js-styled js-menu-language-settings-toggle js-prevent-sideclick"></button>
-        </div>
+
+      {% if editmode %}
+        <ul class="menu-language-settings js-menu-language-list-setting-parent">
+          {% if language_menu_mode == "language-menu-mode-list" %}
+            <li class="menu-item-cms js-menu-language-settings">
+              <button class="btn btn-js-styled js-menu-language-settings-toggle js-prevent-sideclick"></button>
+            </li>
+          {% endif %}
+        </ul>
       {% endif %}
     </nav>
   {% endif %}
