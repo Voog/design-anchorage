@@ -1,6 +1,6 @@
 <nav class="lang-menu lang-menu-popover js-popup-menu-popover js-menu-lang-wrap js-prevent-sideclick {% if flags_state %}flags-enabled{% else %}flags-disabled{% endif %} ">
   {% if editmode or site.has_many_languages? %}
-    <ul class="menu">
+    <ul class="menu js-menu-language-popover-setting-parent">
       {% for language in site.languages %}
         <li><a class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} active{% endif %}" href="{{ language.url }}" data-lang-code="{{ language.code }}">{{ language.title }}</a></li>
       {% endfor %}

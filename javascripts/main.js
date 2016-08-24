@@ -10307,7 +10307,7 @@ return jQuery;
             $html.addClass('language-names-enabled');
           }
 
-          positionPopoverMenu('.js-toggle-menu-language', '.js-menu-language-popover');
+          // positionPopoverMenu('.js-toggle-menu-language', '.js-menu-language-popover');
           this.setPosition();
         },
 

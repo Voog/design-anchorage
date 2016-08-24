@@ -10,7 +10,7 @@
   {% endif %}
   
   {% if editmode or language_menu_mode == "language-menu-mode-list" %}
-    <nav class="lang-menu menu-language-list flags-disabled">
+    <nav class="lang-menu menu-language-list flags-disabled js-menu-language-list-setting-parent">
       {% for language in site.languages %}
         <div class="lang-title">
           <a class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} is-active{% endif %}" href="{{ language.url }}" data-lang-code="{{ language.code }}">{{ language.title }}</a>
