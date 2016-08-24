@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
+{% assign common_page = true %}
+{% include "template-variables" %}
+<html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
-    {% assign common_page = true %}
-    {% include "template-variables" %}
     {% include "html-head" sidebar: true %}
     {% include "template-styles" %}
   </head>

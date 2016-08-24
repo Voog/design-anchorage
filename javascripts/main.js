@@ -10600,7 +10600,7 @@ return jQuery;
       toggleArticleType($(this));
     });
 
-    $('.public .js-slide-to-article').click(function() {
+    $('.publicmode .js-slide-to-article').click(function() {
       $('html, body').animate({
         scrollTop: $('.page-content').offset().top
       }, 300);

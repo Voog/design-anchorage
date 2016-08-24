@@ -1356,7 +1356,7 @@ a img {
   margin: 0 0 10px;
   text-transform: none;
 }
-.public .site-header .header-body .article-title {
+.publicmode .site-header .header-body .article-title {
   cursor: pointer;
 }
 @media screen and (max-width: 640px) {
