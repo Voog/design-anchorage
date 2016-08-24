@@ -9,6 +9,12 @@
     position: relative;
     top: -1px;
   }
+  
+  &.menu-language-popover-btn {
+    .language-menu-mode-list & {
+      display: none;
+    }
+  }
 
   @media screen and (max-width: $tablet-1) {
     display: none;
@@ -559,6 +565,10 @@ $flags:
   }
 
   &.menu-language-list {
+    .language-menu-mode-popover & {
+      display: none;
+    }
+    
     .lang-title {
       display: inline-block;
 

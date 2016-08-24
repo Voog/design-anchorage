@@ -1,6 +1,6 @@
 {% if editmode or site.has_many_languages? %}
   {% if editmode or language_menu_mode == "language-menu-mode-popover" %}
-    <div class="menu-btn-wrap js-menu-btn-wrap {% if flags_state %}flags-enabled{% else %}flags-disabled{% endif %}">
+    <div class="menu-btn-wrap menu-language-popover-btn js-menu-btn-wrap {% if flags_state %}flags-enabled{% else %}flags-disabled{% endif %}">
       <button role="button" class="lang-menu-btn js-lang-menu-btn js-popup-menu-btn js-prevent-sideclick lang-flag lang-flag-{{ page.language_code }}" data-lang-code="{{ page.language_code }}">
         <span class="lang-title">
           {% for language in site.languages %}{% if language.selected? %}<span class="lang-title-inner js-lang-title-inner">{{ language.title }}</span>{% endif %}{% endfor %}
