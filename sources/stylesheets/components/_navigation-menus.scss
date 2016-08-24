@@ -546,83 +546,6 @@ $flags:
   }
 }
 
-.lang-options {
-  background-color: rgba($black, .09);
-
-  .menu {
-    .menu-item {
-      font-size: 13px;
-      padding: 7px 12px;
-
-      @media screen and (max-width: $tablet-1) {
-        text-align: right;
-      }
-    }
-  }
-
-  @media screen and (max-width: $tablet-3) {
-    background-color: transparent;
-
-    .menu {
-      #mobile-menu & {
-        display: block;
-        padding: 0;
-      }
-
-      .menu-item {
-        color: rgba($white, .5);
-      }
-    }
-  }
-}
-
-.option-btn {
-  font-family: inherit;
-  font-size: inherit;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-  color: rgba($blue, 1);
-  border: none;
-  background: none;
-
-  &:hover {
-    color: rgba($blue, .8);
-  }
-
-  &::-moz-focus-inner {
-    padding: 0;
-    border: none;
-  }
-
-  &:focus {
-    outline: none;
-  }
-
-  .flags-disabled & {
-    .disable-text {
-      display: none;
-    }
-  }
-
-  .flags-enabled & {
-    .enable-text {
-      display: none;
-    }
-  }
-
-  .disable-text,
-  .enable-text {
-    &:first-letter {
-      text-transform: capitalize;
-    }
-  }
-
-  #mobile-menu & {
-    font-size: 12px;
-  }
-}
-
 /* langmenu */
 .lang-menu {
   position: relative;
@@ -666,8 +589,14 @@ $flags:
       color: rgba($black, .7);
     }
 
-    &.add-lang-btn {
-      padding: 10px;
+    &.menu-item-cms {
+      padding-top: 10px;
+      padding-right: 12px;
+      padding-left: 12px;
+      
+      &:last-child {
+        padding-bottom: 10px;
+      }
     }
   }
 

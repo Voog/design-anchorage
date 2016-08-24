@@ -1997,65 +1997,6 @@ a img {
   content: '';
 }
 
-.lang-options {
-  background-color: rgba(0, 0, 0, 0.09);
-}
-.lang-options .menu .menu-item {
-  font-size: 13px;
-  padding: 7px 12px;
-}
-@media screen and (max-width: 1024px) {
-  .lang-options .menu .menu-item {
-    text-align: right;
-  }
-}
-@media screen and (max-width: 640px) {
-  .lang-options {
-    background-color: transparent;
-  }
-  #mobile-menu .lang-options .menu {
-    display: block;
-    padding: 0;
-  }
-  .lang-options .menu .menu-item {
-    color: rgba(255, 255, 255, 0.5);
-  }
-}
-
-.option-btn {
-  font-family: inherit;
-  font-size: inherit;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-  color: #0066bb;
-  border: none;
-  background: none;
-}
-.option-btn:hover {
-  color: rgba(0, 102, 187, 0.8);
-}
-.option-btn::-moz-focus-inner {
-  padding: 0;
-  border: none;
-}
-.option-btn:focus {
-  outline: none;
-}
-.flags-disabled .option-btn .disable-text {
-  display: none;
-}
-.flags-enabled .option-btn .enable-text {
-  display: none;
-}
-.option-btn .disable-text:first-letter,
-.option-btn .enable-text:first-letter {
-  text-transform: capitalize;
-}
-#mobile-menu .option-btn {
-  font-size: 12px;
-}
-
 /* langmenu */
 .lang-menu {
   position: relative;
@@ -2093,8 +2034,13 @@ a img {
   font-weight: 400;
   color: rgba(0, 0, 0, 0.7);
 }
-.lang-menu li.add-lang-btn {
-  padding: 10px;
+.lang-menu li.menu-item-cms {
+  padding-top: 10px;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+.lang-menu li.menu-item-cms:last-child {
+  padding-bottom: 10px;
 }
 .lang-menu a.lang-flag {
   position: relative;

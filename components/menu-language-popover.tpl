@@ -5,24 +5,12 @@
         <li><a class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} active{% endif %}" href="{{ language.url }}" data-lang-code="{{ language.code }}">{{ language.title }}</a></li>
       {% endfor %}
 
-      {% if editmode %}<li class="add-lang-btn">{% languageadd %}</li>{% endif %}
+      {% if editmode %}
+        <li class="menu-item-cms">{% languageadd %}</li>
+        <li class="menu-item-cms js-menu-language-settings">
+          <button class="btn btn-js-styled js-menu-language-settings-toggle js-prevent-sideclick"></button>
+        </li>
+      {% endif %}
     </ul>
-
-    {% if editmode %}
-      <div class="lang-options">
-        <ul class="menu">
-          <li class="menu-item">
-            <button class="option-btn js-option-toggle-flags{% if flags_state %} js-flag-disable-btn{% endif %}">
-              <span class="disable-text">{{ "disable_lang_flags" | lc: editor_locale }}</span>
-              <span class="enable-text">{{ "enable_lang_flags" | lc: editor_locale }}</span>
-            </button>
-          </li>
-          
-          <li class="menu-item menu-item-cms js-menu-language-settings">
-            <button class="btn btn-js-styled js-menu-language-settings-toggle js-prevent-sideclick"></button>
-          </li>
-        </ul>
-      </div>
-    {% endif %}
   {% endif %}
 </nav>
