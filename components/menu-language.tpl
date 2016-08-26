@@ -19,6 +19,8 @@
 
       {% if editmode %}
         <ul class="menu-language-settings js-menu-language-list-setting-parent">
+          <li class="menu-item-cms">{% languageadd %}</li>
+          
           {% if language_menu_mode == "language-menu-mode-list" %}
             <li class="menu-item-cms js-menu-language-settings">
               <button class="btn btn-js-styled js-menu-language-settings-toggle js-prevent-sideclick"></button>
