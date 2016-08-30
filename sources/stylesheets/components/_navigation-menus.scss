@@ -79,7 +79,6 @@
   list-style-type: none;
 
   li {
-    font-size: 16px;
     font-weight: 300;
     line-height: 1.7;
 
@@ -116,6 +115,7 @@
   li {
     display: inline-block;
     margin-left: $margin-low;
+    font-size: 16px;
   }
 }
 
@@ -135,15 +135,6 @@
     // scss-lint:disable ImportantRule
     padding-top: 5px !important;
     // scss-lint:enable ImportantRule
-  }
-}
-
-.menu-language {
-  li {
-    margin-right: 5px;
-    a {
-      font-size: 10px;
-    }
   }
 }
 
@@ -416,7 +407,7 @@
           text-align: left;
 
           a {
-            font-size: 14px;
+            //font-size: 14px;
             padding: 7px 0 5px;
             text-align: left;
 
@@ -604,7 +595,7 @@ $flags:
   }
 
   li {
-    font-size: 14px;
+    //font-size: 14px;
     line-height: normal;
     display: block;
     text-align: right;
@@ -677,14 +668,21 @@ $flags:
 }
 
 .lang-title {
-  font-size: 14px;
+  //font-size: 14px;
   text-transform: uppercase;
   background-color: transparent;
 
   a {
-    font-size: 14px;
     text-transform: uppercase;
     background-color: transparent;
+    
+    .language-names-enabled & {
+      font-size: 14px;
+    }
+    
+    .language-names-disabled & {
+      font-size: 0;
+    }
   }
 }
 
