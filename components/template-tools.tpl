@@ -6,7 +6,7 @@
     });
 
     // Initiates language flag toggleing functionality.
-    site.toggleFlags();
+    // site.toggleFlags();
     //==========================================================================
     // Initiates the language menu mode toggleing popover.
     //==========================================================================

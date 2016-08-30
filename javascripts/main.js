@@ -10191,8 +10191,8 @@ return jQuery;
   });
 
   var bindLanguageMenuPositioning = function(currentButton) {
-    var offsetItem = currentButton.parent().hasClass('flags-disabled') ? currentButton.find('.js-lang-title-inner') : currentButton,
-        rightOffsetHelper = currentButton.parent().hasClass('flags-disabled') ? 5 : 9;
+    var offsetItem = $('html').hasClass('language-flags-disabled') ? currentButton.find('.js-lang-title-inner') : currentButton,
+        rightOffsetHelper = $('html').hasClass('language-flags-disabled') ? 5 : 9;
 
     $('.js-popup-menu-popover').css({
       top: offsetItem.offset().top + offsetItem.outerHeight() + 4,
@@ -10200,22 +10200,22 @@ return jQuery;
     });
   };
 
-  var toggleFlags = function() {
-    $('.js-option-toggle-flags').on('click', function() {
-      if ($(this).hasClass('js-flag-disable-btn')) {
-        var flagsState = false;
-      } else {
-        var flagsState = true;
-      }
-
-      $(this).toggleClass('js-flag-disable-btn');
-      $('.js-menu-lang-wrap, .js-menu-btn-wrap').toggleClass('flags-enabled flags-disabled');
-
-      bindLanguageMenuPositioning($('.js-lang-menu-btn'))
-
-      siteData.set("flags_state", flagsState);
-    });
-  };
+  // var toggleFlags = function() {
+  //   $('.js-option-toggle-flags').on('click', function() {
+  //     if ($(this).hasClass('js-flag-disable-btn')) {
+  //       var flagsState = false;
+  //     } else {
+  //       var flagsState = true;
+  //     }
+  // 
+  //     $(this).toggleClass('js-flag-disable-btn');
+  //     $('.js-menu-lang-wrap, .js-menu-btn-wrap').toggleClass('flags-enabled flags-disabled');
+  // 
+  //     bindLanguageMenuPositioning($('.js-lang-menu-btn'))
+  // 
+  //     siteData.set("flags_state", flagsState);
+  //   });
+  // };
 
   // ===========================================================================
   // Toggles language menu mode.
@@ -10781,7 +10781,7 @@ return jQuery;
     initArticlePage: initArticlePage,
     initCommonPage: initCommonPage,
     initFrontPage: initFrontPage,
-    toggleFlags: toggleFlags,
+    // toggleFlags: toggleFlags,
     bindLanguageMenuSettings: bindLanguageMenuSettings,
   });
 

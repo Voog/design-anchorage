@@ -1,4 +1,4 @@
-<div id="mobile-menu" class="js-menu-lang-wrap {% if flags_state %}flags-enabled{% else %}flags-disabled{% endif %}">
+<div id="mobile-menu" class="js-menu-lang-wrap">
   <div class="navigation-menu">
     <ul>
       {% unless site.root_item.hidden? %}

@@ -233,7 +233,7 @@ body {
   .dark-background .mobile-menu-toggler span, .dark-background .mobile-menu-toggler span:before, .dark-background .mobile-menu-toggler span:after {
     background-color: var(--third-color);
   }
-  .mobile-menu-toggler span.flags-disabled .lang-menu-btn .lang-title, .mobile-menu-toggler span:before.flags-disabled .lang-menu-btn .lang-title, .mobile-menu-toggler span:after.flags-disabled .lang-menu-btn .lang-title {
+  .language-flags-disabled .mobile-menu-toggler span .lang-menu-btn .lang-title, .language-flags-disabled .mobile-menu-toggler span:before .lang-menu-btn .lang-title, .language-flags-disabled .mobile-menu-toggler span:after .lang-menu-btn .lang-title {
     color: var(--third-color);
   }
 

@@ -1401,7 +1401,7 @@ a img {
   vertical-align: middle;
   margin-left: 40px;
 }
-.menu-btn-wrap.flags-enabled {
+.language-flags-enabled .menu-btn-wrap {
   position: relative;
   top: -1px;
 }
@@ -1564,16 +1564,16 @@ a img {
   .dark-background .mobile-menu-toggler span, .dark-background .mobile-menu-toggler span:before, .dark-background .mobile-menu-toggler span:after {
     background-color: white;
   }
-  .mobile-menu-toggler span.flags-disabled .lang-menu-btn, .mobile-menu-toggler span:before.flags-disabled .lang-menu-btn, .mobile-menu-toggler span:after.flags-disabled .lang-menu-btn {
+  .language-flags-disabled .mobile-menu-toggler span .lang-menu-btn, .language-flags-disabled .mobile-menu-toggler span:before .lang-menu-btn, .language-flags-disabled .mobile-menu-toggler span:after .lang-menu-btn {
     position: static;
     width: auto;
     height: auto;
     background-color: #c70909;
   }
-  .mobile-menu-toggler span.flags-disabled .lang-menu-btn:before, .mobile-menu-toggler span.flags-disabled .lang-menu-btn:after, .mobile-menu-toggler span:before.flags-disabled .lang-menu-btn:before, .mobile-menu-toggler span:before.flags-disabled .lang-menu-btn:after, .mobile-menu-toggler span:after.flags-disabled .lang-menu-btn:before, .mobile-menu-toggler span:after.flags-disabled .lang-menu-btn:after {
+  .language-flags-disabled .mobile-menu-toggler span .lang-menu-btn:before, .language-flags-disabled .mobile-menu-toggler span .lang-menu-btn:after, .language-flags-disabled .mobile-menu-toggler span:before .lang-menu-btn:before, .language-flags-disabled .mobile-menu-toggler span:before .lang-menu-btn:after, .language-flags-disabled .mobile-menu-toggler span:after .lang-menu-btn:before, .language-flags-disabled .mobile-menu-toggler span:after .lang-menu-btn:after {
     display: none;
   }
-  .mobile-menu-toggler span.flags-disabled .lang-menu-btn .lang-title, .mobile-menu-toggler span:before.flags-disabled .lang-menu-btn .lang-title, .mobile-menu-toggler span:after.flags-disabled .lang-menu-btn .lang-title {
+  .language-flags-disabled .mobile-menu-toggler span .lang-menu-btn .lang-title, .language-flags-disabled .mobile-menu-toggler span:before .lang-menu-btn .lang-title, .language-flags-disabled .mobile-menu-toggler span:after .lang-menu-btn .lang-title {
     position: static;
     color: white;
   }
@@ -1735,7 +1735,7 @@ a img {
     font-weight: 500;
     color: black;
   }
-  #mobile-menu.flags-enabled .lang-menu a {
+  .language-flags-enabled #mobile-menu .lang-menu a {
     padding-left: 25px;
   }
 }
@@ -1749,7 +1749,7 @@ a img {
   height: 15px;
   content: '';
 }
-.flags-disabled .lang-flag:before, .flags-disabled .lang-flag:after {
+.language-flags-disabled .lang-flag:before, .language-flags-disabled .lang-flag:after {
   display: none;
 }
 .lang-flag:after {
@@ -2084,10 +2084,10 @@ a img {
 .lang-menu a.edy-menu-langadd {
   padding: 5px;
 }
-.lang-menu.flags-disabled a.lang-flag {
+.language-flags-disabled .lang-menu a.lang-flag {
   padding: 5px;
 }
-.lang-menu.flags-disabled .lang-title:last-child a.lang-flag {
+.language-flags-disabled .lang-menu .lang-title:last-child a.lang-flag {
   padding-right: 0;
 }
 
@@ -2114,11 +2114,11 @@ a img {
   background: none;
   line-height: 1;
 }
-.flags-enabled .lang-menu-btn {
+.language-flags-enabled .lang-menu-btn {
   width: 21px;
   padding: 13px 14px 13px 13px;
 }
-.flags-enabled .lang-menu-btn .lang-title {
+.language-flags-enabled .lang-menu-btn .lang-title {
   display: none;
 }
 .lang-menu-btn.lang-flag:before, .lang-menu-btn.lang-flag:after {

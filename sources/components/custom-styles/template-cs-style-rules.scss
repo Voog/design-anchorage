@@ -372,7 +372,7 @@ body {
           background-color: var(--third-color);
         }
 
-        &.flags-disabled {
+        .language-flags-disabled & {
           .lang-menu-btn {
             .lang-title {
               color: var(--third-color);

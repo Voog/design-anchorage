@@ -5,7 +5,7 @@
   vertical-align: middle;
   margin-left: 40px;
 
-  &.flags-enabled {
+  .language-flags-enabled & {
     position: relative;
     top: -1px;
   }
@@ -213,7 +213,7 @@
           background-color: rgba($white, 1);
         }
 
-        &.flags-disabled {
+        .language-flags-disabled & {
           .lang-menu-btn {
             position: static;
             width: auto;
@@ -438,7 +438,7 @@
       }
     }
 
-    &.flags-enabled {
+    .language-flags-enabled & {
       .lang-menu {
         a {
           padding-left: 25px;
@@ -460,7 +460,7 @@
     height: 15px;
     content: '';
 
-    .flags-disabled & {
+    .language-flags-disabled & {
       display: none;
     }
   }
@@ -661,7 +661,7 @@ $flags:
     }
   }
 
-  &.flags-disabled {
+  .language-flags-disabled & {
     a.lang-flag {
       padding: 5px;
     }
@@ -701,7 +701,7 @@ $flags:
   background: none;
   line-height: 1;
 
-  .flags-enabled & {
+  .language-flags-enabled & {
     width: 21px;
     padding: 13px 14px 13px 13px;
 
