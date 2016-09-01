@@ -117,6 +117,10 @@ a img {
   opacity: 1;
 }
 
+.btn {
+  display: none;
+}
+
 .site-container {
   margin: 0 auto;
   position: relative;
