@@ -120,6 +120,10 @@ a img {
 .btn {
   display: none;
 }
+.btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
 
 .site-container {
   margin: 0 auto;
