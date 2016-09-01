@@ -1399,11 +1399,7 @@ a img {
 .menu-btn-wrap {
   display: inline-block;
   vertical-align: middle;
-  margin-left: 40px;
-}
-.language-flags-enabled .menu-btn-wrap {
-  position: relative;
-  top: -1px;
+  margin-left: 30px;
 }
 .language-menu-mode-list .menu-btn-wrap.menu-language-popover-btn {
   display: none;
@@ -1497,10 +1493,14 @@ a img {
 
 .menu-language-settings {
   margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
 }
-.menu-language-settings .menu-item-cms {
+.language-menu-mode-popover .menu-language-settings .menu-item-cms {
   padding-top: 5px !important;
+}
+.language-menu-mode-list .menu-language-settings .menu-item-cms {
+  padding-top: 2px !important;
 }
 
 /* mobile-menu */
@@ -2002,8 +2002,6 @@ a img {
 
 /* langmenu */
 .lang-menu {
-  position: relative;
-  top: 1px;
   display: inline-block;
   margin-left: 40px;
   vertical-align: top;
@@ -2051,11 +2049,16 @@ a img {
 .lang-menu li.menu-item-cms:last-child {
   padding-bottom: 10px;
 }
+.language-menu-mode-list .lang-menu li.menu-item-cms:last-child {
+  padding-right: 9px;
+}
+#mobile-menu .lang-menu li.menu-item-cms:last-child {
+  padding-top: 0;
+  padding-left: 0;
+}
 .lang-menu a.lang-flag {
   position: relative;
   display: block;
-  padding: 6px 10px 5px 40px;
-  padding: 5px 40px 5px 13px;
   text-align: right;
 }
 .dark-background .lang-menu a.lang-flag, .light-background .lang-menu a.lang-flag {
@@ -2064,9 +2067,26 @@ a img {
 .dark-background .lang-menu a.lang-flag:hover, .light-background .lang-menu a.lang-flag:hover {
   color: black;
 }
+.language-names-enabled.language-flags-enabled .lang-menu a.lang-flag {
+  padding: 5px 40px 5px 13px;
+}
+.language-menu-mode-popover.language-names-disabled.language-flags-enabled .lang-menu a.lang-flag {
+  padding: 15px 40px 14px 13px;
+}
+.language-menu-mode-list.language-names-disabled.language-flags-enabled .lang-menu a.lang-flag {
+  padding: 15px 15px 8px 16px;
+}
 .lang-menu a.lang-flag:before, .lang-menu a.lang-flag:after {
-  top: 6px;
   left: 12px;
+}
+.language-menu-mode-popover .lang-menu a.lang-flag:before, .language-menu-mode-popover .lang-menu a.lang-flag:after {
+  top: 7px;
+}
+.language-menu-mode-list.language-names-disabled.language-flags-enabled .lang-menu a.lang-flag:before, .language-menu-mode-list.language-names-disabled.language-flags-enabled .lang-menu a.lang-flag:after {
+  left: 5px;
+}
+.language-menu-mode-list.language-names-disabled.language-flags-enabled .lang-menu a.lang-flag:before, .language-menu-mode-list.language-names-enabled.language-flags-enabled .lang-menu a.lang-flag:before, .language-menu-mode-list.language-names-disabled.language-flags-enabled .lang-menu a.lang-flag:after, .language-menu-mode-list.language-names-enabled.language-flags-enabled .lang-menu a.lang-flag:after {
+  top: 5px;
 }
 .lang-menu a.lang-flag:before, .lang-menu a.lang-flag:after {
   right: 12px;
@@ -2099,11 +2119,11 @@ a img {
 
 .lang-menu-btn {
   font-family: inherit;
-  font-size: 12px;
+  font-size: 14px;
   position: relative;
   display: block;
   margin: 0;
-  padding: 3px;
+  padding: 6px 3px;
   cursor: pointer;
   border: none;
   background: none;
@@ -2122,13 +2142,14 @@ a img {
 }
 .lang-menu-btn .lang-title-inner {
   position: relative;
-  padding-right: 12px;
+  padding: 5px 12px 5px 5px;
 }
 .lang-menu-btn .lang-title-inner:after {
   position: absolute;
-  top: 7px;
+  top: 50%;
   right: 0;
   display: block;
+  margin-top: -3px;
   width: 0;
   height: 0;
   content: "";

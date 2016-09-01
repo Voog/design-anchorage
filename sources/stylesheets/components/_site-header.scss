@@ -42,10 +42,11 @@
     }
 
     .site-options {
+      //position: relative;
+      //right: -4px;
       display: inline-block;
       vertical-align: top;
       height: 27px;
-      // background-color: grey;
 
       @media screen and (max-width: $tablet-1) {
         margin-left: 20px;

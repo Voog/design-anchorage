@@ -3,12 +3,7 @@
 .menu-btn-wrap {
   display: inline-block;
   vertical-align: middle;
-  margin-left: 40px;
-
-  .language-flags-enabled & {
-    position: relative;
-    top: -1px;
-  }
+  margin-left: 30px;
 
   &.menu-language-popover-btn {
     .language-menu-mode-list & {
@@ -110,7 +105,6 @@
   display: inline-block;
   vertical-align: top;
   text-transform: uppercase;
-  // background-color: yellow;
 
   li {
     display: inline-block;
@@ -129,12 +123,21 @@
 // Language menu
 .menu-language-settings {
   margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
 
   .menu-item-cms {
-    // scss-lint:disable ImportantRule
-    padding-top: 5px !important;
-    // scss-lint:enable ImportantRule
+    .language-menu-mode-popover & {
+      // scss-lint:disable ImportantRule
+      padding-top: 5px !important;
+      // scss-lint:enable ImportantRule
+    }
+
+    .language-menu-mode-list & {
+      // scss-lint:disable ImportantRule
+      padding-top: 2px !important;
+      // scss-lint:enable ImportantRule
+    }
   }
 }
 
@@ -407,7 +410,6 @@
           text-align: left;
 
           a {
-            //font-size: 14px;
             padding: 7px 0 5px;
             text-align: left;
 
@@ -556,8 +558,6 @@ $flags:
 
 /* langmenu */
 .lang-menu {
-  position: relative;
-  top: 1px;
   display: inline-block;
   margin-left: 40px;
   vertical-align: top;
@@ -595,7 +595,6 @@ $flags:
   }
 
   li {
-    //font-size: 14px;
     line-height: normal;
     display: block;
     text-align: right;
@@ -611,8 +610,17 @@ $flags:
       padding-right: 12px;
       padding-left: 12px;
 
-      &:last-child {
+      &:last-child {;
         padding-bottom: 10px;
+
+        .language-menu-mode-list & {
+          padding-right: 9px;
+        }
+
+        #mobile-menu & {
+          padding-top: 0;
+          padding-left: 0
+        }
       }
     }
   }
@@ -621,8 +629,6 @@ $flags:
     &.lang-flag {
       position: relative;
       display: block;
-      padding: 6px 10px 5px 40px;
-      padding: 5px 40px 5px 13px;
       text-align: right;
 
       .dark-background &,
@@ -634,10 +640,34 @@ $flags:
         }
       }
 
+      .language-names-enabled.language-flags-enabled & {
+        padding: 5px 40px 5px 13px;
+      }
+
+      .language-menu-mode-popover.language-names-disabled.language-flags-enabled & {
+        padding: 15px 40px 14px 13px;
+      }
+
+      .language-menu-mode-list.language-names-disabled.language-flags-enabled & {
+        padding: 15px 15px 8px 16px;
+      }
+
       &:before,
       &:after {
-        top: 6px;
         left: 12px;
+
+        .language-menu-mode-popover & {
+          top: 7px;
+        }
+
+        .language-menu-mode-list.language-names-disabled.language-flags-enabled & {
+          left: 5px;
+        }
+
+        .language-menu-mode-list.language-names-disabled.language-flags-enabled &,
+        .language-menu-mode-list.language-names-enabled.language-flags-enabled & {
+          top: 5px;
+        }
       }
 
       &:before,
@@ -668,18 +698,17 @@ $flags:
 }
 
 .lang-title {
-  //font-size: 14px;
   text-transform: uppercase;
   background-color: transparent;
 
   a {
     text-transform: uppercase;
     background-color: transparent;
-    
+
     .language-names-enabled & {
       font-size: 14px;
     }
-    
+
     .language-names-disabled & {
       font-size: 0;
     }
@@ -689,11 +718,11 @@ $flags:
 .lang-menu-btn {
   @extend %button;
   font-family: inherit;
-  font-size: 12px;
+  font-size: 14px;
   position: relative;
   display: block;
   margin: 0;
-  padding: 3px;
+  padding: 6px 3px;
   cursor: pointer;
   border: none;
   background: none;
@@ -718,13 +747,14 @@ $flags:
 
   .lang-title-inner {
     position: relative;
-    padding-right: 12px;
+    padding: 5px 12px 5px 5px;
 
     &:after {
       position: absolute;
-      top: 7px;
+      top: 50%;
       right: 0;
       display: block;
+      margin-top: -3px;
       width: 0;
       height: 0;
       content: "";

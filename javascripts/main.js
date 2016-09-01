@@ -10195,27 +10195,10 @@ return jQuery;
         rightOffsetHelper = $('html').hasClass('language-flags-disabled') ? 5 : 9;
 
     $('.js-popup-menu-popover').css({
-      top: offsetItem.offset().top + offsetItem.outerHeight() + 4,
+      top: offsetItem.offset().top + offsetItem.outerHeight(),
       right: $(window).width() - offsetItem.offset().left - offsetItem.outerWidth() - rightOffsetHelper
     });
   };
-
-  // var toggleFlags = function() {
-  //   $('.js-option-toggle-flags').on('click', function() {
-  //     if ($(this).hasClass('js-flag-disable-btn')) {
-  //       var flagsState = false;
-  //     } else {
-  //       var flagsState = true;
-  //     }
-  // 
-  //     $(this).toggleClass('js-flag-disable-btn');
-  //     $('.js-menu-lang-wrap, .js-menu-btn-wrap').toggleClass('flags-enabled flags-disabled');
-  // 
-  //     bindLanguageMenuPositioning($('.js-lang-menu-btn'))
-  // 
-  //     siteData.set("flags_state", flagsState);
-  //   });
-  // };
 
   // ===========================================================================
   // Toggles language menu mode.
@@ -10229,94 +10212,109 @@ return jQuery;
       valuesObj.item_state = 'flags_and_names';
     }
 
-    $('.js-menu-language-settings-toggle').each(function(index, languageMenuSettingsButton) {
-      var langSettingsEditor = new Edicy.SettingsEditor(languageMenuSettingsButton, {
-        menuItems: [
-          {
-            "titleI18n": "format",
-            "type": "radio",
-            "key": "type",
-            "list": [
-              {
-                "titleI18n": "dropdown_menu",
-                "value": "popover"
-              },
-              {
-                "titleI18n": "expanded_menu",
-                "value": "list"
-              },
-            ]
-          },
-          {
-            "titleI18n": "show",
-            "type": "radio",
-            "key": "item_state",
-            "list": [
-              {
-                "titleI18n": "flags_only",
-                "value": "flags_only"
-              },
-              {
-                "titleI18n": "names_only",
-                "value": "names_only"
-              },
-              {
-                "titleI18n": "flags_and_names",
-                "value": "flags_and_names"
-              }
-            ]
-          }
-        ],
-
-        values: valuesObj,
-
-        containerClass: ['js-menu-language-settings-popover', 'js-prevent-sideclick'],
-
-        preview: function(data) {
-          var $html = $('html'),
-              $languageSettingsMenuElement = $('.js-menu-language-settings');
-
-          if (data.type === 'list') {
-            $html.removeClass('language-menu-mode-popover');
-            $html.removeClass('menu-language-popover-open');
-            $html.addClass('language-menu-mode-list');
-
-            $languageSettingsMenuElement.appendTo('.js-menu-language-list-setting-parent');
-          } else {
-            $html.removeClass('language-menu-mode-list');
-            $html.addClass('language-menu-mode-popover');
-            $html.addClass('menu-language-popover-open');
-
-            $languageSettingsMenuElement.appendTo('.js-menu-language-popover-setting-parent');
-          }
-
-          if (data.item_state === 'flags_only') {
-            $html.removeClass('language-flags-disabled');
-            $html.removeClass('language-names-enabled');
-            $html.addClass('language-flags-enabled');
-            $html.addClass('language-names-disabled');
-          } else if (data.item_state === 'names_only') {
-            $html.removeClass('language-flags-enabled');
-            $html.removeClass('language-names-disabled');
-            $html.addClass('language-flags-disabled');
-            $html.addClass('language-names-enabled');
-          } else if (data.item_state === 'flags_and_names') {
-            $html.removeClass('language-flags-disabled');
-            $html.removeClass('language-names-disabled');
-            $html.addClass('language-flags-enabled');
-            $html.addClass('language-names-enabled');
-          }
-
-          // positionPopoverMenu('.js-toggle-menu-language', '.js-menu-language-popover');
-          bindLanguageMenuPositioning($('.js-lang-menu-btn'));
-          this.setPosition();
+    var langSettingsEditor = new Edicy.SettingsEditor($('.js-menu-language-settings-toggle').get(0), {
+      menuItems: [
+        {
+          "titleI18n": "format",
+          "type": "radio",
+          "key": "type",
+          "list": [
+            {
+              "titleI18n": "dropdown_menu",
+              "value": "popover"
+            },
+            {
+              "titleI18n": "expanded_menu",
+              "value": "list"
+            },
+          ]
         },
-
-        commit: function(data) {
-          siteData.set('settings_language_menu', data);
+        {
+          "titleI18n": "show",
+          "type": "radio",
+          "key": "item_state",
+          "list": [
+            {
+              "titleI18n": "flags_only",
+              "value": "flags_only"
+            },
+            {
+              "titleI18n": "names_only",
+              "value": "names_only"
+            },
+            {
+              "titleI18n": "flags_and_names",
+              "value": "flags_and_names"
+            }
+          ]
         }
-      });
+      ],
+
+      values: valuesObj,
+
+      containerClass: ['js-menu-language-settings-popover', 'js-prevent-sideclick'],
+
+      preview: function(data) {
+        var $html = $('html'),
+            $languageSettingsMenuElement = $('.js-menu-language-settings');
+
+        if (data.type === 'list') {
+          $html.removeClass('language-menu-mode-popover');
+          $html.removeClass('menu-language-popover-open');
+          $html.addClass('language-menu-mode-list');
+
+          $languageSettingsMenuElement.appendTo('.js-menu-language-list-setting-parent');
+        } else {
+          $html.removeClass('language-menu-mode-list');
+          $html.addClass('language-menu-mode-popover');
+          $html.addClass('menu-language-popover-open');
+
+          $languageSettingsMenuElement.appendTo('.js-menu-language-popover-setting-parent');
+        }
+
+        if (data.item_state === 'flags_only') {
+          $html.removeClass('language-flags-disabled');
+          $html.removeClass('language-names-enabled');
+          $html.addClass('language-flags-enabled');
+          $html.addClass('language-names-disabled');
+        } else if (data.item_state === 'names_only') {
+          $html.removeClass('language-flags-enabled');
+          $html.removeClass('language-names-disabled');
+          $html.addClass('language-flags-disabled');
+          $html.addClass('language-names-enabled');
+        } else if (data.item_state === 'flags_and_names') {
+          $html.removeClass('language-flags-disabled');
+          $html.removeClass('language-names-disabled');
+          $html.addClass('language-flags-enabled');
+          $html.addClass('language-names-enabled');
+        }
+
+        // positionPopoverMenu('.js-toggle-menu-language', '.js-menu-language-popover');
+        bindLanguageMenuPositioning($('.js-lang-menu-btn'));
+        this.setPosition();
+      },
+
+      commit: function(data) {
+        siteData.set('settings_language_menu', data);
+      }
     });
+
+    toggleLanguageSettingsLocation();
+  };
+
+  var toggleLanguageSettingsLocation = function() {
+    var $html = $('html'),
+        $languageSettingsMenuElement = $('.js-menu-language-settings');
+
+    if ($(window).width() <= 1024 && $languageSettingsMenuElement.closest('.js-menu-main-mobile').length === 0) {
+      $languageSettingsMenuElement.appendTo('.js-menu-main-mobile');
+    } else if ($(window).width() > 1024 && $languageSettingsMenuElement.closest('.js-menu-main-desktop').length === 0) {
+      if ($html.hasClass('language-menu-mode-list')) {
+        $languageSettingsMenuElement.appendTo('.js-menu-language-list-setting-parent');
+      } else {
+        $languageSettingsMenuElement.appendTo('.js-menu-language-popover-setting-parent');
+      }
+    }
   };
 
   var bindFallbackHeaderLeftWidthCalculation = function() {
@@ -10678,6 +10676,7 @@ return jQuery;
   var initWindowResize = function() {
     $(window).resize(debounce(commentsHeight, 100));
     $(window).resize(debounce(handleMobileSearchHeight, 100));
+    $(window).resize(debounce(toggleLanguageSettingsLocation, 100));
   };
 
   // Scrolls to the comment-form if comment submit failed (to show the error messages to the user)
