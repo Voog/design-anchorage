@@ -85,7 +85,7 @@
     var langSettingsEditor = new Edicy.SettingsEditor($('.js-menu-language-settings-toggle').get(0), {
       menuItems: [
         {
-          "titleI18n": "format",
+          "titleI18n": "format_desktop_only",
           "type": "radio",
           "key": "type",
           "list": [
@@ -132,14 +132,10 @@
           $html.removeClass('language-menu-mode-popover');
           $html.removeClass('menu-language-popover-open');
           $html.addClass('language-menu-mode-list');
-
-          $languageSettingsMenuElement.appendTo('.js-menu-language-list-setting-parent');
         } else {
           $html.removeClass('language-menu-mode-list');
           $html.addClass('language-menu-mode-popover');
           $html.addClass('menu-language-popover-open');
-
-          $languageSettingsMenuElement.appendTo('.js-menu-language-popover-setting-parent');
         }
 
         if (data.item_state === 'flags_only') {
@@ -159,8 +155,7 @@
           $html.addClass('language-names-enabled');
         }
 
-        // positionPopoverMenu('.js-toggle-menu-language', '.js-menu-language-popover');
-        bindLanguageMenuPositioning($('.js-lang-menu-btn'));
+        toggleLanguageSettingsLocation();
         this.setPosition();
       },
 
@@ -181,8 +176,10 @@
     } else if ($(window).width() > 1024 && $languageSettingsMenuElement.closest('.js-menu-main-desktop').length === 0) {
       if ($html.hasClass('language-menu-mode-list')) {
         $languageSettingsMenuElement.appendTo('.js-menu-language-list-setting-parent');
+        bindLanguageMenuPositioning($('.js-lang-menu-btn'));
       } else {
         $languageSettingsMenuElement.appendTo('.js-menu-language-popover-setting-parent');
+        bindLanguageMenuPositioning($('.js-lang-menu-btn'));
       }
     }
   };
@@ -544,9 +541,19 @@
 
   // Initiations
   var initWindowResize = function() {
-    $(window).resize(debounce(commentsHeight, 100));
-    $(window).resize(debounce(handleMobileSearchHeight, 100));
-    $(window).resize(debounce(toggleLanguageSettingsLocation, 100));
+    $(window).resize(debounce(function() {
+      commentsHeight();
+      handleMobileSearchHeight();
+      toggleLanguageSettingsLocation();
+
+      $('.js-menu-language-settings-popover').hide();
+    }, 100));
+
+    $(window).resize(debounce(function() {
+      $('html').removeClass('menu-language-popover-open');
+      $('.js-menu-language-settings-popover').hide();
+      $('.js-menu-language-settings-toggle').removeClass('edy-cbtn-active');
+    }, 25));
   };
 
   // Scrolls to the comment-form if comment submit failed (to show the error messages to the user)

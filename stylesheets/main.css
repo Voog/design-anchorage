@@ -1663,9 +1663,6 @@ a img {
   #mobile-menu .navigation-menu {
     word-break: break-all;
   }
-  .menu-language-popover-open #mobile-menu .navigation-menu {
-    display: none;
-  }
   #mobile-menu .navigation-menu .with-children > a {
     margin-right: 30px;
   }

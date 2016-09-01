@@ -327,10 +327,6 @@
     .navigation-menu {
       word-break: break-all;
 
-      .menu-language-popover-open & {
-        display: none;
-      }
-
       .with-children {
         > a {
           margin-right: 30px;
