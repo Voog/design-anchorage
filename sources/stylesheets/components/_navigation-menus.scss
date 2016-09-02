@@ -627,11 +627,11 @@ $flags:
     }
 
     &.menu-item-cms {
-      padding-top: 10px;
-      padding-right: 12px;
-      padding-left: 12px;
+      padding-right: 18px;
+      padding-left: 18px;
 
-      &:last-child {;
+      &:last-child {
+        padding-top: 5px;
         padding-bottom: 10px;
 
         .language-menu-mode-list & {
@@ -705,7 +705,7 @@ $flags:
 
   .language-flags-disabled & {
     a.lang-flag {
-      padding: 5px;
+      padding: 5px 10px;
     }
 
     .lang-title {

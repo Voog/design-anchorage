@@ -2062,11 +2062,11 @@ a img {
   color: rgba(0, 0, 0, 0.7);
 }
 .lang-menu li.menu-item-cms {
-  padding-top: 10px;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding-right: 18px;
+  padding-left: 18px;
 }
 .lang-menu li.menu-item-cms:last-child {
+  padding-top: 5px;
   padding-bottom: 10px;
 }
 .language-menu-mode-list .lang-menu li.menu-item-cms:last-child {
@@ -2116,7 +2116,7 @@ a img {
   padding: 5px;
 }
 .language-flags-disabled .lang-menu a.lang-flag {
-  padding: 5px;
+  padding: 5px 10px;
 }
 .language-flags-disabled .lang-menu .lang-title:last-child a.lang-flag {
   padding-right: 0;
