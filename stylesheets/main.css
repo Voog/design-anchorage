@@ -160,9 +160,11 @@ a img {
 .editmode.flexbox .site-container {
   min-height: calc(100vh - 40px);
 }
-.mobilemenu-open .site-container {
-  -webkit-transform: translate3d(-250px, 0, 0);
-  transform: translate3d(-250px, 0, 0);
+@media screen and (max-width: 1024px) {
+  .mobilemenu-open .site-container {
+    -webkit-transform: translate3d(-250px, 0, 0);
+            transform: translate3d(-250px, 0, 0);
+  }
 }
 .mobilemenu-open .site-container:after {
   width: 100%;

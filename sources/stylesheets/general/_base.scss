@@ -122,8 +122,9 @@ a {
   }
 
   .mobilemenu-open & {
-    -webkit-transform: translate3d(-250px, 0, 0);
-    transform: translate3d(-250px, 0, 0);
+    @media screen and (max-width: $tablet-1) {
+      transform: translate3d(-250px, 0, 0);
+    }
 
     &:after {
       width: 100%;
