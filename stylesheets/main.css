@@ -1674,6 +1674,10 @@ a img {
   .language-names-disabled #mobile-menu ul a.lang-flag {
     font-size: 0;
     padding: 15px 15px 8px 16px;
+    opacity: .7;
+  }
+  .language-names-disabled #mobile-menu ul a.lang-flag:hover, .language-names-disabled #mobile-menu ul a.lang-flag.is-active {
+    opacity: 1;
   }
   #mobile-menu ul a.untranslated {
     color: rgba(199, 9, 9, 0.7);
