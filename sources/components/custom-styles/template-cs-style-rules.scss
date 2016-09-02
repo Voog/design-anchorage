@@ -55,7 +55,7 @@ body {
     color: var(--third-color);
   }
 
-  .menu li a {
+  .menu li a:not(.untranslated) {
     color: var(--third-color);
   }
 

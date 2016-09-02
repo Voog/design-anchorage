@@ -27,7 +27,7 @@ body {
 .dark-background .header-title a:hover {
   color: var(--third-color);
 }
-.dark-background .menu li a {
+.dark-background .menu li a:not(.untranslated) {
   color: var(--third-color);
 }
 .dark-background .menu li.selected a {
