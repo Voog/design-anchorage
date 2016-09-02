@@ -707,7 +707,9 @@ $flags:
     a.lang-flag {
       padding: 5px 10px;
     }
+  }
 
+  .language-menu-mode-list.language-flags-disabled & {
     .lang-title {
       &:last-child {
         a.lang-flag {

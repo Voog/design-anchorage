@@ -2118,7 +2118,7 @@ a img {
 .language-flags-disabled .lang-menu a.lang-flag {
   padding: 5px 10px;
 }
-.language-flags-disabled .lang-menu .lang-title:last-child a.lang-flag {
+.language-menu-mode-list.language-flags-disabled .lang-menu .lang-title:last-child a.lang-flag {
   padding-right: 0;
 }
 
