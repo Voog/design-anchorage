@@ -10153,6 +10153,7 @@ return jQuery;
   $('.mobile-menu-toggler').click(function(event) {
       event.preventDefault();
       $('html').toggleClass('mobilemenu-open');
+      $('html').removeClass('menu-language-popover-open');
       $('body').removeClass('mobilesearch-open');
       $('#mobile-menu').removeClass('reset-touch').addClass('reset-touch');
   });
@@ -10181,6 +10182,9 @@ return jQuery;
 
 
   $('.js-lang-menu-btn').on('click', function() {
+    $('html').removeClass('search-open');
+    $('.js-search').removeClass('active');
+
     if ($('html').hasClass('menu-language-popover-open')) {
       $('html').removeClass('menu-language-popover-open');
     } else {
@@ -10531,6 +10535,7 @@ return jQuery;
     // Toggles the search modal.
     $('.js-search-toggle-btn').click(function() {
       $('html').removeClass('mobilemenu-open');
+      $('html').removeClass('menu-language-popover-open');
       $('.js-search').toggleClass('active');
       $('.js-search').hasClass('active') ? $('.js-search-input').focus() : '';
       $('html').toggleClass('search-open');

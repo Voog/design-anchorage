@@ -2197,8 +2197,10 @@ a img {
 .editmode .lang-menu-popover {
   padding-bottom: 0;
 }
-.menu-language-popover-open .lang-menu-popover {
-  display: block;
+@media screen and (min-width: 1025px) {
+  .menu-language-popover-open .lang-menu-popover {
+    display: block;
+  }
 }
 .lang-menu-popover a:hover {
   background-color: rgba(0, 0, 0, 0.1);

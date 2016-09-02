@@ -811,7 +811,9 @@ $flags:
   }
 
   .menu-language-popover-open & {
-    display: block;
+    @media screen and (min-width: $tablet-1 + 1) {
+      display: block;
+    }
   }
 
   a {
