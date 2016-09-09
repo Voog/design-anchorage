@@ -56,7 +56,7 @@
 
         {% if front_page %}
           <div class="wrap">
-            <div class="header-body content-area">
+            <div class="header-body content-area" {{ edy_intro_edit_text }}>
               {% content name="header" %}
             </div>
           </div>
