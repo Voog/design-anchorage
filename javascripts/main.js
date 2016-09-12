@@ -10610,9 +10610,13 @@ return jQuery;
 			if (Object.keys(event.detail.changes).indexOf('--header-background-color') > -1) {
 				if (event.detail.changes['--header-background-color'].value === undefined) {
           $('body').removeClass('bg-padding');
+
+          siteData.remove('has_header_bg_color');
 				}
 				else {
           $('body').addClass('bg-padding');
+
+          siteData.set('has_header_bg_color', true);
 				}
 
 			}
