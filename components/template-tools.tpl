@@ -71,5 +71,23 @@
         }
       });
     });
+
+
+    var findVarValue = function(attr) {
+      var arr = Edicy.pageStyleVars.getStyleVariables().filter(function(object) {
+        return object.variable == attr;
+      });
+
+      if (arr.length && arr[0].value !== undefined) { return arr[0].value; }
+      return false;
+    }
+
+    if (findVarValue('--header-background-color')) {
+      $('body').addClass('bg-padding');
+    }
+
+
+
+
   </script>
 {% endeditorjsblock %}

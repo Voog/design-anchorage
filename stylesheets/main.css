@@ -387,6 +387,21 @@ a img {
   max-width: 100%;
 }
 
+/* Design editor changes */
+.bg-padding .header-bottom .voog-bg-picker-btn {
+  top: 140px;
+}
+
+@media screen and (max-width: 1024px) {
+  .bg-padding .header-bottom .voog-bg-picker-btn {
+    top: 115px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .bg-padding .header-bottom .voog-bg-picker-btn {
+    top: 70px;
+  }
+}
 .wrap:after, .common-page .sidebar-active:after, .blog-news-page .articles-listing:after, .site-header:after, .search:after,
 .search-form:after, .site-footer .blog-article-nav:after, .content-area:after, .contacts .content-area table tr:after, .footer .content-area table tr:after {
   display: table;
@@ -1378,20 +1393,24 @@ a img {
   display: none;
 }
 
-.front-page .site-header .header-top .wrap {
+.site-header .header-top .wrap {
   padding-bottom: 40px;
 }
 
-.front-page .site-header .header-bottom .header-bottom-inner {
+.header-padding .site-header .header-bottom .header-bottom-inner {
   margin-bottom: -40px;
 }
 
 @media screen and (max-width: 640px) {
-  .front-page .site-header .header-top .wrap {
+  .site-header .header-top .wrap {
     padding-bottom: 20px;
   }
 
-  .front-page .header-bottom {
+  .header-padding .header-bottom {
+    margin-bottom: -20px;
+  }
+
+  .header-padding .site-header .header-bottom .header-bottom-inner {
     margin-bottom: -20px;
   }
 }

@@ -10513,9 +10513,9 @@ return jQuery;
     }
   };
 
-  var autoSizeFormCommentArea = function() {
+  /*var autoSizeFormCommentArea = function() {
     $('.comment-form .form_field_textarea').textareaAutoSize();
-  };
+  };*/
 
   // Initiations
   var initWindowResize = function() {
@@ -10602,16 +10602,35 @@ return jQuery;
     // Add front page layout specific functions here.
   };
 
+  // ===========================================================================
+  // Detects design editor changes.
+  // ===========================================================================
+  var detectDesignEditorChanges = function() {
+    document.addEventListener('edicy:customstyles:change', function(event) {
+			if (Object.keys(event.detail.changes).indexOf('--header-background-color') > -1) {
+				if (event.detail.changes['--header-background-color'].value === undefined) {
+          $('body').removeClass('bg-padding');
+				}
+				else {
+          $('body').addClass('bg-padding');
+				}
+
+			}
+    });
+  };
+
   var init = function() {
     // Add site wide functions here.
     handleElementsClick();
     tableWrapper();
     focusFormWithErrors();
-    autoSizeFormCommentArea();
+    //autoSizeFormCommentArea();
+    detectDesignEditorChanges();
 
     if (!Modernizr.flexbox && editmode) {
       bindFallbackHeaderLeftWidthCalculation();
     }
+
   };
 
   // Enables the usage of the initiations outside this file.
