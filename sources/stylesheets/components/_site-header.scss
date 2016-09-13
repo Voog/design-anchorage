@@ -34,6 +34,14 @@
         justify-content: flex-end;
       }
 
+      .header-top-with-bg & {
+        padding-bottom: 40px;
+
+        @media screen and (max-width: $tablet-3) {
+          padding-bottom: 20px !important;
+        }
+      }
+
       @media screen and (max-width: $tablet-3) {
         padding-top: 20px;
         padding-right: 20px;
@@ -137,6 +145,14 @@
         }
       }
 
+      .header-top-with-bg & {
+        margin-bottom: -40px;
+
+        @media screen and (max-width: $tablet-3) {
+          margin-bottom: -20px;
+        }
+      }
+
       .wrap {
         display: table-cell;
         padding: 60px 40px 90px;
@@ -144,6 +160,20 @@
 
         @media screen and (max-width: $tablet-3) {
           padding: 40px 20px 60px;
+        }
+      }
+    }
+
+    .voog-bg-picker-btn {
+      .header-top-with-bg & {
+        top: 140px;
+
+        @media screen and (max-width: $tablet-1) {
+          top: 115px;
+        }
+
+        @media screen and (max-width: $tablet-3) {
+          top: 70px;
         }
       }
     }
@@ -211,21 +241,4 @@
       }
     }
   }
-}
-
-
-/* Design editor changes */
-.header-top-with-bg .header-bottom .voog-bg-picker-btn { top: 140px;}
-.header-top-with-bg .site-header .header-top .wrap { padding-bottom: 40px;}
-.header-top-with-bg .site-header .header-bottom .header-bottom-inner { margin-bottom: -40px;}
-
-
-@media screen and (max-width: $tablet-1) {
-  .header-top-with-bg .header-bottom .voog-bg-picker-btn { top: 115px;}
-}
-@media screen and (max-width: $tablet-3) {
-  .header-top-with-bg .site-header .header-top .wrap { padding-bottom: 20px !important;}
-  .header-top-with-bg .header-bottom { margin-bottom: -20px;}
-  .header-top-with-bg .site-header .header-bottom .header-bottom-inner { margin-bottom: -20px;}
-  .header-top-with-bg .header-bottom .voog-bg-picker-btn { top: 70px;}
 }
