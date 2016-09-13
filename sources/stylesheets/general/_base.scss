@@ -72,6 +72,18 @@ a {
   .header-bottom & {
     top: 70px;
 
+  .header-top-with-bg & {
+    top: 145px;
+
+    @media screen and (max-width: $tablet-1) {
+      top: 120px;
+    }
+
+    @media screen and (max-width: $tablet-3) {
+      top: 70px;
+    }
+  }
+
     .blog-article-page & {
       top: 113px;
     }

@@ -110,6 +110,19 @@ a img {
 .header-bottom .voog-bg-picker-btn {
   top: 70px;
 }
+.header-top-with-bg .header-bottom .voog-bg-picker-btn {
+  top: 145px;
+}
+@media screen and (max-width: 1024px) {
+  .header-top-with-bg .header-bottom .voog-bg-picker-btn {
+    top: 120px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .header-top-with-bg .header-bottom .voog-bg-picker-btn {
+    top: 70px;
+  }
+}
 .blog-article-page .header-bottom .voog-bg-picker-btn {
   top: 113px;
 }
@@ -1226,7 +1239,7 @@ a img {
 }
 @media screen and (max-width: 640px) {
   .header-top-with-bg .site-header .header-top .wrap {
-    padding-bottom: 20px !important;
+    padding-bottom: 14px;
   }
 }
 @media screen and (max-width: 640px) {
@@ -1323,42 +1336,26 @@ a img {
     height: 400px;
   }
 }
-.header-top-with-bg .site-header .header-bottom .header-bottom-inner {
-  margin-bottom: -40px;
-}
-@media screen and (max-width: 640px) {
-  .header-top-with-bg .site-header .header-bottom .header-bottom-inner {
-    margin-bottom: -20px;
-  }
-}
 .site-header .header-bottom .header-bottom-inner .wrap {
   display: table-cell;
   padding: 60px 40px 90px;
   vertical-align: middle;
 }
+.header-top-with-bg .site-header .header-bottom .header-bottom-inner .wrap {
+  padding-top: 74px;
+  padding-bottom: 76px;
+}
 @media screen and (max-width: 640px) {
   .site-header .header-bottom .header-bottom-inner .wrap {
     padding: 40px 20px 60px;
   }
-}
-.header-top-with-bg .site-header .header-bottom .voog-bg-picker-btn {
-  top: 140px;
-}
-@media screen and (max-width: 1024px) {
-  .header-top-with-bg .site-header .header-bottom .voog-bg-picker-btn {
-    top: 115px;
-  }
-}
-@media screen and (max-width: 640px) {
-  .header-top-with-bg .site-header .header-bottom .voog-bg-picker-btn {
-    top: 70px;
+  .header-top-with-bg .site-header .header-bottom .header-bottom-inner .wrap {
+    padding-top: 49px;
+    padding-bottom: 51px;
   }
 }
 .site-header.photo-article .header-bottom .header-bottom-inner {
   height: 606px;
-}
-.site-header.photo-article .header-bottom .header-bottom-inner .wrap {
-  padding-top: 60px;
 }
 @media screen and (max-width: 640px) {
   .site-header.photo-article .header-bottom .header-bottom-inner {
