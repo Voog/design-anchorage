@@ -369,15 +369,3 @@ a {
   -webkit-overflow-scrolling: touch;
   max-width: 100%;
 }
-
-/* Design editor changes */
-.bg-padding .header-bottom .voog-bg-picker-btn {
-  top: 140px;
-}
-
-@media screen and (max-width: $tablet-1) {
-  .bg-padding .header-bottom .voog-bg-picker-btn { top: 115px;}
-}
-@media screen and (max-width: $tablet-3) {
-  .bg-padding .header-bottom .voog-bg-picker-btn { top: 70px;}
-}
