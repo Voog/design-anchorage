@@ -8,7 +8,7 @@
     {% include "front-page-variables" %}
   </head>
 
-  <body class="front-page{% if site.data.has_header_bg_color %} bg-padding{% endif %}">
+  <body class="front-page{% if site.data.has_header_bg_color %} header-top-with-bg{% endif %}">
 
     <div class="site-container">
       {% include "site-header" %}

@@ -215,17 +215,17 @@
 
 
 /* Design editor changes */
-.bg-padding .header-bottom .voog-bg-picker-btn { top: 140px;}
-.bg-padding .site-header .header-top .wrap { padding-bottom: 40px;}
-.bg-padding .site-header .header-bottom .header-bottom-inner { margin-bottom: -40px;}
+.header-top-with-bg .header-bottom .voog-bg-picker-btn { top: 140px;}
+.header-top-with-bg .site-header .header-top .wrap { padding-bottom: 40px;}
+.header-top-with-bg .site-header .header-bottom .header-bottom-inner { margin-bottom: -40px;}
 
 
 @media screen and (max-width: $tablet-1) {
-  .bg-padding .header-bottom .voog-bg-picker-btn { top: 115px;}
+  .header-top-with-bg .header-bottom .voog-bg-picker-btn { top: 115px;}
 }
 @media screen and (max-width: $tablet-3) {
-  .bg-padding .site-header .header-top .wrap { padding-bottom: 20px !important;}
-  .bg-padding .header-bottom { margin-bottom: -20px;}
-  .bg-padding .site-header .header-bottom .header-bottom-inner { margin-bottom: -20px;}
-  .bg-padding .header-bottom .voog-bg-picker-btn { top: 70px;}
+  .header-top-with-bg .site-header .header-top .wrap { padding-bottom: 20px !important;}
+  .header-top-with-bg .header-bottom { margin-bottom: -20px;}
+  .header-top-with-bg .site-header .header-bottom .header-bottom-inner { margin-bottom: -20px;}
+  .header-top-with-bg .header-bottom .voog-bg-picker-btn { top: 70px;}
 }

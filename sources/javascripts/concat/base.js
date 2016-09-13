@@ -534,12 +534,12 @@
     document.addEventListener('edicy:customstyles:change', function(event) {
 			if (Object.keys(event.detail.changes).indexOf('--header-background-color') > -1) {
 				if (event.detail.changes['--header-background-color'].value === undefined) {
-          $('body').removeClass('bg-padding');
+          $('body').removeClass('header-top-with-bg');
 
           siteData.remove('has_header_bg_color');
 				}
 				else {
-          $('body').addClass('bg-padding');
+          $('body').addClass('header-top-with-bg');
 
           siteData.set('has_header_bg_color', true);
 				}
