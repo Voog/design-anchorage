@@ -964,6 +964,33 @@ a img {
   color: white;
 }
 
+@media screen and (max-width: 1500px) {
+  .blog-article-page.header-top-with-bg .article-types-toggle {
+    top: 150px;
+  }
+
+  .blog-article-page.header-top-with-bg .header-bottom .voog-bg-picker-btn {
+    top: 180px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .blog-article-page.header-top-with-bg .article-types-toggle {
+    top: 125px;
+  }
+
+  .blog-article-page.header-top-with-bg .header-bottom .voog-bg-picker-btn {
+    top: 155px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .blog-article-page.header-top-with-bg .article-types-toggle {
+    top: 80px;
+  }
+
+  .blog-article-page.header-top-with-bg .header-bottom .voog-bg-picker-btn {
+    top: 115px;
+  }
+}
 .article-comments {
   transition: 250ms;
   position: absolute;

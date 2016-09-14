@@ -8,16 +8,16 @@
     {
       "content_type": "page",
       "component": false,
-      "file": "layouts/common_page.tpl",
-      "layout_name": "page_default",
-      "title": "Common page"
+      "file": "layouts/front_page.tpl",
+      "layout_name": "page_front",
+      "title": "Front page"
     },
     {
       "content_type": "page",
       "component": false,
-      "file": "layouts/front_page.tpl",
-      "layout_name": "page_front",
-      "title": "Front page"
+      "file": "layouts/common_page.tpl",
+      "layout_name": "page_default",
+      "title": "Common page"
     },
     {
       "content_type": "blog",
@@ -32,6 +32,27 @@
       "file": "layouts/blog_article.tpl",
       "layout_name": "blog_article",
       "title": "Blog article"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-javascripts.tpl",
+      "layout_name": "site-javascripts",
+      "title": "site-javascripts"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/blog-article-tags.tpl",
+      "layout_name": "blog-article-tags",
+      "title": "blog-article-tags"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/blog-article-template.tpl",
+      "layout_name": "blog-article-template",
+      "title": "blog-article-template"
     },
     {
       "content_type": "component",
@@ -113,9 +134,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/site-javascripts.tpl",
-      "layout_name": "site-javascripts",
-      "title": "site-javascripts"
+      "file": "components/blog-article-comments.tpl",
+      "layout_name": "blog-article-comments",
+      "title": "blog-article-comments"
     },
     {
       "content_type": "component",
@@ -235,27 +256,6 @@
       "file": "components/template-variables.tpl",
       "layout_name": "template-variables",
       "title": "template-variables"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/blog-article-comments.tpl",
-      "layout_name": "blog-article-comments",
-      "title": "blog-article-comments"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/blog-article-tags.tpl",
-      "layout_name": "blog-article-tags",
-      "title": "blog-article-tags"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/blog-article-template.tpl",
-      "layout_name": "blog-article-template",
-      "title": "blog-article-template"
     }
   ],
   "assets": [

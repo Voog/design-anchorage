@@ -1,3 +1,4 @@
+
 .blog-article-page {
   .article-types-toggle {
     font-size: 0;
@@ -146,4 +147,23 @@
       color: rgba($white, 1);
     }
   }
+}
+
+@media screen and (max-width: $wide-1) {
+  .blog-article-page.header-top-with-bg .article-types-toggle
+    { top: 150px;}
+  .blog-article-page.header-top-with-bg .header-bottom .voog-bg-picker-btn
+    { top: 180px;}
+}
+@media screen and (max-width: $tablet-1) {
+  .blog-article-page.header-top-with-bg .article-types-toggle
+    { top: 125px;}
+  .blog-article-page.header-top-with-bg .header-bottom .voog-bg-picker-btn
+    { top: 155px;}
+}
+@media screen and (max-width: $tablet-3) {
+  .blog-article-page.header-top-with-bg .article-types-toggle
+    { top: 80px;}
+  .blog-article-page.header-top-with-bg .header-bottom .voog-bg-picker-btn
+    { top: 115px;}
 }
