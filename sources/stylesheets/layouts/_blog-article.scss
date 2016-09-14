@@ -36,6 +36,18 @@
     }
   }
 
+  &.header-top-with-bg .article-types-toggle {
+    @media screen and (max-width: $wide-1) {
+      top: 150px;
+    }
+    @media screen and (max-width: $tablet-1) {
+      top: 125px;
+    }
+    @media screen and (max-width: $tablet-3) {
+      top: 80px;
+    }
+  }
+
   .article-body {
     font-size: 18px;
     font-weight: 300;
@@ -147,23 +159,17 @@
       color: rgba($white, 1);
     }
   }
-}
 
-@media screen and (max-width: $wide-1) {
-  .blog-article-page.header-top-with-bg .article-types-toggle
-    { top: 150px;}
-  .blog-article-page.header-top-with-bg .header-bottom .voog-bg-picker-btn
-    { top: 180px;}
-}
-@media screen and (max-width: $tablet-1) {
-  .blog-article-page.header-top-with-bg .article-types-toggle
-    { top: 125px;}
-  .blog-article-page.header-top-with-bg .header-bottom .voog-bg-picker-btn
-    { top: 155px;}
-}
-@media screen and (max-width: $tablet-3) {
-  .blog-article-page.header-top-with-bg .article-types-toggle
-    { top: 80px;}
-  .blog-article-page.header-top-with-bg .header-bottom .voog-bg-picker-btn
-    { top: 115px;}
+  &.header-top-with-bg .header-bottom .voog-bg-picker-btn {
+    @media screen and (max-width: $wide-1) {
+      top: 180px;
+    }
+    @media screen and (max-width: $tablet-1) {
+      top: 155px;
+    }
+    @media screen and (max-width: $tablet-3) {
+      top: 115px;
+    }
+  }
+
 }
