@@ -56,7 +56,7 @@
 
         {% if front_page %}
           <div class="wrap">
-            <div class="header-body content-area">
+            <div class="header-body content-area" {{ edy_intro_edit_text }}>
               {% content name="header" %}
             </div>
           </div>
@@ -74,7 +74,7 @@
           </div>
         {% else %}
           <div class="wrap">
-            <div class="header-body content-area">
+            <div class="header-body content-area" {{ edy_intro_edit_text }}>
               {% contentblock name="header" publish_default_content="true" %}<h1 style="text-align: center;">{{ page.title }}</h1>{% endcontentblock %}
             </div>
           </div>
