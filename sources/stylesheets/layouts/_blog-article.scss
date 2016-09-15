@@ -37,9 +37,8 @@
   }
 
   &.header-top-with-bg .article-types-toggle {
-    @media screen and (max-width: $wide-1) {
-      top: 150px;
-    }
+    top: 150px;
+
     @media screen and (max-width: $tablet-1) {
       top: 125px;
     }
@@ -161,12 +160,12 @@
   }
 
   &.header-top-with-bg .header-bottom .voog-bg-picker-btn {
-    @media screen and (max-width: $wide-1) {
-      top: 180px;
-    }
+    top: 180px;
+
     @media screen and (max-width: $tablet-1) {
       top: 155px;
     }
+
     @media screen and (max-width: $tablet-3) {
       top: 115px;
     }

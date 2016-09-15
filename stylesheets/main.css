@@ -875,10 +875,8 @@ a img {
 .blog-article-page .article-types-toggle .type-btn.is-active {
   background-color: black;
 }
-@media screen and (max-width: 1500px) {
-  .blog-article-page.header-top-with-bg .article-types-toggle {
-    top: 150px;
-  }
+.blog-article-page.header-top-with-bg .article-types-toggle {
+  top: 150px;
 }
 @media screen and (max-width: 1024px) {
   .blog-article-page.header-top-with-bg .article-types-toggle {
@@ -978,10 +976,8 @@ a img {
 .blog-article-page .dark-background .article-date {
   color: white;
 }
-@media screen and (max-width: 1500px) {
-  .blog-article-page.header-top-with-bg .header-bottom .voog-bg-picker-btn {
-    top: 180px;
-  }
+.blog-article-page.header-top-with-bg .header-bottom .voog-bg-picker-btn {
+  top: 180px;
 }
 @media screen and (max-width: 1024px) {
   .blog-article-page.header-top-with-bg .header-bottom .voog-bg-picker-btn {
