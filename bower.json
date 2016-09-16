@@ -9,6 +9,7 @@
   "license": "MIT",
   "devDependencies": {
     "jquery": "^3.1.0",
-    "bourbon": "^4.2.7"
+    "bourbon": "^4.2.7",
+    "textarea-autosize": "^0.4.2"
   }
 }
