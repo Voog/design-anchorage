@@ -75,7 +75,7 @@ body {
   }
 }
 @media screen and (max-width: 640px) {
-  .mobilemenu-open body  {
+  .mobilemenu-open body {
     position: fixed;
     top: 0;
     left: 0;
@@ -1722,7 +1722,7 @@ a img {
   #mobile-menu .navigation-menu .option-btn {
     padding: 15px 0;
   }
-  #mobile-menu .sub-menu a  {
+  #mobile-menu .sub-menu a {
     text-transform: initial;
   }
   #mobile-menu .menu-level-2,
