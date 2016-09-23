@@ -662,7 +662,6 @@
     initArticlePage: initArticlePage,
     initCommonPage: initCommonPage,
     initFrontPage: initFrontPage,
-    // toggleFlags: toggleFlags,
     bindLanguageMenuSettings: bindLanguageMenuSettings,
   });
 

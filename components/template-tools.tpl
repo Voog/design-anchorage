@@ -5,19 +5,17 @@
       type: 'site'
     });
 
-    // Initiates language flag toggleing functionality.
-    // site.toggleFlags();
     //==========================================================================
     // Initiates the language menu mode toggleing popover.
     //==========================================================================
     var valuesObj;
-    
-    {%if site.data.settings_language_menu %}
+
+    {% if site.data.settings_language_menu %}
       valuesObj = {{ site.data.settings_language_menu | json }};
     {% else %}
       valuesObj = {};
     {% endif %};
-    
+
     site.bindLanguageMenuSettings(valuesObj);
 
     {% if blog_article_page %}
