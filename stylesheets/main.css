@@ -453,43 +453,6 @@ a img {
   max-width: 1040px;
 }
 
-.dark-background .edy-empty-bordered {
-  color: rgba(255, 255, 255, 0.5);
-  border-color: rgba(255, 255, 255, 0.5);
-}
-.dark-background .placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-.dark-background .edy-content-element-hover {
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgba(255, 255, 255, 0.2);
-}
-.dark-background .edy-texteditor-active {
-  outline-width: 1px;
-  outline-style: solid;
-  outline-color: rgba(255, 255, 255, 0.4);
-}
-.dark-background .edy-texteditor-active:hover {
-  outline-color: rgba(255, 255, 255, 0.63);
-}
-.dark-background .edy-texteditor-active table td.wysiwyg-tmp-selected-cell,
-.dark-background .edy-texteditor-active table th.wysiwyg-tmp-selected-cell {
-  outline: 1px solid rgba(255, 255, 255, 0.6);
-}
-.dark-background .edy-taglist {
-  border-color: rgba(255, 255, 255, 0.33);
-}
-.dark-background .edy-tag-input {
-  color: white;
-}
-.dark-background .edy-taglist-openarrow:after {
-  border-color: white transparent transparent;
-}
-.dark-background .edy-tag-suggestions .edy-tag-suggestion {
-  color: rgba(0, 0, 0, 0.7);
-}
-
 .edy-content-element > .form {
   margin: 20px 0;
 }
