@@ -116,12 +116,12 @@
     }
 
     .aspect-ratio-inner {
-      border-width: 1px;
-      border-color: rgba(27,33,36,.33);
       background-size: cover;
       background-position: center;
 
       &:not(.active) {
+        border-width: 1px;
+        
         .editmode & {
           border-top-style: dashed;
           border-bottom-style: dashed;
@@ -131,6 +131,10 @@
             border-left-style: dashed;
           }
         }
+      }
+      
+      &.active {
+        border-width: 0;
       }
 
       .editmode & {
