@@ -785,7 +785,8 @@ body {
   }
 
   // Code blocks and preformatted content.
-  a.custom-btn {
+  a.custom-btn,
+  .custom-btn {
     padding: calc(var(--button-padding) - 18px) var(--button-padding) calc(var(--button-padding) - 17px);
     font-size: var(--button-font-size);
     font-style: var(--button-font-style);
@@ -902,5 +903,14 @@ body {
         background-color: var(--secondary-color);
       }
     }
+  }
+}
+
+.public {
+  .edy-ecommerce-shopping-cart-button {
+    font-style: var(--button-font-style);
+    font-weight: var(--button-font-weight);
+    text-decoration: var(--button-text-decoration);
+    text-transform: var(--button-text-transform);
   }
 }
