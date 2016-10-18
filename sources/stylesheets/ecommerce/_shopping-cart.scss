@@ -14,6 +14,7 @@
     background-color: rgba($white, 1);
     border: 2px solid rgba($black, 1);
     box-sizing: border-box;
+    transition: transform .5s;
 
     @media screen and (max-width: $tablet-3) {
       top: 60px;
@@ -32,6 +33,11 @@
       border: 2px solid rgba($white, 1);
     }
   }
+
+  .mobilemenu-open & {
+    transform: translate3d(-250px, 0, 0);
+  }
+
 
   .search-open & {
     z-index: -1;

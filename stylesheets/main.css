@@ -3611,6 +3611,9 @@ a img {
   background-color: white;
   border: 2px solid black;
   box-sizing: border-box;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
 }
 @media screen and (max-width: 640px) {
   .public .edy-ecommerce-shopping-cart-button {
@@ -3629,6 +3632,10 @@ a img {
   color: white;
   background-color: black;
   border: 2px solid white;
+}
+.mobilemenu-open .edy-ecommerce-shopping-cart-button {
+  -webkit-transform: translate3d(-250px, 0, 0);
+          transform: translate3d(-250px, 0, 0);
 }
 .search-open .edy-ecommerce-shopping-cart-button {
   z-index: -1;
