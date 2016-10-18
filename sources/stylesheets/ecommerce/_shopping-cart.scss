@@ -1,5 +1,6 @@
-.public {
-  .edy-ecommerce-shopping-cart-button {
+.edy-ecommerce-shopping-cart-button {
+  .public & {
+    z-index: 1;
     display: inline-block;
     padding: 4px 4px 3px;
     font-size: 16px;
@@ -13,7 +14,6 @@
     background-color: rgba($white, 1);
     border: 2px solid rgba($black, 1);
     box-sizing: border-box;
-    z-index: 1;
 
     @media screen and (max-width: $tablet-3) {
       top: 60px;
@@ -21,7 +21,7 @@
     }
 
     @media screen and (min-width: $tablet-3 + 1) {
-      top: 75px;
+      top: 72px;
       right: 40px;
     }
 
@@ -31,10 +31,14 @@
       background-color: rgba($black, 1);
       border: 2px solid rgba($white, 1);
     }
+  }
 
-    .edy-ecommerce-shopping-cart-button-flash {
-      font-size: 13px;
-      line-height: 2.8;
-    }
+  .search-open & {
+    z-index: -1;
+  }
+
+  .edy-ecommerce-shopping-cart-button-flash {
+    font-size: 13px;
+    line-height: 2.8;
   }
 }
