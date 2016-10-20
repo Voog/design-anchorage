@@ -34,10 +34,10 @@
           </div>
 
           {% include "site-search" %}
-
         </div>
-
       </div>
+
+      <div class="kh-cart-btn-container"></div>
     </div>
     <div class="header-bottom">
       {% if editmode %}

@@ -1,3 +1,11 @@
+.kh-cart-btn-container {
+  @media screen and (min-width: $tablet-3 + 1) {
+    padding-right: 40px;
+    padding-left: 40px;
+    text-align: right;
+  }
+}
+
 .edy-ecommerce-shopping-cart-button {
   .public & {
     z-index: 1;
@@ -11,40 +19,70 @@
     text-decoration: none;
     text-transform: uppercase;
     cursor: pointer;
-    background-color: rgba($white, 1);
-    border: 2px solid rgba($black, 1);
+    background-color: transparent;
     box-sizing: border-box;
     transition: transform .5s;
 
+    &.-static {
+      @media screen and (max-width: $tablet-3) {
+        position: absolute;
+        top: -38px;
+        right: 0;
+        left: 0;
+        width: 100%;
+      }
+
+      @media screen and (min-width: $tablet-3 + 1) {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .dark-background & {
     @media screen and (max-width: $tablet-3) {
-      top: 60px;
-      right: 20px;
+      color: rgba($grey, 1);
+      border: 2px solid rgba($grey, 1);
     }
 
     @media screen and (min-width: $tablet-3 + 1) {
-      top: 72px;
-      right: 40px;
-    }
-
-    &:hover {
-      @include transition($transition);
       color: rgba($white, 1);
-      background-color: rgba($black, 1);
       border: 2px solid rgba($white, 1);
     }
   }
 
-  .mobilemenu-open & {
-    transform: translate3d(-250px, 0, 0);
+  .light-background & {
+    color: rgba($grey, 1);
+    border: 2px solid rgba($grey, 1);
   }
 
+  &:hover {
+    @include transition($transition);
 
-  .search-open & {
-    z-index: -1;
+    .dark-background & {
+      @media screen and (max-width: $tablet-3) {
+        color: rgba($white, 1);
+        background-color: rgba($grey, 1);
+        border: 2px solid rgba($grey, 1);
+      }
+
+      @media screen and (min-width: $tablet-3 + 1) {
+        color: rgba($black, .7);
+        background-color: rgba($white, 1);
+        border: 2px solid rgba($white, 1);
+      }
+    }
+
+    .light-background & {
+      color: rgba($white, 1);
+      background-color: rgba($grey, 1);
+      border: 2px solid rgba($grey, 1);
+    }
   }
 
   .edy-ecommerce-shopping-cart-button-flash {
-    font-size: 13px;
-    line-height: 2.8;
+    .public & {
+      font-size: 13px;
+      line-height: 2.8;
+    }
   }
 }

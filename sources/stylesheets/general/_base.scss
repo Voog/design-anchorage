@@ -72,17 +72,17 @@ a {
   .header-bottom & {
     top: 70px;
 
-  .header-top-with-bg & {
-    top: 145px;
+    .header-top-with-bg & {
+      top: 145px;
 
-    @media screen and (max-width: $tablet-1) {
-      top: 120px;
-    }
+      @media screen and (max-width: $tablet-1) {
+        top: 120px;
+      }
 
-    @media screen and (max-width: $tablet-3) {
-      top: 70px;
+      @media screen and (max-width: $tablet-3) {
+        top: 70px;
+      }
     }
-  }
 
     .blog-article-page & {
       top: 113px;
@@ -123,6 +123,19 @@ a {
   .editmode.flexbox & {
     min-height: calc(100vh - 40px);
   }
+
+  .kh-cart-btn-visible & {
+    @media screen and (max-width: $tablet-3) {
+      margin-top: 38px;
+    }
+
+    .search-open & {
+      @media screen and (max-width: $tablet-3) {
+        margin-top: 0;
+      }
+    }
+  }
+
 
   .mobilemenu-open & {
     -webkit-transform: translate3d(-250px, 0, 0);
