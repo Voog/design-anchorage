@@ -113,7 +113,9 @@
     }
 
     .kh-cart-btn-visible & {
-      top: -15px;
+      @media screen and (min-width: $tablet-3 + 1) {
+        top: -15px;
+      }
     }
 
     .no-flexbox & {

@@ -1345,8 +1345,10 @@ a img {
     position: static;
   }
 }
-.kh-cart-btn-visible .site-header .header-right {
-  top: -15px;
+@media screen and (min-width: 641px) {
+  .kh-cart-btn-visible .site-header .header-right {
+    top: -15px;
+  }
 }
 .no-flexbox .site-header .header-right {
   float: right;
@@ -3673,5 +3675,6 @@ a img {
 }
 .public .edy-ecommerce-shopping-cart-button .edy-ecommerce-shopping-cart-button-flash {
   padding: 13px 30px 12px;
-  line-height: 1.8;
+  font-size: 13px;
+  line-height: 2;
 }
