@@ -1345,7 +1345,7 @@ a img {
     position: static;
   }
 }
-@media screen and (min-width: 641px) {
+@media screen and (min-width: 1025px) {
   .kh-cart-btn-visible .site-header .header-right {
     top: -15px;
   }
