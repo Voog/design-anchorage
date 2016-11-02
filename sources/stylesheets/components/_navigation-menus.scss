@@ -3,12 +3,7 @@
 .menu-btn-wrap {
   display: inline-block;
   vertical-align: middle;
-  margin-left: 40px;
-
-  //&.flags-enabled {
-  //  position: relative;
-  //  top: -1px;
-  //}
+  margin-left: 13px;
 
   @media screen and (max-width: $tablet-1) {
     display: none;

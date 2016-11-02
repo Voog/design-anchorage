@@ -1449,7 +1449,7 @@ a img {
 .menu-btn-wrap {
   display: inline-block;
   vertical-align: middle;
-  margin-left: 40px;
+  margin-left: 13px;
 }
 @media screen and (max-width: 1024px) {
   .menu-btn-wrap {
@@ -2407,7 +2407,7 @@ a img {
 }
 @media screen and (min-width: 1025px) {
   .search-btn {
-    margin-left: 28px;
+    margin-left: 10px;
   }
 }
 @media screen and (max-width: 1024px) {
