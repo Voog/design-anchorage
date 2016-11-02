@@ -7,6 +7,8 @@
     {% for item in site.visible_menuitems %}
       {% menulink item wrapper-tag="li" %}
     {% endfor %}
+
+    <li class="js-kh-cart-btn-container"></li>
   </ul>
   {% if editmode %}
     <ul class="menu">

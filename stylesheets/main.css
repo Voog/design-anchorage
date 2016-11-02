@@ -1287,7 +1287,7 @@ a img {
 }
 .site-header .header-top .site-options {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   height: 27px;
 }
 @media screen and (max-width: 1024px) {
@@ -1344,6 +1344,9 @@ a img {
   .search-open .site-header .header-right {
     position: static;
   }
+}
+.kh-cart-btn-visible .site-header .header-right {
+  top: -15px;
 }
 .no-flexbox .site-header .header-right {
   float: right;
@@ -1446,10 +1449,6 @@ a img {
   vertical-align: middle;
   margin-left: 40px;
 }
-.menu-btn-wrap.flags-enabled {
-  position: relative;
-  top: -1px;
-}
 @media screen and (max-width: 1024px) {
   .menu-btn-wrap {
     display: none;
@@ -1525,7 +1524,7 @@ a img {
 
 .menu-main {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   text-transform: uppercase;
 }
 .menu-main li {
@@ -3606,21 +3605,14 @@ a img {
   color: rgba(14, 203, 0, 0.7);
 }
 
-@media screen and (min-width: 641px) {
-  .kh-cart-btn-container {
-    padding-right: 40px;
-    padding-left: 40px;
-    text-align: right;
-  }
-}
-
 .public .edy-ecommerce-shopping-cart-button {
   z-index: 1;
   display: inline-block;
-  padding: 4px 4px 3px;
+  padding: 13px 30px 12px;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.7;
+  letter-spacing: normal;
   color: rgba(0, 0, 0, 0.7);
   text-align: center;
   text-decoration: none;
@@ -3639,11 +3631,6 @@ a img {
     right: 0;
     left: 0;
     width: 100%;
-  }
-}
-@media screen and (min-width: 641px) {
-  .public .edy-ecommerce-shopping-cart-button.-static {
-    margin-top: 10px;
   }
 }
 @media screen and (max-width: 640px) {
@@ -3685,6 +3672,6 @@ a img {
   border: 2px solid #222222;
 }
 .public .edy-ecommerce-shopping-cart-button .edy-ecommerce-shopping-cart-button-flash {
-  font-size: 13px;
-  line-height: 2.8;
+  padding: 13px 30px 12px;
+  line-height: 1.8;
 }

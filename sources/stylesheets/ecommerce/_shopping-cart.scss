@@ -1,19 +1,20 @@
 .kh-cart-btn-container {
-  @media screen and (min-width: $tablet-3 + 1) {
-    padding-right: 40px;
-    padding-left: 40px;
-    text-align: right;
-  }
+  // @media screen and (min-width: $tablet-3 + 1) {
+  //   padding-right: 40px;
+  //   padding-left: 40px;
+  //   text-align: right;
+  // }
 }
 
 .edy-ecommerce-shopping-cart-button {
   .public & {
     z-index: 1;
     display: inline-block;
-    padding: 4px 4px 3px;
+    padding: 13px 30px 12px;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.7;
+    letter-spacing: normal;
     color: rgba($black, .7);
     text-align: center;
     text-decoration: none;
@@ -30,10 +31,6 @@
         right: 0;
         left: 0;
         width: 100%;
-      }
-
-      @media screen and (min-width: $tablet-3 + 1) {
-        margin-top: 10px;
       }
     }
   }
@@ -81,8 +78,8 @@
 
   .edy-ecommerce-shopping-cart-button-flash {
     .public & {
-      font-size: 13px;
-      line-height: 2.8;
+      padding: 13px 30px 12px;
+      line-height: 1.8;
     }
   }
 }

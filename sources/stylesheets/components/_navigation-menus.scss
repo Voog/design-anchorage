@@ -5,10 +5,10 @@
   vertical-align: middle;
   margin-left: 40px;
 
-  &.flags-enabled {
-    position: relative;
-    top: -1px;
-  }
+  //&.flags-enabled {
+  //  position: relative;
+  //  top: -1px;
+  //}
 
   @media screen and (max-width: $tablet-1) {
     display: none;
@@ -103,7 +103,7 @@
 // Main menu
 .menu-main {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   text-transform: uppercase;
   // background-color: yellow;
 

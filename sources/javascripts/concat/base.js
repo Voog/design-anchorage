@@ -548,6 +548,14 @@
     });
   };
 
+  // ===========================================================================
+  // Shopping cart initializer.
+  // ===========================================================================
+  var bindShoppingCart = function() {
+    window.edy = window.edy || [];
+    edy.push(['ecommerce', {cartBtnTargetClass: 'js-kh-cart-btn-container', cartBtnVisibleBodyClass: 'kh-cart-btn-visible'}]);
+  };
+
   var init = function() {
     // Add site wide functions here.
     handleElementsClick();
@@ -555,6 +563,7 @@
     focusFormWithErrors();
     //autoSizeFormCommentArea();
     detectDesignEditorChanges();
+    bindShoppingCart();
 
     if (!Modernizr.flexbox && editmode) {
       bindFallbackHeaderLeftWidthCalculation();
