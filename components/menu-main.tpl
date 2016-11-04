@@ -8,7 +8,7 @@
       {% menulink item wrapper-tag="li" %}
     {% endfor %}
 
-    <li class="js-kh-cart-btn-container"></li>
+    <li class="kh-cart-btn-container js-kh-cart-btn-container"></li>
   </ul>
   {% if editmode %}
     <ul class="menu">

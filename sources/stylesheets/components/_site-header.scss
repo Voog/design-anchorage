@@ -102,10 +102,6 @@
     position: relative;
     text-align: right;
 
-    @media screen and (max-width: $tablet-1) {
-      margin-top: 1px;
-    }
-
     @media screen and (max-width: $tablet-3) {
       .search-open & {
         position: static;
@@ -113,8 +109,12 @@
     }
 
     .kh-cart-btn-visible & {
-      @media screen and (min-width: $tablet-1 + 1) {
-        top: -15px;
+      @media screen and (max-width: $tablet-3) {
+        top: -2px;
+      }
+
+      @media screen and (min-width: $tablet-3 + 1) {
+        top: -18px;
       }
     }
 

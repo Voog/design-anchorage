@@ -141,8 +141,8 @@
 
 @media screen and (max-width: $tablet-1) {
   .site-header {
-    .header-right {
-      .menu-main {
+    .menu-main {
+      li:not(.kh-cart-btn-container) {
         display: none;
       }
     }
@@ -174,12 +174,21 @@
     height: 44px;
     outline: 0;
 
+    .kh-cart-btn-visible & {
+      top: 6px;
+
+      @media screen and (max-width: $tablet-3) {
+        top: -9px;
+      }
+    }
+
     span {
+      top: 14px;
+
       &,
       &:before,
       &:after {
         position: absolute;
-        top: 14px;
         left: 12px;
         display: block;
         width: 21px;
@@ -241,10 +250,6 @@
 
     &.reset-touch {
       -webkit-overflow-scrolling: touch;
-    }
-
-    @media screen and (max-width: $tablet-3) {
-      padding-top: 10px;
     }
 
     .editmode & {
@@ -621,7 +626,6 @@ $flags:
 /* langmenu */
 .lang-menu {
   position: relative;
-  top: 1px;
   display: inline-block;
   margin-left: 40px;
   vertical-align: top;

@@ -52,6 +52,12 @@
     @media screen and (min-width: $tablet-3 + 1) {
       top: 30px;
     }
+
+    .kh-cart-btn-visible & {
+      @media screen and (min-width: $tablet-3 + 1) {
+        top: 48px;
+      }
+    }
   }
 }
 
@@ -236,6 +242,10 @@
     .comments-open & {
       display: none;
     }
+  }
+
+  .kh-cart-btn-visible & {
+    top: 0;
   }
 }
 
