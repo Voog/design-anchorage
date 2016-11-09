@@ -25,6 +25,8 @@
       $('html').toggleClass('mobilemenu-open');
       $('body').removeClass('mobilesearch-open');
       $('#mobile-menu').removeClass('reset-touch').addClass('reset-touch');
+
+      repositionShoppingCartBtn();
   });
 
   $('.tags-toggle').click(function() {
@@ -46,6 +48,8 @@
       $('body').removeClass('lang-menu-open');
     } else {
       $('html').removeClass('mobilemenu-open');
+
+      repositionShoppingCartBtn();
     }
   });
 
@@ -59,6 +63,26 @@
       $('body').addClass('lang-menu-open');
     }
   });
+
+  // Repositions shopping cart button when toggleing mobile menu.
+  // This is a hacky fix and the real solution should be refactoring the
+  // layout positioning (use something else than transform: translate3d());
+  //
+  // NOTE: Causes a small flicker effect when closing mobile menu with visible
+  // cart button (<= 640px wide viewport only).
+  //
+  // TODO: Remove when mobile menu positioning is refactored.
+  var repositionShoppingCartBtn = function() {
+    if ($(window).width() <= 640) {
+      if ($('html').hasClass('mobilemenu-open')) {
+        $('.edy-ecommerce-shopping-cart-button-in-place').css('top', -38);
+      } else {
+        setTimeout(function(){
+          $('.edy-ecommerce-shopping-cart-button-in-place').css('top', 0);
+        }, 550);
+      }
+    }
+  }
 
   var bindLanguageMenuPositioning = function(currentButton) {
     var offsetItem = currentButton.parent().hasClass('flags-disabled') ? currentButton.find('.js-lang-title-inner') : currentButton,
@@ -307,6 +331,8 @@
       $('.js-search').toggleClass('active');
       $('.js-search').hasClass('active') ? $('.js-search-input').focus() : '';
       $('html').toggleClass('search-open');
+
+      repositionShoppingCartBtn();
     });
 
     $('.js-search-input').on('input', function() {

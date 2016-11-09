@@ -82,17 +82,26 @@
       top: 0;
       right: 0;
       left: 0;
+      z-index: 22;
       width: 100%;
       padding: 9px 20px 7px;
       font-size: 13px;
       color: rgba($white, 1);
       background-color: rgba($grey, 1);
       border: 0;
+    }
 
-      &:hover {
-        opacity: .8;
+    &:hover {
+      @media screen and (max-width: $tablet-3) {
         border: 0;
+        opacity: .8;
       }
     }
   }
+
+  //.mobilemenu-open & {
+  //  @media screen and (max-width: $tablet-3) {
+  //    top: -38px;
+  //  }
+  //}
 }

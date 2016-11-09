@@ -2295,7 +2295,7 @@ a img {
 .search.active {
   position: absolute;
   right: 0;
-  z-index: 20;
+  z-index: 22;
   display: block;
 }
 @media screen and (min-width: 641px) {
@@ -3696,6 +3696,7 @@ a img {
     top: 0;
     right: 0;
     left: 0;
+    z-index: 22;
     width: 100%;
     padding: 9px 20px 7px;
     font-size: 13px;
@@ -3703,8 +3704,10 @@ a img {
     background-color: #222222;
     border: 0;
   }
+}
+@media screen and (max-width: 640px) {
   .public .edy-ecommerce-shopping-cart-button-in-place:hover {
-    opacity: .8;
     border: 0;
+    opacity: .8;
   }
 }
