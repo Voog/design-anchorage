@@ -2868,6 +2868,10 @@ a img {
   width: 100%;
   height: auto;
 }
+.public .item-top .top-inner .image-square {
+  width: 100%;
+  height: auto;
+}
 .with-image .item-top .top-inner {
   background-color: rgba(0, 0, 0, 0.02);
 }
