@@ -146,6 +146,14 @@
     padding-right: 24px;
     padding-left: 24px;
   }
+
+  .menu-item {
+    display: inline-block;
+
+    &.float-right {
+      float: right;
+    }
+  }
 }
 
 /* mobile-menu */

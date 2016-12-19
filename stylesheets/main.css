@@ -1535,6 +1535,12 @@ a img {
     padding-left: 24px;
   }
 }
+.menu-item-list .menu-item {
+  display: inline-block;
+}
+.menu-item-list .menu-item.float-right {
+  float: right;
+}
 
 /* mobile-menu */
 #mobile-menu {
