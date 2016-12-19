@@ -267,7 +267,7 @@ a {
     }
   }
 
-  .item-list-page & {
+  .item-list-page.sidebar-inactive & {
     @media screen and (max-width: $mobile) {
       padding-right: 20px;
       padding-left: 20px;
@@ -276,6 +276,22 @@ a {
     @media screen and (min-width: $mobile + 1) {
       padding-right: 40px;
       padding-left: 40px;
+    }
+  }
+
+  .item-list-page.sidebar-active & {
+    @media screen and (max-width: $tablet) {
+      padding-left: 25px;
+    }
+
+    @media screen and (max-width: $mobile) {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    @media screen and (min-width: $mobile + 1) {
+      padding-right: 25px;
+      padding-left: 0;
     }
   }
 

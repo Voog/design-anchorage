@@ -312,15 +312,32 @@ a img {
   }
 }
 @media screen and (max-width: 640px) {
-  .item-list-page .inner {
+  .item-list-page.sidebar-inactive .inner {
     padding-right: 20px;
     padding-left: 20px;
   }
 }
 @media screen and (min-width: 641px) {
-  .item-list-page .inner {
+  .item-list-page.sidebar-inactive .inner {
     padding-right: 40px;
     padding-left: 40px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .item-list-page.sidebar-active .inner {
+    padding-left: 25px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .item-list-page.sidebar-active .inner {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .item-list-page.sidebar-active .inner {
+    padding-right: 25px;
+    padding-left: 0;
   }
 }
 @media screen and (max-width: 640px) {
