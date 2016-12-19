@@ -357,6 +357,11 @@
     {% assign footer_bg_color_data_str = footer_bg_color_data | json %}
   {% endif %}
 
+  {% assign product_list_layout = "Product list" %}
+  {% assign product_layout = "Product" %}
+
+  {% assign hide_categories_from_main_menu = site.data.settings_root_item.hide_categories_from_main_menu %}
+
   {% comment %}=================================================================
   || Design editor variables.
   ============================================================= {% endcomment %}

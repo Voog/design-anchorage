@@ -9,6 +9,7 @@ $grey: #222;
 $blue: #06b;
 $yellow: #f9ec5a;
 $red: #c70909;
+$science-blue: #06b;
 
 // Specific colors.
 $error-color: #f00;
@@ -45,3 +46,13 @@ $width-medium: 760px;
 $width-max: 1040px;
 
 $transition: 500ms;
+
+
+//TODO: Merge with available breakpoints.
+// Media query breakpoints.
+$tablet: 1024px;
+$mobile: 640px;
+$small: 380px;
+$tiny: 340px;
+$micro: 290px;
+$nano: 240px;

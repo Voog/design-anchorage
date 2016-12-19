@@ -72,5 +72,11 @@
       });
     });
 
+    {% if template-tools == "item_list_page" %}
+      site.bindContentItemBgPickers();
+      site.bindContentItemImgDropAreas();
+      site.bindContentItemImageCropToggle();
+    {% endif %}
+
   </script>
 {% endeditorjsblock %}

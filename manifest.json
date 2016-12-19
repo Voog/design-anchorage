@@ -8,30 +8,9 @@
     {
       "content_type": "page",
       "component": false,
-      "file": "layouts/common_page.tpl",
-      "layout_name": "page_default",
-      "title": "Common page"
-    },
-    {
-      "content_type": "page",
-      "component": false,
       "file": "layouts/front_page.tpl",
       "layout_name": "page_front",
       "title": "Front page"
-    },
-    {
-      "content_type": "blog",
-      "component": false,
-      "file": "layouts/blog___news.tpl",
-      "layout_name": "blog",
-      "title": "Blog & News"
-    },
-    {
-      "content_type": "blog_article",
-      "component": false,
-      "file": "layouts/blog_article.tpl",
-      "layout_name": "blog_article",
-      "title": "Blog article"
     },
     {
       "content_type": "page",
@@ -48,18 +27,25 @@
       "title": "Product list"
     },
     {
-      "content_type": "component",
-      "component": true,
-      "file": "components/blog-news-tags.tpl",
-      "layout_name": "blog-news-tags",
-      "title": "blog-news-tags"
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/common_page.tpl",
+      "layout_name": "page_default",
+      "title": "Common page"
     },
     {
-      "content_type": "component",
-      "component": true,
-      "file": "components/common-page-variables.tpl",
-      "layout_name": "common-page-variables",
-      "title": "common-page-variables"
+      "content_type": "blog",
+      "component": false,
+      "file": "layouts/blog___news.tpl",
+      "layout_name": "blog",
+      "title": "Blog & News"
+    },
+    {
+      "content_type": "blog_article",
+      "component": false,
+      "file": "layouts/blog_article.tpl",
+      "layout_name": "blog_article",
+      "title": "Blog article"
     },
     {
       "content_type": "component",
@@ -109,6 +95,13 @@
       "file": "components/menu-sub.tpl",
       "layout_name": "menu-sub",
       "title": "menu-sub"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/product-list-item.tpl",
+      "layout_name": "product-list-item",
+      "title": "product-list-item"
     },
     {
       "content_type": "component",
@@ -270,6 +263,20 @@
       "file": "components/blog-article-template.tpl",
       "layout_name": "blog-article-template",
       "title": "blog-article-template"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/blog-news-tags.tpl",
+      "layout_name": "blog-news-tags",
+      "title": "blog-news-tags"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/common-page-variables.tpl",
+      "layout_name": "common-page-variables",
+      "title": "common-page-variables"
     }
   ],
   "assets": [
