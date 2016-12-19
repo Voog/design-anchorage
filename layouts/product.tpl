@@ -28,6 +28,8 @@
   </head>
 
   <body class="item-page{% if site.data.has_header_bg_color %} header-top-with-bg{% endif %}">
+    {% include "template-svg-spritesheet" %}
+
     <div class="site-container">
       {% include "site-header" %}
 

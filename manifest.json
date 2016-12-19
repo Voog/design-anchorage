@@ -8,13 +8,6 @@
     {
       "content_type": "page",
       "component": false,
-      "file": "layouts/front_page.tpl",
-      "layout_name": "page_front",
-      "title": "Front page"
-    },
-    {
-      "content_type": "page",
-      "component": false,
       "file": "layouts/product.tpl",
       "layout_name": "product",
       "title": "Product"
@@ -32,6 +25,13 @@
       "file": "layouts/common_page.tpl",
       "layout_name": "page_default",
       "title": "Common page"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/front_page.tpl",
+      "layout_name": "page_front",
+      "title": "Front page"
     },
     {
       "content_type": "blog",
@@ -228,6 +228,13 @@
       "file": "components/template-styles.tpl",
       "layout_name": "template-styles",
       "title": "template-styles"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-svg-spritesheet.tpl",
+      "layout_name": "template-svg-spritesheet",
+      "title": "template-svg-spritesheet"
     },
     {
       "content_type": "component",
