@@ -45,12 +45,16 @@ body {
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 
   img {
     border-style: none;
   }
+}
+
+.svg-spritesheet {
+  display: none;
 }
 
 .voog-bg-picker-btn {

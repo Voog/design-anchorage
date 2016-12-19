@@ -93,6 +93,10 @@ a img {
   border-style: none;
 }
 
+.svg-spritesheet {
+  display: none;
+}
+
 .voog-bg-picker-btn {
   top: 0;
   left: 10px;
