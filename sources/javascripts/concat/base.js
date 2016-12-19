@@ -766,6 +766,13 @@
   };
 
   // ===========================================================================
+  // Sets functions that will be initiated on items list layouts.
+  // ===========================================================================
+  var initItemsPage = function() {
+    bindItemImageLazyload();
+  };
+
+  // ===========================================================================
   // Detects design editor changes.
   // ===========================================================================
   var detectDesignEditorChanges = function() {
@@ -810,6 +817,7 @@
     initArticlePage: initArticlePage,
     initCommonPage: initCommonPage,
     initFrontPage: initFrontPage,
+    initItemsPage: initItemsPage,
     toggleFlags: toggleFlags,
     bindContentItemBgPickers: bindContentItemBgPickers,
     bindContentItemImgDropAreas: bindContentItemImgDropAreas,

@@ -22,7 +22,7 @@
             <div class="main-inner-row content-full">
               <div class="main-content">
                 <div class="wrap">
-                  <div class="content-item-boxes inner{% if editmode or left_has-content or right_has_content %} has-bottom-content{% endif %}">
+                  <div class="content-item-boxes inner">
                    {% if site.root_item.selected? %}
                      {% if editmode %}
                        <ul class="menu menu-item-list">
@@ -113,7 +113,7 @@
     {% include "site-javascripts" %}
     {% include "template-tools" with "item_list_page" %}
     <script>
-      site.initBlogPage();
+      site.initItemsPage();
       site.initWindowResize();
     </script>
   </body>

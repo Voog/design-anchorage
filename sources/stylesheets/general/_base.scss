@@ -264,14 +264,14 @@ a {
   }
 
   .item-list-page & {
-    @media screen and (max-width: $tablet-3) {
-      padding-right: 10px;
-      padding-left: 10px;
-    }
-
-    @media screen and (min-width: $tablet-3 + 1) {
+    @media screen and (max-width: $mobile) {
       padding-right: 20px;
       padding-left: 20px;
+    }
+
+    @media screen and (min-width: $mobile + 1) {
+      padding-right: 40px;
+      padding-left: 40px;
     }
   }
 

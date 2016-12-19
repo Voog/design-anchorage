@@ -133,13 +133,12 @@
 // Product list menu
 .menu-item-list {
   @media screen and (max-width: $tablet-3) {
-    padding-top: 40px;
+    padding-top: 47px;
     padding-right: 17px;
     padding-left: 17px;
   }
 
   @media screen and (min-width: $tablet-3 + 1) {
-    padding-top: 20px;
     padding-right: 24px;
     padding-left: 24px;
   }
