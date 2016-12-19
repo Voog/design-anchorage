@@ -75,7 +75,12 @@
 
   &:hover {
     .top-inner {
-      opacity: .8;
+      // scss-lint:disable NestingDepth
+      .editmode &,
+      .item-list-page & {
+        opacity: .8;
+      }
+      // scss-lint:enable NestingDepth
     }
   }
 }
@@ -209,7 +214,7 @@
     }
 
     .with-image & {
-      background-color: rgba($white, 1);
+      background-color: rgba($black, .02);
     }
 
     .without-image & {

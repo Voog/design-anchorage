@@ -2716,7 +2716,7 @@ a img {
 .content-item-box .top-inner {
   opacity: 1;
 }
-.content-item-box:hover .top-inner {
+.editmode .content-item-box:hover .top-inner, .item-list-page .content-item-box:hover .top-inner {
   opacity: .8;
 }
 
@@ -2853,7 +2853,7 @@ a img {
   height: auto;
 }
 .with-image .item-top .top-inner {
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.02);
 }
 .without-image .item-top .top-inner {
   border-color: rgba(0, 0, 0, 0.1);
