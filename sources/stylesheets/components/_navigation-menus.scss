@@ -85,6 +85,10 @@
       font-weight: 500;
     }
 
+    &.is-hidden {
+      display: none;
+    }
+
     a {
       display: block;
       border-style: none;
@@ -304,6 +308,10 @@
       li {
         position: relative;
         margin: 0;
+
+        &.is-hidden {
+          display: none;
+        }
 
         &.edit-btn {
           margin: 10px 0;

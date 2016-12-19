@@ -78,5 +78,12 @@
       site.bindContentItemImageCropToggle();
     {% endif %}
 
+    {%if site.data.settings_root_item %}
+      rootItemValuesObj = {{ site.data.settings_root_item | json }};
+    {% else %}
+      rootItemValuesObj = {};
+    {% endif %};
+
+    site.bindRootItemSettings(rootItemValuesObj);
   </script>
 {% endeditorjsblock %}
