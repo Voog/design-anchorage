@@ -113,6 +113,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/product-breadcrumbs.tpl",
+      "layout_name": "product-breadcrumbs",
+      "title": "product-breadcrumbs"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/product-list-item.tpl",
       "layout_name": "product-list-item",
       "title": "product-list-item"

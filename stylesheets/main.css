@@ -1539,24 +1539,17 @@ a img {
   font-size: 10px;
 }
 
-@media screen and (max-width: 640px) {
-  .menu-item-list {
-    padding-top: 47px;
-    padding-right: 17px;
-    padding-left: 17px;
-  }
-}
-@media screen and (min-width: 641px) {
-  .menu-item-list {
-    padding-right: 24px;
-    padding-left: 24px;
-  }
-}
 .menu-item-list .menu-item {
   display: inline-block;
 }
-.menu-item-list .menu-item.float-right {
-  float: right;
+.menu-item-list .menu-item:not(.current):hover {
+  opacity: 0.8;
+}
+.menu-item-list .menu-item.selected {
+  font-weight: 400;
+}
+.menu-item-list .menu-item.current {
+  font-weight: 500;
 }
 
 /* mobile-menu */
@@ -3229,7 +3222,6 @@ a img {
 }
 @media screen and (min-width: 641px) {
   .content-item-boxes {
-    padding-top: 80px;
     padding-bottom: 80px;
     margin-right: -20px;
     margin-left: -20px;

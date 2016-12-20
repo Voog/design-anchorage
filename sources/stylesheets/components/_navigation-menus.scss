@@ -136,22 +136,19 @@
 
 // Product list menu
 .menu-item-list {
-  @media screen and (max-width: $tablet-3) {
-    padding-top: 47px;
-    padding-right: 17px;
-    padding-left: 17px;
-  }
-
-  @media screen and (min-width: $tablet-3 + 1) {
-    padding-right: 24px;
-    padding-left: 24px;
-  }
-
   .menu-item {
     display: inline-block;
 
-    &.float-right {
-      float: right;
+    &:not(.current):hover {
+      opacity: .8
+    }
+
+    &.selected {
+      font-weight: 400;
+    }
+
+    &.current {
+      font-weight: 500;
     }
   }
 }

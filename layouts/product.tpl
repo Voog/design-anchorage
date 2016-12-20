@@ -44,6 +44,8 @@
             <div class="main-inner-row content-full">
               <div class="main-content">
                 <div class="wrap">
+                  {% include "product-breadcrumbs" %}
+
                   <div class="items-body" {{ edy_intro_edit_text }}>
                     <div class="content-illustrations">
                       {% if editmode %}
