@@ -155,6 +155,10 @@
 
 .menu-item-cms {
   margin-left: 10px;
+
+  &.float-right {
+    float: right;
+  }
 }
 
 /* mobile-menu */

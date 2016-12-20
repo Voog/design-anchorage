@@ -1592,6 +1592,9 @@ a img {
 .menu-item-cms {
   margin-left: 10px;
 }
+.menu-item-cms.float-right {
+  float: right;
+}
 
 /* mobile-menu */
 #mobile-menu {
@@ -3263,7 +3266,6 @@ a img {
 }
 @media screen and (min-width: 641px) {
   .content-item-boxes {
-    padding-bottom: 80px;
     margin-right: -15px;
     margin-left: -15px;
   }

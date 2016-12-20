@@ -32,13 +32,7 @@
 
                       <div class="content-item-boxes">
 
-                        {% if site.root_item.selected? and editmode %}
-                          <ul class="menu menu-item-list">
-                            <li class="menu-item menu-item-cms float-right">
-                              <a class="js-root-item-settings-toggle"></a>
-                            </li>
-                          </ul>
-
+                        {% if site.root_item.selected? %}
                           {% for level_1 in site.visible_menuitems_with_data %}
                             {% if level_1.layout_title == product_list_layout or level_1.layout_title == product_layout %}
                               {% include "product-list-item" menu_level: level_1 %}
