@@ -323,20 +323,57 @@ a img {
     padding-left: 40px;
   }
 }
-@media screen and (max-width: 1024px) {
-  .item-list-page.sidebar-active .inner {
-    padding-left: 25px;
-  }
-}
 @media screen and (max-width: 640px) {
   .item-list-page.sidebar-active .inner {
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 @media screen and (min-width: 641px) {
   .item-list-page.sidebar-active .inner {
-    padding-right: 25px;
+    padding-right: 40px;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .item-list-page.sidebar-active .inner {
+    padding-left: 40px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .item-list-page.sidebar-active .inner {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 640px) {
+  .item-page.sidebar-inactive .inner {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .item-page.sidebar-inactive .inner {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .item-page.sidebar-active .inner {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .item-page.sidebar-active .inner {
+    padding-right: 40px;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .item-page.sidebar-active .inner {
+    padding-left: 40px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .item-page.sidebar-active .inner {
     padding-left: 0;
   }
 }
@@ -3223,22 +3260,20 @@ a img {
 @media screen and (min-width: 641px) {
   .content-item-boxes {
     padding-bottom: 80px;
-    margin-right: -20px;
-    margin-left: -20px;
+    margin-right: -15px;
+    margin-left: -15px;
   }
 }
 
-@media screen and (max-width: 640px) {
-  .items-body {
-    padding: 40px 20px;
-  }
+.items-body {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 @media screen and (min-width: 641px) {
   .items-body {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    padding: 40px;
   }
 }
 
