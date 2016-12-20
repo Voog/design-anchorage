@@ -268,7 +268,7 @@ a {
   }
 
   .item-list-page.sidebar-inactive & {
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: $tablet-3) {
       padding-right: 20px;
       padding-left: 20px;
     }
@@ -280,7 +280,7 @@ a {
   }
 
   .item-list-page.sidebar-active & {
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: $tablet-3) {
       padding-right: 20px;
       padding-left: 20px;
     }
@@ -289,7 +289,7 @@ a {
       padding-right: 40px;
     }
 
-    @media screen and (min-width: $mobile + 1) and (max-width: $tablet) {
+    @media screen and (min-width: $mobile + 1) and (max-width: $tablet-1) {
       padding-left: 40px;
     }
 
@@ -299,7 +299,7 @@ a {
   }
 
   .item-page.sidebar-inactive & {
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: $tablet-3) {
       padding-right: 20px;
       padding-left: 20px;
     }
@@ -311,7 +311,7 @@ a {
   }
 
   .item-page.sidebar-active & {
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: $tablet-3) {
       padding-right: 20px;
       padding-left: 20px;
     }
@@ -320,7 +320,7 @@ a {
       padding-right: 40px;
     }
 
-    @media screen and (min-width: $mobile + 1) and (max-width: $tablet) {
+    @media screen and (min-width: $mobile + 1) and (max-width: $tablet-1) {
       padding-left: 40px;
     }
 

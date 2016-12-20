@@ -1,36 +1,20 @@
-//TODO: Cleanup unused stuff.
 // =============================================================================
-// BLOG ARTICLE
+// CONTENT ITEM BOXES
 // =============================================================================
-.cms-blog-article-add-button {
-  &:hover {
-    .item-top {
-      // scss-lint:disable NestingDepth
-      .top-inner {
-        border-style: solid;
-      }
-      // scss-lint:disable NestingDepth
-    }
-  }
-}
-
-.cms-blog-article-tags {
-  position: relative;
-
-  .edy-tageditor {
-    margin-left: 20px;
-  }
-
-  .blog-tags-ico {
-    position: absolute;
-    top: 6px;
-    left: 0;
-    fill: currentColor;
-  }
-}
-
 .content-item-boxes {
+  padding-top: 15px;
   font-size: 0;
+  line-height: 1.3;
+
+  @media screen and (min-width: $nano + 1) and (max-width: $tablet-3) {
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+
+  @media screen and (min-width: $mobile + 1) {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
 }
 
 .content-item-box {
@@ -48,21 +32,17 @@
       vertical-align: top;
     }
 
-    @media screen and (min-width: $nano + 1) and (max-width: $mobile) {
+    @media screen and (min-width: $nano + 1) and (max-width: $tablet-3) {
       width: 50%;
       padding: 10px 10px 5px 10px;
     }
 
     @media screen and (min-width: $mobile + 1) {
       width: 33.3%;
-      min-width: 200px;
+      min-width: 195px;
       padding: 15px 2%;
     }
 
-  }
-
-  .blog-article-page & {
-    padding-bottom: 30px;
   }
 
   .content-illustrations & {
@@ -89,7 +69,7 @@
   padding-right: 20px;
   padding-left: 20px;
 
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: $tablet-3) {
     margin-top: 30px;
   }
 
@@ -100,25 +80,6 @@
 
 .content-item {
   margin-bottom: 15px;
-}
-
-.article-add-ico {
-  width: calc(100% - 225px);
-  height: auto;
-  max-height: 82px;
-  min-width: 22px;
-  margin-bottom: 5%;
-  opacity: .3;
-  stroke: rgba($black, 1);
-
-  @media screen and (min-width: $micro + 1) {
-    min-width: 42px;
-  }
-
-  @media screen and (min-width: $tiny + 1) {
-    max-width: 82px;
-    min-width: 62px;
-  }
 }
 
 .item-top {
@@ -247,12 +208,6 @@
     @media screen and (min-width: $tablet + 1) {
       font-size: 30px;
     }
-
-    .cms-blog-article-add-button & {
-      border-color: rgba($black, .4);
-      border-style: dashed;
-      border-width: 1px;
-    }
   }
 
   .image-drop-area {
@@ -276,7 +231,7 @@
     }
 
     .edy-img-drop-area-placeholder {
-      @media screen and (max-width: $mobile) {
+      @media screen and (max-width: $tablet-3) {
         font-size: 13px;
       }
 
@@ -314,10 +269,6 @@
   box-sizing: border-box;
 }
 
-.article-header {
-  margin-top: 9px;
-}
-
 .item-title {
   @include hyphenate;
   margin-top: 0;
@@ -342,7 +293,7 @@
   }
 
   .content-item-box & {
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: $tablet-3) {
       font-size: 13px;
     }
 
@@ -352,7 +303,7 @@
   }
 
   .content-item & {
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: $tablet-3) {
       font-size: 18px;
     }
 
@@ -362,7 +313,7 @@
   }
 
   .blog-article-page & {
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: $tablet-3) {
       font-size: 32px;
     }
 
@@ -377,174 +328,6 @@
   }
 }
 
-.article-date {
-  color: rgba($black, 1);
-  text-transform: uppercase;
-  opacity: .5;
-
-  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi) {
-    font-weight: 100;
-  }
-
-  .blog-article-page & {
-    display: block;
-    margin-top: 4px;
-    font-size: 18px;
-    text-align: center;
-  }
-}
-
-.article-body {
-  margin-top: 20px;
-}
-
-.article-nav {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 700px;
-}
-
-.article-nav-inner {
-  @media screen and (min-width: $mobile + 1) {
-    display: flex;
-  }
-}
-
-.article-nav-link {
-  position: relative;
-  display: block;
-  flex: 1;
-  padding-top: 33px;
-  color: currentColor;
-
-  &:hover {
-    .article-nav-direction {
-      opacity: 1;
-    }
-
-    .article-nav-title {
-      opacity: 1;
-    }
-  }
-
-  &:nth-child(2) {
-    &::before {
-      @media screen and (max-width: $mobile) {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        display: block;
-        border-top-color: currentColor;
-        border-top-style: solid;
-        border-top-width: 1px;
-        content: '';
-        opacity: .2;
-      }
-    }
-  }
-
-  @media screen and (max-width: $mobile) {
-    text-align: center;
-  }
-}
-
-.article-nav-link-half {
-  @media screen and (max-width: $mobile) {
-    text-align: center;
-  }
-
-  @media screen and (min-width: $mobile + 1) {
-    padding-bottom: 33px;
-  }
-
-  &:first-child {
-    @media screen and (max-width: $mobile) {
-      padding-bottom: 33px;
-    }
-  }
-}
-
-.article-nav-link-older {
-  @media screen and (min-width: $mobile) {
-    padding-right: 20px;
-  }
-}
-
-.article-nav-link-newer {
-  @media screen and (min-width: $mobile) {
-    padding-left: 20px;
-    text-align: right;
-  }
-}
-
-.article-nav-direction {
-  font-size: 13px;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  opacity: .3;
-}
-
-.article-nav-title {
-  margin-top: 6px;
-  font-size: 18px;
-  opacity: .7;
-}
-
-.article-comments {
-  margin-bottom: 50px;
-
-  // scss-lint:disable SelectorFormat
-  .form_fields {
-    font-size: 0;
-  }
-
-  .form_field_inline {
-    display: inline-block;
-    width: calc(50% - 10px);
-    margin-top: 5px;
-    vertical-align: top;
-
-    &:first-child {
-      margin-right: 10px;
-    }
-
-    &:last-child {
-      margin-left: 10px;
-    }
-  }
-  // scss-lint:enable SelectorFormat
-
-  .comments-title {
-    margin-bottom: 55px;
-    font-weight: 400;
-    text-align: center;
-  }
-
-  .comment-form-details {
-    &.is-hidden {
-      display: none;
-    }
-  }
-
-  .comment {
-    margin-top: 30px;
-  }
-
-  .comment-author {
-    font-weight: 600;
-
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi) {
-      font-weight: 400;
-    }
-  }
-
-  .comment-body {
-    margin-top: 10px;
-  }
-}
-
 .content-illustrations {
   @media screen and (min-width: $mobile + 1) {
     flex: 1;
@@ -555,7 +338,7 @@
 
 .content-body {
   .item-page & {
-    @media screen and (max-width: $mobile) {
+    @media screen and (max-width: $tablet-3) {
       padding-top: 40px;
     }
 
@@ -565,31 +348,11 @@
   }
 }
 
-.content-item-boxes {
-  padding-top: 15px;
-  font-size: 0;
-  line-height: 1.3;
-
-  @media screen and (min-width: $nano + 1) and (max-width: $mobile) {
-    margin-right: -10px;
-    margin-left: -10px;
-  }
-
-  @media screen and (min-width: $mobile + 1) {
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-}
-
 .items-body {
   padding-top: 30px;
   padding-bottom: 30px;
 
   @media screen and (min-width: $mobile + 1) {
     display: flex;
-  }
-
-  .sidebar-active & {
-
   }
 }

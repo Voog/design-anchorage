@@ -24,6 +24,10 @@ $tablet-1: 1024px;
 $tablet-2: 850px;
 $tablet-3: 640px;
 $mobile-1: 480px;
+$small: 380px;
+$tiny: 340px;
+$micro: 290px;
+$nano: 240px;
 
 // Reusable values
 // Define the reusable variables here.
@@ -46,13 +50,3 @@ $width-medium: 760px;
 $width-max: 1040px;
 
 $transition: 500ms;
-
-
-//TODO: Merge with available breakpoints.
-// Media query breakpoints.
-$tablet: 1024px;
-$mobile: 640px;
-$small: 380px;
-$tiny: 340px;
-$micro: 290px;
-$nano: 240px;
