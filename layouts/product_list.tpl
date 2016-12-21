@@ -31,7 +31,6 @@
                       {% include "product-breadcrumbs" %}
 
                       <div class="content-item-boxes">
-
                         {% if site.root_item.selected? %}
                           {% for level_1 in site.visible_menuitems_with_data %}
                             {% if level_1.layout_title == product_list_layout or level_1.layout_title == product_layout %}
