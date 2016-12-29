@@ -136,11 +136,15 @@
 
 // Product list menu
 .menu-item-list {
+  margin-top: 6px;
+
   .menu-item {
     display: inline-block;
+    font-size: 14px;
+    opacity: .5;
 
     &:not(.current):hover {
-      opacity: .8
+      opacity: .8;
     }
 
     &.selected {
@@ -149,6 +153,7 @@
 
     &.current {
       font-weight: 500;
+      opacity: 1;
     }
   }
 }
@@ -159,6 +164,10 @@
   &.float-right {
     float: right;
   }
+}
+
+.menu-separator {
+  opacity: .5;
 }
 
 /* mobile-menu */

@@ -1575,17 +1575,23 @@ a img {
   font-size: 10px;
 }
 
+.menu-item-list {
+  margin-top: 6px;
+}
 .menu-item-list .menu-item {
   display: inline-block;
+  font-size: 14px;
+  opacity: .5;
 }
 .menu-item-list .menu-item:not(.current):hover {
-  opacity: 0.8;
+  opacity: .8;
 }
 .menu-item-list .menu-item.selected {
   font-weight: 400;
 }
 .menu-item-list .menu-item.current {
   font-weight: 500;
+  opacity: 1;
 }
 
 .menu-item-cms {
@@ -1593,6 +1599,10 @@ a img {
 }
 .menu-item-cms.float-right {
   float: right;
+}
+
+.menu-separator {
+  opacity: .5;
 }
 
 /* mobile-menu */
