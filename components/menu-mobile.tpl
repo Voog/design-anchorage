@@ -10,9 +10,7 @@
       {% for item in site.visible_menuitems %}
         {% if site.root_item.layout_title == product_list_layout %}
           {% if editmode %}
-            {% unless item.layout_title == product_layout %}
-              {% include "menu-mobile-level-1-link" render_hidden_categories: true %}
-            {% endunless %}
+            {% include "menu-mobile-level-1-link" render_hidden_categories: true %}
           {% else %}
             {% if hide_categories_from_main_menu %}
               {% unless item.layout_title == product_list_layout or item.layout_title == product_layout %}

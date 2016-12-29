@@ -11311,11 +11311,11 @@ return jQuery;
 
         preview: function(data) {
           if (data.hide_categories_from_main_menu === true) {
-            $.each($('.js-menu-item-category'), function() {
+            $.each($('.js-menu-item-products'), function() {
               $(this).addClass('is-hidden');
             });
           } else {
-            $.each($('.js-menu-item-category'), function() {
+            $.each($('.js-menu-item-products'), function() {
               $(this).removeClass('is-hidden');
             });
           }
