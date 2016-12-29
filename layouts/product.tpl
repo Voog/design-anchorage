@@ -29,6 +29,8 @@
   </head>
 
   <body class="{% if sidebar_active %}common-page sidebar-active{% else %}sidebar-inactive{% endif %} item-page{% if site.data.has_header_bg_color %} header-top-with-bg{% endif %}">
+    {% include "template-svg-spritesheet" %}
+
     <div class="site-container">
       {% include "site-header" %}
       {% include "common-page-variables" %}
