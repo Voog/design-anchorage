@@ -84,7 +84,7 @@
       rootItemValuesObj = {};
     {% endif %};
 
-    if (!('settings_root_item' in valuesObj)) {
+    if (!('settings_root_item' in rootItemValuesObj)) {
       valuesObj.settings_root_item = false;
     }
 
