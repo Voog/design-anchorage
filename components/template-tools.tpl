@@ -85,7 +85,7 @@
     {% endif %};
 
     if (!('settings_root_item' in rootItemValuesObj)) {
-      valuesObj.settings_root_item = false;
+      rootItemValuesObj.settings_root_item = false;
     }
 
     site.bindRootItemSettings(rootItemValuesObj);
