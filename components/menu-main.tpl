@@ -9,7 +9,7 @@
         {% if editmode %}
           {% include "menu-level-1-link" render_hidden_categories: true %}
         {% else %}
-          {% if hide_product_related_pages_from_main_menu %}
+          {% unless show_product_related_pages_in_main_menu %}
             {% unless item.layout_title == product_list_layout or item.layout_title == product_layout %}
               {% include "menu-level-1-link" %}
             {% endunless %}
@@ -17,7 +17,7 @@
             {% unless item.layout_title == product_layout %}
               {% include "menu-level-1-link" %}
             {% endunless %}
-          {% endif %}
+          {% endunless %}
         {% endif %}
       {% else %}
         {% include "menu-level-1-link" %}

@@ -748,8 +748,8 @@
   // Toggles product categories visibility in main menu.
   // ===========================================================================
   var bindRootItemSettings = function(valuesObj) {
-    if (!('hide_product_related_pages_from_main_menu' in valuesObj)) {
-      valuesObj.hide_product_related_pages_from_main_menu = false;
+    if (!('show_product_related_pages_in_main_menu' in valuesObj)) {
+      valuesObj.show_product_related_pages_in_main_menu = false;
     }
 
     $('.js-root-item-settings-toggle').each(function(index, languageMenuSettingsButton) {
@@ -758,7 +758,7 @@
           {
             "titleI18n": "show_in_main_menu",
             "type": "checkbox",
-            "key": "hide_product_related_pages_from_main_menu",
+            "key": "show_product_related_pages_in_main_menu",
             "states": {
               "on": false,
               "off": true
@@ -773,7 +773,7 @@
         containerClass: ['js-root-item-settings-popover', 'js-prevent-sideclick'],
 
         preview: function(data) {
-          if (data.hide_product_related_pages_from_main_menu === true) {
+          if (data.show_product_related_pages_in_main_menu === true) {
             $.each($('.js-menu-item-products'), function() {
               $(this).addClass('is-hidden');
             });

@@ -84,8 +84,8 @@
       rootItemValuesObj = {};
     {% endif %};
 
-    if (!('hide_product_related_pages_from_main_menu' in rootItemValuesObj)) {
-      rootItemValuesObj.hide_product_related_pages_from_main_menu = true;
+    if (!('show_product_related_pages_in_main_menu' in rootItemValuesObj)) {
+      rootItemValuesObj.show_product_related_pages_in_main_menu = true;
     }
 
     site.bindRootItemSettings(rootItemValuesObj);
