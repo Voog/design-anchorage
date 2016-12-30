@@ -760,8 +760,8 @@
             "type": "checkbox",
             "key": "show_product_related_pages_in_main_menu",
             "states": {
-              "on": false,
-              "off": true
+              "on": true,
+              "off": false
             }
           }
         ],
