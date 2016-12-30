@@ -11285,20 +11285,20 @@ return jQuery;
   // Toggles product categories visibility in main menu.
   // ===========================================================================
   var bindRootItemSettings = function(valuesObj) {
-    if (!('hide_categories_from_main_menu' in valuesObj)) {
-      valuesObj.hide_categories_from_main_menu = false;
+    if (!('hide_product_related_pages_from_main_menu' in valuesObj)) {
+      valuesObj.hide_product_related_pages_from_main_menu = false;
     }
 
     $('.js-root-item-settings-toggle').each(function(index, languageMenuSettingsButton) {
       var rootItemSettingsEditor = new Edicy.SettingsEditor(languageMenuSettingsButton, {
         menuItems: [
           {
-            "title": "Hide categories from main menu",
+            "titleI18n": "show_in_main_menu",
             "type": "checkbox",
-            "key": "hide_categories_from_main_menu",
+            "key": "hide_product_related_pages_from_main_menu",
             "states": {
-              "on": true,
-              "off": false
+              "on": false,
+              "off": true
             }
           }
         ],
@@ -11310,7 +11310,7 @@ return jQuery;
         containerClass: ['js-root-item-settings-popover', 'js-prevent-sideclick'],
 
         preview: function(data) {
-          if (data.hide_categories_from_main_menu === true) {
+          if (data.hide_product_related_pages_from_main_menu === true) {
             $.each($('.js-menu-item-products'), function() {
               $(this).addClass('is-hidden');
             });

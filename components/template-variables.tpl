@@ -360,7 +360,7 @@
   {% assign product_list_layout = "Product list" %}
   {% assign product_layout = "Product" %}
 
-  {% assign hide_categories_from_main_menu = site.data.settings_root_item.hide_categories_from_main_menu %}
+  {% assign hide_product_related_pages_from_main_menu = site.data.settings_root_item.hide_product_related_pages_from_main_menu %}
 
   {% comment %}=================================================================
   || Design editor variables.

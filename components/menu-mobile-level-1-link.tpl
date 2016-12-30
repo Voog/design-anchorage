@@ -1,4 +1,4 @@
-<li class="menu-item {% if item.children? and item.selected? %} with-children current-parent{% elsif item.children? %} with-children{% elsif item.selected? %} current-parent{% endif %}{% if render_hidden_categories == true and item.layout_title == product_list_layout %}{% if hide_categories_from_main_menu %} is-hidden{% endif %} js-menu-item-products{% endif %}">
+<li class="menu-item {% if item.children? and item.selected? %} with-children current-parent{% elsif item.children? %} with-children{% elsif item.selected? %} current-parent{% endif %}{% if render_hidden_categories == true and item.layout_title == product_list_layout %}{% if hide_product_related_pages_from_main_menu %} is-hidden{% endif %} js-menu-item-products{% endif %}">
   {% menulink item %}
 
   {% if item.children? %}
