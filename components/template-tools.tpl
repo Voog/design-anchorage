@@ -84,8 +84,8 @@
       rootItemValuesObj = {};
     {% endif %};
 
-    if (!('settings_root_item' in rootItemValuesObj)) {
-      rootItemValuesObj.settings_root_item = false;
+    if (!('hide_product_related_pages_from_main_menu' in rootItemValuesObj)) {
+      rootItemValuesObj.hide_product_related_pages_from_main_menu = false;
     }
 
     site.bindRootItemSettings(rootItemValuesObj);
