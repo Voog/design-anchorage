@@ -84,6 +84,10 @@
       rootItemValuesObj = {};
     {% endif %};
 
+    if (!('settings_root_item' in valuesObj)) {
+      valuesObj.settings_root_item = false;
+    }
+
     site.bindRootItemSettings(rootItemValuesObj);
   </script>
 {% endeditorjsblock %}
