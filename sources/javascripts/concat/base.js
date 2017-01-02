@@ -747,9 +747,9 @@
   // ===========================================================================
   // Toggles product categories visibility in main menu.
   // ===========================================================================
-  var bindRootItemSettings = function(valuesObj) {
-    if (!('show_product_related_pages_in_main_menu' in valuesObj)) {
-      valuesObj.show_product_related_pages_in_main_menu = false;
+  var bindRootItemSettings = function(rootItemValuesObj) {
+    if (!('show_product_related_pages_in_main_menu' in rootItemValuesObj)) {
+      rootItemValuesObj.show_product_related_pages_in_main_menu = false;
     }
 
     $('.js-root-item-settings-toggle').each(function(index, languageMenuSettingsButton) {
@@ -768,19 +768,15 @@
 
         buttonTitleI18n: "settings",
 
-        values: valuesObj,
+        values: rootItemValuesObj,
 
         containerClass: ['js-root-item-settings-popover', 'js-prevent-sideclick'],
 
         preview: function(data) {
-          if (data.show_product_related_pages_in_main_menu === true) {
-            $.each($('.js-menu-item-products'), function() {
-              $(this).addClass('is-hidden');
-            });
+          if (!data.show_product_related_pages_in_main_menu === true) {
+            $('.js-menu-item-products').addClass('is-hidden');
           } else {
-            $.each($('.js-menu-item-products'), function() {
-              $(this).removeClass('is-hidden');
-            });
+            $('.js-menu-item-products').removeClass('is-hidden');
           }
         },
 

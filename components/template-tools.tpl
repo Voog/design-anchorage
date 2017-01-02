@@ -84,10 +84,6 @@
       rootItemValuesObj = {};
     {% endif %};
 
-    if (!('show_product_related_pages_in_main_menu' in rootItemValuesObj)) {
-      rootItemValuesObj.show_product_related_pages_in_main_menu = true;
-    }
-
     site.bindRootItemSettings(rootItemValuesObj);
   </script>
 {% endeditorjsblock %}
