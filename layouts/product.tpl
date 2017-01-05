@@ -50,7 +50,9 @@
                 <div class="main-content top-row">
                   <div class="wrap">
                     <div class="inner">
-                      {% include "product-breadcrumbs" %}
+                      {% unless sidebar_active %}
+                        {% include "product-breadcrumbs" %}
+                      {% endunless %}
 
                       <div class="items-body" {{ edy_intro_edit_text }}>
                         <div class="content-illustrations">
