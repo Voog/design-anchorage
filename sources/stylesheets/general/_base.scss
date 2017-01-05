@@ -148,7 +148,6 @@ a {
 
 .page-body {
   position: relative;
-  min-height: 300px;
 
   .flexbox & {
     @include flex(1 0 auto);

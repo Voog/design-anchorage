@@ -184,7 +184,6 @@ a img {
 
 .page-body {
   position: relative;
-  min-height: 300px;
 }
 .flexbox .page-body {
   box-flex: 1;
