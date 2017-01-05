@@ -14,9 +14,7 @@
               {% include "menu-level-1-link" %}
             {% endunless %}
           {% else %}
-            {% unless item.layout_title == product_layout %}
-              {% include "menu-level-1-link" %}
-            {% endunless %}
+            {% include "menu-level-1-link" %}
           {% endunless %}
         {% endif %}
       {% else %}
