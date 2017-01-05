@@ -7,23 +7,23 @@
         </li>
       {% endunless %}
 
-    {% for item in site.visible_menuitems %}
-      {% if site.root_item.layout_title == product_list_layout or site.root_item.layout_title == product_layout %}
-        {% if editmode %}
-          {% include "menu-mobile-level-1-link" render_hidden_categories: true %}
-        {% else %}
-          {% unless show_product_related_pages_in_main_menu %}
-            {% unless item.layout_title == product_list_layout or item.layout_title == product_layout %}
+      {% for item in site.visible_menuitems %}
+        {% if site.root_item.layout_title == product_list_layout or site.root_item.layout_title == product_layout %}
+          {% if editmode %}
+            {% include "menu-mobile-level-1-link" render_hidden_categories: true %}
+          {% else %}
+            {% unless show_product_related_pages_in_main_menu %}
+              {% unless item.layout_title == product_list_layout or item.layout_title == product_layout %}
+                {% include "menu-mobile-level-1-link" %}
+              {% endunless %}
+            {% else %}
               {% include "menu-mobile-level-1-link" %}
             {% endunless %}
-          {% else %}
-            {% include "menu-mobile-level-1-link" %}
-          {% endunless %}
+          {% endif %}
+        {% else %}
+          {% include "menu-mobile-level-1-link" %}
         {% endif %}
-      {% else %}
-        {% include "menu-mobile-level-1-link" %}
-      {% endif %}
-    {% endfor %}
+      {% endfor %}
     </ul>
 
     {% if editmode %}
