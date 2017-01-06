@@ -129,7 +129,8 @@
 
       .common-page &,
       .blog-news-page &,
-      .blog-article-page & {
+      .blog-article-page &,
+      .item-list-page & {
         height: 253px;
 
         @media screen and (max-width: $tablet-3) {

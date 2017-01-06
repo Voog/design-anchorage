@@ -45,12 +45,16 @@ body {
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 
   img {
     border-style: none;
   }
+}
+
+.svg-spritesheet {
+  display: none;
 }
 
 .voog-bg-picker-btn {
@@ -259,6 +263,68 @@ a {
 
     @media screen and (max-width: $tablet-3) {
       padding: 40px 20px 0;
+    }
+  }
+
+  .item-list-page.sidebar-inactive & {
+    @media screen and (max-width: $tablet-3) {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    @media screen and (min-width: $tablet-3 + 1) {
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+  }
+
+  .item-list-page.sidebar-active & {
+    @media screen and (max-width: $tablet-3) {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    @media screen and (min-width: $tablet-3 + 1) {
+      padding-right: 40px;
+    }
+
+    @media screen and (min-width: $tablet-3 + 1) and (max-width: $tablet-1) {
+      padding-left: 40px;
+    }
+
+    @media screen and (min-width: $tablet-1 + 1) {
+      padding-left: 0;
+    }
+  }
+
+  .item-page.sidebar-inactive & {
+    @media screen and (max-width: $tablet-3) {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    @media screen and (min-width: $tablet-3 + 1) {
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+  }
+
+  .item-page.sidebar-active & {
+    @media screen and (max-width: $tablet-3) {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    @media screen and (min-width: $tablet-3 + 1) {
+      padding-right: 40px;
+    }
+
+    @media screen and (min-width: $tablet-3 + 1) and (max-width: $tablet-1) {
+      padding-left: 40px;
+    }
+
+    @media screen and (min-width: $tablet-1 + 1) {
+      padding-left: 0;
     }
   }
 

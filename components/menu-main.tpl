@@ -5,7 +5,21 @@
     {% endunless %}
 
     {% for item in site.visible_menuitems %}
-      {% menulink item wrapper-tag="li" %}
+      {% if site.root_item.layout_title == product_list_layout or site.root_item.layout_title == product_layout %}
+        {% if editmode %}
+          {% include "menu-level-1-link" render_hidden_categories: true %}
+        {% else %}
+          {% unless show_product_related_pages_in_main_menu %}
+            {% unless item.layout_title == product_list_layout or item.layout_title == product_layout %}
+              {% include "menu-level-1-link" %}
+            {% endunless %}
+          {% else %}
+            {% include "menu-level-1-link" %}
+          {% endunless %}
+        {% endif %}
+      {% else %}
+        {% include "menu-level-1-link" %}
+      {% endif %}
     {% endfor %}
   </ul>
   {% if editmode %}
