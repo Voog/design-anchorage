@@ -2,7 +2,9 @@
   {% if item.selected? and item.children? or editmode %}
     <ul class="submenu">
       {% for subitem in item.visible_children %}
-        {% if item.layout_title == product_list_layout %}
+        {% if sidebar_active %}
+          {% include "menu-level-2-link" %}
+        {% elsif item.layout_title == product_list_layout %}
           {% unless subitem.layout_title == product_list_layout or subitem.layout_title == product_layout %}
             {% include "menu-level-2-link" %}
           {% endunless %}
