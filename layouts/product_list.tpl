@@ -30,9 +30,7 @@
                 <div class="main-content top-row">
                   <div class="wrap">
                     <div class="inner">
-                      {% unless sidebar_active %}
-                        {% include "product-breadcrumbs" %}
-                      {% endunless %}
+                      {% include "product-breadcrumbs" %}
 
                       <div class="content-item-boxes">
                         {% if site.root_item.selected? %}

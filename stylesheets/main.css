@@ -1578,6 +1578,11 @@ a img {
 .menu-item-list {
   margin-top: 6px;
 }
+@media screen and (min-width: 1025px) {
+  .menu-item-list.is-hidden-desktop {
+    display: none;
+  }
+}
 .menu-item-list .menu-item {
   display: inline-block;
   font-size: 14px;

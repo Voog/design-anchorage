@@ -1,4 +1,4 @@
-<ul class="menu menu-item-list">
+<ul class="menu menu-item-list{% if sidebar_active and site.root_item.selected? == false %} is-hidden-desktop{% endif %}">
   {% for level_1 in site.menuitems %}
     {% if level_1.selected? %}
       {% if level_1.children? %}
@@ -31,7 +31,6 @@
             <a class="js-root-item-settings-toggle"></a>
           </li>
         {% endif %}
-      </ul>
     {% endif %}
   {% else %}
     {% for level_1 in site.visible_menuitems %}

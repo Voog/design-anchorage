@@ -138,6 +138,12 @@
 .menu-item-list {
   margin-top: 6px;
 
+  &.is-hidden-desktop {
+    @media screen and (min-width: $tablet-1 + 1) {
+      display: none;
+    }
+  }
+
   .menu-item {
     display: inline-block;
     font-size: 14px;
