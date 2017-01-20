@@ -29,6 +29,8 @@
               <div class="main-inner-row content-full">
                 <div class="main-content top-row">
                   <div class="wrap">
+                      <div class="inner no-bottom-padding content-body content-area" data-search-indexing-allowed="true">{% content %}</div>
+
                     <div class="inner">
                       {% include "product-breadcrumbs" %}
 

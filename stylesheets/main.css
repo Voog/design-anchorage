@@ -228,8 +228,14 @@ a img {
   margin: 0 auto;
   padding: 50px 40px 60px;
 }
+.inner:empty {
+  display: none;
+}
 .inner.has-bottom-content {
   padding-bottom: 30px;
+}
+.inner.no-bottom-padding {
+  padding-bottom: 0;
 }
 .front-page .main-content .inner {
   padding: 70px 40px 0;
@@ -1596,6 +1602,7 @@ a img {
 
 .menu-item-list {
   margin-top: 6px;
+  margin-bottom: 15px;
 }
 @media screen and (min-width: 1025px) {
   .menu-item-list.is-hidden-desktop {
@@ -2760,7 +2767,7 @@ a img {
 }
 
 .content-item-boxes {
-  padding-top: 15px;
+  margin-top: -15px;
   font-size: 0;
   line-height: 1.3;
 }

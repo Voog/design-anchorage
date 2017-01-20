@@ -137,6 +137,7 @@
 // Product list menu
 .menu-item-list {
   margin-top: 6px;
+  margin-bottom: 15px;
 
   &.is-hidden-desktop {
     @media screen and (min-width: $tablet-1 + 1) {

@@ -197,8 +197,16 @@ a {
   margin: 0 auto;
   padding: 50px 40px 60px;
 
+  &:empty {
+    display: none;
+  }
+
   &.has-bottom-content {
     padding-bottom: 30px;
+  }
+
+  &.no-bottom-padding {
+    padding-bottom: 0;
   }
 
   .front-page .main-content & {

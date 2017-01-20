@@ -28,6 +28,7 @@
                   <div class="wrap">
                     {% if editmode or main_has_content %}
                       <div class="inner{% if editmode or left_has-content or right_has_content %} has-bottom-content{% endif %}">
+                        {% comment %}TODO: Remove duplicate content-arera class.{% endcomment %}
                         <section class="content-area">
                           <div class="content-body content-area" data-search-indexing-allowed="true">{% content %}</div>
                         </section>
@@ -40,6 +41,7 @@
                   <div class="wrap">
                     {% if editmode or left_has_content %}
                       <div class="inner content-half content-left{% unless editmode or main_has_content %} has-padding{% endunless %}">
+                        {% comment %}TODO: Remove duplicate content-arera class.{% endcomment %}
                         <section class="content-area">
                           <div class="content-body content-area" data-search-indexing-allowed="true">{% content name="left" %}</div>
                         </section>
@@ -48,6 +50,7 @@
 
                     {% if editmode or right_has_content %}
                       <div class="inner content-half content-right{% unless editmode or main_has_content %} has-padding{% endunless %}">
+                        {% comment %}TODO: Remove duplicate content-arera class.{% endcomment %}
                         <section class="content-area">
                           <div class="content-body content-area" data-search-indexing-allowed="true">{% content name="right" %}</div>
                         </section>
