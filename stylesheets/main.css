@@ -3285,6 +3285,7 @@ a img {
   color: white;
 }
 .site-footer .content-area {
+  text-align: center;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.7);
 }
