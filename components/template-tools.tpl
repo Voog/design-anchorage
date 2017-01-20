@@ -81,5 +81,19 @@
         }
       });
     });
+
+    {% if template-tools == "item_list_page" %}
+      site.bindContentItemBgPickers();
+      site.bindContentItemImgDropAreas('{{ "drag_picture_for_product_here" | lc }}');
+      site.bindContentItemImageCropToggle();
+    {% endif %}
+
+    {%if site.data.settings_root_item %}
+      rootItemValuesObj = {{ site.data.settings_root_item | json }};
+    {% else %}
+      rootItemValuesObj = {};
+    {% endif %};
+
+    site.bindRootItemSettings(rootItemValuesObj);
   </script>
 {% endeditorjsblock %}

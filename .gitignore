@@ -1,8 +1,9 @@
-
 # Hidden files
 .DS_Store
 .sass-cache
 .voog
+.voog-node
+.voog-ruby
 
 # Visible files
 

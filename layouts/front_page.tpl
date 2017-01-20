@@ -8,7 +8,7 @@
     {% include "front-page-variables" %}
   </head>
 
-  <body class="front-page">
+  <body class="front-page{% if site.data.has_header_bg_color %} header-top-with-bg{% endif %}">
 
     <div class="site-container">
       {% include "site-header" %}
@@ -33,30 +33,32 @@
                   </div>
                 {% endif %}
 
-                <div class="main-feature">
-                  <div class="wrap">
-                    {% if editmode or feature_image_1 or feature_1_has_content %}
-                      <div class="feature">
-                        <div class="feature-image{% if editmode != true and feature_image_1 == nil and feature_image_2 == nil and feature_image_3 == nil %} empty-hidden{% endif %}{% unless editmode or feature_1_has_content or feature_2_has_content or feature_3_has_content %} has-margin{% endunless %}">{% if editmode %}<div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_1" data-image="{{ feature_image_1 }}"></div>{% elsif feature_image_1 != "" %}<div class="aspect-ratio-inner" style="background-image: url('{{ feature_image_1 }}')"></div>{% endif %}</div>
-                        <div class="feature-content content-area" data-search-indexing-allowed="true">{% content name="feature_1" %}</div>
-                      </div>
-                    {% endif %}
+                {% if editmode or feature_image_1 or feature_1_has_content or feature_image_2 or feature_2_has_content or feature_image_3 or feature_3_has_content %}
+                  <div class="main-feature">
+                    <div class="wrap">
+                      {% if editmode or feature_image_1 or feature_1_has_content %}
+                        <div class="feature">
+                          <div class="feature-image{% if editmode != true and feature_image_1 == nil and feature_image_2 == nil and feature_image_3 == nil %} empty-hidden{% endif %}{% unless editmode or feature_1_has_content or feature_2_has_content or feature_3_has_content %} has-margin{% endunless %}">{% if editmode %}<div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_1" data-image="{{ feature_image_1 }}"></div>{% elsif feature_image_1 != "" %}<div class="aspect-ratio-inner" style="background-image: url('{{ feature_image_1 }}')"></div>{% endif %}</div>
+                          <div class="feature-content content-area" data-search-indexing-allowed="true">{% content name="feature_1" %}</div>
+                        </div>
+                      {% endif %}
 
-                    {% if editmode or feature_image_2 or feature_2_has_content %}
-                      <div class="feature">
-                        <div class="feature-image{% if editmode != true and feature_image_1 == nil and feature_image_2 == nil and feature_image_3 == nil %} empty-hidden{% endif %}{% unless editmode or feature_1_has_content or feature_2_has_content or feature_3_has_content %} has-margin{% endunless %}">{% if editmode %}<div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_2" data-image="{{ feature_image_2 }}"></div>{% elsif feature_image_2 != "" %}<div class="aspect-ratio-inner" style="background-image: url('{{ feature_image_2 }}')"></div>{% endif %}</div>
-                        <div class="feature-content content-area" data-search-indexing-allowed="true">{% content name="feature_2" %}</div>
-                      </div>
-                    {% endif %}
+                      {% if editmode or feature_image_2 or feature_2_has_content %}
+                        <div class="feature">
+                          <div class="feature-image{% if editmode != true and feature_image_1 == nil and feature_image_2 == nil and feature_image_3 == nil %} empty-hidden{% endif %}{% unless editmode or feature_1_has_content or feature_2_has_content or feature_3_has_content %} has-margin{% endunless %}">{% if editmode %}<div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_2" data-image="{{ feature_image_2 }}"></div>{% elsif feature_image_2 != "" %}<div class="aspect-ratio-inner" style="background-image: url('{{ feature_image_2 }}')"></div>{% endif %}</div>
+                          <div class="feature-content content-area" data-search-indexing-allowed="true">{% content name="feature_2" %}</div>
+                        </div>
+                      {% endif %}
 
-                    {% if editmode or feature_image_3 or feature_3_has_content %}
-                      <div class="feature">
-                        <div class="feature-image{% if editmode != true and feature_image_1 == nil and feature_image_2 == nil and feature_image_3 == nil %} empty-hidden{% endif %}{% unless editmode or feature_1_has_content or feature_2_has_content or feature_3_has_content %} has-margin{% endunless %}">{% if editmode %}<div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_3" data-image="{{ feature_image_3 }}"></div>{% elsif feature_image_3 != "" %}<div class="aspect-ratio-inner" style="background-image: url('{{ feature_image_3 }}')"></div>{% endif %}</div>
-                        <div class="feature-content content-area" data-search-indexing-allowed="true">{% content name="feature_3" %}</div>
-                      </div>
-                    {% endif %}
+                      {% if editmode or feature_image_3 or feature_3_has_content %}
+                        <div class="feature">
+                          <div class="feature-image{% if editmode != true and feature_image_1 == nil and feature_image_2 == nil and feature_image_3 == nil %} empty-hidden{% endif %}{% unless editmode or feature_1_has_content or feature_2_has_content or feature_3_has_content %} has-margin{% endunless %}">{% if editmode %}<div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_3" data-image="{{ feature_image_3 }}"></div>{% elsif feature_image_3 != "" %}<div class="aspect-ratio-inner" style="background-image: url('{{ feature_image_3 }}')"></div>{% endif %}</div>
+                          <div class="feature-content content-area" data-search-indexing-allowed="true">{% content name="feature_3" %}</div>
+                        </div>
+                      {% endif %}
+                    </div>
                   </div>
-                </div>
+                {% endif %}
               </div>
             </div>
             {% if editmode or bottom_has_content or content_bg_2_image != "" or content_bg_2_color != "" %}

@@ -10,7 +10,7 @@
     {% endif %}
   </head>
 
-  <body class="blog-article-page">
+  <body class="blog-article-page{% if site.data.has_header_bg_color %} header-top-with-bg{% endif %}">
     <div class="site-container">
       {% include "site-header" %}
 

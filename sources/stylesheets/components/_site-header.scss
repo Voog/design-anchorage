@@ -34,6 +34,14 @@
         justify-content: flex-end;
       }
 
+      .header-top-with-bg & {
+        padding-bottom: 40px;
+
+        @media screen and (max-width: $tablet-3) {
+          padding-bottom: 14px;
+        }
+      }
+
       @media screen and (max-width: $tablet-3) {
         padding-top: 20px;
         padding-right: 20px;
@@ -122,7 +130,8 @@
 
       .common-page &,
       .blog-news-page &,
-      .blog-article-page & {
+      .blog-article-page &,
+      .item-list-page & {
         height: 253px;
 
         @media screen and (max-width: $tablet-3) {
@@ -143,8 +152,18 @@
         padding: 60px 40px 90px;
         vertical-align: middle;
 
+        .header-top-with-bg & {
+          padding-top: 74px;
+          padding-bottom: 76px;
+        }
+
         @media screen and (max-width: $tablet-3) {
           padding: 40px 20px 60px;
+
+          .header-top-with-bg & {
+            padding-top: 49px;
+            padding-bottom: 51px;
+          }
         }
       }
     }
@@ -154,10 +173,6 @@
     .header-bottom {
       .header-bottom-inner {
         height: 606px;
-
-        .wrap {
-          padding-top: 60px;
-        }
 
         @media screen and (max-width: $tablet-3) {
           height: 400px;
@@ -212,12 +227,4 @@
       }
     }
   }
-}
-
-.front-page .site-header .header-top .wrap { padding-bottom: 40px;}
-.front-page .site-header .header-bottom .header-bottom-inner { margin-bottom: -40px;}
-
-@media screen and (max-width: $tablet-3) {
-  .front-page .site-header .header-top .wrap { padding-bottom: 20px;}
-  .front-page .header-bottom { margin-bottom: -20px;}
 }

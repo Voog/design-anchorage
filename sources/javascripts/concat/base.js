@@ -1,7 +1,10 @@
 ;(function($) {
-  // Global variable to detect if page is in editmode.
-  var editmode = $('html').hasClass('editmode'),
-      articlePage = $('body').hasClass('blog-article-page');
+  //============================================================================
+  // Helper function to detect if page viewer is in editmode.
+  //============================================================================
+  var editmode = function () {
+    return $('html').hasClass('editmode');
+  };
 
   // Function to limit the rate at which a function can fire.
   var debounce = function(func, wait, immediate) {
@@ -253,7 +256,7 @@
 
       } else {
         colorExtractImage.attr('src', colorExtractImageUrl.replace(/.*\/(photos|voogstock)/g,'/photos'));
-        colorExtractImage.load(function() {
+        colorExtractImage.on('load', function() {
           ColorExtract.extract(colorExtractImage[0], colorExtractCanvas[0], function(data) {
             bgPicker.imageColor = data.bgColor ? data.bgColor : 'rgba(255,255,255,1)';
             bgPicker.combinedLightness = getCombinedLightness(bgPicker.imageColor, bgPickerColor);
@@ -346,6 +349,251 @@
         $('.header-wrapper').addClass('dark').removeClass('light');
       }
     }
+  };
+
+  var setImageOrientation = function($contentItemBox, width, height) {
+    var $imgDropAreaTarget = $contentItemBox.find('.js-img-drop-area'),
+        $cropToggleButton = $contentItemBox.find('.js-toggle-crop-state');
+
+    if (width > height) {
+      $imgDropAreaTarget
+        .removeClass('image-landscape image-square image-portrait')
+        .addClass('image-landscape')
+      ;
+    } else if (width === height) {
+      $imgDropAreaTarget
+        .removeClass('image-landscape image-square image-portrait')
+        .addClass('image-square')
+      ;
+    } else {
+      $imgDropAreaTarget
+        .removeClass('image-landscape image-square image-portrait')
+        .addClass('image-portrait')
+      ;
+    }
+
+    if ($imgDropAreaTarget.hasClass('image-square')) {
+      $cropToggleButton
+        .removeClass('is-visible')
+        .addClass('is-hidden')
+      ;
+    } else {
+      $cropToggleButton
+        .removeClass('is-hidden')
+        .addClass('is-visible')
+      ;
+    }
+  };
+
+  var setItemImage = function($contentItemBox, $imgDropArea, itemId, imageId, itemType) {
+    var apiType;
+
+    if (itemType === 'article') {
+      apiType = 'articles';
+    } else {
+      apiType = 'pages';
+    }
+
+    $.ajax({
+       type: 'PATCH',
+       contentType: 'application/json',
+       url: '/admin/api/' + apiType +'/' + itemId,
+       data: JSON.stringify({'image_id': imageId}),
+       dataType: 'json',
+       success: function(data) {
+         $contentItemBox.removeClass('not-loaded with-error').addClass('is-loaded');
+         $imgDropArea.css('opacity', 1);
+       },
+       timeout: 30000,
+       error: function(data) {
+         $contentItemBox.removeClass('not-loaded is-loaded with-error').addClass('with-error');
+       }
+    });
+  };
+
+  // ===========================================================================
+  // Binds editmode backgroun picker areas.
+  // ===========================================================================
+  var bindContentItemBgPickers = function() {
+    $('.js-bg-picker-area').each(function(index, bgPickerArea) {
+      var $bgPickerArea = $(bgPickerArea),
+          $bgPickerButton = $bgPickerArea.find('.js-bg-picker-btn'),
+          $contentItemBox = $bgPickerArea.closest('.js-content-item-box'),
+          itemId = $contentItemBox.data('item-id'),
+          itemType = $contentItemBox.data('item-type'),
+          dataBgKey = $bgPickerButton.data('bg-key'),
+          $imgDropArea = $bgPickerArea.find('.js-img-drop-area');
+
+      var bgPicker = new Edicy.BgPicker($bgPickerButton, {
+        picture: $bgPickerButton.data('bg-picture-boolean'),
+        target_width: $bgPickerButton.data('bg-target-width'),
+        color: $bgPickerButton.data('bg-color-boolean'),
+
+        preview: function(data) {
+          setImageOrientation($contentItemBox, data.width, data.height);
+
+          $bgPickerArea.eq(0).data('imgDropArea').setData({
+            id: data.original_id,
+            url: data.image,
+            width: data.width,
+            height: data.height
+          });
+
+          $contentItemBox.removeClass('is-loaded not-loaded with-error');
+
+          $imgDropArea
+            .removeClass('is-cropped')
+            .addClass('not-cropped')
+            .css('opacity', .1)
+          ;
+        },
+
+        commit: function(data) {
+          $contentItemBox.addClass('not-loaded');
+          setItemImage($contentItemBox, $imgDropArea, itemId, data.original_id, itemType);
+        }
+      });
+
+      $bgPickerArea.data('bgpicker', bgPicker);
+    });
+  };
+
+  // ===========================================================================
+  // Binds editmode image drop areas.
+  // ===========================================================================
+  var bindContentItemImgDropAreas = function(placeholderText) {
+    $('.js-img-drop-area').each(function(index, imgDropAreaTarget) {
+      var $imgDropAreaTarget = $(imgDropAreaTarget),
+          $contentItemBox = $imgDropAreaTarget.closest('.js-content-item-box'),
+          $bgPickerArea = $contentItemBox.find('.js-bg-picker-area'),
+          itemId = $contentItemBox.data('item-id'),
+          itemType = $contentItemBox.data('item-type'),
+          articleData = new Edicy.CustomData({
+            type: 'article',
+            id: itemId
+          }),
+          pageData = new Edicy.CustomData({
+            type: 'page',
+            id: $contentItemBox.data('item-id')
+          });
+
+      var imgDropArea = new Edicy.ImgDropArea($imgDropAreaTarget, {
+        positionable: false,
+        target_width: 1280,
+        removeBtn: '',
+        placeholder: '<div class="edy-img-drop-area-placeholder">' + placeholderText + '</div>',
+
+        change: function(data) {
+          var $bgPickerButton = $contentItemBox.find('.js-bg-picker-btn');
+
+          $contentItemBox
+            .removeClass('without-image is-loaded with-error')
+            .addClass('with-image not-loaded')
+          ;
+
+          $imgDropAreaTarget
+            .removeClass('is-cropped')
+            .addClass('not-cropped')
+            .css('opacity', .1)
+          ;
+
+          setImageOrientation($contentItemBox, data.width, data.height);
+
+
+          $bgPickerArea.eq(0).data('bgpicker').setData({
+            id: data.original_id,
+            image: data.url,
+            width: data.width,
+            height: data.height
+          });
+
+          setItemImage($contentItemBox, $imgDropAreaTarget, itemId, data.original_id, itemType);
+
+          if (itemType === 'article') {
+            articleData.set('image_crop_state', 'not-cropped');
+          } else {
+            pageData.set('image_crop_state', 'not-cropped');
+          }
+        }
+      });
+
+      $bgPickerArea.data('imgDropArea', imgDropArea);
+    });
+  };
+
+  // ===========================================================================
+  // Sets functions that will be initiated globally when resizing the browser
+  // window.
+  // ===========================================================================
+  var bindContentItemImageCropToggle = function() {
+    $('.js-toggle-crop-state').on('click', function() {
+      var $contentItemBox = $(this).closest('.js-content-item-box'),
+          $imgDropAreaTarget = $contentItemBox.find('.js-img-drop-area'),
+          itemType = $contentItemBox.data('item-type'),
+          imageCropState;
+
+      var articleData = new Edicy.CustomData({
+        type: 'article',
+        id: $contentItemBox.data('item-id')
+      });
+
+      var pageData = new Edicy.CustomData({
+        type: 'page',
+        id: $contentItemBox.data('item-id')
+      });
+
+      if ($imgDropAreaTarget.hasClass('is-cropped')) {
+        $imgDropAreaTarget
+          .removeClass('is-cropped')
+          .addClass('not-cropped')
+        ;
+
+        imageCropState = 'not-cropped';
+
+      } else {
+        $imgDropAreaTarget
+          .removeClass('not-cropped')
+          .addClass('is-cropped')
+        ;
+
+        imageCropState = 'is-cropped';
+      }
+
+      if (itemType === 'article') {
+        articleData.set('image_crop_state', imageCropState);
+      } else {
+        pageData.set('image_crop_state', imageCropState);
+      }
+    });
+  };
+
+  // ===========================================================================
+  // Load article cover images only when they are close or appearing in the
+  // viewport.
+  // ===========================================================================
+  var bindContentItemImageLazyload = function() {
+    $(document).ready(function() {
+      setTimeout(function() {
+        $('.js-content-item-box').addClass('not-loaded');
+      }, 3000);
+    });
+
+    $('.js-lazyload').lazyload({
+      threshold : 500,
+      effect : "fadeIn",
+      placeholder: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
+
+      load: function() {
+        var $contentItemBox = $(this).closest('.js-content-item-box');
+
+        $contentItemBox.removeClass('not-loaded with-error').addClass('is-loaded');
+
+        setTimeout(function() {
+          $contentItemBox.removeClass('not-loaded with-error');
+          $contentItemBox.find('.js-loader').remove();
+        }, 3000);
+      }
+    });
   };
 
   // Shows/hides the popover main menu (visible on smalles screens).
@@ -542,9 +790,9 @@
     }
   };
 
-  var autoSizeFormCommentArea = function() {
+  /*var autoSizeFormCommentArea = function() {
     $('.comment-form .form_field_textarea').textareaAutoSize();
-  };
+  };*/
 
   // Initiations
   var initWindowResize = function() {
@@ -621,6 +869,49 @@
     }
   };
 
+  // ===========================================================================
+  // Toggles product categories visibility in main menu.
+  // ===========================================================================
+  var bindRootItemSettings = function(rootItemValuesObj) {
+    if (!('show_product_related_pages_in_main_menu' in rootItemValuesObj)) {
+      rootItemValuesObj.show_product_related_pages_in_main_menu = false;
+    }
+
+    $('.js-root-item-settings-toggle').each(function(index, languageMenuSettingsButton) {
+      var rootItemSettingsEditor = new Edicy.SettingsEditor(languageMenuSettingsButton, {
+        menuItems: [
+          {
+            "titleI18n": "show_in_main_menu",
+            "type": "checkbox",
+            "key": "show_product_related_pages_in_main_menu",
+            "states": {
+              "on": true,
+              "off": false
+            }
+          }
+        ],
+
+        buttonTitleI18n: "settings",
+
+        values: rootItemValuesObj,
+
+        containerClass: ['js-root-item-settings-popover', 'js-prevent-sideclick'],
+
+        preview: function(data) {
+          if (!data.show_product_related_pages_in_main_menu === true) {
+            $('.js-menu-item-products').addClass('is-hidden');
+          } else {
+            $('.js-menu-item-products').removeClass('is-hidden');
+          }
+        },
+
+        commit: function(data) {
+          siteData.set('settings_root_item', data);
+        }
+      });
+    });
+  };
+
   var initBlogPage = function() {
     // Add blog listing layout specific functions here.
   };
@@ -642,16 +933,48 @@
     // Add front page layout specific functions here.
   };
 
+  // ===========================================================================
+  // Sets functions that will be initiated on items list layouts.
+  // ===========================================================================
+  var initItemsPage = function() {
+    if (!editmode()) {
+      bindContentItemImageLazyload();
+    }
+  };
+
+  // ===========================================================================
+  // Detects design editor changes.
+  // ===========================================================================
+  var detectDesignEditorChanges = function() {
+    document.addEventListener('edicy:customstyles:change', function(event) {
+			if (Object.keys(event.detail.changes).indexOf('--header-background-color') > -1) {
+				if (event.detail.changes['--header-background-color'].value === undefined) {
+          $('body').removeClass('header-top-with-bg');
+
+          siteData.remove('has_header_bg_color');
+				}
+				else {
+          $('body').addClass('header-top-with-bg');
+
+          siteData.set('has_header_bg_color', true);
+				}
+
+			}
+    });
+  };
+
   var init = function() {
     // Add site wide functions here.
     handleElementsClick();
     tableWrapper();
     focusFormWithErrors();
-    autoSizeFormCommentArea();
+    //autoSizeFormCommentArea();
+    detectDesignEditorChanges();
 
-    if (!Modernizr.flexbox && editmode) {
+    if (!Modernizr.flexbox && editmode()) {
       bindFallbackHeaderLeftWidthCalculation();
     }
+
   };
 
   // Enables the usage of the initiations outside this file.
@@ -665,6 +988,11 @@
     initCommonPage: initCommonPage,
     initFrontPage: initFrontPage,
     bindLanguageMenuSettings: bindLanguageMenuSettings,
+    initItemsPage: initItemsPage,
+    bindContentItemBgPickers: bindContentItemBgPickers,
+    bindContentItemImgDropAreas: bindContentItemImgDropAreas,
+    bindContentItemImageCropToggle: bindContentItemImageCropToggle,
+    bindRootItemSettings: bindRootItemSettings
   });
 
     window.site = $.extend(window.site || {}, {

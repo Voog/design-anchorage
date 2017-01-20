@@ -377,7 +377,7 @@ body {
   color: var(--third-color);
 }
 
-.front-page .header-top {
+.header-top {
   background-color: var(--header-background-color);
 }
 

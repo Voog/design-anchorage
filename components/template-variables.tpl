@@ -395,6 +395,11 @@
     {% assign footer_bg_color_data_str = footer_bg_color_data | json %}
   {% endif %}
 
+  {% assign product_list_layout = "Product list" %}
+  {% assign product_layout = "Product" %}
+
+  {% assign show_product_related_pages_in_main_menu = site.data.settings_root_item.show_product_related_pages_in_main_menu %}
+
   {% comment %}=================================================================
   || Design editor variables.
   ============================================================= {% endcomment %}
@@ -526,4 +531,10 @@
       }
     ]
   {% endcapture %}
+
+  {% comment %}VOOG intro popover targets. Add them where applicable popovers should appear.{% endcomment %}
+  {% capture edy_intro_add_page %}{% if editmode %}data-edy-intro-popover="edy-add-page"{% endif %}{% endcapture %}
+  {% capture edy_intro_add_lang %}{% if editmode %}data-edy-intro-popover="edy-add-lang"{% endif %}{% endcapture %}
+  {% capture edy_intro_edit_text %}{% if editmode %}data-edy-intro-popover="edy-edit-text"{% endif %}{% endcapture %}
+
 {% endcapture %}
