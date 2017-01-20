@@ -30,7 +30,6 @@
             <button class="mobile-menu-toggler js-prevent-sideclick">
               <span></span>
             </button>
-
           </div>
 
           {% include "site-search" %}

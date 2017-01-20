@@ -37,13 +37,7 @@
   {% if editmode or item.children? %}
     <ul class="sub-menu menu-level-2">
       {% for level2 in item.visible_children %}
-        {% if item.layout_title == product_list_layout %}
-          {% unless level2.layout_title == product_list_layout or level2.layout_title == product_layout %}
-            {% include "menu-mobile-level-2-link" %}
-          {% endunless %}
-        {% else %}
-          {% include "menu-mobile-level-2-link" %}
-        {% endif %}
+        {% include "menu-mobile-level-2-link" %}
       {% endfor %}
 
       {% if editmode %}

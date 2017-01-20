@@ -1,7 +1,15 @@
 <nav class="menu-main visibility-lrg">
   <ul class="menu">
     {% unless site.root_item.hidden? %}
-      {% menulink site.root_item wrapper-tag="li" %}
+      {% if site.root_item.layout_title == product_list_layout and show_product_related_pages_in_main_menu != true %}
+        {% if page.layout_title == product_list_layout or page.layout_title == product_layout %}
+          {% menulink site.root_item wrapper-tag="li" wrapper-class="selected" %}
+        {% else %}
+          {% menulink site.root_item wrapper-tag="li" %}
+        {% endif %}
+      {% else %}
+        {% menulink site.root_item wrapper-tag="li" %}
+      {% endif %}
     {% endunless %}
 
     {% for item in site.visible_menuitems %}

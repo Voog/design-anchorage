@@ -2,9 +2,18 @@
   {% for level_1 in site.menuitems %}
     {% if level_1.selected? %}
       {% if level_1.children? %}
+        {% if site.root_item.layout_title == product_list_layout and show_product_related_pages_in_main_menu != true %}
+          {% menulink site.root_item wrapper-tag="li" wrapper-class="menu-item" %}
+          <span class="menu-separator">/</span>
+          {% menulink level_1 wrapper-tag="li" wrapper-class="menu-item" %}
+        {% endif %}
+
         {% for level_2 in level_1.children %}
           {% if level_2.selected? %}
-            {% menulink level_1 wrapper-tag="li" wrapper-class="menu-item" %}
+            {% unless site.root_item.layout_title == product_list_layout and show_product_related_pages_in_main_menu != true %}
+              {% menulink level_1 wrapper-tag="li" wrapper-class="menu-item" %}
+            {% endunless %}
+
             <span class="menu-separator">/</span>
             {% menulink level_2 wrapper-tag="li" wrapper-class="menu-item" %}
 
