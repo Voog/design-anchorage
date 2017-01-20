@@ -164,63 +164,6 @@ a {
   max-width: 100vw;
 }
 
-// Independent elements that can be located everywhere in the DOM and always have the same styling rules.
-.loader {
-  @extend %stretch;
-  position: fixed;
-  z-index: 10;
-
-  &:not(.hidden) {
-    .loader-cube {
-      @include transition(opacity 0.5s ease-in 1.5s);
-    }
-  }
-
-  &.hidden {
-    top: auto;
-  }
-}
-
-.loader-cube {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  opacity: 1;
-  width: 10px;
-  height: 10px;
-  margin-top: -52px;
-  margin-left: -26px;
-  background-color: rgba($black, .5);
-  @include animation(cubemove 1.8s infinite ease-in-out);
-
-  .hidden & {
-    opacity: 0;
-  }
-}
-
-.loader-cube-2 {
-  @include animation-delay(-0.9s);
-}
-
-@include keyframes(cubemove) {
-  25% {
-    @include transform(translateX(42px) rotate(-90deg) scale(0.5));
-  }
-
-  50% {
-    @include transform(translateX(42px) translateY(42px) rotate(-180deg));
-  }
-
-  75% {
-    @include transform(translateX(0px) translateY(42px) rotate(-270deg) scale(0.5));
-  }
-
-  100% {
-    @include transform(rotate(-360deg));
-  }
-}
-
 .stretch {
   @extend %stretch;
 }
@@ -437,4 +380,90 @@ a {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   max-width: 100%;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  opacity: 0;
+  transition: opacity .3s;
+
+  &::before {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    box-sizing: content-box;
+  }
+
+  .not-loaded &,
+  .is-loaded & {
+    margin-top: calc((20px / 2) * -1);
+    margin-left: calc((20px / 2) * -1);
+    border: 1px solid rgba($black, 0);
+    animation: rotation .7s infinite linear;
+
+    &::before {
+      border-top: 1px solid rgba($black, 1);
+      border-right: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      border-left: 1px solid transparent;
+      border-radius: 100%;
+    }
+  }
+
+  .not-loaded & {
+    opacity: 1;
+  }
+
+  .is-loaded & {
+    opacity: 0;
+  }
+
+  .with-error & {
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    margin-left: -15px;
+    background-color: rgba($red, .3);
+    opacity: 1;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 14px;
+      width: 22px;
+      height: 2px;
+      background-color: $white;
+      border-radius: 2px;
+      content: '';
+    }
+
+
+    &::before {
+      left: 4px;
+      transform: rotate(45deg);
+    }
+
+    &::after{
+      right: 4px;
+      transform: rotate(-45deg);
+    }
+  }
 }

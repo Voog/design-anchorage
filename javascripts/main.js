@@ -10536,9 +10536,12 @@ return jQuery;
 })(jQuery, window, document);
 
 ;(function($) {
-  // Global variable to detect if page is in editmode.
-  var editmode = $('html').hasClass('editmode'),
-      articlePage = $('body').hasClass('blog-article-page');
+  //============================================================================
+  // Helper function to detect if page viewer is in editmode.
+  //============================================================================
+  var editmode = function () {
+    return $('html').hasClass('editmode');
+  };
 
   // Function to limit the rate at which a function can fire.
   var debounce = function(func, wait, immediate) {
@@ -10816,10 +10819,8 @@ return jQuery;
     }
   };
 
-  var setItemImage = function(itemId, imageId, itemType) {
+  var setItemImage = function($contentItemBox, $imgDropArea, itemId, imageId, itemType) {
     var apiType;
-
-    // console.log(itemType);
 
     if (itemType === 'article') {
       apiType = 'articles';
@@ -10827,15 +10828,20 @@ return jQuery;
       apiType = 'pages';
     }
 
-    console.log(apiType);
-    console.log('/admin/api/' + apiType +'/' + itemId);
-
     $.ajax({
        type: 'PATCH',
        contentType: 'application/json',
        url: '/admin/api/' + apiType +'/' + itemId,
        data: JSON.stringify({'image_id': imageId}),
-       dataType: 'json'
+       dataType: 'json',
+       success: function(data) {
+         $contentItemBox.removeClass('not-loaded with-error').addClass('is-loaded');
+         $imgDropArea.css('opacity', 1);
+       },
+       timeout: 30000,
+       error: function(data) {
+         $contentItemBox.removeClass('not-loaded is-loaded with-error').addClass('with-error');
+       }
     });
   };
 
@@ -10849,7 +10855,8 @@ return jQuery;
           $contentItemBox = $bgPickerArea.closest('.js-content-item-box'),
           itemId = $contentItemBox.data('item-id'),
           itemType = $contentItemBox.data('item-type'),
-          dataBgKey = $bgPickerButton.data('bg-key');
+          dataBgKey = $bgPickerButton.data('bg-key'),
+          $imgDropArea = $bgPickerArea.find('.js-img-drop-area');
 
       var bgPicker = new Edicy.BgPicker($bgPickerButton, {
         picture: $bgPickerButton.data('bg-picture-boolean'),
@@ -10857,9 +10864,6 @@ return jQuery;
         color: $bgPickerButton.data('bg-color-boolean'),
 
         preview: function(data) {
-          var $contentItemBox = $bgPickerArea.closest('.js-content-item-box'),
-              $imgDropArea = $bgPickerArea.find('.js-img-drop-area');
-
           setImageOrientation($contentItemBox, data.width, data.height);
 
           $bgPickerArea.eq(0).data('imgDropArea').setData({
@@ -10869,14 +10873,18 @@ return jQuery;
             height: data.height
           });
 
+          $contentItemBox.removeClass('is-loaded not-loaded with-error');
+
           $imgDropArea
             .removeClass('is-cropped')
             .addClass('not-cropped')
+            .css('opacity', .1)
           ;
         },
 
         commit: function(data) {
-          setItemImage(itemId, data.original_id, itemType);
+          $contentItemBox.addClass('not-loaded');
+          setItemImage($contentItemBox, $imgDropArea, itemId, data.original_id, itemType);
         }
       });
 
@@ -10913,13 +10921,14 @@ return jQuery;
           var $bgPickerButton = $contentItemBox.find('.js-bg-picker-btn');
 
           $contentItemBox
-            .addClass('with-image')
-            .removeClass('without-image')
+            .removeClass('without-image is-loaded with-error')
+            .addClass('with-image not-loaded')
           ;
 
           $imgDropAreaTarget
             .removeClass('is-cropped')
             .addClass('not-cropped')
+            .css('opacity', .1)
           ;
 
           setImageOrientation($contentItemBox, data.width, data.height);
@@ -10932,7 +10941,7 @@ return jQuery;
             height: data.height
           });
 
-          setItemImage(itemId, data.original_id, itemType);
+          setItemImage($contentItemBox, $imgDropAreaTarget, itemId, data.original_id, itemType);
 
           if (itemType === 'article') {
             articleData.set('image_crop_state', 'not-cropped');
@@ -10996,7 +11005,7 @@ return jQuery;
   // Load article cover images only when they are close or appearing in the
   // viewport.
   // ===========================================================================
-  var bindItemImageLazyload = function() {
+  var bindContentItemImageLazyload = function() {
     $(document).ready(function() {
       setTimeout(function() {
         $('.js-content-item-box').addClass('not-loaded');
@@ -11008,13 +11017,13 @@ return jQuery;
       effect : "fadeIn",
       placeholder: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
 
-      load : function() {
+      load: function() {
         var $contentItemBox = $(this).closest('.js-content-item-box');
 
-        $contentItemBox.removeClass('not-loaded').addClass('is-loaded');
+        $contentItemBox.removeClass('not-loaded with-error').addClass('is-loaded');
 
         setTimeout(function() {
-          $contentItemBox.removeClass('not-loaded');
+          $contentItemBox.removeClass('not-loaded with-error');
           $contentItemBox.find('.js-loader').remove();
         }, 3000);
       }
@@ -11350,7 +11359,9 @@ return jQuery;
   // Sets functions that will be initiated on items list layouts.
   // ===========================================================================
   var initItemsPage = function() {
-    bindItemImageLazyload();
+    if (!editmode()) {
+      bindContentItemImageLazyload();
+    }
   };
 
   // ===========================================================================
@@ -11382,7 +11393,7 @@ return jQuery;
     //autoSizeFormCommentArea();
     detectDesignEditorChanges();
 
-    if (!Modernizr.flexbox && editmode) {
+    if (!Modernizr.flexbox && editmode()) {
       bindFallbackHeaderLeftWidthCalculation();
     }
 

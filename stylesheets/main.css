@@ -202,76 +202,6 @@ a img {
   max-width: 100vw;
 }
 
-.loader {
-  position: fixed;
-  z-index: 10;
-}
-.loader:not(.hidden) .loader-cube {
-  transition: opacity 0.5s ease-in 1.5s;
-}
-.loader.hidden {
-  top: auto;
-}
-
-.loader-cube {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  opacity: 1;
-  width: 10px;
-  height: 10px;
-  margin-top: -52px;
-  margin-left: -26px;
-  background-color: rgba(0, 0, 0, 0.5);
-  -webkit-animation: cubemove 1.8s infinite ease-in-out;
-  animation: cubemove 1.8s infinite ease-in-out;
-}
-.hidden .loader-cube {
-  opacity: 0;
-}
-
-.loader-cube-2 {
-  -webkit-animation-delay: -0.9s;
-  animation-delay: -0.9s;
-}
-
-@-webkit-keyframes cubemove {
-  25% {
-    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
-  }
-  50% {
-    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
-  }
-  75% {
-    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
-  }
-  100% {
-    -webkit-transform: rotate(-360deg);
-  }
-}
-@keyframes cubemove {
-  25% {
-    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
-    -ms-transform: translateX(42px) rotate(-90deg) scale(0.5);
-    transform: translateX(42px) rotate(-90deg) scale(0.5);
-  }
-  50% {
-    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
-    -ms-transform: translateX(42px) translateY(42px) rotate(-180deg);
-    transform: translateX(42px) translateY(42px) rotate(-180deg);
-  }
-  75% {
-    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
-    -ms-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
-    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
-  }
-  100% {
-    -webkit-transform: rotate(-360deg);
-    -ms-transform: rotate(-360deg);
-    transform: rotate(-360deg);
-  }
-}
 .background-image,
 .background-color {
   position: absolute;
@@ -465,6 +395,96 @@ a img {
   max-width: 100%;
 }
 
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  opacity: 0;
+  transition: opacity .3s;
+}
+.loader::before {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  box-sizing: content-box;
+}
+.not-loaded .loader, .is-loaded .loader {
+  margin-top: calc((20px / 2) * -1);
+  margin-left: calc((20px / 2) * -1);
+  border: 1px solid transparent;
+  -webkit-animation: rotation .7s infinite linear;
+          animation: rotation .7s infinite linear;
+}
+.not-loaded .loader::before, .is-loaded .loader::before {
+  border-top: 1px solid black;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-radius: 100%;
+}
+.not-loaded .loader {
+  opacity: 1;
+}
+.is-loaded .loader {
+  opacity: 0;
+}
+.with-error .loader {
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  margin-left: -15px;
+  background-color: rgba(199, 9, 9, 0.3);
+  opacity: 1;
+}
+.with-error .loader::before, .with-error .loader::after {
+  position: absolute;
+  top: 14px;
+  width: 22px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 2px;
+  content: '';
+}
+.with-error .loader::before {
+  left: 4px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.with-error .loader::after {
+  right: 4px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 .wrap:after, .common-page .sidebar-active:after, .blog-news-page .articles-listing:after, .site-header:after, .search:after,
 .search-form:after, .site-footer .blog-article-nav:after, .content-area:after, .contacts .content-area table tr:after, .footer .content-area table tr:after {
   display: table;
@@ -472,7 +492,7 @@ a img {
   content: '';
 }
 
-.loader, .stretch, .background-image,
+.stretch, .background-image,
 .background-color {
   position: absolute;
   top: 0;

@@ -29,6 +29,7 @@
         </svg>
       </button>
 
+      <div class="loader js-loader"></div>
       <div class="top-inner aspect-ratio-inner image-drop-area {{ item_image_orientation }} {{ item_image_crop_state }} js-img-drop-area" data-image="{{ menu_level.image.for-width-680.url }}"></div>
     </div>
 
