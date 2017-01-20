@@ -3510,6 +3510,7 @@ a img {
 .content-area b,
 .content-area strong {
   font-weight: 400;
+  color: black;
 }
 .content-area pre,
 .content-area code,
