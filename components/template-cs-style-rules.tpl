@@ -469,16 +469,18 @@ body {
   text-decoration: var(--headings-title-text-decoration);
   text-transform: var(--headings-title-text-transform);
 }
+.content-area h2 {
+  font-size: var(--headings-heading-font-size);
+  line-height: var(--headings-heading-line-height);
+  text-transform: var(--headings-heading-text-transform);
+}
 .content-area h2,
 .content-area h2 a,
 .content-area h2 a:hover {
   text-align: var(--headings-heading-text-alignment);
-  line-height: var(--headings-heading-line-height);
-  font-size: var(--headings-heading-font-size);
   font-weight: var(--headings-heading-font-weight);
   font-style: var(--headings-heading-font-style);
   text-decoration: var(--headings-heading-text-decoration);
-  text-transform: var(--headings-heading-text-transform);
 }
 .content-area h3,
 .content-area h3 a,
