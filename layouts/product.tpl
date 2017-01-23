@@ -50,7 +50,7 @@
                 <div class="main-content top-row">
                   <div class="wrap">
                     <div class="inner">
-                      {% include "product-breadcrumbs" %}
+                      {% include "menu-breadcrumbs" %}
 
                       <div class="items-body" {{ edy_intro_edit_text }}>
                         <div class="content-illustrations">

@@ -32,7 +32,7 @@
                       <div class="inner no-bottom-padding content-body content-area" data-search-indexing-allowed="true">{% content %}</div>
 
                     <div class="inner">
-                      {% include "product-breadcrumbs" %}
+                      {% include "menu-breadcrumbs" %}
 
                       <div class="content-item-boxes">
                         {% if site.root_item.selected? %}

@@ -136,13 +136,20 @@
 
 // Product list menu
 .menu-item-list {
-  margin-top: 6px;
-  margin-bottom: 15px;
+  margin-top: 15px;
 
   &.is-hidden-desktop {
     @media screen and (min-width: $tablet-1 + 1) {
       display: none;
     }
+  }
+
+  .item-list-page & {
+    margin-bottom: 15px;
+  }
+
+  .common-page & {
+    margin-bottom: 18px;
   }
 
   .menu-item {

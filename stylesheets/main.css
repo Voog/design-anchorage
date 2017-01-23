@@ -1601,13 +1601,18 @@ a img {
 }
 
 .menu-item-list {
-  margin-top: 6px;
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 @media screen and (min-width: 1025px) {
   .menu-item-list.is-hidden-desktop {
     display: none;
   }
+}
+.item-list-page .menu-item-list {
+  margin-bottom: 15px;
+}
+.common-page .menu-item-list {
+  margin-bottom: 18px;
 }
 .menu-item-list .menu-item {
   display: inline-block;
