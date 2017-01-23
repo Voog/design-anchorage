@@ -55,7 +55,7 @@ body {
     color: var(--third-color);
   }
 
-  .menu li a {
+  .menu li a:not(.untranslated) {
     color: var(--third-color);
   }
 
@@ -68,7 +68,7 @@ body {
   }
 
   .lang-menu {
-    &.lang-menu-bilingual {
+    &.menu-language-list {
       .lang-title a {
         color: var(--third-color);
 
@@ -135,7 +135,7 @@ body {
     color: var(--secondary-color);
   }
 
-  .lang-menu-bilingual {
+  .menu-language-list {
     .lang-title a {
       &:hover {
         color: var(--secondary-color);
@@ -372,7 +372,7 @@ body {
           background-color: var(--third-color);
         }
 
-        &.flags-disabled {
+        .language-flags-disabled & {
           .lang-menu-btn {
             .lang-title {
               color: var(--third-color);
@@ -476,7 +476,7 @@ body {
 
 /* langmenu */
 .lang-menu {
-  &.lang-menu-bilingual {
+  &.menu-language-list {
     .lang-title {
       a {
         &.is-active {

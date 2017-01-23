@@ -26,6 +26,7 @@
   $('.mobile-menu-toggler').click(function(event) {
       event.preventDefault();
       $('html').toggleClass('mobilemenu-open');
+      $('html').removeClass('menu-language-popover-open');
       $('body').removeClass('mobilesearch-open');
       $('#mobile-menu').removeClass('reset-touch').addClass('reset-touch');
   });
@@ -45,8 +46,8 @@
   $('.mobile-menu-close').on('click', function() {
     event.preventDefault();
 
-    if ($('body').hasClass('lang-menu-open')) {
-      $('body').removeClass('lang-menu-open');
+    if ($('html').hasClass('menu-language-popover-open')) {
+      $('html').removeClass('menu-language-popover-open');
     } else {
       $('html').removeClass('mobilemenu-open');
     }
@@ -54,40 +55,142 @@
 
 
   $('.js-lang-menu-btn').on('click', function() {
-    if ($('body').hasClass('lang-menu-open')) {
-      $('body').removeClass('lang-menu-open');
+    $('html').removeClass('search-open');
+    $('.js-search').removeClass('active');
+
+    if ($('html').hasClass('menu-language-popover-open')) {
+      $('html').removeClass('menu-language-popover-open');
     } else {
       bindLanguageMenuPositioning($(this));
 
-      $('body').addClass('lang-menu-open');
+      $('html').addClass('menu-language-popover-open');
     }
   });
 
   var bindLanguageMenuPositioning = function(currentButton) {
-    var offsetItem = currentButton.parent().hasClass('flags-disabled') ? currentButton.find('.js-lang-title-inner') : currentButton,
-        rightOffsetHelper = currentButton.parent().hasClass('flags-disabled') ? 5 : 9;
+    var offsetItem = $('html').hasClass('language-flags-disabled') ? currentButton.find('.js-lang-title-inner') : currentButton,
+        rightOffsetHelper = $('html').hasClass('language-flags-disabled') ? 5 : 9;
 
     $('.js-popup-menu-popover').css({
-      top: offsetItem.offset().top + offsetItem.outerHeight() + 4,
+      top: offsetItem.offset().top + offsetItem.outerHeight(),
       right: $(window).width() - offsetItem.offset().left - offsetItem.outerWidth() - rightOffsetHelper
     });
   };
 
-  var toggleFlags = function() {
-    $('.js-option-toggle-flags').on('click', function() {
-      if ($(this).hasClass('js-flag-disable-btn')) {
-        var flagsState = false;
-      } else {
-        var flagsState = true;
+  // ===========================================================================
+  // Toggles language menu mode.
+  // ===========================================================================
+  var bindLanguageMenuSettings = function(valuesObj) {
+    if (!('type' in valuesObj)) {
+      valuesObj.type = 'popover';
+    }
+
+    if (!('item_state' in valuesObj)) {
+      valuesObj.item_state = 'flags_and_names';
+    }
+
+    var langSettingsEditor = new Edicy.SettingsEditor($('.js-menu-language-settings-toggle').get(0), {
+      menuItems: [
+        {
+          "titleI18n": "format_desktop_only",
+          "type": "radio",
+          "key": "type",
+          "list": [
+            {
+              "titleI18n": "dropdown_menu",
+              "value": "popover"
+            },
+            {
+              "titleI18n": "expanded_menu",
+              "value": "list"
+            },
+          ]
+        },
+        {
+          "titleI18n": "show",
+          "type": "radio",
+          "key": "item_state",
+          "list": [
+            {
+              "titleI18n": "flags_only",
+              "value": "flags_only"
+            },
+            {
+              "titleI18n": "names_only",
+              "value": "names_only"
+            },
+            {
+              "titleI18n": "flags_and_names",
+              "value": "flags_and_names"
+            }
+          ]
+        }
+      ],
+
+      buttonTitleI18n: "settings",
+
+      values: valuesObj,
+
+      containerClass: ['js-menu-language-settings-popover', 'js-prevent-sideclick'],
+
+      preview: function(data) {
+        var $html = $('html'),
+            $languageSettingsMenuElement = $('.js-menu-language-settings');
+
+        if (data.type === 'list') {
+          $html.removeClass('language-menu-mode-popover');
+          $html.removeClass('menu-language-popover-open');
+          $html.addClass('language-menu-mode-list');
+        } else {
+          $html.removeClass('language-menu-mode-list');
+          $html.addClass('language-menu-mode-popover');
+          $html.addClass('menu-language-popover-open');
+        }
+
+        if (data.item_state === 'flags_only') {
+          $html.removeClass('language-flags-disabled');
+          $html.removeClass('language-names-enabled');
+          $html.addClass('language-flags-enabled');
+          $html.addClass('language-names-disabled');
+        } else if (data.item_state === 'names_only') {
+          $html.removeClass('language-flags-enabled');
+          $html.removeClass('language-names-disabled');
+          $html.addClass('language-flags-disabled');
+          $html.addClass('language-names-enabled');
+        } else if (data.item_state === 'flags_and_names') {
+          $html.removeClass('language-flags-disabled');
+          $html.removeClass('language-names-disabled');
+          $html.addClass('language-flags-enabled');
+          $html.addClass('language-names-enabled');
+        }
+
+        toggleLanguageSettingsLocation();
+        this.setPosition();
+      },
+
+      commit: function(data) {
+        siteData.set('settings_language_menu', data);
       }
-
-      $(this).toggleClass('js-flag-disable-btn');
-      $('.js-menu-lang-wrap, .js-menu-btn-wrap').toggleClass('flags-enabled flags-disabled');
-
-      bindLanguageMenuPositioning($('.js-lang-menu-btn'))
-
-      siteData.set("flags_state", flagsState);
     });
+
+    toggleLanguageSettingsLocation();
+  };
+
+  var toggleLanguageSettingsLocation = function() {
+    var $html = $('html'),
+        $languageSettingsMenuElement = $('.js-menu-language-settings');
+
+    if ($(window).width() <= 1024 && $languageSettingsMenuElement.closest('.js-menu-main-mobile').length === 0) {
+      $languageSettingsMenuElement.appendTo('.js-menu-main-mobile');
+    } else if ($(window).width() > 1024 && $languageSettingsMenuElement.closest('.js-menu-main-desktop').length === 0) {
+      if ($html.hasClass('language-menu-mode-list')) {
+        $languageSettingsMenuElement.appendTo('.js-menu-language-list-setting-parent');
+        bindLanguageMenuPositioning($('.js-lang-menu-btn'));
+      } else {
+        $languageSettingsMenuElement.appendTo('.js-menu-language-popover-setting-parent');
+        bindLanguageMenuPositioning($('.js-lang-menu-btn'));
+      }
+    }
   };
 
   var bindFallbackHeaderLeftWidthCalculation = function() {
@@ -515,8 +618,8 @@
           $('.mobile-menu-toggler').trigger('click');
         }
 
-        if ($('body').hasClass('lang-menu-open')) {
-          $('body').removeClass('lang-menu-open');
+        if ($('html').hasClass('menu-language-popover-open')) {
+          $('html').removeClass('menu-language-popover-open');
         }
 
         if ($('html').hasClass('comments-open')) {
@@ -552,6 +655,7 @@
     // Toggles the search modal.
     $('.js-search-toggle-btn').click(function() {
       $('html').removeClass('mobilemenu-open');
+      $('html').removeClass('menu-language-popover-open');
       $('.js-search').toggleClass('active');
       $('.js-search').hasClass('active') ? $('.js-search-input').focus() : '';
       $('html').toggleClass('search-open');
@@ -617,7 +721,7 @@
       toggleArticleType($(this));
     });
 
-    $('.public .js-slide-to-article').click(function() {
+    $('.publicmode .js-slide-to-article').click(function() {
       $('html, body').animate({
         scrollTop: $('.page-content').offset().top
       }, 300);
@@ -692,8 +796,19 @@
 
   // Initiations
   var initWindowResize = function() {
-    $(window).resize(debounce(commentsHeight, 100));
-    $(window).resize(debounce(handleMobileSearchHeight, 100));
+    $(window).resize(debounce(function() {
+      commentsHeight();
+      handleMobileSearchHeight();
+      toggleLanguageSettingsLocation();
+
+      $('.js-menu-language-settings-popover').hide();
+    }, 100));
+
+    $(window).resize(debounce(function() {
+      $('html').removeClass('menu-language-popover-open');
+      $('.js-menu-language-settings-popover').hide();
+      $('.js-menu-language-settings-toggle').removeClass('edy-cbtn-active');
+    }, 25));
   };
 
   // Scrolls to the comment-form if comment submit failed (to show the error messages to the user)
@@ -872,8 +987,8 @@
     initArticlePage: initArticlePage,
     initCommonPage: initCommonPage,
     initFrontPage: initFrontPage,
+    bindLanguageMenuSettings: bindLanguageMenuSettings,
     initItemsPage: initItemsPage,
-    toggleFlags: toggleFlags,
     bindContentItemBgPickers: bindContentItemBgPickers,
     bindContentItemImgDropAreas: bindContentItemImgDropAreas,
     bindContentItemImageCropToggle: bindContentItemImageCropToggle,

@@ -27,7 +27,7 @@ body {
 .dark-background .header-title a:hover {
   color: var(--third-color);
 }
-.dark-background .menu li a {
+.dark-background .menu li a:not(.untranslated) {
   color: var(--third-color);
 }
 .dark-background .menu li.selected a {
@@ -36,13 +36,13 @@ body {
 .dark-background .lang-title {
   color: var(--third-color);
 }
-.dark-background .lang-menu.lang-menu-bilingual .lang-title a {
+.dark-background .lang-menu.menu-language-list .lang-title a {
   color: var(--third-color);
 }
-.dark-background .lang-menu.lang-menu-bilingual .lang-title a.is-active, .dark-background .lang-menu.lang-menu-bilingual .lang-title a:hover {
+.dark-background .lang-menu.menu-language-list .lang-title a.is-active, .dark-background .lang-menu.menu-language-list .lang-title a:hover {
   color: var(--third-color);
 }
-.dark-background .lang-menu.lang-menu-bilingual .lang-title a.selected {
+.dark-background .lang-menu.menu-language-list .lang-title a.selected {
   color: var(--third-color);
 }
 .dark-background .voog-reference svg path {
@@ -85,10 +85,10 @@ body {
 .light-background .lang-title {
   color: var(--secondary-color);
 }
-.light-background .lang-menu-bilingual .lang-title a:hover {
+.light-background .menu-language-list .lang-title a:hover {
   color: var(--secondary-color);
 }
-.light-background .lang-menu-bilingual .lang-title a.selected {
+.light-background .menu-language-list .lang-title a.selected {
   color: var(--secondary-color);
 }
 .light-background .site-options .search-btn svg path {
@@ -233,7 +233,7 @@ body {
   .dark-background .mobile-menu-toggler span, .dark-background .mobile-menu-toggler span:before, .dark-background .mobile-menu-toggler span:after {
     background-color: var(--third-color);
   }
-  .mobile-menu-toggler span.flags-disabled .lang-menu-btn .lang-title, .mobile-menu-toggler span:before.flags-disabled .lang-menu-btn .lang-title, .mobile-menu-toggler span:after.flags-disabled .lang-menu-btn .lang-title {
+  .language-flags-disabled .mobile-menu-toggler span .lang-menu-btn .lang-title, .language-flags-disabled .mobile-menu-toggler span:before .lang-menu-btn .lang-title, .language-flags-disabled .mobile-menu-toggler span:after .lang-menu-btn .lang-title {
     color: var(--third-color);
   }
 
@@ -291,7 +291,7 @@ body {
 }
 
 /* langmenu */
-.lang-menu.lang-menu-bilingual .lang-title a.is-active {
+.lang-menu.menu-language-list .lang-title a.is-active {
   color: var(--secondary-color);
 }
 .lang-menu li a {

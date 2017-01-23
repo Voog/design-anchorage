@@ -22,6 +22,13 @@
     {
       "content_type": "page",
       "component": false,
+      "file": "layouts/blog_article.tpl",
+      "layout_name": "page_default",
+      "title": "Blog article"
+    },
+    {
+      "content_type": "page",
+      "component": false,
       "file": "layouts/common_page.tpl",
       "layout_name": "page_default",
       "title": "Common page"
@@ -39,13 +46,6 @@
       "file": "layouts/blog___news.tpl",
       "layout_name": "blog",
       "title": "Blog & News"
-    },
-    {
-      "content_type": "blog_article",
-      "component": false,
-      "file": "layouts/blog_article.tpl",
-      "layout_name": "blog_article",
-      "title": "Blog article"
     },
     {
       "content_type": "component",

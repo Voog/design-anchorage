@@ -1,4 +1,4 @@
-<div id="mobile-menu" class="js-menu-lang-wrap {% if flags_state %}flags-enabled{% else %}flags-disabled{% endif %}">
+<div id="mobile-menu" class="js-menu-lang-wrap">
   <div class="navigation-menu">
     <ul>
       {% unless site.root_item.hidden? %}
@@ -38,21 +38,14 @@
 
   {% if editmode or site.has_many_languages? %}
     <div class="lang-menu">
-      <ul>
+      <ul class="js-menu-main-mobile">
         {% for language in site.languages %}
-          <li>
+          <li class="lang-item">
             <a class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} is-active{% endif %}" href="{{ language.url }}" data-lang-code="{{ language.code }}">{{ language.title }}</a>
           </li>
         {% endfor %}
-        {% if editmode %}<li class="edit-btn">{% languageadd %}</li>{% endif %}
-
         {% if editmode %}
-          <div class="mobile-lang-options">
-            <button class="option-btn js-option-toggle-flags{% if flags_state %} js-flag-disable-btn{% endif %}">
-              <span class="disable-text">{{ "disable_lang_flags" | lc: editor_locale }}</span>
-              <span class="enable-text">{{ "enable_lang_flags" | lc: editor_locale }}</span>
-            </button>
-          </div>
+          <li class="edit-btn">{% languageadd %}</li>
         {% endif %}
       </ul>
     </div>

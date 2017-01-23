@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html class="{% if editmode %}editmode{% else %}public{% endif %}{% unless comment.valid? %} comments-open js-calculate-comments-height{% endunless %}" lang="{{ page.language_code }}">
+{% assign blog_article_page = true %}
+{% include "template-variables" %}
+<html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }}{% unless comment.valid? %} comments-open js-calculate-comments-height{% endunless %}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
-    {% assign blog_article_page = true %}
-    {% include "template-variables" %}
     {% include "html-head" %}
     {% include "template-styles" %}
     {% if editmode %}

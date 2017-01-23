@@ -1,4 +1,4 @@
-<nav class="menu-main visibility-lrg">
+<nav class="menu-main visibility-lrg js-menu-main-desktop">
   <ul class="menu">
     {% unless site.root_item.hidden? %}
       {% if site.root_item.layout_title == product_list_layout and show_product_related_pages_in_main_menu != true %}
