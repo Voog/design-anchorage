@@ -21,7 +21,7 @@
 {% if editmode %}
   <div class="content-item-box {{ item_image_state }} js-content-item-box" data-item-type="page" data-item-id="{{ menu_level.page_id }}">
     <div class="item-top js-bg-picker-area">
-      <button class="btn bg-picker-btn js-bg-picker-btn" data-bg-key="image" data-bg-picture-boolean="true" data-bg-color-boolean="false" data-bg-image="{{ menu_level.image.for-width-680.url }}" data-bg-target-width="680"></button>
+      <button class="btn bg-picker-btn js-bg-picker-btn" data-bg-key="image" data-bg-picture-boolean="true" data-bg-color-boolean="false" data-bg-image="{{ menu_level.image.for-width-680.schemeless_url }}" data-bg-target-width="680"></button>
 
       <button class="btn bg-crop-btn {% if item_image_orientation == "image-square" or menu_level.image == nil %}is-hidden{% else %}is-visible{% endif %} js-toggle-crop-state">
         <svg width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +30,7 @@
       </button>
 
       <div class="loader js-loader"></div>
-      <div class="top-inner aspect-ratio-inner image-drop-area {{ item_image_orientation }} {{ item_image_crop_state }} js-img-drop-area" data-image="{{ menu_level.image.for-width-680.url }}"></div>
+      <div class="top-inner aspect-ratio-inner image-drop-area {{ item_image_orientation }} {{ item_image_crop_state }} js-img-drop-area" data-image="{{ menu_level.image.for-width-680.schemeless_url }}"></div>
     </div>
 
     <h2 class="item-title">
@@ -43,7 +43,7 @@
       <div class="top-inner aspect-ratio-inner">
         {% if menu_level.image %}
           <div class="loader js-loader"></div>
-          <img class="item-image {{ item_image_orientation }} {{ item_image_crop_state }} js-lazyload" data-original="{{ menu_level.image.for-width-680.url }}">
+          <img class="item-image {{ item_image_orientation }} {{ item_image_crop_state }} js-lazyload" data-original="{{ menu_level.image.for-width-680.schemeless_url }}">
         {% else %}
           <div class="item-placeholder">{{ menu_level.title | truncate: 50 }}</div>
         {% endif %}
