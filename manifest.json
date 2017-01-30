@@ -20,10 +20,10 @@
       "title": "Product list"
     },
     {
-      "content_type": "page",
+      "content_type": "blog_article",
       "component": false,
       "file": "layouts/blog_article.tpl",
-      "layout_name": "page_default",
+      "layout_name": "blog_article",
       "title": "Blog article"
     },
     {
