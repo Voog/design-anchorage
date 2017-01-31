@@ -2927,28 +2927,28 @@ a img {
   line-height: 1.2;
   text-align: center;
 }
-.public .item-top .top-inner {
+.publicmode .item-top .top-inner {
   overflow: hidden;
 }
-.public .item-top .top-inner .image-landscape.not-cropped {
+.publicmode .item-top .top-inner .image-landscape.not-cropped {
   width: 100%;
   height: auto;
   max-width: 100%;
 }
-.public .item-top .top-inner .image-landscape.is-cropped {
+.publicmode .item-top .top-inner .image-landscape.is-cropped {
   width: auto;
   height: 100%;
 }
-.public .item-top .top-inner .image-portrait.not-cropped {
+.publicmode .item-top .top-inner .image-portrait.not-cropped {
   width: auto;
   height: 100%;
   max-height: 100%;
 }
-.public .item-top .top-inner .image-portrait.is-cropped {
+.publicmode .item-top .top-inner .image-portrait.is-cropped {
   width: 100%;
   height: auto;
 }
-.public .item-top .top-inner .image-square {
+.publicmode .item-top .top-inner .image-square {
   width: 100%;
   height: auto;
 }
@@ -3014,7 +3014,7 @@ a img {
 .item-image {
   border: 0;
 }
-.public .item-image.is-cropped {
+.publicmode .item-image.is-cropped {
   position: absolute;
   top: -100%;
   right: -100%;

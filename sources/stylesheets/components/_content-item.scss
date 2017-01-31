@@ -140,7 +140,7 @@
     line-height: 1.2;
     text-align: center;
 
-    .public & {
+    .publicmode & {
       overflow: hidden;
 
       // scss-lint:disable SelectorDepth
@@ -245,7 +245,7 @@
 .item-image {
   border: 0;
 
-  .public & {
+  .publicmode & {
     &.is-cropped {
       position: absolute;
       top: -100%;
