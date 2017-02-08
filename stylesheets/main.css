@@ -140,6 +140,9 @@ a img {
   padding: 0;
   border: 0;
 }
+.btn.edy-bgpicker-toggle-button {
+  display: block;
+}
 
 .site-container {
   margin: 0 auto;
