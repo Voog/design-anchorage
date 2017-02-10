@@ -158,6 +158,7 @@
   {% comment %}/* SITE BLOG PAGE CONTENT AREA BACKGROUND */{% endcomment %}
   {% comment %}/* Site main content area background color style. */{% endcomment %}
   .common-page .page-body .background-color,
+  .item-list-page .page-body .background-color,
   .item-page .page-body .background-color {
     background-color: {{ body_bg_color }};
   }
