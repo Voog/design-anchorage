@@ -304,36 +304,6 @@ body {
 // =============================================================================
 // NAVIGATION MENUS
 // =============================================================================
-.toggle-sub-menu {
-  .no-svg & {
-    &:before {
-      border-color: transparent transparent transparent var(--secondary-color);
-    }
-  }
-
-  .svg & {
-    fill: var(--primary-color);
-  }
-
-  &.active {
-    .no-svg & {
-      &:before {
-        border-color: var(--secondary-color)transparent transparent transparent;
-      }
-    }
-  }
-
-  &.highlighted {
-    .no-svg & {
-      border-color: var(--secondary-color) transparent transparent transparent;
-    }
-
-    .svg & {
-      fill: var(--secondary-color);
-    }
-  }
-}
-
 .menu-main {
   a {
     font-style: var(--menu-main-font-style);
@@ -390,12 +360,6 @@ body {
       }
     }
 
-    ul {
-      a {
-        color: var(--primary-color);
-      }
-    }
-
     .navigation-menu {
       > ul {
         > li {
@@ -423,14 +387,6 @@ body {
         }
       }
 
-      ul {
-        a {
-          &.selected {
-            color: var(--secondary-color);
-          }
-        }
-      }
-
       .sub-menu {
         a {
           font-style: var(--menu-sub-font-style);
@@ -451,18 +407,6 @@ body {
             font-weight: var(--menu-sub-active-font-weight);
             text-decoration: var(--menu-sub-active-text-decoration);
             text-transform: var(--menu-sub-active-text-transform);
-          }
-        }
-      }
-    }
-
-    .lang-menu {
-      ul {
-        li {
-          a {
-            &.is-active {
-              color: var(--secondary-color);
-            }
           }
         }
       }

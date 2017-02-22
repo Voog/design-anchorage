@@ -20,13 +20,6 @@
       "title": "Product list"
     },
     {
-      "content_type": "blog_article",
-      "component": false,
-      "file": "layouts/blog_article.tpl",
-      "layout_name": "blog_article",
-      "title": "Blog article"
-    },
-    {
       "content_type": "page",
       "component": false,
       "file": "layouts/common_page.tpl",
@@ -46,6 +39,13 @@
       "file": "layouts/blog___news.tpl",
       "layout_name": "blog",
       "title": "Blog & News"
+    },
+    {
+      "content_type": "blog_article",
+      "component": false,
+      "file": "layouts/blog_article.tpl",
+      "layout_name": "blog_article",
+      "title": "Blog article"
     },
     {
       "content_type": "component",
