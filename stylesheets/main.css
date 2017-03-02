@@ -3323,12 +3323,21 @@ a img {
 .content-area p:first-child,
 .content-area ul:first-child,
 .content-area ol:first-child,
+.content-area dl:first-child,
+.content-area table:first-child,
 .content-area pre:first-child,
 .content-area code:first-child,
+.content-area iframe:first-child,
+.content-area table:first-child,
+.content-area form:first-child,
+.content-area .table-container:first-child,
 .content-area .edy-positionable-container-left-block:first-child,
-.content-area .edy-positionable-container-right-block:first-child,
 .content-area .edy-positionable-container-center-block:first-child,
-.content-area .custom-btn:first-child {
+.content-area .edy-positionable-container-right-block:first-child,
+.content-area .edy-texteditor-container-wrapper-left-block:first-child,
+.content-area .edy-texteditor-container-wrapper-center:first-child,
+.content-area .edy-texteditor-container-wrapper-right-block:first-child,
+.content-area .edy-positionable-container-maxwidth:first-child {
   margin-top: 0;
 }
 .content-area h1:last-child,
@@ -3340,12 +3349,21 @@ a img {
 .content-area p:last-child,
 .content-area ul:last-child,
 .content-area ol:last-child,
+.content-area dl:last-child,
+.content-area table:last-child,
 .content-area pre:last-child,
 .content-area code:last-child,
+.content-area iframe:last-child,
+.content-area table:last-child,
+.content-area form:last-child,
+.content-area .table-container:last-child,
 .content-area .edy-positionable-container-left-block:last-child,
-.content-area .edy-positionable-container-right-block:last-child,
 .content-area .edy-positionable-container-center-block:last-child,
-.content-area .custom-btn:last-child {
+.content-area .edy-positionable-container-right-block:last-child,
+.content-area .edy-texteditor-container-wrapper-left-block:last-child,
+.content-area .edy-texteditor-container-wrapper-center:last-child,
+.content-area .edy-texteditor-container-wrapper-right-block:last-child,
+.content-area .edy-positionable-container-maxwidth:last-child {
   margin-bottom: 0;
 }
 .dark-background .content-area h1, .dark-background
