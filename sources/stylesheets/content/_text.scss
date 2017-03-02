@@ -2,6 +2,10 @@
 // NB! Each editable content-area - {% content %} - should be wrapped in the element that has the "content-area" class.
 // NB! Contact forms, image galleries and tables styling rules are located in the separate partials: "_forms.scss", "_gallery.scss" and "_tables.scss".
 .content-area {
+  &:empty {
+    display: none;
+  }
+
   @extend %clearfix;
   @include hyphenate(true);
   color: rgba($black, .7);
