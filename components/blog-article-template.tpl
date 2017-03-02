@@ -14,6 +14,7 @@
     <div class="article-content">
       <div class="article-excerpt content-area" data-search-indexing-allowed="true" {{ edy_intro_edit_text }}>{% editable article.excerpt %}</div>
       <div class="article-body content-area" data-search-indexing-allowed="true">{% editable article.body %}</div>
+      <div class="article-body content-area" data-search-indexing-allowed="true">{% content name="additional_body" bind="Article" %}</div>
     </div>
   {% comment %}<!--Blog and news excerpt when no article photo-->{% endcomment %}
   {% else %}
