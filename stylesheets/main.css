@@ -833,6 +833,7 @@ a img {
   position: relative;
   z-index: 1;
   margin-top: 25px;
+  margin-bottom: 20px;
 }
 .blog-news-page .blog-article .article-image:before {
   display: block;
@@ -860,6 +861,14 @@ a img {
   font-size: rem-calc(18px);
   font-weight: 300;
   line-height: 1.7;
+  margin-bottom: 20px;
+}
+.blog-news-page .read-more-btn {
+  display: inline-block;
+  text-decoration: underline;
+}
+.blog-news-page .read-more-btn:hover {
+  text-decoration: none;
 }
 @media screen and (max-width: 640px) {
   .blog-news-page .article-header {

@@ -30,6 +30,7 @@
       position: relative;
       z-index: 1;
       margin-top: 25px;
+      margin-bottom: 20px;
       &:before {
         display: block;
         width: 100%;
@@ -58,7 +59,18 @@
     font-size: rem-calc(18px);
     font-weight: 300;
     line-height: 1.7;
+    margin-bottom: 20px;
   }
+
+  .read-more-btn {
+    display: inline-block;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   @media screen and (max-width: $tablet-3) {
     .article-header {
       margin: 0;

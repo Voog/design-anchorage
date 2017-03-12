@@ -25,6 +25,7 @@
           <a href="{{ article.url }}" class="background-image" style="background-image: url({{ article.data.header_bg.image }});"></a>
         </div>
       {% endif %}
+      <a class="read-more-btn" href="{{ article.url }}">{{ "read_more" | lc }}</a>
     </div>
   {% endif %}
 </article>
