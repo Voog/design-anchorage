@@ -863,11 +863,11 @@ a img {
   line-height: 1.7;
   margin-bottom: 20px;
 }
-.blog-news-page .read-more-btn {
+.blog-news-page .article-read-more-btn {
   display: inline-block;
   text-decoration: underline;
 }
-.blog-news-page .read-more-btn:hover {
+.blog-news-page .article-read-more-btn:hover {
   text-decoration: none;
 }
 @media screen and (max-width: 640px) {
