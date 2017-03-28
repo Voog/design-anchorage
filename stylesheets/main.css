@@ -147,11 +147,8 @@ a img {
 .site-container {
   margin: 0 auto;
   position: relative;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-  transition: -webkit-transform 0.5s;
+  perspective: 1000px;
   transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 .site-container:after {
   position: absolute;
@@ -165,12 +162,10 @@ a img {
   transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 }
 .flexbox .site-container {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   box-orient: vertical;
   box-direction: normal;
-  -webkit-flex-direction: column;
   -moz-flex-direction: column;
   flex-direction: column;
   -ms-flex-direction: column;
@@ -181,8 +176,7 @@ a img {
 }
 @media screen and (max-width: 1024px) {
   .mobilemenu-open .site-container {
-    -webkit-transform: translate3d(-250px, 0, 0);
-            transform: translate3d(-250px, 0, 0);
+    transform: translate3d(-250px, 0, 0);
   }
 }
 .mobilemenu-open .site-container:after {
@@ -203,7 +197,6 @@ a img {
 }
 .flexbox .page-body {
   box-flex: 1;
-  -webkit-flex: 1 0 auto;
   -moz-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
@@ -414,25 +407,12 @@ a img {
   max-width: 100%;
 }
 
-@-webkit-keyframes rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-}
-
 @keyframes rotation {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
 .loader {
@@ -458,8 +438,7 @@ a img {
   margin-top: calc((20px / 2) * -1);
   margin-left: calc((20px / 2) * -1);
   border: 1px solid transparent;
-  -webkit-animation: rotation .7s infinite linear;
-          animation: rotation .7s infinite linear;
+  animation: rotation .7s infinite linear;
 }
 .not-loaded .loader::before, .is-loaded .loader::before {
   border-top: 1px solid black;
@@ -493,15 +472,13 @@ a img {
 }
 .with-error .loader::before {
   left: 4px;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
 }
 .with-error .loader::after {
   right: 4px;
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
 }
 
 .wrap:after, .common-page .sidebar-active:after, .blog-news-page .articles-listing:after, .site-header:after, .search:after,
@@ -673,18 +650,15 @@ a img {
   border-width: 0;
 }
 .editmode .front-page .main-feature .aspect-ratio-inner {
-  display: -webkit-flex !important;
   display: -ms-flexbox !important;
   display: flex !important;
   box-align: center;
-  -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
   -o-align-items: center;
   align-items: center;
   -ms-flex-align: center;
   box-pack: center;
-  -webkit-justify-content: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
   -o-justify-content: center;
@@ -1312,7 +1286,6 @@ a img {
   }
   .site-header .header-left {
     box-flex: 1;
-    -webkit-flex: 1;
     -moz-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -1329,15 +1302,12 @@ a img {
   padding-left: 40px;
 }
 .flexbox .site-header .header-top .wrap {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
 }
 .header-top-with-bg .site-header .header-top .wrap {
   padding-bottom: 40px;
@@ -1390,7 +1360,6 @@ a img {
 }
 .flexbox .site-header .header-left {
   box-flex: 1;
-  -webkit-flex: 1 0 auto;
   -moz-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
@@ -1553,7 +1522,6 @@ a img {
   border-color: black transparent transparent transparent;
 }
 .svg .toggle-sub-menu.active {
-  -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
@@ -1744,10 +1712,7 @@ a img {
   }
 
   #mobile-menu {
-    transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
-    transition: transform 0.5s, -webkit-transform 0.5s;
-    -webkit-transform: translate3d(100%, 0, 0);
     -ms-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1777,7 +1742,6 @@ a img {
     height: calc(100% - 40px);
   }
   .mobilemenu-open #mobile-menu {
-    -webkit-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
@@ -2926,15 +2890,12 @@ a img {
           hyphens: auto;
   word-break: break-word;
   word-wrap: break-word;
-  display: -webkit-flex !important;
   display: -ms-flexbox !important;
   display: flex !important;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   font-weight: 300;
   line-height: 1.2;
   text-align: center;
@@ -3107,9 +3068,8 @@ a img {
 
 @media screen and (min-width: 641px) {
   .content-illustrations {
-    -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+        flex: 1;
     max-width: 520px;
     margin-right: 40px;
   }
@@ -3122,9 +3082,8 @@ a img {
 }
 @media screen and (min-width: 641px) {
   .item-page .content-body {
-    -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+        flex: 1;
   }
 }
 
@@ -3134,7 +3093,6 @@ a img {
 }
 @media screen and (min-width: 641px) {
   .items-body {
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
@@ -3986,12 +3944,9 @@ a img {
 .svg .content-area .form_field_radio + .form_control_indicator:before {
   height: 12px;
   width: 12px;
-  -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
-  transition: -webkit-transform 0.15s ease;
   transition: transform 0.15s ease;
-  transition: transform 0.15s ease, -webkit-transform 0.15s ease;
   position: absolute;
   top: 3px;
   left: 3px;
@@ -4000,12 +3955,9 @@ a img {
   background-color: rgba(0, 0, 0, 0.4);
 }
 .svg .content-area .form_field_radio:checked + .form_control_indicator:before {
-  -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  transition: -webkit-transform 0.15s ease;
   transition: transform 0.15s ease;
-  transition: transform 0.15s ease, -webkit-transform 0.15s ease;
 }
 .svg .dark-background .content-area .form_field_radio:checked + .form_control_indicator:before {
   background-color: rgba(255, 255, 255, 0.4);
@@ -4014,7 +3966,6 @@ a img {
   top: -2px;
 }
 .svg .content-area .form_field_checkbox + .form_control_indicator:before {
-  -webkit-transform: scale(0) rotate(45deg);
   -ms-transform: scale(0) rotate(45deg);
   transform: scale(0) rotate(45deg);
   display: block;
@@ -4022,20 +3973,15 @@ a img {
   height: 10px;
   margin: 1px 0 0 6px;
   content: '';
-  transition: -webkit-transform .15s ease 0s;
   transition: transform .15s ease 0s;
-  transition: transform .15s ease 0s, -webkit-transform .15s ease 0s;
   border-width: 0 2px 2px 0;
   border-style: none solid solid none;
   border-color: rgba(0, 0, 0, 0.4);
 }
 .svg .content-area .form_field_checkbox:checked + .form_control_indicator:before {
-  -webkit-transform: scale(1) rotate(45deg);
   -ms-transform: scale(1) rotate(45deg);
   transform: scale(1) rotate(45deg);
-  transition: -webkit-transform 0.15s ease;
   transition: transform 0.15s ease;
-  transition: transform 0.15s ease, -webkit-transform 0.15s ease;
 }
 .svg .dark-background .content-area .form_field_checkbox + .form_control_indicator:before {
   border-color: rgba(255, 255, 255, 0.2);
