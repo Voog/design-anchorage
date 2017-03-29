@@ -423,7 +423,7 @@
           },
           {
             "title": "Montserrat",
-            "value": "Montserrat, Helvetica, Arial, sans-serif"
+            "value": "Montserrat, \"Helvetica Neue\", Helvetica, Arial, sans-serif"
           },
           {
             "title": "Open Sans",
