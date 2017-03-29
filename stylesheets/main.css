@@ -56,7 +56,7 @@
 
 body {
   margin: 0;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 18px;
   font-weight: 300;
   line-height: 1;
@@ -1715,7 +1715,7 @@ a img {
     transition: transform 0.5s;
     -ms-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
-    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Roboto, sans-serif;
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -3992,7 +3992,7 @@ a img {
 .content-area .form_submit input {
   -webkit-appearance: none;
   border-radius: 0;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 2;

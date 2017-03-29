@@ -9,7 +9,7 @@
     "boundVariables": [
     ]
   */
-  --main-font-family: "Roboto", sans-serif;
+  --main-font-family: Roboto, sans-serif;
   /* VoogStyle
     "pathI18n": ["main_styles", "colors"],
     "titleI18n": "primary_color",
