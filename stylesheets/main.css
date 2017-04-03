@@ -3537,7 +3537,6 @@ a img {
   font-weight: 400;
   line-height: 1.7;
   text-align: center;
-  margin: 10px 0;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
@@ -3549,7 +3548,8 @@ a img {
   cursor: pointer;
 }
 .site-header .content-area .custom-btn {
-  margin: 30px 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .site-header .content-area .custom-btn:first-child {
   margin-top: 0;
@@ -3735,10 +3735,14 @@ a img {
   font-size: 14px;
 }
 .content-area .form_field {
-  margin-top: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 .content-area .form_field:first-child {
-  margin-top: 0;
+  padding-top: 0;
+}
+.content-area .form_field:last-child {
+  padding-top: 0;
 }
 .content-area .form_field label,
 .content-area .form_field .edy-fe-label {

@@ -6,10 +6,15 @@
   }
 
   .form_field {
-    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 
     &:first-child {
-      margin-top: 0;
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-top: 0;
     }
 
     label,
