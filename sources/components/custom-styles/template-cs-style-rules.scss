@@ -730,7 +730,7 @@ body {
   }
 
   // Code blocks and preformatted content.
-  a.custom-btn {
+  a.custom-btn, div.custom-btn {
     padding: calc(var(--button-padding) - 18px) var(--button-padding) calc(var(--button-padding) - 17px);
     font-size: var(--button-font-size);
     font-style: var(--button-font-style);
@@ -744,11 +744,22 @@ body {
         background-color: var(--third-color);
         color: var(--primary-color);
       }
+
+      .light-background & {
+        border-color: var(--secondary-color);
+        background-color: var(--secondary-color);
+        color: var(--third-color);
+      }
     }
 
     .dark-background & {
       border-color: var(--third-color);
       color: var(--third-color);
+    }
+
+    .light-background & {
+      border-color: var(--secondary-color);
+      color: var(--secondary-color);
     }
   }
 
@@ -809,6 +820,7 @@ body {
     .form_field_textarea,
     .form_field_select {
       color: var(--third-color);
+      border-color: var(--third-color);
 
       @include placeholder {
         color: var(--third-color);

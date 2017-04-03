@@ -3538,13 +3538,15 @@ a img {
   line-height: 1.7;
   text-align: center;
   margin: 10px 0;
-  cursor: pointer;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
   word-break: break-word;
   word-wrap: break-word;
   text-decoration: none;
+}
+.publicmode .content-area .custom-btn {
+  cursor: pointer;
 }
 .site-header .content-area .custom-btn {
   margin: 30px 0;
@@ -3562,6 +3564,14 @@ a img {
 .light-background .content-area .custom-btn {
   border: 2px solid #222222;
   color: #222222;
+}
+.publicmode .dark-background .content-area .custom-btn-disabled, .publicmode .dark-background .content-area .custom-btn-disabled:hover, .publicmode .light-background .content-area .custom-btn-disabled, .publicmode .light-background .content-area .custom-btn-disabled:hover {
+  color: #999;
+  cursor: default;
+  border: 2px solid #999;
+}
+.publicmode .dark-background .content-area .custom-btn-disabled:hover, .publicmode .light-background .content-area .custom-btn-disabled:hover {
+  background-color: transparent;
 }
 .content-area .custom-btn:hover {
   transition: 500ms;

@@ -341,9 +341,12 @@
     line-height: 1.7;
     text-align: center;
     margin: 10px 0;
-    cursor: pointer;
     @include hyphenate(true);
     text-decoration: none;
+
+    .publicmode & {
+      cursor: pointer;
+    }
 
     .site-header & {
       margin: 30px 0;
@@ -365,6 +368,26 @@
     .light-background & {
       border: 2px solid rgba($grey, 1);
       color: rgba($grey, 1);
+    }
+
+    .dark-background &,
+    .light-background & {
+      &-disabled {
+        // scss-lint:disable NestingDepth
+        .publicmode & {
+          &,
+          &:hover {
+            color: $disabled-color;
+            cursor: default;
+            border: 2px solid $disabled-color;
+          }
+
+          &:hover {
+            background-color: transparent;
+          }
+        }
+        // scss-lint:enable NestingDepth
+      }
     }
 
     &:hover {

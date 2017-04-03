@@ -493,7 +493,7 @@ body {
 .dark-background .content-area a {
   color: var(--third-color);
 }
-.content-area a.custom-btn {
+.content-area a.custom-btn, .content-area div.custom-btn {
   padding: calc(var(--button-padding) - 18px) var(--button-padding) calc(var(--button-padding) - 17px);
   font-size: var(--button-font-size);
   font-style: var(--button-font-style);
@@ -501,14 +501,23 @@ body {
   text-decoration: var(--button-text-decoration);
   text-transform: var(--button-text-transform);
 }
-.dark-background .content-area a.custom-btn:hover {
+.dark-background .content-area a.custom-btn:hover, .dark-background .content-area div.custom-btn:hover {
   border-color: var(--third-color);
   background-color: var(--third-color);
   color: var(--primary-color);
 }
-.dark-background .content-area a.custom-btn {
+.light-background .content-area a.custom-btn:hover, .light-background .content-area div.custom-btn:hover {
+  border-color: var(--secondary-color);
+  background-color: var(--secondary-color);
+  color: var(--third-color);
+}
+.dark-background .content-area a.custom-btn, .dark-background .content-area div.custom-btn {
   border-color: var(--third-color);
   color: var(--third-color);
+}
+.light-background .content-area a.custom-btn, .light-background .content-area div.custom-btn {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 .content-area table th, .content-area table td {
   padding: calc(var(--table-padding) - 4px) var(--table-padding);
@@ -546,6 +555,7 @@ body {
 .dark-background .content-area .form_field_textarea,
 .dark-background .content-area .form_field_select {
   color: var(--third-color);
+  border-color: var(--third-color);
 }
 .dark-background .content-area .form_field_textfield::-webkit-input-placeholder,
 .dark-background .content-area .form_field_textarea::-webkit-input-placeholder,
