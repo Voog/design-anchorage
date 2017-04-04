@@ -14,7 +14,7 @@
     }
 
     &:last-child {
-      padding-top: 0;
+      padding-bottom: 0;
     }
 
     label,
@@ -258,7 +258,7 @@
   }
 
   .form_submit {
-    margin-top: 15px;
+    margin-top: 16px;
 
     input {
       @include inputiosreset;

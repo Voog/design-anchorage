@@ -3742,7 +3742,7 @@ a img {
   padding-top: 0;
 }
 .content-area .form_field:last-child {
-  padding-top: 0;
+  padding-bottom: 0;
 }
 .content-area .form_field label,
 .content-area .form_field .edy-fe-label {
@@ -3953,7 +3953,7 @@ a img {
   border-color: rgba(255, 255, 255, 0.2);
 }
 .content-area .form_submit {
-  margin-top: 15px;
+  margin-top: 16px;
 }
 .content-area .form_submit input {
   -webkit-appearance: none;
@@ -4020,4 +4020,12 @@ a img {
 .content-area .form_notice {
   margin-bottom: 20px;
   color: rgba(14, 203, 0, 0.7);
+}
+
+.content-area .edy-buy-button-variants .form_field {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.content-area .edy-buy-button-variants .form_field_select {
+  width: initial;
 }
