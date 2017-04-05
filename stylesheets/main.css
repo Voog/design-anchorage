@@ -4022,6 +4022,9 @@ a img {
   color: rgba(14, 203, 0, 0.7);
 }
 
+.content-area .edy-buy-button-container .form_field {
+  padding-top: 12px;
+}
 .content-area .edy-buy-button-variants .form_field {
   padding-top: 6px;
   padding-bottom: 6px;
