@@ -2,7 +2,15 @@
   {% comment %}<!--Blog and news article header-->{% endcomment %}
   {% unless blog_article_page %}
     <header class="article-header">
-      <time class="article-date" datetime="{{ article.created_at | date: "%Y-%m-%d" }}">{{ article.created_at | format_date: "long" }}, </time>
+
+      {% assign article_year = article.created_at | format_date: "%Y" | to_num %}
+      {% if article_year == current_year %}
+        {% assign article_date_format = "long_without_year" %}
+      {% else %}
+        {% assign article_date_format = "long" %}
+      {% endif %}
+
+      <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
       <div class="article-author">{{ article.author.name }}</div>
       <h1 class="article-title">{% if blog-article-template == "blog_article_page" %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
       {% include "blog-article-tags" %}
