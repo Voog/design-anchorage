@@ -29,14 +29,6 @@
                   <div class="inner content-area">
 
                     <div class="article-meta js-text-article-component{% if photo_article %} is-hidden{% endif %}">
-                      {% assign article_year = article.created_at | format_date: "%Y" | to_num %}
-
-                      {% if article_year == current_year %}
-                        {% assign article_date_format = "long_without_year" %}
-                      {% else %}
-                        {% assign article_date_format = "long" %}
-                      {% endif %}
-
                       <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
                       <div class="article-author">{{ article.author.name }}</div>
                     </div>
