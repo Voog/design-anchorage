@@ -10,7 +10,7 @@
   "devDependencies": {
     "bourbon": "^4.3.4",
     "jquery_lazyload": "^1.9.1",
-    "jquery": "^3.1.1",
+    "jquery": "^3.2.1",
     "textarea-autosize": "^0.4.2"
   }
 }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% assign blog_article_page = true %}
 {% include "template-variables" %}
+{% include "blog-article-variables" %}
 <html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }}{% unless comment.valid? %} comments-open js-calculate-comments-height{% endunless %}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% include "html-head" %}
@@ -28,7 +29,7 @@
                   <div class="inner content-area">
 
                     <div class="article-meta js-text-article-component{% if photo_article %} is-hidden{% endif %}">
-                      <time class="article-date" datetime="{{ article.created_at | date: "%Y-%m-%d" }}">{{ article.created_at | format_date: "long" }}, </time>
+                      <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
                       <div class="article-author">{{ article.author.name }}</div>
                     </div>
 
