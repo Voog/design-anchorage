@@ -64,7 +64,16 @@
             <div class="header-body content-area js-article-header-title-wrap">
               {% comment %}Photo article header components{% endcomment %}
               {% if photo_article %}<h1 class="article-title js-article-title js-slide-to-article">{% if editmode %}{% editable article.title %}{% else %}{{ article.title }}{% endif %}</h1>{% endif %}
-              <time class="article-date js-photo-article-component{% unless photo_article %} is-hidden{% endunless %}" datetime="{{ article.created_at | date: "%Y-%m-%d" }}">{{ article.created_at | format_date: "long" }}, </time>
+
+
+              {% assign article_year = article.created_at | format_date: "%Y" | to_num %}
+              {% if article_year == current_year %}
+                {% assign article_date_format = "long_without_year" %}
+              {% else %}
+                {% assign article_date_format = "long" %}
+              {% endif %}
+
+              <time class="article-date js-photo-article-component{% unless photo_article %} is-hidden{% endunless %}" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}, </time>
               <div class="article-author js-photo-article-component{% unless photo_article %} is-hidden{% endunless %}">{{ article.author.name }}</div>
 
               {% comment %}Text article header components{% endcomment %}
