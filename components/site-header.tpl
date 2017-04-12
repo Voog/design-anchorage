@@ -66,6 +66,7 @@
               {% if photo_article %}<h1 class="article-title js-article-title js-slide-to-article">{% if editmode %}{% editable article.title %}{% else %}{{ article.title }}{% endif %}</h1>{% endif %}
 
               {% assign article_year = article.created_at | format_date: "%Y" | to_num %}
+
               {% if article_year == current_year %}
                 {% assign article_date_format = "long_without_year" %}
               {% else %}

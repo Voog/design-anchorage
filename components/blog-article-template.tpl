@@ -2,8 +2,8 @@
   {% comment %}<!--Blog and news article header-->{% endcomment %}
   {% unless blog_article_page %}
     <header class="article-header">
-
       {% assign article_year = article.created_at | format_date: "%Y" | to_num %}
+
       {% if article_year == current_year %}
         {% assign article_date_format = "long_without_year" %}
       {% else %}
