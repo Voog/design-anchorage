@@ -27,9 +27,11 @@
               {% endif %}
             </div>
 
-            <button class="mobile-menu-toggler js-prevent-sideclick">
-              <span></span>
-            </button>
+            {% if render_mobile_menu_btn %}
+              <button class="mobile-menu-toggler js-prevent-sideclick">
+                <span></span>
+              </button>
+            {% endif %}
           </div>
 
           {% include "site-search" %}

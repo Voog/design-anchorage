@@ -44,6 +44,17 @@
     {% assign language_menu_mode = "language-menu-mode-popover" %}
   {% endif %}
 
+  {% comment %}Detects if mobile menu should be rendered.{% endcomment %}
+  {% if editmode %}
+    {% assign render_mobile_menu_btn = true %}
+  {% else %}
+    {% if site.root_item.hidden? and site.visible_menuitems.size == 0 and site.has_many_languages? == false %}
+      {% assign render_mobile_menu_btn = false %}
+    {% else %}
+      {% assign render_mobile_menu_btn = true %}
+    {% endif %}
+  {% endif %}
+
   {% comment %}SITE HEADER RELATED VARIABLES.{% endcomment %}
   {% comment %}Assign variables based on page type.{% endcomment %}
   {% assign header_bg = page.data.header_bg %}
