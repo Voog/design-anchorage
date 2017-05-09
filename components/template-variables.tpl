@@ -46,12 +46,29 @@
 
   {% comment %}Detects if mobile menu should be rendered.{% endcomment %}
   {% if editmode %}
-    {% assign render_mobile_menu_btn = true %}
+    {% assign render_menu_main = true %}
   {% else %}
     {% if site.root_item.hidden? and site.visible_menuitems.size == 0 and site.has_many_languages? == false %}
-      {% assign render_mobile_menu_btn = false %}
+      {% assign render_menu_main = false %}
     {% else %}
-      {% assign render_mobile_menu_btn = true %}
+      {% assign render_menu_main = true %}
+    {% endif %}
+  {% endif %}
+
+  {% capture header_content_html %}{% unless editmode %}{% editable site.header %}{% endunless %}{% endcapture %}
+  {% capture header_content_size %}{{ header_content_html | size | minus : 1 }}{% endcapture %}
+  {% unless header_content_size contains "-" %}
+    {% assign header_content_has_content = true %}
+  {% endunless %}
+
+  {% comment %}Detects if header top section should be rendered.{% endcomment %}
+  {% if render_menu_main %}
+    {% assign render_header_top = true %}
+  {% else %}
+    {% if header_content_has_content %}
+      {% assign render_header_top = true %}
+    {% else %}
+      {% assign render_header_top = false %}
     {% endif %}
   {% endif %}
 

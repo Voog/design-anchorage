@@ -3,43 +3,46 @@
     <div class="background-image js-background-image"></div>
     <div class="background-color js-background-color"></div>
 
-    <div class="header-top">
-      <div class="wrap js-header-top-wrap">
+    {% if render_header_top %}
+      <div class="header-top">
+        <div class="wrap js-header-top-wrap">
 
-        <div class="header-left js-header-left">
-          <div class="header-title content-area">{% unless editmode %}<a href="{{ site.root_item.url }}">{% endunless %}{% editable site.header %}{% unless editmode %}</a>{% endunless %}</div>
-        </div>
+          <div class="header-left js-header-left">
+            <div class="header-title content-area">{% unless editmode %}<a href="{{ site.root_item.url }}">{% endunless %}{% editable site.header %}{% unless editmode %}</a>{% endunless %}</div>
+          </div>
 
-        <div class="header-right js-header-right">
-          {% include "menu-main" %}
+          <div class="header-right js-header-right">
+            {% include "menu-main" %}
 
-          <div class="site-options">
-            <div class="visibility-lrg">
-              {% include "menu-language" %}
+            <div class="site-options">
+              <div class="visibility-lrg">
+                {% include "menu-language" %}
 
-              {% if site.search.enabled %}
-                <button class="search-btn search-open-btn js-search-toggle-btn js-prevent-sideclick">
-                  <svg width="18px" height="18px" viewBox="0 0 18 18"  xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13,11 L12,11 L12,11 C13,10 13,8 13,7 C13,3 10,0 7,0 C3,0 0,3 0,7 C0,10 3,13 7,13 C8,13 10,13 11,12 L11,12 L11,13 L16,18 L18,16 L13,11 ZM7,11 C4,11 2,9 2,7 C2,4 4,2 7,2 C9,2 11,4 11,7 C11,9 9,11 7,11 Z"></path>
-                  </svg>
+                {% if site.search.enabled %}
+                  <button class="search-btn search-open-btn js-search-toggle-btn js-prevent-sideclick">
+                    <svg width="18px" height="18px" viewBox="0 0 18 18"  xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13,11 L12,11 L12,11 C13,10 13,8 13,7 C13,3 10,0 7,0 C3,0 0,3 0,7 C0,10 3,13 7,13 C8,13 10,13 11,12 L11,12 L11,13 L16,18 L18,16 L13,11 ZM7,11 C4,11 2,9 2,7 C2,4 4,2 7,2 C9,2 11,4 11,7 C11,9 9,11 7,11 Z"></path>
+                    </svg>
 
+                  </button>
+                {% endif %}
+              </div>
+
+              {% if render_menu_main %}
+                <button class="mobile-menu-toggler js-prevent-sideclick">
+                  <span></span>
                 </button>
               {% endif %}
             </div>
 
-            {% if render_mobile_menu_btn %}
-              <button class="mobile-menu-toggler js-prevent-sideclick">
-                <span></span>
-              </button>
-            {% endif %}
+            {% include "site-search" %}
+
           </div>
 
-          {% include "site-search" %}
-
         </div>
-
       </div>
-    </div>
+    {% endif %}
+
     <div class="header-bottom">
       {% if editmode %}
         {% if blog_article_page %}
@@ -53,7 +56,7 @@
         {% endif %}
       {% endif %}
 
-      <div class="header-bottom-inner">
+      <div class="header-bottom-inner{% unless render_header_top %} header-bottom-only{% endunless %}">
 
         {% if front_page %}
           <div class="wrap">

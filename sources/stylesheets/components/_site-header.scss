@@ -147,6 +147,12 @@
         }
       }
 
+      &.header-bottom-only {
+        .wrap {
+          padding-top: 90px;
+        }
+      }
+
       .wrap {
         display: table-cell;
         padding: 60px 40px 90px;

@@ -1427,6 +1427,9 @@ a img {
     height: 400px;
   }
 }
+.site-header .header-bottom .header-bottom-inner.header-bottom-only .wrap {
+  padding-top: 90px;
+}
 .site-header .header-bottom .header-bottom-inner .wrap {
   display: table-cell;
   padding: 60px 40px 90px;
