@@ -121,7 +121,7 @@
 
       &:not(.active) {
         border-width: 1px;
-        
+
         .editmode & {
           border-top-style: dashed;
           border-bottom-style: dashed;
@@ -132,7 +132,7 @@
           }
         }
       }
-      
+
       &.active {
         border-width: 0;
       }
@@ -182,6 +182,7 @@
     .wrap {
       height: 360px;
       display: table;
+      table-layout: fixed;
       width: 100%;
 
       .inner {

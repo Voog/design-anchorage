@@ -682,6 +682,7 @@ a img {
 .front-page .front-page-content-bottom .wrap {
   height: 360px;
   display: table;
+  table-layout: fixed;
   width: 100%;
 }
 .front-page .front-page-content-bottom .wrap .inner {
