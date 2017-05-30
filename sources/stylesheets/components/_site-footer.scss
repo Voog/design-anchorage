@@ -25,6 +25,9 @@
       opacity: .8;
     }
   }
+  .voog-reference-with-padding {
+    padding-top: 40px;
+  }
   .blog-article-nav {
     @extend %clearfix;
     @include hyphenate(true);

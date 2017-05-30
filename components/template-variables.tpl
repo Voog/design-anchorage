@@ -375,6 +375,13 @@
 
 
   {% comment %}FRONT PAGE FOOTER RELATED VARIABLES.{% endcomment %}
+  
+  {% capture footer_content_html %}{% unless editmode %}{% xcontent name="footer" %}{% endunless %}{% endcapture %}
+  {% capture footer_content_size %}{{ footer_content_html | size | minus : 1 }}{% endcapture %}
+  {% unless footer_content_size contains "-" %}
+    {% assign footer_has_content = true %}
+  {% endunless %}
+  
   {% comment %}Assign variables based on page type.{% endcomment %}
   {% if front_page %}
     {% assign footer_bg = page.data.footer_bg %}

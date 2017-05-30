@@ -3165,6 +3165,9 @@ a img {
 .site-footer .voog-reference:hover {
   opacity: .8;
 }
+.site-footer .voog-reference-with-padding {
+  padding-top: 40px;
+}
 .site-footer .blog-article-nav {
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
