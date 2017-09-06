@@ -10271,7 +10271,7 @@ return jQuery;
  * Version:  1.9.0 (forked)
  *
  */
- 
+
 (function($, window, document, undefined) {
     var $window = $(window);
 
@@ -10295,7 +10295,7 @@ return jQuery;
 
         function update() {
             var counter = 0;
-      
+
             elements.each(function() {
                 var $this = $(this);
                 if (settings.skip_invisible && !$this.is(":visible")) {
@@ -10353,7 +10353,7 @@ return jQuery;
             if ($self.attr("src") === undefined || $self.attr("src") === false) {
                 $self.attr("src", settings.placeholder);
             }
-            
+
             /* When appear is triggered load original image. */
             $self.one("appear", function() {
                 if (!this.loaded) {
@@ -10371,7 +10371,7 @@ return jQuery;
                                 $self.css("background-image", "url('" + original + "')");
                             }
                             $self[settings.effect](settings.effect_speed);
-                            
+
                             self.loaded = true;
 
                             /* Remove image from array so it is not looped next time. */
@@ -10418,7 +10418,7 @@ return jQuery;
         $window.bind("resize", function() {
             update();
         });
-              
+
         /* With IOS5 force loading images when navigating with back button. */
         /* Non optimal workaround. */
         if ((/iphone|ipod|ipad.*os 5/gi).test(navigator.appVersion)) {
@@ -10435,7 +10435,7 @@ return jQuery;
         $(document).ready(function() {
             update();
         });
-        
+
         return this;
     };
 
@@ -10444,7 +10444,7 @@ return jQuery;
 
     $.belowthefold = function(element, settings) {
         var fold;
-        
+
         if (settings.container === undefined || settings.container === window) {
             fold = (window.innerHeight ? window.innerHeight : $window.height()) + $window.scrollTop();
         } else {
@@ -10453,7 +10453,7 @@ return jQuery;
 
         return fold <= $(element).offset().top - settings.threshold;
     };
-    
+
     $.rightoffold = function(element, settings) {
         var fold;
 
@@ -10465,10 +10465,10 @@ return jQuery;
 
         return fold <= $(element).offset().left - settings.threshold;
     };
-        
+
     $.abovethetop = function(element, settings) {
         var fold;
-        
+
         if (settings.container === undefined || settings.container === window) {
             fold = $window.scrollTop();
         } else {
@@ -10477,10 +10477,10 @@ return jQuery;
 
         return fold >= $(element).offset().top + settings.threshold  + $(element).height();
     };
-    
+
     $.leftofbegin = function(element, settings) {
         var fold;
-        
+
         if (settings.container === undefined || settings.container === window) {
             fold = $window.scrollLeft();
         } else {
@@ -10959,16 +10959,19 @@ return jQuery;
     var apiType;
 
     if (itemType === 'article') {
-      apiType = 'articles';
+      apiType = 'article';
     } else {
-      apiType = 'pages';
+      apiType = 'page';
     }
+
+		var data = {};
+    data[apiType] = {'image_id': imageId};
 
     $.ajax({
        type: 'PATCH',
        contentType: 'application/json',
-       url: '/admin/api/' + apiType +'/' + itemId,
-       data: JSON.stringify({'image_id': imageId}),
+			 url: '/admin/api/' + apiType +'s/' + itemId,
+       data: JSON.stringify(data),
        dataType: 'json',
        success: function(data) {
          $contentItemBox.removeClass('not-loaded with-error').addClass('is-loaded');
