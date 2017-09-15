@@ -386,22 +386,19 @@
   };
 
   var setItemImage = function($contentItemBox, $imgDropArea, itemId, imageId, itemType) {
-    var targetType;
+    var apiType;
 
     if (itemType === 'article') {
-      targetType = 'article';
+      apiType = 'articles';
     } else {
-      targetType = 'page';
+      apiType = 'pages';
     }
-
-		var data = {};
-    data[targetType] = {'image_id': imageId};
 
     $.ajax({
        type: 'PATCH',
        contentType: 'application/json',
-			 url: '/admin/api/' + targetType +'s/' + itemId,
-       data: JSON.stringify(data),
+       url: '/admin/api/' + apiType +'/' + itemId,
+       data: JSON.stringify({'image_id': imageId}),
        dataType: 'json',
        success: function(data) {
          $contentItemBox.removeClass('not-loaded with-error').addClass('is-loaded');
