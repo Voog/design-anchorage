@@ -192,20 +192,23 @@ body {
 .menu-main a {
   font-style: var(--menu-main-font-style);
   font-weight: var(--menu-main-font-weight);
-  text-decoration: var(--menu-main-text-decoration);
+  -webkit-text-decoration: var(--menu-main-text-decoration);
+          text-decoration: var(--menu-main-text-decoration);
   text-transform: var(--menu-main-text-transform);
 }
 .menu-main a:hover {
   font-style: var(--menu-main-hover-font-style);
   font-weight: var(--menu-main-hover-font-weight);
-  text-decoration: var(--menu-main-hover-text-decoration);
+  -webkit-text-decoration: var(--menu-main-hover-text-decoration);
+          text-decoration: var(--menu-main-hover-text-decoration);
   text-transform: var(--menu-main-hover-text-transform);
 }
 .menu-main .selected a,
 .menu-main .current a {
   font-style: var(--menu-main-active-font-style);
   font-weight: var(--menu-main-active-font-weight);
-  text-decoration: var(--menu-main-active-text-decoration);
+  -webkit-text-decoration: var(--menu-main-active-text-decoration);
+          text-decoration: var(--menu-main-active-text-decoration);
   text-transform: var(--menu-main-active-text-transform);
 }
 
@@ -226,37 +229,43 @@ body {
   #mobile-menu .navigation-menu > ul > li > a {
     font-style: var(--menu-main-font-style);
     font-weight: var(--menu-main-font-weight);
-    text-decoration: var(--menu-main-text-decoration);
+    -webkit-text-decoration: var(--menu-main-text-decoration);
+            text-decoration: var(--menu-main-text-decoration);
     text-transform: var(--menu-main-text-transform);
   }
   #mobile-menu .navigation-menu > ul > li > a:hover {
     font-style: var(--menu-main-hover-font-style);
     font-weight: var(--menu-main-hover-font-weight);
-    text-decoration: var(--menu-main-hover-text-decoration);
+    -webkit-text-decoration: var(--menu-main-hover-text-decoration);
+            text-decoration: var(--menu-main-hover-text-decoration);
     text-transform: var(--menu-main-hover-text-transform);
   }
   #mobile-menu .navigation-menu > ul > li > a.selected, #mobile-menu .navigation-menu > ul > li > a.current {
     font-style: var(--menu-main-active-font-style);
     font-weight: var(--menu-main-active-font-weight);
-    text-decoration: var(--menu-main-active-text-decoration);
+    -webkit-text-decoration: var(--menu-main-active-text-decoration);
+            text-decoration: var(--menu-main-active-text-decoration);
     text-transform: var(--menu-main-active-text-transform);
   }
   #mobile-menu .navigation-menu .sub-menu a {
     font-style: var(--menu-sub-font-style);
     font-weight: var(--menu-sub-font-weight);
-    text-decoration: var(--menu-sub-text-decoration);
+    -webkit-text-decoration: var(--menu-sub-text-decoration);
+            text-decoration: var(--menu-sub-text-decoration);
     text-transform: var(--menu-sub-text-transform);
   }
   #mobile-menu .navigation-menu .sub-menu a:hover {
     font-style: var(--menu-sub-hover-font-style);
     font-weight: var(--menu-sub-hover-font-weight);
-    text-decoration: var(--menu-sub-hover-text-decoration);
+    -webkit-text-decoration: var(--menu-sub-hover-text-decoration);
+            text-decoration: var(--menu-sub-hover-text-decoration);
     text-transform: var(--menu-sub-hover-text-transform);
   }
   #mobile-menu .navigation-menu .sub-menu a.selected, #mobile-menu .navigation-menu .sub-menu a.current {
     font-style: var(--menu-sub-active-font-style);
     font-weight: var(--menu-sub-active-font-weight);
-    text-decoration: var(--menu-sub-active-text-decoration);
+    -webkit-text-decoration: var(--menu-sub-active-text-decoration);
+            text-decoration: var(--menu-sub-active-text-decoration);
     text-transform: var(--menu-sub-active-text-transform);
   }
 }
@@ -294,14 +303,16 @@ body {
 .site-sidebar .submenu a {
   font-weight: var(--menu-sub-font-weight);
   font-style: var(--menu-sub-font-style);
-  text-decoration: var(--menu-sub-text-decoration);
+  -webkit-text-decoration: var(--menu-sub-text-decoration);
+          text-decoration: var(--menu-sub-text-decoration);
   text-transform: var(--menu-sub-text-transform);
   color: var(--secondary-color);
 }
 .site-sidebar .submenu a:hover {
   font-weight: var(--menu-sub-hover-font-weight);
   font-style: var(--menu-sub-hover-font-style);
-  text-decoration: var(--menu-sub-hover-text-decoration);
+  -webkit-text-decoration: var(--menu-sub-hover-text-decoration);
+          text-decoration: var(--menu-sub-hover-text-decoration);
   text-transform: var(--menu-sub-hover-text-transform);
 }
 .dark-background .site-sidebar .submenu a {
@@ -313,7 +324,8 @@ body {
 .site-sidebar .submenu .current a {
   font-weight: var(--menu-sub-active-font-weight);
   font-style: var(--menu-sub-active-font-style);
-  text-decoration: var(--menu-sub-active-text-decoration);
+  -webkit-text-decoration: var(--menu-sub-active-text-decoration);
+          text-decoration: var(--menu-sub-active-text-decoration);
   text-transform: var(--menu-sub-active-text-transform);
 }
 .site-sidebar .submenu .selected {
@@ -371,14 +383,16 @@ body {
   font-style: var(--footer-body-font-style);
   font-weight: var(--footer-body-font-weight);
   color: var(--primary-color);
-  text-decoration: var(--footer-body-text-decoration);
+  -webkit-text-decoration: var(--footer-body-text-decoration);
+          text-decoration: var(--footer-body-text-decoration);
   text-transform: var(--footer-body-text-transform);
 }
 .content-area.header-title, .content-area.header-title a, .content-area.header-title a:hover {
   font-size: var(--header-body-font-size);
   font-style: var(--header-body-font-style);
   font-weight: var(--header-body-font-weight);
-  text-decoration: var(--header-body-text-decoration);
+  -webkit-text-decoration: var(--header-body-text-decoration);
+          text-decoration: var(--header-body-text-decoration);
   text-transform: var(--header-body-text-transform);
 }
 .header-bottom .content-area, .page-body .content-area {
@@ -434,7 +448,8 @@ body {
   font-size: var(--headings-title-font-size);
   font-weight: var(--headings-title-font-weight);
   font-style: var(--headings-title-font-style);
-  text-decoration: var(--headings-title-text-decoration);
+  -webkit-text-decoration: var(--headings-title-text-decoration);
+          text-decoration: var(--headings-title-text-decoration);
   text-transform: var(--headings-title-text-transform);
 }
 .content-area h2 {
@@ -448,7 +463,8 @@ body {
   text-align: var(--headings-heading-text-alignment);
   font-weight: var(--headings-heading-font-weight);
   font-style: var(--headings-heading-font-style);
-  text-decoration: var(--headings-heading-text-decoration);
+  -webkit-text-decoration: var(--headings-heading-text-decoration);
+          text-decoration: var(--headings-heading-text-decoration);
 }
 .content-area h3,
 .content-area h3 a,
@@ -467,20 +483,23 @@ body {
   font-size: var(--headings-subheading-font-size);
   font-weight: var(--headings-subheading-font-weight);
   font-style: var(--headings-subheading-font-style);
-  text-decoration: var(--headings-subheading-text-decoration);
+  -webkit-text-decoration: var(--headings-subheading-text-decoration);
+          text-decoration: var(--headings-subheading-text-decoration);
   text-transform: var(--headings-subheading-text-transform);
 }
 .content-area a {
   font-style: var(--content-link-font-style);
   font-weight: var(--content-link-font-weight);
   color: var(--secondary-color);
-  text-decoration: var(--content-link-text-decoration);
+  -webkit-text-decoration: var(--content-link-text-decoration);
+          text-decoration: var(--content-link-text-decoration);
   text-transform: var(--content-link-text-transform);
 }
 .content-area a:hover {
   font-style: var(--content-link-hover-font-style);
   font-weight: var(--content-link-hover-font-weight);
-  text-decoration: var(--content-link-hover-text-decoration);
+  -webkit-text-decoration: var(--content-link-hover-text-decoration);
+          text-decoration: var(--content-link-hover-text-decoration);
   text-transform: var(--content-link-hover-text-transform);
 }
 .dark-background .content-area a {
@@ -491,7 +510,8 @@ body {
   font-size: var(--button-font-size);
   font-style: var(--button-font-style);
   font-weight: var(--button-font-weight);
-  text-decoration: var(--button-text-decoration);
+  -webkit-text-decoration: var(--button-text-decoration);
+          text-decoration: var(--button-text-decoration);
   text-transform: var(--button-text-transform);
 }
 .dark-background .content-area a.custom-btn:hover, .dark-background .content-area div.custom-btn:hover {
@@ -541,7 +561,8 @@ body {
   font-style: var(--form-field-font-style);
   font-weight: var(--form-field-font-weight);
   font-size: var(--form-field-font-size);
-  text-decoration: var(--form-field-text-decoration);
+  -webkit-text-decoration: var(--form-field-text-decoration);
+          text-decoration: var(--form-field-text-decoration);
   text-transform: var(--form-field-text-transform);
 }
 .dark-background .content-area .form_field_textfield,
@@ -600,7 +621,8 @@ body {
   font-size: var(--button-font-size);
   font-style: var(--button-font-style);
   font-weight: var(--button-font-weight);
-  text-decoration: var(--button-text-decoration);
+  -webkit-text-decoration: var(--button-text-decoration);
+          text-decoration: var(--button-text-decoration);
   text-transform: var(--button-text-transform);
 }
 .dark-background .content-area .form_submit input {
