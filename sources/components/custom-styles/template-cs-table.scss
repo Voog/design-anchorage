@@ -29,7 +29,7 @@
     "unit": "px",
     "scope": "global"
   */
-  --table-padding: 13px;
+  #{--table-padding}: 13px;
 
   /* VoogStyle
     "pathI18n": ["table"],
@@ -40,7 +40,7 @@
     "unit": "px",
     "scope": "global"
   */
-  --table-font-size: 16px;
+  #{--table-font-size}: 16px;
 
   /* VoogStyle
     "pathI18n": ["table"],
@@ -50,7 +50,7 @@
     "featured": true,
     "scope": "global"
   */
-  --table-border-style: solid;
+  #{--table-border-style}: solid;
 
   // scss-lint:enable Comment, Indentation
 }
