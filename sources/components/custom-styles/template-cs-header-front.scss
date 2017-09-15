@@ -25,7 +25,7 @@
    "editor": "colorPicker",
    "scope": "global"
   */
-  --header-background-color: transparent;
+  #{--header-background-color}: transparent;
 
   /* VoogStyle
     "pathI18n": ["header", "title", "normal"],
@@ -37,7 +37,7 @@
     "featured": true,
     "scope": "global"
   */
-  --header-body-font-size: 22px;
+  #{--header-body-font-size}: 22px;
 
   /* VoogStyle
     "pathI18n": ["header", "title", "normal"],
@@ -51,7 +51,7 @@
     "icon": "bold",
     "scope": "global"
   */
-  --header-body-font-weight: 300;
+  #{--header-body-font-weight}: 300;
 
   /* VoogStyle
     "pathI18n": ["header", "title", "normal"],
@@ -65,7 +65,7 @@
     "icon": "italic",
     "scope": "global"
   */
-  --header-body-font-style: normal;
+  #{--header-body-font-style}: normal;
 
   /* VoogStyle
     "pathI18n": ["header", "title", "normal"],
@@ -79,7 +79,7 @@
     "icon": "underline",
     "scope": "global"
   */
-  --header-body-text-decoration: none;
+  #{--header-body-text-decoration}: none;
 
   /* VoogStyle
     "pathI18n": ["header", "title", "normal"],
@@ -93,7 +93,7 @@
     "icon": "uppercase",
     "scope": "global"
   */
-  --header-body-text-transform: none;
+  #{--header-body-text-transform}: none;
 
   /* VoogStyle
     "pathI18n": ["header", "main_menu", "normal"],
@@ -111,7 +111,7 @@
       "--menu-main-active-font-weight"
     ]
   */
-  --menu-main-font-weight: 300;
+  #{--menu-main-font-weight}: 300;
 
       /* VoogStyle
         "pathI18n": ["header", "main_menu", "hover"],
@@ -128,7 +128,7 @@
           "--menu-main-active-font-weight"
         ]
       */
-      --menu-main-hover-font-weight: 300;
+      #{--menu-main-hover-font-weight}: 300;
 
       /* VoogStyle
         "pathI18n": ["header", "main_menu", "active"],
@@ -142,7 +142,7 @@
         "icon": "bold",
         "scope": "global"
       */
-      --menu-main-active-font-weight: 500;
+      #{--menu-main-active-font-weight}: 500;
 
   /* VoogStyle
     "pathI18n": ["header", "main_menu", "normal"],
@@ -160,7 +160,7 @@
       "--menu-main-active-font-style"
     ]
   */
-  --menu-main-font-style: normal;
+  #{--menu-main-font-style}: normal;
 
       /* VoogStyle
         "pathI18n": ["header", "main_menu", "hover"],
@@ -177,7 +177,7 @@
           "--menu-main-active-font-style"
         ]
       */
-      --menu-main-hover-font-style: normal;
+      #{--menu-main-hover-font-style}: normal;
 
       /* VoogStyle
         "pathI18n": ["header", "main_menu", "active"],
@@ -191,7 +191,7 @@
         "icon": "italic",
         "scope": "global"
       */
-      --menu-main-active-font-style: normal;
+      #{--menu-main-active-font-style}: normal;
 
   /* VoogStyle
     "pathI18n": ["header", "main_menu", "normal"],
@@ -209,7 +209,7 @@
       "--menu-main-active-text-decoration"
     ]
   */
-  --menu-main-text-decoration: none;
+  #{--menu-main-text-decoration}: none;
 
       /* VoogStyle
         "pathI18n": ["header", "main_menu", "hover"],
@@ -226,7 +226,7 @@
           "--menu-main-active-text-decoration"
         ]
       */
-      --menu-main-hover-text-decoration: none;
+      #{--menu-main-hover-text-decoration}: none;
 
       /* VoogStyle
         "pathI18n": ["header", "main_menu", "active"],
@@ -240,7 +240,7 @@
         "icon": "underline",
         "scope": "global"
       */
-      --menu-main-active-text-decoration: none;
+      #{--menu-main-active-text-decoration}: none;
 
   /* VoogStyle
     "pathI18n": ["header", "main_menu", "normal"],
@@ -258,7 +258,7 @@
       "--menu-main-active-text-transform"
     ]
   */
-  --menu-main-text-transform: uppercase;
+  #{--menu-main-text-transform}: uppercase;
 
       /* VoogStyle
         "pathI18n": ["header", "main_menu", "hover"],
@@ -275,7 +275,7 @@
           "--menu-main-active-text-transform"
         ]
       */
-      --menu-main-hover-text-transform: uppercase;
+      #{--menu-main-hover-text-transform}: uppercase;
 
       /* VoogStyle
         "pathI18n": ["header", "main_menu", "active"],
@@ -289,7 +289,7 @@
         "icon": "uppercase",
         "scope": "global"
       */
-      --menu-main-active-text-transform: uppercase;
+      #{--menu-main-active-text-transform}: uppercase;
 
   // scss-lint:enable Comment, Indentation
 }

@@ -18,7 +18,7 @@
 // =============================================================================
 :root {
   // scss-lint:disable Comment, Indentation
-  
+
   /* VoogStyle
     "pathI18n": ["form"],
     "titleI18n": "label_size",
@@ -29,7 +29,7 @@
     "scope": "global",
     "featured": true
   */
-  --form-label-font-size: 14px;
+  #{--form-label-font-size}: 14px;
 
   /* VoogStyle
     "pathI18n": ["form"],
@@ -41,7 +41,7 @@
     "scope": "global",
     "featured": true
   */
-  --form-field-font-size: 16px;
+  #{--form-field-font-size}: 16px;
 
   /* VoogStyle
     "pathI18n": ["form"],
@@ -55,7 +55,7 @@
     "icon": "bold",
     "scope": "global"
   */
-  --form-field-font-weight: 300;
+  #{--form-field-font-weight}: 300;
 
   /* VoogStyle
     "pathI18n": ["form"],
@@ -69,7 +69,7 @@
     "icon": "italic",
     "scope": "global"
   */
-  --form-field-font-style: normal;
+  #{--form-field-font-style}: normal;
 
   /* VoogStyle
     "pathI18n": ["form"],
@@ -83,7 +83,7 @@
     "icon": "underline",
     "scope": "global"
   */
-  --form-field-text-decoration: none;
+  #{--form-field-text-decoration}: none;
 
   /* VoogStyle
     "pathI18n": ["form"],
@@ -97,7 +97,7 @@
     "icon": "uppercase",
     "scope": "global"
   */
-  --form-field-text-transform: none;
+  #{--form-field-text-transform}: none;
 
   // scss-lint:enable Comment, Indentation
 }
