@@ -63,7 +63,7 @@
     border-style: solid;
     outline: none;
 
-    @include placeholder {
+    &::placeholder {
       color: rgba($black, 1);
       opacity: .35;
     }
@@ -183,8 +183,8 @@
 
         &:before {
           @include size(12px);
-          @include transform(scale(0));
-          @include transition(transform .15s ease);
+          transform: scale(0);
+          transition: transform .15s ease;
           position: absolute;
           top: 3px;
           left: 3px;
@@ -197,8 +197,8 @@
       &:checked {
         + .form_control_indicator {
           &:before {
-            @include transform(scale(1));
-            @include transition(transform .15s ease);
+            transform: scale(1);
+            transition: transform .15s ease;
           }
         }
       }
@@ -223,7 +223,7 @@
         top: -2px;
 
         &:before {
-          @include transform(scale(0) rotate(45deg));
+          transform: scale(0) rotate(45deg);
           display: block;
           width: 5px;
           height: 10px;
@@ -239,8 +239,8 @@
       &:checked {
         + .form_control_indicator {
           &:before {
-            @include transform(scale(1) rotate(45deg));
-            @include transition(transform .15s ease);
+            transform: scale(1) rotate(45deg);
+            transition: transform .15s ease;
           }
         }
       }
@@ -261,7 +261,9 @@
     margin-top: 16px;
 
     input {
-      @include inputiosreset;
+      -webkit-appearance: none;
+      -webkit-border-radius: 0;
+      border-radius: 0;
       font-family: $font-main;
       font-size: 14px;
       font-weight: 400;
@@ -299,7 +301,7 @@
       }
 
       &:hover {
-        @include transition($transition);
+        transition: $transition;
       }
 
       &:focus {

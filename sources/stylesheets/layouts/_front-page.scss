@@ -138,9 +138,9 @@
       }
 
       .editmode & {
-        @include display(flex !important);
-        @include align-items(center);
-        @include justify-content(center);
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
       }
     }
 

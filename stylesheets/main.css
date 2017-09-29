@@ -125,12 +125,9 @@ a img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  box-orient: vertical;
   -webkit-box-direction: normal;
-  box-direction: normal;
-  -moz-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 100vh;
 }
 .editmode.flexbox .site-container {
@@ -162,10 +159,8 @@ a img {
 }
 .flexbox .page-body {
   -webkit-box-flex: 1;
-  box-flex: 1;
-  -moz-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 .page-content {
@@ -632,19 +627,11 @@ a img {
   display: -ms-flexbox !important;
   display: flex !important;
   -webkit-box-align: center;
-  box-align: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  -ms-flex-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  box-pack: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .front-page .main-feature .edy-img-drop-area .edy-img-drop-area-remove-image {
   top: 5px;
@@ -1287,10 +1274,8 @@ a img {
   }
   .site-header .header-left {
     -webkit-box-flex: 1;
-    box-flex: 1;
-    -moz-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
 }
 @media screen and (max-width: 640px) {
@@ -1364,10 +1349,8 @@ a img {
 }
 .flexbox .site-header .header-left {
   -webkit-box-flex: 1;
-  box-flex: 1;
-  -moz-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 .no-flexbox .site-header .header-left {
   float: left;
@@ -1531,8 +1514,8 @@ a img {
 }
 .svg .toggle-sub-menu.active {
   -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 .no-svg .toggle-sub-menu.highlighted {
   border-color: black transparent transparent transparent;
@@ -1721,14 +1704,13 @@ a img {
   }
 
   #mobile-menu {
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: -webkit-transform 0.5s;
-    -o-transition: transform 0.5s;
-    transition: transform 0.5s;
-    transition: transform 0.5s, -webkit-transform 0.5s;
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    -o-transition: transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
     -webkit-transform: translate3d(100%, 0, 0);
-    -ms-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
     font-family: "Roboto", sans-serif;
     position: fixed;
     z-index: 1000;
@@ -1758,13 +1740,12 @@ a img {
   }
   .mobilemenu-open #mobile-menu {
     -webkit-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
   #mobile-menu .search-open-btn {
-    -webkit-transition: right 0.3s;
-    -o-transition: right 0.3s;
-    transition: right 0.3s;
+    -webkit-transition: right .3s;
+    -o-transition: right .3s;
+    transition: right .3s;
     position: absolute;
     top: 28px;
     right: 78px;
@@ -3855,21 +3836,15 @@ a img {
   color: black;
   opacity: .35;
 }
-.content-area .form_field_textfield::-moz-placeholder,
-.content-area .form_field_textarea::-moz-placeholder,
-.content-area .form_field_select::-moz-placeholder {
-  color: black;
-  opacity: .35;
-}
-.content-area .form_field_textfield:-moz-placeholder,
-.content-area .form_field_textarea:-moz-placeholder,
-.content-area .form_field_select:-moz-placeholder {
-  color: black;
-  opacity: .35;
-}
 .content-area .form_field_textfield:-ms-input-placeholder,
 .content-area .form_field_textarea:-ms-input-placeholder,
 .content-area .form_field_select:-ms-input-placeholder {
+  color: black;
+  opacity: .35;
+}
+.content-area .form_field_textfield::placeholder,
+.content-area .form_field_textarea::placeholder,
+.content-area .form_field_select::placeholder {
   color: black;
   opacity: .35;
 }
@@ -3965,13 +3940,13 @@ a img {
   height: 12px;
   width: 12px;
   -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  -webkit-transition: -webkit-transform 0.15s ease;
-  transition: -webkit-transform 0.15s ease;
-  -o-transition: transform 0.15s ease;
-  transition: transform 0.15s ease;
-  transition: transform 0.15s ease, -webkit-transform 0.15s ease;
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform .15s ease;
+  transition: -webkit-transform .15s ease;
+  -o-transition: transform .15s ease;
+  transition: transform .15s ease;
+  transition: transform .15s ease, -webkit-transform .15s ease;
   position: absolute;
   top: 3px;
   left: 3px;
@@ -3981,13 +3956,13 @@ a img {
 }
 .svg .content-area .form_field_radio:checked + .form_control_indicator:before {
   -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: -webkit-transform 0.15s ease;
-  transition: -webkit-transform 0.15s ease;
-  -o-transition: transform 0.15s ease;
-  transition: transform 0.15s ease;
-  transition: transform 0.15s ease, -webkit-transform 0.15s ease;
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform .15s ease;
+  transition: -webkit-transform .15s ease;
+  -o-transition: transform .15s ease;
+  transition: transform .15s ease;
+  transition: transform .15s ease, -webkit-transform .15s ease;
 }
 .svg .dark-background .content-area .form_field_radio:checked + .form_control_indicator:before {
   background-color: rgba(255, 255, 255, 0.4);
@@ -3997,8 +3972,8 @@ a img {
 }
 .svg .content-area .form_field_checkbox + .form_control_indicator:before {
   -webkit-transform: scale(0) rotate(45deg);
-  -ms-transform: scale(0) rotate(45deg);
-  transform: scale(0) rotate(45deg);
+      -ms-transform: scale(0) rotate(45deg);
+          transform: scale(0) rotate(45deg);
   display: block;
   width: 5px;
   height: 10px;
@@ -4015,13 +3990,13 @@ a img {
 }
 .svg .content-area .form_field_checkbox:checked + .form_control_indicator:before {
   -webkit-transform: scale(1) rotate(45deg);
-  -ms-transform: scale(1) rotate(45deg);
-  transform: scale(1) rotate(45deg);
-  -webkit-transition: -webkit-transform 0.15s ease;
-  transition: -webkit-transform 0.15s ease;
-  -o-transition: transform 0.15s ease;
-  transition: transform 0.15s ease;
-  transition: transform 0.15s ease, -webkit-transform 0.15s ease;
+      -ms-transform: scale(1) rotate(45deg);
+          transform: scale(1) rotate(45deg);
+  -webkit-transition: -webkit-transform .15s ease;
+  transition: -webkit-transform .15s ease;
+  -o-transition: transform .15s ease;
+  transition: transform .15s ease;
+  transition: transform .15s ease, -webkit-transform .15s ease;
 }
 .svg .dark-background .content-area .form_field_checkbox + .form_control_indicator:before {
   border-color: rgba(255, 255, 255, 0.2);

@@ -1,5 +1,5 @@
 .article-comments {
-  @include transition(250ms);
+  transition: 250ms;
   position: absolute;
   top: 0;
   right: -486px;
@@ -15,18 +15,18 @@
     right: 0;
     box-sizing: border-box;
     box-shadow: none;
-    @include transition(0ms);
+    transition: 0ms;
   }
 
   &.open {
-    @include transition(250ms);
+    transition: 250ms;
     top: 0;
     right: 0;
     box-shadow: 0 0 20px rgba($black, .1);
 
     @media screen and (max-width: $tablet-3) {
       display: block;
-      @include transition(0ms);
+      transition: 0ms;
       width: 100%;
     }
   }
@@ -135,7 +135,7 @@
 
       @media screen and (min-width: $tablet-2 + 1) {
         &:hover {
-          @include transition($transition);
+          transition: $transition;
           opacity: .7;
         }
       }
@@ -148,7 +148,7 @@
           fill: rgba($black, .7);
 
           &:hover {
-            @include transition($transition);
+            transition: $transition;
             fill: rgba($black, .7);
           }
         }

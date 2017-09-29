@@ -78,13 +78,6 @@
   }
 }
 
-// WEBKIT INPUT BUTTON STYLE RESET
-@mixin inputiosreset {
-  -webkit-appearance: none;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-}
-
 // MEDIA QUERY
 @mixin query($value) {
   @media screen and (max-width: $value) {

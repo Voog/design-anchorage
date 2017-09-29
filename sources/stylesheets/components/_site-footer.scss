@@ -53,7 +53,7 @@
       }
 
       &:hover {
-        @include transition($transition);
+        transition: $transition;
         .article-nav-title {
           opacity: 1;
         }

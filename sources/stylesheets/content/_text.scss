@@ -391,7 +391,7 @@
     }
 
     &:hover {
-      @include transition($transition);
+      transition: $transition;
 
       .dark-background & {
         border: 2px solid rgba($white, 1);

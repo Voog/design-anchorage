@@ -133,7 +133,7 @@ a {
 
   .flexbox & {
     display: flex;
-    @include flex-direction(column);
+    flex-direction: column;
     min-height: 100vh;
   }
 
@@ -168,7 +168,7 @@ a {
   position: relative;
 
   .flexbox & {
-    @include flex(1 0 auto);
+    flex: 1 0 auto;
   }
 }
 
