@@ -400,7 +400,6 @@
        dataType: 'json',
        success: function(data) {
          itemData.set('image_crop_state', 'not-cropped');
-
          $contentItemBox.removeClass('not-loaded with-error').addClass('is-loaded');
          $imgDropArea.css('opacity', 1);
        },
