@@ -11037,13 +11037,9 @@ return jQuery;
           $bgPickerArea = $contentItemBox.find('.js-bg-picker-area'),
           itemId = $contentItemBox.data('item-id'),
           itemType = $contentItemBox.data('item-type'),
-          articleData = new Edicy.CustomData({
-            type: 'article',
+          itemData = new Edicy.CustomData({
+            type: itemType,
             id: itemId
-          }),
-          pageData = new Edicy.CustomData({
-            type: 'page',
-            id: $contentItemBox.data('item-id')
           });
 
       var imgDropArea = new Edicy.ImgDropArea($imgDropAreaTarget, {
@@ -11092,18 +11088,13 @@ return jQuery;
     $('.js-toggle-crop-state').on('click', function() {
       var $contentItemBox = $(this).closest('.js-content-item-box'),
           $imgDropAreaTarget = $contentItemBox.find('.js-img-drop-area'),
+          itemId = $contentItemBox.data('item-id'),
           itemType = $contentItemBox.data('item-type'),
+          itemData = new Edicy.CustomData({
+            type: itemType,
+            id: itemId
+          }),
           imageCropState;
-
-      var articleData = new Edicy.CustomData({
-        type: 'article',
-        id: $contentItemBox.data('item-id')
-      });
-
-      var pageData = new Edicy.CustomData({
-        type: 'page',
-        id: $contentItemBox.data('item-id')
-      });
 
       if ($imgDropAreaTarget.hasClass('is-cropped')) {
         $imgDropAreaTarget
@@ -11112,7 +11103,6 @@ return jQuery;
         ;
 
         imageCropState = 'not-cropped';
-
       } else {
         $imgDropAreaTarget
           .removeClass('not-cropped')
@@ -11122,11 +11112,7 @@ return jQuery;
         imageCropState = 'is-cropped';
       }
 
-      if (itemType === 'article') {
-        articleData.set('image_crop_state', imageCropState);
-      } else {
-        pageData.set('image_crop_state', imageCropState);
-      }
+      itemData.set('image_crop_state', imageCropState);
     });
   };
 
