@@ -10956,13 +10956,11 @@ return jQuery;
   };
 
   var setItemImage = function($contentItemBox, $imgDropArea, itemId, imageId, itemType) {
-    var apiType;
-
-    if (itemType === 'article') {
-      apiType = 'articles';
-    } else {
-      apiType = 'pages';
-    }
+    var apiType = itemType === 'article' ? 'articles' : 'pages',
+        itemData = new Edicy.CustomData({
+          type: itemType,
+          id: itemId
+        });
 
     $.ajax({
        type: 'PATCH',
@@ -10971,6 +10969,8 @@ return jQuery;
        data: JSON.stringify({'image_id': imageId}),
        dataType: 'json',
        success: function(data) {
+         itemData.set('image_crop_state', 'not-cropped');
+
          $contentItemBox.removeClass('not-loaded with-error').addClass('is-loaded');
          $imgDropArea.css('opacity', 1);
        },
@@ -11078,12 +11078,6 @@ return jQuery;
           });
 
           setItemImage($contentItemBox, $imgDropAreaTarget, itemId, data.original_id, itemType);
-
-          if (itemType === 'article') {
-            articleData.set('image_crop_state', 'not-cropped');
-          } else {
-            pageData.set('image_crop_state', 'not-cropped');
-          }
         }
       });
 
