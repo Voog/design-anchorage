@@ -1,14 +1,36 @@
-{% editorjsblock %}
+g{% editorjsblock %}
   <script src='{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.js'></script>
   <script>
+    //==========================================================================
+    // Sets site custom data saving fanction variable.
+    //==========================================================================
     var siteData = new Edicy.CustomData({
       type: 'site'
     });
 
     //==========================================================================
+    // Sets variables based on page type.
+    //==========================================================================
+    {% if front_page %}
+      pageType = 'frontPage';
+    {% else %}
+      {% if blog_article_page %}
+        pageType = 'articlePage';
+      {% else %}
+        pageType = 'contentPage';
+      {% endif %}
+
+      pageData = new Edicy.CustomData({
+        type: 'page',
+        id: '{{ page.id }}'
+      });
+    {% endif %}
+
+    //==========================================================================
     // Initiates the language menu mode toggleing popover.
     //==========================================================================
-    var valuesObj;
+    var valuesObj,
+        pageType;
 
     {% if site.data.settings_language_menu %}
       valuesObj = {{ site.data.settings_language_menu | json }};
@@ -18,32 +40,10 @@
 
     site.bindLanguageMenuSettings(valuesObj);
 
-    {% if blog_article_page %}
-      var pageType = 'articlePage';
 
-      siteData = new Edicy.CustomData({
-        type: 'site'
-      });
-    {% elsif front_page %}
-      var pageType = 'frontPage',
-
-      pageData = new Edicy.CustomData({
-        type: 'page',
-        id: '{{ page.id }}'
-      });
-    {% else %}
-      var pageType = 'contentPage',
-
-      siteData = new Edicy.CustomData({
-        type: 'site'
-      });
-
-      pageData = new Edicy.CustomData({
-        type: 'page',
-        id: '{{ page.id }}'
-      });
-    {% endif %}
-
+    //==========================================================================
+    // Binds image drop areas.
+    //==========================================================================
     $('.js-img-dropper-area').each(function(index, imgDropperArea) {
       var dataImgKey = $(imgDropperArea).data('img-key');
 
@@ -59,6 +59,9 @@
       });
     });
 
+    //==========================================================================
+    // Binds bg-pickers.
+    //==========================================================================
     $('.js-bg-picker-area').each(function(index, bgPickerArea) {
       var bgPickerButton = $(bgPickerArea).find('.js-background-settings'),
           dataBgKey = $(bgPickerButton).data('bg-key'),
@@ -82,11 +85,19 @@
       });
     });
 
+    //==========================================================================
+    // Binds content item boxes image functionality.
+    //==========================================================================
     {% if template-tools == "item_list_page" %}
       site.bindContentItemBgPickers();
       site.bindContentItemImgDropAreas('{{ "drag_picture_for_product_here" | lc }}');
       site.bindContentItemImageCropToggle();
     {% endif %}
+
+    //==========================================================================
+    // Binds root page settings editor (for Product list layout).
+    //==========================================================================
+    var rootItemValuesObj;
 
     {%if site.data.settings_root_item %}
       rootItemValuesObj = {{ site.data.settings_root_item | json }};
