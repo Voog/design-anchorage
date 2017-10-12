@@ -581,6 +581,11 @@ body {
 .dark-background .content-area .form_field_select:-ms-input-placeholder {
   color: var(--third-color);
 }
+.dark-background .content-area .form_field_textfield::-ms-input-placeholder,
+.dark-background .content-area .form_field_textarea::-ms-input-placeholder,
+.dark-background .content-area .form_field_select::-ms-input-placeholder {
+  color: var(--third-color);
+}
 .dark-background .content-area .form_field_textfield::placeholder,
 .dark-background .content-area .form_field_textarea::placeholder,
 .dark-background .content-area .form_field_select::placeholder {
@@ -599,6 +604,11 @@ body {
 .light-background .content-area .form_field_textfield:-ms-input-placeholder,
 .light-background .content-area .form_field_textarea:-ms-input-placeholder,
 .light-background .content-area .form_field_select:-ms-input-placeholder {
+  color: var(--primary-color);
+}
+.light-background .content-area .form_field_textfield::-ms-input-placeholder,
+.light-background .content-area .form_field_textarea::-ms-input-placeholder,
+.light-background .content-area .form_field_select::-ms-input-placeholder {
   color: var(--primary-color);
 }
 .light-background .content-area .form_field_textfield::placeholder,

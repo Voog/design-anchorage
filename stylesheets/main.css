@@ -3842,6 +3842,12 @@ a img {
   color: black;
   opacity: .35;
 }
+.content-area .form_field_textfield::-ms-input-placeholder,
+.content-area .form_field_textarea::-ms-input-placeholder,
+.content-area .form_field_select::-ms-input-placeholder {
+  color: black;
+  opacity: .35;
+}
 .content-area .form_field_textfield::placeholder,
 .content-area .form_field_textarea::placeholder,
 .content-area .form_field_select::placeholder {
