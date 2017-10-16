@@ -68,7 +68,7 @@
                                 </button>
 
                                 <div class="loader js-loader"></div>
-                                <div class="top-inner aspect-ratio-inner image-drop-area {{ page_image_orientation }} {{ page_image_crop_state }} js-img-drop-area" data-image="{{ page.image.for-width-680.schemeless_url }}"></div>
+                                <div class="top-inner aspect-ratio-inner image-drop-area {{ page_image_orientation }} {{ page_image_crop_state }} js-content-item-img-drop-area" data-image="{{ page.image.for-width-680.schemeless_url }}"></div>
                               </div>
                             </div>
                           {% else %}

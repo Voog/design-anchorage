@@ -10922,7 +10922,7 @@ return jQuery;
   };
 
   var setImageOrientation = function($contentItemBox, width, height) {
-    var $imgDropAreaTarget = $contentItemBox.find('.js-img-drop-area'),
+    var $imgDropAreaTarget = $contentItemBox.find('.js-content-item-img-drop-area'),
         $cropToggleButton = $contentItemBox.find('.js-toggle-crop-state');
 
     if (width > height) {
@@ -10984,14 +10984,14 @@ return jQuery;
   // Binds editmode backgroun picker areas.
   // ===========================================================================
   var bindContentItemBgPickers = function() {
-    $('.js-bg-picker-area').each(function(index, bgPickerArea) {
+    $('.js-content-item-bg-picker-area').each(function(index, bgPickerArea) {
       var $bgPickerArea = $(bgPickerArea),
           $bgPickerButton = $bgPickerArea.find('.js-bg-picker-btn'),
           $contentItemBox = $bgPickerArea.closest('.js-content-item-box'),
           itemId = $contentItemBox.data('item-id'),
           itemType = $contentItemBox.data('item-type'),
           dataBgKey = $bgPickerButton.data('bg-key'),
-          $imgDropArea = $bgPickerArea.find('.js-img-drop-area');
+          $imgDropArea = $bgPickerArea.find('.js-content-item-img-drop-area');
 
       var bgPicker = new Edicy.BgPicker($bgPickerButton, {
         picture: $bgPickerButton.data('bg-picture-boolean'),
@@ -10999,6 +10999,7 @@ return jQuery;
         color: $bgPickerButton.data('bg-color-boolean'),
 
         preview: function(data) {
+          console.log(data);
           setImageOrientation($contentItemBox, data.width, data.height);
 
           $bgPickerArea.eq(0).data('imgDropArea').setData({
@@ -11015,9 +11016,12 @@ return jQuery;
             .addClass('not-cropped')
             .css('opacity', .1)
           ;
+
+          console.log(data);
         },
 
         commit: function(data) {
+          console.log(data);
           $contentItemBox.addClass('not-loaded');
           setItemImage($contentItemBox, $imgDropArea, itemId, data.original_id, itemType);
         }
@@ -11031,10 +11035,10 @@ return jQuery;
   // Binds editmode image drop areas.
   // ===========================================================================
   var bindContentItemImgDropAreas = function(placeholderText) {
-    $('.js-img-drop-area').each(function(index, imgDropAreaTarget) {
+    $('.js-content-item-img-drop-area').each(function(index, imgDropAreaTarget) {
       var $imgDropAreaTarget = $(imgDropAreaTarget),
           $contentItemBox = $imgDropAreaTarget.closest('.js-content-item-box'),
-          $bgPickerArea = $contentItemBox.find('.js-bg-picker-area'),
+          $bgPickerArea = $contentItemBox.find('.js-content-item-bg-picker-area'),
           itemId = $contentItemBox.data('item-id'),
           itemType = $contentItemBox.data('item-type'),
           itemData = new Edicy.CustomData({
@@ -11049,6 +11053,7 @@ return jQuery;
         placeholder: '<div class="edy-img-drop-area-placeholder">' + placeholderText + '</div>',
 
         change: function(data) {
+          console.log(data);
           var $bgPickerButton = $contentItemBox.find('.js-bg-picker-btn');
 
           $contentItemBox
@@ -11087,7 +11092,7 @@ return jQuery;
   var bindContentItemImageCropToggle = function() {
     $('.js-toggle-crop-state').on('click', function() {
       var $contentItemBox = $(this).closest('.js-content-item-box'),
-          $imgDropAreaTarget = $contentItemBox.find('.js-img-drop-area'),
+          $imgDropAreaTarget = $contentItemBox.find('.js-content-item-img-drop-area'),
           itemId = $contentItemBox.data('item-id'),
           itemType = $contentItemBox.data('item-type'),
           itemData = new Edicy.CustomData({
