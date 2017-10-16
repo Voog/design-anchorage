@@ -10999,7 +10999,6 @@ return jQuery;
         color: $bgPickerButton.data('bg-color-boolean'),
 
         preview: function(data) {
-          console.log(data);
           setImageOrientation($contentItemBox, data.width, data.height);
 
           $bgPickerArea.eq(0).data('imgDropArea').setData({
@@ -11017,11 +11016,15 @@ return jQuery;
             .css('opacity', .1)
           ;
 
+          console.log('Data in bg-picker "preview()".');
           console.log(data);
+          console.log('');
         },
 
         commit: function(data) {
+          console.log('Data in bg-picker "commit()".');
           console.log(data);
+          console.log('');
           $contentItemBox.addClass('not-loaded');
           setItemImage($contentItemBox, $imgDropArea, itemId, data.original_id, itemType);
         }
@@ -11053,7 +11056,9 @@ return jQuery;
         placeholder: '<div class="edy-img-drop-area-placeholder">' + placeholderText + '</div>',
 
         change: function(data) {
+          console.log('Data in img-drop-area "change()".');
           console.log(data);
+          console.log('');
           var $bgPickerButton = $contentItemBox.find('.js-content-item-bg-picker-btn');
 
           $contentItemBox
