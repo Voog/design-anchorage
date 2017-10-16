@@ -416,7 +416,7 @@
   var bindContentItemBgPickers = function() {
     $('.js-content-item-bg-picker-area').each(function(index, bgPickerArea) {
       var $bgPickerArea = $(bgPickerArea),
-          $bgPickerButton = $bgPickerArea.find('.js-bg-picker-btn'),
+          $bgPickerButton = $bgPickerArea.find('.js-content-item-bg-picker-btn'),
           $contentItemBox = $bgPickerArea.closest('.js-content-item-box'),
           itemId = $contentItemBox.data('item-id'),
           itemType = $contentItemBox.data('item-type'),
@@ -484,7 +484,7 @@
 
         change: function(data) {
           console.log(data);
-          var $bgPickerButton = $contentItemBox.find('.js-bg-picker-btn');
+          var $bgPickerButton = $contentItemBox.find('.js-content-item-bg-picker-btn');
 
           $contentItemBox
             .removeClass('without-image is-loaded with-error')
