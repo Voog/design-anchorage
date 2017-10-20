@@ -446,15 +446,13 @@
             .css('opacity', .1)
           ;
 
-          console.log('Data in bg-picker "preview()".');
+          console.log('bg-picker preview() data:');
           console.log(data);
-          console.log('');
         },
 
         commit: function(data) {
-          console.log('Data in bg-picker "commit()".');
+          console.log('bg-picker commit() data:');
           console.log(data);
-          console.log('');
           $contentItemBox.addClass('not-loaded');
           setItemImage($contentItemBox, $imgDropArea, itemId, data.original_id, itemType);
         }
@@ -486,9 +484,8 @@
         placeholder: '<div class="edy-img-drop-area-placeholder">' + placeholderText + '</div>',
 
         change: function(data) {
-          console.log('Data in img-drop-area "change()".');
+          console.log('img-drop-area "change() data:');
           console.log(data);
-          console.log('');
           var $bgPickerButton = $contentItemBox.find('.js-content-item-bg-picker-btn');
 
           $contentItemBox
