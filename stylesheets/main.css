@@ -436,7 +436,7 @@ a img {
   height: 30px;
   margin-top: -15px;
   margin-left: -15px;
-  background-color: rgba(199, 9, 9, 0.3);
+  background-color: rgba(199, 9, 9, 0.7);
   opacity: 1;
 }
 .with-error .loader::before, .with-error .loader::after {
