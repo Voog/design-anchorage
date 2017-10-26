@@ -2816,8 +2816,22 @@ a img {
 .content-item-box .top-inner {
   opacity: 1;
 }
-.editmode .content-item-box:hover .top-inner, .item-list-page .content-item-box:hover .top-inner {
-  opacity: .8;
+.editmode .content-item-box .top-inner::after, .item-list-page .content-item-box .top-inner::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  background-color: #fff;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  transition: opacity .5s;
+}
+.editmode .content-item-box:hover .top-inner::after, .item-list-page .content-item-box:hover .top-inner::after {
+  opacity: .2;
 }
 
 .content-items {
@@ -2855,7 +2869,8 @@ a img {
   bottom: 0;
   left: 0;
 }
-.item-top:hover .btn {
+.item-top:hover .btn,
+.item-top:hover .edy-img-drop-area-remove-image {
   opacity: 1;
 }
 .item-top .btn {
@@ -2870,28 +2885,45 @@ a img {
 .item-top .btn:hover {
   background-color: #0066bb;
 }
-.item-top .bg-picker-btn {
-  top: 0;
-  left: 0;
-}
 .item-top .bg-crop-btn {
   height: 45px;
   width: 45px;
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 9;
   margin-top: 10px;
-  margin-right: 10px;
+  margin-left: 10px;
   cursor: pointer;
   border-radius: 100%;
-  fill: white;
+  color: white;
 }
 .item-top .bg-crop-btn.is-visible {
   display: block;
 }
-.item-top .bg-crop-btn.is-hidden {
+.item-top .bg-crop-btn.is-hidden, .without-image .item-top .bg-crop-btn {
   display: none;
+}
+.item-top .edy-img-drop-area-remove-image {
+  height: 45px;
+  width: 45px;
+  top: 10px;
+  right: 10px;
+  z-index: 9;
+  color: white;
+  background-color: rgba(0, 102, 187, 0.3);
+  border: 0;
+  opacity: 0;
+  -webkit-transition: background-color .5s, opacity .5s;
+  -o-transition: background-color .5s, opacity .5s;
+  transition: background-color .5s, opacity .5s;
+}
+.item-top .edy-img-drop-area-remove-image:hover {
+  background-color: #0066bb;
+}
+.item-top .edy-img-drop-area-remove-image-ico {
+  margin-top: -10px;
+  margin-left: -8px;
 }
 .item-top .top-inner {
   -webkit-hyphens: auto;

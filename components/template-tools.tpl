@@ -89,7 +89,6 @@
     // Binds content item boxes image functionality.
     //==========================================================================
     {% if template-tools == "item_list_page" %}
-      site.bindContentItemBgPickers();
       site.bindContentItemImgDropAreas('{{ "drag_picture_for_product_here" | lc }}');
       site.bindContentItemImageCropToggle();
     {% endif %}
