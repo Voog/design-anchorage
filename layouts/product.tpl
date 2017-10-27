@@ -62,7 +62,7 @@
                                 <button class="btn bg-picker-btn js-content-item-bg-picker-btn" data-bg-key="image" data-bg-picture-boolean="true" data-bg-color-boolean="false" data-bg-image="{{ page.image.for-width-680.schemeless_url }}" data-bg-target-width="680"></button>
 
                                 <button class="btn bg-crop-btn {% if page_image_orientation == "image-square" or page.image == nil %}is-hidden{% else %}is-visible{% endif %} js-toggle-crop-state">
-                                  <svg width="24" height="24" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                                  <svg width="20" height="20" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
                                     <use xlink:href="#ico-toggle"></use>
                                   </svg>
                                 </button>
