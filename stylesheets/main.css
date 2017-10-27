@@ -2898,6 +2898,9 @@ a img {
   border-radius: 100%;
   color: white;
 }
+.item-top .bg-crop-btn:focus {
+  outline: 0;
+}
 .item-top .bg-crop-btn.is-visible {
   display: block;
 }
