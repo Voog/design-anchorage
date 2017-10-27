@@ -8,6 +8,11 @@
       type: 'site'
     });
 
+    pageData = new Edicy.CustomData({
+      type: 'page',
+      id: '{{ page.id }}'
+    });
+
     //==========================================================================
     // Sets variables based on page type.
     //==========================================================================
@@ -19,11 +24,6 @@
       {% else %}
         pageType = 'contentPage';
       {% endif %}
-
-      pageData = new Edicy.CustomData({
-        type: 'page',
-        id: '{{ page.id }}'
-      });
     {% endif %}
 
     //==========================================================================
