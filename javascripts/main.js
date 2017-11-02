@@ -10969,7 +10969,6 @@ return jQuery;
        data: JSON.stringify({'image_id': imageId}),
        dataType: 'json',
        success: function(data) {
-         console.log(data);
          itemData.set('image_crop_state', 'not-cropped');
          $contentItemBox.removeClass('not-loaded with-error').addClass('is-loaded');
          $contentItemBox.find('.edy-img-drop-area-placeholder').css('opacity', 1);
