@@ -51,14 +51,32 @@
 
   .top-inner {
     opacity: 1;
+
+    &::after {
+      .editmode &,
+      .item-list-page & {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        background-color: $white;
+        content: '';
+        opacity: 0;
+        transition: opacity .5s;
+      }
+    }
   }
 
   &:hover {
     .top-inner {
       // scss-lint:disable NestingDepth
-      .editmode &,
-      .item-list-page & {
-        opacity: .8;
+      &::after {
+        .editmode &,
+        .item-list-page & {
+          opacity: .2;
+        }
       }
       // scss-lint:enable NestingDepth
     }
@@ -86,7 +104,8 @@
   @include aspect-ratio(1, 1);
 
   &:hover {
-    .btn {
+    .btn,
+    .edy-img-drop-area-remove-image {
       opacity: 1;
     }
   }
@@ -103,30 +122,51 @@
     }
   }
 
-  .bg-picker-btn {
-    top: 0;
-    left: 0;
-  }
-
   .bg-crop-btn {
     @include size(45px);
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: 9;
     margin-top: 10px;
-    margin-right: 10px;
+    margin-left: 10px;
     cursor: pointer;
     border-radius: 100%;
-    fill: rgba($white, 1);
+    color: rgba($white, 1);
+
+    &:focus {
+      outline: 0;
+    }
 
     &.is-visible {
       display: block;
     }
 
-    &.is-hidden {
+    &.is-hidden,
+    .without-image & {
       display: none;
     }
+  }
+
+  .edy-img-drop-area-remove-image {
+    @include size(45px);
+    top: 10px;
+    right: 10px;
+    z-index: 9;
+    color: rgba($white, 1);
+    background-color: rgba($science-blue, .3);
+    border: 0;
+    opacity: 0;
+    transition: background-color .5s, opacity .5s;
+
+    &:hover {
+      background-color: rgba($science-blue, 1);
+    }
+  }
+
+  .edy-img-drop-area-remove-image-ico {
+    margin-top: -10px;
+    margin-left: -8px;
   }
 
   .top-inner {
