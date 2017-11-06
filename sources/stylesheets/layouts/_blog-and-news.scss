@@ -20,7 +20,7 @@
     margin-top: 20px;
   }
   .blog-article {
-    @include hyphenate(true);
+    // @include hyphenate(true);
     position: relative;
     padding-top: 50px;
     &:first-child {

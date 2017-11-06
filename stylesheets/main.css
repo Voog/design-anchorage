@@ -762,11 +762,6 @@ a img {
   margin-top: 20px;
 }
 .blog-news-page .blog-article {
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-  word-break: break-word;
-  word-wrap: break-word;
   position: relative;
   padding-top: 50px;
 }
@@ -1324,11 +1319,6 @@ a img {
   }
 }
 .site-header .header-title {
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-  word-break: break-word;
-  word-wrap: break-word;
   font-size: 22px;
   font-weight: 300;
   line-height: 1;
@@ -1525,11 +1515,6 @@ a img {
 }
 
 .menu {
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-  word-break: break-word;
-  word-wrap: break-word;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -2894,11 +2879,6 @@ a img {
   display: none;
 }
 .item-top .top-inner {
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-  word-break: break-word;
-  word-wrap: break-word;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -3020,11 +3000,6 @@ a img {
 }
 
 .item-title {
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-  word-break: break-word;
-  word-wrap: break-word;
   margin-top: 0;
   margin-bottom: 0;
   line-height: 1.2;
@@ -3139,11 +3114,6 @@ a img {
   padding-top: 40px;
 }
 .site-footer .blog-article-nav {
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-  word-break: break-word;
-  word-wrap: break-word;
   display: table;
   width: 100%;
   background-color: white;
@@ -3274,11 +3244,6 @@ a img {
 }
 
 .content-area {
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-  word-break: break-word;
-  word-wrap: break-word;
   color: rgba(0, 0, 0, 0.7);
   font-size: 18px;
   line-height: 1.7;
@@ -3527,8 +3492,6 @@ a img {
   -webkit-hyphens: none;
       -ms-hyphens: none;
           hyphens: none;
-  word-break: normal;
-  word-wrap: normal;
 }
 .content-area pre,
 .content-area .edy-positionable-container-left-block,
@@ -3588,11 +3551,6 @@ a img {
   font-weight: 400;
   line-height: 1.7;
   text-align: center;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-  word-break: break-word;
-  word-wrap: break-word;
   text-decoration: none;
 }
 .publicmode .content-area .custom-btn {

@@ -7,7 +7,7 @@
   }
 
   @extend %clearfix;
-  @include hyphenate(true);
+  // @include hyphenate(true);
   color: rgba($black, .7);
   font-size: 18px;
   line-height: 1.7;
@@ -272,7 +272,8 @@
   iframe,
   table,
   form {
-    @include hyphenate(false);
+    // @include hyphenate(false);
+    hyphens: none;
   }
 
   // Top and bottom margin for the elements that doesn't have the default margin.
@@ -340,7 +341,7 @@
     font-weight: 400;
     line-height: 1.7;
     text-align: center;
-    @include hyphenate(true);
+    // @include hyphenate(true);
     text-decoration: none;
 
     .publicmode & {
