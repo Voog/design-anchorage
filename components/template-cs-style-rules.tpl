@@ -460,6 +460,9 @@ body {
 .site-footer .content-area ol,
 .site-footer .content-area dl {
   color: var(--primary-color);
+  -webkit-hyphens: var(--footer-body-hyphens);
+      -ms-hyphens: var(--footer-body-hyphens);
+          hyphens: var(--footer-body-hyphens);
 }
 .site-footer .dark-background .content-area p, .site-footer .dark-background .content-area ul, .site-footer .dark-background .content-area ol, .site-footer .dark-background .content-area dl {
   color: var(--third-color);

@@ -2,15 +2,16 @@
 // NB! Each editable content-area - {% content %} - should be wrapped in the element that has the "content-area" class.
 // NB! Contact forms, image galleries and tables styling rules are located in the separate partials: "_forms.scss", "_gallery.scss" and "_tables.scss".
 .content-area {
+  @extend %clearfix;
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba($black, .7);
+  word-break: break-word;
+  word-wrap: break-word;
+
   &:empty {
     display: none;
   }
-
-  @extend %clearfix;
-  // @include hyphenate(true);
-  color: rgba($black, .7);
-  font-size: 18px;
-  line-height: 1.7;
 
   .dark-background & {
     color: rgba($white, 1);
@@ -272,8 +273,9 @@
   iframe,
   table,
   form {
-    // @include hyphenate(false);
     hyphens: none;
+    word-break: normal;
+    word-wrap: normal;
   }
 
   // Top and bottom margin for the elements that doesn't have the default margin.
@@ -341,7 +343,6 @@
     font-weight: 400;
     line-height: 1.7;
     text-align: center;
-    // @include hyphenate(true);
     text-decoration: none;
 
     .publicmode & {

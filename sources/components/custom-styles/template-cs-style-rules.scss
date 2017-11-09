@@ -663,6 +663,7 @@ body {
 
     .site-footer & {
       color: var(--primary-color);
+      hyphens: var(--footer-body-hyphens);
     }
 
     .dark-background & {

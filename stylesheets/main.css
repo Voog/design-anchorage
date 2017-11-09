@@ -3244,9 +3244,11 @@ a img {
 }
 
 .content-area {
-  color: rgba(0, 0, 0, 0.7);
   font-size: 18px;
   line-height: 1.7;
+  color: rgba(0, 0, 0, 0.7);
+  word-break: break-word;
+  word-wrap: break-word;
 }
 .content-area:empty {
   display: none;
@@ -3492,6 +3494,8 @@ a img {
   -webkit-hyphens: none;
       -ms-hyphens: none;
           hyphens: none;
+  word-break: normal;
+  word-wrap: normal;
 }
 .content-area pre,
 .content-area .edy-positionable-container-left-block,
