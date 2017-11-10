@@ -2621,6 +2621,8 @@ a img {
   vertical-align: top;
   width: 220px;
   margin: 50px 0 50px 40px;
+  word-break: break-word;
+  word-wrap: break-word;
 }
 @media screen and (max-width: 1024px) {
   .site-sidebar {
