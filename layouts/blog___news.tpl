@@ -31,10 +31,7 @@
                     {% include "blog-news-tags" %}
                     
                     <section class="blog-articles content-area">
-                      <div style="padding-bottom: 20px" data-search-indexing-allowed="true" {{ edy_intro_edit_text }}>{% content %}</div>
-
                       {% addbutton %}
-                      
                       {% for article in articles limit: 5 %}
                         {% include "blog-article-template" %}
                       {% endfor %}
