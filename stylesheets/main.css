@@ -744,6 +744,9 @@ a img {
 .blog-news-page .main-content .wrap {
   max-width: 780px;
 }
+.blog-news-page .main-content .blog-intro-content {
+  padding-bottom: 25px;
+}
 .blog-news-page .article-title {
   font-size: 32px;
   font-weight: 300;
