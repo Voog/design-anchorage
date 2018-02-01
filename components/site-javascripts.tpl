@@ -2,19 +2,11 @@
 <script src="{{ javascripts_path }}/main.min.js"></script>
 {% sitejs_include %}
 
+{% comment %}Site search related javascript components.{% endcomment %}
 {% if site.search.enabled %}
   <script src="{{ site.static_asset_host }}/libs/edicy-search/latest/edicy-search.js"></script>
-  <script>
-    var search = new VoogSearch($('.js-search-form').get(0), {
-      per_page: 10,
-      lang: '{{ page.language_code }}',
-      resultsContainer: $('.js-voog-search-modal').get(0),
-      sideclick: true,
-      mobileModeWidth: 480,
-      updateOnKeypress: true
-    });
-  </script>
-{% endif %}
+  <script>site.bindSiteSearch($('.js-search-form').get(0), '{{ page.language_code }}', '{{ 'search_noresults' | lc | escape }}');</script>
+{% endif %} 
 
 {% if editmode %}
   <script type="text/javascript">
