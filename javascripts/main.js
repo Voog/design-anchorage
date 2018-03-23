@@ -127,7 +127,7 @@
         rightOffsetHelper = $('html').hasClass('language-flags-disabled') ? 5 : 9;
 
     $('.js-popup-menu-popover').css({
-      top: offsetItem.offset().top + offsetItem.outerHeight(),
+      top: offsetItem.offset().top + offsetItem.outerHeight() - $('.site-container').offset().top,
       right: $(window).width() - offsetItem.offset().left - offsetItem.outerWidth() - rightOffsetHelper
     });
   };
