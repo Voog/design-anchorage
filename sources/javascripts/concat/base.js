@@ -930,7 +930,7 @@
   // Binds site search functionality.
   // ===========================================================================
   var bindSiteSearch = function(searchForm, languageCode, noResultsString) {
-    if (searchForm) { 
+    if (searchForm) {
       var search = new VoogSearch(searchForm, {
         // This defines the number of results per query.
         per_page: 10,
@@ -947,7 +947,7 @@
         // String for feedback if no results are found.
         noResults: noResultsString
       });
-    } 
+    }
   };
 
   // Enables the usage of the initiations outside this file.
