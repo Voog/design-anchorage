@@ -42,7 +42,13 @@
         {% endif %}
     {% endif %}
   {% else %}
-    {% for level_1 in site.visible_menuitems %}
+    {% if editmode %}
+      {% assign breadcrumbsMenuItem = site.menuitems %}
+    {% else %}
+      {% assign breadcrumbsMenuItem = site.visible_menuitems %}
+    {% endif %}
+
+    {% for level_1 in breadcrumbsMenuItem  %}
       {% if level_1.selected? %}
         {% if level_1.current? and editmode %}
 

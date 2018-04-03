@@ -45,7 +45,12 @@
                             {% endif %}
                           {% endfor %}
                         {% else %}
-                          {% for level_1 in site.visible_menuitems %}
+                          {% if editmode %}
+                            {% assign productListMenuItem = site.menuitems %}
+                          {% else %}
+                            {% assign productListMenuItem = site.visible_menuitems %}
+                          {% endif %}
+                          {% for level_1 in productListMenuItem %}
                             {% if level_1.selected? %}
                               {% for level_2 in level_1.visible_children_with_data %}
                                 {% if level_1.current? %}
