@@ -92,7 +92,7 @@
                         </div>
 
                         <div class="content-body">
-                          <div class="content-area area-normal" data-search-indexing-allowed="true">{% contentblock %}{{ "write_product_description_here" | lc }}{% endcontentblock %}</div>
+                          <div class="content-area area-normal" data-search-indexing-allowed="true">{% contentblock %}{{ "write_product_description_here" | lc: editor_locale }}{% endcontentblock %}</div>
                         </div>
                       </div>
                     </div>
