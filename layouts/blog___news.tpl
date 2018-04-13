@@ -75,6 +75,7 @@
 
 
     {% include "menu-mobile" %}
+    {% include "site-signout" %}
     {% include "site-javascripts" %}
     {% include "template-tools" with "blog_page" %}
     <script>
