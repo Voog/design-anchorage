@@ -414,7 +414,7 @@ a img {
 .not-loaded .loader, .is-loaded .loader {
   margin-top: calc((20px / 2) * -1);
   margin-left: calc((20px / 2) * -1);
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: 1px solid transparent;
   -webkit-animation: rotation .7s infinite linear;
           animation: rotation .7s infinite linear;
 }
@@ -477,27 +477,34 @@ a img {
   bottom: 0;
 }
 
-.toggle-sub-menu, .mobile-menu-toggler, .lang-menu-btn, .search-btn, .search-submit {
+.toggle-sub-menu, .mobile-menu-toggler, .lang-menu-btn, .search-btn,
+.search-submit {
   margin: 0;
   padding: 0;
   background-color: transparent;
   border-style: none;
   cursor: pointer;
 }
-.toggle-sub-menu:focus, .mobile-menu-toggler:focus, .lang-menu-btn:focus, .search-btn:focus, .search-submit:focus {
+.toggle-sub-menu:focus, .mobile-menu-toggler:focus, .lang-menu-btn:focus, .search-btn:focus,
+.search-submit:focus {
   outline: none;
 }
-.toggle-sub-menu::-moz-focus-inner, .mobile-menu-toggler::-moz-focus-inner, .lang-menu-btn::-moz-focus-inner, .search-btn::-moz-focus-inner, .search-submit::-moz-focus-inner {
+.toggle-sub-menu::-moz-focus-inner, .mobile-menu-toggler::-moz-focus-inner, .lang-menu-btn::-moz-focus-inner, .search-btn::-moz-focus-inner,
+.search-submit::-moz-focus-inner {
   padding: 0;
   border-style: none;
 }
 
-.site-search .search-input, .content-area .form_field_textfield, .content-area .form_field_textarea, .content-area .form_field_select {
+.site-search .search-input, .content-area .form_field_textfield,
+.content-area .form_field_textarea,
+.content-area .form_field_select {
   -webkit-appearance: none;
   border-radius: 0;
 }
 
-.site-search .search-input, .content-area .form_field_textfield, .content-area .form_field_textarea, .content-area .form_field_select {
+.site-search .search-input, .content-area .form_field_textfield,
+.content-area .form_field_textarea,
+.content-area .form_field_select {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -587,7 +594,7 @@ a img {
   display: block;
   content: '';
   width: 100%;
-  padding-top: 66.5413533835%;
+  padding-top: 66.54135%;
 }
 .front-page .main-feature .feature-image > .aspect-ratio-inner {
   position: absolute;
@@ -788,7 +795,8 @@ a img {
   padding-top: 65.715%;
   content: '';
 }
-.blog-news-page .article-author, .blog-news-page .article-date {
+.blog-news-page .article-author,
+.blog-news-page .article-date {
   font-size: 14px;
   color: black;
   opacity: .35;
@@ -798,8 +806,8 @@ a img {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-.dark-background .blog-news-page .article-author,
-.dark-background .blog-news-page .article-date {
+.dark-background .blog-news-page .article-author, .dark-background
+.blog-news-page .article-date {
   color: rgba(255, 255, 255, 0.35);
 }
 .blog-news-page .article-excerpt {
@@ -1267,11 +1275,12 @@ a img {
   position: relative;
 }
 @media screen and (max-width: 850px) {
-  .site-header .header-left, .site-header .header-right {
+  .site-header .header-left,
+  .site-header .header-right {
     float: none;
   }
-  .no-flexbox .site-header .header-left,
-  .no-flexbox .site-header .header-right {
+  .no-flexbox .site-header .header-left, .no-flexbox
+  .site-header .header-right {
     display: table-cell;
     vertical-align: top;
   }
@@ -2459,18 +2468,20 @@ a img {
   outline: none;
 }
 
-.search-btn, .search-submit {
+.search-btn,
+.search-submit {
   width: 30px;
   height: 50px;
   background-color: transparent;
 }
-.no-svg .search-btn,
-.no-svg .search-submit {
+.no-svg .search-btn, .no-svg
+.search-submit {
   background-position: center;
   background-repeat: no-repeat;
   background-image: url("../images/ico-search-white.png");
 }
-.no-svg .light-background .search-btn, .no-svg .light-background .search-submit {
+.no-svg .light-background .search-btn, .no-svg .light-background
+.search-submit {
   background-image: url("../images/ico-search-black.png");
 }
 
@@ -3437,21 +3448,32 @@ a img {
 .content-area .edy-positionable-container-maxwidth:last-child {
   margin-bottom: 0;
 }
-.dark-background .content-area h1,
-.dark-background .content-area h2,
-.dark-background .content-area h3,
-.dark-background .content-area h4,
-.dark-background .content-area h5,
-.dark-background .content-area h6,
-.dark-background .content-area p,
-.dark-background .content-area ul,
-.dark-background .content-area ol,
-.dark-background .content-area pre,
-.dark-background .content-area code,
-.dark-background .content-area table {
+.dark-background .content-area h1, .dark-background
+.content-area h2, .dark-background
+.content-area h3, .dark-background
+.content-area h4, .dark-background
+.content-area h5, .dark-background
+.content-area h6, .dark-background
+.content-area p, .dark-background
+.content-area ul, .dark-background
+.content-area ol, .dark-background
+.content-area pre, .dark-background
+.content-area code, .dark-background
+.content-area table {
   color: white;
 }
-.footer-inner.dark-background .content-area h1, .footer-inner.dark-background .content-area h2, .footer-inner.dark-background .content-area h3, .footer-inner.dark-background .content-area h4, .footer-inner.dark-background .content-area h5, .footer-inner.dark-background .content-area h6, .footer-inner.dark-background .content-area p, .footer-inner.dark-background .content-area ul, .footer-inner.dark-background .content-area ol, .footer-inner.dark-background .content-area pre, .footer-inner.dark-background .content-area code, .footer-inner.dark-background .content-area table {
+.footer-inner.dark-background .content-area h1, .footer-inner.dark-background
+.content-area h2, .footer-inner.dark-background
+.content-area h3, .footer-inner.dark-background
+.content-area h4, .footer-inner.dark-background
+.content-area h5, .footer-inner.dark-background
+.content-area h6, .footer-inner.dark-background
+.content-area p, .footer-inner.dark-background
+.content-area ul, .footer-inner.dark-background
+.content-area ol, .footer-inner.dark-background
+.content-area pre, .footer-inner.dark-background
+.content-area code, .footer-inner.dark-background
+.content-area table {
   color: rgba(255, 255, 255, 0.5);
 }
 .content-area h1,
@@ -3473,12 +3495,12 @@ a img {
   color: black;
   text-decoration: none;
 }
-.site-header .content-area h1:first-child,
-.site-header .content-area h2:first-child {
+.site-header .content-area h1:first-child, .site-header
+.content-area h2:first-child {
   margin-top: 0;
 }
-.site-header .content-area h1:last-child,
-.site-header .content-area h2:last-child {
+.site-header .content-area h1:last-child, .site-header
+.content-area h2:last-child {
   margin-bottom: 0;
 }
 .content-area h1 {
@@ -3536,27 +3558,36 @@ a img {
 .contacts .content-area h2 {
   font-size: 28px;
 }
-.content-area h3, .content-area h4, .content-area h5, .content-area h6 {
+.content-area h3,
+.content-area h4,
+.content-area h5,
+.content-area h6 {
   font-size: 22px;
 }
-.contacts .content-area h3,
-.contacts .content-area h4,
-.contacts .content-area h5,
-.contacts .content-area h6 {
+.contacts .content-area h3, .contacts
+.content-area h4, .contacts
+.content-area h5, .contacts
+.content-area h6 {
   font-weight: 400;
   font-size: 24px;
 }
-.content-area p, .content-area ul, .content-area ol, .content-area dl {
+.content-area p,
+.content-area ul,
+.content-area ol,
+.content-area dl {
   font-size: 18px;
 }
-.site-footer .content-area p,
-.site-footer .content-area ul,
-.site-footer .content-area ol,
-.site-footer .content-area dl {
+.site-footer .content-area p, .site-footer
+.content-area ul, .site-footer
+.content-area ol, .site-footer
+.content-area dl {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.7);
 }
-.site-footer .dark-background .content-area p, .site-footer .dark-background .content-area ul, .site-footer .dark-background .content-area ol, .site-footer .dark-background .content-area dl {
+.site-footer .dark-background .content-area p, .site-footer .dark-background
+.content-area ul, .site-footer .dark-background
+.content-area ol, .site-footer .dark-background
+.content-area dl {
   color: white;
 }
 .content-area ul,
@@ -3770,11 +3801,12 @@ a img {
 .contacts .content-area table, .editmode .contacts .content-area table {
   margin-bottom: 0;
 }
-.content-area table th, .content-area table td {
+.content-area table th,
+.content-area table td {
   padding: 9px 13px;
 }
-.dark-background .content-area table th,
-.dark-background .content-area table td {
+.dark-background .content-area table th, .dark-background
+.content-area table td {
   border-color: white;
   border-style: solid;
   border-width: 1px;
@@ -3889,17 +3921,23 @@ a img {
 .content-area .form_field_required .form_field_label:after {
   content: '* \a';
 }
-.dark-background .content-area .form_field_textfield,
-.dark-background .content-area .form_field_textarea,
-.dark-background .content-area .form_field_select,
-.dark-background .content-area .form_field_radio + .form_control_indicator,
-.dark-background .content-area .form_field_checkbox + .form_control_indicator {
+.dark-background .content-area .form_field_textfield, .dark-background
+.content-area .form_field_textarea, .dark-background
+.content-area .form_field_select, .dark-background
+.content-area .form_field_radio + .form_control_indicator, .dark-background
+.content-area .form_field_checkbox + .form_control_indicator {
   background-color: rgba(255, 255, 255, 0.1);
 }
-.light-background .content-area .form_field_textfield, .light-background .content-area .form_field_textarea, .light-background .content-area .form_field_select, .light-background .content-area .form_field_radio + .form_control_indicator, .light-background .content-area .form_field_checkbox + .form_control_indicator {
+.light-background .content-area .form_field_textfield, .light-background
+.content-area .form_field_textarea, .light-background
+.content-area .form_field_select, .light-background
+.content-area .form_field_radio + .form_control_indicator, .light-background
+.content-area .form_field_checkbox + .form_control_indicator {
   background-color: rgba(0, 0, 0, 0.03);
 }
-.content-area .form_field_textfield, .content-area .form_field_textarea, .content-area .form_field_select {
+.content-area .form_field_textfield,
+.content-area .form_field_textarea,
+.content-area .form_field_select {
   font-size: 16px;
   font-weight: 300;
   line-height: 26px;
@@ -3936,29 +3974,41 @@ a img {
   color: black;
   opacity: .35;
 }
-.dark-background .content-area .form_field_textfield,
-.dark-background .content-area .form_field_textarea,
-.dark-background .content-area .form_field_select {
+.dark-background .content-area .form_field_textfield, .dark-background
+.content-area .form_field_textarea, .dark-background
+.content-area .form_field_select {
   color: white;
   border-color: rgba(255, 255, 255, 0.3);
 }
-.light-background .content-area .form_field_textfield, .light-background .content-area .form_field_textarea, .light-background .content-area .form_field_select {
+.light-background .content-area .form_field_textfield, .light-background
+.content-area .form_field_textarea, .light-background
+.content-area .form_field_select {
   color: rgba(0, 0, 0, 0.7);
   border-color: rgba(0, 0, 0, 0.13);
 }
-.dark-background .content-area .form_field_textfield:focus, .dark-background .content-area .form_field_textarea:focus, .dark-background .content-area .form_field_select:focus {
+.dark-background .content-area .form_field_textfield:focus, .dark-background
+.content-area .form_field_textarea:focus, .dark-background
+.content-area .form_field_select:focus {
   border-color: white;
 }
-.light-background .content-area .form_field_textfield:focus, .light-background .content-area .form_field_textarea:focus, .light-background .content-area .form_field_select:focus {
+.light-background .content-area .form_field_textfield:focus, .light-background
+.content-area .form_field_textarea:focus, .light-background
+.content-area .form_field_select:focus {
   border-color: rgba(0, 0, 0, 0.35);
 }
-.content-area .form_field_textfield.form_field_size_small, .content-area .form_field_textarea.form_field_size_small, .content-area .form_field_select.form_field_size_small {
+.content-area .form_field_textfield.form_field_size_small,
+.content-area .form_field_textarea.form_field_size_small,
+.content-area .form_field_select.form_field_size_small {
   width: 280px;
 }
-.content-area .form_field_textfield.form_field_size_medium, .content-area .form_field_textarea.form_field_size_medium, .content-area .form_field_select.form_field_size_medium {
+.content-area .form_field_textfield.form_field_size_medium,
+.content-area .form_field_textarea.form_field_size_medium,
+.content-area .form_field_select.form_field_size_medium {
   width: 420px;
 }
-.content-area .form_field_textfield.form_field_size_large, .content-area .form_field_textarea.form_field_size_large, .content-area .form_field_select.form_field_size_large {
+.content-area .form_field_textfield.form_field_size_large,
+.content-area .form_field_textarea.form_field_size_large,
+.content-area .form_field_select.form_field_size_large {
   width: 100%;
 }
 .content-area .form_field_select {
@@ -4001,12 +4051,12 @@ a img {
 .content-area .form_field_select.form_field_size_large {
   min-width: 184px;
 }
-.svg .content-area .form_field_radio,
-.svg .content-area .form_field_checkbox {
+.svg .content-area .form_field_radio, .svg
+.content-area .form_field_checkbox {
   display: none;
 }
-.svg .content-area .form_field_radio + .form_control_indicator,
-.svg .content-area .form_field_checkbox + .form_control_indicator {
+.svg .content-area .form_field_radio + .form_control_indicator, .svg
+.content-area .form_field_checkbox + .form_control_indicator {
   height: 18px;
   width: 18px;
   position: relative;
@@ -4017,7 +4067,8 @@ a img {
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.2);
 }
-.svg .dark-background .content-area .form_field_radio + .form_control_indicator, .svg .dark-background .content-area .form_field_checkbox + .form_control_indicator {
+.svg .dark-background .content-area .form_field_radio + .form_control_indicator, .svg .dark-background
+.content-area .form_field_checkbox + .form_control_indicator {
   border-color: rgba(255, 255, 255, 0.2);
 }
 .svg .content-area .form_field_radio + .form_control_indicator {
