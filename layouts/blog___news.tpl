@@ -26,7 +26,10 @@
               <div class="main-content">
                 <div class="wrap">
                   <div class="inner">
+                    <div class="blog-intro-content content-area" data-search-indexing-allowed="true">{% content %}</div>
+
                     {% include "blog-news-tags" %}
+
                     <section class="blog-articles content-area">
                       {% addbutton %}
                       {% for article in articles limit: 5 %}
@@ -72,6 +75,7 @@
 
 
     {% include "menu-mobile" %}
+    {% include "site-signout" %}
     {% include "site-javascripts" %}
     {% include "template-tools" with "blog_page" %}
     <script>
