@@ -1,10 +1,4 @@
-{% if editmode %}
-  {% assign subMenuItem = site.menuitems %}
-{% else %}
-  {% assign subMenuItem = site.visible_menuitems %}
-{% endif %}
-
-{% for item in subMenuItem %}
+{% for item in site.menuitems  %}
   {% if item.selected? and item.children? or editmode %}
     <ul class="submenu">
       {% for subitem in item.visible_children %}
