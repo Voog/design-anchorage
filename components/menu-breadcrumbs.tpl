@@ -9,7 +9,12 @@
   {% for i in (1..5) %}
     {% assign level_str = 'menuitems_on_level_' | append: i %}
     {% for level in site[level_str] %}
-      {% if level.selected? %}
+      {% if site.root_item.layout_title == product_list_layout %}
+        {% assign page_Lvl = 0 %}
+      {% else %}
+        {% assign page_Lvl = 1 %}
+      {% endif %}
+      {% if level.selected? and page.level > page_Lvl %}
         <span class="menu-separator">/</span>
         {% menulink level wrapper-tag="li" wrapper-class="menu-item" %}
       {% endif %}
