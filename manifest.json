@@ -50,9 +50,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/template-cs-sidebar.tpl",
-      "layout_name": "template-cs-sidebar",
-      "title": "template-cs-sidebar"
+      "file": "components/site-footer.tpl",
+      "layout_name": "site-footer",
+      "title": "site-footer"
     },
     {
       "content_type": "component",
@@ -99,9 +99,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/front-page-variables.tpl",
-      "layout_name": "front-page-variables",
-      "title": "front-page-variables"
+      "file": "components/blog-article-tags.tpl",
+      "layout_name": "blog-article-tags",
+      "title": "blog-article-tags"
     },
     {
       "content_type": "component",
@@ -169,16 +169,16 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/site-footer.tpl",
-      "layout_name": "site-footer",
-      "title": "site-footer"
+      "file": "components/template-cs-content.tpl",
+      "layout_name": "template-cs-content",
+      "title": "template-cs-content"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/template-cs-content.tpl",
-      "layout_name": "template-cs-content",
-      "title": "template-cs-content"
+      "file": "components/template-cs-sidebar.tpl",
+      "layout_name": "template-cs-sidebar",
+      "title": "template-cs-sidebar"
     },
     {
       "content_type": "component",
