@@ -15,7 +15,7 @@
       <div class="tags-bottom{% if tags and tags != empty %} visible{% endif %}">
         <ul class="menu">
           <li class="menu-item">
-            <a class="menu-link js-tags-all{% unless tags and tags != empty %} active{% endunless %}" href="/{{ page.path }}">{{ 'all_posts' | lc }}</a>
+            <a class="menu-link js-tags-all{% unless tags and tags != empty %} active{% endunless %}" href="/{{ blog.page.path_with_lang }}">{{ 'all_posts' | lc }}</a>
           </li>
           {% for tag in blog.tags %}
             {% assign activestr = " " %}
