@@ -193,6 +193,10 @@
 
 .menu-separator {
   opacity: .5;
+
+  &:first-child {
+    display: none;
+  }
 }
 
 /* mobile-menu */

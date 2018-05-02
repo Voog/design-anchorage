@@ -1629,6 +1629,9 @@ a img {
 .menu-separator {
   opacity: .5;
 }
+.menu-separator:first-child {
+  display: none;
+}
 
 /* mobile-menu */
 #mobile-menu {
