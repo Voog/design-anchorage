@@ -1,4 +1,4 @@
-{% if site.has_language_tags? %}
+{% if blog.has_tags? %}
   <section class="blog-tags">
     <div class="tags-toggle">
       <div class="tags-icon">
@@ -15,18 +15,18 @@
       <div class="tags-bottom{% if tags and tags != empty %} visible{% endif %}">
         <ul class="menu">
           <li class="menu-item">
-            <a class="menu-link js-tags-all{% unless tags and tags != empty %} active{% endunless %}" href="/{{ page.path }}">{{ 'all_posts' | lc }}</a>
+            <a class="menu-link js-tags-all{% unless tags and tags != empty %} active{% endunless %}" href="/{{ blog.page.path_with_lang }}">{{ 'all_posts' | lc }}</a>
           </li>
-          {% for tag in site.language_tags %}
+          {% for tag in blog.tags %}
             {% assign activestr = " " %}
             {% for tmptag in tags %}
               {% if tmptag.name == tag.name %}
                 {% assign activestr = " active" %}
               {% endif %}
             {% endfor %}
-            
+
             <li class="menu-item">
-              <a class="menu-link{{ activestr }}" href="/{{ page.path }}/tagged/{{ tag.path }}">{{ tag.name }}</a>
+              <a class="menu-link{{ activestr }}" href="/{{ blog.page.path_with_lang }}/tagged/{{ tag.path }}">{{ tag.name }}</a>
             </li>
           {% endfor %}
         </ul>
