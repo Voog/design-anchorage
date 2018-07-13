@@ -24,6 +24,10 @@ body {
     height: 100%;
     overflow: hidden;
   }
+  .mobilemenu-open body .js-background-type {
+    position: relative;
+    left: -250px;
+  }
 }
 
 a {
