@@ -35,11 +35,11 @@
               "value": ""
             },
             {
-              "title": "Fixed & visible when scrolling up",
+              "title": "Visible when scrolling up",
               "value": "visible-when"
             },
             {
-              "title": "Fixed & always visible",
+              "title": "Always visible",
               "value": "always-visible"
             },
           ],
