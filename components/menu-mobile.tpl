@@ -1,4 +1,5 @@
 <div id="mobile-menu" class="js-menu-lang-wrap">
+  {% include "menu-settings-editor" %}
   <div class="navigation-menu">
     <ul>
       {% unless site.root_item.hidden? %}

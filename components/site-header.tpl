@@ -11,7 +11,7 @@
             <div class="header-title content-area">{% unless editmode %}<a href="{{ site.root_item.url }}">{% endunless %}{% editable site.header %}{% unless editmode %}</a>{% endunless %}</div>
           </div>
 
-          <div class="header-right js-header-right">
+          <div class="header-right {{ site.data.menu_position_settings.menu_positioning }}  js-header-right">
             {% include "menu-main" %}
 
             <div class="site-options">
