@@ -2153,6 +2153,11 @@ a img {
   content: '';
 }
 
+[data-lang-code^="en_US"]:after {
+  background-position: -21px -60px;
+  content: '';
+}
+
 [data-lang-code^="en_GB"]:after {
   background-position: -63px -60px;
   content: '';
@@ -2165,6 +2170,21 @@ a img {
 
 [data-lang-code^="en_CA"]:after {
   background-position: -105px -60px;
+  content: '';
+}
+
+[data-lang-code^="pt_BR"]:after {
+  background-position: -63px 0;
+  content: '';
+}
+
+[data-lang-code^="pt_PT"]:after {
+  background-position: -63px 0;
+  content: '';
+}
+
+[data-lang-code^="fr_IC"]:after {
+  background-position: -42px -60px;
   content: '';
 }
 
