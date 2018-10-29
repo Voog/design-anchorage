@@ -2,6 +2,7 @@
 {% assign blog_page = true %}
 {% include "template-variables" %}
 {% include "blog-article-variables" %}
+{% include "blog-settings-variables" %}
 <html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% include "html-head" %}
@@ -32,6 +33,9 @@
 
                     <section class="blog-articles content-area">
                       {% addbutton %}
+                      {% if editmode %}
+                        {% include "blog-settings-editor" %}
+                      {% endif %}
                       {% for article in articles limit: 5 %}
                         {% include "blog-article-template" %}
                       {% endfor %}

@@ -2,6 +2,7 @@
 {% assign blog_article_page = true %}
 {% include "template-variables" %}
 {% include "blog-article-variables" %}
+{% include "blog-settings-variables" %}
 <html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }}{% unless comment.valid? %} comments-open js-calculate-comments-height{% endunless %}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% include "html-head" %}
@@ -29,11 +30,11 @@
                   <div class="inner content-area">
 
                     <div class="article-meta js-text-article-component{% if photo_article %} is-hidden{% endif %}">
-                      <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
-                      <div class="article-author">{{ article.author.name }}</div>
+                      <time class="article-date {{toggle_article_date}}" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
+                      <div class="article-author {{toggle_article_author}}">{{ article.author.name }}</div>
                     </div>
 
-                    <div class="comments-title comments-btn comments-toggle-btn js-comments-toggle-btn js-prevent-sideclick">
+                    <div class="comments-title comments-btn comments-toggle-btn js-comments-toggle-btn js-prevent-sideclick {{toggle_article_comment}}">
                       {% if article.comments_count > 0 %}
                         <span class="comments-title-inner">{{ "comments_for_count" | lc }}</span>
                         <span class="comments-count">({{ article.comments_count }})</span>
@@ -41,6 +42,10 @@
                         <span class="comments-title-inner">{{ "comment" | lc }}</span>
                       {% endif %}
                     </div>
+
+                    {% if editmode %}
+                      {% include "article-settings-editor" %}
+                    {% endif %}
 
                     <header class="article-header js-article-body-title-wrap">
                       {% unless photo_article %}
