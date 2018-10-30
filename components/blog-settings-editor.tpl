@@ -22,7 +22,7 @@
        var globalDataValues = {}
     {% endif %};
 
-    var show_comments, show_date, show_author;
+    var show_comments, show_dates, show_authors;
 
     if (globalDataValues.show_comments != null && globalDataValues.show_comments !== '') {
       show_comments = Boolean(globalDataValues.show_comments)
@@ -30,22 +30,22 @@
       show_comments = true;
     }
 
-    if (globalDataValues.show_date != null && globalDataValues.show_date !== '') {
-      show_date = Boolean(globalDataValues.show_date)
+    if (globalDataValues.show_dates != null && globalDataValues.show_dates !== '') {
+      show_dates = Boolean(globalDataValues.show_dates)
     } else {
-      show_date = true;
+      show_dates = true;
     }
 
-    if (globalDataValues.show_author != null && globalDataValues.show_author !== '') {
-      show_author = Boolean(globalDataValues.show_author)
+    if (globalDataValues.show_authors != null && globalDataValues.show_authors !== '') {
+      show_authors = Boolean(globalDataValues.show_authors)
     } else {
-      show_author = true;
+      show_authors = true;
     }
 
     var valuesObj = {
       show_comments: show_comments,
-      show_date: show_date,
-      show_author: show_author
+      show_dates: show_dates,
+      show_authors: show_authors
     }
 
     var siteSettingsButton = document.querySelector('.blog-settings-editor');
@@ -65,7 +65,7 @@
         {
           "titleI18n": "publishing_date",
           "type": "toggle",
-          "key": "show_date",
+          "key": "show_dates",
           "tooltipI18n": "toggle_all_dates",
           "states": {
             "on": true,
@@ -75,7 +75,7 @@
         {
           "titleI18n": "article_author",
           "type": "toggle",
-          "key": "show_author",
+          "key": "show_authors",
           "tooltipI18n": "toggle_all_authors",
           "states": {
             "on": true,
@@ -95,18 +95,18 @@
       preview: function(data) {
        var $articleDate = $('.article-date')
         $articleAuthor = $('.article-author');
-        if (data.show_date == true) {
+        if (data.show_dates == true) {
           $articleDate.removeClass('hide-article-date');
           $articleDate.addClass('show-article-date');
-        } else if (data.show_date == false) {
+        } else if (data.show_dates == false) {
           $articleDate.removeClass('show-article-date');
           $articleDate.addClass('hide-article-date');
         }
 
-        if (data.show_author == true) {
+        if (data.show_authors == true) {
           $articleAuthor.removeClass('hide-article-author');
           $articleAuthor.addClass('show-article-author');
-        } else if (data.show_author == false) {
+        } else if (data.show_authors == false) {
           $articleAuthor.removeClass('show-article-author');
           $articleAuthor.addClass('hide-article-author');
         }
