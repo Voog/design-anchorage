@@ -30,11 +30,11 @@
                   <div class="inner content-area">
 
                     <div class="article-meta js-text-article-component{% if photo_article %} is-hidden{% endif %}">
-                      <time class="article-date {{toggle_article_date}}" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
-                      <div class="article-author {{toggle_article_author}}">{{ article.author.name }}</div>
+                      <time class="article-date{% if show_article_date == false %} hide-article-date{% endif %}" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
+                      <div class="article-author{% if show_article_author == false %} hide-article-author{% endif %}">{{ article.author.name }}</div>
                     </div>
 
-                    <div class="comments-title comments-btn comments-toggle-btn js-comments-toggle-btn js-prevent-sideclick {{toggle_article_comment}}">
+                    <div class="comments-title comments-btn comments-toggle-btn js-comments-toggle-btn js-prevent-sideclick{% if show_article_comments == false %} hide-article-comments{% endif %}">
                       {% if article.comments_count > 0 %}
                         <span class="comments-title-inner">{{ "comments_for_count" | lc }}</span>
                         <span class="comments-count">({{ article.comments_count }})</span>
