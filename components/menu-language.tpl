@@ -1,7 +1,7 @@
 {% if editmode or site.has_many_languages? %}
   {% if editmode or language_menu_mode == "language-menu-mode-popover" %}
     <div class="menu-btn-wrap menu-language-popover-btn js-menu-btn-wrap {% if flags_state %}flags-enabled{% else %}flags-disabled{% endif %}">
-      <button role="button" class="lang-menu-btn js-lang-menu-btn js-popup-menu-btn js-prevent-sideclick lang-flag lang-flag-{{ page.language_code }}" data-lang-code="{{ page.language_code }}" {{  edy_intro_add_lang }}>
+      <button role="button" class="lang-menu-btn js-lang-menu-btn js-popup-menu-btn js-prevent-sideclick lang-flag lang-flag-{{ page.language_code }}" data-lang-code="{{ page.language_locale }}" {{  edy_intro_add_lang }}>
         <span class="lang-title">
           {% for language in site.languages %}{% if language.selected? %}<span class="lang-title-inner js-lang-title-inner">{{ language.title }}</span>{% endif %}{% endfor %}
         </span>
@@ -13,7 +13,7 @@
     <nav class="lang-menu menu-language-list">
       {% for language in site.languages %}
         <div class="lang-title">
-          <a class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} is-active{% endif %}" href="{{ language.url }}" data-lang-code="{{ language.code }}">{{ language.title }}</a>
+          <a class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} is-active{% endif %}" href="{{ language.url }}" data-lang-code="{{ language.locale }}">{{ language.title }}</a>
         </div>
       {% endfor %}
 
