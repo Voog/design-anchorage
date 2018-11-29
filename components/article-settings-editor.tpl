@@ -41,16 +41,16 @@
 
     if (articleDataValues.show_date != null && articleDataValues.show_date !== '') {
       show_date = Boolean(articleDataValues.show_date)
-    } else if (globalDataValues.show_date != null && globalDataValues.show_date !== '') {
-      show_date = Boolean(globalDataValues.show_date)
+    } else if (globalDataValues.show_dates != null && globalDataValues.show_dates !== '') {
+      show_date = Boolean(globalDataValues.show_dates)
     } else {
       show_date = true;
     }
 
     if (articleDataValues.show_author != null && articleDataValues.show_author !== '') {
       show_author = Boolean(articleDataValues.show_author)
-    } else if (globalDataValues.show_author != null && globalDataValues.show_author !== '') {
-      show_author = Boolean(globalDataValues.show_author)
+    } else if (globalDataValues.show_authors != null && globalDataValues.show_authors !== '') {
+      show_author = Boolean(globalDataValues.show_authors)
     } else {
       show_author = true;
     }
