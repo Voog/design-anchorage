@@ -93,8 +93,8 @@
       buttonTitleI18n: "blog_settings",
 
       preview: function(data) {
-       var $articleDate = $('.article-date')
-        $articleAuthor = $('.article-author');
+       var $articleDate = $('.article-date.site-data')
+        $articleAuthor = $('.article-author.site-data');
         if (data.show_dates == true) {
           $articleDate.removeClass('hide-article-date');
           $articleDate.addClass('show-article-date');

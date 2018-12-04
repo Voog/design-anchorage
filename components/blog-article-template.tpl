@@ -10,8 +10,8 @@
         {% assign article_date_format = "long" %}
       {% endif %}
 
-      <time class="article-date{% if show_article_date == false %} hide-article-date{% endif %}" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
-      <div class="article-author{% if show_article_author == false %} hide-article-author{% endif %}">{{ article.author.name }}</div>
+      <time class="article-date{% if show_article_date == false %} hide-article-date{% endif %}{% if article_data_show_date_defined != true %} site-data{% endif %}" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
+      <div class="article-author{% if show_article_author == false %} hide-article-author{% endif %}{% if article_data_show_author_defined != true %} site-data{% endif %}">{{ article.author.name }}</div>
       <h1 class="article-title">{% if blog-article-template == "blog_article_page" %}{% editable article.title %}{% else %}<a href="{{ article.url }}">{{ article.title }}</a>{% endif %}</h1>
       {% include "blog-article-tags" %}
     </header>
