@@ -179,16 +179,28 @@
 }
 
 .blog-article-page,
-.blog-news-page {
+.blog-news-page,
+.site-header {
   .wrap {
     .hide-article-comments {
       display: none;
     }
-    .hide-article-date {
-      display: none;
+
+    .article-date {
+      &.hide-article-date {
+        display: none;
+      }
     }
-    .hide-article-author {
-      display: none;
+    .article-author {
+      &.hide-article-author {
+        display: none;
+      }
     }
+  }
+}
+
+.date-separator {
+  &.hide-separator {
+    display: none
   }
 }

@@ -1027,15 +1027,22 @@ a img {
 }
 
 .blog-article-page .wrap .hide-article-comments,
-.blog-news-page .wrap .hide-article-comments {
+.blog-news-page .wrap .hide-article-comments,
+.site-header .wrap .hide-article-comments {
   display: none;
 }
-.blog-article-page .wrap .hide-article-date,
-.blog-news-page .wrap .hide-article-date {
+.blog-article-page .wrap .article-date.hide-article-date,
+.blog-news-page .wrap .article-date.hide-article-date,
+.site-header .wrap .article-date.hide-article-date {
   display: none;
 }
-.blog-article-page .wrap .hide-article-author,
-.blog-news-page .wrap .hide-article-author {
+.blog-article-page .wrap .article-author.hide-article-author,
+.blog-news-page .wrap .article-author.hide-article-author,
+.site-header .wrap .article-author.hide-article-author {
+  display: none;
+}
+
+.date-separator.hide-separator {
   display: none;
 }
 
