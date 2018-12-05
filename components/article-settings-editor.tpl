@@ -31,25 +31,25 @@
 
     var show_comments, show_date, show_author;
 
-    if (articleDataValues.show_comments != null && articleDataValues.show_comments !== '') {
+    if (articleDataValues.show_comments != null && articleDataValues.show_comments != '') {
       show_comments = Boolean(articleDataValues.show_comments)
-    } else if (globalDataValues.show_comments != null && globalDataValues.show_comments !== '') {
+    } else if (globalDataValues.show_comments != null && globalDataValues.show_comments != '') {
       show_comments = Boolean(globalDataValues.show_comments)
     } else {
       show_comments = true;
     }
 
-    if (articleDataValues.show_date != null && articleDataValues.show_date !== '') {
+    if (articleDataValues.show_date != null && articleDataValues.show_date != '') {
       show_date = Boolean(articleDataValues.show_date)
-    } else if (globalDataValues.show_dates != null && globalDataValues.show_dates !== '') {
+    } else if (globalDataValues.show_dates != null && globalDataValues.show_dates != '') {
       show_date = Boolean(globalDataValues.show_dates)
     } else {
       show_date = true;
     }
 
-    if (articleDataValues.show_author != null && articleDataValues.show_author !== '') {
+    if (articleDataValues.show_author != null && articleDataValues.show_author != '') {
       show_author = Boolean(articleDataValues.show_author)
-    } else if (globalDataValues.show_authors != null && globalDataValues.show_authors !== '') {
+    } else if (globalDataValues.show_authors != null && globalDataValues.show_authors != '') {
       show_author = Boolean(globalDataValues.show_authors)
     } else {
       show_author = true;
