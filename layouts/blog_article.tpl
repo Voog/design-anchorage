@@ -30,8 +30,8 @@
                   <div class="inner content-area">
 
                     <div class="article-meta js-text-article-component{% if photo_article %} is-hidden{% endif %}">
-                      <time class="article-date{% if show_article_date == false %} hide-article-date{% endif %}{% if article_data_show_date_defined != true %} site-data{% endif %}" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
-                      <div class="article-author{% if show_article_author == false %} hide-article-author{% endif %}{% if article_data_show_author_defined != true %} site-data{% endif %}">{{ article.author.name }}</div>
+                      <time class="article-date{% if show_article_date == false %} hide-article-date{% endif %}{% if article_data_show_date_defined == true %} site-data{% endif %}" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
+                      <div class="article-author{% if show_article_author == false %} hide-article-author{% endif %}{% if article_data_show_author_defined == true %} site-data{% endif %}">{{ article.author.name }}</div>
                     </div>
 
                     <div class="comments-title comments-btn comments-toggle-btn js-comments-toggle-btn js-prevent-sideclick{% if show_article_comments == false %} hide-article-comments{% endif %}">
