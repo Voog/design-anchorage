@@ -938,6 +938,7 @@ a img {
   cursor: pointer;
   text-transform: uppercase;
   color: black;
+  margin-right: 30px;
 }
 .blog-article-page .comments-title:hover .comments-title-inner,
 .blog-article-page .comments-title:hover .comments-count {
@@ -1019,6 +1020,30 @@ a img {
   .blog-article-page.header-top-with-bg .header-bottom .voog-bg-picker-btn {
     top: 115px;
   }
+}
+
+.article-settings-wrap {
+  display: inline-block;
+}
+
+.blog-article-page .wrap .hide-article-comments,
+.blog-news-page .wrap .hide-article-comments,
+.site-header .wrap .hide-article-comments {
+  display: none;
+}
+.blog-article-page .wrap .article-date.hide-article-date,
+.blog-news-page .wrap .article-date.hide-article-date,
+.site-header .wrap .article-date.hide-article-date {
+  display: none;
+}
+.blog-article-page .wrap .article-author.hide-article-author,
+.blog-news-page .wrap .article-author.hide-article-author,
+.site-header .wrap .article-author.hide-article-author {
+  display: none;
+}
+
+.date-separator.hide-separator {
+  display: none;
 }
 
 .article-comments {
