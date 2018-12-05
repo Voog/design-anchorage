@@ -105,9 +105,10 @@
       buttonTitleI18n: "article_settings",
 
       preview: function(data) {
-       var $articleComment = $('.comments-title');
-        $articleDate = $('.article-date')
-        $articleAuthor = $('.article-author');
+       var $articleComment = $('.comments-title'),
+        $articleDate = $('.article-date'),
+        $articleAuthor = $('.article-author'),
+        $dateSeparator = $('.date-separator');
 
         if (data.show_date == true) {
           $articleDate.removeClass('hide-article-date');
@@ -120,9 +121,11 @@
         if (data.show_author == true) {
           $articleAuthor.removeClass('hide-article-author');
           $articleAuthor.addClass('show-article-author');
+          $dateSeparator.removeClass('hide-separator');
         } else if (data.show_author == false) {
           $articleAuthor.removeClass('show-article-author');
           $articleAuthor.addClass('hide-article-author');
+          $dateSeparator.addClass('hide-separator');
         }
 
         if (data.show_comments == true) {

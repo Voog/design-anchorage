@@ -78,7 +78,7 @@
                 {% assign article_date_format = "long" %}
               {% endif %}
 
-              <time class="article-date js-photo-article-component{% unless photo_article %} is-hidden{% endunless %}" datetime="{{ article.created_at | date: '%Y-%m-%d' }}{% if show_article_date == false %} hide-article-date{% endif %}{% if article_data_show_date_defined == true %} site-data{% endif %}">{{ article.created_at | format_date: article_date_format }}, </time>
+              <time class="article-date js-photo-article-component{% unless photo_article %} is-hidden{% endunless %}" datetime="{{ article.created_at | date: '%Y-%m-%d' }}{% if show_article_date == false %} hide-article-date{% endif %}{% if article_data_show_date_defined == true %} site-data{% endif %}">{{ article.created_at | format_date: article_date_format }}<span class="date-separator{% if show_article_author == false %} hide-separator{% endif %}">, </span></time>
               <div class="article-author js-photo-article-component{% unless photo_article %} is-hidden{% endunless %}{% if show_article_author == false %} hide-article-author{% endif %}{% if article_data_show_author_defined == true %} site-data{% endif %}">{{ article.author.name }}</div>
 
               {% comment %}Text article header components{% endcomment %}
