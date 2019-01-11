@@ -12,7 +12,7 @@
           .site-header .background-image {
             background-image: url("{{ imageSize.url }}");
           }
-        {% else %}
+        {% elsif imageSize.height >= 450px %}
           @media screen and (max-width: {{ imageSize.width }}px) {
             .site-header .background-image {
               background-image: url("{{ imageSize.url }}");
