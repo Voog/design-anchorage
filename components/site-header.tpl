@@ -4,7 +4,7 @@
     <div class="background-color js-background-color"></div>
 
     {% if render_header_top %}
-      <div class="header-top">
+      <div class="header-top {{ header_top_bg_type }}">
         <div class="wrap js-header-top-wrap">
 
           <div class="header-left js-header-left">

@@ -365,6 +365,42 @@ body {
 
 .header-top {
   background-color: var(--header-background-color);
+  color: var(--secondary-color);
+}
+.header-top a {
+  color: var(--secondary-color);
+}
+.header-top .header-title a,
+.header-top .header-title a:hover {
+  color: var(--secondary-color);
+}
+.header-top .menu li a {
+  color: var(--secondary-color);
+}
+.header-top .menu li a:hover {
+  color: var(--secondary-color);
+}
+.header-top .menu li.selected a {
+  color: var(--secondary-color);
+}
+.header-top.dark-background {
+  color: var(--third-color);
+}
+.header-top.dark-background a {
+  color: var(--third-color);
+}
+.header-top.dark-background .header-title a,
+.header-top.dark-background .header-title a:hover {
+  color: var(--third-color);
+}
+.header-top.dark-background .menu li a {
+  color: var(--third-color);
+}
+.header-top.dark-background .menu li a:hover {
+  color: var(--third-color);
+}
+.header-top.dark-background .menu li.selected a {
+  color: var(--third-color);
 }
 
 .content-area {
