@@ -367,7 +367,9 @@ body {
   background-color: var(--header-background-color);
   color: var(--secondary-color);
 }
-.header-top a {
+.header-top a,
+.header-top .header-title.content-area,
+.header-top .lang-menu.menu-language-list .lang-title a {
   color: var(--secondary-color);
 }
 .header-top .header-title a,
@@ -386,7 +388,9 @@ body {
 .header-top.dark-background {
   color: var(--third-color);
 }
-.header-top.dark-background a {
+.header-top.dark-background a,
+.header-top.dark-background .header-title.content-area,
+.header-top.dark-background .lang-menu.menu-language-list .lang-title a {
   color: var(--third-color);
 }
 .header-top.dark-background .header-title a,

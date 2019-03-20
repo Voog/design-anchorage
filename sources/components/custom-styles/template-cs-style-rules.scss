@@ -575,7 +575,9 @@ body {
 .header-top {
   background-color: var(--header-background-color);
   color: var(--secondary-color);
-  a {
+  a,
+  .header-title.content-area,
+  .lang-menu.menu-language-list .lang-title a {
     color: var(--secondary-color);
   }
 
@@ -598,7 +600,9 @@ body {
 
   &.dark-background {
     color: var(--third-color);
-    a {
+    a,
+    .header-title.content-area,
+    .lang-menu.menu-language-list .lang-title a {
       color: var(--third-color);
     }
 
