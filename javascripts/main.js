@@ -976,8 +976,7 @@
 				}
 				else {
           $('body').addClass('header-top-with-bg');
-          siteData.set('has_header_bg_color', true);
-          headerTopLightnessClass(headerBGcolor)
+          bindHeaderTopSettings(headerBGcolor)
         }
 
 			}
@@ -1013,14 +1012,22 @@
   };
 
   // Checks the lightness sum of header top color and sets the lightness class depending on it's value.
-  var headerTopLightnessClass = function(headerTopColor) {
+  var bindHeaderTopSettings = function(headerTopColor) {
     headerTopLightness = getHeaderTopLightness(headerTopColor);
     if (headerTopLightness > 0.6) {
       $('.header-top').addClass('light-background').removeClass('dark-background');
     } else {
       $('.header-top').addClass('dark-background').removeClass('light-background');
     }
-    siteData.set('header_top_lightness', headerTopLightness);
+
+    siteData.set({
+        "header_top_lightness": headerTopLightness,
+        "has_header_bg_color": true
+      },
+      {
+        success: function(data) {}
+      }
+    );
   };
 
   var init = function() {

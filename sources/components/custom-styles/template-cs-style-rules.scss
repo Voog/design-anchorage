@@ -574,29 +574,6 @@ body {
 // =============================================================================
 .header-top {
   background-color: var(--header-background-color);
-  color: var(--secondary-color);
-  a,
-  .header-title.content-area,
-  .lang-menu.menu-language-list .lang-title a {
-    color: var(--secondary-color);
-  }
-
-  .header-title a,
-  .header-title a:hover {
-    color: var(--secondary-color);
-  }
-
-  .menu li a {
-    color: var(--secondary-color);
-
-    &:hover {
-      color: var(--secondary-color);
-    }
-  }
-
-  .menu li.selected a {
-    color: var(--secondary-color);
-  }
 
   &.dark-background {
     color: var(--third-color);
@@ -621,6 +598,52 @@ body {
 
     .menu li.selected a {
       color: var(--third-color);
+    }
+
+    .mobile-menu-toggler {
+      span {
+        &,
+        &:before,
+        &:after {
+          background-color: var(--third-color);
+        }
+      }
+    }
+  }
+
+  &.light-background {
+    color: var(--secondary-color);
+    a,
+    .header-title.content-area,
+    .lang-menu.menu-language-list .lang-title a {
+      color: var(--secondary-color);
+    }
+
+    .header-title a,
+    .header-title a:hover {
+      color: var(--secondary-color);
+    }
+
+    .menu li a {
+      color: var(--secondary-color);
+
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+
+    .menu li.selected a {
+      color: var(--secondary-color);
+    }
+
+    .mobile-menu-toggler {
+      span {
+        &,
+        &:before,
+        &:after {
+          background-color: var(--secondary-color);
+        }
+      }
     }
   }
 }

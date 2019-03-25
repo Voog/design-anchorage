@@ -365,25 +365,6 @@ body {
 
 .header-top {
   background-color: var(--header-background-color);
-  color: var(--secondary-color);
-}
-.header-top a,
-.header-top .header-title.content-area,
-.header-top .lang-menu.menu-language-list .lang-title a {
-  color: var(--secondary-color);
-}
-.header-top .header-title a,
-.header-top .header-title a:hover {
-  color: var(--secondary-color);
-}
-.header-top .menu li a {
-  color: var(--secondary-color);
-}
-.header-top .menu li a:hover {
-  color: var(--secondary-color);
-}
-.header-top .menu li.selected a {
-  color: var(--secondary-color);
 }
 .header-top.dark-background {
   color: var(--third-color);
@@ -405,6 +386,33 @@ body {
 }
 .header-top.dark-background .menu li.selected a {
   color: var(--third-color);
+}
+.header-top.dark-background .mobile-menu-toggler span, .header-top.dark-background .mobile-menu-toggler span:before, .header-top.dark-background .mobile-menu-toggler span:after {
+  background-color: var(--third-color);
+}
+.header-top.light-background {
+  color: var(--secondary-color);
+}
+.header-top.light-background a,
+.header-top.light-background .header-title.content-area,
+.header-top.light-background .lang-menu.menu-language-list .lang-title a {
+  color: var(--secondary-color);
+}
+.header-top.light-background .header-title a,
+.header-top.light-background .header-title a:hover {
+  color: var(--secondary-color);
+}
+.header-top.light-background .menu li a {
+  color: var(--secondary-color);
+}
+.header-top.light-background .menu li a:hover {
+  color: var(--secondary-color);
+}
+.header-top.light-background .menu li.selected a {
+  color: var(--secondary-color);
+}
+.header-top.light-background .mobile-menu-toggler span, .header-top.light-background .mobile-menu-toggler span:before, .header-top.light-background .mobile-menu-toggler span:after {
+  background-color: var(--secondary-color);
 }
 
 .content-area {
