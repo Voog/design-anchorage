@@ -910,8 +910,10 @@
 
 				if (headerBGcolor === undefined) {
           $('body').removeClass('header-top-with-bg');
-          siteData.remove('header_top_lightness');
-          siteData.remove('has_header_bg_color');
+          siteData.set({
+            "header_top_lightness": null,
+            "has_header_bg_color": null
+          });
 
           if (headerTop.hasClass('dark-background')) {
             headerTop.removeClass('dark-background');
