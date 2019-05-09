@@ -906,19 +906,76 @@
   var detectDesignEditorChanges = function() {
     document.addEventListener('edicy:customstyles:change', function(event) {
 			if (Object.keys(event.detail.changes).indexOf('--header-background-color') > -1) {
-				if (event.detail.changes['--header-background-color'].value === undefined) {
-          $('body').removeClass('header-top-with-bg');
+        var headerBGcolor = event.detail.changes['--header-background-color'].value,
+          headerTop = $('.header-top');
 
-          siteData.remove('has_header_bg_color');
+				if (headerBGcolor === undefined) {
+          $('body').removeClass('header-top-with-bg');
+          siteData.set({
+            "header_top_lightness": null,
+            "has_header_bg_color": null
+          });
+
+          if (headerTop.hasClass('dark-background')) {
+            headerTop.removeClass('dark-background');
+          } else {
+            headerTop.removeClass('light-background');
+          }
 				}
 				else {
           $('body').addClass('header-top-with-bg');
-
-          siteData.set('has_header_bg_color', true);
-				}
+          bindHeaderTopSettings(headerBGcolor)
+        }
 
 			}
     });
+  };
+
+  var headerTopColorSum = function(fgColor) {
+    if (typeof fgColor == 'string') {
+      fgColor = fgColor.replace(/rgba?\(/,'').replace(/\)/,'').split(',');
+      $.each(fgColor, function(n, x) {fgColor[n] = +x;});
+    }
+    if (typeof fgColor == 'object' && fgColor.hasOwnProperty('length')) {
+      if (fgColor.length == 3) { fgColor.push(1.0); }
+    }
+    var result = [0, 0, 0, 0];
+    result[3] = 1 - (1 - fgColor[3]);
+    if (result[3] === 0) { result[3] = 1e-6; }
+    result[0] = Math.min(fgColor[0] * fgColor[3] / result[3]);
+    result[1] = Math.min(fgColor[1] * fgColor[3] / result[3]);
+    result[2] = Math.min(fgColor[2] * fgColor[3] / result[3]);
+    return $.map(result, function(e) { return Math.floor(e); });
+  };
+
+  var getHeaderTopCombinedColor = function(fgColor) {
+    var sum = headerTopColorSum(fgColor || [255,255,255,1]);
+    return sum;
+  };
+
+  var getHeaderTopLightness = function(fgColor) {
+    var combinedBgColor = getHeaderTopCombinedColor(fgColor);
+    var color = Math.round(((+combinedBgColor[0]) * 0.2126 + (+combinedBgColor[1]) * 0.7152 + (+combinedBgColor[2]) * 0.0722) / 2.55) / 100;
+    return color;
+  };
+
+  // Checks the lightness sum of header top color and sets the lightness class depending on it's value.
+  var bindHeaderTopSettings = function(headerTopColor) {
+    headerTopLightness = getHeaderTopLightness(headerTopColor);
+    if (headerTopLightness > 0.6) {
+      $('.header-top').addClass('light-background').removeClass('dark-background');
+    } else {
+      $('.header-top').addClass('dark-background').removeClass('light-background');
+    }
+
+    siteData.set({
+        "header_top_lightness": headerTopLightness,
+        "has_header_bg_color": true
+      },
+      {
+        success: function(data) {}
+      }
+    );
   };
 
   var init = function() {
