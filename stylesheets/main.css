@@ -697,9 +697,9 @@ a img {
 }
 @media screen and (min-width: 1025px) {
   .common-page .sidebar-active .page-content {
-    display: inline-block;
+    float: right;
     vertical-align: top;
-    width: calc(100% - 265px);
+    width: calc(100% - 260px);
   }
 }
 .common-page .main-content .wrap {
@@ -2698,7 +2698,7 @@ a img {
 }
 
 .site-sidebar {
-  display: inline-block;
+  float: left;
   vertical-align: top;
   width: 220px;
   margin: 50px 0 50px 40px;

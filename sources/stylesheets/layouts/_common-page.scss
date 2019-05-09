@@ -27,9 +27,9 @@
 
     .page-content {
       @media screen and (min-width: $tablet-1 + 1) {
-        display: inline-block;
+        float: right;
         vertical-align: top;
-        width: calc(100% - 265px);
+        width: calc(100% - 260px);
       }
     }
   }
