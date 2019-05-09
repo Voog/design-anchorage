@@ -70,11 +70,12 @@
   var bindLanguageMenuPositioning = function(currentButton) {
     var offsetItem = $('html').hasClass('language-flags-disabled') ? currentButton.find('.js-lang-title-inner') : currentButton,
         rightOffsetHelper = $('html').hasClass('language-flags-disabled') ? 5 : 9;
-
-    $('.js-popup-menu-popover').css({
-      top: offsetItem.offset().top + offsetItem.outerHeight() - $('.site-container').offset().top,
-      right: $(window).width() - offsetItem.offset().left - offsetItem.outerWidth() - rightOffsetHelper
-    });
+    if (offsetItem.length > 0) {
+      $('.js-popup-menu-popover').css({
+        top: offsetItem.offset().top + offsetItem.outerHeight() - $('.site-container').offset().top,
+        right: $(window).width() - offsetItem.offset().left - offsetItem.outerWidth() - rightOffsetHelper
+      });
+    }
   };
 
   // ===========================================================================
