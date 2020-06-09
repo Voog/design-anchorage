@@ -42,7 +42,7 @@
       <ul class="js-menu-main-mobile">
         {% for language in site.languages %}
           <li class="lang-item">
-            <a class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} is-active{% endif %}" href="{{ language.url }}" data-lang-code="{{ language.code }}">{{ language.title }}</a>
+            <a class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} is-active{% endif %}" href="{{ language.url }}" data-lang-code="{{ language.locale }}">{{ language.title }}</a>
           </li>
         {% endfor %}
         {% if editmode %}

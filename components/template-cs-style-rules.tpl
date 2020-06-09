@@ -98,12 +98,11 @@ body {
 .blog-news-page .article-title a {
   color: var(--secondary-color);
 }
-.blog-news-page .article-author,
-.blog-news-page .article-date {
+.blog-news-page .article-author, .blog-news-page .article-date {
   color: var(--secondary-color);
 }
-.dark-background .blog-news-page .article-author, .dark-background
-.blog-news-page .article-date {
+.dark-background .blog-news-page .article-author,
+.dark-background .blog-news-page .article-date {
   color: rgba(255, 255, 255, 0.35);
 }
 .blog-news-page .article-excerpt {
@@ -367,6 +366,54 @@ body {
 .header-top {
   background-color: var(--header-background-color);
 }
+.header-top.dark-background {
+  color: var(--third-color);
+}
+.header-top.dark-background a,
+.header-top.dark-background .header-title.content-area,
+.header-top.dark-background .lang-menu.menu-language-list .lang-title a {
+  color: var(--third-color);
+}
+.header-top.dark-background .header-title a,
+.header-top.dark-background .header-title a:hover {
+  color: var(--third-color);
+}
+.header-top.dark-background .menu li a {
+  color: var(--third-color);
+}
+.header-top.dark-background .menu li a:hover {
+  color: var(--third-color);
+}
+.header-top.dark-background .menu li.selected a {
+  color: var(--third-color);
+}
+.header-top.dark-background .mobile-menu-toggler span, .header-top.dark-background .mobile-menu-toggler span:before, .header-top.dark-background .mobile-menu-toggler span:after {
+  background-color: var(--third-color);
+}
+.header-top.light-background {
+  color: var(--secondary-color);
+}
+.header-top.light-background a,
+.header-top.light-background .header-title.content-area,
+.header-top.light-background .lang-menu.menu-language-list .lang-title a {
+  color: var(--secondary-color);
+}
+.header-top.light-background .header-title a,
+.header-top.light-background .header-title a:hover {
+  color: var(--secondary-color);
+}
+.header-top.light-background .menu li a {
+  color: var(--secondary-color);
+}
+.header-top.light-background .menu li a:hover {
+  color: var(--secondary-color);
+}
+.header-top.light-background .menu li.selected a {
+  color: var(--secondary-color);
+}
+.header-top.light-background .mobile-menu-toggler span, .header-top.light-background .mobile-menu-toggler span:before, .header-top.light-background .mobile-menu-toggler span:after {
+  background-color: var(--secondary-color);
+}
 
 .content-area {
   font-size: var(--content-body-font-size);
@@ -399,18 +446,18 @@ body {
 .header-bottom .content-area, .page-body .content-area {
   text-align: var(--content-body-alignment);
 }
-.dark-background .content-area h1, .dark-background
-.content-area h2, .dark-background
-.content-area h3, .dark-background
-.content-area h4, .dark-background
-.content-area h5, .dark-background
-.content-area h6, .dark-background
-.content-area p, .dark-background
-.content-area ul, .dark-background
-.content-area ol, .dark-background
-.content-area pre, .dark-background
-.content-area code, .dark-background
-.content-area table {
+.dark-background .content-area h1,
+.dark-background .content-area h2,
+.dark-background .content-area h3,
+.dark-background .content-area h4,
+.dark-background .content-area h5,
+.dark-background .content-area h6,
+.dark-background .content-area p,
+.dark-background .content-area ul,
+.dark-background .content-area ol,
+.dark-background .content-area pre,
+.dark-background .content-area code,
+.dark-background .content-area table {
   color: var(--third-color);
 }
 .content-area h1,
@@ -429,22 +476,16 @@ body {
 .content-area h6 a {
   color: var(--secondary-color);
 }
-.content-area p,
-.content-area ul,
-.content-area ol,
-.content-area dl {
+.content-area p, .content-area ul, .content-area ol, .content-area dl {
   font-size: var(--content-body-font-size);
 }
-.site-footer .content-area p, .site-footer
-.content-area ul, .site-footer
-.content-area ol, .site-footer
-.content-area dl {
+.site-footer .content-area p,
+.site-footer .content-area ul,
+.site-footer .content-area ol,
+.site-footer .content-area dl {
   color: var(--primary-color);
 }
-.site-footer .dark-background .content-area p, .site-footer .dark-background
-.content-area ul, .site-footer .dark-background
-.content-area ol, .site-footer .dark-background
-.content-area dl {
+.site-footer .dark-background .content-area p, .site-footer .dark-background .content-area ul, .site-footer .dark-background .content-area ol, .site-footer .dark-background .content-area dl {
   color: var(--third-color);
 }
 .content-area h1,

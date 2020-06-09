@@ -72,6 +72,7 @@
     cursor: pointer;
     text-transform: uppercase;
     color: rgba($black, 1);
+    margin-right: 30px;
 
     &:hover {
       .comments-title-inner,
@@ -171,4 +172,35 @@
     }
   }
 
+}
+
+.article-settings-wrap {
+  display: inline-block;
+}
+
+.blog-article-page,
+.blog-news-page,
+.site-header {
+  .wrap {
+    .hide-article-comments {
+      display: none;
+    }
+
+    .article-date {
+      &.hide-article-date {
+        display: none;
+      }
+    }
+    .article-author {
+      &.hide-article-author {
+        display: none;
+      }
+    }
+  }
+}
+
+.date-separator {
+  &.hide-separator {
+    display: none
+  }
 }
