@@ -8,8 +8,8 @@
 
     {% assign row_settings = page.data.row_settings %}
 
-    {% if row_settings.row_items_count != nil %}
-      {% assign row_count = row_settings.row_items_count %}
+    {% if row_settings.items_count != nil and row_settings.items_count != "" %}
+      {% assign row_count = row_settings.items_count %}
     {% else %}
       {% assign row_count = 1 %}
     {% endif %}
@@ -18,23 +18,23 @@
       .container-row-flex {
         display: flex;
         flex-wrap: wrap;
-        {% if row_settings.row_padding != nil %}
-          margin: 0 -{{row_settings.row_padding}}px;
+        {% if row_settings.padding != nil %}
+          margin: 0 -{{row_settings.padding}}px;
         {% endif %}
       }
       .col-item {
         flex: auto;
-        {% if row_settings.row_min_width %}
-          min-width: {{row_settings.row_min_width}}px;
-        {% if row_settings.row_padding %}
+        {% if row_settings.min_width %}
+          min-width: {{row_settings.min_width}}px;
+        {% if row_settings.padding %}
         {% endif %}
-          padding: {{row_settings.row_padding}}px;
+          padding: {{row_settings.padding}}px;
         {% endif %}
       }
 
       .container-row-{{row_count}} .col-item {
-        {% if row_settings.row_padding != nil %}
-          width: calc(100%/{{row_count}} - {{row_settings.row_padding}}*2px);
+        {% if row_settings.padding != nil %}
+          width: calc(100%/{{row_count}} - {{row_settings.padding}}*2px);
         {% else %}
           width: calc(100%/{{row_count}});
         {% endif %}

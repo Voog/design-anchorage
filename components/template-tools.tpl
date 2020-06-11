@@ -117,7 +117,7 @@
     {% if page.data.row_settings %}
       var valuesObj = {{ page.data.row_settings | json }};
     {% else %}
-      var valuesObj = {row_items_count: "1"};
+      var valuesObj = {items_count: "1"};
     {% endif %};
 
     var settingsBtn = document.querySelector('.js-settings-btn');
@@ -127,7 +127,7 @@
         {
           "title": "Rows count",
           "type": "select",
-          "key": "row_items_count",
+          "key": "items_count",
           "list": [
             {"title": "1", "value": "1"},
             {"title": "2", "value": "2"},
@@ -143,14 +143,14 @@
           "title": "Min row item width in px",
           "type": "number",
           "min": 1,
-          "key": "row_min_width",
+          "key": "min_width",
           "placeholder": "Set min row item width in px"
         },
         {
           "title": "Row item padding in px",
           "type": "number",
           "min": 1,
-          "key": "row_padding",
+          "key": "padding",
           "placeholder": "Set item padding in px"
         }
       ],
