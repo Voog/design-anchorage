@@ -6,37 +6,37 @@
     {% include "html-head" sidebar: true %}
     {% include "template-styles" %}
 
-    {% assign row_settings = page.data.row_settings %}
+    {% assign column_settings = page.data.column_settings %}
 
-    {% if row_settings.items_count != nil and row_settings.items_count != "" %}
-      {% assign row_count = row_settings.items_count %}
+    {% if column_settings.items_count != nil and column_settings.items_count != "" %}
+      {% assign column_count = column_settings.items_count %}
     {% else %}
-      {% assign row_count = 1 %}
+      {% assign column_count = 1 %}
     {% endif %}
 
     <style>
-      .container-row-flex {
+      .container-column-flex {
         display: flex;
         flex-wrap: wrap;
-        {% if row_settings.padding != nil %}
-          margin: 0 -{{row_settings.padding}}px;
+        {% if column_settings.padding != nil %}
+          margin: 0 -{{column_settings.padding}}px;
         {% endif %}
       }
       .col-item {
         flex: auto;
-        {% if row_settings.min_width %}
-          min-width: {{row_settings.min_width}}px;
-        {% if row_settings.padding %}
+        {% if column_settings.min_width %}
+          min-width: {{column_settings.min_width}}px;
+        {% if column_settings.padding %}
         {% endif %}
-          padding: {{row_settings.padding}}px;
+          padding: {{column_settings.padding}}px;
         {% endif %}
       }
 
-      .container-row-{{row_count}} .col-item {
-        {% if row_settings.padding != nil %}
-          width: calc(100%/{{row_count}} - {{row_settings.padding}}*2px);
+      .container-column-{{column_count}} .col-item {
+        {% if column_settings.padding != nil %}
+          width: calc(100%/{{column_count}} - {{column_settings.padding}}*2px);
         {% else %}
-          width: calc(100%/{{row_count}});
+          width: calc(100%/{{column_count}});
         {% endif %}
       }
     </style>
@@ -58,8 +58,8 @@
             {% endif %}
 
             <main class="page-content" role="main">
-              <div class="main-inner-row content-full">
-                <div class="main-content top-row">
+              <div class="main-inner-column content-full">
+                <div class="main-content top-column">
                   <div class="wrap">
                     {% if editmode or main_has_content %}
                       <div class="inner{% if editmode or left_has-content or right_has_content %} has-bottom-content{% endif %}">
@@ -68,16 +68,16 @@
                         {% comment %}TODO: Remove duplicate content-arera class.{% endcomment %}
                         <section class="content-area">
                           {% if editmode %}
-                            <button disabled class="js-settings-btn">Rows editor</button>
+                            <button disabled class="js-settings-btn">columns editor</button>
                           {% endif %}
 
                           {% assign count = 1 %}
 
-                          {% if row_count %}
-                            {% assign count = row_count | to_num %}
+                          {% if column_count %}
+                            {% assign count = column_count | to_num %}
                           {% endif %}
 
-                          <div class="content-body container-row-flex container-row-{{ row_count }}">
+                          <div class="content-body container-column-flex container-column-{{ column_count }}">
                           {% for i in (1..count) %}
                             {% if forloop.first != true %}
                               {% assign name = "col-" | append: i %}

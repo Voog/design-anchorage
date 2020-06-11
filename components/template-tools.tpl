@@ -110,8 +110,8 @@
     // Modular content area settings
     //==========================================================================
 
-    {% if page.data.row_settings %}
-      var valuesObj = {{ page.data.row_settings | json }};
+    {% if page.data.column_settings %}
+      var valuesObj = {{ page.data.column_settings | json }};
     {% else %}
       var valuesObj = {items_count: "1"};
     {% endif %};
@@ -121,7 +121,7 @@
     var SettingsEditor = new Edicy.SettingsEditor(settingsBtn, {
       menuItems: [
         {
-          "title": "Rows count",
+          "title": "Columns count",
           "type": "select",
           "key": "items_count",
           "list": [
@@ -136,14 +136,14 @@
           ]
         },
         {
-          "title": "Min row item width in px",
+          "title": "Min item width in px",
           "type": "number",
           "min": 1,
           "key": "min_width",
           "placeholder": "Set min row item width in px"
         },
         {
-          "title": "Row item padding in px",
+          "title": "Item padding in px",
           "type": "number",
           "min": 1,
           "key": "padding",
@@ -154,7 +154,7 @@
       values: valuesObj,
 
       commit: function(data) {
-        pageData.set('row_settings', data, {
+        pageData.set('column_settings', data, {
           success: function() {
             // reloading is necessary to rerender the content areas
             window.location.reload();
