@@ -18,13 +18,13 @@
       .container-column-flex {
         display: flex;
         flex-wrap: wrap;
-        {% if column_settings.padding != nil %}
+        {% if column_settings.padding != nil and column_settings.padding != "" %}
           margin: 0 -{{column_settings.padding}}px;
         {% endif %}
       }
       .col-item {
         flex: auto;
-        {% if column_settings.min_width %}
+        {% if column_settings.min_width != nil and column_settings.min_width != "" %}
           min-width: {{column_settings.min_width}}px;
         {% if column_settings.padding %}
         {% endif %}
@@ -33,7 +33,7 @@
       }
 
       .container-column-{{column_count}} .col-item {
-        {% if column_settings.padding != nil %}
+        {% if column_settings.padding != nil and column_settings.padding != "" %}
           width: calc(100%/{{column_count}} - {{column_settings.padding}}*2px);
         {% else %}
           width: calc(100%/{{column_count}});
