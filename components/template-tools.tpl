@@ -109,10 +109,6 @@
     //==========================================================================
     // Modular content area settings
     //==========================================================================
-    var pageData = new Edicy.CustomData({
-      type: 'page',
-      id: {{ page.id }}
-    });
 
     {% if page.data.row_settings %}
       var valuesObj = {{ page.data.row_settings | json }};
