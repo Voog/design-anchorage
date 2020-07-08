@@ -8,16 +8,16 @@
     {
       "content_type": "page",
       "component": false,
-      "file": "layouts/front_page.tpl",
-      "layout_name": "page_front",
-      "title": "Front page"
+      "file": "layouts/product.tpl",
+      "layout_name": "product",
+      "title": "Product"
     },
     {
       "content_type": "page",
       "component": false,
-      "file": "layouts/product_list.tpl",
-      "layout_name": "product_list",
-      "title": "Product list"
+      "file": "layouts/front_page.tpl",
+      "layout_name": "page_front",
+      "title": "Front page"
     },
     {
       "content_type": "page",
@@ -29,9 +29,9 @@
     {
       "content_type": "page",
       "component": false,
-      "file": "layouts/product.tpl",
-      "layout_name": "product",
-      "title": "Product"
+      "file": "layouts/product_list.tpl",
+      "layout_name": "product_list",
+      "title": "Product list"
     },
     {
       "content_type": "blog",
@@ -50,9 +50,51 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/template-cs-sidebar.tpl",
+      "layout_name": "template-cs-sidebar",
+      "title": "template-cs-sidebar"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-level-1-link.tpl",
+      "layout_name": "menu-level-1-link",
+      "title": "menu-level-1-link"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-header.tpl",
+      "layout_name": "template-cs-header",
+      "title": "template-cs-header"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-headings.tpl",
+      "layout_name": "template-cs-headings",
+      "title": "template-cs-headings"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-table.tpl",
+      "layout_name": "template-cs-table",
+      "title": "template-cs-table"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/template-meta.tpl",
       "layout_name": "template-meta",
       "title": "template-meta"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-signout.tpl",
+      "layout_name": "site-signout",
+      "title": "site-signout"
     },
     {
       "content_type": "component",
@@ -134,9 +176,16 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/template-cs-sidebar.tpl",
-      "layout_name": "template-cs-sidebar",
-      "title": "template-cs-sidebar"
+      "file": "components/blog-settings-variables.tpl",
+      "layout_name": "blog-settings-variables",
+      "title": "blog-settings-variables"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-content.tpl",
+      "layout_name": "template-cs-content",
+      "title": "template-cs-content"
     },
     {
       "content_type": "component",
@@ -281,6 +330,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/article-settings-editor.tpl",
+      "layout_name": "article-settings-editor",
+      "title": "article-settings-editor"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/template-cs-form.tpl",
       "layout_name": "template-cs-form",
       "title": "template-cs-form"
@@ -288,44 +344,16 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/blog-settings-editor.tpl",
+      "layout_name": "blog-settings-editor",
+      "title": "blog-settings-editor"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/menu-language-popover.tpl",
       "layout_name": "menu-language-popover",
       "title": "menu-language-popover"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/template-cs-content.tpl",
-      "layout_name": "template-cs-content",
-      "title": "template-cs-content"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/menu-level-1-link.tpl",
-      "layout_name": "menu-level-1-link",
-      "title": "menu-level-1-link"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/template-cs-header.tpl",
-      "layout_name": "template-cs-header",
-      "title": "template-cs-header"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/template-cs-headings.tpl",
-      "layout_name": "template-cs-headings",
-      "title": "template-cs-headings"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/template-cs-table.tpl",
-      "layout_name": "template-cs-table",
-      "title": "template-cs-table"
     }
   ],
   "assets": [

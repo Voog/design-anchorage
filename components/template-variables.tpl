@@ -72,6 +72,17 @@
     {% endif %}
   {% endif %}
 
+  {% assign header_top_lightness = site.data.header_top_lightness %}
+  {% if site.data.has_header_bg_color %}
+    {% if header_top_lightness %}
+      {% if header_top_lightness > 0.6 %}
+        {% assign header_top_bg_type = "light-background" %}
+      {% else %}
+        {% assign header_top_bg_type = "dark-background" %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+
   {% comment %}SITE HEADER RELATED VARIABLES.{% endcomment %}
   {% comment %}Assign variables based on page type.{% endcomment %}
   {% assign header_bg = page.data.header_bg %}

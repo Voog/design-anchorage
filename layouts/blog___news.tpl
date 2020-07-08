@@ -26,10 +26,17 @@
               <div class="main-content">
                 <div class="wrap">
                   <div class="inner">
+                    <div class="blog-intro-content content-area" data-search-indexing-allowed="true">{% content %}</div>
+
                     {% include "blog-news-tags" %}
+
                     <section class="blog-articles content-area">
                       {% addbutton %}
+                      {% if editmode %}
+                        {% include "blog-settings-editor" %}
+                      {% endif %}
                       {% for article in articles limit: 5 %}
+                        {% include "blog-settings-variables" %}
                         {% include "blog-article-template" %}
                       {% endfor %}
                     </section>
@@ -41,6 +48,7 @@
                           <h2 class="articles-listing-title">{{ "older_news" | lc }}</h2>
                         </header>
                         {% for article in articles offset: 5 %}
+                          {% include "blog-settings-variables" %}
                           <article class="blog-article">
                             <header class="article-header">
                               {% assign article_year = article.created_at | format_date: "%Y" | to_num %}
@@ -51,7 +59,7 @@
                                 {% assign article_date_format = "long" %}
                               {% endif %}
 
-                              <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
+                              <time class="article-date{% if show_article_date == false %} hide-article-date{% endif %}{% if article_data_show_date_defined != true %} site-data{% endif %}" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
                               <h1 class="article-title"><a href="{{ article.url }}">{{ article.title }}</a></h1>
                             </header>
                           </article>
@@ -72,6 +80,7 @@
 
 
     {% include "menu-mobile" %}
+    {% include "site-signout" %}
     {% include "site-javascripts" %}
     {% include "template-tools" with "blog_page" %}
     <script>

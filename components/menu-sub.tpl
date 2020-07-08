@@ -1,4 +1,4 @@
-{% for item in site.visible_menuitems %}
+{% for item in site.menuitems  %}
   {% if item.selected? and item.children? or editmode %}
     <ul class="submenu">
       {% for subitem in item.visible_children %}

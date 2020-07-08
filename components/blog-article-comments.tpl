@@ -1,4 +1,4 @@
-<section class="article-comments js-comments js-prevent-sideclick{% unless comment.valid? %} open{% endunless %}">
+<section class="article-comments js-comments js-prevent-sideclick{% unless comment.valid? %} open{% endunless %}{% if show_article_comments == false %} hide-article-comments{% endif %}">
   <div class="comments-body light-background">
     <header class="comments-header">
       <h1 class="comments-title">{{ "add_a_comment" | lc }}</h1>

@@ -70,11 +70,12 @@
   var bindLanguageMenuPositioning = function(currentButton) {
     var offsetItem = $('html').hasClass('language-flags-disabled') ? currentButton.find('.js-lang-title-inner') : currentButton,
         rightOffsetHelper = $('html').hasClass('language-flags-disabled') ? 5 : 9;
-
-    $('.js-popup-menu-popover').css({
-      top: offsetItem.offset().top + offsetItem.outerHeight(),
-      right: $(window).width() - offsetItem.offset().left - offsetItem.outerWidth() - rightOffsetHelper
-    });
+    if (offsetItem.length > 0) {
+      $('.js-popup-menu-popover').css({
+        top: offsetItem.offset().top + offsetItem.outerHeight() - $('.site-container').offset().top,
+        right: $(window).width() - offsetItem.offset().left - offsetItem.outerWidth() - rightOffsetHelper
+      });
+    }
   };
 
   // ===========================================================================
@@ -281,11 +282,19 @@
     }
   };
 
+  var normalizeValue = function(value) {
+    if (value == null || (typeof value == 'string' && value.match(/^[\\'"]+$/))) {
+      return '';
+    } else {
+      return value;
+    }
+  };
+
   // Header background image and color save logic function.
   var bgPickerCommit = function(dataBgKey, data, bgPicker, pageType) {
     var commitData = $.extend(true, {}, data);
     commitData.image = data.image || '';
-    commitData.imageSizes = data.imageSizes || '';
+    commitData.imageSizes = normalizeValue(data.imageSizes);
     commitData.color = data.color || '';
     commitData.combinedLightness = bgPicker.combinedLightness;
 
@@ -352,7 +361,7 @@
   };
 
   var setImageOrientation = function($contentItemBox, width, height) {
-    var $imgDropAreaTarget = $contentItemBox.find('.js-img-drop-area'),
+    var $imgDropAreaTarget = $contentItemBox.find('.js-content-item-img-drop-area'),
         $cropToggleButton = $contentItemBox.find('.js-toggle-crop-state');
 
     if (width > height) {
@@ -386,13 +395,11 @@
   };
 
   var setItemImage = function($contentItemBox, $imgDropArea, itemId, imageId, itemType) {
-    var apiType;
-
-    if (itemType === 'article') {
-      apiType = 'articles';
-    } else {
-      apiType = 'pages';
-    }
+    var apiType = itemType === 'article' ? 'articles' : 'pages',
+        itemData = new Edicy.CustomData({
+          type: itemType,
+          id: itemId
+        });
 
     $.ajax({
        type: 'PATCH',
@@ -401,7 +408,9 @@
        data: JSON.stringify({'image_id': imageId}),
        dataType: 'json',
        success: function(data) {
+         itemData.set('image_crop_state', 'not-cropped');
          $contentItemBox.removeClass('not-loaded with-error').addClass('is-loaded');
+         $contentItemBox.find('.edy-img-drop-area-placeholder').css('opacity', 1);
          $imgDropArea.css('opacity', 1);
        },
        timeout: 30000,
@@ -412,84 +421,41 @@
   };
 
   // ===========================================================================
-  // Binds editmode backgroun picker areas.
-  // ===========================================================================
-  var bindContentItemBgPickers = function() {
-    $('.js-bg-picker-area').each(function(index, bgPickerArea) {
-      var $bgPickerArea = $(bgPickerArea),
-          $bgPickerButton = $bgPickerArea.find('.js-bg-picker-btn'),
-          $contentItemBox = $bgPickerArea.closest('.js-content-item-box'),
-          itemId = $contentItemBox.data('item-id'),
-          itemType = $contentItemBox.data('item-type'),
-          dataBgKey = $bgPickerButton.data('bg-key'),
-          $imgDropArea = $bgPickerArea.find('.js-img-drop-area');
-
-      var bgPicker = new Edicy.BgPicker($bgPickerButton, {
-        picture: $bgPickerButton.data('bg-picture-boolean'),
-        target_width: $bgPickerButton.data('bg-target-width'),
-        color: $bgPickerButton.data('bg-color-boolean'),
-
-        preview: function(data) {
-          setImageOrientation($contentItemBox, data.width, data.height);
-
-          $bgPickerArea.eq(0).data('imgDropArea').setData({
-            id: data.original_id,
-            url: data.image,
-            width: data.width,
-            height: data.height
-          });
-
-          $contentItemBox.removeClass('is-loaded not-loaded with-error');
-
-          $imgDropArea
-            .removeClass('is-cropped')
-            .addClass('not-cropped')
-            .css('opacity', .1)
-          ;
-        },
-
-        commit: function(data) {
-          $contentItemBox.addClass('not-loaded');
-          setItemImage($contentItemBox, $imgDropArea, itemId, data.original_id, itemType);
-        }
-      });
-
-      $bgPickerArea.data('bgpicker', bgPicker);
-    });
-  };
-
-  // ===========================================================================
   // Binds editmode image drop areas.
   // ===========================================================================
   var bindContentItemImgDropAreas = function(placeholderText) {
-    $('.js-img-drop-area').each(function(index, imgDropAreaTarget) {
+    $('.js-content-item-img-drop-area').each(function(index, imgDropAreaTarget) {
       var $imgDropAreaTarget = $(imgDropAreaTarget),
           $contentItemBox = $imgDropAreaTarget.closest('.js-content-item-box'),
-          $bgPickerArea = $contentItemBox.find('.js-bg-picker-area'),
           itemId = $contentItemBox.data('item-id'),
           itemType = $contentItemBox.data('item-type'),
-          articleData = new Edicy.CustomData({
-            type: 'article',
+          itemData = new Edicy.CustomData({
+            type: itemType,
             id: itemId
-          }),
-          pageData = new Edicy.CustomData({
-            type: 'page',
-            id: $contentItemBox.data('item-id')
           });
 
       var imgDropArea = new Edicy.ImgDropArea($imgDropAreaTarget, {
         positionable: false,
         target_width: 1280,
-        removeBtn: '',
         placeholder: '<div class="edy-img-drop-area-placeholder">' + placeholderText + '</div>',
+        removeBtn: '<div class="edy-img-drop-area-remove-image">' +
+                      '<div class="edy-img-drop-area-remove-image-ico">' +
+                        '<svg width="16" height="20" viewBox="0 0 26 30" xmlns="http://www.w3.org/2000/svg">' +
+                          '<g fill-rule="nonzero" fill="currentColor">' +
+                            '<g transform="translate(2 5)">' +
+                              '<path d="M0 .997h2V21c0 1 1 2 2 2h14c1 0 2-1 2-2V1h2v20c0 2.25-1.75 4-4 4H4c-2.25 0-4-1.75-4-4V.997z"/>' +
+                              '<rect x="10" y="4" width="2" height="16" rx="1"/>' +
+                              '<rect x="5" y="4" width="2" height="16" rx="1"/>' +
+                              '<rect x="15" y="4" width="2" height="16" rx="1"/>' +
+                            '</g>' +
+                            '<path d="M26 4v2H0V4h7V2c0-1 1-2 2-2h8c1 0 2 1 2 2v2h7zM9 4h8V3c0-.5-.5-1-1-1h-6c-.5 0-1 .5-1 1v1z"/>' +
+                          '</g>' +
+                        '</svg>' +
+                      '</div>' +
+                    '</div>',
 
         change: function(data) {
-          var $bgPickerButton = $contentItemBox.find('.js-bg-picker-btn');
-
-          $contentItemBox
-            .removeClass('without-image is-loaded with-error')
-            .addClass('with-image not-loaded')
-          ;
+          var imageId;
 
           $imgDropAreaTarget
             .removeClass('is-cropped')
@@ -497,27 +463,29 @@
             .css('opacity', .1)
           ;
 
-          setImageOrientation($contentItemBox, data.width, data.height);
+          if (data) {
+            imageId = data.original_id;
 
+            $contentItemBox
+              .removeClass('without-image is-loaded with-error')
+              .addClass('with-image not-loaded')
+            ;
 
-          $bgPickerArea.eq(0).data('bgpicker').setData({
-            id: data.original_id,
-            image: data.url,
-            width: data.width,
-            height: data.height
-          });
-
-          setItemImage($contentItemBox, $imgDropAreaTarget, itemId, data.original_id, itemType);
-
-          if (itemType === 'article') {
-            articleData.set('image_crop_state', 'not-cropped');
+            setImageOrientation($contentItemBox, data.width, data.height);
           } else {
-            pageData.set('image_crop_state', 'not-cropped');
+            imageId = null;
+
+            $contentItemBox
+              .removeClass('with-image is-loaded with-error')
+              .addClass('without-image not-loaded')
+            ;
+
+            $contentItemBox.find('.edy-img-drop-area-placeholder').css('opacity', 0);
           }
+
+          setItemImage($contentItemBox, $imgDropAreaTarget, itemId, imageId, itemType);
         }
       });
-
-      $bgPickerArea.data('imgDropArea', imgDropArea);
     });
   };
 
@@ -528,19 +496,14 @@
   var bindContentItemImageCropToggle = function() {
     $('.js-toggle-crop-state').on('click', function() {
       var $contentItemBox = $(this).closest('.js-content-item-box'),
-          $imgDropAreaTarget = $contentItemBox.find('.js-img-drop-area'),
+          $imgDropAreaTarget = $contentItemBox.find('.js-content-item-img-drop-area'),
+          itemId = $contentItemBox.data('item-id'),
           itemType = $contentItemBox.data('item-type'),
+          itemData = new Edicy.CustomData({
+            type: itemType,
+            id: itemId
+          }),
           imageCropState;
-
-      var articleData = new Edicy.CustomData({
-        type: 'article',
-        id: $contentItemBox.data('item-id')
-      });
-
-      var pageData = new Edicy.CustomData({
-        type: 'page',
-        id: $contentItemBox.data('item-id')
-      });
 
       if ($imgDropAreaTarget.hasClass('is-cropped')) {
         $imgDropAreaTarget
@@ -549,7 +512,6 @@
         ;
 
         imageCropState = 'not-cropped';
-
       } else {
         $imgDropAreaTarget
           .removeClass('not-cropped')
@@ -559,11 +521,7 @@
         imageCropState = 'is-cropped';
       }
 
-      if (itemType === 'article') {
-        articleData.set('image_crop_state', imageCropState);
-      } else {
-        pageData.set('image_crop_state', imageCropState);
-      }
+      itemData.set('image_crop_state', imageCropState);
     });
   };
 
@@ -948,19 +906,76 @@
   var detectDesignEditorChanges = function() {
     document.addEventListener('edicy:customstyles:change', function(event) {
 			if (Object.keys(event.detail.changes).indexOf('--header-background-color') > -1) {
-				if (event.detail.changes['--header-background-color'].value === undefined) {
-          $('body').removeClass('header-top-with-bg');
+        var headerBGcolor = event.detail.changes['--header-background-color'].value,
+          headerTop = $('.header-top');
 
-          siteData.remove('has_header_bg_color');
+				if (headerBGcolor === undefined) {
+          $('body').removeClass('header-top-with-bg');
+          siteData.set({
+            "header_top_lightness": null,
+            "has_header_bg_color": null
+          });
+
+          if (headerTop.hasClass('dark-background')) {
+            headerTop.removeClass('dark-background');
+          } else {
+            headerTop.removeClass('light-background');
+          }
 				}
 				else {
           $('body').addClass('header-top-with-bg');
-
-          siteData.set('has_header_bg_color', true);
-				}
+          bindHeaderTopSettings(headerBGcolor)
+        }
 
 			}
     });
+  };
+
+  var headerTopColorSum = function(fgColor) {
+    if (typeof fgColor == 'string') {
+      fgColor = fgColor.replace(/rgba?\(/,'').replace(/\)/,'').split(',');
+      $.each(fgColor, function(n, x) {fgColor[n] = +x;});
+    }
+    if (typeof fgColor == 'object' && fgColor.hasOwnProperty('length')) {
+      if (fgColor.length == 3) { fgColor.push(1.0); }
+    }
+    var result = [0, 0, 0, 0];
+    result[3] = 1 - (1 - fgColor[3]);
+    if (result[3] === 0) { result[3] = 1e-6; }
+    result[0] = Math.min(fgColor[0] * fgColor[3] / result[3]);
+    result[1] = Math.min(fgColor[1] * fgColor[3] / result[3]);
+    result[2] = Math.min(fgColor[2] * fgColor[3] / result[3]);
+    return $.map(result, function(e) { return Math.floor(e); });
+  };
+
+  var getHeaderTopCombinedColor = function(fgColor) {
+    var sum = headerTopColorSum(fgColor || [255,255,255,1]);
+    return sum;
+  };
+
+  var getHeaderTopLightness = function(fgColor) {
+    var combinedBgColor = getHeaderTopCombinedColor(fgColor);
+    var color = Math.round(((+combinedBgColor[0]) * 0.2126 + (+combinedBgColor[1]) * 0.7152 + (+combinedBgColor[2]) * 0.0722) / 2.55) / 100;
+    return color;
+  };
+
+  // Checks the lightness sum of header top color and sets the lightness class depending on it's value.
+  var bindHeaderTopSettings = function(headerTopColor) {
+    headerTopLightness = getHeaderTopLightness(headerTopColor);
+    if (headerTopLightness > 0.6) {
+      $('.header-top').addClass('light-background').removeClass('dark-background');
+    } else {
+      $('.header-top').addClass('dark-background').removeClass('light-background');
+    }
+
+    siteData.set({
+        "header_top_lightness": headerTopLightness,
+        "has_header_bg_color": true
+      },
+      {
+        success: function(data) {}
+      }
+    );
   };
 
   var init = function() {
@@ -977,6 +992,30 @@
 
   };
 
+  // ===========================================================================
+  // Binds site search functionality.
+  // ===========================================================================
+  var bindSiteSearch = function(searchForm, languageCode, noResultsString) {
+    if (searchForm) {
+      var search = new VoogSearch(searchForm, {
+        // This defines the number of results per query.
+        per_page: 10,
+        // Language code for restricting the search to page language.
+        lang: languageCode,
+        // If given, an DOM element results are rendered inside that element
+        resultsContainer: $('.js-voog-search-modal').get(0),
+        // Defines if modal should close on sideclick.
+        sideclick: true,
+        // Mobile checkpoint.
+        mobileModeWidth: 640,
+        // Updates results on every keypress.
+        updateOnKeypress: true,
+        // String for feedback if no results are found.
+        noResults: noResultsString
+      });
+    }
+  };
+
   // Enables the usage of the initiations outside this file.
   window.site = $.extend(window.site || {}, {
     bgPickerPreview: bgPickerPreview,
@@ -989,10 +1028,10 @@
     initFrontPage: initFrontPage,
     bindLanguageMenuSettings: bindLanguageMenuSettings,
     initItemsPage: initItemsPage,
-    bindContentItemBgPickers: bindContentItemBgPickers,
     bindContentItemImgDropAreas: bindContentItemImgDropAreas,
     bindContentItemImageCropToggle: bindContentItemImageCropToggle,
-    bindRootItemSettings: bindRootItemSettings
+    bindRootItemSettings: bindRootItemSettings,
+    bindSiteSearch: bindSiteSearch
   });
 
     window.site = $.extend(window.site || {}, {

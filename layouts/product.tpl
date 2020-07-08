@@ -58,17 +58,17 @@
                         <div class="content-illustrations">
                           {% if editmode %}
                             <div class="content-item-box {{ page_image_state }} js-content-item-box" data-item-type="page" data-item-id="{{ page.page_id }}">
-                              <div class="item-top js-bg-picker-area">
-                                <button class="btn bg-picker-btn js-bg-picker-btn" data-bg-key="image" data-bg-picture-boolean="true" data-bg-color-boolean="false" data-bg-image="{{ page.image.for-width-680.schemeless_url }}" data-bg-target-width="680"></button>
+                              <div class="item-top js-content-item-bg-picker-area">
+                                <button class="btn bg-picker-btn js-content-item-bg-picker-btn" data-bg-key="image" data-bg-picture-boolean="true" data-bg-color-boolean="false" data-bg-image="{{ page.image.for-width-680.schemeless_url }}" data-bg-target-width="680"></button>
 
                                 <button class="btn bg-crop-btn {% if page_image_orientation == "image-square" or page.image == nil %}is-hidden{% else %}is-visible{% endif %} js-toggle-crop-state">
-                                  <svg width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
+                                  <svg width="20" height="20" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
                                     <use xlink:href="#ico-toggle"></use>
                                   </svg>
                                 </button>
 
                                 <div class="loader js-loader"></div>
-                                <div class="top-inner aspect-ratio-inner image-drop-area {{ page_image_orientation }} {{ page_image_crop_state }} js-img-drop-area" data-image="{{ page.image.for-width-680.schemeless_url }}"></div>
+                                <div class="top-inner aspect-ratio-inner image-drop-area {{ page_image_orientation }} {{ page_image_crop_state }} js-content-item-img-drop-area" data-image="{{ page.image.for-width-680.schemeless_url }}"></div>
                               </div>
                             </div>
                           {% else %}
@@ -88,11 +88,11 @@
                             {% endif %}
                           {% endif %}
 
-                          <div class="content-gallery content-area">{% content name="gallery" %}</div>
+                          <div class="content-gallery content-area" data-search-indexing-allowed="true">{% content name="gallery" %}</div>
                         </div>
 
                         <div class="content-body">
-                          <div class="content-area area-normal" data-search-indexing-allowed="true">{% contentblock %}{{ "write_product_description_here" | lc }}{% endcontentblock %}</div>
+                          <div class="content-area area-normal" data-search-indexing-allowed="true">{% contentblock %}{{ "write_product_description_here" | lc: editor_locale }}{% endcontentblock %}</div>
                         </div>
                       </div>
                     </div>
@@ -107,6 +107,7 @@
     </div>
 
     {% include "menu-mobile" %}
+    {% include "site-signout" %}
     {% include "site-javascripts" %}
     {% include "template-tools" with "item_list_page" %}
     <script>
