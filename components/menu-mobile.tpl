@@ -1,5 +1,4 @@
 <div id="mobile-menu" class="js-menu-lang-wrap">
-  {% include "menu-settings-editor" %}
   <div class="navigation-menu">
     <ul>
       {% unless site.root_item.hidden? %}
@@ -47,7 +46,7 @@
         {% endfor %}
         {% if editmode %}
           <li class="edit-btn">{% languageadd %}</li>
-        {% endif %}
+        {% endif %}       
       </ul>
     </div>
   {% endif %}

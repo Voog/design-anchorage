@@ -209,6 +209,17 @@
     }
   };
 
+  var togglePositionSettingsLocation = function() {
+    var $positionSettingsMenuElement = $('.js-menu-position-settings');
+    if ($(window).width() <= 1024) {
+      $positionSettingsMenuElement.appendTo('.js-menu-main-mobile');
+      console.log($positionSettingsMenuElement, 'smaller then');
+    } else if ($(window).width() > 1024) {
+      $positionSettingsMenuElement.appendTo('.js-menu-language-popover-setting-parent');
+      console.log($positionSettingsMenuElement, 'else');
+    }
+  };
+
   var bindFallbackHeaderLeftWidthCalculation = function() {
     var headerWidth = $('.js-header-top-wrap').width(),
         headerRight = $('.js-header-right'),
@@ -773,6 +784,7 @@
       commentsHeight();
       handleMobileSearchHeight();
       toggleLanguageSettingsLocation();
+      togglePositionSettingsLocation();
 
       $('.js-menu-language-settings-popover').hide();
     }, 100));
@@ -1000,7 +1012,7 @@
     focusFormWithErrors();
     //autoSizeFormCommentArea();
     detectDesignEditorChanges();
-
+    togglePositionSettingsLocation();
     if (!Modernizr.flexbox && editmode()) {
       bindFallbackHeaderLeftWidthCalculation();
     }

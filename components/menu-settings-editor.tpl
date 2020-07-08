@@ -1,5 +1,5 @@
 {% if editmode %}
-  <button class="menu-positon-settings"></button>
+  <button class="menu-position-settings"></button>
 {% endif %}
 
 {% editorjsblock %}
@@ -7,7 +7,7 @@
   <script
     src="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.js"
   ></script>
-
+   
   <!-- Setings popover initiation. -->
   <script>
     var siteData = new Edicy.CustomData({
@@ -21,7 +21,7 @@
       var valuesObj = {};
     {% endif %};
 
-    var productDescrptionBtn = document.querySelector('.menu-positon-settings');
+    var productDescrptionBtn = document.querySelector('.menu-position-settings');
 
     var SettingsEditor = new Edicy.SettingsEditor(productDescrptionBtn, {
       menuItems: [
@@ -53,13 +53,17 @@
       // Style type the button.
       buttonStyle: 'default',
       // Title for the button.
-      buttonTitle: 'menu settings',
+      buttonTitle: 'Mobiilse vaate seaded',
       // Class for the button while Settings Editor is visible.
       buttonActiveClass: 'settings-popover-open',
 
       commit: function(data) {
-        siteData.set('menu_position_settings', data);
+        siteData.set('menu_position_settings', data, {
+        success: function() {
+          window.location.reload();
       }
+  });
+}
     });
   </script>
 {% endeditorjsblock %}

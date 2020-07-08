@@ -184,7 +184,7 @@
 }
 
 .menu-item-cms {
-  margin-left: 10px;
+  margin-left: 15px;
 
   &.float-right {
     float: right;
@@ -689,16 +689,15 @@ $flags:
 
     &.menu-item-cms {
       padding-right: 18px;
-      padding-left: 18px;
-
+      padding-bottom: 10px;
+      
       &:last-child {
-        padding-top: 5px;
         padding-bottom: 10px;
 
         .language-menu-mode-list & {
           padding-right: 9px;
         }
-
+        
         #mobile-menu & {
           padding-top: 0;
           padding-left: 0

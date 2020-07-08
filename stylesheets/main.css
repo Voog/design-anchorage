@@ -1393,7 +1393,6 @@ a img {
     top: 40px;
     right: 40px;
     z-index: 1001;
-    overflow: scroll;
     height: 100vh;
   }
   .mobilemenu-open .site-header .header-right.always-visible {
@@ -1404,7 +1403,6 @@ a img {
     top: 40px;
     right: 40px;
     z-index: 1001;
-    overflow: scroll;
     height: 100vh;
   }
   .mobilemenu-open .site-header .header-right.visible-when.scrolling {
@@ -1659,7 +1657,7 @@ a img {
 }
 
 .menu-item-cms {
-  margin-left: 10px;
+  margin-left: 15px;
 }
 .menu-item-cms.float-right {
   float: right;
@@ -2258,10 +2256,9 @@ a img {
 }
 .lang-menu li.menu-item-cms {
   padding-right: 18px;
-  padding-left: 18px;
+  padding-bottom: 10px;
 }
 .lang-menu li.menu-item-cms:last-child {
-  padding-top: 5px;
   padding-bottom: 10px;
 }
 .language-menu-mode-list .lang-menu li.menu-item-cms:last-child {
