@@ -714,6 +714,8 @@ body {
   -webkit-text-decoration: var(--button-text-decoration);
           text-decoration: var(--button-text-decoration);
   text-transform: var(--button-text-transform);
+  white-space: normal;
+  word-break: break-word;
 }
 .dark-background .content-area .form_submit input {
   color: var(--secondary-color);
