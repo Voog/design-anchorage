@@ -1,5 +1,5 @@
 {% if editmode %}
-  <button class="menu-position-settings"></button>
+  <button class="mobile-menu-button-settings"></button>
 {% endif %}
 
 {% editorjsblock %}
@@ -15,15 +15,15 @@
       id: {{ site.id }}
     });
 
-    {% if site.data.menu_position_settings %}
-      var valuesObj = {{ site.data.menu_position_settings | json }};
+    {% if site.data.mobile_menu_button_settings %}
+      var valuesObj = {{ site.data.mobile_menu_button_settings | json }};
     {% else %}
       var valuesObj = {};
     {% endif %};
 
-    var productDescrptionBtn = document.querySelector('.menu-position-settings');
+    var mobileMenuSettingsButton = document.querySelector('.mobile-menu-button-settings');
 
-    var SettingsEditor = new Edicy.SettingsEditor(productDescrptionBtn, {
+    var SettingsEditor = new Edicy.SettingsEditor(mobileMenuSettingsButton, {
       menuItems: [
         {
           "title": "Menu positioning",
@@ -54,11 +54,9 @@
       buttonStyle: 'default',
       // Title for the button.
       buttonTitle: 'Mobiilse vaate seaded',
-      // Class for the button while Settings Editor is visible.
-      buttonActiveClass: 'settings-popover-open',
 
       commit: function(data) {
-        siteData.set('menu_position_settings', data, {
+        siteData.set('mobile_menu_button_settings', data, {
         success: function() {
           window.location.reload();
       }

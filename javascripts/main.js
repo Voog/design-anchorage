@@ -264,14 +264,12 @@
     }
   };
 
-  var togglePositionSettingsLocation = function() {
-    var $positionSettingsMenuElement = $('.js-menu-position-settings');
+  var toggleMobileMenuButtonPosition = function() {
+    var $mobileMenuButtonElement = $('.js-mobile-menu-button-wrapper');
     if ($(window).width() <= 1024) {
-      $positionSettingsMenuElement.appendTo('.js-menu-main-mobile');
-      console.log($positionSettingsMenuElement, 'smaller then');
+      $mobileMenuButtonElement.appendTo('.js-menu-main-mobile');
     } else if ($(window).width() > 1024) {
-      $positionSettingsMenuElement.appendTo('.js-menu-language-popover-setting-parent');
-      console.log($positionSettingsMenuElement, 'else');
+      $mobileMenuButtonElement.appendTo('.js-menu-language-popover-setting-parent');
     }
   };
 
@@ -839,7 +837,7 @@
       commentsHeight();
       handleMobileSearchHeight();
       toggleLanguageSettingsLocation();
-      togglePositionSettingsLocation();
+      toggleMobileMenuButtonPosition();
 
       $('.js-menu-language-settings-popover').hide();
     }, 100));
@@ -1067,7 +1065,7 @@
     focusFormWithErrors();
     //autoSizeFormCommentArea();
     detectDesignEditorChanges();
-    togglePositionSettingsLocation();
+    toggleMobileMenuButtonPosition();
     if (!Modernizr.flexbox && editmode()) {
       bindFallbackHeaderLeftWidthCalculation();
     }
