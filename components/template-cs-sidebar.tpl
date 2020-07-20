@@ -48,13 +48,13 @@
     "type": "button",
     "editor": "toggleIcon",
     "states": {
-      "on": "500",
+      "on": "700",
       "off": "300"
     },
     "icon": "bold",
     "scope": "global"
   */
-  --menu-sub-active-font-weight: 500;
+  --menu-sub-active-font-weight: 700;
   /* VoogStyle
     "pathI18n": ["sidebar", "sub_menu", "normal"],
     "titleI18n": "font_style",
