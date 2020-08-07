@@ -308,6 +308,7 @@ body {
   a {
     font-style: var(--menu-main-font-style);
     font-weight: var(--menu-main-font-weight);
+    hyphens: var(--menu-main-hyphens);
     text-decoration: var(--menu-main-text-decoration);
     text-transform: var(--menu-main-text-transform);
 
@@ -366,6 +367,7 @@ body {
           > a {
             font-style: var(--menu-main-font-style);
             font-weight: var(--menu-main-font-weight);
+            hyphens: var(--menu-main-hyphens);
             text-decoration: var(--menu-main-text-decoration);
             text-transform: var(--menu-main-text-transform);
 
@@ -391,6 +393,7 @@ body {
         a {
           font-style: var(--menu-sub-font-style);
           font-weight: var(--menu-sub-font-weight);
+          hyphens: var(--menu-sub-hyphens);
           text-decoration: var(--menu-sub-text-decoration);
           text-transform: var(--menu-sub-text-transform);
 
@@ -480,6 +483,7 @@ body {
     a {
       font-weight: var(--menu-sub-font-weight);
       font-style: var(--menu-sub-font-style);
+      hyphens: var(--menu-sub-hyphens);
       text-decoration: var(--menu-sub-text-decoration);
       text-transform: var(--menu-sub-text-transform);
       color: var(--secondary-color);
@@ -650,6 +654,7 @@ body {
 
 .content-area {
   font-size: var(--content-body-font-size);
+  hyphens: var(--content-body-hyphens);
   line-height: var(--content-body-line-height);
   color: var(--primary-color);
 
@@ -665,6 +670,7 @@ body {
     font-size: var(--footer-body-font-size);
     font-style: var(--footer-body-font-style);
     font-weight: var(--footer-body-font-weight);
+    hyphens: var(--footer-body-hyphens);
     color: var(--primary-color);
     text-decoration: var(--footer-body-text-decoration);
     text-transform: var(--footer-body-text-transform);
@@ -677,6 +683,7 @@ body {
       font-size: var(--header-body-font-size);
       font-style: var(--header-body-font-style);
       font-weight: var(--header-body-font-weight);
+      hyphens: var(--header-body-hyphens);
       text-decoration: var(--header-body-text-decoration);
       text-transform: var(--header-body-text-transform);
     }
@@ -724,9 +731,11 @@ body {
   ol,
   dl {
     font-size: var(--content-body-font-size);
+    hyphens: var(--content-body-hyphens);
 
     .site-footer & {
       color: var(--primary-color);
+      hyphens: var(--footer-body-hyphens);
     }
 
     .dark-background & {
@@ -743,6 +752,7 @@ body {
       text-align: var(--headings-title-text-alignment);
       line-height: var(--headings-title-line-height);
       font-size: var(--headings-title-font-size);
+      hyphens: var(--headings-title-hyphens);
       font-weight: var(--headings-title-font-weight);
       font-style: var(--headings-title-font-style);
       text-decoration: var(--headings-title-text-decoration);
@@ -752,6 +762,7 @@ body {
 
   h2 {
     font-size: var(--headings-heading-font-size);
+    hyphens: var(--headings-heading-hyphens);
     line-height: var(--headings-heading-line-height);
     text-transform: var(--headings-heading-text-transform);
 
@@ -776,6 +787,7 @@ body {
       line-height: var(--headings-subheading-line-height);
       font-size: var(--headings-subheading-font-size);
       font-weight: var(--headings-subheading-font-weight);
+      hyphens: var(--headings-subheading-hyphens);
       font-style: var(--headings-subheading-font-style);
       text-decoration: var(--headings-subheading-text-decoration);
       text-transform: var(--headings-subheading-text-transform);
@@ -807,6 +819,7 @@ body {
     font-size: var(--button-font-size);
     font-style: var(--button-font-style);
     font-weight: var(--button-font-weight);
+    hyphens: var(--button-hyphens);
     text-decoration: var(--button-text-decoration);
     text-transform: var(--button-text-transform);
 
@@ -918,8 +931,11 @@ body {
       font-size: var(--button-font-size);
       font-style: var(--button-font-style);
       font-weight: var(--button-font-weight);
+      hyphens: var(--button-hyphens);
       text-decoration: var(--button-text-decoration);
       text-transform: var(--button-text-transform);
+      white-space: normal;
+      word-break: break-word;
 
       .dark-background & {
         color: var(--secondary-color);

@@ -19,6 +19,14 @@
   --header-body-font-size: 22px;
   /* VoogStyle
     "pathI18n": ["header", "title", "normal"],
+    "titleI18n": "hyphens",
+    "editor": "listPicker",
+    "list": {{ base_hyphens_toggle_set }},
+    "scope": "global"
+  */
+  --header-body-hyphens: auto;
+  /* VoogStyle
+    "pathI18n": ["header", "title", "normal"],
     "titleI18n": "font_size",
     "type": "button",
     "editor": "toggleIcon",
@@ -69,6 +77,14 @@
     "scope": "global"
   */
   --header-body-text-transform: none;
+  /* VoogStyle
+    "pathI18n": ["header", "main_menu", "normal"],
+    "titleI18n": "hyphens",
+    "editor": "listPicker",
+    "list": {{ base_hyphens_toggle_set }},
+    "scope": "global"
+  */
+  --menu-main-hyphens: auto;
   /* VoogStyle
     "pathI18n": ["header", "main_menu", "normal"],
     "titleI18n": "font_size",

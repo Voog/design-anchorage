@@ -31,16 +31,18 @@
     {% include "template-cs-header" %}
   {% endif %}
 
+  {% if sidebar %}
+    {% include "template-cs-sidebar" %}
+  {% endif %}
+
   {% include "template-cs-headings" %}
+
   {% include "template-cs-content" %}
   {% include "template-cs-button" %}
   {% include "template-cs-table" %}
   {% include "template-cs-form" %}
   {% include "template-cs-footer" %}
 
-  {% if sidebar %}
-    {% include "template-cs-sidebar" %}
-  {% endif %}
 
   {% include "template-cs-style-rules" %}
 {% endcustomstyle %}

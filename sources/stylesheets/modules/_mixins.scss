@@ -19,18 +19,6 @@
   }
 }
 
-@mixin hyphenate($boolean: true) {
-  @if $boolean == true {
-    hyphens: auto;
-    word-break: break-word;
-    word-wrap: break-word;
-  } @else {
-    hyphens: none;
-    word-break: normal;
-    word-wrap: normal;
-  }
-}
-
 // COLORS
 @mixin bg($color, $opacity: 1) {
   @if $opacity == 1 {

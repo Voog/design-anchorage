@@ -12,6 +12,14 @@
   --footer-body-font-size: 14px;
   /* VoogStyle
     "pathI18n": ["footer"],
+    "titleI18n": "hyphens",
+    "editor": "listPicker",
+    "list": {{ base_hyphens_toggle_set }},
+    "scope": "global"
+  */
+  --footer-body-hyphens: auto;
+  /* VoogStyle
+    "pathI18n": ["footer"],
     "titleI18n": "font_size",
     "type": "button",
     "editor": "toggleIcon",

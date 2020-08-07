@@ -40,4 +40,23 @@
     ]
   */
   --third-color: white;
+  /* VoogStyle
+    "pathI18n": ["main_styles"],
+    "titleI18n": "hyphens",
+    "editor": "listPicker",
+    "list": {{ base_hyphens_toggle_set }},
+    "scope": "global",
+    "boundVariables": [
+      "--header-body-hyphens",
+      "--menu-main-hyphens",
+      "--menu-sub-hyphens",
+      "--headings-title-hyphens",
+      "--headings-heading-hyphens",
+      "--headings-subheading-hyphens",
+      "--content-body-hyphens",
+      "--button-hyphens",
+      "--footer-body-hyphens"
+    ]
+  */
+  --main-hyphens: auto;
 }

@@ -170,7 +170,6 @@
   }
 
   .top-inner {
-    @include hyphenate;
     // scss-lint:disable ImportantRule
     display: flex !important;
     // scss-lint:enable ImportantRule
@@ -310,7 +309,6 @@
 }
 
 .item-title {
-  @include hyphenate;
   margin-top: 0;
   margin-bottom: 0;
   line-height: 1.2;
