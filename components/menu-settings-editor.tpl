@@ -26,20 +26,20 @@
     var SettingsEditor = new Edicy.SettingsEditor(mobileMenuSettingsButton, {
       menuItems: [
         {
-          "title": "Menu positioning",
+          "titleI18n": "menu_positioning",
           "type": "radio",
           "key": "menu_positioning",
           "list": [
             {
-              "title": "Fixed in header",
+              "titleI18n": "fixed_in_header",
               "value": ""
             },
             {
-              "title": "Visible when scrolling up",
+              "titleI18n": "always_visible",
               "value": "visible-when"
             },
             {
-              "title": "Always visible",
+              "titleI18n": "visible_when_scrolling_up",
               "value": "always-visible"
             },
           ],
@@ -53,7 +53,7 @@
       // Style type the button.
       buttonStyle: 'default',
       // Title for the button.
-      buttonTitle: 'Mobiilse vaate seaded',
+      buttonTitleI18n: 'mobile_view_settings',
 
       commit: function(data) {
         siteData.set('mobile_menu_button_settings', data, {
