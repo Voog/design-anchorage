@@ -17,7 +17,7 @@
 {% if editmode %}
   <link rel="stylesheet" href="{{ site.static_asset_host }}/libs/edicy-tools/latest/edicy-tools.css">
 {% endif %}
-{% stylesheet_link "main.min.css?v3" %}
+{% stylesheet_link "main.min.css?v4" %}
 
 {% comment %}Google fonts for Design Editor{% endcomment %}
 <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400i,700,700i|Arvo:400,400i,700,700i|Cousine:400,400i,700,700i|Crimson+Text:400,400i,700,700i|Fira+Sans:400,400i,700,700i|Lato:400,400i,700,700i|Lora:400,400i,700,700i|Montserrat:400,400i,700,700i|Noto+Serif:400,400i,700,700i|Open+Sans:400,400i,700,700i|PT+Sans:400,400i,700,700i|PT+Serif:400,400i,700,700i|Playfair+Display:400,400i,700,700i|Raleway:400,400i,700,700i|Roboto+Mono:400,400i,700,700i|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i|Source+Sans+Pro:400,400i,700,700i|Ubuntu+Mono:400,400i,700,700i|Ubuntu:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,hebrew,latin-ext,vietnamese" rel="stylesheet">
@@ -31,16 +31,18 @@
     {% include "template-cs-header" %}
   {% endif %}
 
+  {% if sidebar %}
+    {% include "template-cs-sidebar" %}
+  {% endif %}
+
   {% include "template-cs-headings" %}
+
   {% include "template-cs-content" %}
   {% include "template-cs-button" %}
   {% include "template-cs-table" %}
   {% include "template-cs-form" %}
   {% include "template-cs-footer" %}
 
-  {% if sidebar %}
-    {% include "template-cs-sidebar" %}
-  {% endif %}
 
   {% include "template-cs-style-rules" %}
 {% endcustomstyle %}

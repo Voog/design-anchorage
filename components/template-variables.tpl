@@ -573,6 +573,19 @@
     ]
   {% endcapture %}
 
+  {% capture base_hyphens_toggle_set %}
+    [
+      {
+        "titleI18n": "on",
+        "value": "auto"
+      },
+      {
+        "titleI18n": "off",
+        "value": "none"
+      }
+    ]
+  {% endcapture %}
+
   {% capture base_border_style_set %}
     [
       {

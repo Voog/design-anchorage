@@ -192,6 +192,9 @@ body {
 .menu-main a {
   font-style: var(--menu-main-font-style);
   font-weight: var(--menu-main-font-weight);
+  -webkit-hyphens: var(--menu-main-hyphens);
+      -ms-hyphens: var(--menu-main-hyphens);
+          hyphens: var(--menu-main-hyphens);
   -webkit-text-decoration: var(--menu-main-text-decoration);
           text-decoration: var(--menu-main-text-decoration);
   text-transform: var(--menu-main-text-transform);
@@ -229,6 +232,9 @@ body {
   #mobile-menu .navigation-menu > ul > li > a {
     font-style: var(--menu-main-font-style);
     font-weight: var(--menu-main-font-weight);
+    -webkit-hyphens: var(--menu-main-hyphens);
+        -ms-hyphens: var(--menu-main-hyphens);
+            hyphens: var(--menu-main-hyphens);
     -webkit-text-decoration: var(--menu-main-text-decoration);
             text-decoration: var(--menu-main-text-decoration);
     text-transform: var(--menu-main-text-transform);
@@ -250,6 +256,9 @@ body {
   #mobile-menu .navigation-menu .sub-menu a {
     font-style: var(--menu-sub-font-style);
     font-weight: var(--menu-sub-font-weight);
+    -webkit-hyphens: var(--menu-sub-hyphens);
+        -ms-hyphens: var(--menu-sub-hyphens);
+            hyphens: var(--menu-sub-hyphens);
     -webkit-text-decoration: var(--menu-sub-text-decoration);
             text-decoration: var(--menu-sub-text-decoration);
     text-transform: var(--menu-sub-text-transform);
@@ -303,6 +312,9 @@ body {
 .site-sidebar .submenu a {
   font-weight: var(--menu-sub-font-weight);
   font-style: var(--menu-sub-font-style);
+  -webkit-hyphens: var(--menu-sub-hyphens);
+      -ms-hyphens: var(--menu-sub-hyphens);
+          hyphens: var(--menu-sub-hyphens);
   -webkit-text-decoration: var(--menu-sub-text-decoration);
           text-decoration: var(--menu-sub-text-decoration);
   text-transform: var(--menu-sub-text-transform);
@@ -417,6 +429,9 @@ body {
 
 .content-area {
   font-size: var(--content-body-font-size);
+  -webkit-hyphens: var(--content-body-hyphens);
+      -ms-hyphens: var(--content-body-hyphens);
+          hyphens: var(--content-body-hyphens);
   line-height: var(--content-body-line-height);
   color: var(--primary-color);
 }
@@ -430,6 +445,9 @@ body {
   font-size: var(--footer-body-font-size);
   font-style: var(--footer-body-font-style);
   font-weight: var(--footer-body-font-weight);
+  -webkit-hyphens: var(--footer-body-hyphens);
+      -ms-hyphens: var(--footer-body-hyphens);
+          hyphens: var(--footer-body-hyphens);
   color: var(--primary-color);
   -webkit-text-decoration: var(--footer-body-text-decoration);
           text-decoration: var(--footer-body-text-decoration);
@@ -439,6 +457,9 @@ body {
   font-size: var(--header-body-font-size);
   font-style: var(--header-body-font-style);
   font-weight: var(--header-body-font-weight);
+  -webkit-hyphens: var(--header-body-hyphens);
+      -ms-hyphens: var(--header-body-hyphens);
+          hyphens: var(--header-body-hyphens);
   -webkit-text-decoration: var(--header-body-text-decoration);
           text-decoration: var(--header-body-text-decoration);
   text-transform: var(--header-body-text-transform);
@@ -478,12 +499,18 @@ body {
 }
 .content-area p, .content-area ul, .content-area ol, .content-area dl {
   font-size: var(--content-body-font-size);
+  -webkit-hyphens: var(--content-body-hyphens);
+      -ms-hyphens: var(--content-body-hyphens);
+          hyphens: var(--content-body-hyphens);
 }
 .site-footer .content-area p,
 .site-footer .content-area ul,
 .site-footer .content-area ol,
 .site-footer .content-area dl {
   color: var(--primary-color);
+  -webkit-hyphens: var(--footer-body-hyphens);
+      -ms-hyphens: var(--footer-body-hyphens);
+          hyphens: var(--footer-body-hyphens);
 }
 .site-footer .dark-background .content-area p, .site-footer .dark-background .content-area ul, .site-footer .dark-background .content-area ol, .site-footer .dark-background .content-area dl {
   color: var(--third-color);
@@ -494,6 +521,9 @@ body {
   text-align: var(--headings-title-text-alignment);
   line-height: var(--headings-title-line-height);
   font-size: var(--headings-title-font-size);
+  -webkit-hyphens: var(--headings-title-hyphens);
+      -ms-hyphens: var(--headings-title-hyphens);
+          hyphens: var(--headings-title-hyphens);
   font-weight: var(--headings-title-font-weight);
   font-style: var(--headings-title-font-style);
   -webkit-text-decoration: var(--headings-title-text-decoration);
@@ -502,6 +532,9 @@ body {
 }
 .content-area h2 {
   font-size: var(--headings-heading-font-size);
+  -webkit-hyphens: var(--headings-heading-hyphens);
+      -ms-hyphens: var(--headings-heading-hyphens);
+          hyphens: var(--headings-heading-hyphens);
   line-height: var(--headings-heading-line-height);
   text-transform: var(--headings-heading-text-transform);
 }
@@ -530,6 +563,9 @@ body {
   line-height: var(--headings-subheading-line-height);
   font-size: var(--headings-subheading-font-size);
   font-weight: var(--headings-subheading-font-weight);
+  -webkit-hyphens: var(--headings-subheading-hyphens);
+      -ms-hyphens: var(--headings-subheading-hyphens);
+          hyphens: var(--headings-subheading-hyphens);
   font-style: var(--headings-subheading-font-style);
   -webkit-text-decoration: var(--headings-subheading-text-decoration);
           text-decoration: var(--headings-subheading-text-decoration);
@@ -558,6 +594,9 @@ body {
   font-size: var(--button-font-size);
   font-style: var(--button-font-style);
   font-weight: var(--button-font-weight);
+  -webkit-hyphens: var(--button-hyphens);
+      -ms-hyphens: var(--button-hyphens);
+          hyphens: var(--button-hyphens);
   -webkit-text-decoration: var(--button-text-decoration);
           text-decoration: var(--button-text-decoration);
   text-transform: var(--button-text-transform);
@@ -669,9 +708,14 @@ body {
   font-size: var(--button-font-size);
   font-style: var(--button-font-style);
   font-weight: var(--button-font-weight);
+  -webkit-hyphens: var(--button-hyphens);
+      -ms-hyphens: var(--button-hyphens);
+          hyphens: var(--button-hyphens);
   -webkit-text-decoration: var(--button-text-decoration);
           text-decoration: var(--button-text-decoration);
   text-transform: var(--button-text-transform);
+  white-space: normal;
+  word-break: break-word;
 }
 .dark-background .content-area .form_submit input {
   color: var(--secondary-color);
