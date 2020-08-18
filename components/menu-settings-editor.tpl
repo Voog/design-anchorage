@@ -12,7 +12,6 @@
   <script>
     var siteData = new Edicy.CustomData({
       type: 'site',
-      id: {{ site.id }}
     });
 
     {% if site.data.mobile_menu_button_settings %}
@@ -36,14 +35,13 @@
             },
             {
               "titleI18n": "always_visible",
-              "value": "visible-when"
+              "value": "always-visible"
             },
             {
               "titleI18n": "visible_when_scrolling_up",
-              "value": "always-visible"
-            },
-          ],
-
+              "value": "visible-when"
+            }
+          ]
         },
       ],
 
@@ -59,9 +57,9 @@
         siteData.set('mobile_menu_button_settings', data, {
         success: function() {
           window.location.reload();
+          }
+        });
       }
-  });
-}
     });
   </script>
 {% endeditorjsblock %}

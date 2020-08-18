@@ -46,7 +46,7 @@
         {% endfor %}
         {% if editmode %}
           <li class="edit-btn">{% languageadd %}</li>
-        {% endif %}       
+        {% endif %}
       </ul>
     </div>
   {% endif %}

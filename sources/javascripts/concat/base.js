@@ -16,7 +16,6 @@
       }, 400);
     } else {
       $('.visible-when').addClass('scrolling');
-
     }
     lastScrollTop = st;
   });
