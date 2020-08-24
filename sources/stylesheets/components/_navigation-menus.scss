@@ -183,7 +183,7 @@
 }
 
 .menu-item-cms {
-  margin-left: 10px;
+  margin-left: 15px;
 
   &.float-right {
     float: right;
@@ -221,7 +221,6 @@
     }
   }
 
-  .mobilemenu-open,
   .mobilesearch-open {
     position: fixed;
     overflow: hidden;
@@ -229,13 +228,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-
-    #mobile-menu {
-      position: absolute;
-      top: 0;
-      width: 250px;
-      height: 100%;
-    }
   }
 
   .mobile-menu-toggler {
@@ -298,15 +290,12 @@
 
   #mobile-menu {
     transition: transform .5s;
-    transform: translate3d(100%, 0, 0);
     font-family: $font-main;
-    position: fixed;
     z-index: 1000;
-    top: 0;
-    right: 0;
+    position: fixed;
+    overflow: auto;
     height: 100%;
     display: block;
-    overflow: auto;
     box-sizing: border-box;
     width: 250px;
     padding: 30px 20px;
@@ -325,7 +314,8 @@
     }
 
     .mobilemenu-open & {
-      transform: translate3d(0, 0, 0);
+      right: 0px;
+      top: 0px;
     }
 
     .search-open-btn {
@@ -698,16 +688,15 @@ $flags:
 
     &.menu-item-cms {
       padding-right: 18px;
-      padding-left: 18px;
-
+      padding-bottom: 10px;
+      
       &:last-child {
-        padding-top: 5px;
         padding-bottom: 10px;
 
         .language-menu-mode-list & {
           padding-right: 9px;
         }
-
+        
         #mobile-menu & {
           padding-top: 0;
           padding-left: 0

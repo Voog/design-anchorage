@@ -61,6 +61,20 @@
     return $('html').hasClass('editmode');
   };
 
+  // show mobile menu on scrolling up
+  var lastScrollTop = 0;
+  $(window).scroll(function() {
+    var st = $(this).scrollTop();
+    if (st > lastScrollTop) {
+      setTimeout(function(){
+        $('.visible-when').removeClass('scrolling');
+      }, 400);
+    } else {
+      $('.visible-when').addClass('scrolling');
+    }
+    lastScrollTop = st;
+  });
+
   // Function to limit the rate at which a function can fire.
   var debounce = function(func, wait, immediate) {
     var timeout;
@@ -246,6 +260,15 @@
         $languageSettingsMenuElement.appendTo('.js-menu-language-popover-setting-parent');
         bindLanguageMenuPositioning($('.js-lang-menu-btn'));
       }
+    }
+  };
+
+  var toggleMobileMenuButtonPosition = function() {
+    var $mobileMenuButtonElement = $('.js-mobile-menu-button-wrapper');
+    if ($(window).width() <= 1024) {
+      $mobileMenuButtonElement.appendTo('.js-menu-main-mobile');
+    } else if ($(window).width() > 1024) {
+      $mobileMenuButtonElement.appendTo('.js-menu-language-popover-setting-parent');
     }
   };
 
@@ -813,6 +836,7 @@
       commentsHeight();
       handleMobileSearchHeight();
       toggleLanguageSettingsLocation();
+      toggleMobileMenuButtonPosition();
 
       $('.js-menu-language-settings-popover').hide();
     }, 100));
@@ -1040,7 +1064,7 @@
     focusFormWithErrors();
     //autoSizeFormCommentArea();
     detectDesignEditorChanges();
-
+    toggleMobileMenuButtonPosition();
     if (!Modernizr.flexbox && editmode()) {
       bindFallbackHeaderLeftWidthCalculation();
     }

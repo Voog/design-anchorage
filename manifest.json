@@ -162,6 +162,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/menu-settings-editor.tpl",
+      "layout_name": "menu-settings-editor",
+      "title": "menu-settings-editor"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/template-cs-button.tpl",
       "layout_name": "template-cs-button",
       "title": "template-cs-button"

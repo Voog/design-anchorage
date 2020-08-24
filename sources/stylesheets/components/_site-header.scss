@@ -105,6 +105,32 @@
 
     @media screen and (max-width: $tablet-1) {
       margin-top: 1px;
+
+      &.always-visible {
+        position: fixed;
+        top: 40px;
+        right: 40px;
+        z-index: 1001;
+        height: 100vh;
+
+        .mobilemenu-open & {
+          right: 270px;
+        }
+      }
+
+      &.visible-when {
+        &.scrolling {
+          position: fixed;
+          top: 40px;
+          right: 40px;
+          z-index: 1001;
+          height: 100vh;
+
+          .mobilemenu-open & {
+            right: 270px;
+          }
+        }
+      }
     }
 
     @media screen and (max-width: $tablet-3) {

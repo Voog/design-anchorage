@@ -60,7 +60,7 @@
           "states": {
             "on": true,
             "off": false
-          },
+          }
         },
         {
           "titleI18n": "publishing_date",
@@ -70,7 +70,7 @@
           "states": {
             "on": true,
             "off": false
-          },
+          }
         },
         {
           "titleI18n": "article_author",
@@ -80,8 +80,8 @@
           "states": {
             "on": true,
             "off": false
-          },
-        },
+          }
+        }
       ],
 
       // Binded data object which should contain custom data object.

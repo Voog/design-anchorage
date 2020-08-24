@@ -26,6 +26,7 @@
               <button class="btn btn-js-styled js-menu-language-settings-toggle js-prevent-sideclick"></button>
             </li>
           {% endif %}
+          <li class="menu-item-cms js-mobile-menu-button-wrapper">{% include "menu-settings-editor" %} </li>
         </ul>
       {% endif %}
     </nav>
