@@ -98,7 +98,8 @@ body {
 .blog-news-page .article-title a {
   color: var(--secondary-color);
 }
-.blog-news-page .article-author, .blog-news-page .article-date {
+.blog-news-page .article-author,
+.blog-news-page .article-date {
   color: var(--secondary-color);
 }
 .dark-background .blog-news-page .article-author,
@@ -497,7 +498,10 @@ body {
 .content-area h6 a {
   color: var(--secondary-color);
 }
-.content-area p, .content-area ul, .content-area ol, .content-area dl {
+.content-area p,
+.content-area ul,
+.content-area ol,
+.content-area dl {
   font-size: var(--content-body-font-size);
   -webkit-hyphens: var(--content-body-hyphens);
       -ms-hyphens: var(--content-body-hyphens);
@@ -512,7 +516,10 @@ body {
       -ms-hyphens: var(--footer-body-hyphens);
           hyphens: var(--footer-body-hyphens);
 }
-.site-footer .dark-background .content-area p, .site-footer .dark-background .content-area ul, .site-footer .dark-background .content-area ol, .site-footer .dark-background .content-area dl {
+.site-footer .dark-background .content-area p,
+.site-footer .dark-background .content-area ul,
+.site-footer .dark-background .content-area ol,
+.site-footer .dark-background .content-area dl {
   color: var(--third-color);
 }
 .content-area h1,
@@ -663,9 +670,9 @@ body {
 .dark-background .content-area .form_field_select::-webkit-input-placeholder {
   color: var(--third-color);
 }
-.dark-background .content-area .form_field_textfield:-ms-input-placeholder,
-.dark-background .content-area .form_field_textarea:-ms-input-placeholder,
-.dark-background .content-area .form_field_select:-ms-input-placeholder {
+.dark-background .content-area .form_field_textfield::-moz-placeholder,
+.dark-background .content-area .form_field_textarea::-moz-placeholder,
+.dark-background .content-area .form_field_select::-moz-placeholder {
   color: var(--third-color);
 }
 .dark-background .content-area .form_field_textfield::-ms-input-placeholder,
@@ -688,9 +695,9 @@ body {
 .light-background .content-area .form_field_select::-webkit-input-placeholder {
   color: var(--primary-color);
 }
-.light-background .content-area .form_field_textfield:-ms-input-placeholder,
-.light-background .content-area .form_field_textarea:-ms-input-placeholder,
-.light-background .content-area .form_field_select:-ms-input-placeholder {
+.light-background .content-area .form_field_textfield::-moz-placeholder,
+.light-background .content-area .form_field_textarea::-moz-placeholder,
+.light-background .content-area .form_field_select::-moz-placeholder {
   color: var(--primary-color);
 }
 .light-background .content-area .form_field_textfield::-ms-input-placeholder,

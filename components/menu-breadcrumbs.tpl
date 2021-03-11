@@ -24,8 +24,11 @@
 
   {% if site.root_item.selected? %}
     {% if editmode %}
+      {% if page.layout_title == product_list_layout or page.layout_title == product_layout %}
+        {% menuadd parent="item" label=add_product_label lable=add_product_title layout_title="Product" %}
+      {% else %}
         <li class="menu-item menu-item-cms">{% menuadd %}</li>
-
+      {% endif %}
         {% if site.root_item.selected? and site.root_item.layout_title == product_list_layout %}
           <li class="menu-item menu-item-cms float-right">
             <a class="js-root-item-settings-toggle"></a>
