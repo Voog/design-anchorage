@@ -25,7 +25,7 @@
   {% if site.root_item.selected? %}
     {% if editmode %}
       {% if page.layout_title == product_list_layout or page.layout_title == product_layout %}
-        {% menuadd parent="item" label=add_product_label lable=add_product_title layout_title="Product" %}
+        {% menuadd parent=item label=add_product_label lable=add_product_title layout_title="Product" %}
       {% else %}
         <li class="menu-item menu-item-cms">{% menuadd %}</li>
       {% endif %}
@@ -52,7 +52,13 @@
             {% endif %}
 
             {% unless item.layout_title == product_layout %}
-            <li class="menu-item menu-item-cms">{% menuadd parent="level" %}</li>
+              <li class="menu-item menu-item-cms">
+                {% if item.layout_title == product_list_layout %}
+                  {% menuadd parent=level label=add_product_label lable=add_product_title layout_title="Product" %}
+                {% else %}
+                  {% menuadd parent=level %}
+                {% endif %}
+              </li>
             {% endunless %}
 
           {% endif %}

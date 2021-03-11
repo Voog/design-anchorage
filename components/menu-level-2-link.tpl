@@ -11,13 +11,7 @@
         {% if subitem.hidden_children.size > 0 %}
           <li>{% menubtn subitem.hidden_children %}</li>
         {% endif %}
-        <li class="last">
-          {% if page.layout_title == product_list_layout or page.layout_title == product_layout %}
-            {% menuadd parent="item" label=add_product_label lable=add_product_title layout_title="Product" %}
-          {% else %}
-            {% menuadd parent="subitem" %}
-          {% endif %}
-        </li>
+        <li class="last">{% menuadd parent="subitem" %}</li>
       {% endif %}
     </ul>
   {% endif %}
