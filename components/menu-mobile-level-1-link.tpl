@@ -44,7 +44,13 @@
         {% if item.hidden_children.size > 0 %}
           <li class="edit-btn">{% menubtn item.hidden_children %}</li>
         {% endif %}
-        <li class="edit-btn">{% menuadd parent="item" %}</li>
+        <li class="edit-btn">
+          {%- if item.layout_title == product_list_layout or item.layout_title == product_layout -%}
+            {% menuadd parent=item layout_title=product_layout %}
+          {%- else -%}
+            {% menuadd parent=item %}
+          {%- endif -%}
+        </li>
       {% endif %}
     </ul>
   {% endif %}

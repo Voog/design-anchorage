@@ -24,11 +24,17 @@
 
   {% if site.root_item.selected? %}
     {% if editmode %}
-      {% if page.layout_title == product_list_layout or page.layout_title == product_layout %}
-        {% menuadd parent=item label=add_product_label lable=add_product_title layout_title="Product" %}
-      {% else %}
-        <li class="menu-item menu-item-cms">{% menuadd %}</li>
-      {% endif %}
+        <li class="menu-item menu-item-cms">
+          {% assign add_product_label = 'add_product' | lce %}
+          {% assign add_product_title = 'add_product_page' | lce %}
+
+          {%- if site.root_item.layout_title == product_list_layout -%}
+            {% menuadd label=add_product_label title=add_product_title layout_title=product_layout %}
+          {%- else -%}
+            {% menuadd %}
+          {%- endif -%}
+        </li>
+
         {% if site.root_item.selected? and site.root_item.layout_title == product_list_layout %}
           <li class="menu-item menu-item-cms float-right">
             <a class="js-root-item-settings-toggle"></a>
@@ -52,13 +58,7 @@
             {% endif %}
 
             {% unless item.layout_title == product_layout %}
-              <li class="menu-item menu-item-cms">
-                {% if item.layout_title == product_list_layout %}
-                  {% menuadd parent=level label=add_product_label lable=add_product_title layout_title="Product" %}
-                {% else %}
-                  {% menuadd parent=level %}
-                {% endif %}
-              </li>
+            <li class="menu-item menu-item-cms">{% menuadd parent="level" %}</li>
             {% endunless %}
 
           {% endif %}

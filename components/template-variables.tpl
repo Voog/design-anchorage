@@ -14,10 +14,6 @@
     {% assign flags_state = site.data.flags_state %}
   {% endif %}
 
-  {% comment %}Variables for adding a product page{% endcomment %}
-  {% assign add_product_label = 'add_product' | lce %}
-  {% assign add_product_title = 'add_product_page' | lce %}
-
   {% comment %}Detects language flags visibility setting.{% endcomment %}
   {% if site.data.settings_language_menu.item_state %}
     {% if site.data.settings_language_menu.item_state == "names_only" %}
