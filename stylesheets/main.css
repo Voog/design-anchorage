@@ -4602,9 +4602,9 @@ a img {
   opacity: .35;
 }
 
-.content-area .form_field_textfield:-ms-input-placeholder,
-.content-area .form_field_textarea:-ms-input-placeholder,
-.content-area .form_field_select:-ms-input-placeholder {
+.content-area .form_field_textfield::-moz-placeholder,
+.content-area .form_field_textarea::-moz-placeholder,
+.content-area .form_field_select::-moz-placeholder {
   color: black;
   opacity: .35;
 }
