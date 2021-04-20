@@ -10,7 +10,7 @@
           <li>{% menubtn item.hidden_children %}</li>
         {% endif %}
         <li class="last">
-          {%- if item.layout_title == product_list_layout or item.layout_title == product_layout -%}
+          {%- if item.layout_title == product_list_layout -%}
             {% menuadd parent=item layout_title=product_layout %}
           {%- else -%}
             {% menuadd parent=item %}

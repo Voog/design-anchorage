@@ -45,7 +45,7 @@
           <li class="edit-btn">{% menubtn item.hidden_children %}</li>
         {% endif %}
         <li class="edit-btn">
-          {%- if item.layout_title == product_list_layout or item.layout_title == product_layout -%}
+          {%- if item.layout_title == product_list_layout -%}
             {% menuadd parent=item layout_title=product_layout %}
           {%- else -%}
             {% menuadd parent=item %}
