@@ -25,8 +25,8 @@
   {% if site.root_item.selected? %}
     {% if editmode %}
         <li class="menu-item menu-item-cms">
-          {% assign add_product_label = 'add_product' | lce %}
-          {% assign add_product_title = 'add_product_page' | lce %}
+          {% assign add_product_label = 'add_product' | lce | escape_once %}
+          {% assign add_product_title = 'add_product_page' | lce | escape_once %}
 
           {%- if site.root_item.layout_title == product_list_layout -%}
             {% menuadd label=add_product_label title=add_product_title layout_title=product_layout %}
