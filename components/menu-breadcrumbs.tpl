@@ -57,13 +57,11 @@
               <li class="menu-item menu-item-cms">{% menubtn item.hidden_children %}</li>
             {% endif %}
 
-            {% unless item.layout_title == product_layout %}
-              {%- if item.layout_title == product_list_layout -%}
-                <li class="menu-item menu-item-cms">{% menuadd parent="level" layout_title=product_layout %}</li>
-              {%- else -%}
-                <li class="menu-item menu-item-cms">{% menuadd parent="level" %}</li>
-              {%- endif -%}
-            {% endunless %}
+            {%- if item.layout_title == product_list_layout -%}
+              <li class="menu-item menu-item-cms">{% menuadd parent="level" layout_title=product_layout %}</li>
+            {%- elsif item.layout_title != product_layout -%}
+              <li class="menu-item menu-item-cms">{% menuadd parent="level" %}</li>
+            {%- endif -%}
 
           {% endif %}
         {% endif %}
