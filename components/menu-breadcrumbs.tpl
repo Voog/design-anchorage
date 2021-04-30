@@ -58,9 +58,9 @@
             {% endif %}
 
             {%- if item.layout_title == product_list_layout -%}
-              <li class="menu-item menu-item-cms">{% menuadd parent="level" layout_title=product_layout %}</li>
+              <li class="menu-item menu-item-cms">{% menuadd parent=item layout_title=product_layout %}</li>
             {%- elsif item.layout_title != product_layout -%}
-              <li class="menu-item menu-item-cms">{% menuadd parent="level" %}</li>
+              <li class="menu-item menu-item-cms">{% menuadd parent=item %}</li>
             {%- endif -%}
 
           {% endif %}
