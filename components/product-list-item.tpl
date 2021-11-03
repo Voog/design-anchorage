@@ -1,3 +1,7 @@
+{%- load buy_button to "buy_button" q.content.parent_id=menu_level.page_id q.content.parent_type="page"
+q.content.name="body" s="content.position" -%}
+{%- assign product = buy_button.product -%}
+
 {% unless menu_level.image %}
   {% assign item_image_state = "without-image" %}
 {% else %}
@@ -34,20 +38,25 @@
     <h2 class="item-title">
       <a class="item-link" href="{{ menu_level.url }}">{{ menu_level.title }}</a>
     </h2>
+    {% include "product-list-item-details", _buyButton: buy_button, , menu_level: menu_level  %}
   </div>
 {% else %}
-  <a class="content-item-box {{ item_image_state }} js-content-item-box" href="{{ menu_level.url }}">
-    <div class="item-top">
-      <div class="top-inner aspect-ratio-inner">
-        {% if menu_level.image %}
-          <div class="loader js-loader"></div>
-          <img class="item-image {{ item_image_orientation }} {{ item_image_crop_state }} js-lazyload" data-original="{{ menu_level.image.for-width-680.schemeless_url }}">
-        {% else %}
-          <div class="item-placeholder">{{ menu_level.title | truncate: 50 }}</div>
-        {% endif %}
+  <div class="content-item-box {{ item_image_state }} js-content-item-box">
+    <a href="{{ menu_level.url }}">
+      <div class="item-top">
+        <div class="top-inner aspect-ratio-inner">
+          {% if menu_level.image %}
+            <div class="loader js-loader"></div>
+            <img class="item-image {{ item_image_orientation }} {{ item_image_crop_state }} js-lazyload" data-original="{{ menu_level.image.for-width-680.schemeless_url }}">
+          {% else %}
+            <div class="item-placeholder">{{ menu_level.title | truncate: 50 }}</div>
+          {% endif %}
+        </div>
       </div>
-    </div>
 
-    <h2 class="item-title">{{ menu_level.title }}</h2>
-  </a>
+      <h2 class="item-title">{{ menu_level.title }}</h2>
+
+    </a>
+    {% include "product-list-item-details", _buyButton: buy_button, menu_level: menu_level %}
+  </div>
 {% endif %}
