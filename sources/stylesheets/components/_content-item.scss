@@ -27,7 +27,7 @@
       transform: translateY(100%);
       pointer-events: none;
       top: 0;
-      transition: all 300ms;
+      @include transition(all 350ms);
       margin-top: -15px;
 
       &.visible {
@@ -45,7 +45,7 @@
       top: 0;
       margin: 0;
       opacity: 1;
-      transition: all 300ms;
+      @include transition(all 350ms);
       flex-wrap: wrap;
     }
 
@@ -136,14 +136,14 @@
       transform: translateY(-100%);
       opacity: 0;
       pointer-events: none;
-      transition: all 300ms;
+      @include transition(all 350ms);
       transition-timing-function: cubic-bezier(.01,.94,.22,1.01);
     }
 
     .product-item-btn {
       opacity: 1;
       pointer-events: all;
-      transition: all 300ms;
+      @include transition(all 350ms);
       transition-timing-function: cubic-bezier(.01,.94,.22,1.01);
     }
   }

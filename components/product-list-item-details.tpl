@@ -32,7 +32,6 @@
             {{ _buyButton.product.price_with_tax | money_with_currency: _buyButton.product.currency }}
             </span>
           </div>
-
         {%- endif -%}
       </div>
     {%- else -%}
