@@ -11,7 +11,7 @@
     {% endcapture %}
 
     {%- if _buyButton.product != blank and _buyButton.available? -%}
-      <div class="item-details">
+      <button class="item-details">
         {%- if _buyButton.product.uses_variants == true -%}
           {{ look_closer_btn }}
           <div class="product-item-price">
@@ -29,11 +29,11 @@
           {%- endif -%}
           <div class="product-item-price">
             <span>
-            {{ _buyButton.product.price_with_tax | money_with_currency: _buyButton.product.currency }}
+              {{ _buyButton.product.price_with_tax | money_with_currency: _buyButton.product.currency }}
             </span>
           </div>
         {%- endif -%}
-      </div>
+      </button>
     {%- else -%}
       <div class="item-details">
         {{ look_closer_btn }}

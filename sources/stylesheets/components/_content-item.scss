@@ -57,21 +57,23 @@
       margin-top: 10px;
       text-align: center;
       color: var(--secondary-color);
+      line-height: 2;
 
       @media screen and (max-width: $tablet-3) {
         font-size: 13px;
-        margin-top: 8px;
       }
     }
   }
 
   .item-details {
+    all: unset;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
-    line-height: 1;
+    line-height: 2;
     position: relative;
+    width: 100%;
   }
 
   .item-list-page & {

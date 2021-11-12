@@ -3306,16 +3306,17 @@ a img {
   margin-top: 10px;
   text-align: center;
   color: var(--secondary-color);
+  line-height: 2;
 }
 
 @media screen and (max-width: 640px) {
   .content-item-box .product-item-details {
     font-size: 13px;
-    margin-top: 8px;
   }
 }
 
 .content-item-box .item-details {
+  all: unset;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3325,8 +3326,9 @@ a img {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 10px;
-  line-height: 1;
+  line-height: 2;
   position: relative;
+  width: 100%;
 }
 
 .item-list-page .content-item-box {
