@@ -38,7 +38,7 @@ q.content.name="body" s="content.position" -%}
     <h2 class="item-title">
       <a class="item-link" href="{{ menu_level.url }}">{{ menu_level.title }}</a>
     </h2>
-    {% include "product-list-item-details", _buyButton: buy_button, , menu_level: menu_level  %}
+    {% include "product-list-item-details", _buyButton: buy_button, menu_level: menu_level  %}
   </div>
 {% else %}
   <div class="content-item-box {{ item_image_state }} js-content-item-box">
@@ -56,7 +56,6 @@ q.content.name="body" s="content.position" -%}
       </div>
 
       <h2 class="item-title">{{ menu_level.title }}</h2>
-
     </a>
     {% include "product-list-item-details", _buyButton: buy_button, menu_level: menu_level %}
   </div>
