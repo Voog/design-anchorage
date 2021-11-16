@@ -11,7 +11,7 @@
     {% endcapture %}
 
     {%- if _buyButton.product != blank and _buyButton.available? -%}
-      <button class="item-details">
+      <button class="item-details details-btn">
         {%- if _buyButton.product.uses_variants == true -%}
           {{ look_closer_btn }}
           <div class="product-item-price">

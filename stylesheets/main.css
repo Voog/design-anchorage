@@ -3329,6 +3329,11 @@ a img {
   line-height: 2;
   position: relative;
   width: 100%;
+  margin-bottom: 32px;
+}
+
+.content-item-box .item-details.details-btn {
+  margin-bottom: 0px;
 }
 
 .item-list-page .content-item-box {
