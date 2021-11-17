@@ -5,13 +5,13 @@
     </a>
   {%- else -%}
     {% capture look_closer_btn %}
-      <a class="product-item-btn{%- if _buyButton.product.price == blank %} visible{%- endif -%}" href="{{ menu_level.url }}">
+      <a class="product-item-btn{%- if _buyButton.product.price == blank or _buyButton.available? == false %} visible{%- endif -%}" href="{{ menu_level.url }}">
         {{ "look_closer" | lc | escape_once }}
       </a>
     {% endcapture %}
 
     {%- if _buyButton.product != blank and _buyButton.available? -%}
-      <button class="item-details details-btn">
+      <div class="item-details details-btn">
         {%- if _buyButton.product.uses_variants == true -%}
           {{ look_closer_btn }}
           <div class="product-item-price">
@@ -25,7 +25,7 @@
           {%- if editmode or buy_button.product.out_of_stock? -%}
             {{ look_closer_btn }}
           {%- else -%}
-            <div class="product-item-btn js-cart-btn p-abs" data-product-id="{{ _buyButton.product.id }}">{{ "add_to_cart" | lc | escape_once }}</div>
+            <button class="product-item-btn js-cart-btn p-abs" data-product-id="{{ _buyButton.product.id }}">{{ "add_to_cart" | lc | escape_once }}</button>
           {%- endif -%}
           <div class="product-item-price">
             <span>
@@ -33,7 +33,7 @@
             </span>
           </div>
         {%- endif -%}
-      </button>
+        </div>
     {%- else -%}
       <div class="item-details">
         {{ look_closer_btn }}
