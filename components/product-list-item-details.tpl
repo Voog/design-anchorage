@@ -22,7 +22,7 @@
             {{ _buyButton.product.price_max_with_tax | money_with_currency: _buyButton.product.currency }}
           </div>
         {%- else -%}
-          {%- if editmode or buy_button.product.out_of_stock? -%}
+          {%- if editmode or _buyButton.available? == false -%}
             {{ look_closer_btn }}
           {%- else -%}
             <button class="product-item-btn js-cart-btn p-abs" data-product-id="{{ _buyButton.product.id }}">{{ "add_to_cart" | lc | escape_once }}</button>
