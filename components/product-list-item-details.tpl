@@ -17,7 +17,7 @@
           <div class="product-item-price">
             {%- if _buyButton.product.price_max_with_tax != _buyButton.product.price_min_with_tax -%}
               {{ _buyButton.product.price_min_with_tax | money_with_currency: _buyButton.product.currency }}
-              <span>— </span>
+              <span>—</span>
             {%- endif -%}
             {{ _buyButton.product.price_max_with_tax | money_with_currency: _buyButton.product.currency }}
           </div>
