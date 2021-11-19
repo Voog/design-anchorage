@@ -6,214 +6,11 @@
   "author": "Paavel Liik",
   "layouts": [
     {
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/common_page.tpl",
-      "layout_name": "page_default",
-      "title": "Common page"
-    },
-    {
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/front_page.tpl",
-      "layout_name": "page_front",
-      "title": "Front page"
-    },
-    {
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/product_list.tpl",
-      "layout_name": "product_list",
-      "title": "Product list"
-    },
-    {
-      "content_type": "page",
-      "component": false,
-      "file": "layouts/product.tpl",
-      "layout_name": "product",
-      "title": "Product"
-    },
-    {
-      "content_type": "blog",
-      "component": false,
-      "file": "layouts/blog___news.tpl",
-      "layout_name": "blog",
-      "title": "Blog & news"
-    },
-    {
-      "content_type": "blog_article",
-      "component": false,
-      "file": "layouts/blog_article.tpl",
-      "layout_name": "blog_article",
-      "title": "Blog article"
-    },
-    {
       "content_type": "component",
       "component": true,
-      "file": "components/template-meta.tpl",
-      "layout_name": "template-meta",
-      "title": "template-meta"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/site-signout.tpl",
-      "layout_name": "site-signout",
-      "title": "site-signout"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/blog-article-tags.tpl",
-      "layout_name": "blog-article-tags",
-      "title": "blog-article-tags"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/menu-mobile-level-2-link.tpl",
-      "layout_name": "menu-mobile-level-2-link",
-      "title": "menu-mobile-level-2-link"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/blog-article-template.tpl",
-      "layout_name": "blog-article-template",
-      "title": "blog-article-template"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/template-cs-footer.tpl",
-      "layout_name": "template-cs-footer",
-      "title": "template-cs-footer"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/site-sidebar.tpl",
-      "layout_name": "site-sidebar",
-      "title": "site-sidebar"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/product-list-item.tpl",
-      "layout_name": "product-list-item",
-      "title": "product-list-item"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/site-header.tpl",
-      "layout_name": "site-header",
-      "title": "site-header"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/blog-news-tags.tpl",
-      "layout_name": "blog-news-tags",
-      "title": "blog-news-tags"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/menu-mobile.tpl",
-      "layout_name": "menu-mobile",
-      "title": "menu-mobile"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/template-cs-button.tpl",
-      "layout_name": "template-cs-button",
-      "title": "template-cs-button"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/site-footer.tpl",
-      "layout_name": "site-footer",
-      "title": "site-footer"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/blog-settings-variables.tpl",
-      "layout_name": "blog-settings-variables",
-      "title": "blog-settings-variables"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/template-cs-sidebar.tpl",
-      "layout_name": "template-cs-sidebar",
-      "title": "template-cs-sidebar"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/template-tools.tpl",
-      "layout_name": "template-tools",
-      "title": "template-tools"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/common-page-variables.tpl",
-      "layout_name": "common-page-variables",
-      "title": "common-page-variables"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/template-cs-header-front.tpl",
-      "layout_name": "template-cs-header-front",
-      "title": "template-cs-header-front"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/menu-sub.tpl",
-      "layout_name": "menu-sub",
-      "title": "menu-sub"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/menu-mobile-level-1-link.tpl",
-      "layout_name": "menu-mobile-level-1-link",
-      "title": "menu-mobile-level-1-link"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/template-cs-main-styles.tpl",
-      "layout_name": "template-cs-main-styles",
-      "title": "template-cs-main-styles"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/menu-level-2-link.tpl",
-      "layout_name": "menu-level-2-link",
-      "title": "menu-level-2-link"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/template-variables.tpl",
-      "layout_name": "template-variables",
-      "title": "template-variables"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/menu-main.tpl",
-      "layout_name": "menu-main",
-      "title": "menu-main"
+      "file": "components/article-settings-editor.tpl",
+      "layout_name": "article-settings-editor",
+      "title": "article-settings-editor"
     },
     {
       "content_type": "component",
@@ -225,51 +22,16 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/site-search.tpl",
-      "layout_name": "site-search",
-      "title": "site-search"
+      "file": "components/blog-article-tags.tpl",
+      "layout_name": "blog-article-tags",
+      "title": "blog-article-tags"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/template-cs-style-rules.tpl",
-      "layout_name": "template-cs-style-rules",
-      "title": "template-cs-style-rules"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/template-styles.tpl",
-      "layout_name": "template-styles",
-      "title": "template-styles"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/site-javascripts.tpl",
-      "layout_name": "site-javascripts",
-      "title": "site-javascripts"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/menu-language.tpl",
-      "layout_name": "menu-language",
-      "title": "menu-language"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/html-head.tpl",
-      "layout_name": "html-head",
-      "title": "html-head"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/front-page-variables.tpl",
-      "layout_name": "front-page-variables",
-      "title": "front-page-variables"
+      "file": "components/blog-article-template.tpl",
+      "layout_name": "blog-article-template",
+      "title": "blog-article-template"
     },
     {
       "content_type": "component",
@@ -281,30 +43,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/template-svg-spritesheet.tpl",
-      "layout_name": "template-svg-spritesheet",
-      "title": "template-svg-spritesheet"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/menu-breadcrumbs.tpl",
-      "layout_name": "menu-breadcrumbs",
-      "title": "menu-breadcrumbs"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/article-settings-editor.tpl",
-      "layout_name": "article-settings-editor",
-      "title": "article-settings-editor"
-    },
-    {
-      "content_type": "component",
-      "component": true,
-      "file": "components/template-cs-form.tpl",
-      "layout_name": "template-cs-form",
-      "title": "template-cs-form"
+      "file": "components/blog-news-tags.tpl",
+      "layout_name": "blog-news-tags",
+      "title": "blog-news-tags"
     },
     {
       "content_type": "component",
@@ -316,9 +57,170 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/blog-settings-variables.tpl",
+      "layout_name": "blog-settings-variables",
+      "title": "blog-settings-variables"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/common-page-variables.tpl",
+      "layout_name": "common-page-variables",
+      "title": "common-page-variables"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/front-page-variables.tpl",
+      "layout_name": "front-page-variables",
+      "title": "front-page-variables"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/html-head.tpl",
+      "layout_name": "html-head",
+      "title": "html-head"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-breadcrumbs.tpl",
+      "layout_name": "menu-breadcrumbs",
+      "title": "menu-breadcrumbs"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/menu-language-popover.tpl",
       "layout_name": "menu-language-popover",
       "title": "menu-language-popover"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-language.tpl",
+      "layout_name": "menu-language",
+      "title": "menu-language"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-level-1-link.tpl",
+      "layout_name": "menu-level-1-link",
+      "title": "menu-level-1-link"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-level-2-link.tpl",
+      "layout_name": "menu-level-2-link",
+      "title": "menu-level-2-link"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-main.tpl",
+      "layout_name": "menu-main",
+      "title": "menu-main"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-mobile-level-1-link.tpl",
+      "layout_name": "menu-mobile-level-1-link",
+      "title": "menu-mobile-level-1-link"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-mobile-level-2-link.tpl",
+      "layout_name": "menu-mobile-level-2-link",
+      "title": "menu-mobile-level-2-link"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-mobile.tpl",
+      "layout_name": "menu-mobile",
+      "title": "menu-mobile"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-sub.tpl",
+      "layout_name": "menu-sub",
+      "title": "menu-sub"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/product-list-block.tpl",
+      "layout_name": "product-list-block",
+      "title": "product-list-block"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/product-list-item-details.tpl",
+      "layout_name": "product-list-item-details",
+      "title": "product-list-item-details"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/product-list-item.tpl",
+      "layout_name": "product-list-item",
+      "title": "product-list-item"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-footer.tpl",
+      "layout_name": "site-footer",
+      "title": "site-footer"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-header.tpl",
+      "layout_name": "site-header",
+      "title": "site-header"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-javascripts.tpl",
+      "layout_name": "site-javascripts",
+      "title": "site-javascripts"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-search.tpl",
+      "layout_name": "site-search",
+      "title": "site-search"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-sidebar.tpl",
+      "layout_name": "site-sidebar",
+      "title": "site-sidebar"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/site-signout.tpl",
+      "layout_name": "site-signout",
+      "title": "site-signout"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-button.tpl",
+      "layout_name": "template-cs-button",
+      "title": "template-cs-button"
     },
     {
       "content_type": "component",
@@ -330,9 +232,23 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/menu-level-1-link.tpl",
-      "layout_name": "menu-level-1-link",
-      "title": "menu-level-1-link"
+      "file": "components/template-cs-footer.tpl",
+      "layout_name": "template-cs-footer",
+      "title": "template-cs-footer"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-form.tpl",
+      "layout_name": "template-cs-form",
+      "title": "template-cs-form"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-header-front.tpl",
+      "layout_name": "template-cs-header-front",
+      "title": "template-cs-header-front"
     },
     {
       "content_type": "component",
@@ -351,9 +267,107 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/template-cs-main-styles.tpl",
+      "layout_name": "template-cs-main-styles",
+      "title": "template-cs-main-styles"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-sidebar.tpl",
+      "layout_name": "template-cs-sidebar",
+      "title": "template-cs-sidebar"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-style-rules.tpl",
+      "layout_name": "template-cs-style-rules",
+      "title": "template-cs-style-rules"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/template-cs-table.tpl",
       "layout_name": "template-cs-table",
       "title": "template-cs-table"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-meta.tpl",
+      "layout_name": "template-meta",
+      "title": "template-meta"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-styles.tpl",
+      "layout_name": "template-styles",
+      "title": "template-styles"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-svg-spritesheet.tpl",
+      "layout_name": "template-svg-spritesheet",
+      "title": "template-svg-spritesheet"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-tools.tpl",
+      "layout_name": "template-tools",
+      "title": "template-tools"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-variables.tpl",
+      "layout_name": "template-variables",
+      "title": "template-variables"
+    },
+    {
+      "content_type": "blog",
+      "component": false,
+      "file": "layouts/blog___news.tpl",
+      "layout_name": "blog",
+      "title": "Blog & news"
+    },
+    {
+      "content_type": "blog_article",
+      "component": false,
+      "file": "layouts/blog_article.tpl",
+      "layout_name": "blog_article",
+      "title": "Blog article"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/common_page.tpl",
+      "layout_name": "page_default",
+      "title": "Common page"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/front_page.tpl",
+      "layout_name": "page_front",
+      "title": "Front page"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/product.tpl",
+      "layout_name": "product",
+      "title": "Product"
+    },
+    {
+      "content_type": "page",
+      "component": false,
+      "file": "layouts/product_list.tpl",
+      "layout_name": "product_list",
+      "title": "Product list"
     }
   ],
   "assets": [

@@ -20,6 +20,67 @@
 .content-item-box {
   color: rgba($black, .8);
 
+  .product-item {
+    &-btn {
+      @extend %button;
+      font: inherit;
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateY(100%);
+      pointer-events: none;
+      @include transition(all 350ms);
+      margin-top: -15px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      box-sizing: border-box;
+
+      &.visible {
+        opacity: 1;
+        bottom: 0;
+      }
+    }
+
+    &-price {
+      transform: translateY(0px);
+      pointer-events: all;
+      top: 0;
+      margin: 0;
+      opacity: 1;
+      @include transition(all 350ms);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &-details {
+      font-size: 16px;
+      overflow: hidden;
+      text-align: center;
+      color: var(--secondary-color);
+      line-height: 2;
+
+      @media screen and (max-width: $tablet-3) {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .item-details {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+    line-height: 2;
+    position: relative;
+    width: 100%;
+
+    &.details-btn {
+      margin-bottom: 0px;
+    }
+  }
+
   .item-list-page & {
     box-sizing: border-box;
 
@@ -79,6 +140,26 @@
         }
       }
       // scss-lint:enable NestingDepth
+    }
+
+    .product-item-price {
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+      @include transition(all 350ms);
+      transition-timing-function: cubic-bezier(.01,.94,.22,1.01);
+    }
+
+    .product-item-btn {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: all;
+      @include transition(all 350ms);
+      transition-timing-function: cubic-bezier(.01,.94,.22,1.01);
+    }
+
+    .product-item-btn.visible {
+      transform: translateY(100%);
     }
   }
 }
@@ -309,8 +390,8 @@
 }
 
 .item-title {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 20px;
+  margin-bottom: 5px;
   line-height: 1.2;
   text-align: center;
 

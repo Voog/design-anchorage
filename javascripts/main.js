@@ -78,6 +78,12 @@
   };
 
 
+  $('.js-cart-btn').click(function () {
+    if ($(this).data('product-id')) {
+      Voog.ShoppingCart.addProductById($(this).data('product-id'))
+    }
+  });
+
   $('.mobile-menu-toggler').click(function(event) {
       event.preventDefault();
       $('html').toggleClass('mobilemenu-open');

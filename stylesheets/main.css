@@ -555,7 +555,7 @@ a img {
 }
 
 .toggle-sub-menu, .mobile-menu-toggler, .lang-menu-btn, .search-btn,
-.search-submit {
+.search-submit, .content-item-box .product-item-btn {
   margin: 0;
   padding: 0;
   background-color: transparent;
@@ -564,12 +564,12 @@ a img {
 }
 
 .toggle-sub-menu:focus, .mobile-menu-toggler:focus, .lang-menu-btn:focus, .search-btn:focus,
-.search-submit:focus {
+.search-submit:focus, .content-item-box .product-item-btn:focus {
   outline: none;
 }
 
 .toggle-sub-menu::-moz-focus-inner, .mobile-menu-toggler::-moz-focus-inner, .lang-menu-btn::-moz-focus-inner, .search-btn::-moz-focus-inner,
-.search-submit::-moz-focus-inner {
+.search-submit::-moz-focus-inner, .content-item-box .product-item-btn::-moz-focus-inner {
   padding: 0;
   border-style: none;
 }
@@ -3256,6 +3256,85 @@ a img {
   color: rgba(0, 0, 0, 0.8);
 }
 
+.content-item-box .product-item-btn {
+  font: inherit;
+  white-space: nowrap;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  pointer-events: none;
+  -webkit-transition: all 350ms;
+  -o-transition: all 350ms;
+  transition: all 350ms;
+  margin-top: -15px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.content-item-box .product-item-btn.visible {
+  opacity: 1;
+  bottom: 0;
+}
+
+.content-item-box .product-item-price {
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+  pointer-events: all;
+  top: 0;
+  margin: 0;
+  opacity: 1;
+  -webkit-transition: all 350ms;
+  -o-transition: all 350ms;
+  transition: all 350ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.content-item-box .product-item-details {
+  font-size: 16px;
+  overflow: hidden;
+  text-align: center;
+  color: var(--secondary-color);
+  line-height: 2;
+}
+
+@media screen and (max-width: 640px) {
+  .content-item-box .product-item-details {
+    font-size: 13px;
+  }
+}
+
+.content-item-box .item-details {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 32px;
+  line-height: 2;
+  position: relative;
+  width: 100%;
+}
+
+.content-item-box .item-details.details-btn {
+  margin-bottom: 0px;
+}
+
 .item-list-page .content-item-box {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -3316,6 +3395,40 @@ a img {
 .editmode .content-item-box:hover .top-inner::after,
 .item-list-page .content-item-box:hover .top-inner::after {
   opacity: .2;
+}
+
+.content-item-box:hover .product-item-price {
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 350ms;
+  -o-transition: all 350ms;
+  transition: all 350ms;
+  -webkit-transition-timing-function: cubic-bezier(0.01, 0.94, 0.22, 1.01);
+       -o-transition-timing-function: cubic-bezier(0.01, 0.94, 0.22, 1.01);
+          transition-timing-function: cubic-bezier(0.01, 0.94, 0.22, 1.01);
+}
+
+.content-item-box:hover .product-item-btn {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+  -webkit-transition: all 350ms;
+  -o-transition: all 350ms;
+  transition: all 350ms;
+  -webkit-transition-timing-function: cubic-bezier(0.01, 0.94, 0.22, 1.01);
+       -o-transition-timing-function: cubic-bezier(0.01, 0.94, 0.22, 1.01);
+          transition-timing-function: cubic-bezier(0.01, 0.94, 0.22, 1.01);
+}
+
+.content-item-box:hover .product-item-btn.visible {
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 .content-items {
@@ -3571,8 +3684,8 @@ a img {
 }
 
 .item-title {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 20px;
+  margin-bottom: 5px;
   line-height: 1.2;
   text-align: center;
 }
