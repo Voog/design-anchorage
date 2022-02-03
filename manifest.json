@@ -64,6 +64,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/buy-button.tpl",
+      "layout_name": "buy-button",
+      "title": "buy-button"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/common-page-variables.tpl",
       "layout_name": "common-page-variables",
       "title": "common-page-variables"
@@ -81,6 +88,13 @@
       "file": "components/html-head.tpl",
       "layout_name": "html-head",
       "title": "html-head"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-breadcrumbs-sd.tpl",
+      "layout_name": "menu-breadcrumbs-sd",
+      "title": "menu-breadcrumbs-sd"
     },
     {
       "content_type": "component",
@@ -328,6 +342,13 @@
       "title": "template-variables"
     },
     {
+      "content_type": "product",
+      "component": false,
+      "file": "layouts/auto_generated_product.tpl",
+      "layout_name": "auto_generated_product",
+      "title": "Auto-generated product"
+    },
+    {
       "content_type": "blog",
       "component": false,
       "file": "layouts/blog___news.tpl",
@@ -390,40 +411,10 @@
       "filename": "ico-flags.svg"
     },
     {
-      "content_type": "image/jpeg",
-      "file": "images/page-header-bg.jpg",
-      "kind": "images",
-      "filename": "page-header-bg.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/front-header-bg_large.jpg",
-      "kind": "images",
-      "filename": "front-header-bg_large.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/article-header-bg_block.jpg",
-      "kind": "images",
-      "filename": "article-header-bg_block.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/front-header-bg_huge.jpg",
-      "kind": "images",
-      "filename": "front-header-bg_huge.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/front-header-bg_block.jpg",
-      "kind": "images",
-      "filename": "front-header-bg_block.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/feature-image-1_large.jpg",
-      "kind": "images",
-      "filename": "feature-image-1_large.jpg"
+      "content_type": "image/svg+xml",
+      "file": "assets/ico-placeholder.svg",
+      "kind": "assets",
+      "filename": "ico-placeholder.svg"
     },
     {
       "content_type": "image/jpeg",
@@ -433,9 +424,9 @@
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/article-header-bg_large.jpg",
+      "file": "images/article-header-bg_block.jpg",
       "kind": "images",
-      "filename": "article-header-bg_large.jpg"
+      "filename": "article-header-bg_block.jpg"
     },
     {
       "content_type": "image/jpeg",
@@ -445,15 +436,15 @@
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/front-header-bg.jpg",
+      "file": "images/article-header-bg_large.jpg",
       "kind": "images",
-      "filename": "front-header-bg.jpg"
+      "filename": "article-header-bg_large.jpg"
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/page-header-bg_huge.jpg",
+      "file": "images/feature-image-1_large.jpg",
       "kind": "images",
-      "filename": "page-header-bg_huge.jpg"
+      "filename": "feature-image-1_large.jpg"
     },
     {
       "content_type": "image/jpeg",
@@ -463,15 +454,33 @@
     },
     {
       "content_type": "image/jpeg",
-      "file": "images/page-header-bg_block.jpg",
-      "kind": "images",
-      "filename": "page-header-bg_block.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
       "file": "images/feature-image-3_large.jpg",
       "kind": "images",
       "filename": "feature-image-3_large.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/front-header-bg.jpg",
+      "kind": "images",
+      "filename": "front-header-bg.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/front-header-bg_block.jpg",
+      "kind": "images",
+      "filename": "front-header-bg_block.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/front-header-bg_huge.jpg",
+      "kind": "images",
+      "filename": "front-header-bg_huge.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/front-header-bg_large.jpg",
+      "kind": "images",
+      "filename": "front-header-bg_large.jpg"
     },
     {
       "content_type": "image/png",
@@ -481,15 +490,27 @@
     },
     {
       "content_type": "image/jpeg",
+      "file": "images/page-header-bg.jpg",
+      "kind": "images",
+      "filename": "page-header-bg.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/page-header-bg_block.jpg",
+      "kind": "images",
+      "filename": "page-header-bg_block.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/page-header-bg_huge.jpg",
+      "kind": "images",
+      "filename": "page-header-bg_huge.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
       "file": "images/page-header-bg_large.jpg",
       "kind": "images",
       "filename": "page-header-bg_large.jpg"
-    },
-    {
-      "content_type": "application/javascript",
-      "file": "javascripts/main.min.js",
-      "kind": "javascripts",
-      "filename": "main.min.js"
     },
     {
       "content_type": "application/javascript",
@@ -499,21 +520,27 @@
     },
     {
       "content_type": "application/javascript",
+      "file": "javascripts/main.min.js",
+      "kind": "javascripts",
+      "filename": "main.min.js"
+    },
+    {
+      "content_type": "application/javascript",
       "file": "javascripts/modernizr-custom.min.js",
       "kind": "javascripts",
       "filename": "modernizr-custom.min.js"
     },
     {
       "content_type": "text/css",
-      "file": "stylesheets/main.min.css",
-      "kind": "stylesheets",
-      "filename": "main.min.css"
-    },
-    {
-      "content_type": "text/css",
       "file": "stylesheets/main.css",
       "kind": "stylesheets",
       "filename": "main.css"
+    },
+    {
+      "content_type": "text/css",
+      "file": "stylesheets/main.min.css",
+      "kind": "stylesheets",
+      "filename": "main.min.css"
     }
   ]
 }

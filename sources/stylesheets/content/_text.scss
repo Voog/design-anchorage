@@ -377,7 +377,19 @@
       &-disabled {
         // scss-lint:disable NestingDepth
         .publicmode & {
-          &,
+          &.edy-buy-button-disabled,
+          &:hover {
+            color: $disabled-color;
+            cursor: default;
+            border: 2px solid $disabled-color;
+          }
+
+          &:hover {
+            background-color: transparent;
+          }
+        }
+        .editmode & {
+          &.edy-buy-button-disabled,
           &:hover {
             color: $disabled-color;
             cursor: default;

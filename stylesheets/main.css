@@ -3252,6 +3252,53 @@ a img {
   }
 }
 
+.product-content {
+  margin-top: 32px;
+}
+
+.product-content .edy-buy-button-container {
+  padding: 24px 0;
+}
+
+.product-content .without-image .item-top {
+  background-image: url("../assets/ico-placeholder.svg");
+  background-color: #F2F2F2;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.flex-col {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 641px) {
+  .flex-col.w-54 {
+    max-width: 54%;
+  }
+  .flex-col.w-46 {
+    max-width: 46%;
+  }
+}
+
+.flex-col .content-illustrations,
+.flex-col .content-body-inner {
+  max-width: 100%;
+}
+
+.flex-col .content-body-inner {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 104px;
+}
+
 .content-item-box {
   color: rgba(0, 0, 0, 0.8);
 }
@@ -3588,7 +3635,7 @@ a img {
   height: auto;
 }
 
-.with-image .item-top .top-inner {
+.with-image .item-top .top-inner:not(.product-page) {
   background-color: rgba(0, 0, 0, 0.02);
 }
 
@@ -3677,11 +3724,34 @@ a img {
   display: block;
 }
 
+.product-page .item-image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .item-placeholder {
   width: 100%;
   padding: .5em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.product-price {
+  padding: 12px 0 24px 0;
+}
+
+.product-price-divider {
+  margin: 4px;
+}
+
+.content-product-description {
+  padding-bottom: 12px;
+}
+
+.content-product-wide {
+  padding-top: 32px;
 }
 
 .item-title {
@@ -4434,8 +4504,8 @@ a img {
   color: #222222;
 }
 
-.publicmode .dark-background .content-area .custom-btn-disabled, .publicmode .dark-background .content-area .custom-btn-disabled:hover, .publicmode
-.light-background .content-area .custom-btn-disabled, .publicmode
+.publicmode .dark-background .content-area .custom-btn-disabled.edy-buy-button-disabled, .publicmode .dark-background .content-area .custom-btn-disabled:hover, .publicmode
+.light-background .content-area .custom-btn-disabled.edy-buy-button-disabled, .publicmode
 .light-background .content-area .custom-btn-disabled:hover {
   color: #999;
   cursor: default;
@@ -4443,6 +4513,19 @@ a img {
 }
 
 .publicmode .dark-background .content-area .custom-btn-disabled:hover, .publicmode
+.light-background .content-area .custom-btn-disabled:hover {
+  background-color: transparent;
+}
+
+.editmode .dark-background .content-area .custom-btn-disabled.edy-buy-button-disabled, .editmode .dark-background .content-area .custom-btn-disabled:hover, .editmode
+.light-background .content-area .custom-btn-disabled.edy-buy-button-disabled, .editmode
+.light-background .content-area .custom-btn-disabled:hover {
+  color: #999;
+  cursor: default;
+  border: 2px solid #999;
+}
+
+.editmode .dark-background .content-area .custom-btn-disabled:hover, .editmode
 .light-background .content-area .custom-btn-disabled:hover {
   background-color: transparent;
 }
@@ -5028,4 +5111,19 @@ a img {
 
 .content-area .edy-buy-button-variants .form_field_select {
   width: initial;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  img {
+    image-rendering: -webkit-optimize-contrast !important;
+  }
+}
+
+/* Unset for Safari 11+ */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    img {
+      image-rendering: unset !important;
+    }
+  }
 }

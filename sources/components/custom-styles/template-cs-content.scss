@@ -185,5 +185,217 @@
   */
   #{--content-link-hover-text-transform}: none;
 
+  /* VoogStyle
+    "pathI18n": ["product", "title"],
+    "titleI18n": "alignment",
+    "editor": "listPicker",
+    "list": {{ base_alignment_set }},
+    "scope": "global"
+  */
+  #{--content-area-product-title__text-alignment}: left;
+
+  /* VoogStyle
+    "pathI18n": ["product", "title"],
+    "titleI18n": "size",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 100,
+    "unit": "px",
+    "scope": "global"
+  */
+  #{--content-area-product-title__font-size}: 72px;
+
+  /* VoogStyle
+    "pathI18n": ["product", "title"],
+    "titleI18n": "font_size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "700",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  #{--content-area-product-title__font-weight}: 700;
+
+  /* VoogStyle
+    "pathI18n": ["product", "title"],
+    "titleI18n": "font_style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  #{--content-area-product-title__font-style}: normal;
+
+  /* VoogStyle
+    "pathI18n": ["product", "title"],
+    "titleI18n": "text_decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  #{--content-area-product-title__text-decoration}: none;
+
+  /* VoogStyle
+    "pathI18n": ["product", "title"],
+    "titleI18n": "text_transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global"
+  */
+  #{--content-area-product-title__text-transform}: none;
+
+  /* VoogStyle
+    "pathI18n": ["product", "title"],
+    "titleI18n": "color",
+    "type": "button",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global"
+  */
+  #{--content-area-product-title__color}: $black;
+
+  /* VoogStyle
+    "pathI18n": ["product", "price"],
+    "titleI18n": "size",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 100,
+    "unit": "px",
+    "scope": "global"
+  */
+
+  #{--content-area-product-price__font-size}: 24px;
+  /* VoogStyle
+    "pathI18n": ["product", "price"],
+    "titleI18n": "font_size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "700",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+
+  #{--content-area-product-price__font-weight}: 700;
+  /* VoogStyle
+    "pathI18n": ["product", "price"],
+    "titleI18n": "font_style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+
+  #{--content-area-product-price__font-style}: normal;
+  /* VoogStyle
+    "pathI18n": ["product", "price"],
+    "titleI18n": "text_decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+
+  #{--content-area-product-price__text-decoration}: none;
+  /* VoogStyle
+    "pathI18n": ["product", "price"],
+    "titleI18n": "color",
+    "type": "button",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global"
+  */
+
+  #{--content-area-product-price__color}: #000;
+  /* VoogStyle
+    "pathI18n": ["product", "description"],
+    "titleI18n": "size",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 100,
+    "unit": "px",
+    "scope": "global"
+  */
+
+  #{--content-area-product-description__font-size}: var(--content-body-font-size);
+  /* VoogStyle
+    "pathI18n": ["product", "description"],
+    "titleI18n": "font_size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "700",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+
+  #{--content-area-product-description__font-weight}: 400;
+  /* VoogStyle
+    "pathI18n": ["product", "description"],
+    "titleI18n": "font_style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+
+  #{--content-area-product-description__font-style}: normal;
+  /* VoogStyle
+    "pathI18n": ["product", "description"],
+    "titleI18n": "text_decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+
+  #{--content-area-product-description__text-decoration}: none;
+  /* VoogStyle
+    "pathI18n": ["product", "description"],
+    "titleI18n": "color",
+    "type": "button",
+    "editor": "colorPicker",
+    "featured": true,
+    "scope": "global"
+  */
+  #{--content-area-product-description__color}: rgba(141, 144, 145, 0.6);
+
   // scss-lint:enable Comment, Indentation
 }

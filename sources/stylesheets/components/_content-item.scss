@@ -17,6 +17,48 @@
   }
 }
 
+.product-content {
+  margin-top: 32px;
+
+  .edy-buy-button-container {
+    padding: 24px 0;
+  }
+
+  .without-image .item-top {
+    background-image: url("../assets/ico-placeholder.svg");
+    background-color: #F2F2F2;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.flex-col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $tablet-3 + 1px) {
+    &.w-54 {
+      max-width: 54%;
+    }
+
+    &.w-46 {
+      max-width: 46%;
+    }
+  }
+
+  & .content-illustrations,
+  & .content-body-inner {
+    max-width: 100%;
+  }
+
+  .content-body-inner {
+    position: sticky;
+    top: 104px;
+  }
+}
+
 .content-item-box {
   color: rgba($black, .8);
 
@@ -301,7 +343,9 @@
     }
 
     .with-image & {
-      background-color: rgba($black, .02);
+      &:not(.product-page) {
+        background-color: rgba($black, .02);
+      }
     }
 
     .without-image & {
@@ -381,13 +425,34 @@
   .item-list-page & {
     display: block;
   }
-}
 
+  .product-page & {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
 
 .item-placeholder {
   width: 100%;
   padding: .5em;
   box-sizing: border-box;
+}
+
+.product-price {
+  padding: 12px 0 24px 0;
+}
+
+.product-price-divider {
+  margin: 4px;
+}
+
+.content-product-description {
+  padding-bottom: 12px;
+}
+
+.content-product-wide {
+  padding-top: 32px;
 }
 
 .item-title {
