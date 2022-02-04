@@ -170,7 +170,7 @@
     "unit": "px",
     "scope": "global"
   */
-  --content-area-product-title__font-size: 72px;
+  --content-area-product-title__font-size: 32px;
   /* VoogStyle
     "pathI18n": ["product", "title"],
     "titleI18n": "font_size",
@@ -299,7 +299,7 @@
     "unit": "px",
     "scope": "global"
   */
-  --content-area-product-description__font-size: var(--content-body-font-size);
+  --content-area-product-description__font-size: 18px;
   /* VoogStyle
     "pathI18n": ["product", "description"],
     "titleI18n": "font_size",

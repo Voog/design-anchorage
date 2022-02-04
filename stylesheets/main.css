@@ -3279,15 +3279,6 @@ a img {
           flex-direction: column;
 }
 
-@media screen and (min-width: 641px) {
-  .flex-col.w-54 {
-    max-width: 54%;
-  }
-  .flex-col.w-46 {
-    max-width: 46%;
-  }
-}
-
 .flex-col .content-illustrations,
 .flex-col .content-body-inner {
   max-width: 100%;
@@ -3751,7 +3742,7 @@ a img {
 }
 
 .content-product-wide {
-  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .item-title {

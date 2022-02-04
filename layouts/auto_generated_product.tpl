@@ -10,7 +10,7 @@
     {% include "common-page-variables" %}
   </head>
 
-  {% capture bottom_content_html %}
+  {%- capture bottom_content_html %}
     {% unless editmode %}
       {% content bind=product name="content" %}
     {% endunless %}
@@ -50,7 +50,7 @@
                     <div class="inner product-content">
                       {% include "menu-breadcrumbs-sd" %}
                       <div class="items-body" {{ edy_intro_edit_text }}>
-                        <div class="flex-col w-54">
+                        <div class="flex-col">
                           <div class="content-illustrations">
 
                             {% if product.image != blank %}
@@ -78,8 +78,8 @@
                           </div>
                         </div>
 
-                        <div class="flex-col w-46">
-                          <div class="content-body-inner w-100 js-product-content-right">
+                        <div class="flex-col">
+                          <div class="content-body-inner js-product-content-right">
                             <div class="content-item-title content-area">
                               <h1>{%- editable product.name -%}</h1>
                             </div>
@@ -107,19 +107,17 @@
                           </div>
                         </div>
                       </div>
+                      {%- if bottom_content_size > 0 or editmode -%}
+                      <section
+                        class="content-product-wide content-area"
+                        data-search-indexing-allowed="true">
+                        {% content bind=product name="content" %}
+                      </section>
+                    {%- endif -%}
                     </div>
                   </div>
                 </div>
               </div>
-
-              {%- if bottom_content_size > 0 or editmode -%}
-                <section
-                  class="content-product-wide content-area"
-                  data-search-indexing-allowed="true">
-                  {% content bind=product name="content" %}
-                </section>
-              {%- endif -%}
-
             </main>
           </div>
         </div>
@@ -132,9 +130,11 @@
     {% include "site-javascripts" %}
     {% include "template-tools" with "item_list_page" %}
     <script>
-      site.initItemsPage();
-      site.initWindowResize();
-      site.handleProductPageContent();
+      if (site) {
+        site.initItemsPage();
+        site.initWindowResize();
+        site.handleProductPageContent();
+      }
     </script>
   </body>
 </html>

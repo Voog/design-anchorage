@@ -38,16 +38,6 @@
   display: flex;
   flex-direction: column;
 
-  @media screen and (min-width: $tablet-3 + 1px) {
-    &.w-54 {
-      max-width: 54%;
-    }
-
-    &.w-46 {
-      max-width: 46%;
-    }
-  }
-
   & .content-illustrations,
   & .content-body-inner {
     max-width: 100%;
@@ -452,7 +442,7 @@
 }
 
 .content-product-wide {
-  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .item-title {
