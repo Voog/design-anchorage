@@ -120,7 +120,6 @@ a img {
   -o-transition: transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
-  overflow-x: hidden;
 }
 
 .site-container:after {
@@ -3268,7 +3267,7 @@ a img {
   background-position: center;
 }
 
-.flex-col {
+.product-content .flex-col {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3277,14 +3276,15 @@ a img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-width: 50%;
 }
 
-.flex-col .content-illustrations,
-.flex-col .content-body-inner {
+.product-content .flex-col .content-illustrations,
+.product-content .flex-col .content-body-inner {
   max-width: 100%;
 }
 
-.flex-col .content-body-inner {
+.product-content .flex-col .content-body-inner {
   position: -webkit-sticky;
   position: sticky;
   top: 104px;

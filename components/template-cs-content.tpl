@@ -312,7 +312,7 @@
     "icon": "bold",
     "scope": "global"
   */
-  --content-area-product-description__font-weight: 400;
+  --content-area-product-description__font-weight: 300;
   /* VoogStyle
     "pathI18n": ["product", "description"],
     "titleI18n": "font_style",

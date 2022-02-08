@@ -31,21 +31,22 @@
     background-repeat: no-repeat;
     background-position: center;
   }
-}
 
-.flex-col {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+  .flex-col {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
 
-  & .content-illustrations,
-  & .content-body-inner {
-    max-width: 100%;
-  }
+    & .content-illustrations,
+    & .content-body-inner {
+      max-width: 100%;
+    }
 
-  .content-body-inner {
-    position: sticky;
-    top: 104px;
+    .content-body-inner {
+      position: sticky;
+      top: 104px;
+    }
   }
 }
 
