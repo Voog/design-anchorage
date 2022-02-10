@@ -42,11 +42,11 @@
               {% include "site-sidebar" %}
             {% endif %}
 
-            <main class="page-content" role="main">
+            <main class="page-content product-content" role="main">
               <div class="main-inner-row content-full">
                 <div class="main-content top-row">
                   <div class="wrap">
-                    <div class="inner product-content">
+                    <div class="inner">
                       {% include "menu-breadcrumbs-sd" %}
                       <div class="items-body" {{ edy_intro_edit_text }}>
                         <div class="flex-col">
@@ -59,9 +59,9 @@
                             {% endif %}
 
                             <div class="content-item-box {{ item_image_state }} js-content-item-box">
-                              <div class="item-top">
+                              <div class="item-top product-image">
                                 {%- if product.image != blank -%}
-                                  <div class="top-inner aspect-ratio-inner product-page product-image">
+                                  <div class="top-inner aspect-ratio-inner product-page-image">
                                     {%- assign image_class = "item-image not-cropped" -%}
                                     {% image product.image target_width: "1280" class: image_class loading: "lazy" %}
                                   </div>

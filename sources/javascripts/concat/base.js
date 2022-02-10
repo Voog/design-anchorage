@@ -1084,8 +1084,5 @@
     handleProductImageClick: handleProductImageClick
   });
 
-    window.site = $.extend(window.site || {}, {
-  });
-
   init();
 })(jQuery);

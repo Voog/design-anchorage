@@ -3630,7 +3630,7 @@ a img {
   height: auto;
 }
 
-.with-image .item-top .top-inner:not(.product-page) {
+.with-image .item-top .top-inner:not(.product-page-image) {
   background-color: rgba(0, 0, 0, 0.02);
 }
 
@@ -3719,7 +3719,7 @@ a img {
   display: block;
 }
 
-.product-page .item-image {
+.product-image .top-inner .item-image {
   height: 100%;
   width: 100%;
   -o-object-fit: contain;

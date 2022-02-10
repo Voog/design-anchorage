@@ -338,7 +338,7 @@
     }
 
     .with-image & {
-      &:not(.product-page) {
+      &:not(.product-page-image) {
         background-color: rgba($black, .02);
       }
     }
@@ -421,7 +421,7 @@
     display: block;
   }
 
-  .product-page & {
+  .product-image .top-inner & {
     height: 100%;
     width: 100%;
     object-fit: contain;
