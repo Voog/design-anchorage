@@ -178,7 +178,7 @@
     "editor": "toggleIcon",
     "states": {
       "on": "700",
-      "off": "400"
+      "off": "300"
     },
     "icon": "bold",
     "scope": "global"
@@ -249,7 +249,7 @@
     "editor": "toggleIcon",
     "states": {
       "on": "700",
-      "off": "400"
+      "off": "300"
     },
     "icon": "bold",
     "scope": "global"
@@ -307,7 +307,7 @@
     "editor": "toggleIcon",
     "states": {
       "on": "700",
-      "off": "400"
+      "off": "300"
     },
     "icon": "bold",
     "scope": "global"

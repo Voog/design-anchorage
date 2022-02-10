@@ -35,7 +35,6 @@
 
       <div class="page-body js-bg-picker-area">
         <div class="js-background-type {{ body_bg_type }}">
-          {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-key="body_bg" data-bg-picture-boolean="false" data-bg-default-image-color="rgb(255, 255, 255)" data-bg-color="{{ body_bg_color }}" data-bg-color-data="{{ body_bg_color_data_str | escape }}"></button>{% endif %}
           <div class="background-color js-background-color"></div>
 
           <div {% if sidebar_active %} class="sidebar-active"{% endif %}>
@@ -87,9 +86,9 @@
                             <div class="product-price">
                               {%- if product.price_max_with_tax != product.price_min_with_tax -%}
                                 {{ product.price_min_with_tax | money_with_currency: product.currency -}}
-                                  <span class="product-price-divider">–</span>
+                                <span class="product-price-divider">–</span>
                               {%- endif -%}
-                                {{ product.price_max_with_tax | money_with_currency: product.currency }}
+                              {{ product.price_max_with_tax | money_with_currency: product.currency }}
                             </div>
 
                             <div class="content-area area-normal" data-search-indexing-allowed="true">
@@ -110,12 +109,12 @@
                         </div>
                       </div>
                       {%- if bottom_content_size > 0 or editmode -%}
-                      <section
-                        class="content-product-wide content-area"
-                        data-search-indexing-allowed="true">
-                        {% content bind=product name="content" %}
-                      </section>
-                    {%- endif -%}
+                        <section
+                          class="content-product-wide content-area"
+                          data-search-indexing-allowed="true">
+                          {% content bind=product name="content" %}
+                        </section>
+                      {%- endif -%}
                     </div>
                   </div>
                 </div>
