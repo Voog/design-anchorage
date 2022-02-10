@@ -218,6 +218,10 @@
 .item-top {
   @include aspect-ratio(1, 1);
 
+  [data-view-state="editmode"] & {
+    cursor: pointer;
+  }
+
   &:hover {
     .btn,
     .edy-img-drop-area-remove-image {

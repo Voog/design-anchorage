@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% include "template-variables" layout_product: true %}
 
-<html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }}" lang="{{ page.language_code }}">
+<html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }}" lang="{{ page.language_code }}" data-view-state="{{ view_mode }}">
   <head prefix="og: http://ogp.me/ns#">
     {% assign item_list_page = true %}
     {% include "template-variables" %}
@@ -62,7 +62,7 @@
                             <div class="content-item-box {{ item_image_state }} js-content-item-box">
                               <div class="item-top">
                                 {%- if product.image != blank -%}
-                                  <div class="top-inner aspect-ratio-inner product-page">
+                                  <div class="top-inner aspect-ratio-inner product-page product-image">
                                     {%- assign image_class = "item-image not-cropped" -%}
                                     {% image product.image target_width: "1280" class: image_class loading: "lazy" %}
                                   </div>
@@ -136,6 +136,10 @@
         site.initItemsPage();
         site.initWindowResize();
         site.handleProductPageContent();
+
+        {%- if product and editmode -%}
+          site.handleProductImageClick({{ product.id }});
+        {% endif -%}
       }
     </script>
   </body>
