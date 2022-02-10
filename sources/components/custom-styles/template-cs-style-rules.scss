@@ -823,17 +823,19 @@ body {
     text-decoration: var(--button-text-decoration);
     text-transform: var(--button-text-transform);
 
-    &:hover {
-      .dark-background & {
-        border-color: var(--third-color);
-        background-color: var(--third-color);
-        color: var(--primary-color);
-      }
+    &:not(.custom-btn-disabled) {
+      &:hover {
+        .dark-background & {
+          border-color: var(--third-color);
+          background-color: var(--third-color);
+          color: var(--primary-color);
+        }
 
-      .light-background & {
-        border-color: var(--secondary-color);
-        background-color: var(--secondary-color);
-        color: var(--third-color);
+        .light-background & {
+          border-color: var(--secondary-color);
+          background-color: var(--secondary-color);
+          color: var(--third-color);
+        }
       }
     }
 
@@ -947,5 +949,38 @@ body {
         background-color: var(--secondary-color);
       }
     }
+  }
+}
+
+// =============================================================================
+// AUTO-GENERATED PRODUCT PAGE
+// =============================================================================
+// Styling rules for the site's auto-generated product page and its elements.
+.product-content {
+  .product-price {
+    color: var(--content-area-product-price__color);
+    font-size: var(--content-area-product-price__font-size);
+    font-weight: var(--content-area-product-price__font-weight);
+    font-style: var(--content-area-product-price__font-style);
+    text-decoration: var(--content-area-product-price__text-decoration);
+  }
+  .content-product-description {
+    color: var(--content-area-product-description__color);
+    font-size: var(--content-area-product-description__font-size);
+    font-weight: var(--content-area-product-description__font-weight);
+    font-style: var(--content-area-product-description__font-style);
+    text-decoration: var(--content-area-product-description__text-decoration);
+  }
+}
+
+.content-item-title {
+  h1 {
+    font-size: var(--content-area-product-title__font-size);
+    font-style: var(--content-area-product-title__font-style);
+    font-weight: var(--content-area-product-title__font-weight);
+    color: var(--content-area-product-title__color);
+    text-align: var(--content-area-product-title__text-alignment);
+    text-decoration: var(--content-area-product-title__text-decoration);
+    text-transform: var(--content-area-product-title__text-transform);
   }
 }
