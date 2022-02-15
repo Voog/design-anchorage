@@ -99,7 +99,7 @@
                               {% endif %}
 
                               <div class="js-buy-btn-content">
-                                {% include "buy-button" %}
+                                {% include "buy-button" view_mode: view_mode %}
                               </div>
 
                               {% content bind=product %}
