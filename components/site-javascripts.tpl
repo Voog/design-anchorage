@@ -1,7 +1,7 @@
 {% comment %}SITE WIDE JAVASCRIPTS{% endcomment %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js" integrity="sha256-gDUQmMJHiRi7gACNeDZJkwW/b01LKr90K4gjJVu7DY4=" crossorigin="anonymous"></script>
-<script src="{{ javascripts_path }}/main.min.js?anchorage=v2.5.0"></script>
+<script src="{{ javascripts_path }}/main.min.js?anchorage=v2.5.1"></script>
 {% sitejs_include %}
 
 {% comment %}Site search related javascript components.{% endcomment %}
