@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-{% include "template-variables" layout_product: true %}
+{% include "template-settings" %}
+{% include "template-variables" %}
 
 <html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }}" lang="{{ page.language_code }}" data-view-state="{{ view_mode }}">
   <head prefix="og: http://ogp.me/ns#">
     {% assign item_list_page = true %}
-    {% include "template-variables" %}
     {% include "html-head" sidebar: true %}
     {% include "template-styles" %}
     {% include "common-page-variables" %}
@@ -33,9 +33,18 @@
       {% include "site-header" %}
       {% include "common-page-variables" %}
 
-      <div class="page-body">
-        <div class="js-background-type {{ body_bg_type }}">
-          <div class="background-color js-background-color"></div>
+      <div class="page-body js-bg-picker-area">
+        <div class="js-background-type {{ product_bg_type }}">
+          {% if editmode %}
+            <button class="voog-bg-picker-btn js-background-settings" 
+              data-bg-key="{{ product_bg_key }}" 
+              data-bg-picture-boolean="false" 
+              data-bg-default-image-color="rgb(255, 255, 255)" 
+              data-bg-color="{{ product_bg_color }}" 
+              data-bg-color-data="{{ product_bg_color_data_str | escape }}">
+            </button>
+          {% endif %}
+          <div class="background-color js-background-color"{% if product_bg_color != blank %} style="background-color: {{ product_bg_color }};"{% endif %}></div>
 
           <div {% if sidebar_active %} class="sidebar-active"{% endif %}>
             {% if sidebar_active %}

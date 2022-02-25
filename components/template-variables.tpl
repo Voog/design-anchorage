@@ -342,6 +342,43 @@
     {% assign body_bg_color_data_str = body_bg_color_data | json %}
   {% endif %}
 
+  {% comment %}AUTO-RENDERED PRODUCT PAGE BACKGROUND VARIABLES{% endcomment %}
+  {% assign product_bg_key = template_settings.site.product_settings.key %}
+
+  {% assign product_bg = site.data[product_bg_key] %}
+  {% assign product_bg_color = product_bg.color %}
+  {% assign product_bg_color_data = product_bg.colorData %}
+  {% assign product_bg_combined_lightness = product_bg.combinedLightness %}
+
+  {% if product_bg %}
+    {% if product_bg_combined_lightness %}
+      {% if product_bg_combined_lightness > 0.6 %}
+        {% assign product_bg_type = "light-background" %}
+      {% else %}
+        {% assign product_bg_type = "dark-background" %}
+      {% endif %}
+    {% else %}
+      {% if product_bg_color_data.a >= 0.6 %}
+        {% if product_bg_color_data.lightness >= 0.6 %}
+          {% assign product_bg_type = "light-background" %}
+        {% else %}
+          {% assign product_bg_type = "dark-background" %}
+        {% endif %}
+      {% else %}
+        {% assign product_bg_type = "light-background" %}
+      {% endif %}
+    {% endif %}
+  {% else %}
+    {% assign product_bg_type = "light-background" %}
+  {% endif %}
+
+  {% if product_bg_color_data == nil %}
+    {% assign product_bg_color_data_str = "" %}
+  {% else %}
+    {% assign product_bg_color_data_str = product_bg_color_data | json %}
+  {% endif %}
+
+
 
   {% comment %}SITE BLOG PAGE CONTENT AREA RELATED VARIABLES.{% endcomment %}
   {% comment %}Assign variables based on page type.{% endcomment %}
