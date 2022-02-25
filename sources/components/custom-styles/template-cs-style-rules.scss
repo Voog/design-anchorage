@@ -1004,7 +1004,7 @@ body {
         opacity: .7;
       }
     }
-    
+
     .edy-product-widget-item-top-outer .edy-product-widget-item-top.edy-product-widget-item-without-image {
       border: 1px solid var(--third-color);
       opacity: .5;
@@ -1037,6 +1037,10 @@ body {
       .edy-product-widget-item-price {
         color: var(--third-color);
         opacity: .7;
+      }
+
+      .edy-product-widget-item-out-of-stock {
+        color: var(--third-color);
       }
     }
     
