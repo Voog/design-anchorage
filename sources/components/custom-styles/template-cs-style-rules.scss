@@ -963,6 +963,11 @@ body {
     font-weight: var(--content-area-product-price__font-weight);
     font-style: var(--content-area-product-price__font-style);
     text-decoration: var(--content-area-product-price__text-decoration);
+
+    .dark-background & {
+      color: var(--third-color);
+      opacity: .7;
+    }
   }
   .content-product-description {
     color: var(--content-area-product-description__color);

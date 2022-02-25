@@ -867,6 +867,11 @@ body {
           text-decoration: var(--content-area-product-price__text-decoration);
 }
 
+.dark-background .product-content .product-price {
+  color: var(--third-color);
+  opacity: .7;
+}
+
 .product-content .content-product-description {
   color: var(--content-area-product-description__color);
   font-size: var(--content-area-product-description__font-size);
