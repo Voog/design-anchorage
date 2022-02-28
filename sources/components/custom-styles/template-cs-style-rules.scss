@@ -38,7 +38,9 @@ body {
     ol,
     dl,
     pre,
-    table {
+    table,
+    b,
+    strong {
       color: var(--third-color);
     }
   }
