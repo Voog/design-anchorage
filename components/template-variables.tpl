@@ -85,7 +85,13 @@
 
   {% comment %}SITE HEADER RELATED VARIABLES.{% endcomment %}
   {% comment %}Assign variables based on page type.{% endcomment %}
-  {% assign header_bg = page.data.header_bg %}
+  {% if product_page == true %}
+    {% assign header_bg_key = template_settings.site.product_header_bg.key %}
+    {% assign header_bg = site.data[header_bg_key] %}
+  {% else %}
+    {% assign header_bg = page.data.header_bg %}
+  {% endif %}
+
   {% assign header_bg_image = header_bg.image %}
   {% assign header_bg_image_sizes = header_bg.imageSizes %}
   {% assign header_bg_color = header_bg.color %}
@@ -93,7 +99,7 @@
   {% assign header_bg_combined_lightness = header_bg.combinedLightness %}
 
   {% comment %}Sets the background type to choose active CMS color scheme.{% endcomment %}
-  {% if header_bg %}
+  {% if header_bg != blank %}
     {% if header_bg_combined_lightness %}
       {% if header_bg_combined_lightness > 0.6 %}
         {% assign header_bg_type = "light-background" %}

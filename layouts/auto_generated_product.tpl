@@ -1,10 +1,10 @@
 <!DOCTYPE html>
+{% assign product_page = true %}
 {% include "template-settings" %}
 {% include "template-variables" %}
 
 <html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }}" lang="{{ page.language_code }}" data-view-state="{{ view_mode }}">
   <head prefix="og: http://ogp.me/ns#">
-    {% assign product_page = true %}
     {% include "html-head" sidebar: true %}
     {% include "template-styles" %}
     {% include "common-page-variables" %}
