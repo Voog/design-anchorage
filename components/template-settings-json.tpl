@@ -1,7 +1,7 @@
 {
   "site": {
-    "product_settings": {
-      "key": "PREFIX_product",
+    "product_body_bg": {
+      "key": "PREFIX_product_body_bg",
       "value": {}
     }
   },

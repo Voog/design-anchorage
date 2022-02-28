@@ -18,6 +18,8 @@
     //==========================================================================
     {% if front_page %}
       pageType = 'frontPage';
+    {% elsif product_page %}
+      pageType = "productPage";
     {% else %}
       {% if blog_article_page %}
         pageType = 'articlePage';

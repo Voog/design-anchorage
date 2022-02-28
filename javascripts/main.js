@@ -366,7 +366,7 @@
         Edicy.articles.currentArticle.setData(dataBgKey, commitData);
       }
     } else {
-      if (pageType === 'contentPage' && (dataBgKey === 'footer_bg') || (dataBgKey === 'body_bg') || dataBgKey === 'anchorage_product')  {
+      if (pageType === 'contentPage' && (dataBgKey === 'footer_bg') || (dataBgKey === 'body_bg') || pageType === 'productPage')  {
         siteData.set(dataBgKey, commitData);
       } else {
         pageData.set(dataBgKey, commitData);
