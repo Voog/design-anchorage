@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% include "template-settings" %}
 {% include "template-variables" %}
 
 {% unless page.image %}

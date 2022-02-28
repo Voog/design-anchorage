@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% assign blog_article_page = true %}
+{% include "template-settings" %}
 {% include "template-variables" %}
 {% include "blog-article-variables" %}
 {% include "blog-settings-variables" %}
