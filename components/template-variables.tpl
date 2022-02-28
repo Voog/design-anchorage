@@ -384,8 +384,6 @@
     {% assign product_body_bg_color_data_str = product_body_bg_color_data | json %}
   {% endif %}
 
-
-
   {% comment %}SITE BLOG PAGE CONTENT AREA RELATED VARIABLES.{% endcomment %}
   {% comment %}Assign variables based on page type.{% endcomment %}
   {% assign blog_body_bg = page.data.blog_body_bg %}

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-{% include "template-settings" %}
-{% include "template-variables" %}
+{%- include "template-settings" -%}
+{%- include "template-variables" -%}
 
 {% unless page.image %}
   {% assign page_image_state = "without-image" %}
