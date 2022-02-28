@@ -17,9 +17,7 @@ body {
 .dark-background .content-area ol,
 .dark-background .content-area dl,
 .dark-background .content-area pre,
-.dark-background .content-area table,
-.dark-background .content-area b,
-.dark-background .content-area strong {
+.dark-background .content-area table {
   color: var(--third-color);
 }
 
