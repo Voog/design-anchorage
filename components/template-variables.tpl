@@ -86,7 +86,7 @@
   {% comment %}SITE HEADER RELATED VARIABLES.{% endcomment %}
   {% comment %}Assign variables based on page type.{% endcomment %}
   {% if product_page == true %}
-    {% assign header_bg_key = template_settings.site.product_header_bg.key %}
+    {% assign header_bg_key = template_settings.product.header_bg.key %}
     {% assign header_bg = site.data[header_bg_key] %}
   {% else %}
     {% assign header_bg = page.data.header_bg %}
@@ -349,7 +349,7 @@
   {% endif %}
 
   {% comment %}AUTO-RENDERED PRODUCT PAGE BACKGROUND VARIABLES{% endcomment %}
-  {% assign product_body_bg_key = template_settings.site.product_body_bg.key %}
+  {% assign product_body_bg_key = template_settings.product.body_bg.key %}
 
   {% assign product_body_bg = site.data[product_body_bg_key] %}
   {% assign product_body_bg_color = product_body_bg.color %}

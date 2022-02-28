@@ -1,10 +1,10 @@
 {
-  "site": {
-    "product_body_bg": {
+  "product": {
+    "body_bg": {
       "key": "PREFIX_product_body_bg",
       "value": {}
     },
-    "product_header_bg": {
+    "header_bg": {
       "key": "PREFIX_product_header_bg",
       "value": {}
     }
