@@ -1093,3 +1093,24 @@ body {
     }
   }
 }
+
+.dark-background {
+  .edy-product-widget-filters-item {
+
+    .edy-product-widget-filter-name,
+    .edy-product-widget-filter-sort,
+    .edy-product-widget-filter-label,
+    .edy-product-widget-filter-search-input {
+      color: white;
+    }
+
+    .edy-product-widget-filter-sort,
+    .edy-product-widget-filter-search-input {
+      opacity: .7;
+    }
+
+    .edy-product-widget-filter-label {
+      opacity: .5;
+    }
+  }  
+}

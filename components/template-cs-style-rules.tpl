@@ -976,3 +976,19 @@ body {
   background-color: var(--secondary-color);
   color: var(--third-color);
 }
+
+.dark-background .edy-product-widget-filters-item .edy-product-widget-filter-name,
+.dark-background .edy-product-widget-filters-item .edy-product-widget-filter-sort,
+.dark-background .edy-product-widget-filters-item .edy-product-widget-filter-label,
+.dark-background .edy-product-widget-filters-item .edy-product-widget-filter-search-input {
+  color: white;
+}
+
+.dark-background .edy-product-widget-filters-item .edy-product-widget-filter-sort,
+.dark-background .edy-product-widget-filters-item .edy-product-widget-filter-search-input {
+  opacity: .7;
+}
+
+.dark-background .edy-product-widget-filters-item .edy-product-widget-filter-label {
+  opacity: .5;
+}
