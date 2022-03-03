@@ -3853,6 +3853,15 @@ a img {
   }
 }
 
+.dark-background .edy-product-widget-filter-sort,
+.dark-background .edy-product-widget-filter-search-input {
+  opacity: .7;
+}
+
+.dark-background .edy-product-widget-filter-label {
+  opacity: .5;
+}
+
 .site-footer {
   position: relative;
   min-height: 100px;
