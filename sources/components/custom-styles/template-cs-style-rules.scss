@@ -927,13 +927,6 @@ body {
     }
   }
 
-  .light-background &,
-  .dark-background & {
-    form option {
-      color: var(--third-color);
-    }
-  }
-
   .form_submit {
     input {
       padding: calc(var(--button-padding) - 18px) var(--button-padding) calc(var(--button-padding) - 17px);

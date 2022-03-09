@@ -4886,8 +4886,9 @@ a img {
   background-image: url("../assets/ico-arrow.svg");
 }
 
-.light-background .content-area .form_field_select > option {
+.content-area .form_field_select > option {
   background-color: #fff;
+  color: #000;
 }
 
 .content-area .form_field_select::-ms-expand {

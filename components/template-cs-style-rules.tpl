@@ -833,11 +833,6 @@ body {
   color: var(--primary-color);
 }
 
-.light-background .content-area form option,
-.dark-background .content-area form option {
-  color: var(--third-color);
-}
-
 .content-area .form_submit input {
   padding: calc(var(--button-padding) - 18px) var(--button-padding) calc(var(--button-padding) - 17px);
   font-size: var(--button-font-size);

@@ -115,12 +115,12 @@
 
     .light-background & {
       background-image: url('../assets/ico-arrow.svg');
-
-      > option {
-        background-color: $white;
-      }
     }
 
+    > option {
+      background-color: $white;
+      color: $black;
+    }
 
     &::-ms-expand {
       display: none;
