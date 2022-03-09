@@ -115,6 +115,10 @@
 
     .light-background & {
       background-image: url('../assets/ico-arrow.svg');
+
+      > option {
+        background-color: $white;
+      }
     }
 
 

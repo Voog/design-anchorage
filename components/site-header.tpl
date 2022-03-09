@@ -56,9 +56,10 @@
             data-bg-key="{% if product_page %}{{ header_bg_key }}{% else %}header_bg{% endif %}" 
             data-bg-picture-boolean="true" 
             data-bg-default-image-color="{% if front_page %}rgb(142, 156, 169){% else %}rgb(41, 42, 39){% endif %}" 
-            data-target-width="600" data-bg-image="{{ header_bg_image }}" 
+            data-target-width="600" 
+            data-bg-image="{{ header_bg_image }}" 
             data-bg-image-sizes="{{ header_bg_image_sizes_str | escape }}" 
-            data-bg-color="{{ header_bg_color }}" 
+            data-bg-color="{{ header_bg_color | escape_once }}" 
             data-bg-color-data="{{ header_bg_color_data_str | escape }}">
           </button>
         {% endif %}
