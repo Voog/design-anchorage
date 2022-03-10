@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-{% assign blog_article_page = true %}
-{% include "template-variables" %}
-{% include "blog-article-variables" %}
-{% include "blog-settings-variables" %}
+{%- assign blog_article_page = true -%}
+{%- include "template-settings" -%}
+{%- include "template-variables" -%}
+{%- include "blog-article-variables" -%}
+{%- include "blog-settings-variables" -%}
 <html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }}{% unless comment.valid? %} comments-open js-calculate-comments-height{% endunless %}" lang="{{ page.language_code }}">
   <head prefix="og: http://ogp.me/ns#">
     {% include "html-head" %}

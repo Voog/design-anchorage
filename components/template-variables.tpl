@@ -85,7 +85,13 @@
 
   {% comment %}SITE HEADER RELATED VARIABLES.{% endcomment %}
   {% comment %}Assign variables based on page type.{% endcomment %}
-  {% assign header_bg = page.data.header_bg %}
+  {% if product_page == true %}
+    {% assign header_bg_key = template_settings.product.header_bg.key %}
+    {% assign header_bg = site.data[header_bg_key] %}
+  {% else %}
+    {% assign header_bg = page.data.header_bg %}
+  {% endif %}
+
   {% assign header_bg_image = header_bg.image %}
   {% assign header_bg_image_sizes = header_bg.imageSizes %}
   {% assign header_bg_color = header_bg.color %}
@@ -93,7 +99,7 @@
   {% assign header_bg_combined_lightness = header_bg.combinedLightness %}
 
   {% comment %}Sets the background type to choose active CMS color scheme.{% endcomment %}
-  {% if header_bg %}
+  {% if header_bg != blank %}
     {% if header_bg_combined_lightness %}
       {% if header_bg_combined_lightness > 0.6 %}
         {% assign header_bg_type = "light-background" %}
@@ -342,6 +348,41 @@
     {% assign body_bg_color_data_str = body_bg_color_data | json %}
   {% endif %}
 
+  {% comment %}AUTO-RENDERED PRODUCT PAGE BACKGROUND VARIABLES{% endcomment %}
+  {% assign product_body_bg_key = template_settings.product.body_bg.key %}
+
+  {% assign product_body_bg = site.data[product_body_bg_key] %}
+  {% assign product_body_bg_color = product_body_bg.color %}
+  {% assign product_body_bg_color_data = product_body_bg.colorData %}
+  {% assign product_body_bg_combined_lightness = product_body_bg.combinedLightness %}
+
+  {% if product_body_bg != blank %}
+    {% if product_body_bg_combined_lightness %}
+      {% if product_body_bg_combined_lightness > 0.6 %}
+        {% assign product_body_bg_type = "light-background" %}
+      {% else %}
+        {% assign product_body_bg_type = "dark-background" %}
+      {% endif %}
+    {% else %}
+      {% if product_body_bg_color_data.a >= 0.6 %}
+        {% if product_body_bg_color_data.lightness >= 0.6 %}
+          {% assign product_body_bg_type = "light-background" %}
+        {% else %}
+          {% assign product_body_bg_type = "dark-background" %}
+        {% endif %}
+      {% else %}
+        {% assign product_body_bg_type = "light-background" %}
+      {% endif %}
+    {% endif %}
+  {% else %}
+    {% assign product_body_bg_type = "light-background" %}
+  {% endif %}
+
+  {% if product_body_bg_color_data == nil %}
+    {% assign product_body_bg_color_data_str = "" %}
+  {% else %}
+    {% assign product_body_bg_color_data_str = product_body_bg_color_data | json %}
+  {% endif %}
 
   {% comment %}SITE BLOG PAGE CONTENT AREA RELATED VARIABLES.{% endcomment %}
   {% comment %}Assign variables based on page type.{% endcomment %}

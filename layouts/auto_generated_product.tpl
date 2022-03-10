@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-{% include "template-variables" layout_product: true %}
+{%- assign product_page = true -%}
+{%- include "template-settings" -%}
+{%- include "template-variables" -%}
 
 <html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }}" lang="{{ page.language_code }}" data-view-state="{{ view_mode }}">
   <head prefix="og: http://ogp.me/ns#">
-    {% assign item_list_page = true %}
-    {% include "template-variables" %}
     {% include "html-head" sidebar: true %}
     {% include "template-styles" %}
     {% include "common-page-variables" %}
@@ -33,9 +33,18 @@
       {% include "site-header" %}
       {% include "common-page-variables" %}
 
-      <div class="page-body">
-        <div class="js-background-type {{ body_bg_type }}">
-          <div class="background-color js-background-color"></div>
+      <div class="page-body js-bg-picker-area">
+        <div class="js-background-type {{ product_body_bg_type }}">
+          {% if editmode %}
+            <button class="voog-bg-picker-btn js-background-settings" 
+              data-bg-key="{{ product_body_bg_key }}" 
+              data-bg-picture-boolean="false" 
+              data-bg-default-image-color="rgb(255, 255, 255)" 
+              data-bg-color="{{ product_body_bg_color }}" 
+              data-bg-color-data="{{ product_body_bg_color_data_str | escape }}">
+            </button>
+          {% endif %}
+          <div class="background-color js-background-color"{% if product_body_bg_color != blank %} style="background-color: {{ product_body_bg_color }};"{% endif %}></div>
 
           <div {% if sidebar_active %} class="sidebar-active"{% endif %}>
             {% if sidebar_active %}
@@ -63,7 +72,7 @@
                                 {%- if product.image != blank -%}
                                   <div class="top-inner aspect-ratio-inner product-page-image">
                                     {%- assign image_class = "item-image not-cropped" -%}
-                                    {% image product.image target_width: "1280" class: image_class loading: "lazy" %}
+                                    {% image product.image target_width: "600" class: image_class loading: "lazy" %}
                                   </div>
                                 {%- endif -%}
                               </div>
@@ -129,7 +138,7 @@
     {% include "menu-mobile" %}
     {% include "site-signout" %}
     {% include "site-javascripts" %}
-    {% include "template-tools" with "item_list_page" %}
+    {% include "template-tools" with "product_page" %}
     <script>
       if (site) {
         site.initItemsPage();
