@@ -94,12 +94,12 @@
               <h1 class="blog-title js-text-article-component{% if photo_article %} is-hidden{% endif %}"><a href="{{ page.url }}">{{ page.title }}</a></h1>
             </div>
           </div>
-          {% elsif product_page %}
-            <div class="wrap">
-              <div class="header-body content-area">
-                {% content name="header" bind=product %}
-              </div>
+        {% elsif product_page %}
+          <div class="wrap">
+            <div class="header-body content-area">
+              {% content name="header" bind=product %}
             </div>
+          </div>
         {% else %}
           <div class="wrap">
             <div class="header-body content-area" {{ edy_intro_edit_text }}>
