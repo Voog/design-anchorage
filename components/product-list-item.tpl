@@ -1,6 +1,5 @@
 {%- load buy_button to "buy_button" q.content.parent_id=menu_level.page_id q.content.parent_type="page"
 q.content.name="body" s="content.position" -%}
-{%- assign product = buy_button.product -%}
 
 {% unless menu_level.image %}
   {% assign item_image_state = "without-image" %}
