@@ -36,11 +36,11 @@
       <div class="page-body js-bg-picker-area">
         <div class="js-background-type {{ product_body_bg_type }}">
           {% if editmode %}
-            <button class="voog-bg-picker-btn js-background-settings" 
-              data-bg-key="{{ product_body_bg_key }}" 
-              data-bg-picture-boolean="false" 
-              data-bg-default-image-color="rgb(255, 255, 255)" 
-              data-bg-color="{{ product_body_bg_color }}" 
+            <button class="voog-bg-picker-btn js-background-settings"
+              data-bg-key="{{ product_body_bg_key }}"
+              data-bg-picture-boolean="false"
+              data-bg-default-image-color="rgb(255, 255, 255)"
+              data-bg-color="{{ product_body_bg_color }}"
               data-bg-color-data="{{ product_body_bg_color_data_str | escape }}">
             </button>
           {% endif %}
@@ -80,7 +80,9 @@
 
                             {%- if gallery_content_size > 0 or editmode -%}
                               <div class="content-gallery content-area js-product-gallery" data-search-indexing-allowed="true">
-                                {% content bind=product name="gallery" %}
+                                {%- assign gallery_title = "gallery" | lce -%}
+                                {%- assign gallery_title_tooltip = "content_tooltip_additional_images" | lce -%}
+                                {% content bind=product name="gallery" title=gallery_title title_tooltip=gallery_title_tooltip %}
                               </div>
                             {%- endif -%}
                           </div>
@@ -111,8 +113,15 @@
                                 {% include "buy-button" %}
                               </div>
 
-                              {% content bind=product %}
+                              <div class="product-cross-page-info">
+                                {%- assign cross_page_info_title = "cross_page_info" | lce  -%}
+                                {%- assign cross_page_info_title_tooltip = "content_tooltip_all_pages_same_type" | lce -%}
+                                {% xcontent name="cross-page-info" title=cross_page_info_title title_tooltip=cross_page_info_title_tooltip %}
+                              </div>
 
+                              {%- assign content_title = "content" | lce -%}
+                              {%- assign content_title_tooltip = "content_tooltip_specific_page" | lce -%}
+                              {% content bind=product title=content_title title_tooltip=content_title_tooltip %}
                             </div>
                           </div>
                         </div>
@@ -121,7 +130,9 @@
                         <section
                           class="content-product-wide content-area"
                           data-search-indexing-allowed="true">
-                          {% content bind=product name="content" %}
+                          {%- assign bottom_content_title = "additional_content" | lce -%}
+                          {%- assign bottom_content_title_tooltip = "content_tooltip_additional_information" | lce -%}
+                          {% content bind=product name="content" title=bottom_content_title title_tooltip=bottom_content_title_tooltip %}
                         </section>
                       {%- endif -%}
                     </div>

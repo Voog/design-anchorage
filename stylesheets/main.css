@@ -3291,6 +3291,10 @@ a img {
   z-index: 10601;
 }
 
+.product-content .product-cross-page-info {
+  margin-bottom: 32px;
+}
+
 .content-item-box {
   color: rgba(0, 0, 0, 0.8);
 }
