@@ -107,5 +107,63 @@
     {% endif %};
 
     site.bindRootItemSettings(rootItemValuesObj);
+
+    //==========================================================================
+    // Modular content area settings
+    //==========================================================================
+
+    {% if page.data.column_settings %}
+      var valuesObj = {{ page.data.column_settings | json }};
+    {% else %}
+      var valuesObj = {items_count: "1"};
+    {% endif %};
+
+    var settingsBtn = document.querySelector('.js-settings-btn');
+
+    var SettingsEditor = new Edicy.SettingsEditor(settingsBtn, {
+      menuItems: [
+        {
+          "title": "Columns count",
+          "type": "select",
+          "key": "items_count",
+          "list": [
+            {"title": "1", "value": "1"},
+            {"title": "2", "value": "2"},
+            {"title": "3", "value": "3"},
+            {"title": "4", "value": "4"},
+            {"title": "5", "value": "5"},
+            {"title": "6", "value": "6"},
+            {"title": "7", "value": "7"},
+            {"title": "8", "value": "8"},
+          ]
+        },
+        {
+          "title": "Min item width in px",
+          "type": "number",
+          "min": 1,
+          "key": "min_width",
+          "placeholder": "Set min row item width in px"
+        },
+        {
+          "title": "Item padding in px",
+          "type": "number",
+          "min": 1,
+          "key": "padding",
+          "placeholder": "Set item padding in px"
+        }
+      ],
+
+      values: valuesObj,
+
+      commit: function(data) {
+        pageData.set('column_settings', data, {
+          success: function() {
+            // reloading is necessary to rerender the content areas
+            window.location.reload();
+          }
+        });
+      }
+    });
+    document.querySelector('.js-settings-btn').removeAttribute('disabled');
   </script>
 {% endeditorjsblock %}
