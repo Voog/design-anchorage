@@ -23,6 +23,9 @@
               {% include "site-sidebar" %}
             {% endif %}
 
+            {%- assign content_title = "content" | lce -%}
+            {%- assign content_title_tooltip = "content_tooltip_specific_page" | lce -%}
+
             <main class="page-content" role="main">
               <div class="main-inner-row content-full">
                 <div class="main-content top-row">
@@ -33,7 +36,7 @@
 
                         {% comment %}TODO: Remove duplicate content-arera class.{% endcomment %}
                         <section class="content-area">
-                          <div class="content-body content-area" data-search-indexing-allowed="true">{% content %}</div>
+                          <div class="content-body content-area" data-search-indexing-allowed="true">{% content title=content_title title_tooltip=content_title_tooltip %}</div>
                         </section>
                       </div>
                     {% endif %}
@@ -46,7 +49,7 @@
                       <div class="inner content-half content-left{% unless editmode or main_has_content %} has-padding{% endunless %}">
                         {% comment %}TODO: Remove duplicate content-arera class.{% endcomment %}
                         <section class="content-area">
-                          <div class="content-body content-area" data-search-indexing-allowed="true">{% content name="left" %}</div>
+                          <div class="content-body content-area" data-search-indexing-allowed="true">{% content name="left" title_tooltip=content_title_tooltip %}</div>
                         </section>
                       </div>
                     {% endif %}
@@ -55,7 +58,7 @@
                       <div class="inner content-half content-right{% unless editmode or main_has_content %} has-padding{% endunless %}">
                         {% comment %}TODO: Remove duplicate content-arera class.{% endcomment %}
                         <section class="content-area">
-                          <div class="content-body content-area" data-search-indexing-allowed="true">{% content name="right" %}</div>
+                          <div class="content-body content-area" data-search-indexing-allowed="true">{% content name="right" title_tooltip=content_title_tooltip %}</div>
                         </section>
                       </div>
                     {% endif %}
