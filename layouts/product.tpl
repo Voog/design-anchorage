@@ -55,7 +55,7 @@
                     <div class="inner">
                       {% include "menu-breadcrumbs" %}
 
-                      <div class="items-body" {{ edy_intro_edit_text }}>
+                      <div class="items-body">
                         <div class="content-illustrations">
                           {% if editmode %}
                             <div class="content-item-box {{ page_image_state }} js-content-item-box" data-item-type="page" data-item-id="{{ page.page_id }}">
@@ -89,11 +89,15 @@
                             {% endif %}
                           {% endif %}
 
-                          <div class="content-gallery content-area" data-search-indexing-allowed="true">{% content name="gallery" %}</div>
+                          {%- assign gallery_title = "gallery" | lce -%}
+                          {%- assign gallery_title_tooltip = "content_tooltip_additional_images" | lce -%}
+                          <div class="content-gallery content-area" data-search-indexing-allowed="true">{% content name="gallery" title=gallery_title title_tooltip=gallery_title_tooltip %}</div>
                         </div>
 
                         <div class="content-body">
-                          <div class="content-area area-normal" data-search-indexing-allowed="true">{% contentblock %}{{ "write_product_description_here" | lc: editor_locale }}{% endcontentblock %}</div>
+                          {%- assign content_title = "content" | lce -%}
+                          {%- assign content_title_tooltip = "content_tooltip_specific_page" | lce -%}
+                          <div class="content-area area-normal" data-search-indexing-allowed="true">{% contentblock title=content_title title_tooltip=content_title_tooltip %}{{ "write_product_description_here" | lc: editor_locale }}{% endcontentblock %}</div>
                         </div>
                       </div>
                     </div>

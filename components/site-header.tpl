@@ -66,11 +66,13 @@
       {% endif %}
 
       <div class="header-bottom-inner{% unless render_header_top %} header-bottom-only{% endunless %}">
+        {%- assign content_header_title = "title" | lce -%}
+        {%- assign content_header_title_tooltip = "content_tooltip_current_page_title" | lce -%}
 
         {% if front_page %}
           <div class="wrap">
             <div class="header-body content-area" {{ edy_intro_edit_text }}>
-              {% content name="header" %}
+              {% content name="header" title=content_header_title title_tooltip=content_header_title_tooltip %}
             </div>
           </div>
         {% elsif blog_article_page %}
@@ -97,13 +99,13 @@
         {% elsif product_page %}
           <div class="wrap">
             <div class="header-body content-area">
-              {% content name="header" bind=product %}
+              {% content name="header" bind=product title=content_header_title title_tooltip=content_header_title_tooltip %}
             </div>
           </div>
         {% else %}
           <div class="wrap">
             <div class="header-body content-area" {{ edy_intro_edit_text }}>
-              {% contentblock name="header" publish_default_content="true" %}<h1 style="text-align: center;">{{ page.title }}</h1>{% endcontentblock %}
+              {% contentblock name="header" publish_default_content="true" title=content_header_title title_tooltip=content_header_title_tooltip %}<h1 style="text-align: center;">{{ page.title }}</h1>{% endcontentblock %}
             </div>
           </div>
         {% endif %}

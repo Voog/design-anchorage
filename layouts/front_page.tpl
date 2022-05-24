@@ -25,11 +25,14 @@
                 <button class="voog-bg-picker-btn js-background-settings" data-bg-key="content_bg_1" data-bg-default-image-color="rgb(255, 255, 255)" data-bg-picture-boolean="false" data-bg-color-data="{{ content_bg_1_color_data_str | escape }}"></button>
               {% endif %}
 
+              {%- assign content_title = "content" | lce -%}
+              {%- assign content_title_tooltip = "content_tooltip_specific_page" | lce -%}
+
               <div class="js-background-type {{ content_bg_1_type }}">
                 {% if editmode or main_content_has_content %}
                   <div class="main-content">
                     <div class="wrap">
-                      <div class="inner content-area" data-search-indexing-allowed="true">{% content %}</div>
+                      <div class="inner content-area" data-search-indexing-allowed="true">{% content title=content_title title_tooltip=content_title_tooltip %}</div>
                     </div>
                   </div>
                 {% endif %}
@@ -40,21 +43,21 @@
                       {% if editmode or feature_image_1 or feature_1_has_content %}
                         <div class="feature">
                           <div class="feature-image{% if editmode != true and feature_image_1 == nil and feature_image_2 == nil and feature_image_3 == nil %} empty-hidden{% endif %}{% unless editmode or feature_1_has_content or feature_2_has_content or feature_3_has_content %} has-margin{% endunless %}">{% if editmode %}<div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_1" data-image="{{ feature_image_1 }}"></div>{% elsif feature_image_1 != "" %}<div class="aspect-ratio-inner" style="background-image: url('{{ feature_image_1 }}')"></div>{% endif %}</div>
-                          <div class="feature-content content-area" data-search-indexing-allowed="true">{% content name="feature_1" %}</div>
+                          <div class="feature-content content-area" data-search-indexing-allowed="true">{% content name="feature_1" title_tooltip=content_title_tooltip %}</div>
                         </div>
                       {% endif %}
 
                       {% if editmode or feature_image_2 or feature_2_has_content %}
                         <div class="feature">
                           <div class="feature-image{% if editmode != true and feature_image_1 == nil and feature_image_2 == nil and feature_image_3 == nil %} empty-hidden{% endif %}{% unless editmode or feature_1_has_content or feature_2_has_content or feature_3_has_content %} has-margin{% endunless %}">{% if editmode %}<div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_2" data-image="{{ feature_image_2 }}"></div>{% elsif feature_image_2 != "" %}<div class="aspect-ratio-inner" style="background-image: url('{{ feature_image_2 }}')"></div>{% endif %}</div>
-                          <div class="feature-content content-area" data-search-indexing-allowed="true">{% content name="feature_2" %}</div>
+                          <div class="feature-content content-area" data-search-indexing-allowed="true">{% content name="feature_2" title_tooltip=content_title_tooltip %}</div>
                         </div>
                       {% endif %}
 
                       {% if editmode or feature_image_3 or feature_3_has_content %}
                         <div class="feature">
                           <div class="feature-image{% if editmode != true and feature_image_1 == nil and feature_image_2 == nil and feature_image_3 == nil %} empty-hidden{% endif %}{% unless editmode or feature_1_has_content or feature_2_has_content or feature_3_has_content %} has-margin{% endunless %}">{% if editmode %}<div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_3" data-image="{{ feature_image_3 }}"></div>{% elsif feature_image_3 != "" %}<div class="aspect-ratio-inner" style="background-image: url('{{ feature_image_3 }}')"></div>{% endif %}</div>
-                          <div class="feature-content content-area" data-search-indexing-allowed="true">{% content name="feature_3" %}</div>
+                          <div class="feature-content content-area" data-search-indexing-allowed="true">{% content name="feature_3" title_tooltip=content_title_tooltip %}</div>
                         </div>
                       {% endif %}
                     </div>
@@ -69,7 +72,9 @@
 
                 {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-key="content_bg_2" data-bg-picture-boolean="true" data-bg-default-image-color="rgb(142, 156, 169)" data-target-width="600" data-bg-image="{{ content_bg_2_image }}" data-bg-image-sizes="{{ content_bg_2_image_sizes_str | escape }}" data-bg-color="{{ content_bg_2_color }}" data-bg-color-data="{{ content_bg_2_color_data_str | escape }}"></button>{% endif %}
                 <div class="wrap js-background-type {{ content_bg_2_type }}">
-                  <div class="inner content-area" data-search-indexing-allowed="true">{% content name="bottom" %}</div>
+                  {%- assign bottom_content_title = "additional_content" | lce -%}
+                  {%- assign bottom_content_title_tooltip = "content_tooltip_additional_information" | lce -%}
+                  <div class="inner content-area" data-search-indexing-allowed="true">{% content name="bottom" title=bottom_content_title title_tooltip=bottom_content_title_tooltip %}</div>
                 </div>
               </div>
             {% endif %}

@@ -34,7 +34,9 @@
         {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-key="footer_bg" data-bg-picture-boolean="false" data-bg-default-image-color="rgb(255, 255, 255)" data-bg-color="{{ footer_bg_color }}" data-bg-color-data="{{ footer_bg_color_data_str | escape }}"></button>{% endif %}
 
         <div class="wrap">
-          <div class="inner content-area">{% xcontent name="footer" %}</div>
+          {%- assign footer_content_title = "footer" | lce -%}
+          {%- assign footer_content_title_tooltip = "content_tooltip_all_pages_same_language" | lce -%}
+          <div class="inner content-area">{% xcontent name="footer" title=footer_content_title title_tooltip=footer_content_title_tooltip %}</div>
         </div>
       </div>
 
