@@ -8,6 +8,8 @@
     {% include "html-head" sidebar: true %}
     {% include "template-styles" %}
     {% include "common-page-variables" %}
+
+    {% sd_product %}
   </head>
 
   {%- capture bottom_content_html %}
