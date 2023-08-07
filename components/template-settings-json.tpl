@@ -9,5 +9,5 @@
       "value": {}
     }
   },
-  "version": "anchorage-2.5.5"
+  "version": "anchorage-2.5.6"
 }
