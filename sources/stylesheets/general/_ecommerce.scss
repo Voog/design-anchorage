@@ -1,0 +1,23 @@
+.product-price-original {
+  padding-right: 4px;
+  opacity: .4;
+  display: inline-block;
+}
+
+.product-price-final {
+  display: inline-block;
+}
+
+.dark-background {
+  .edy-product-widget-item-price-original {
+    opacity: .4;
+  }
+
+  .edy-product-widget-item-price-final {
+    opacity: .7;
+  }
+
+  .edy-product-widget-grid .edy-product-widget-item:hover .edy-product-widget-item-price {
+    opacity: 0;
+  }
+}
