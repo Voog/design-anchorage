@@ -52,7 +52,7 @@
               </s>
             {%- endif -%}
             <span class="product-price-final">
-                {{- _buyButton.product.effective_price_min_with_tax | money_with_currency: _buyButton.product.currency -}}
+              {{- _buyButton.product.effective_price_min_with_tax | money_with_currency: _buyButton.product.currency -}}
             </span>
           </span>
         </div>
