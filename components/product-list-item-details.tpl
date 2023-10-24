@@ -18,7 +18,6 @@
             {{ _buyButton.product.price_max_with_tax | money_with_currency: _buyButton.product.currency }}
           {%- endcapture -%}
 
-          <div class="product-price">
             {% if _buyButton.product.on_sale? %}
               <s class="product-price-original">
                 {{- original_price -}}
