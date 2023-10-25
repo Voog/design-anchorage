@@ -17,25 +17,24 @@
             {%- endif -%}
             {{ _buyButton.product.price_max_with_tax | money_with_currency: _buyButton.product.currency }}
           {%- endcapture -%}
+          
+          {% if _buyButton.product.on_sale? %}
+            <s class="product-price-original">
+              {{- original_price -}}
+            </s>
+          {% endif %}
 
-            {% if _buyButton.product.on_sale? %}
-              <s class="product-price-original">
-                {{- original_price -}}
-              </s>
-            {% endif %}
-
-            <span class="product-price-final">
-              {%- if _buyButton.product.on_sale? -%}
-                {% if _buyButton.product.effective_price_min_with_tax != _buyButton.product.effective_price_max_with_tax %}
-                  {{- _buyButton.product.effective_price_min_with_tax | money_with_currency: _buyButton.product.currency -}}
-                  <span> – </span>
-                {%- endif -%}
-                {{- _buyButton.product.effective_price_max_with_tax | money_with_currency: _buyButton.product.currency -}}
-              {%- else -%}
-                {{- original_price -}}
+          <span class="product-price-final">
+            {%- if _buyButton.product.on_sale? -%}
+              {% if _buyButton.product.effective_price_min_with_tax != _buyButton.product.effective_price_max_with_tax %}
+                {{- _buyButton.product.effective_price_min_with_tax | money_with_currency: _buyButton.product.currency -}}
+                <span> – </span>
               {%- endif -%}
-            </span>
-          </div>
+              {{- _buyButton.product.effective_price_max_with_tax | money_with_currency: _buyButton.product.currency -}}
+            {%- else -%}
+              {{- original_price -}}
+            {%- endif -%}
+          </span>
         </div>
       {%- else -%}
         {%- if editmode or _buyButton.product.out_of_stock? -%}
