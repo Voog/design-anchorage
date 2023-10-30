@@ -967,6 +967,26 @@ a img {
   font-weight: bold;
   font-style: italic;
 }
+.product-price-original {
+  padding-right: 4px;
+  opacity: 0.4;
+  display: inline-block;
+}
+
+.product-price-final {
+  display: inline-block;
+}
+
+.dark-background .edy-product-widget-item-price-original {
+  opacity: 0.4;
+}
+.dark-background .edy-product-widget-item-price-final {
+  opacity: 0.7;
+}
+.dark-background .edy-product-widget-grid .edy-product-widget-item:hover .edy-product-widget-item-price {
+  opacity: 0;
+}
+
 .front-page .page-content .content-header {
   font-size: 50px;
   font-weight: 700;
