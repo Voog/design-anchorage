@@ -3315,7 +3315,7 @@ a img {
 .product-content .edy-buy-button-container {
   padding: 24px 0;
 }
-.product-content .without-image .item-top {
+.product-content .without-images .item-top {
   background-image: url("../assets/ico-placeholder.svg");
   background-color: #F2F2F2;
   background-size: 40px;
@@ -3540,7 +3540,7 @@ a img {
   bottom: 0;
   left: 0;
 }
-[data-view-state=editmode] .item-top {
+[data-view-state=editmode] .item-top:not(.without-pointer) {
   cursor: pointer;
 }
 .item-top:hover .btn,
