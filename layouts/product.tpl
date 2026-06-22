@@ -36,7 +36,6 @@
 
     <div class="site-container">
       {% include "site-header" %}
-      {% include "common-page-variables" %}
 
       <div class="page-body js-bg-picker-area">
         <div class="js-background-type {{ body_bg_type }}">
